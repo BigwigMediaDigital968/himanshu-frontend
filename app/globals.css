@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+:root {
+  --med-primary: #0b8d85; /* Medical teal */
+  --med-primary-dark: #086b65;
+  --med-text: #0a2540;
+  --med-light: #f3fcfb; /* Light mint background */
+  --med-border: #d7ecea;
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+  .animate-scaleIn {
+    animation: scaleIn 0.35s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+/* Remove react-phone-input-2 label */
+.react-tel-input .special-label {
+  display: none !important;
+}
+@keyframes icon-shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-3px);
+  }
+  40% {
+    transform: translateX(3px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.icon-shake:hover svg {
+  animation: icon-shake 0.45s ease-in-out;
+}
+
+.gooey-menu {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.gooey-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--med-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease, background 0.3s;
+  font-size: 16px;
+}
+
+.main-btn {
+  z-index: 10;
+}
+
+.child-btn {
+  transform: translate(0, 0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.child-btn.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* EXPAND POSITIONS (scaled down) */
+.child-btn.open.fb {
+  transform: translateY(-56px);
+}
+
+.child-btn.open.ig {
+  transform: translateX(50px);
+}
+
+.child-btn.open.yt {
+  transform: translateX(38px) translateY(-38px);
+}
+
+.child-btn.open.in {
+  transform: translateX(-38px) translateY(-38px);
+}
+
+/* BRAND COLORS ON HOVER */
+.fb:hover {
+  background: #1877f2;
+}
+.ig:hover {
+  background: #e1306c;
+}
+.yt:hover {
+  background: #ff0000;
+}
+.in:hover {
+  background: #0a66c2;
+}
+
+.btn-9 {
+  position: relative;
+  padding: 12px 28px;
+  background: #0b8d85;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 0px #387796;
+  transition: all 0.2s ease;
+}
+
+.btn-9:hover {
+  background: #0da59b;
+}
+
+.btn-9:active {
+  top: 3px;
+  box-shadow: 0 2px 0px #387796;
+}
