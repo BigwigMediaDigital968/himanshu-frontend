@@ -156,3 +156,11 @@
   top: 3px;
   box-shadow: 0 2px 0px #387796;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 145px; /* adjust to navbar height */
+}

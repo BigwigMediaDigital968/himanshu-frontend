@@ -57,9 +57,16 @@ export default function Nav() {
           >
             Home
           </Link>
+
+          <Link
+            href="/services"
+            className="text-black hover:text-(--med-primary) transition"
+          >
+            Services
+          </Link>
           {/* Dropdown — Open on Hover */}
           {/* SERVICES DROPDOWN */}
-          <div
+          {/* <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
@@ -98,7 +105,7 @@ export default function Nav() {
                 </div>
               </div>
             )}
-          </div>
+          </div> */}
 
           <Link
             href="/about"
@@ -388,7 +395,15 @@ export default function Nav() {
           >
             Home
           </Link>
-          <details>
+          <Link
+            href="/services"
+            onClick={() => setMobileOpen(false)}
+            className="text-[var(--med-primary)]"
+          >
+            Services
+          </Link>
+
+          {/* <details>
             <summary className="cursor-pointer text-[var(--med-primary)]">
               Services
             </summary>
@@ -397,7 +412,7 @@ export default function Nav() {
               <Link href="/services/angioplasty">Angioplasty</Link>
               <Link href="/services/diabetic-foot">Diabetic Foot Care</Link>
             </div>
-          </details>
+          </details> */}
           <Link
             href="/about"
             onClick={() => setMobileOpen(false)}

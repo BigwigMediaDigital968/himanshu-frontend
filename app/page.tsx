@@ -20,7 +20,10 @@ import { UserRound, Stethoscope, Scissors, CalendarCheck } from "lucide-react";
 import faq from "./assets/faq.png";
 import FinalCTA from "./components/CTA";
 import ConditionsWeTreat from "./components/ConditionWeTreat";
-import team from "./assets/Dr-Himanshu-Verma-Fortis.webp";
+import team1 from "./assets/team/Dr-Himanshu-Verma-Fortis.webp";
+import team2 from "./assets/team/chandrakanta.webp";
+import team3 from "./assets/team/sanoj.webp";
+import team4 from "./assets/team/trish.webp";
 import WhyChooseUs from "./components/WhyChooseUs";
 import FloatingContactActions from "./components/ContactActions";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
@@ -82,32 +85,32 @@ const services = [
 
 const teamMembers = [
   {
-    name: "Dr. Lorem Ipsum",
-    role: "Consultant Vascular Surgeon",
-    image: team,
-    linkedin: "https://linkedin.com/in/loremipsum",
-    instagram: "https://instagram.com/dr.lorem",
+    name: "Dr. Himanshu Verma",
+    role: "Founder, AVF Care Workshop",
+    image: team1,
+    description:
+      "A leading Vascular & Endovascular Surgeon at Fortis Hospital, Gurgaon, Dr. Himanshu Verma brings extensive experience in managing complex vascular conditions. As the founder of AVF Care Workshop, he is committed to advancing fistula care through education, training, and patient-centered clinical excellence.",
   },
   {
-    name: "Dr. Dolor Sit",
-    role: "Endovascular Specialist",
-    image: team,
-    linkedin: "https://linkedin.com/in/dolorsit",
-    instagram: "",
+    name: "Ms. Chanderkanta",
+    role: "Head of Programs and Strategic Partnerships",
+    image: team2,
+    description:
+      "Ms. Chanderkanta plays a vital role in shaping the structure and reach of the AVF Care Workshop. With strong expertise in coordination and partnerships, she oversees program planning, hospital collaborations, and seamless execution of workshops across multiple locations.",
   },
   {
-    name: "Amet Consectetur",
-    role: "Senior Vascular Nurse",
-    image: team,
-    linkedin: "",
-    instagram: "https://instagram.com/amet.consectetur",
+    name: "Dr. Trisha Sachan",
+    role: "Renal Nutritionist & Clinical Research Associate",
+    image: team4,
+    description:
+      "Dr. Trisha Sachan holds a PhD in Renal Nutrition and specializes in diet planning for patients with kidney disease. Her clinical and research expertise supports improved patient outcomes through nutrition guidance, preventive care, and evidence-based workshop practices.",
   },
   {
-    name: "Adipiscing Elit",
-    role: "Clinical Coordinator",
-    image: team,
-    linkedin: "",
-    instagram: "",
+    name: "Mr. Sanoj Yadav",
+    role: "Vascular Access Nurse",
+    image: team3,
+    description:
+      "Mr. Sanoj Yadav is a dedicated Vascular Access Nurse with hands-on experience in dialysis patient care. He focuses on patient education, access monitoring, and post-procedure support, ensuring consistent and high-quality care across all affiliated centers.",
   },
 ];
 
@@ -305,7 +308,7 @@ export default function Home() {
         <div className="w-11/12 md:w-5/6 mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-(--med-primary) transition">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)]">
               Meet Our Dedicated Team
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-gray-600">
@@ -319,73 +322,48 @@ export default function Home() {
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="
-        group relative rounded-3xl overflow-hidden
-        border border-[var(--med-border)]
-        shadow-md hover:shadow-xl transition-all duration-500
-      "
+                className="group relative rounded-3xl overflow-hidden
+          border border-[var(--med-border)]
+          bg-white shadow-md hover:shadow-xl transition-all duration-500"
               >
-                {/* Image */}
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-[320px] object-cover"
-                />
+                {/* IMAGE */}
+                <div className="relative h-[320px] overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover
+              transition-transform duration-700
+              group-hover:scale-105"
+                  />
+                </div>
 
-                {/* Hover Overlay */}
-                <div
-                  className="
-          absolute inset-0
-          bg-[var(--med-primary)]/75
-          backdrop-blur-sm
-          flex flex-col items-center justify-center text-center
-          opacity-0 group-hover:opacity-90
-          transition-all duration-500
-          p-6
-        "
-                >
-                  <h3 className="text-lg font-bold text-white">
+                {/* STATIC NAME BAR */}
+                <div className="absolute bottom-0 left-0 right-0 bg-white px-6 py-4 transition-all duration-500 group-hover:opacity-0">
+                  <h3 className="text-lg font-semibold text-[var(--med-primary)]">
                     {member.name}
                   </h3>
+                  <p className="text-sm text-gray-500">{member.role}</p>
+                </div>
 
-                  <p className="mt-2 text-sm text-white/90">{member.role}</p>
+                {/* HOVER SLIDE-UP PANEL */}
+                <div
+                  className="
+              absolute bottom-0 left-0 right-0
+              bg-[var(--med-primary)]
+              text-white
+              px-6 py-6
+              translate-y-full
+              group-hover:translate-y-0
+              transition-transform duration-500
+            "
+                >
+                  <h3 className="text-lg font-semibold">{member.name}</h3>
 
-                  {/* Social Icons – render only if URL exists */}
-                  {(member.linkedin || member.instagram) && (
-                    <div className="flex gap-4 mt-5">
-                      {member.linkedin && (
-                        <a
-                          href={member.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="
-                  w-10 h-10 rounded-full bg-white/20
-                  flex items-center justify-center
-                  hover:bg-white hover:text-[var(--med-primary)]
-                  text-white transition
-                "
-                        >
-                          <FaLinkedinIn />
-                        </a>
-                      )}
+                  <p className="text-sm text-white/80 mb-3">{member.role}</p>
 
-                      {member.instagram && (
-                        <a
-                          href={member.instagram}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="
-                  w-10 h-10 rounded-full bg-white/20
-                  flex items-center justify-center
-                  hover:bg-white hover:text-[var(--med-primary)]
-                  text-white transition
-                "
-                        >
-                          <FaInstagram />
-                        </a>
-                      )}
-                    </div>
-                  )}
+                  <p className="text-sm text-white/90 leading-relaxed text-justify">
+                    {member.description}
+                  </p>
                 </div>
               </div>
             ))}
