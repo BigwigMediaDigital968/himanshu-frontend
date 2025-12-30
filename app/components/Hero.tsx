@@ -25,7 +25,6 @@ import slide3 from "../assets/slide3.png";
 
 import ButtonFill from "./Button";
 import PopupForm from "./Popup";
-import HeroForm from "./HeroForm";
 const slides = [
   {
     image: slide1,
@@ -38,7 +37,7 @@ const slides = [
     image: slide2,
     title: "Lorem ipsum dolor sit amet.",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptatibus temporibus aliquid!",
-    badge1: { icon: Star, text: "10+ Years Experience" },
+    badge1: { icon: Star, text: "17+ Years Experience" },
     badge2: { icon: CheckCircle, text: "Minimally Invasive Procedures" },
   },
   {
@@ -207,10 +206,10 @@ export default function HeroCarousel() {
               className="flex flex-col items-center text-center"
             >
               <p className="text-3xl md:text-4xl font-extrabold text-[var(--med-primary)]">
-                12+
+                17+
               </p>
               <p className="text-[var(--med-text)]/70 mt-1 text-sm tracking-wide">
-                Years Experience
+                Years of Experience
               </p>
             </div>
 
@@ -221,10 +220,10 @@ export default function HeroCarousel() {
               className="flex flex-col items-center text-center"
             >
               <p className="text-3xl md:text-4xl font-extrabold text-[var(--med-primary)]">
-                5000+
+                29+
               </p>
               <p className="text-[var(--med-text)]/70 mt-1 text-sm tracking-wide">
-                Patients Treated
+                Research Publications
               </p>
             </div>
 
@@ -235,10 +234,10 @@ export default function HeroCarousel() {
               className="flex flex-col items-center text-center"
             >
               <p className="text-3xl md:text-4xl font-extrabold text-[var(--med-primary)]">
-                15+
+                31+
               </p>
               <p className="text-[var(--med-text)]/70 mt-1 text-sm tracking-wide">
-                Medical Awards
+                National & International Presentations
               </p>
             </div>
 
@@ -249,10 +248,10 @@ export default function HeroCarousel() {
               className="flex flex-col items-center text-center"
             >
               <p className="text-3xl md:text-4xl font-extrabold text-[var(--med-primary)]">
-                98%
+                Director
               </p>
               <p className="text-[var(--med-text)]/70 mt-1 text-sm tracking-wide">
-                Patient Satisfaction
+                Fortis FMRI, Gurgaon
               </p>
             </div>
           </div>

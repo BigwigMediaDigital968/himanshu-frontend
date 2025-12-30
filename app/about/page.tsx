@@ -11,8 +11,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ButtonFill from "../components/Button";
 import FinalCTA from "../components/CTA";
-import WhyChooseUs from "../components/WhyChooseUs";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Users,
+  BookOpen,
+  Presentation,
+  ClipboardCheck,
+  Handshake,
+} from "lucide-react";
 import { Award, GraduationCap } from "lucide-react";
 import { Trophy, Medal, Star } from "lucide-react";
 import FloatingContactActions from "../components/ContactActions";
@@ -20,19 +29,34 @@ import PhoneInput from "react-phone-input-2";
 
 const awards = [
   {
-    title: "Excellence in Vascular Surgery",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Best Poster – AVATAR 2018",
+    desc: "Awarded 1st Prize for Best Poster presentation at AVATAR 2018.",
     icon: Trophy,
   },
   {
-    title: "Best Young Vascular Surgeon Award",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Best Poster Runner-Up",
+    desc: "Runner-Up for Best Poster at iCON, Phoenix, Arizona (2014).",
     icon: Medal,
   },
   {
-    title: "Outstanding Clinical Outcomes",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    icon: Star,
+    title: "Invited Faculty – VEITH Symposium",
+    desc: "Invited Faculty member at VEITH Symposium, New York (2017 & 2019).",
+    icon: Users,
+  },
+  {
+    title: "Research & Publications",
+    desc: "Author of 29+ research publications and 9 book chapters.",
+    icon: BookOpen,
+  },
+  {
+    title: "Conference Presentations",
+    desc: "18 oral presentations and 13 poster presentations at national and international conferences.",
+    icon: Presentation,
+  },
+  {
+    title: "Journal Reviewer",
+    desc: "Reviewer for the Indian Journal of Vascular & Endovascular Surgery.",
+    icon: ClipboardCheck,
   },
 ];
 
@@ -56,7 +80,7 @@ export default function About() {
           <div>
             {/* Qualifications */}
             <p className="text-sm md:text-base font-semibold tracking-widest text-[var(--med-text)] mb-4 uppercase">
-              MBBS, MS, MCh, FEVS
+              MBBS, MS, MCh (Vascular Surgery), FEVS
               <br />
               <span className="normal-case text-[var(--med-text)]/70">
                 (Vascular & Endovascular Surgeon)
@@ -69,12 +93,14 @@ export default function About() {
             </h1>
 
             {/* Description */}
-            <p className="text-white/75 text-lg leading-relaxed max-w-2xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              assumenda similique blanditiis saepe quidem minus mollitia
-              deserunt ipsam obcaecati dicta neque at quam corrupti ab eos, nemo
-              magnam illum illo cupiditate repellat, debitis eveniet amet quod!
-              Incidunt ipsam quaerat eos!
+            <p className="text-white/80 text-lg leading-relaxed max-w-2xl">
+              Director – Vascular & Endovascular Surgery at Fortis FMRI,
+              Gurgaon, Dr. Himanshu Verma is a highly experienced vascular
+              specialist with over 17 years of clinical expertise in treating
+              complex arterial, venous, lymphatic, and dialysis-access
+              disorders. He is known for delivering advanced, patient- focused
+              vascular care using evidence-based and minimally invasive
+              techniques.
             </p>
           </div>
         </div>
@@ -91,23 +117,25 @@ export default function About() {
               </h2>
 
               <p className="text-[var(--med-text)]/75 leading-relaxed mb-4 text-justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                porro sunt rem quod suscipit fugit, dolorem quis placeat vero
-                aspernatur laboriosam tempora hic qui molestias quidem. Quae
-                autem vel totam alias ut fugiat quibusdam nulla officia iusto
-                temporibus, vitae error corporis sit ipsum dicta nam ad. Nam
-                dolor quisquam amet!
+                Dr. Himanshu Verma is a Director – Vascular & Endovascular
+                Surgeon with over 17 years of extensive clinical experience in
+                the comprehensive management of complex vascular conditions. His
+                expertise spans arterial, venous, lymphatic, and dialysis-access
+                disorders, with a special focus on high-risk and limb- or
+                life-threatening cases.
               </p>
 
               <p className="text-[var(--med-text)]/75 leading-relaxed text-justify mb-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-                excepturi velit dolore facilis earum? Culpa accusamus expedita
-                dolorum? Dignissimos, accusamus vero rerum commodi vel molestias
-                aut, dolor porro aperiam aliquid deleniti ipsa voluptas
-                voluptatibus officia non veniam ipsum? Id, magnam eligendi
-                possimus placeat distinctio aperiam reiciendis corrupti
-                voluptatem alias laborum.
+                He specializes in advanced endovascular interventions, open
+                vascular surgery, and hybrid procedures, tailoring treatment
+                strategies to individual patient needs. Dr. Verma is deeply
+                involved in complex vascular reconstructions, onco-vascular
+                surgery, emergency and trauma care, limb salvage, pelvic venous
+                disease, dialysis access creation, and advanced arterial
+                revascularization. His approach emphasizes evidence-based,
+                multidisciplinary, and patient-centric care.
               </p>
+
               <ButtonFill
                 onClick={() => setOpenPopup(true)}
                 text="Book Appointment"
@@ -148,9 +176,11 @@ export default function About() {
                 Experience
               </h3>
               <p className="text-[var(--med-text)]/75 leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                molestiae magni facere, amet asperiores minima incidunt eaque
-                laboriosam.
+                Over 17 years of extensive clinical experience in vascular and
+                endovascular surgery, currently serving as Director – Vascular &
+                Endovascular Surgery at Fortis FMRI, Gurgaon. Proven expertise
+                in managing high-risk, complex, and advanced vascular cases with
+                consistent clinical excellence.
               </p>
             </div>
 
@@ -166,20 +196,39 @@ export default function About() {
                 Specialization
               </h3>
               <ul className="space-y-2 text-[var(--med-text)]/75">
-                <li>• Lorem ipsum dolor sit amet</li>
-                <li>• Lorem ipsum dolor sit amet</li>
-                <li>• Lorem ipsum dolor sit amet</li>
-                <li>• Lorem ipsum dolor sit amet</li>
+                <li>• Complex arterial and venous reconstructions</li>
+                <li>
+                  • Endovascular interventions & hybrid vascular procedures
+                </li>
+                <li>• Limb salvage, trauma & emergency vascular care</li>
+                <li>• Dialysis access surgery & pelvic venous disease</li>
+                <li>
+                  • Onco-vascular surgery & advanced arterial revascularization
+                </li>
               </ul>
             </div>
           </div>
+        </div>
+
+        <div className="w-11/12 md:w-5/6 mt-10 mx-auto  bg-[var(--med-light)] px-8 py-5 rounded-2xl">
+          <h3 className="text-2xl font-semibold text-[var(--med-primary)] mb-6">
+            Professional Society Memberships
+          </h3>
+
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[var(--med-text)]/80">
+            <li>• Association of Surgeons of India (ASI)</li>
+            <li>• Vascular Society of India</li>
+            <li>• Society of Vascular Surgery (USA)</li>
+            <li>• South Asian American Vascular Society</li>
+            <li>• Varanasi Nephrology Society</li>
+          </ul>
         </div>
       </section>
 
       <section className="py-12 bg-white">
         <div className="w-11/12 md:w-5/6 mx-auto">
           {/* HEADER */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)] mb-4">
               Education & Training
             </h2>
@@ -191,118 +240,98 @@ export default function About() {
 
           {/* CONTENT */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
-            {/* LEFT — HIGHLIGHT */}
+            {/* LEFT — LATEST / HIGHLIGHT */}
             <div
               className="
-              lg:col-span-1
-              bg-[var(--med-light)]
-              border border-[var(--med-border)]
-              rounded-3xl p-8
-              shadow-[0_20px_40px_rgba(11,141,133,0.12)]
-            "
+          lg:col-span-1
+          bg-[var(--med-light)]
+          border-2 border-[var(--med-primary)]
+          rounded-3xl p-8 lg:h-[53vh]
+          shadow-[0_25px_50px_rgba(11,141,133,0.18)]
+          relative
+        "
               data-aos="fade-up"
             >
+              {/* BADGE */}
+              <span className="absolute top-6 right-6 bg-[var(--med-primary)] text-white text-xs px-4 py-1 rounded-full">
+                Latest Training
+              </span>
+
               <div className="w-14 h-14 rounded-full bg-[var(--med-primary)]/15 flex items-center justify-center mb-6">
                 <Award className="text-[var(--med-primary)]" size={28} />
               </div>
 
               <h3 className="text-xl font-bold text-[var(--med-text)] mb-4">
-                Highest Qualification
+                Recent Advanced Training
               </h3>
 
-              <p className="text-[var(--med-text)]/80 leading-relaxed">
-                <strong>MCh – Vascular Surgery</strong> <br />
-                Among the first MCh in Vascular Surgery in Delhi, with advanced
-                exposure to complex vascular and endovascular procedures.
+              <p className="text-[var(--med-text)]/80 leading-relaxed font-medium">
+                Recently trained in Foam Sclerotherapy <br />
+                Bassi-Tessari Phlebolymphology Academy, Italy
               </p>
             </div>
 
-            {/* RIGHT — EDUCATION GRID */}
+            {/* RIGHT — 6 ITEMS (OLDER → NEWER TOP TO BOTTOM) */}
             <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
-              {/* CARD 1 */}
-              <div
-                className="
-                bg-white
-                border border-[var(--med-border)]
-                rounded-2xl p-6
-                hover:shadow-lg transition
-              "
-                data-aos="fade-up"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <GraduationCap className="text-[var(--med-primary)]" />
-                  <h4 className="font-semibold text-[var(--med-text)]">MBBS</h4>
-                </div>
+              {/* 1 */}
+              <div className="bg-white border border-[var(--med-border)] rounded-2xl p-6">
+                <h4 className="font-semibold text-[var(--med-text)]">MBBS</h4>
                 <p className="text-sm text-[var(--med-text)]/70">
-                  Lorem Ipsum Medical College <br />
-                  Lorem Ipsum University
+                  Banaras Hindu University <br />
+                  (2002–2008)
                 </p>
               </div>
 
-              {/* CARD 2 */}
-              <div
-                className="
-                bg-white
-                border border-[var(--med-border)]
-                rounded-2xl p-6
-                hover:shadow-lg transition
-              "
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <GraduationCap className="text-[var(--med-primary)]" />
-                  <h4 className="font-semibold text-[var(--med-text)]">
-                    MS – General Surgery
-                  </h4>
-                </div>
+              {/* 2 */}
+              <div className="bg-white border border-[var(--med-border)] rounded-2xl p-6">
+                <h4 className="font-semibold text-[var(--med-text)]">
+                  MS General Surgery
+                </h4>
                 <p className="text-sm text-[var(--med-text)]/70">
-                  Lorem Ipsum Institute of Medical Sciences
+                  Banaras Hindu University <br />
+                  (2008–2011)
                 </p>
               </div>
 
-              {/* CARD 3 */}
-              <div
-                className="
-                bg-white
-                border border-[var(--med-border)]
-                rounded-2xl p-6
-                hover:shadow-lg transition
-              "
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <GraduationCap className="text-[var(--med-primary)]" />
-                  <h4 className="font-semibold text-[var(--med-text)]">
-                    MCh – Vascular Surgery
-                  </h4>
-                </div>
+              {/* 3 */}
+              <div className="bg-white border border-[var(--med-border)] rounded-2xl p-6">
+                <h4 className="font-semibold text-[var(--med-text)]">
+                  Fellowship in Vascular Surgery
+                </h4>
                 <p className="text-sm text-[var(--med-text)]/70">
-                  Advanced super-speciality training in vascular and
-                  endovascular surgery.
+                  Narayana Hrudayalaya, Bangalore <br />
+                  (2011–2014)
                 </p>
               </div>
 
-              {/* CARD 4 */}
-              <div
-                className="
-                bg-white
-                border border-[var(--med-border)]
-                rounded-2xl p-6
-                hover:shadow-lg transition
-              "
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <GraduationCap className="text-[var(--med-primary)]" />
-                  <h4 className="font-semibold text-[var(--med-text)]">
-                    FEVS Fellowship
-                  </h4>
-                </div>
+              {/* 4 */}
+              <div className="bg-white border border-[var(--med-border)] rounded-2xl p-6">
+                <h4 className="font-semibold text-[var(--med-text)]">
+                  Ted Rogers Clinical Research Fellowship
+                </h4>
                 <p className="text-sm text-[var(--med-text)]/70">
-                  European Fellowship in Vascular & Endovascular Surgery
+                  Mayo Clinic, USA <br />
+                  (2015–2016)
+                </p>
+              </div>
+
+              {/* 5 */}
+              <div className="bg-white border border-[var(--med-border)] rounded-2xl p-6">
+                <h4 className="font-semibold text-[var(--med-text)]">
+                  Advanced Clinical Exposure
+                </h4>
+                <p className="text-sm text-[var(--med-text)]/70">
+                  Johns Hopkins Hospital, USA
+                </p>
+              </div>
+
+              {/* 6 */}
+              <div className="bg-white border border-[var(--med-border)] rounded-2xl p-6">
+                <h4 className="font-semibold text-[var(--med-text)]">
+                  European Vascular Training
+                </h4>
+                <p className="text-sm text-[var(--med-text)]/70">
+                  European Vascular Courses & international programs
                 </p>
               </div>
             </div>
@@ -326,14 +355,14 @@ export default function About() {
           </div>
 
           {/* RIBBON CONTENT */}
-          <div className="relative z-10 flex flex-col lg:flex-row gap-10 items-center justify-center">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {awards.map((award, idx) => {
               const Icon = award.icon;
               return (
                 <div
                   key={idx}
                   className="
-                  w-full lg:w-1/3
+                  w-full
                   bg-white
                   border border-[var(--med-border)]
                   rounded-3xl
@@ -363,6 +392,42 @@ export default function About() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-[var(--med-light)]">
+        <div className="w-11/12 md:w-5/6 mx-auto">
+          <div
+            className="
+        flex flex-col md:flex-row
+        items-start md:items-center
+        gap-6
+        bg-white
+        border border-[var(--med-border)]
+        rounded-3xl
+        p-8
+        shadow-[0_18px_40px_rgba(11,141,133,0.12)]
+      "
+            data-aos="fade-up"
+          >
+            {/* ICON */}
+            <div className="w-14 h-14 rounded-full bg-[var(--med-primary)]/15 flex items-center justify-center shrink-0">
+              <Handshake className="text-[var(--med-primary)]" size={28} />
+            </div>
+
+            {/* CONTENT */}
+            <div>
+              <h3 className="text-xl font-semibold text-[var(--med-text)] mb-2">
+                Industry Collaboration
+              </h3>
+              <p className="text-[var(--med-text)]/80 leading-relaxed">
+                Collaboration with <strong>AyuSynk Devices</strong> on the
+                development of an{" "}
+                <strong>AI-enabled digital stethoscope</strong> for remote
+                monitoring of <strong>AV fistula function</strong>.
+              </p>
+            </div>
           </div>
         </div>
       </section>

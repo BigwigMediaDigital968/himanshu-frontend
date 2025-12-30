@@ -275,9 +275,9 @@ export default function Nav() {
               About Us
             </h2>
             <p className="text-[15px] text-gray-600 mt-2 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
-              magnam ratione placeat ullam debitis ducimus quam consequuntur
-              excepturi quae harum.
+              We are committed to delivering advanced, evidence-based vascular
+              and endovascular care with a strong focus on patient safety,
+              clinical excellence, and compassionate outcomes.
             </p>
           </div>
 

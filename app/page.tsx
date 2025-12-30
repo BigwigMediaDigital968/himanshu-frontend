@@ -14,9 +14,15 @@ import "swiper/css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./components/Footer";
-import { ChevronDown } from "lucide-react";
+import {
+  Activity,
+  CheckCircle2,
+  ChevronDown,
+  Footprints,
+  HeartPulse,
+  Stethoscope,
+} from "lucide-react";
 import TestimonialSlider from "./components/Testimonial";
-import { UserRound, Stethoscope, Scissors, CalendarCheck } from "lucide-react";
 import faq from "./assets/faq.png";
 import FinalCTA from "./components/CTA";
 import ConditionsWeTreat from "./components/ConditionWeTreat";
@@ -26,7 +32,6 @@ import team3 from "./assets/team/sanoj.webp";
 import team4 from "./assets/team/trish.webp";
 import WhyChooseUs from "./components/WhyChooseUs";
 import FloatingContactActions from "./components/ContactActions";
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import partner1 from "./assets/logo.png";
 import partner2 from "./assets/logo.png";
 import partner3 from "./assets/logo.png";
@@ -62,24 +67,24 @@ const faqs = [
 
 const services = [
   {
-    title: "Lorem Ipsum",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
-    icon: UserRound,
-  },
-  {
-    title: "Lorem Ipsum",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.",
+    title: "Varicose Vein Treatments",
+    desc: "Comprehensive evaluation and minimally invasive treatment options for varicose veins, including laser and endovenous procedures.",
     icon: Stethoscope,
   },
   {
-    title: "Lorem Ipsum",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis nostrud exercitation ullamco.",
-    icon: Scissors,
+    title: "Dialysis Access & AV Fistula Care",
+    desc: "Expert creation, maintenance, and salvage of AV fistulas and dialysis access for patients with chronic kidney disease.",
+    icon: Activity,
   },
   {
-    title: "Lorem Ipsum",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.",
-    icon: CalendarCheck,
+    title: "Peripheral Artery Disease (PAD)",
+    desc: "Advanced diagnosis and treatment of peripheral artery disease using endovascular, open, and hybrid revascularization techniques.",
+    icon: HeartPulse,
+  },
+  {
+    title: "Diabetic Foot & Wound Care",
+    desc: "Multidisciplinary management of diabetic foot ulcers and complex wounds with a strong focus on limb salvage.",
+    icon: Footprints,
   },
 ];
 
@@ -155,42 +160,57 @@ export default function Home() {
                 Dr. Himanshu Verma
               </p>
               <p className="text-lg text-gray-500">
-                Vascular & Endovascular Surgeon
+                Director – Vascular & Endovascular Surgeon
               </p>
             </div>
 
             <p className="text-[var(--med-text)]/90 leading-relaxed mb-4 text-justify">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt
-              temporibus ipsa adipisci hic recusandae aspernatur at dicta quasi
-              eaque, magnam praesentium nisi vitae tenetur asperiores provident
-              facere qui rem cupiditate in sint. Quam incidunt consequuntur
-              aspernatur. Illo neque consectetur quisquam eligendi modi, odio
-              dignissimos, sapiente officia cum, corrupti molestias ipsam.
+              Dr. Himanshu Verma is a senior Vascular & Endovascular Surgeon
+              with over 17 years of extensive clinical experience in managing
+              complex arterial, venous, lymphatic, and dialysis-access
+              disorders. He is widely recognized for treating high-risk and
+              limb- or life-threatening vascular conditions using advanced,
+              evidence-based techniques.
             </p>
 
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-              <li className="flex items-start gap-3">
-                <span className="text-[var(--med-primary)] text-xl">✔</span>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <li className="flex items-start gap-3 rounded-xl border border-[var(--med-border)] bg-[var(--med-light)] px-4 py-3 transition hover:border-[var(--med-primary)] hover:shadow-sm">
+                <CheckCircle2
+                  className="text-[var(--med-primary)] mt-1"
+                  size={20}
+                />
                 <span className="text-[var(--med-text)]/85">
-                  12+ years of clinical experience
+                  17+ years of vascular & endovascular experience
                 </span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[var(--med-primary)] text-xl">✔</span>
+
+              <li className="flex items-start gap-3 rounded-xl border border-[var(--med-border)] bg-[var(--med-light)] px-4 py-3 transition hover:border-[var(--med-primary)] hover:shadow-sm">
+                <CheckCircle2
+                  className="text-[var(--med-primary)] mt-1"
+                  size={20}
+                />
                 <span className="text-[var(--med-text)]/85">
-                  Specialized in modern diagnostic care
+                  Director – Vascular & Endovascular Surgery, Fortis FMRI
                 </span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[var(--med-primary)] text-xl">✔</span>
+
+              <li className="flex items-start gap-3 rounded-xl border border-[var(--med-border)] bg-[var(--med-light)] px-4 py-3 transition hover:border-[var(--med-primary)] hover:shadow-sm">
+                <CheckCircle2
+                  className="text-[var(--med-primary)] mt-1"
+                  size={20}
+                />
                 <span className="text-[var(--med-text)]/85">
-                  Friendly, patient-centered approach
+                  Expertise in minimally invasive & hybrid vascular procedures
                 </span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[var(--med-primary)] text-xl">✔</span>
+
+              <li className="flex items-start gap-3 rounded-xl border border-[var(--med-border)] bg-[var(--med-light)] px-4 py-3 transition hover:border-[var(--med-primary)] hover:shadow-sm">
+                <CheckCircle2
+                  className="text-[var(--med-primary)] mt-1"
+                  size={20}
+                />
                 <span className="text-[var(--med-text)]/85">
-                  Minimally invasive procedures
+                  Patient-centric, multidisciplinary approach to complex cases
                 </span>
               </li>
             </ul>
