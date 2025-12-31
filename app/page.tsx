@@ -5,7 +5,6 @@ import HeroCarousel from "./components/Hero";
 import ButtonFill from "./components/Button";
 import PopupForm from "./components/Popup";
 import { useState, useEffect } from "react";
-import doctor from "./assets/Dr-Himanshu-Verma-Fortis.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
@@ -37,6 +36,7 @@ import partner2 from "./assets/logo.png";
 import partner3 from "./assets/logo.png";
 import partner4 from "./assets/logo.png";
 import partner5 from "./assets/logo.png";
+import himanshu from "./assets/logo-removebg-preview.png";
 
 const collaborations = [
   { logo: partner1, name: "Hospital Partner 1" },
@@ -233,7 +233,7 @@ export default function Home() {
               {/* image container clipped to polygon (slanted) */}
               <div className="relative overflow-hidden rounded-2xl w-[300px] sm:w-[420px] md:w-[520px] h-[220px] sm:h-[320px] md:h-[450px] border">
                 <Image
-                  src={doctor}
+                  src={himanshu}
                   alt="Doctor"
                   fill
                   className="object-contain object-center transform transition-transform duration-700"
@@ -243,7 +243,7 @@ export default function Home() {
 
               {/* small overlay badge on the polygon for credibility */}
               <div className="absolute -bottom-4 left-6 md:left-8 bg-white/95 rounded-full px-3 py-1 border border-[var(--med-border)] text-sm text-[var(--med-text)]">
-                12+ Years Experience
+                17+ Years Experience
               </div>
             </div>
           </div>

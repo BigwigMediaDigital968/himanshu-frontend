@@ -251,7 +251,7 @@ export default function HeroCarousel() {
                 Director
               </p>
               <p className="text-[var(--med-text)]/70 mt-1 text-sm tracking-wide">
-                Fortis FMRI, Gurgaon
+                Vascular & Endovascular Surgeon
               </p>
             </div>
           </div>

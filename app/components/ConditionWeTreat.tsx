@@ -16,39 +16,32 @@ import condition6 from "../assets/codition.webp";
 
 type Condition = {
   title: string;
-  desc: string;
   image: any;
 };
 
 const conditions: Condition[] = [
   {
-    title: "Lorem Ipsum Disease",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "VARICOSE VEINS",
     image: condition1,
   },
   {
-    title: "Lorem Ipsum Disease",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "DIALYSIS & AV FISTULA CARE",
     image: condition2,
   },
   {
-    title: "Lorem Ipsum Disease",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "BLOCKED LEG ARTERIES / POOR BLOOD CIRCULATION ",
     image: condition3,
   },
   {
-    title: "Lorem Ipsum Disease",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "DIABETIC FOOT & NON-HEALING WOUNDS ",
     image: condition4,
   },
   {
-    title: "Lorem Ipsum Disease",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "BLOOD CLOTS (DVT)",
     image: condition5,
   },
   {
-    title: "Lorem Ipsum Disease",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "AORTA & MAJOR ARTERIES",
     image: condition6,
   },
 ];
@@ -80,20 +73,6 @@ const ConditionCard = ({ item }: { item: Condition }) => (
         <h3 className="text-white text-base font-semibold tracking-wide">
           {item.title}
         </h3>
-      </div>
-
-      {/* HOVER OVERLAY */}
-      <div
-        className="
-          absolute inset-0
-          bg-gradient-to-t from-[var(--med-primary)] via-[var(--med-primary)]/90 to-[var(--med-primary)]/70
-          opacity-0 group-hover:opacity-100
-          transition-all duration-500
-          flex items-center justify-center
-          text-center px-6
-        "
-      >
-        <p className="text-white text-sm leading-relaxed">{item.desc}</p>
       </div>
     </div>
   </div>

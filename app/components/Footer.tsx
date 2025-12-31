@@ -11,7 +11,7 @@ import {
   IoMailOutline,
   IoLocationOutline,
 } from "react-icons/io5";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-removebg-preview.png";
 import bg from "../assets/slide1.png";
 import ButtonFill from "./Button";
 import Link from "next/link";
@@ -145,17 +145,21 @@ export default function Footer() {
       {/* --- CONTENT FIX (z-10) --- */}
       <div className="relative z-10 w-11/12 md:w-5/6 mx-auto grid grid-cols-1 md:grid-cols-4 gap-14">
         {/* LOGO + SOCIAL */}
-        <div>
-          <Image
-            src={logo}
-            alt="Doctor Logo"
-            width={100}
-            height={100}
-            className="rounded-full"
-          />
-          <h2 className="text-2xl font-bold mb-4 mt-4">Dr. Himanshu Verma</h2>
+        <div className="">
+          <div className="flex justify-center">
+            <Image
+              src={logo}
+              alt="Doctor Logo"
+              width={120}
+              height={120}
+              className="rounded-full border border-white"
+            />
+          </div>
+          <h2 className="text-2xl font-bold mb-4 mt-4 text-center">
+            Dr. Himanshu Verma
+          </h2>
 
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-center justify-center gap-4 mb-8">
             <FaFacebookF className="text-xl cursor-pointer hover:text-blue-600" />
             <FaLinkedinIn className="text-xl cursor-pointer hover:text-blue-400" />
             <FaYoutube className="text-xl cursor-pointer hover:text-red-500" />

@@ -15,7 +15,7 @@ import {
   MapPin,
   Linkedin,
 } from "lucide-react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-removebg-preview.png";
 import ButtonFill from "./Button";
 import PopupForm from "./Popup";
 
