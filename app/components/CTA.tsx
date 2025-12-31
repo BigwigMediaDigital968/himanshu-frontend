@@ -20,8 +20,9 @@ export default function FinalCTA() {
         </h2>
 
         <p className="max-w-2xl mx-auto text-white/90 mb-10 text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-          incidunt. Voluptatem doloremque itaque pariatur?
+          Your health deserves expert attention. Book an appointment today and
+          take a confident step toward accurate diagnosis, advanced care, and
+          better quality of life.
         </p>
 
         <ButtonFill

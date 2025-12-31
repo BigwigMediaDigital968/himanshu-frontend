@@ -167,23 +167,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* LOCATION 1 */}
-        <div className="relative z-10">
-          <h3 className="text-sm font-semibold tracking-wider mb-2">
-            MAIN CLINIC LOCATION
-          </h3>
-          <div className="w-10 h-[2px] bg-[var(--med-primary)] mb-4"></div>
-
-          <div className="flex items-start gap-3 text-white/80 text-sm">
-            <IoLocationOutline className="text-xl mt-1" />
-            <p>
-              Lorem ipsum dolor sit amet,
-              <br /> consectetur adipiscing elit,
-              <br /> sed do eiusmod tempor.
-            </p>
-          </div>
-        </div>
-
         {/* CONTACT */}
         <div className="relative z-10">
           <h3 className="text-sm font-semibold tracking-wider mb-2">CONTACT</h3>
@@ -191,12 +174,32 @@ export default function Footer() {
 
           <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
             <IoCallOutline className="text-xl" />
-            <p>+91 123456789</p>
+            <p>88268 33598</p>
           </div>
 
           <div className="flex items-center gap-3 text-white/80 text-sm mb-6">
             <IoMailOutline className="text-xl" />
             <p>abc@xyz.com</p>
+          </div>
+        </div>
+        {/* LOCATION 1 */}
+        <div className="relative z-10">
+          <h3 className="text-sm font-semibold tracking-wider mb-2">
+            LOCATION
+          </h3>
+          <div className="w-10 h-[2px] bg-[var(--med-primary)] mb-4"></div>
+
+          <div className="flex items-start gap-3 text-white/80 text-sm leading-relaxed">
+            <IoLocationOutline className="text-xl mt-1 shrink-0" />
+            <p>
+              Fortis Memorial Research Centre,
+              <br />
+              Opposite HUDA City Centre,
+              <br />
+              Sector 44, Gurugram,
+              <br />
+              Haryana 122003
+            </p>
           </div>
         </div>
 
