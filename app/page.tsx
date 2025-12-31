@@ -48,20 +48,24 @@ const collaborations = [
 
 const faqs = [
   {
-    q: "Lorem ipsum dolor sit amet?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque leo ac urna tempus, vitae facilisis ipsum vulputate.",
+    q: "What does a vascular surgeon do?",
+    a: "A vascular surgeon diagnoses and treats diseases of the blood vessels, including arteries, veins, and the lymphatic system. This includes conditions such as blocked arteries, varicose veins, diabetic foot problems, blood clots, aneurysms, and dialysis access issues. Treatment may involve medical management, minimally invasive endovascular procedures, or open vascular surgery, depending on the condition.",
   },
   {
-    q: "Consectetur adipiscing elit?",
-    a: "Etiam nec ligula eget elit bibendum cursus. Mauris euismod, justo vitae facilisis sollicitudin, sem odio blandit leo, sit amet gravida.",
+    q: "When should I see a vascular surgeon?",
+    a: "You should consult a vascular surgeon if you have symptoms like leg pain while walking, persistent leg swelling, visible or painful varicose veins, non-healing wounds, diabetic foot ulcers, sudden limb swelling, numbness, or coldness in the hands or feet. Early evaluation helps prevent serious complications such as infections, limb loss, or life-threatening vascular events.",
   },
   {
-    q: "Curabitur vel turpis non elit dapibus?",
-    a: "Curabitur vulputate eros ac massa ultrices, ac volutpat tortor hendrerit. Maecenas non risus sit amet quam ultricies viverra.",
+    q: "What conditions are treated by Dr. Himanshu Verma?",
+    a: "Dr. Himanshu Verma treats a wide range of vascular conditions, including varicose veins, peripheral artery disease (PAD), diabetic foot and non-healing wounds, deep vein thrombosis (DVT), aortic and peripheral aneurysms, carotid artery disease, and dialysis access problems such as AV fistula blockage or failure.",
   },
   {
-    q: "Donec porta sem nec sapien viverra?",
-    a: "Suspendisse quis neque non enim vestibulum finibus. Quisque sagittis metus at neque tristique, non interdum elit porttitor.",
+    q: "What is endovascular treatment and how is it beneficial?",
+    a: "Endovascular treatment is a minimally invasive method used to treat vascular diseases through small punctures instead of large surgical cuts. It often involves the use of catheters, balloons, or stents to restore blood flow. Benefits include less pain, faster recovery, reduced hospital stay, and lower risk compared to traditional open surgery in suitable patients.",
+  },
+  {
+    q: "Can vascular problems be treated without major surgery?",
+    a: "Yes, many vascular conditions can now be treated using minimally invasive endovascular procedures rather than major open surgery. These treatments are performed through small needle punctures and are commonly used for conditions like blocked arteries, varicose veins, blood clots, and dialysis access issues. However, the treatment approach depends on the severity of the disease, the overall health of the patient, and anatomical factors.",
   },
 ];
 
