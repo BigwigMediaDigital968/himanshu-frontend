@@ -6,6 +6,7 @@ import "react-phone-input-2/lib/style.css";
 
 import ButtonFill from "./Button";
 import popup from "../assets/popup.png";
+import UserInfoCarouselPopup from "./UserInfoPopup";
 
 interface PopupFormProps {
   open: boolean;
@@ -103,13 +104,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ open, onClose }) => {
 
         {/* IMAGE */}
         <div className="hidden md:block relative w-full md:w-1/2 h-48 md:h-auto">
-          <Image
-            src={popup}
-            alt="Doctor Appointment"
-            fill
-            className="object-fill"
-          />
-          <div className="absolute inset-0 bg-linear-to-b from-black/10 to-black/40" />
+          <UserInfoCarouselPopup />
         </div>
 
         {/* FORM */}

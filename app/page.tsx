@@ -526,7 +526,7 @@ export default function Home() {
 
       <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />
       <FloatingContactActions />
-      <UserInfoCarouselPopup />
+      {/* <UserInfoCarouselPopup /> */}
     </div>
   );
 }

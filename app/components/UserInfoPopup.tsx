@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import popup from "../assets/popup.png";
 
 interface InfoItem {
   _id: string;
@@ -9,19 +10,9 @@ interface InfoItem {
 }
 
 export default function UserInfoCarouselPopup() {
-  const [open, setOpen] = useState(false);
   const [infoList, setInfoList] = useState<InfoItem[]>([]);
   const [current, setCurrent] = useState(0);
 
-  // Open popup after delay
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setOpen(true);
-    }, 6000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Fetch info
   useEffect(() => {
     const fetchInfo = async () => {
       try {
@@ -29,86 +20,93 @@ export default function UserInfoCarouselPopup() {
         const data = await res.json();
         setInfoList(data.data || []);
       } catch (err) {
-        console.error("Failed to fetch info");
+        setInfoList([]);
       }
     };
     fetchInfo();
   }, []);
 
-  if (!open || infoList.length === 0) return null;
+  /* -----------------------------------------
+     🔥 FALLBACK WHEN NO DATA
+  ----------------------------------------- */
+  if (infoList.length === 0) {
+    return (
+      <div className="relative h-full w-full overflow-hidden">
+        <img
+          src={popup.src}
+          alt="popup"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30" />
+      </div>
+    );
+  }
 
+  /* -----------------------------------------
+     NORMAL FLOW
+  ----------------------------------------- */
   const item = infoList[current];
+  const heroImage = item.images?.[0]?.url;
   const hasMultiple = infoList.length > 1;
 
-  const next = () => {
-    setCurrent((p) => (p === infoList.length - 1 ? 0 : p + 1));
-  };
-
-  const prev = () => {
-    setCurrent((p) => (p === 0 ? infoList.length - 1 : p - 1));
-  };
+  const next = () => setCurrent((p) => (p === infoList.length - 1 ? 0 : p + 1));
+  const prev = () => setCurrent((p) => (p === 0 ? infoList.length - 1 : p - 1));
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center px-4">
-      <div className="relative bg-white rounded-2xl max-w-md w-full h-[70vh] shadow-lg flex flex-col border border-[var(--med-border)]">
-        {/* CLOSE */}
-        <button
-          onClick={() => setOpen(false)}
-          className="absolute top-4 right-4 w-9 h-9 flex items-center justify-center
-          rounded-full bg-[var(--med-light)] text-[var(--med-text)]
-          hover:bg-[var(--med-border)] transition z-10"
-        >
-          ✕
-        </button>
+    <div className="relative h-full w-full overflow-hidden">
+      {/* FULL IMAGE */}
+      {heroImage ? (
+        <img
+          src={heroImage}
+          alt={item.title}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      ) : (
+        <div className="absolute inset-0 bg-[var(--med-light)]" />
+      )}
 
-        {/* SCROLLABLE CONTENT */}
-        <div className="flex-1 overflow-y-auto p-6 space-y-4">
-          {/* TITLE */}
-          <h2 className="text-xl font-bold text-center text-[var(--med-text)]">
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-black/60" />
+
+      {/* CONTENT */}
+      <div className="relative z-10 h-full flex flex-col">
+        {/* TITLE */}
+        <div className="p-6">
+          <h2 className="text-white text-xl font-semibold leading-tight">
             {item.title}
           </h2>
-
-          {/* IMAGES */}
-          {item.images && item.images.length > 0 && (
-            <div className="flex gap-3 overflow-x-auto pb-2">
-              {item.images.map((img, i) => (
-                <img
-                  key={i}
-                  src={img.url}
-                  alt="info"
-                  className="h-40 w-full object-cover rounded-xl border border-[var(--med-border)]"
-                />
-              ))}
-            </div>
-          )}
-
-          {/* DESCRIPTION */}
-          <p className="text-sm leading-relaxed break-words whitespace-pre-wrap text-[var(--med-text)]">
-            {item.description}
-          </p>
         </div>
 
-        {/* NAVIGATION – only if multiple */}
+        {/* DESCRIPTION */}
+        <div className="flex-1 px-6 flex items-center justify-center">
+          <div className="max-h-full overflow-y-auto">
+            <p className="text-white/90 text-sm leading-relaxed whitespace-pre-wrap">
+              {item.description}
+            </p>
+          </div>
+        </div>
+
+        {/* NAVIGATION */}
         {hasMultiple && (
-          <div className="flex items-center justify-between px-6 py-4 border-t border-[var(--med-border)] bg-[var(--med-light)]">
+          <div className="p-5 flex items-center justify-between">
             <button
               onClick={prev}
-              className="w-10 h-10 rounded-full flex items-center justify-center
-              bg-[var(--med-primary)] text-white
-              hover:bg-[var(--med-primary-dark)] transition"
+              className="w-9 h-9 rounded-full flex items-center justify-center
+                bg-white/20 text-white backdrop-blur
+                hover:bg-white/30 transition"
             >
               ‹
             </button>
 
-            <span className="text-xs text-[var(--med-text)]">
-              {current + 1} of {infoList.length}
+            <span className="text-xs text-white/80">
+              {current + 1} / {infoList.length}
             </span>
 
             <button
               onClick={next}
-              className="w-10 h-10 rounded-full flex items-center justify-center
-              bg-[var(--med-primary)] text-white
-              hover:bg-[var(--med-primary-dark)] transition"
+              className="w-9 h-9 rounded-full flex items-center justify-center
+                bg-white/20 text-white backdrop-blur
+                hover:bg-white/30 transition"
             >
               ›
             </button>
