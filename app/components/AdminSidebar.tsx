@@ -22,21 +22,31 @@ export default function AdminSidebar() {
           <span className="font-bold text-lg">Admin Panel</span>
 
           <button
-            onClick={() => setOpen(!open)}
-            className="text-2xl focus:outline-none"
+            onClick={() => setOpen((p) => !p)}
+            className="text-2xl focus:outline-none transition-transform duration-300"
+            aria-label="Toggle menu"
           >
-            ☰
+            {open ? "✕" : "☰"}
           </button>
         </div>
 
-        {open && (
-          <nav className="border-t bg-white h-[100vh]">
+        {/* MOBILE MENU */}
+        <div
+          className={`
+            overflow-hidden
+            transition-all
+            duration-300
+            ease-in-out
+            ${open ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}
+          `}
+        >
+          <nav className="border-t bg-white">
             {menu.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className={`block px-4 py-3 border-b
+                className={`block px-4 py-3 transition
                   ${
                     pathname === item.href
                       ? "bg-blue-50 text-blue-600 font-medium"
@@ -47,7 +57,7 @@ export default function AdminSidebar() {
               </Link>
             ))}
           </nav>
-        )}
+        </div>
       </div>
 
       {/* 🖥 DESKTOP SIDEBAR */}
