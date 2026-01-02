@@ -38,6 +38,7 @@ import partner4 from "./assets/logo.png";
 import partner5 from "./assets/logo.png";
 import himanshu from "./assets/logo-removebg-preview.png";
 import Link from "next/link";
+import UserInfoCarouselPopup from "./components/UserInfoPopup";
 
 const collaborations = [
   { logo: partner1, name: "Hospital Partner 1" },
@@ -525,6 +526,7 @@ export default function Home() {
 
       <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />
       <FloatingContactActions />
+      <UserInfoCarouselPopup />
     </div>
   );
 }

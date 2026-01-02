@@ -7,6 +7,7 @@ const menu = [
   { name: "Dashboard", href: "/admin" },
   { name: "Email Subscribers", href: "/admin/subscribers" },
   { name: "Queries", href: "/admin/queries" },
+  { name: "Cards Info", href: "/admin/info" },
 ];
 
 export default function AdminSidebar() {
