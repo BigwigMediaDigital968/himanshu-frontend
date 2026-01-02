@@ -37,6 +37,7 @@ import partner3 from "./assets/logo.png";
 import partner4 from "./assets/logo.png";
 import partner5 from "./assets/logo.png";
 import himanshu from "./assets/logo-removebg-preview.png";
+import Link from "next/link";
 
 const collaborations = [
   { logo: partner1, name: "Hospital Partner 1" },
@@ -403,7 +404,8 @@ export default function Home() {
 
       <section className="py-12 bg-white">
         {/* SECTION HEADER */}
-        <div className="text-center mb-14">
+        <div className="w-11/12 md:w-5/6 mx-auto px-5 flex justify-between mb-14">
+          <div></div>
           <h2
             className="
         text-3xl md:text-4xl font-bold 
@@ -414,6 +416,9 @@ export default function Home() {
           >
             Our Services
           </h2>
+          <Link href="/services">
+            <ButtonFill text="All Services →" />
+          </Link>
         </div>
 
         {/* SERVICES GRID */}

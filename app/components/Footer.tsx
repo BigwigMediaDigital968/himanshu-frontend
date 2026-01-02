@@ -206,22 +206,17 @@ export default function Footer() {
         {/* LOCATION 2 */}
         <div className="relative z-10">
           <h3 className="text-sm font-semibold tracking-wider mb-2">
-            VISITING CLINIC
+            VISITING ADDRESS
           </h3>
           <div className="w-10 h-[2px] bg-[var(--med-primary)] mb-4"></div>
 
           <div className="flex items-start gap-3 text-white/80 text-sm">
             <IoLocationOutline className="text-xl mt-1" />
             <p>
-              Lorem ipsum dolor sit amet,
-              <br /> adipiscing elit sed do,
-              <br /> eiusmod tempor incididunt.
+              123 Lorem Ipsum Street,
+              <br /> Dolor Sit Amet Area,
+              <br /> Consectetur City, 110001
             </p>
-          </div>
-
-          <div className="flex items-center gap-3 text-white/80 text-sm mt-3">
-            <IoCallOutline className="text-xl" />
-            <p>1234567890</p>
           </div>
         </div>
       </div>
