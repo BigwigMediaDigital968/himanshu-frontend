@@ -1,4 +1,5 @@
 "use client";
+import { Trash2 } from "lucide-react";
 import { useEffect, useState } from "react";
 
 interface Appointment {
@@ -11,6 +12,7 @@ interface Appointment {
   images?: { url: string }[];
   report?: { url: string };
   createdAt: string;
+  marked: boolean;
 }
 
 export default function AppointmentsPage() {
@@ -44,6 +46,39 @@ export default function AppointmentsPage() {
     setViewerImages(images.map((img) => img.url));
     setCurrentIndex(0);
     setViewerOpen(true);
+  };
+
+  const toggleMark = async (id: string, marked: boolean) => {
+    try {
+      await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE}/appointment/${id}/mark`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ marked }),
+        }
+      );
+
+      setAppointments((prev) =>
+        prev.map((a) => (a._id === id ? { ...a, marked } : a))
+      );
+    } catch (err) {
+      alert("Failed to update mark status");
+    }
+  };
+
+  const deleteAppointment = async (id: string) => {
+    if (!confirm("Are you sure you want to delete this appointment?")) return;
+
+    try {
+      await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/appointment/${id}`, {
+        method: "DELETE",
+      });
+
+      setAppointments((prev) => prev.filter((a) => a._id !== id));
+    } catch (err) {
+      alert("Failed to delete appointment");
+    }
   };
 
   return (
@@ -81,6 +116,7 @@ export default function AppointmentsPage() {
                   <th className="p-3">Disease</th>
                   <th className="p-3">Attachments</th>
                   <th className="p-3">Date</th>
+                  <th className="p-3">Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -113,6 +149,25 @@ export default function AppointmentsPage() {
 
                     <td className="p-3">
                       {new Date(appt.createdAt).toLocaleDateString()}
+                    </td>
+                    <td className="p-3 flex items-center gap-3">
+                      {/* MARK */}
+                      <input
+                        type="checkbox"
+                        checked={appt.marked}
+                        onChange={(e) => toggleMark(appt._id, e.target.checked)}
+                        className="w-4 h-4 cursor-pointer"
+                        title="Mark appointment"
+                      />
+
+                      {/* DELETE */}
+                      <button
+                        onClick={() => deleteAppointment(appt._id)}
+                        className="text-red-600 hover:text-red-800"
+                        title="Delete appointment"
+                      >
+                        <Trash2 />
+                      </button>
                     </td>
                   </tr>
                 ))}
@@ -161,6 +216,24 @@ export default function AppointmentsPage() {
                       No attachments
                     </span>
                   )}
+                </div>
+
+                <div className="flex items-center justify-between pt-3 border-t mt-2">
+                  <label className="flex items-center gap-2 text-sm">
+                    <input
+                      type="checkbox"
+                      checked={appt.marked}
+                      onChange={(e) => toggleMark(appt._id, e.target.checked)}
+                    />
+                    Marked
+                  </label>
+
+                  <button
+                    onClick={() => deleteAppointment(appt._id)}
+                    className="text-red-600 text-sm"
+                  >
+                    Delete 🗑
+                  </button>
                 </div>
               </div>
             ))}

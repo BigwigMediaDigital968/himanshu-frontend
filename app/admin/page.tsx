@@ -44,7 +44,7 @@ export default function AdminDashboard() {
         </div>
 
         <div className="bg-white p-4 rounded shadow">
-          <p className="text-gray-500">Appointments</p>
+          <p className="text-gray-500">Queries</p>
           <p className="text-2xl font-bold">{appointmentCount}</p>
         </div>
       </div>
