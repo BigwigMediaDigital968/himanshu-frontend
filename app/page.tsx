@@ -26,6 +26,8 @@ import ConditionsWeTreat from "./components/ConditionWeTreat";
 import team2 from "./assets/team/chandrakanta.webp";
 import team3 from "./assets/team/sanoj.webp";
 import team4 from "./assets/team/trish.webp";
+import team5 from "./assets/team/Ms Saisri.jpeg";
+import team6 from "./assets/team/Dr.Monika Doohun.jpeg";
 import WhyChooseUs from "./components/WhyChooseUs";
 import FloatingContactActions from "./components/ContactActions";
 import himanshu from "./assets/logo-removebg-preview.png";
@@ -106,6 +108,20 @@ const teamMembers = [
     image: team3,
     description:
       "Mr. Sanoj Yadav is a dedicated Vascular Access Nurse with hands-on experience in dialysis patient care. He focuses on patient education, access monitoring, and post-procedure support, ensuring consistent and high-quality care across all affiliated centers.",
+  },
+  {
+    name: "Ms Saisri",
+    role: "Patient care coordinator",
+    image: team5,
+    description:
+      "Ms. Saisri is a Patient Care Coordinator dedicated to ensuring a smooth and supportive healthcare experience for patients. She serves as a key point of contact, assisting with appointment scheduling, coordination of care, and communication between patients, families, and the medical team.",
+  },
+  {
+    name: "Dr. Monika Doohun",
+    role: "Resident",
+    image: team6,
+    description:
+      "Dr. Monika Doohun is a resident in the Department of Vascular Surgery with a strong commitment to patient care and clinical excellence. She is involved in the diagnosis, management, and surgical treatment of vascular conditions, working closely with senior surgeons and multidisciplinary teams.",
   },
 ];
 
@@ -330,7 +346,7 @@ export default function Home() {
           </div>
 
           {/* Team Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
@@ -339,11 +355,11 @@ export default function Home() {
           bg-white shadow-md hover:shadow-xl transition-all duration-500"
               >
                 {/* IMAGE */}
-                <div className="relative h-[320px] overflow-hidden">
+                <div className="relative h-[400px] overflow-hidden">
                   <Image
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover
+                    className="w-full h-full object-contain
               transition-transform duration-700
               group-hover:scale-105"
                   />
