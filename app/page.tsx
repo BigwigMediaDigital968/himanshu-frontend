@@ -31,22 +31,9 @@ import team3 from "./assets/team/sanoj.webp";
 import team4 from "./assets/team/trish.webp";
 import WhyChooseUs from "./components/WhyChooseUs";
 import FloatingContactActions from "./components/ContactActions";
-import partner1 from "./assets/logo.png";
-import partner2 from "./assets/logo.png";
-import partner3 from "./assets/logo.png";
-import partner4 from "./assets/logo.png";
-import partner5 from "./assets/logo.png";
 import himanshu from "./assets/logo-removebg-preview.png";
 import Link from "next/link";
-import UserInfoCarouselPopup from "./components/UserInfoPopup";
-
-const collaborations = [
-  { logo: partner1, name: "Hospital Partner 1" },
-  { logo: partner2, name: "Medical Lab 2" },
-  { logo: partner3, name: "Healthcare Group 3" },
-  { logo: partner4, name: "Diagnostic Center 4" },
-  { logo: partner5, name: "Insurance Partner 5" },
-];
+import partners from "./assets/ayusync.webp";
 
 const faqs = [
   {
@@ -256,76 +243,78 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 relative overflow-hidden">
+      <section className="py-14 relative overflow-hidden">
         <div className="relative w-11/12 md:w-5/6 mx-auto">
           {/* Title */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)]">
-              Trusted Healthcare Partners
+              Industry Collaboration
             </h2>
-            <p className="mt-4 max-w-xl mx-auto text-gray-600">
-              Collaborating with leading hospitals, diagnostics, and healthcare
-              institutions to deliver advanced vascular care.
+            <p className="mt-4 max-w-2xl mx-auto text-gray-600">
+              Partnering with innovative healthcare technology companies to
+              advance vascular diagnostics and remote patient monitoring.
             </p>
           </div>
 
-          {/* Glass Container */}
+          {/* Glass Card */}
           <div
             className="
         bg-white/70 backdrop-blur-xl
-        rounded-3xl px-6 md:px-12 py-10
+        border border-[var(--med-border)]
+        rounded-3xl
+        px-6 md:px-12 py-10
+        shadow-md
       "
           >
-            <Swiper
-              modules={[Autoplay]}
-              loop
-              autoplay={{
-                delay: 2200,
-                disableOnInteraction: false,
-              }}
-              spaceBetween={30}
-              breakpoints={{
-                360: { slidesPerView: 2 },
-                640: { slidesPerView: 3 },
-                1024: { slidesPerView: 4 },
-              }}
-            >
-              {collaborations.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div
-                    className="
-      group h-full
-      bg-white/80 backdrop-blur-xl
-      border border-[var(--med-border)]
-      rounded-2xl p-6
-      flex flex-col items-center justify-center
-      text-center
-      shadow-sm
-      hover:shadow-lg hover:-translate-y-1
-      transition-all duration-300
-    "
-                  >
-                    {/* Logo */}
-                    <div className="h-16 flex items-center justify-center mb-4">
-                      <Image
-                        src={item.logo}
-                        alt={item.name}
-                        className="
-          max-h-14 object-contain
-          opacity-80 group-hover:opacity-100
-          transition
-        "
-                      />
-                    </div>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              {/* Logo */}
+              <div
+                className="
+            w-full md:w-1/4
+            flex items-center justify-center
+            bg-white/80 backdrop-blur
+            border border-[var(--med-border)]
+            rounded-2xl
+            p-6
+            shadow-sm
+          "
+              >
+                <Image
+                  src={partners} // import your logo
+                  alt="AyuSynk Devices"
+                  className="max-h-16 object-contain"
+                />
+              </div>
 
-                    {/* Partner Name */}
-                    <p className="text-sm font-semibold text-[var(--med-text)]">
-                      {item.name}
-                    </p>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+              {/* Content */}
+              <div className="w-full md:w-3/4 text-center md:text-left">
+                <h3 className="text-xl md:text-2xl font-semibold text-[var(--med-text)] mb-3">
+                  AyuSynk Devices
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed">
+                  Collaborative development of an{" "}
+                  <strong>AI-enabled digital stethoscope </strong>
+                  designed for <strong>remote AV fistula monitoring</strong>.
+                  This innovation aims to enable early detection of vascular
+                  access complications, improve patient outcomes, and support
+                  continuous monitoring beyond hospital settings.
+                </p>
+
+                {/* Optional highlight pills */}
+                <div className="flex flex-wrap gap-3 mt-5 justify-center md:justify-start">
+                  <span className="px-4 py-1.5 text-xs font-medium rounded-full bg-[var(--med-light)] text-[var(--med-primary)] border border-[var(--med-border)]">
+                    AI-Enabled Diagnostics
+                  </span>
+                  <span className="px-4 py-1.5 text-xs font-medium rounded-full bg-[var(--med-light)] text-[var(--med-primary)] border border-[var(--med-border)]">
+                    Remote Monitoring
+                  </span>
+                  <span className="px-4 py-1.5 text-xs font-medium rounded-full bg-[var(--med-light)] text-[var(--med-primary)] border border-[var(--med-border)]">
+                    AV Fistula Care
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
