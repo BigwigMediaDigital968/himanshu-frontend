@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
+import Cookies from "js-cookie";
 
 const menu = [
   { name: "Dashboard", href: "/admin" },
@@ -13,6 +14,13 @@ const menu = [
 export default function AdminSidebar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  const router = useRouter();
+
+  const handleLogout = () => {
+    Cookies.remove("adminAuth");
+    router.push("/login");
+  };
 
   return (
     <>
@@ -57,6 +65,17 @@ export default function AdminSidebar() {
               </Link>
             ))}
           </nav>
+          <button
+            onClick={handleLogout}
+            className="
+    w-full text-left px-4 py-3
+    text-red-600 font-medium
+    hover:bg-red-50
+    transition
+  "
+          >
+            Logout
+          </button>
         </div>
       </div>
 
@@ -80,6 +99,19 @@ export default function AdminSidebar() {
             </Link>
           ))}
         </nav>
+        <div className="mt-auto p-4 border-t">
+          <button
+            onClick={handleLogout}
+            className="
+      w-full border cursor-pointer px-4 py-2 rounded-lg
+      text-red-600 font-medium
+      hover:bg-red-50
+      transition
+    "
+          >
+            Logout
+          </button>
+        </div>
       </aside>
     </>
   );
