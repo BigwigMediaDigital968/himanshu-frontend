@@ -1,12 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import doctorImg from "../assets/Dr-Himanshu-Verma-Fortis.webp"; // replace with actual image
+import doctorImg from "../assets/logo-removebg-preview.png"; // replace with actual image
 import Nav from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import PopupForm from "../components/Popup";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ButtonFill from "../components/Button";
@@ -138,7 +137,7 @@ export default function About() {
 
               <ButtonFill
                 onClick={() => setOpenPopup(true)}
-                text="Book Appointment"
+                text="Request a Callback"
               />
             </div>
 
@@ -441,8 +440,9 @@ export default function About() {
             </h2>
 
             <p className="text-[var(--med-text)]/70 mb-10 max-w-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem, repellendus. Saepe quia minus quidem.
+              Have a medical query or need guidance about your treatment
+              options? Our support team will connect with you and help you take
+              the next step.
             </p>
 
             <div className="space-y-6">
@@ -456,9 +456,13 @@ export default function About() {
                     Address
                   </p>
                   <p className="text-[var(--med-text)]/70 text-sm">
-                    Lorem Ipsum Street, Sector 00,
+                    Fortis Memorial Research Centre,
                     <br />
-                    New Delhi, India
+                    Opposite HUDA City Centre,
+                    <br />
+                    Sector 44, Gurugram,
+                    <br />
+                    Haryana 122003
                   </p>
                 </div>
               </div>
@@ -471,7 +475,7 @@ export default function About() {
                 <div>
                   <p className="font-semibold text-[var(--med-text)]">Phone</p>
                   <p className="text-[var(--med-text)]/70 text-sm">
-                    +91 00000 00000
+                    +91 88268 33598
                   </p>
                 </div>
               </div>
@@ -484,7 +488,7 @@ export default function About() {
                 <div>
                   <p className="font-semibold text-[var(--med-text)]">Email</p>
                   <p className="text-[var(--med-text)]/70 text-sm">
-                    info@example.com
+                    varenyamvascular@gmail.com
                   </p>
                 </div>
               </div>
@@ -568,11 +572,39 @@ export default function About() {
                   <option value="" disabled>
                     Select Disease
                   </option>
-                  <option value="disease-1">Disease 1</option>
-                  <option value="disease-2">Disease 2</option>
-                  <option value="disease-3">Disease 3</option>
-                  <option value="disease-4">Disease 4</option>
-                  <option value="disease-5">Disease 5</option>
+                  <option value="Varicose Vein Treatments">
+                    Varicose Vein Treatments
+                  </option>
+                  <option value="Dialysis Access (AV Fistula & CKD Care)">
+                    Dialysis Access (AV Fistula & CKD Care)
+                  </option>
+                  <option value="Peripheral Artery Disease – Diagnosis & Treatment">
+                    Peripheral Artery Disease – Diagnosis & Treatment
+                  </option>
+                  <option value="Aortic & Major Vessel Interventions">
+                    Aortic & Major Vessel Interventions
+                  </option>
+                  <option value="Visceral Artery Interventions">
+                    Visceral Artery Interventions
+                  </option>
+                  <option value="Carotid & Upper-Body Artery Procedures">
+                    Carotid & Upper-Body Artery Procedures
+                  </option>
+                  <option value="Venous & Lymphedema Care">
+                    Venous & Lymphedema Care
+                  </option>
+                  <option value="Diabetic Foot & Wound Care">
+                    Diabetic Foot & Wound Care
+                  </option>
+                  <option value="Diagnostic & Support Services">
+                    Diagnostic & Support Services
+                  </option>
+                  <option value="AV Fistula Care Workshop">
+                    AV Fistula Care Workshop
+                  </option>
+                  <option value="Preventive & Advisory Services">
+                    Preventive & Advisory Services
+                  </option>
                 </select>
               </div>
 

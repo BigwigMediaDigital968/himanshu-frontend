@@ -145,7 +145,7 @@ export default function HeroCarousel() {
                     <motion.div variants={slideLeft}>
                       <ButtonFill
                         onClick={() => setOpenPopup(true)}
-                        text="Book Appointment"
+                        text="Request a Callback"
                         className="text-white border border-white"
                       />
                     </motion.div>

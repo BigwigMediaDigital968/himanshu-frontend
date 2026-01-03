@@ -172,18 +172,23 @@ export default function Nav() {
                   {/* AVF CARE WORKSHOP */}
                   <div className="relative group">
                     <div className="flex items-center justify-between px-4 py-2 cursor-pointer hover:bg-(--med-light)">
-                      <span>AVF Care Workshop</span>
-                      <ChevronDown size={14} className="-rotate-90" />
+                      <Link
+                        href="/workshop/avf-care"
+                        className="block px-4 py-2 hover:bg-(--med-light) hover:text-(--med-primary)"
+                      >
+                        AVF Care Workshop
+                      </Link>
+                      {/* <ChevronDown size={14} className="-rotate-90" /> */}
                     </div>
 
                     {/* SECOND LEVEL MENU */}
-                    <div className="absolute left-full -top-2 hidden group-hover:block">
+                    {/* <div className="absolute left-full -top-2 hidden group-hover:block">
                       <div className="bg-white shadow-xl  py-2 w-48 border border-(--med-border)">
                         <Link
-                          href="/workshop/avf-care/page-1"
+                          href="/workshop/avf-care/about"
                           className="block px-4 py-2 hover:bg-(--med-light) hover:text-(--med-primary)"
                         >
-                          Page 1
+                          About
                         </Link>
                         <Link
                           href="/workshop/avf-care/page-2"
@@ -198,7 +203,7 @@ export default function Nav() {
                           Page 3
                         </Link>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -225,7 +230,7 @@ export default function Nav() {
         <div className="hidden lg:flex items-center gap-6">
           <ButtonFill
             onClick={() => setOpenPopup(true)}
-            text="Book Appointment"
+            text="Request a Callback"
           />
 
           <button
@@ -346,7 +351,7 @@ export default function Nav() {
             <div className="mt-3 space-y-3 text-[15px] text-gray-700">
               <div className="flex items-center gap-3">
                 <Mail className="text-(--med-primary)" />
-                doctorclinic@gmail.com
+                abc@xyz.com
               </div>
 
               <div className="flex items-center gap-3">

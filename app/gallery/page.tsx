@@ -9,74 +9,134 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import type { StaticImageData } from "next/image";
+import image1 from "../assets/gallery/avfcare/1-12.webp";
+import image2 from "../assets/gallery/avfcare/1-14.webp";
+import image3 from "../assets/gallery/avfcare/1-15.webp";
+import image4 from "../assets/gallery/avfcare/1-19.webp";
+import image5 from "../assets/gallery/avfcare/1-23.webp";
+import image6 from "../assets/gallery/avfcare/1-9.webp";
+import image7 from "../assets/gallery/avfcare/DSC00077-scaled-1.webp";
+import image8 from "../assets/gallery/avfcare/DSC_0972-scaled-1.webp";
+import image9 from "../assets/gallery/avfcare/DSC_1036-scaled-1.webp";
+import image10 from "../assets/gallery/avfcare/Picture23.webp";
+import image11 from "../assets/gallery/avfcare/img-1-3-scaled-1.webp";
 
-/* ------------------ GALLERY DATA ------------------ */
+/* ------------------ TYPES ------------------ */
+type Category = "work" | "avf" | "podcast" | "training";
+
 type GalleryItem =
   | {
       type: "single";
-      src: string;
+      src: string | StaticImageData;
       title: string;
+      category: Category;
     }
   | {
       type: "beforeAfter";
       before: string;
       after: string;
       title: string;
+      category: Category;
     };
 
+/* ------------------ DATA ------------------ */
 const galleryImages: GalleryItem[] = [
   {
     type: "single",
-    src: "https://plus.unsplash.com/premium_photo-1664478187629-ca157d088d48",
+    src: image1,
     title: "Endovascular Procedure",
-  },
-  {
-    type: "beforeAfter",
-    before: "https://images.unsplash.com/photo-1579154204601-01588f351e67",
-    after: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5",
-    title: "Before & After Treatment",
+    category: "avf",
   },
   {
     type: "single",
-    src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118",
-    title: "Advanced Equipment",
+    src: image2,
+    title: "Endovascular Procedure",
+    category: "avf",
   },
   {
     type: "single",
-    src: "https://images.unsplash.com/photo-1579154491915-611e891d3a5b",
-    title: "Clinical Environment",
+    src: image3,
+    title: "Endovascular Procedure",
+    category: "avf",
   },
   {
-    type: "beforeAfter",
-    before: "https://images.unsplash.com/photo-1579154204601-01588f351e67",
-    after: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5",
-    title: "Before & After Treatment",
+    type: "single",
+    src: image4,
+    title: "Endovascular Procedure",
+    category: "avf",
   },
   {
-    type: "beforeAfter",
-    before: "https://images.unsplash.com/photo-1579154204601-01588f351e67",
-    after: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5",
-    title: "Before & After Treatment",
+    type: "single",
+    src: image5,
+    title: "Endovascular Procedure",
+    category: "avf",
   },
+  {
+    type: "single",
+    src: image6,
+    title: "Endovascular Procedure",
+    category: "avf",
+  },
+  {
+    type: "single",
+    src: image7,
+    title: "Endovascular Procedure",
+    category: "avf",
+  },
+  {
+    type: "single",
+    src: image8,
+    title: "Endovascular Procedure",
+    category: "avf",
+  },
+  {
+    type: "single",
+    src: image9,
+    title: "Endovascular Procedure",
+    category: "avf",
+  },
+  {
+    type: "single",
+    src: image10,
+    title: "Endovascular Procedure",
+    category: "avf",
+  },
+  {
+    type: "single",
+    src: image11,
+    title: "Endovascular Procedure",
+    category: "avf",
+  },
+  // {
+  //   type: "beforeAfter",
+  //   before: "https://images.unsplash.com/photo-1579154204601-01588f351e67",
+  //   after: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5",
+  //   title: "AVF Before & After",
+  //   category: "avf",
+  // },
 ];
 
-/* ------------------ MAIN COMPONENT ------------------ */
+/* ------------------ COMPONENT ------------------ */
 export default function Gallery() {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<Category>("work");
+  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
-  /* ESC KEY CLOSE */
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   useEffect(() => {
     const escHandler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setSelectedIndex(null);
+      if (e.key === "Escape") setSelectedItem(null);
     };
     window.addEventListener("keydown", escHandler);
     return () => window.removeEventListener("keydown", escHandler);
   }, []);
 
-  /* AOS */
-  useEffect(() => {
-    AOS.init({ duration: 800, once: true });
-  }, []);
+  const filteredImages = galleryImages.filter(
+    (img) => img.category === activeTab
+  );
 
   return (
     <div>
@@ -92,114 +152,147 @@ export default function Gallery() {
             Our Medical Gallery
           </h1>
           <p className="text-white/80 mt-4 max-w-2xl">
-            Clinical visuals, treatment highlights, and facility insights
-            focused on vascular and endovascular care.
+            Clinical visuals, treatment highlights, and facility insights.
           </p>
         </div>
       </section>
 
-      {/* GRID */}
-      <section className="py-24 bg-white">
+      {/* GALLERY */}
+      <section className="py-12 bg-white">
         <div className="w-11/12 md:w-5/6 mx-auto">
-          {/* BUTTONS */}
-          <div className="flex gap-2 mb-10 overflow-x-auto sm:overflow-visible">
-            <button className="btn-9 btn-sm">Button 1</button>
-            <button className="btn-9 btn-sm">Button 2</button>
-            <button className="btn-9 btn-sm">Button 3</button>
-            <button className="btn-9 btn-sm">Button 4</button>
-            <button className="btn-9 btn-sm">Button 5</button>
+          {/* TABS (UNCHANGED STYLE) */}
+          <div className="flex items-center gap-2 mb-10 overflow-x-auto py-2">
+            <button
+              className={`btn-9 btn-sm transition-all ${
+                activeTab === "work"
+                  ? "!bg-[#64bab4] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
+                  : ""
+              }`}
+              onClick={() => setActiveTab("work")}
+            >
+              Our Work
+            </button>
+
+            <button
+              className={`btn-9 btn-sm transition-all ${
+                activeTab === "avf"
+                  ? "!bg-[#64bab4] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
+                  : ""
+              }`}
+              onClick={() => setActiveTab("avf")}
+            >
+              AVF Care
+            </button>
+
+            <button
+              className={`btn-9 btn-sm transition-all ${
+                activeTab === "podcast"
+                  ? "!bg-[#64bab4] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
+                  : ""
+              }`}
+              onClick={() => setActiveTab("podcast")}
+            >
+              Podcast
+            </button>
+
+            <button
+              className={`btn-9 btn-sm transition-all ${
+                activeTab === "training"
+                  ? "!bg-[#64bab4] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
+                  : ""
+              }`}
+              onClick={() => setActiveTab("training")}
+            >
+              Training
+            </button>
           </div>
 
-          {/* GALLERY */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {galleryImages.map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.03 }}
-                className="rounded-2xl overflow-hidden shadow-lg cursor-pointer"
-                onClick={() => setSelectedIndex(index)}
-              >
-                <Image
-                  src={item.type === "single" ? item.src : item.after}
-                  alt={item.title}
-                  width={600}
-                  height={400}
-                  className="h-[260px] w-full object-cover"
-                />
-              </motion.div>
-            ))}
-          </div>
+          {/* GRID / EMPTY STATE */}
+          {filteredImages.length === 0 ? (
+            <div className="flex items-center justify-center py-20">
+              <div className="max-w-sm w-full text-center bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-sm">
+                {/* Icon */}
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#64bab4]/10 flex items-center justify-center">
+                  <span className="text-2xl">🖼️</span>
+                </div>
+
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  No Images Available
+                </h3>
+
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Images for this category will be added soon. Please check
+                  another section or come back later.
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredImages.map((item, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ scale: 1.03 }}
+                  className="rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+                  onClick={() => setSelectedItem(item)}
+                >
+                  <Image
+                    src={item.type === "single" ? item.src : item.after}
+                    alt={item.title}
+                    width={600}
+                    height={400}
+                    className="h-[260px] w-full object-cover"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
       {/* LIGHTBOX */}
       <AnimatePresence>
-        {selectedIndex !== null &&
-          (() => {
-            const currentItem = galleryImages[selectedIndex];
-
-            return (
-              <motion.div
-                className="fixed inset-0 z-[999] bg-black/90 flex items-center justify-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setSelectedIndex(null)}
+        {selectedItem && (
+          <motion.div
+            className="fixed inset-0 z-[999] bg-black/90 flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedItem(null)}
+          >
+            <motion.div
+              className="relative max-w-6xl w-full px-4"
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedItem(null)}
+                className="absolute -top-10 right-0 text-white"
               >
-                <motion.div
-                  className="relative max-w-6xl w-full px-4"
-                  initial={{ scale: 0.9 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.3 }}
-                  onClick={(e) => e.stopPropagation()}
-                  drag={currentItem.type === "single" ? "x" : false}
-                  dragConstraints={{ left: 0, right: 0 }}
-                  onDragEnd={(e, info) => {
-                    if (currentItem.type !== "single") return;
+                ✕ Close
+              </button>
 
-                    if (info.offset.x > 120 && selectedIndex > 0) {
-                      setSelectedIndex(selectedIndex - 1);
-                    }
+              {selectedItem.type === "single" ? (
+                <Image
+                  src={selectedItem.src}
+                  alt={selectedItem.title}
+                  width={1200}
+                  height={800}
+                  className="rounded-xl object-contain w-full"
+                />
+              ) : (
+                <BeforeAfterSlider
+                  before={selectedItem.before}
+                  after={selectedItem.after}
+                />
+              )}
 
-                    if (
-                      info.offset.x < -120 &&
-                      selectedIndex < galleryImages.length - 1
-                    ) {
-                      setSelectedIndex(selectedIndex + 1);
-                    }
-                  }}
-                >
-                  {/* CLOSE */}
-                  <button
-                    onClick={() => setSelectedIndex(null)}
-                    className="absolute -top-10 right-0 text-white"
-                  >
-                    ✕ Close
-                  </button>
-
-                  {/* CONTENT */}
-                  {currentItem.type === "single" ? (
-                    <Image
-                      src={currentItem.src}
-                      alt={currentItem.title}
-                      width={1200}
-                      height={800}
-                      className="rounded-xl object-contain w-full"
-                    />
-                  ) : (
-                    <BeforeAfterSlider
-                      before={currentItem.before}
-                      after={currentItem.after}
-                    />
-                  )}
-
-                  <p className="text-center text-white/80 mt-4">
-                    {currentItem.title}
-                  </p>
-                </motion.div>
-              </motion.div>
-            );
-          })()}
+              <p className="text-center text-white/80 mt-4">
+                {selectedItem.title}
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
       </AnimatePresence>
 
       <Footer />
@@ -209,7 +302,7 @@ export default function Gallery() {
   );
 }
 
-/* ------------------ BEFORE AFTER SLIDER ------------------ */
+/* ------------------ BEFORE AFTER ------------------ */
 function BeforeAfterSlider({
   before,
   after,
@@ -220,10 +313,7 @@ function BeforeAfterSlider({
   const [pos, setPos] = useState(50);
 
   return (
-    <div
-      className="relative h-[70vh] rounded-xl overflow-hidden"
-      onPointerDown={(e) => e.stopPropagation()} // ⬅️ IMPORTANT
-    >
+    <div className="relative h-[70vh] rounded-xl overflow-hidden">
       <Image src={after} fill alt="" className="object-cover" />
       <div
         className="absolute top-0 left-0 h-full overflow-hidden"

@@ -5,8 +5,6 @@ import HeroCarousel from "./components/Hero";
 import ButtonFill from "./components/Button";
 import PopupForm from "./components/Popup";
 import { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 
@@ -25,7 +23,6 @@ import TestimonialSlider from "./components/Testimonial";
 import faq from "./assets/faq.png";
 import FinalCTA from "./components/CTA";
 import ConditionsWeTreat from "./components/ConditionWeTreat";
-import team1 from "./assets/team/Dr-Himanshu-Verma-Fortis.webp";
 import team2 from "./assets/team/chandrakanta.webp";
 import team3 from "./assets/team/sanoj.webp";
 import team4 from "./assets/team/trish.webp";
@@ -85,7 +82,7 @@ const teamMembers = [
   {
     name: "Dr. Himanshu Verma",
     role: "Founder, AVF Care Workshop",
-    image: team1,
+    image: himanshu,
     description:
       "A leading Vascular & Endovascular Surgeon at Fortis Hospital, Gurgaon, Dr. Himanshu Verma brings extensive experience in managing complex vascular conditions. As the founder of AVF Care Workshop, he is committed to advancing fistula care through education, training, and patient-centered clinical excellence.",
   },
@@ -212,7 +209,7 @@ export default function Home() {
               {/* keep using your ButtonFill; setOpenPopup should come from outer scope */}
               <ButtonFill
                 onClick={() => setOpenPopup(true)}
-                text="Book Appointment"
+                text="Request a Callback"
               />
             </div>
           </div>

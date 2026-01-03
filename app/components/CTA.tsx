@@ -27,7 +27,7 @@ export default function FinalCTA() {
 
         <ButtonFill
           onClick={() => setOpenPopup(true)}
-          text="Book Appointment"
+          text="Request a Callback"
           className="border border-white text-white"
         />
       </div>

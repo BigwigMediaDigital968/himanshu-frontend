@@ -8,6 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import FinalCTA from "../components/CTA";
 import FloatingContactActions from "../components/ContactActions";
+import ButtonFill from "../components/Button";
 
 export default function Services() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -119,6 +120,22 @@ export default function Services() {
                   </li>
                 ))}
               </ol>
+            </div>
+            {/* CTA BOX */}
+            <div className="mt-6 bg-white  rounded-2xl p-6 shadow-md">
+              <h4 className="text-lg font-semibold mb-2">
+                Need Help Choosing the Right Treatment?
+              </h4>
+
+              <p className="text-sm text-black/50 mb-4 leading-relaxed">
+                If you’re confused by multiple medical opinions or unsure which
+                treatment is right for you, our team can guide you clearly.
+              </p>
+
+              <ButtonFill
+                onClick={() => setOpenPopup(true)}
+                text="Request a Callback"
+              />
             </div>
           </aside>
 

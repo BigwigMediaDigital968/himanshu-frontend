@@ -143,7 +143,7 @@ export default function Footer() {
       </div>
 
       {/* --- CONTENT FIX (z-10) --- */}
-      <div className="relative z-10 w-11/12 md:w-5/6 mx-auto grid grid-cols-1 md:grid-cols-4 gap-14">
+      <div className="relative z-10 w-11/12 md:w-5/6 mx-auto grid grid-cols-1 md:grid-cols-3 gap-14">
         {/* LOGO + SOCIAL */}
         <div className="">
           <div className="flex justify-center">
@@ -179,7 +179,7 @@ export default function Footer() {
 
           <div className="flex items-center gap-3 text-white/80 text-sm mb-6">
             <IoMailOutline className="text-xl" />
-            <p>abc@xyz.com</p>
+            <p>varenyamvascular@gmail.com</p>
           </div>
         </div>
         {/* LOCATION 1 */}
@@ -199,23 +199,6 @@ export default function Footer() {
               Sector 44, Gurugram,
               <br />
               Haryana 122003
-            </p>
-          </div>
-        </div>
-
-        {/* LOCATION 2 */}
-        <div className="relative z-10">
-          <h3 className="text-sm font-semibold tracking-wider mb-2">
-            VISITING ADDRESS
-          </h3>
-          <div className="w-10 h-[2px] bg-[var(--med-primary)] mb-4"></div>
-
-          <div className="flex items-start gap-3 text-white/80 text-sm">
-            <IoLocationOutline className="text-xl mt-1" />
-            <p>
-              123 Lorem Ipsum Street,
-              <br /> Dolor Sit Amet Area,
-              <br /> Consectetur City, 110001
             </p>
           </div>
         </div>

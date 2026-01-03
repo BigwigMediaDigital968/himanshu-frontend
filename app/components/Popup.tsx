@@ -146,11 +146,39 @@ const PopupForm: React.FC<PopupFormProps> = ({ open, onClose }) => {
               onChange={(e) => setDisease(e.target.value)}
             >
               <option value="">Select Disease</option>
-              <option value="Disease 1">Disease 1</option>
-              <option value="Disease 2">Disease 2</option>
-              <option value="Disease 3">Disease 3</option>
-              <option value="Disease 4">Disease 4</option>
-              <option value="Disease 5">Disease 5</option>
+              <option value="Varicose Vein Treatments">
+                Varicose Vein Treatments
+              </option>
+              <option value="Dialysis Access (AV Fistula & CKD Care)">
+                Dialysis Access (AV Fistula & CKD Care)
+              </option>
+              <option value="Peripheral Artery Disease – Diagnosis & Treatment">
+                Peripheral Artery Disease – Diagnosis & Treatment
+              </option>
+              <option value="Aortic & Major Vessel Interventions">
+                Aortic & Major Vessel Interventions
+              </option>
+              <option value="Visceral Artery Interventions">
+                Visceral Artery Interventions
+              </option>
+              <option value="Carotid & Upper-Body Artery Procedures">
+                Carotid & Upper-Body Artery Procedures
+              </option>
+              <option value="Venous & Lymphedema Care">
+                Venous & Lymphedema Care
+              </option>
+              <option value="Diabetic Foot & Wound Care">
+                Diabetic Foot & Wound Care
+              </option>
+              <option value="Diagnostic & Support Services">
+                Diagnostic & Support Services
+              </option>
+              <option value="AV Fistula Care Workshop">
+                AV Fistula Care Workshop
+              </option>
+              <option value="Preventive & Advisory Services">
+                Preventive & Advisory Services
+              </option>
             </select>
 
             <textarea

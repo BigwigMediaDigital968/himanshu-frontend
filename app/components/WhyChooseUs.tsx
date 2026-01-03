@@ -30,7 +30,7 @@ export default function WhyChooseUs() {
             className="text-3xl md:text-4xl font-bold mb-2 text-[var(--med-primary)] mb-10  "
             data-aos="fade-up"
           >
-            Why Choose Us?
+            Expert Second Opinions Made Simple
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
@@ -79,7 +79,7 @@ export default function WhyChooseUs() {
               {/* CTA */}
               <ButtonFill
                 onClick={() => setOpenPopup(true)}
-                text="Book Appointment"
+                text="Let’s Clear Your Doubts"
               />
             </div>
           </div>
