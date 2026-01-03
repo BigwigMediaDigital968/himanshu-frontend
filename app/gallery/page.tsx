@@ -21,6 +21,12 @@ import image8 from "../assets/gallery/avfcare/DSC_0972-scaled-1.webp";
 import image9 from "../assets/gallery/avfcare/DSC_1036-scaled-1.webp";
 import image10 from "../assets/gallery/avfcare/Picture23.webp";
 import image11 from "../assets/gallery/avfcare/img-1-3-scaled-1.webp";
+import image12 from "../assets/gallery/podcast/IMG_5282.webp";
+import image13 from "../assets/gallery/podcast/IMG_5304.webp";
+import image14 from "../assets/gallery/podcast/_DSC5049.webp";
+import image15 from "../assets/gallery/avfcare/DSC00019.webp";
+import image16 from "../assets/gallery/avfcare/DSC09998.webp";
+import image17 from "../assets/gallery/avfcare/DSC00030.webp";
 
 /* ------------------ TYPES ------------------ */
 type Category = "work" | "avf" | "podcast" | "training";
@@ -29,14 +35,13 @@ type GalleryItem =
   | {
       type: "single";
       src: string | StaticImageData;
-      title: string;
+
       category: Category;
     }
   | {
       type: "beforeAfter";
       before: string;
       after: string;
-      title: string;
       category: Category;
     };
 
@@ -45,69 +50,104 @@ const galleryImages: GalleryItem[] = [
   {
     type: "single",
     src: image1,
-    title: "Endovascular Procedure",
+
     category: "avf",
   },
   {
     type: "single",
     src: image2,
-    title: "Endovascular Procedure",
+
     category: "avf",
   },
   {
     type: "single",
     src: image3,
-    title: "Endovascular Procedure",
+
     category: "avf",
   },
   {
     type: "single",
     src: image4,
-    title: "Endovascular Procedure",
+
     category: "avf",
   },
   {
     type: "single",
     src: image5,
-    title: "Endovascular Procedure",
+
     category: "avf",
   },
   {
     type: "single",
     src: image6,
-    title: "Endovascular Procedure",
+
     category: "avf",
   },
   {
     type: "single",
     src: image7,
-    title: "Endovascular Procedure",
+
     category: "avf",
   },
   {
     type: "single",
     src: image8,
-    title: "Endovascular Procedure",
+
     category: "avf",
   },
   {
     type: "single",
     src: image9,
-    title: "Endovascular Procedure",
+
     category: "avf",
   },
   {
     type: "single",
     src: image10,
-    title: "Endovascular Procedure",
+
     category: "avf",
   },
   {
     type: "single",
     src: image11,
-    title: "Endovascular Procedure",
+
     category: "avf",
   },
+  {
+    type: "single",
+    src: image12,
+
+    category: "podcast",
+  },
+  {
+    type: "single",
+    src: image13,
+
+    category: "podcast",
+  },
+  {
+    type: "single",
+    src: image14,
+
+    category: "podcast",
+  },
+  {
+    type: "single",
+    src: image15,
+
+    category: "avf",
+  },
+  {
+    type: "single",
+    src: image16,
+    category: "avf",
+  },
+  {
+    type: "single",
+    src: image17,
+    category: "avf",
+  },
+
   // {
   //   type: "beforeAfter",
   //   before: "https://images.unsplash.com/photo-1579154204601-01588f351e67",
@@ -119,7 +159,7 @@ const galleryImages: GalleryItem[] = [
 
 /* ------------------ COMPONENT ------------------ */
 export default function Gallery() {
-  const [activeTab, setActiveTab] = useState<Category>("work");
+  const [activeTab, setActiveTab] = useState<Category>("avf");
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
   useEffect(() => {
@@ -162,7 +202,7 @@ export default function Gallery() {
         <div className="w-11/12 md:w-5/6 mx-auto">
           {/* TABS (UNCHANGED STYLE) */}
           <div className="flex items-center gap-2 mb-10 overflow-x-auto py-2">
-            <button
+            {/* <button
               className={`btn-9 btn-sm transition-all ${
                 activeTab === "work"
                   ? "!bg-[#64bab4] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
@@ -171,7 +211,7 @@ export default function Gallery() {
               onClick={() => setActiveTab("work")}
             >
               Our Work
-            </button>
+            </button> */}
 
             <button
               className={`btn-9 btn-sm transition-all ${
@@ -194,7 +234,7 @@ export default function Gallery() {
             >
               Podcast
             </button>
-
+            {/* 
             <button
               className={`btn-9 btn-sm transition-all ${
                 activeTab === "training"
@@ -204,7 +244,7 @@ export default function Gallery() {
               onClick={() => setActiveTab("training")}
             >
               Training
-            </button>
+            </button> */}
           </div>
 
           {/* GRID / EMPTY STATE */}
@@ -237,7 +277,7 @@ export default function Gallery() {
                 >
                   <Image
                     src={item.type === "single" ? item.src : item.after}
-                    alt={item.title}
+                    alt={item.category}
                     width={600}
                     height={400}
                     className="h-[260px] w-full object-cover"
@@ -275,7 +315,7 @@ export default function Gallery() {
               {selectedItem.type === "single" ? (
                 <Image
                   src={selectedItem.src}
-                  alt={selectedItem.title}
+                  alt={selectedItem.category}
                   width={1200}
                   height={800}
                   className="rounded-xl object-contain w-full"
@@ -286,10 +326,6 @@ export default function Gallery() {
                   after={selectedItem.after}
                 />
               )}
-
-              <p className="text-center text-white/80 mt-4">
-                {selectedItem.title}
-              </p>
             </motion.div>
           </motion.div>
         )}
