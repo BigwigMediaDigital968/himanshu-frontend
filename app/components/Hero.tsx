@@ -234,10 +234,10 @@ export default function HeroCarousel() {
               className="flex flex-col items-center text-center"
             >
               <p className="text-3xl md:text-4xl font-extrabold text-[var(--med-primary)]">
-                31+
+                6+
               </p>
               <p className="text-[var(--med-text)]/70 mt-1 text-sm tracking-wide">
-                National & International Presentations
+                Awards & Achievements
               </p>
             </div>
 
