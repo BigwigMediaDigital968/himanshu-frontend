@@ -441,14 +441,23 @@ export default function Nav() {
               <Link href="/podcast">Doc Talk Show</Link>
             </div>
           </details>
-
+          {/* Workshop */}
           <details>
+            <summary className="cursor-pointer text-[var(--med-primary)]">
+              Workshop
+            </summary>
+            <div className="ml-4 mt-2 flex flex-col gap-2 text-[var(--med-primary)]">
+              <Link href="/workshop/avf-care">AVF Care Workshop</Link>
+            </div>
+          </details>
+
+          {/* <details>
             <summary className="cursor-pointer text-[var(--med-primary)]">
               Workshop
             </summary>
 
             <div className="ml-4 mt-2 flex flex-col gap-3">
-              {/* AVF CARE WORKSHOP */}
+             
               <details>
                 <summary className="cursor-pointer text-[var(--med-primary)]">
                   AVF Care Workshop
@@ -461,7 +470,7 @@ export default function Nav() {
                 </div>
               </details>
             </div>
-          </details>
+          </details> */}
 
           <Link
             href="/blogs"
