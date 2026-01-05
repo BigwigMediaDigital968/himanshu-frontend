@@ -189,6 +189,9 @@ export default function Footer() {
           <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
             <Link href="/workshop/avf-care">AVF Care Workshop</Link>
           </div>
+          <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
+            <Link href="/blogs">Blogs</Link>
+          </div>
         </div>
 
         {/* CONTACT */}
@@ -239,7 +242,7 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM NAV */}
-      <div className="relative z-10 border-t border-white/10 my-5 py-6 bg-black/40">
+      {/* <div className="relative z-10 border-t border-white/10 my-5 py-6 bg-black/40">
         <div className="w-11/12 md:w-5/6 mx-auto text-center md:text-left flex flex-wrap gap-4 md:gap-10 justify-center md:justify-start text-white/60 text-sm">
           <span>
             <Link href="/terms-and-conditions">Terms and Conditions</Link>
@@ -253,10 +256,10 @@ export default function Footer() {
             <Link href="/blogs">Blogs</Link>
           </span>
         </div>
-      </div>
+      </div> */}
 
       {/* RIGHTS & CREDITS */}
-      <div className="relative z-10 w-11/12 md:w-5/6 mx-auto flex flex-col md:flex-row justify-between mt-4 text-center text-white/50 text-xs md:text-sm">
+      <div className="border-t pt-5 relative z-10 w-11/12 md:w-5/6 mx-auto flex flex-col md:flex-row justify-between mt-4 text-center text-white/50 text-xs md:text-sm">
         <p>© {new Date().getFullYear()} All Rights Reserved.</p>
         <br />
         <h2>
