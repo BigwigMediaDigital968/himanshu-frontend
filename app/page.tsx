@@ -90,10 +90,10 @@ const teamMembers = [
   },
   {
     name: "Ms. Chanderkanta",
-    role: "Head of Program Manager",
+    role: "Program Manager, Department of Vascular Surgery",
     image: team2,
     description:
-      "Ms. Chandarkanta is the Program Manager for Dr. Himanshu and plays a pivotal role in driving strategic partnerships for the AVF Care Workshop hosted by him. With a strong focus on coordination, collaboration, and execution, she works closely with internal teams, medical experts, and external stakeholders to ensure the seamless planning and successful delivery of the workshop.",
+      "Ms. Chandrakanta Thakur leads the AVF Care Workshop as Head of Programs and Strategic Partnerships, overseeing its strategy, partnerships with hospitals and referring doctors, and multi-city execution since inception. In her role as Program Manager, she is responsible for smooth departmental operations, revenue and volume growth, NABH compliance, MIS and MBR reporting, team performance management, and cross-functional coordination. Her approach consistently aligns patient-first care with operational discipline and sustainable program growth.",
   },
   {
     name: "Dr. Trisha Sachan",
@@ -301,20 +301,23 @@ export default function Home() {
                 </div>
 
                 {/* HOVER SLIDE-UP PANEL */}
+                {/* HOVER FULL-HEIGHT TRANSLUCENT PANEL */}
                 <div
                   className="
-              absolute bottom-0 left-0 right-0
-              bg-[var(--med-primary)]
-              text-white
-              px-6 py-6
-              translate-y-full
-              group-hover:translate-y-0
-              transition-transform duration-500
-            "
+    absolute inset-0
+    bg-[var(--med-primary)]/60
+    backdrop-blur-xs
+    text-white
+    px-6 py-8
+    translate-y-full
+    group-hover:translate-y-0
+    transition-transform duration-500 ease-out
+    flex flex-col justify-end
+  "
                 >
-                  <h3 className="text-lg font-semibold">{member.name}</h3>
+                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
 
-                  <p className="text-sm text-white/80 mb-3">{member.role}</p>
+                  <p className="text-sm text-white/80 mb-4">{member.role}</p>
 
                   <p className="text-sm text-white/90 leading-relaxed text-justify">
                     {member.description}
