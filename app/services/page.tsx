@@ -47,38 +47,71 @@ export default function Services() {
 
       {/* SERVICES CONTENT */}
       <section className="py-16 ">
-        <div className="w-11/12 md:w-5/6 mx-auto grid lg:grid-cols-4 gap-12">
+        <div className="w-11/12 mx-auto grid lg:grid-cols-3 gap-5">
           {/* LEFT STICKY INDEX */}
           <aside className="hidden lg:block lg:col-span-1 sticky top-28 h-fit">
-            <div className="bg-white rounded-2xl p-6 border border-[var(--med-border)] shadow-sm">
+            <div className="bg-white rounded-2xl p-6 border border-[var(--med-border)] shadow-sm h-[75vh] overflow-auto">
               <h3 className="font-semibold underline text-[var(--med-primary)] text-2xl mb-4">
                 Our Services
               </h3>
               <ol className="space-y-3 text-sm">
                 {[
-                  { label: "Varicose Vein Treatments", id: "varicose-veins" },
                   {
-                    label: "Dialysis Access (AV Fistula & CKD Care)",
+                    label:
+                      "Varicose Veins, Chronic Venous Disorders & Lymphatic Care",
+                    id: "varicose-veins",
+                  },
+                  {
+                    label: "Pelvic Venous Disorders & Gonadal Vein Disease",
+                    id: "pelvic-venous-disorders",
+                  },
+                  {
+                    label: "AV Fistula, Dialysis Access & Central Venous Care",
                     id: "dialysis-access",
                   },
                   {
-                    label: "Peripheral Artery Disease – Diagnosis & Treatment",
-                    id: "pad",
+                    label:
+                      "Peripheral Artery Disease (PAD) & Advanced Limb Salvage",
+                    id: "pad-limb-salvage",
                   },
                   {
-                    label: "Aortic & Major Vessel Interventions",
-                    id: "aortic",
+                    label: "Diabetic Foot, Wound Care & Minor Amputations",
+                    id: "diabetic-foot",
                   },
-                  { label: "Visceral Artery Interventions", id: "visceral" },
                   {
-                    label: "Carotid & Upper-Body Artery Procedures",
-                    id: "carotid",
+                    label:
+                      "Deep Vein Thrombosis (DVT) & Advanced Venous Interventions",
+                    id: "dvt-advanced-venous",
                   },
-                  { label: "Venous & Lymphedema Care", id: "venous" },
-                  { label: "Diabetic Foot & Wound Care", id: "diabetic-foot" },
-                  { label: "Diagnostic & Support Services", id: "diagnostic" },
-                  { label: "AV Fistula Care Workshop", id: "avf-workshop" },
-                  { label: "Preventive & Advisory Services", id: "preventive" },
+                  {
+                    label: "Pulmonary Embolism (PE) Management",
+                    id: "pulmonary-embolism",
+                  },
+                  {
+                    label: "Aortic, Visceral & Renal Artery Interventions",
+                    id: "aortic-visceral-renal",
+                  },
+                  {
+                    label: "Onco-Vascular Surgery & Rare Vascular Disorders",
+                    id: "onco-vascular",
+                  },
+                  {
+                    label:
+                      "Vascular Trauma, Pediatric & Iatrogenic Vascular Injuries",
+                    id: "vascular-trauma",
+                  },
+                  {
+                    label: "AV Malformations & Complex Vascular Anomalies",
+                    id: "av-malformations",
+                  },
+                  {
+                    label: "ECMO Cannulation & Large-Bore Access Care",
+                    id: "ecmo-access",
+                  },
+                  {
+                    label: "Special Interests",
+                    id: "special-interests",
+                  },
                 ].map((item, i) => (
                   <li
                     key={i}
@@ -140,148 +173,203 @@ export default function Services() {
           </aside>
 
           {/* RIGHT CONTENT */}
-          <div className="lg:col-span-3 space-y-16">
+          <div className="lg:col-span-2 space-y-16">
             <ServiceCard
               id="varicose-veins"
-              title="Varicose Vein Treatments"
+              title="Varicose Veins, Chronic Venous Disorders & Lymphatic Care"
               items={[
-                "Endovenous Laser Treatment (EVLT) for Varicose Veins",
-                "Medical Glue Procedure (Cyanoacrylate Closure) for Varicose Veins",
-                "Radiofrequency Ablation (if you want to add later)",
-                "Foam Sclerotherapy",
-                "Microphlebectomy / Stab Phlebectomy",
-                "Iliac Vein Stenting for Venous Hypertension",
-                "Deep Vein Thrombolysis",
-                "Mechanical Thrombectomy for DVT",
-                "IVC Filter Insertion & Retrieval",
-                "Pulmonary Embolism Suction Thrombectomy",
+                "Varicose veins and chronic venous insufficiency",
+                "Superficial, deep, and perforator venous reflux",
+                "Venous ulcers and non-healing venous wounds",
+                "Compression therapy, multilayer bandaging, and ulcer care",
+                "Manual lymphatic drainage (MLD) and compression therapy for lymphedema",
+                "Management of recurrent and complex venous disease",
+                {
+                  title: "Minimally invasive venous treatments including:",
+                  subItems: [
+                    "Endovenous Laser Therapy (EVLT)",
+                    "Radiofrequency Ablation (RFA)",
+                    "Cyanoacrylate glue closure",
+                    "Foam sclerotherapy",
+                    "Stab phlebectomy",
+                    "Iliac vein stenting for deep venous obstruction",
+                  ],
+                },
+              ]}
+            />
+
+            <ServiceCard
+              id="pelvic-venous-disorders"
+              title="Pelvic Venous Disorders & Gonadal Vein Disease"
+              items={[
+                "Pelvic Congestion Syndrome (PCS) due to pelvic venous reflux",
+                "Vulval, vaginal, and perineal varicosities",
+                "Male varicocele related to gonadal vein reflux",
+                "Integrated management of pelvic and lower-limb venous reflux",
+                {
+                  title:
+                    "Image-guided, minimally invasive endovascular treatments including:",
+                  subItems: [
+                    "Pelvic vein embolization / coiling",
+                    "Gonadal (ovarian and testicular) vein embolization",
+                  ],
+                },
               ]}
             />
 
             <ServiceCard
               id="dialysis-access"
-              title="Dialysis Access (AV Fistula & CKD Care)"
+              title="AV Fistula, Dialysis Access & Central Venous Care"
               items={[
-                "AV Fistula Creation (Radiocephalic / Brachiocephalic / Brachial Basilic)",
-                "Basilic Vein Transposition",
-                "AV Graft Placement",
-                "Balloon Assisted Maturation (BAM) / AV Fistula Angioplasty",
-                "Difficult AV Fistula Salvage Procedures",
-                "AV Fistula Thrombectomy",
-                "Lower-Limb AV Fistula Creation (Rare, Selected Cases)",
-                "Permacath Insertion (Internal Jugular / Oblique Neck Approach)",
-                "Difficult Permacath Insertion",
-                "Subclavian / Femoral Temporary Dialysis Catheter",
-                "Permacath Exchange or Repositioning",
+                "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
+                "Balloon-assisted maturation (BAM angioplasty)",
+                "AV fistula salvage, revision, and thrombectomy",
+                "Central venous stenosis management and stenting",
+                "AV graft placement and revision",
+                "Tunneled dialysis catheter (Permacath) insertion, exchange, and complex re-tunneling",
+                "Complex central line placements, chemoports, and long-term vascular access",
+                "Long-term dialysis access planning and failing access management",
               ]}
             />
 
             <ServiceCard
-              id="pad"
-              title="Peripheral Artery Disease (PAD)"
+              id="pad-limb-salvage"
+              title="Peripheral Artery Disease (PAD) & Advanced Limb Salvage"
               items={[
-                "Digital Subtraction Angiography (DSA)",
-                "Iliac Artery Angioplasty & Stenting",
-                "Femoral Artery Angioplasty",
-                "Femoral Endarterectomy",
-                "Superficial Femoral Artery (SFA) Angioplasty",
-                "SFA Drug-Eluting Balloon Angioplasty",
-                "SFA Stenting",
-                "Below Knee (BTK / TBL) Angioplasty",
-                "Femoro-Popliteal Bypass",
-                "Femoro-Tibial Bypass",
-                "Tibial / Plantar Vessel Angioplasty",
-                "Intravascular Lithotripsy (Shockwave Therapy)",
-                "IVUS – Intravascular Ultrasound Guided Procedures",
-                "Embolectomy for Acute Limb Ischemia",
-              ]}
-            />
-
-            <ServiceCard
-              id="aortic"
-              title="Aortic & Major Vessel Interventions"
-              items={[
-                "Endovascular Aortic Aneurysm Repair (EVAR)",
-                "Thoracic Endovascular Aortic Repair (TEVAR)",
-                "Hybrid Aortic Aneurysm Repair",
-                "Aortic Dissection Treatment",
-                "Iliac Branch Devices (optional)",
-              ]}
-            />
-            <ServiceCard
-              id="visceral"
-              title="Visceral Artery Interventions"
-              items={[
-                "Renal Artery Angioplasty & Stenting",
-                "Superior Mesenteric Artery (SMA) Angioplasty",
-                "Celiac Artery Angioplasty (if needed)",
-                "Mesenteric Ischemia Endovascular Management",
-              ]}
-            />
-
-            <ServiceCard
-              id="carotid"
-              title="Carotid & Upper-Body Artery Procedures"
-              items={[
-                "Carotid Endarterectomy",
-                "Carotid Artery Stenting",
-                "Subclavian Artery Angioplasty & Stenting",
-                "Carotid–Subclavian Bypass",
-                "Vertebral Artery Stenting (optional)",
-              ]}
-            />
-
-            <ServiceCard
-              id="venous"
-              title="Venous & Lymphedema Care"
-              items={[
-                "Chronic Venous Insufficiency Management",
-                "Compression Therapy",
-                "Manual Lymphatic Drainage (MLD)",
-                "Lymphedema Treatment Program",
-                "Ulcer Healing Protocols",
-                "Iliac Vein Stenting for Non-Healing Ulcers",
+                "Peripheral arterial disease and critical limb ischemia",
+                "Non-healing ischemic and diabetic foot ulcers",
+                {
+                  title: "Endovascular angioplasty and stenting including:",
+                  subItems: [
+                    "Tibial angioplasty",
+                    "Below-the-ankle and plantar artery angioplasty",
+                    "Popliteal artery angioplasty and stenting",
+                    "Superficial femoral artery (SFA) angioplasty and stenting",
+                    "Iliac artery angioplasty and stenting",
+                  ],
+                },
+                "Common femoral artery endarterectomy with patch plasty",
+                "Open bypass surgery and hybrid revascularization",
+                {
+                  title: "Aorto-iliac disease management including:",
+                  subItems: [
+                    "Kissing iliac stents",
+                    "Distal aortic and iliac bifurcation stenting",
+                    "CERAB (Covered Endovascular Reconstruction of the Aortic Bifurcation)",
+                    "Aorto-bifemoral bypass and endovascular reconstructions",
+                  ],
+                },
+                "Internal iliac artery angioplasty in selected cases (including erectile dysfunction)",
+                "High-risk, multi-level limb salvage procedures",
               ]}
             />
 
             <ServiceCard
               id="diabetic-foot"
-              title="Diabetic Foot & Wound Care"
+              title="Diabetic Foot, Wound Care & Minor Amputations"
               items={[
-                "Diabetic Foot Ulcer Debridement",
-                "Pressure Offloading (TCC / Customized Insoles)",
-                "Infection Control and Limb Salvage Program",
-                "Heel Ulcer / Forefoot Ulcer Care",
-                "Advanced Dressings",
-                "Negative Pressure Wound Therapy (if you want to add)",
+                "Advanced diabetic foot management",
+                "Surgical wound debridement",
+                "Toe and forefoot amputations",
+                "Integrated wound care and revascularization strategies",
+              ]}
+            />
+
+            <ServiceCard
+              id="dvt-advanced-venous"
+              title="Deep Vein Thrombosis (DVT) & Advanced Venous Interventions"
+              items={[
+                "Acute and chronic deep vein thrombosis (DVT)",
+                "Post-thrombotic syndrome management",
+                "Catheter-directed thrombolysis",
+                "Mechanical thrombectomy for venous thrombosis",
+                "Venous stenting for chronic venous obstruction",
+              ]}
+            />
+
+            <ServiceCard
+              id="pulmonary-embolism"
+              title="Pulmonary Embolism (PE) Management"
+              items={[
+                "Comprehensive pulmonary embolism management under a multidisciplinary Pulmonary Embolism Response Team (PERT) program",
+                "Catheter-based interventions in selected high-risk pulmonary embolism cases",
               ]}
             />
             <ServiceCard
-              id="diagnostic"
-              title="Diagnostic & Support Services"
+              id="aortic-visceral-renal"
+              title="Aortic, Visceral & Renal Artery Interventions"
               items={[
-                "Doppler Ultrasound for Arteries & Veins",
-                "Vein Mapping for Dialysis Access",
-                "Pre-dialysis Access Evaluation",
-                "DVT Evaluation & Thrombosis Clinic",
-                "Post-Angioplasty & Post-Stenting Surveillance",
-                "Aneurysm Surveillance Program",
-                "Post-AVF Creation Follow-Up & Flow Monitoring",
-                "Second Opinion for Complex Vascular Cases",
+                "Abdominal and thoracic aortic aneurysm repair (EVAR / TEVAR)",
+                "Aortic angioplasty and stenting for complex aortic syndromes",
+                {
+                  title: "Renal artery angioplasty and stenting for:",
+                  subItems: ["Resistant hypertension", "Takayasu’s arteritis"],
+                },
+                "Superior mesenteric artery (SMA) angioplasty and stenting",
+                "Chronic mesenteric ischemia and weight-loss syndromes",
+                {
+                  title: "Acute mesenteric ischemia management including:",
+                  subItems: [
+                    "SMA embolectomy",
+                    "SMA thrombolysis",
+                    "SMA thrombectomy",
+                  ],
+                },
+                "Open mesenteric revascularization and ileo-SMA bypass procedures",
               ]}
             />
             <ServiceCard
-              id="avf-workshop"
-              title="AV Fistula Care Workshop"
-              items={["AV Fistula Care Workshop & Self-Examination Training"]}
-            />
-            <ServiceCard
-              id="preventive"
-              title="Preventive & Advisory Services"
+              id="onco-vascular"
+              title="Onco-Vascular Surgery & Rare Vascular Disorders"
               items={[
-                "Comprehensive Vascular Second Opinion Service",
-                "Patient Education & Preventive Vascular Care",
-                "Medical Fitness, Corporate Screening & Health Advisory",
+                "Vascular involvement in complex tumor resections (onco-vascular surgery)",
+                "IVC tumor thrombus management",
+                "Carotid body tumors and vascular neck tumors",
+                "Thoracic outlet syndrome and cervical rib–related vascular compression",
+                "Management of complex vascular encasement during oncologic surgery",
+              ]}
+            />
+
+            <ServiceCard
+              id="vascular-trauma"
+              title="Vascular Trauma, Pediatric & Iatrogenic Vascular Injuries"
+              items={[
+                "Arterial and venous vascular trauma management",
+                "Pediatric vascular injuries",
+                "Iatrogenic vascular injuries",
+                "Emergency vascular repairs",
+                "Complex intravascular foreign body retrievals",
+              ]}
+            />
+
+            <ServiceCard
+              id="av-malformations"
+              title="AV Malformations & Complex Vascular Anomalies"
+              items={[
+                "Peripheral and visceral arteriovenous malformations (AVMs)",
+                "Endovascular embolization and surgical management of vascular malformations",
+              ]}
+            />
+
+            <ServiceCard
+              id="ecmo-access"
+              title="ECMO Cannulation & Large-Bore Access Care"
+              items={[
+                "ECMO cannulation support",
+                "Management of large-bore arterial and venous access",
+                "Treatment of ECMO-related vascular complications",
+              ]}
+            />
+
+            <ServiceCard
+              id="special-interests"
+              title="Special Interests"
+              items={[
+                "High-risk and redo vascular procedures",
+                "Complex multi-level revascularization",
+                "Image-guided and minimally invasive vascular interventions",
+                "Dialysis access optimization and quality improvement",
+                "Multidisciplinary care for limb salvage, venous disease, oncology, and trauma",
               ]}
             />
           </div>
@@ -297,6 +385,13 @@ export default function Services() {
 }
 
 /* Reusable block */
+type ServiceItem =
+  | string
+  | {
+      title: string;
+      subItems: string[];
+    };
+
 function ServiceCard({
   id,
   title,
@@ -304,7 +399,7 @@ function ServiceCard({
 }: {
   id: string;
   title: string;
-  items: string[];
+  items: ServiceItem[];
 }) {
   return (
     <div
@@ -312,7 +407,7 @@ function ServiceCard({
       data-aos="fade-up"
       className="relative bg-white rounded-3xl p-8 md:p-10 border border-[var(--med-border)] shadow-[0_12px_35px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_55px_rgba(0,0,0,0.10)] transition-all duration-300"
     >
-      {/* Title with accent */}
+      {/* Title */}
       <div className="flex items-center gap-3 mb-8">
         <span className="h-10 w-1 rounded-full bg-[var(--med-primary)]" />
         <h2 className="text-2xl md:text-3xl font-semibold text-[var(--med-primary)]">
@@ -321,46 +416,50 @@ function ServiceCard({
       </div>
 
       {/* Items */}
-      <ul className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4">
-        {items.map((item, i) => (
-          <li
-            key={i}
-            className="
-              group
-              flex items-start gap-3
-              rounded-2xl
-              bg-[var(--med-light)]
-              px-4 py-3
-              text-sm md:text-base
-              text-gray-700
-              border border-transparent
-              hover:border-[var(--med-primary)]
-              hover:bg-white
-              transition-all duration-300
-            "
-          >
-            {/* Icon badge */}
-            <span
-              className="
-                mt-1
-                flex h-7 w-7 items-center justify-center
-                rounded-full
-                bg-white
-                text-[var(--med-primary)]
-                text-xs font-bold
-                shadow-sm
-                flex-shrink-0
-                group-hover:scale-110
-                transition
-              "
-            >
-              ✓
-            </span>
+      <ul className="grid sm:grid-cols-2 gap-4">
+        {items.map((item, i) => {
+          // ✅ Normal item
+          if (typeof item === "string") {
+            return (
+              <li
+                key={i}
+                className="group flex items-start gap-3 rounded-2xl bg-[var(--med-light)] px-4 py-3 text-sm md:text-base text-gray-700 hover:bg-white border border-transparent hover:border-[var(--med-primary)] transition"
+              >
+                <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full bg-white text-[var(--med-primary)] text-xs font-bold shadow-sm">
+                  ✓
+                </span>
+                <span className="leading-relaxed">{item}</span>
+              </li>
+            );
+          }
 
-            {/* Text */}
-            <span className="leading-relaxed">{item}</span>
-          </li>
-        ))}
+          // ✅ Item with sub-items
+          return (
+            <li
+              key={i}
+              className="col-span-full rounded-2xl bg-[var(--med-light)] p-5 border border-transparent hover:border-[var(--med-primary)] transition"
+            >
+              <div className="flex items-start gap-3 mb-4">
+                <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full bg-white text-[var(--med-primary)] text-xs font-bold shadow-sm">
+                  ✓
+                </span>
+                <span className="font-medium text-gray-800">{item.title}</span>
+              </div>
+
+              <ul className="grid sm:grid-cols-2 gap-3 pl-10">
+                {item.subItems.map((sub, j) => (
+                  <li
+                    key={j}
+                    className="flex items-start gap-2 text-sm text-gray-700"
+                  >
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--med-primary)] flex-shrink-0" />
+                    <span>{sub}</span>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

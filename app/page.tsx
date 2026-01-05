@@ -171,7 +171,7 @@ export default function Home() {
             </div>
 
             <p className="text-[var(--med-text)]/90 leading-relaxed mb-4 text-justify">
-              Dr. Himanshu Verma is a senior Vascular & Endovascular Surgeon
+              Dr. Himanshu Verma is a director - Vascular & Endovascular Surgeon
               with over 17 years of extensive clinical experience in managing
               complex arterial, venous, lymphatic, and dialysis-access
               disorders. He is widely recognized for treating high-risk and
