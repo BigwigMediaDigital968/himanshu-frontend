@@ -1,123 +1,123 @@
 "use client";
 
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaPlay } from "react-icons/fa";
+
 const testimonials = [
   {
-    msg: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut doloribus explicabo vel cumque ducimus delectus nostrum voluptates soluta doloremque officia!",
-    name: "Priya Mehra",
-    location: "New Delhi",
-    initial: "P",
-  },
-  {
-    msg: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut doloribus explicabo vel cumque ducimus delectus nostrum voluptates soluta doloremque officia!",
-    name: "Rahul Verma",
-    location: "Gurugram",
-    initial: "R",
-  },
-  {
-    msg: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut doloribus explicabo vel cumque ducimus delectus nostrum voluptates soluta doloremque officia!",
-    name: "Sneha Kapoor",
-    location: "Delhi",
-    initial: "S",
+    videoSrc: "/testimonial/testimonial1.mp4",
   },
 ];
 
 export default function TestimonialSlider() {
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+
+  const handlePlay = (index: number) => {
+    videoRefs.current.forEach((video, i) => {
+      if (!video) return;
+      if (i === index) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+    setPlayingIndex(index);
+  };
+
+  const handlePause = () => {
+    setPlayingIndex(null);
+  };
+
   return (
-    <section className="py-12 w-11/12 md:w-4/5 mx-auto relative">
+    <section className="py-14 w-11/12 md:w-4/5 mx-auto relative">
       <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)] text-center mb-12">
         What Our Patients Say
       </h2>
 
-      <div className="relative flex items-center justify-center">
-        {/* LEFT ARROW OUTSIDE */}
+      <div className="relative">
+        {/* LEFT ARROW */}
         <button
-          className="hidden md:block
-        testi-prev 
-        absolute left-0 md:-left-10 top-1/2 -translate-y-1/2
-        bg-white p-4 rounded-full shadow-md
-        border border-[var(--med-border)]
-        text-[var(--med-primary)]
-        hover:bg-[var(--med-primary)] hover:text-white
-        transition-all duration-300 z-20
-      "
+          className="hidden md:flex testi-prev absolute -left-16 top-1/2 -translate-y-1/2
+          bg-white p-4 rounded-full shadow-md border border-[var(--med-border)]
+          text-[var(--med-primary)] hover:bg-[var(--med-primary)] hover:text-white
+          transition-all duration-300 z-20"
         >
           <FaChevronLeft />
         </button>
 
-        {/* SLIDER BOX (centered between arrows) */}
-        <div
-          className="
-        relative bg-[var(--med-light)]
-        border border-[var(--med-border)]
-        rounded-3xl p-10 md:p-14
-        overflow-hidden md:mx-24
-        w-full
-      "
+        {/* SLIDER */}
+        <Swiper
+          modules={[Navigation]}
+          spaceBetween={24}
+          loop={testimonials.length > 4}
+          centeredSlides={testimonials.length < 4}
+          navigation={{
+            nextEl: ".testi-next",
+            prevEl: ".testi-prev",
+          }}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
+          onSlideChange={() => {
+            videoRefs.current.forEach((v) => v?.pause());
+            setPlayingIndex(null);
+          }}
         >
-          {/* Big Quote Icon */}
-          <div className="absolute -top-8 left-4 text-[var(--med-primary)]/10 text-[150px] font-serif pointer-events-none select-none">
-            “
-          </div>
-
-          {/* SWIPER */}
-          <Swiper
-            modules={[Navigation, Autoplay]}
-            slidesPerView={1}
-            loop={true}
-            autoplay={{ delay: 4000 }}
-            navigation={{
-              nextEl: ".testi-next",
-              prevEl: ".testi-prev",
-            }}
-            className="mySwiper"
-          >
-            {testimonials.map((t, i) => (
-              <SwiperSlide key={i}>
-                <p className="text-xl mt-5 md:text-2xl font-semibold text-[var(--med-text)] mb-10 leading-relaxed">
-                  “{t.msg}”
-                </p>
-
-                <div className="flex items-center gap-4">
-                  <div
-                    className="
-                w-14 h-14 rounded-full bg-[var(--med-primary)]
-                text-white flex items-center justify-center text-xl font-bold
-              "
+          {testimonials.map((t, i) => (
+            <SwiperSlide key={i}>
+              <div className="flex justify-center">
+                <div className="relative w-full rounded-2xl overflow-hidden bg-black">
+                  <video
+                    ref={(el) => {
+                      videoRefs.current[i] = el;
+                    }}
+                    className="w-full h-[220px] md:h-[260px] object-cover"
+                    controls={playingIndex === i}
+                    onPause={handlePause}
                   >
-                    {t.initial}
-                  </div>
+                    <source src={t.videoSrc} type="video/mp4" />
+                  </video>
 
-                  <div>
-                    <h4 className="text-lg font-bold text-[var(--med-text)]">
-                      {t.name}
-                    </h4>
-                    <p className="text-[var(--med-text)]/60 text-sm">
-                      {t.location}
-                    </p>
-                  </div>
+                  {/* PLAY BUTTON (ONLY WHEN NOT PLAYING) */}
+                  {playingIndex !== i && (
+                    <button
+                      onClick={() => handlePlay(i)}
+                      className="absolute inset-0 flex items-center justify-center bg-black/40"
+                    >
+                      <span
+                        className="
+                          w-14 h-14 rounded-full bg-white
+                          flex items-center justify-center
+                          text-[var(--med-primary)] text-lg
+                          shadow-xl
+                        "
+                      >
+                        <FaPlay className="ml-1" />
+                      </span>
+                    </button>
+                  )}
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-        {/* RIGHT ARROW OUTSIDE */}
+        {/* RIGHT ARROW */}
         <button
-          className="hidden md:block
-        testi-next 
-        absolute right-0 md:-right-10 top-1/2 -translate-y-1/2
-        bg-white p-4 rounded-full shadow-md
-        border border-[var(--med-border)]
-        text-[var(--med-primary)]
-        hover:bg-[var(--med-primary)] hover:text-white
-        transition-all duration-300 z-20
-      "
+          className="hidden md:flex testi-next absolute -right-16 top-1/2 -translate-y-1/2
+          bg-white p-4 rounded-full shadow-md border border-[var(--med-border)]
+          text-[var(--med-primary)] hover:bg-[var(--med-primary)] hover:text-white
+          transition-all duration-300 z-20"
         >
           <FaChevronRight />
         </button>

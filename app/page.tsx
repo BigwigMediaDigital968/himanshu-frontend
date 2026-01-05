@@ -128,6 +128,7 @@ const teamMembers = [
 export default function Home() {
   const [openPopup, setOpenPopup] = useState(false);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   // INITIALIZE AOS
   useEffect(() => {
@@ -277,9 +278,13 @@ export default function Home() {
             {teamMembers.map((member, index) => (
               <div
                 key={index}
+                onClick={() =>
+                  setActiveIndex(activeIndex === index ? null : index)
+                }
                 className="group relative rounded-3xl overflow-hidden
-          border border-[var(--med-border)]
-          bg-white shadow-md hover:shadow-xl transition-all duration-500"
+  border border-[var(--med-border)]
+  bg-white shadow-md hover:shadow-xl transition-all duration-500
+  cursor-pointer"
               >
                 {/* IMAGE */}
                 <div className="relative h-[400px] overflow-hidden">
@@ -300,20 +305,27 @@ export default function Home() {
                   <p className="text-sm text-gray-500">{member.role}</p>
                 </div>
 
-                {/* HOVER SLIDE-UP PANEL */}
                 {/* HOVER FULL-HEIGHT TRANSLUCENT PANEL */}
                 <div
-                  className="
+                  className={`
     absolute inset-0
     bg-[var(--med-primary)]/60
-    backdrop-blur-xs
+    backdrop-blur-md
     text-white
     px-6 py-8
-    translate-y-full
-    group-hover:translate-y-0
-    transition-transform duration-500 ease-out
+    transition-all duration-500 ease-out
     flex flex-col justify-end
-  "
+
+    ${
+      activeIndex === index
+        ? "translate-y-0 opacity-100"
+        : "translate-y-full opacity-0"
+    }
+
+    lg:translate-y-full
+    lg:opacity-100
+    lg:group-hover:translate-y-0
+  `}
                 >
                   <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
 
@@ -322,6 +334,11 @@ export default function Home() {
                   <p className="text-sm text-white/90 leading-relaxed text-justify">
                     {member.description}
                   </p>
+
+                  {/* Mobile hint */}
+                  <span className="mt-4 text-xs text-white/70 lg:hidden">
+                    Tap to close
+                  </span>
                 </div>
               </div>
             ))}
