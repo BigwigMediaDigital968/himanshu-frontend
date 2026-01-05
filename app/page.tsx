@@ -90,10 +90,10 @@ const teamMembers = [
   },
   {
     name: "Ms. Chanderkanta",
-    role: "Head of Programs and Strategic Partnerships",
+    role: "Head of Program Manager",
     image: team2,
     description:
-      "Ms. Chanderkanta plays a vital role in shaping the structure and reach of the AVF Care Workshop. With strong expertise in coordination and partnerships, she oversees program planning, hospital collaborations, and seamless execution of workshops across multiple locations.",
+      "Ms. Chandarkanta is the Program Manager for Dr. Himanshu and plays a pivotal role in driving strategic partnerships for the AVF Care Workshop hosted by him. With a strong focus on coordination, collaboration, and execution, she works closely with internal teams, medical experts, and external stakeholders to ensure the seamless planning and successful delivery of the workshop.",
   },
   {
     name: "Dr. Trisha Sachan",
@@ -121,7 +121,7 @@ const teamMembers = [
     role: "Resident",
     image: team6,
     description:
-      "Dr. Monika Doohun is a resident in the Department of Vascular Surgery with a strong commitment to patient care and clinical excellence. She is involved in the diagnosis, management, and surgical treatment of vascular conditions, working closely with senior surgeons and multidisciplinary teams.",
+      "Dr. Monika is a resident in the Department of Vascular and Endovascular Surgery, where she works closely with senior surgeons in the management of patients undergoing vascular procedures. Her responsibilities include assisting in preoperative evaluation, patient preparation, and coordination of investigations, as well as active involvement in postoperative care and follow-up. She contributes to patient monitoring, wound care, and management of complications under supervision.",
   },
 ];
 

@@ -27,6 +27,14 @@ import image14 from "../assets/gallery/podcast/_DSC5049.webp";
 import image15 from "../assets/gallery/avfcare/DSC00019.webp";
 import image16 from "../assets/gallery/avfcare/DSC09998.webp";
 import image17 from "../assets/gallery/avfcare/DSC00030.webp";
+import image18 from "../assets/gallery/himanshu/1.webp";
+import image19 from "../assets/gallery/himanshu/2.webp";
+import image20 from "../assets/gallery/himanshu/3.webp";
+import image21 from "../assets/gallery/himanshu/4.webp";
+import image22 from "../assets/gallery/himanshu/5.webp";
+import image23 from "../assets/gallery/himanshu/6.webp";
+import image24 from "../assets/gallery/himanshu/7.webp";
+import image25 from "../assets/gallery/himanshu/8.webp";
 
 /* ------------------ TYPES ------------------ */
 type Category = "Dr. Himanshu" | "avf" | "podcast" | "training";
@@ -146,6 +154,46 @@ const galleryImages: GalleryItem[] = [
     type: "single",
     src: image17,
     category: "avf",
+  },
+  {
+    type: "single",
+    src: image18,
+    category: "Dr. Himanshu",
+  },
+  {
+    type: "single",
+    src: image19,
+    category: "Dr. Himanshu",
+  },
+  {
+    type: "single",
+    src: image20,
+    category: "Dr. Himanshu",
+  },
+  {
+    type: "single",
+    src: image21,
+    category: "Dr. Himanshu",
+  },
+  {
+    type: "single",
+    src: image22,
+    category: "Dr. Himanshu",
+  },
+  {
+    type: "single",
+    src: image23,
+    category: "Dr. Himanshu",
+  },
+  {
+    type: "single",
+    src: image24,
+    category: "Dr. Himanshu",
+  },
+  {
+    type: "single",
+    src: image25,
+    category: "Dr. Himanshu",
   },
 
   // {
@@ -281,7 +329,7 @@ export default function Gallery() {
                     alt={item.category}
                     width={600}
                     height={400}
-                    className="h-[260px] w-full object-cover"
+                    className="h-[260px] w-full object-contain"
                   />
                 </motion.div>
               ))}
@@ -301,7 +349,7 @@ export default function Gallery() {
             onClick={() => setSelectedItem(null)}
           >
             <motion.div
-              className="relative max-w-6xl w-full px-4"
+              className="relative max-w-2xl w-full px-4 max-h-[85vh] flex items-center justify-center"
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               onClick={(e) => e.stopPropagation()}
@@ -317,9 +365,9 @@ export default function Gallery() {
                 <Image
                   src={selectedItem.src}
                   alt={selectedItem.category}
-                  width={1200}
-                  height={800}
-                  className="rounded-xl object-contain w-full"
+                  width={800}
+                  height={300}
+                  className="rounded-xl object-contain w-full max-h-[80vh]"
                 />
               ) : (
                 <BeforeAfterSlider
