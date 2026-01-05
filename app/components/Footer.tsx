@@ -10,6 +10,7 @@ import {
   IoCallOutline,
   IoMailOutline,
   IoLocationOutline,
+  IoLogoWhatsapp,
 } from "react-icons/io5";
 import logo from "../assets/logo-removebg-preview.png";
 import bg from "../assets/slide1.png";
@@ -198,6 +199,12 @@ export default function Footer() {
           <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
             <IoCallOutline className="text-xl" />
             <p>88268 33598</p>
+          </div>
+          <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
+            <IoLogoWhatsapp className="text-xl" />
+            <p>
+              <a href="https://wa.me/918826833598">88268 33598</a>
+            </p>
           </div>
 
           <div className="flex items-center gap-3 text-white/80 text-sm mb-6">

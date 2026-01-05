@@ -25,6 +25,8 @@ import { Award, GraduationCap } from "lucide-react";
 import { Trophy, Medal, Star } from "lucide-react";
 import FloatingContactActions from "../components/ContactActions";
 import PhoneInput from "react-phone-input-2";
+import { FaWhatsapp } from "react-icons/fa";
+import { BsWhatsapp } from "react-icons/bs";
 
 const awards = [
   {
@@ -456,13 +458,9 @@ export default function About() {
                     Address
                   </p>
                   <p className="text-[var(--med-text)]/70 text-sm">
-                    Fortis Memorial Research Centre,
+                    Fortis Memorial Research Centre, Opposite HUDA City Centre,
                     <br />
-                    Opposite HUDA City Centre,
-                    <br />
-                    Sector 44, Gurugram,
-                    <br />
-                    Haryana 122003
+                    Sector 44, Gurugram, Haryana 122003
                   </p>
                 </div>
               </div>
@@ -479,6 +477,19 @@ export default function About() {
                   </p>
                 </div>
               </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-[var(--med-primary)]/10 flex items-center justify-center">
+                  <BsWhatsapp className="w-6 h-6 text-[var(--med-primary)]" />
+                </div>
+                <div>
+                  <p className="font-semibold text-[var(--med-text)]">
+                    Whatsapp
+                  </p>
+                  <p className="text-[var(--med-text)]/70 text-sm">
+                    <a href="https://wa.me/918826833598">+91 88268 33598</a>
+                  </p>
+                </div>
+              </div>
 
               {/* EMAIL */}
               <div className="flex items-start gap-4">
@@ -488,7 +499,9 @@ export default function About() {
                 <div>
                   <p className="font-semibold text-[var(--med-text)]">Email</p>
                   <p className="text-[var(--med-text)]/70 text-sm">
-                    varenyamvascular@gmail.com
+                    <a href="mailto:varenyamvascular@gmail.com">
+                      varenyamvascular@gmail.com
+                    </a>
                   </p>
                 </div>
               </div>

@@ -18,6 +18,7 @@ import {
 import logo from "../assets/logo-removebg-preview.png";
 import ButtonFill from "./Button";
 import PopupForm from "./Popup";
+import { BsWhatsapp } from "react-icons/bs";
 
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -359,6 +360,12 @@ export default function Nav() {
               <div className="flex items-center gap-3">
                 <Phone className="text-(--med-primary) w-5 h-5" />
                 +91 8826833598
+              </div>
+              <div className="flex items-center gap-3">
+                <BsWhatsapp className="text-(--med-primary) w-5 h-5" />
+                <p>
+                  <a href="https://wa.me/918826833598">+91 88268 33598</a>
+                </p>
               </div>
 
               <div className="flex items-center gap-3">
