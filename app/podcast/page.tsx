@@ -24,22 +24,54 @@ type Podcast = {
 ------------------------------------ */
 const podcasts: Podcast[] = [
   {
-    title: "Special Awareness Talk – Local Video",
-    videoSrc: "/podcast/dr.himanshu_verma_edit_02.mp4",
-  },
-  {
     title:
       "Doc Talk Ep 10 – Your Baby’s First Guardian Angel | Dr Himanshu Verma x Dr Megha Consul",
     youtubeId: "pefBKwpqhzQ",
   },
   {
-    title: "Doc Talk Ep. 9 | Every Beat Matters | Don’t Wait for the Pain",
+    title:
+      "Doc Talk Ep. 9 | Before It’s Too Late | Preventing Heart Disease with Dr. Anshul K. Gupta",
     youtubeId: "FxDR9wlRvcU",
   },
   {
     title:
       "DocTalk Ep. 8 | It’s Okay Not To Be Okay | Understanding Mental Health with Dr. Sameer Kalani",
     youtubeId: "TTRE-TCZKvk",
+  },
+  {
+    title:
+      "Doc Talk Ep. 7 | Saving Hearts, Saving Lives | Cardiac Surgery with Dr. Mahesh Wadhwani",
+    youtubeId: "RY2osYwyyow",
+  },
+  {
+    title:
+      "DocTalk Ep. 6 | Saving Smiles | Understanding Root Canal Treatment with Dr. Rabbpreet Kaur",
+    youtubeId: "5jYkk4ik4Ns",
+  },
+  {
+    title:
+      "DocTalk Ep. 5 | Beyond the White Coat | Leadership in Healthcare with Dr. (Major) Rahul Prashad",
+    youtubeId: "SUAkrDTXrpE",
+  },
+  {
+    title:
+      "Doc Talk Ep. 4 | When Every Second Counts | Inside Trauma Surgery with Dr. Shashi Prakash Mishra",
+    youtubeId: "6SKkhj_dSmk",
+  },
+  {
+    title:
+      "Doc Talk Ep. 3 | Rebuilding with Precision | Plastic & Microvascular Surgery with Dr. Amitabh Singh",
+    youtubeId: "i2wUFisbG5g",
+  },
+  {
+    title:
+      "DocTalk Ep. 2 | Caring for Little Hearts | Pediatric Cardiac Care with Dr. Deepak Thakur",
+    youtubeId: "Q81ekTCUATQ",
+  },
+  {
+    title:
+      "Doc Talk Ep. 1 | Beyond the Diagnosis | Cancer Surgery & Early Detection with Dr. Vedant Kabra",
+    youtubeId: "N2tCFOLKnFw",
   },
 ];
 
@@ -90,7 +122,6 @@ export default function Podcast() {
                 duration-500
                 ease-out
                 transform
-                hover:-translate-y-3
                 hover:shadow-[0_25px_60px_rgba(0,0,0,0.18)]
               "
             >

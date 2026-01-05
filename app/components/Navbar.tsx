@@ -350,18 +350,21 @@ export default function Nav() {
 
             <div className="mt-3 space-y-3 text-[15px] text-gray-700">
               <div className="flex items-center gap-3">
-                <Mail className="text-(--med-primary)" />
-                abc@xyz.com
+                <Mail className="text-(--med-primary) w-5 h-5" />
+                <a href="mailto:varenyamvascular@gmail.com">
+                  varenyamvascular@gmail.com
+                </a>
               </div>
 
               <div className="flex items-center gap-3">
-                <Phone className="text-(--med-primary)" />
+                <Phone className="text-(--med-primary) w-5 h-5" />
                 +91 8826833598
               </div>
 
               <div className="flex items-center gap-3">
-                <MapPin className="text-(--med-primary)" />
-                Delhi NCR, India
+                <MapPin className="text-(--med-primary) w-10 h-10" />
+                Fortis Memorial Research Centre, Opposite HUDA City Centre,
+                Sector 44, Gurugram, Haryana 122003
               </div>
             </div>
           </div>

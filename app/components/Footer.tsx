@@ -83,7 +83,7 @@ export default function Footer() {
       {/* EMAIL SUBSCRIPTION – NO BOX */}
       <div className="relative z-20 w-11/12 md:w-5/6 mx-auto mb-14">
         {/* Top Row */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Text */}
           <div className="text-center md:text-left">
             <h3 className="text-2xl md:text-3xl font-bold text-white">
@@ -143,7 +143,7 @@ export default function Footer() {
       </div>
 
       {/* --- CONTENT FIX (z-10) --- */}
-      <div className="relative z-10 w-11/12 md:w-5/6 mx-auto grid grid-cols-1 md:grid-cols-3 gap-14">
+      <div className="relative z-10 w-11/12 md:w-5/6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
         {/* LOGO + SOCIAL */}
         <div className="">
           <div className="flex justify-center">
@@ -167,6 +167,29 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="relative z-10">
+          <h3 className="text-sm font-semibold tracking-wider mb-2">
+            Quick Links
+          </h3>
+          <div className="w-10 h-[2px] bg-[var(--med-primary)] mb-4"></div>
+
+          <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
+            <Link href="/about">About Us</Link>
+          </div>
+          <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
+            <Link href="/services">Services</Link>
+          </div>
+          <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
+            <Link href="/gallery">Gallery</Link>
+          </div>
+          <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
+            <Link href="/podcast">Doc Talk Show</Link>
+          </div>
+          <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
+            <Link href="/workshop/avf-care">AVF Care Workshop</Link>
+          </div>
+        </div>
+
         {/* CONTACT */}
         <div className="relative z-10">
           <h3 className="text-sm font-semibold tracking-wider mb-2">CONTACT</h3>
@@ -179,7 +202,11 @@ export default function Footer() {
 
           <div className="flex items-center gap-3 text-white/80 text-sm mb-6">
             <IoMailOutline className="text-xl" />
-            <p>varenyamvascular@gmail.com</p>
+            <p>
+              <a href="mailto:varenyamvascular@gmail.com">
+                varenyamvascular@gmail.com
+              </a>
+            </p>
           </div>
         </div>
         {/* LOCATION 1 */}
