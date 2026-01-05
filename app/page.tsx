@@ -83,10 +83,10 @@ const services = [
 const teamMembers = [
   {
     name: "Dr. Himanshu Verma",
-    role: "Founder, AVF Care Workshop",
+    role: "Director – Vascular & Endovascular Surgeon",
     image: himanshu,
     description:
-      "A leading Vascular & Endovascular Surgeon at Fortis Hospital, Gurgaon, Dr. Himanshu Verma brings extensive experience in managing complex vascular conditions. As the founder of AVF Care Workshop, he is committed to advancing fistula care through education, training, and patient-centered clinical excellence.",
+      "A leading Vascular & Endovascular Surgeon at Fortis Hospital, Gurgaon, Dr. Himanshu Verma has extensive experience in managing complex vascular conditions. A trainer and the founder of AVF Care Workshop, he is dedicated to advancing fistula care through education, training, and patient-centered clinical excellence, and also hosts the Doc Talk Show podcast.",
   },
   {
     name: "Ms. Chanderkanta",
@@ -172,11 +172,12 @@ export default function Home() {
 
             <p className="text-[var(--med-text)]/90 leading-relaxed mb-4 text-justify">
               Dr. Himanshu Verma is a director - Vascular & Endovascular Surgeon
-              with over 17 years of extensive clinical experience in managing
-              complex arterial, venous, lymphatic, and dialysis-access
-              disorders. He is widely recognized for treating high-risk and
-              limb- or life-threatening vascular conditions using advanced,
-              evidence-based techniques.
+              (specializes in diagnosing, managing, and treating diseases of the
+              blood vessels) with over 17 years of extensive clinical experience
+              in managing complex arterial, venous, lymphatic, and
+              dialysis-access disorders. He is widely recognized for treating
+              high-risk and limb- or life-threatening vascular conditions using
+              advanced, evidence-based techniques.
             </p>
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -256,6 +257,149 @@ export default function Home() {
         </div>
       </section>
 
+      <WhyChooseUs />
+
+      <section className="py-12 bg-[var(--med-light)]">
+        <div className="w-11/12 md:w-5/6 mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)]">
+              Meet Our Dedicated Team
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-gray-600">
+              A highly skilled team working alongside Dr. Himanshu Verma to
+              deliver advanced vascular and endovascular care with compassion.
+            </p>
+          </div>
+
+          {/* Team Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {teamMembers.map((member, index) => (
+              <div
+                key={index}
+                className="group relative rounded-3xl overflow-hidden
+          border border-[var(--med-border)]
+          bg-white shadow-md hover:shadow-xl transition-all duration-500"
+              >
+                {/* IMAGE */}
+                <div className="relative h-[400px] overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-contain
+              transition-transform duration-700
+              group-hover:scale-105"
+                  />
+                </div>
+
+                {/* STATIC NAME BAR */}
+                <div className="absolute bottom-0 left-0 right-0 bg-white px-6 py-4 transition-all duration-500 group-hover:opacity-0">
+                  <h3 className="text-lg font-semibold text-[var(--med-primary)]">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm text-gray-500">{member.role}</p>
+                </div>
+
+                {/* HOVER SLIDE-UP PANEL */}
+                <div
+                  className="
+              absolute bottom-0 left-0 right-0
+              bg-[var(--med-primary)]
+              text-white
+              px-6 py-6
+              translate-y-full
+              group-hover:translate-y-0
+              transition-transform duration-500
+            "
+                >
+                  <h3 className="text-lg font-semibold">{member.name}</h3>
+
+                  <p className="text-sm text-white/80 mb-3">{member.role}</p>
+
+                  <p className="text-sm text-white/90 leading-relaxed text-justify">
+                    {member.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white">
+        {/* SECTION HEADER */}
+        <div className="w-11/12 md:w-5/6 mx-auto px-5 flex justify-between mb-14">
+          <div></div>
+          <h2
+            className="
+        text-3xl md:text-4xl font-bold 
+        text-[var(--med-primary)]
+        mb-4
+      "
+            data-aos="fade-up"
+          >
+            Our Services
+          </h2>
+          <Link href="/services">
+            <ButtonFill text="All Services →" />
+          </Link>
+        </div>
+
+        {/* SERVICES GRID */}
+        <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((service, idx) => {
+            const Icon = service.icon;
+            const isAlt = idx % 2 !== 0;
+
+            return (
+              <div
+                key={idx}
+                className={`
+                rounded-2xl p-8 text-center transition-all duration-300
+                border border-[var(--med-border)]
+                ${
+                  isAlt
+                    ? "bg-[var(--med-primary)] text-white"
+                    : "bg-[var(--med-light)] text-[var(--med-text)]"
+                }
+                hover:-translate-y-2
+                hover:shadow-xl
+              `}
+              >
+                {/* ICON */}
+                <div
+                  className={`
+                  w-16 h-16 mx-auto mb-6 rounded-full
+                  flex items-center justify-center
+                  ${
+                    isAlt
+                      ? "bg-white/20 text-white"
+                      : "bg-[var(--med-primary)] text-white"
+                  }
+                `}
+                >
+                  <Icon size={32} />
+                </div>
+
+                {/* TITLE */}
+                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+
+                {/* DESCRIPTION */}
+                <p
+                  className={`text-sm leading-relaxed ${
+                    isAlt ? "text-white/90" : "text-[var(--med-text)]/70"
+                  }`}
+                >
+                  {service.desc}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <ConditionsWeTreat />
+
       <section className="py-14 relative overflow-hidden">
         <div className="relative w-11/12 md:w-5/6 mx-auto">
           {/* Title */}
@@ -332,150 +476,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 bg-[var(--med-light)]">
-        <div className="w-11/12 md:w-5/6 mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)]">
-              Meet Our Dedicated Team
-            </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-gray-600">
-              A highly skilled team working alongside Dr. Himanshu Verma to
-              deliver advanced vascular and endovascular care with compassion.
-            </p>
-          </div>
-
-          {/* Team Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="group relative rounded-3xl overflow-hidden
-          border border-[var(--med-border)]
-          bg-white shadow-md hover:shadow-xl transition-all duration-500"
-              >
-                {/* IMAGE */}
-                <div className="relative h-[400px] overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-contain
-              transition-transform duration-700
-              group-hover:scale-105"
-                  />
-                </div>
-
-                {/* STATIC NAME BAR */}
-                <div className="absolute bottom-0 left-0 right-0 bg-white px-6 py-4 transition-all duration-500 group-hover:opacity-0">
-                  <h3 className="text-lg font-semibold text-[var(--med-primary)]">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-gray-500">{member.role}</p>
-                </div>
-
-                {/* HOVER SLIDE-UP PANEL */}
-                <div
-                  className="
-              absolute bottom-0 left-0 right-0
-              bg-[var(--med-primary)]
-              text-white
-              px-6 py-6
-              translate-y-full
-              group-hover:translate-y-0
-              transition-transform duration-500
-            "
-                >
-                  <h3 className="text-lg font-semibold">{member.name}</h3>
-
-                  <p className="text-sm text-white/80 mb-3">{member.role}</p>
-
-                  <p className="text-sm text-white/90 leading-relaxed text-justify">
-                    {member.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <WhyChooseUs />
-
       <TestimonialSlider />
-
-      <ConditionsWeTreat />
-
-      <section className="py-12 bg-white">
-        {/* SECTION HEADER */}
-        <div className="w-11/12 md:w-5/6 mx-auto px-5 flex justify-between mb-14">
-          <div></div>
-          <h2
-            className="
-        text-3xl md:text-4xl font-bold 
-        text-[var(--med-primary)]
-        mb-4
-      "
-            data-aos="fade-up"
-          >
-            Our Services
-          </h2>
-          <Link href="/services">
-            <ButtonFill text="All Services →" />
-          </Link>
-        </div>
-
-        {/* SERVICES GRID */}
-        <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, idx) => {
-            const Icon = service.icon;
-            const isAlt = idx % 2 !== 0;
-
-            return (
-              <div
-                key={idx}
-                className={`
-                rounded-2xl p-8 text-center transition-all duration-300
-                border border-[var(--med-border)]
-                ${
-                  isAlt
-                    ? "bg-[var(--med-primary)] text-white"
-                    : "bg-[var(--med-light)] text-[var(--med-text)]"
-                }
-                hover:-translate-y-2
-                hover:shadow-xl
-              `}
-              >
-                {/* ICON */}
-                <div
-                  className={`
-                  w-16 h-16 mx-auto mb-6 rounded-full
-                  flex items-center justify-center
-                  ${
-                    isAlt
-                      ? "bg-white/20 text-white"
-                      : "bg-[var(--med-primary)] text-white"
-                  }
-                `}
-                >
-                  <Icon size={32} />
-                </div>
-
-                {/* TITLE */}
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-
-                {/* DESCRIPTION */}
-                <p
-                  className={`text-sm leading-relaxed ${
-                    isAlt ? "text-white/90" : "text-[var(--med-text)]/70"
-                  }`}
-                >
-                  {service.desc}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
 
       <section
         className="py-12 "

@@ -29,7 +29,7 @@ import image16 from "../assets/gallery/avfcare/DSC09998.webp";
 import image17 from "../assets/gallery/avfcare/DSC00030.webp";
 
 /* ------------------ TYPES ------------------ */
-type Category = "work" | "avf" | "podcast" | "training";
+type Category = "Dr. Himanshu" | "avf" | "podcast" | "training";
 
 type GalleryItem =
   | {
@@ -159,7 +159,7 @@ const galleryImages: GalleryItem[] = [
 
 /* ------------------ COMPONENT ------------------ */
 export default function Gallery() {
-  const [activeTab, setActiveTab] = useState<Category>("avf");
+  const [activeTab, setActiveTab] = useState<Category>("Dr. Himanshu");
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
   useEffect(() => {
@@ -192,7 +192,8 @@ export default function Gallery() {
             Our Medical Gallery
           </h1>
           <p className="text-white/80 mt-4 max-w-2xl">
-            Clinical visuals, treatment highlights, and facility insights.
+            Clinical visuals, treatment highlights, and insights from AVF Care,
+            patient care programs, and the Doc Talk Show.
           </p>
         </div>
       </section>
@@ -201,23 +202,23 @@ export default function Gallery() {
       <section className="py-12 bg-white">
         <div className="w-11/12 md:w-5/6 mx-auto">
           {/* TABS (UNCHANGED STYLE) */}
-          <div className="flex items-center gap-2 mb-10 overflow-x-auto py-2">
-            {/* <button
+          <div className="flex items-center justify-center gap-2 mb-10 overflow-x-auto py-2">
+            <button
               className={`btn-9 btn-sm transition-all ${
-                activeTab === "work"
-                  ? "!bg-[#64bab4] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
-                  : ""
+                activeTab === "Dr. Himanshu"
+                  ? "!bg-[var(--med-primary-dark)] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
+                  : "!bg-[var(--med-primary)]"
               }`}
-              onClick={() => setActiveTab("work")}
+              onClick={() => setActiveTab("Dr. Himanshu")}
             >
-              Our Work
-            </button> */}
+              Dr. Himanshu
+            </button>
 
             <button
               className={`btn-9 btn-sm transition-all ${
                 activeTab === "avf"
-                  ? "!bg-[#64bab4] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
-                  : ""
+                  ? "!bg-[var(--med-primary-dark)] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
+                  : "!bg-[var(--med-primary)]"
               }`}
               onClick={() => setActiveTab("avf")}
             >
@@ -227,8 +228,8 @@ export default function Gallery() {
             <button
               className={`btn-9 btn-sm transition-all ${
                 activeTab === "podcast"
-                  ? "!bg-[#64bab4] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
-                  : ""
+                  ? "!bg-[var(--med-primary-dark)] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
+                  : "!bg-[var(--med-primary)]"
               }`}
               onClick={() => setActiveTab("podcast")}
             >

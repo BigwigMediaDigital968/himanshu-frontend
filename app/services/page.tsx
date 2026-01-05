@@ -47,7 +47,7 @@ export default function Services() {
 
       {/* SERVICES CONTENT */}
       <section className="py-16 ">
-        <div className="w-11/12 mx-auto grid lg:grid-cols-3 gap-5">
+        <div className="w-11/12 md:w-5/6 mx-auto grid lg:grid-cols-3 gap-5">
           {/* LEFT STICKY INDEX */}
           <aside className="hidden lg:block lg:col-span-1 sticky top-28 h-fit">
             <div className="bg-white rounded-2xl p-6 border border-[var(--med-border)] shadow-sm h-[75vh] overflow-auto">
