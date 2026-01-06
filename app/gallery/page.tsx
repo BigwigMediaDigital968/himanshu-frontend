@@ -20,7 +20,6 @@ import image7 from "../assets/gallery/avfcare/DSC00077-scaled-1.webp";
 import image8 from "../assets/gallery/avfcare/DSC_0972-scaled-1.webp";
 import image9 from "../assets/gallery/avfcare/DSC_1036-scaled-1.webp";
 import image10 from "../assets/gallery/avfcare/Picture23.webp";
-import image11 from "../assets/gallery/avfcare/img-1-3-scaled-1.webp";
 import image12 from "../assets/gallery/podcast/IMG_5282.webp";
 import image13 from "../assets/gallery/podcast/IMG_5304.webp";
 import image14 from "../assets/gallery/podcast/_DSC5049.webp";
@@ -35,6 +34,7 @@ import image22 from "../assets/gallery/himanshu/5.webp";
 import image23 from "../assets/gallery/himanshu/6.webp";
 import image24 from "../assets/gallery/himanshu/7.webp";
 import image25 from "../assets/gallery/himanshu/8.webp";
+import image26 from "../assets/gallery/podcast/DSC00209.webp";
 
 /* ------------------ TYPES ------------------ */
 type Category = "Dr. Himanshu" | "avf" | "podcast" | "training";
@@ -58,91 +58,71 @@ const galleryImages: GalleryItem[] = [
   {
     type: "single",
     src: image1,
-
     category: "avf",
   },
   {
     type: "single",
     src: image2,
-
     category: "avf",
   },
   {
     type: "single",
     src: image3,
-
     category: "avf",
   },
   {
     type: "single",
     src: image4,
-
     category: "avf",
   },
   {
     type: "single",
     src: image5,
-
     category: "avf",
   },
   {
     type: "single",
     src: image6,
-
     category: "avf",
   },
   {
     type: "single",
     src: image7,
-
     category: "avf",
   },
   {
     type: "single",
     src: image8,
-
     category: "avf",
   },
   {
     type: "single",
     src: image9,
-
     category: "avf",
   },
   {
     type: "single",
     src: image10,
-
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image11,
-
     category: "avf",
   },
   {
     type: "single",
     src: image12,
-
     category: "podcast",
   },
   {
     type: "single",
     src: image13,
-
     category: "podcast",
   },
   {
     type: "single",
     src: image14,
-
     category: "podcast",
   },
   {
     type: "single",
     src: image15,
-
     category: "avf",
   },
   {
@@ -194,6 +174,11 @@ const galleryImages: GalleryItem[] = [
     type: "single",
     src: image25,
     category: "Dr. Himanshu",
+  },
+  {
+    type: "single",
+    src: image26,
+    category: "podcast",
   },
 
   // {
@@ -321,7 +306,7 @@ export default function Gallery() {
                 <motion.div
                   key={i}
                   whileHover={{ scale: 1.03 }}
-                  className="rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+                  className="rounded-2xl overflow-hidden cursor-pointer"
                   onClick={() => setSelectedItem(item)}
                 >
                   <Image
