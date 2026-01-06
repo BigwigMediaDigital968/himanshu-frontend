@@ -7,12 +7,12 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import condition1 from "../assets/codition.webp";
-import condition2 from "../assets/codition.webp";
-import condition3 from "../assets/codition.webp";
-import condition4 from "../assets/codition.webp";
-import condition5 from "../assets/codition.webp";
-import condition6 from "../assets/codition.webp";
+import condition1 from "../assets/conditionTreat/AORTA & MAJOR ARTERIES.png";
+import condition2 from "../assets/conditionTreat/BLOCKED LEG ARTERIES _ POOR BLOOD CIRCULATION.png";
+import condition3 from "../assets/conditionTreat/BLOOD CLOTS (DVT).png";
+import condition4 from "../assets/conditionTreat/DIABETIC FOOT & NON-HEALING WOUNDS.png";
+import condition5 from "../assets/conditionTreat/DIALYSIS & AV FISTULA CARE.png";
+import condition6 from "../assets/conditionTreat/VARICOSE VEINS.png";
 
 type Condition = {
   title: string;
@@ -22,15 +22,15 @@ type Condition = {
 const conditions: Condition[] = [
   {
     title: "VARICOSE VEINS",
-    image: condition1,
+    image: condition6,
   },
   {
     title: "DIALYSIS & AV FISTULA CARE",
-    image: condition2,
+    image: condition5,
   },
   {
     title: "BLOCKED LEG ARTERIES / POOR BLOOD CIRCULATION ",
-    image: condition3,
+    image: condition2,
   },
   {
     title: "DIABETIC FOOT & NON-HEALING WOUNDS ",
@@ -38,11 +38,11 @@ const conditions: Condition[] = [
   },
   {
     title: "BLOOD CLOTS (DVT)",
-    image: condition5,
+    image: condition3,
   },
   {
     title: "AORTA & MAJOR ARTERIES",
-    image: condition6,
+    image: condition1,
   },
 ];
 
@@ -57,7 +57,7 @@ const ConditionCard = ({ item }: { item: Condition }) => (
     "
   >
     {/* IMAGE */}
-    <div className="relative w-full h-48">
+    <div className="relative w-full h-48 overflow-hidden">
       <Image
         src={item.image}
         alt={item.title}
@@ -65,12 +65,15 @@ const ConditionCard = ({ item }: { item: Condition }) => (
         className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:blur-[1px]"
       />
 
-      {/* BASE GRADIENT */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+      {/* SOFT OVERLAY (always on) */}
+      <div className="absolute inset-0 bg-black/20" />
 
-      {/* TITLE ON IMAGE */}
+      {/* TEXT GRADIENT */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+      {/* TITLE */}
       <div className="absolute bottom-4 left-4 right-4 z-10">
-        <h3 className="text-white text-base font-semibold tracking-wide">
+        <h3 className="text-white text-base font-semibold tracking-wide drop-shadow-md">
           {item.title}
         </h3>
       </div>
