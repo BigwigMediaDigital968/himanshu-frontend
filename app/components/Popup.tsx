@@ -109,9 +109,13 @@ const PopupForm: React.FC<PopupFormProps> = ({ open, onClose }) => {
 
         {/* FORM */}
         <div className="w-full md:w-1/2 p-8">
-          <h2 className="text-2xl font-bold text-center mb-6 text-(--med-primary)">
-            Book Appointment
+          <h2 className="text-2xl font-bold mb-2 text-(--med-primary)">
+            Request a Consultation
           </h2>
+          <p className=" text-sm text-gray-600 mb-6">
+            Share your concern and our medical team will get back to you
+            shortly.
+          </p>
 
           <form className="space-y-2" onSubmit={handleSubmit}>
             <input

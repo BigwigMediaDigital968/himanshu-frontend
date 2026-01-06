@@ -15,6 +15,7 @@ import Exercising from "../../assets/avfcare/Header-Banner-for-Blog-1536x864.web
 import Mental from "../../assets/avfcare/Header-Banner-for-Blog-1-1536x864.webp";
 import Dialysis from "../../assets/avfcare/Header-Banner-for-Blog-2-1536x864.webp";
 import avf from "../../assets/avfcare/Header-Banner-for-Blog-3-1536x864.webp";
+import FinalCTA from "@/app/components/CTA";
 
 const workshopSections = [
   {
@@ -154,7 +155,7 @@ export default function AVFCareWorkshop() {
           ))}
         </div>
       </section>
-
+      <FinalCTA />
       <Footer />
 
       <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />

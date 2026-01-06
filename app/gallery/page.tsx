@@ -35,6 +35,7 @@ import image23 from "../assets/gallery/himanshu/6.webp";
 import image24 from "../assets/gallery/himanshu/7.webp";
 import image25 from "../assets/gallery/himanshu/8.webp";
 import image26 from "../assets/gallery/podcast/DSC00209.webp";
+import FinalCTA from "../components/CTA";
 
 /* ------------------ TYPES ------------------ */
 type Category = "Dr. Himanshu" | "avf" | "podcast" | "training";
@@ -364,7 +365,7 @@ export default function Gallery() {
           </motion.div>
         )}
       </AnimatePresence>
-
+      <FinalCTA />
       <Footer />
       <PopupForm open={false} onClose={() => {}} />
       <FloatingContactActions />

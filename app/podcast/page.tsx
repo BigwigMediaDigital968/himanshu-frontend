@@ -8,6 +8,7 @@ import FloatingContactActions from "../components/ContactActions";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import FinalCTA from "../components/CTA";
 
 /* ------------------------------------
    PODCAST DATA TYPE
@@ -164,7 +165,7 @@ export default function Podcast() {
           ))}
         </div>
       </section>
-
+      <FinalCTA />
       <Footer />
 
       <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />
