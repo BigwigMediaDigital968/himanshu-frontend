@@ -11,7 +11,7 @@ export default function HeroCarousel() {
       <section className="relative w-full h-[30vh] md:h-[50vh] lg:h-screen overflow-hidden">
         {/* BACKGROUND VIDEO */}
         <video
-          className="absolute inset-0 w-full h-full object-fill"
+          className="absolute inset-0 w-full h-full object-cover"
           src="/himanshu.mp4" // 👈 replace with your video path
           autoPlay
           muted
