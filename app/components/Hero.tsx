@@ -8,7 +8,7 @@ export default function HeroCarousel() {
 
   return (
     <>
-      <section className="relative w-full h-[30vh] md:h-[50vh] lg:h-screen overflow-hidden">
+      <section className="relative w-full h-[30vh] md:h-[50vh] lg:h-[120vh] overflow-hidden">
         {/* BACKGROUND VIDEO */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
