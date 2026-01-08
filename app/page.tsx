@@ -93,7 +93,7 @@ const teamMembers = [
     role: "Program Manager, Department of Vascular Surgery",
     image: team2,
     description:
-      "Ms. Chandrakanta Thakur leads the AVF Care Workshop as Head of Programs and Strategic Partnerships, overseeing its strategy, partnerships with hospitals and referring doctors, and multi-city execution since inception. In her role as Program Manager, she is responsible for smooth departmental operations, revenue and volume growth, NABH compliance, MIS and MBR reporting, team performance management, and cross-functional coordination. Her approach consistently aligns patient-first care with operational discipline and sustainable program growth.",
+      "Ms. Chandrakanta Thakur leads the AVF Care Workshop as Head of Programs and Strategic Partnerships, overseeing strategy, hospital partnerships, and multi-city execution. As Program Manager, she ensures smooth operations, revenue growth, NABH compliance, MIS and MBR reporting, and team performance. Her leadership aligns patient-first care with operational discipline and sustainable program growth.",
   },
   {
     name: "Dr. Trisha Sachan",
@@ -287,7 +287,7 @@ export default function Home() {
   cursor-pointer"
               >
                 {/* IMAGE */}
-                <div className="relative h-[400px] overflow-hidden">
+                <div className="relative h-[390px] md:h-[420px] overflow-hidden">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -303,6 +303,17 @@ export default function Home() {
                     {member.name}
                   </h3>
                   <p className="text-sm text-gray-500">{member.role}</p>
+
+                  {/* Mobile CTA */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setActiveIndex(activeIndex === index ? null : index);
+                    }}
+                    className="mt-2 text-sm font-medium text-[var(--med-primary)] underline lg:hidden"
+                  >
+                    View Profile
+                  </button>
                 </div>
 
                 {/* HOVER FULL-HEIGHT TRANSLUCENT PANEL */}
@@ -348,8 +359,8 @@ export default function Home() {
 
       <section className="py-12 bg-white">
         {/* SECTION HEADER */}
-        <div className="w-11/12 md:w-5/6 mx-auto px-5 flex justify-between mb-14">
-          <div></div>
+        <div className="w-11/12 md:w-5/6 mx-auto flex gap-2 justify-between mb-14">
+          <div className="hidden lg:block"></div>
           <h2
             className="
         text-3xl md:text-4xl font-bold 
@@ -361,7 +372,7 @@ export default function Home() {
             Our Services
           </h2>
           <Link href="/services">
-            <ButtonFill text="All Services →" />
+            <ButtonFill text="All Services" />
           </Link>
         </div>
 
@@ -532,7 +543,7 @@ export default function Home() {
 
               <div
                 className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  openIndex === i ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                  openIndex === i ? "max-h-72 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="px-5 pb-5 text-[var(--med-text)]/80 leading-relaxed">

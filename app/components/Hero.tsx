@@ -8,11 +8,11 @@ export default function HeroCarousel() {
 
   return (
     <>
-      <section className="relative w-full h-[50vh] md:h-[60vh] lg:h-screen overflow-hidden">
+      <section className="relative w-full h-[30vh] md:h-[50vh] lg:h-screen overflow-hidden">
         {/* BACKGROUND VIDEO */}
         <video
           className="absolute inset-0 w-full h-full object-fill"
-          src="/Himanshu.Verma.mp4" // 👈 replace with your video path
+          src="/himanshu.mp4" // 👈 replace with your video path
           autoPlay
           muted
           loop
@@ -24,8 +24,8 @@ export default function HeroCarousel() {
       </section>
 
       {/* STATS SECTION — CONNECTED TO HERO */}
-      <section className="relative z-30 -mt-20 md:-mt-16">
-        <div className="w-11/12 md:w-5/6 mx-auto">
+      <section className="relative z-30 -mt-8 md:-mt-16">
+        <div className="w-5/6 mx-auto">
           <div
             className="
         grid grid-cols-2 md:grid-cols-4 gap-6
@@ -40,7 +40,7 @@ export default function HeroCarousel() {
               data-aos="fade-up"
               className="flex flex-col items-center text-center"
             >
-              <p className="text-3xl md:text-4xl font-extrabold text-[var(--med-primary)]">
+              <p className="text-2xl md:text-4xl font-extrabold text-[var(--med-primary)]">
                 17+
               </p>
               <p className="text-[var(--med-text)]/70 mt-1 text-sm tracking-wide">
@@ -54,7 +54,7 @@ export default function HeroCarousel() {
               data-aos-delay="100"
               className="flex flex-col items-center text-center"
             >
-              <p className="text-3xl md:text-4xl font-extrabold text-[var(--med-primary)]">
+              <p className="text-2xl md:text-4xl font-extrabold text-[var(--med-primary)]">
                 29+
               </p>
               <p className="text-[var(--med-text)]/70 mt-1 text-sm tracking-wide">
@@ -68,7 +68,7 @@ export default function HeroCarousel() {
               data-aos-delay="200"
               className="flex flex-col items-center text-center"
             >
-              <p className="text-3xl md:text-4xl font-extrabold text-[var(--med-primary)]">
+              <p className="text-2xl md:text-4xl font-extrabold text-[var(--med-primary)]">
                 6+
               </p>
               <p className="text-[var(--med-text)]/70 mt-1 text-sm tracking-wide">
@@ -82,7 +82,7 @@ export default function HeroCarousel() {
               data-aos-delay="300"
               className="flex flex-col items-center text-center"
             >
-              <p className="text-3xl md:text-4xl font-extrabold text-[var(--med-primary)]">
+              <p className="text-2xl md:text-4xl font-extrabold text-[var(--med-primary)]">
                 Director
               </p>
               <p className="text-[var(--med-text)]/70 mt-1 text-sm tracking-wide">
