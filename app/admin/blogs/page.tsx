@@ -60,11 +60,6 @@ export default function AdminBlogsPage() {
   };
 
   useEffect(() => {
-    const loggedIn = localStorage.getItem("isAdmin");
-    if (loggedIn !== "true") {
-      router.push("/login");
-      return;
-    }
     fetchBlogs();
   }, []);
 
