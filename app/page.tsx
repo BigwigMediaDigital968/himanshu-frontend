@@ -6,19 +6,32 @@ import ButtonFill from "./components/Button";
 import PopupForm from "./components/Popup";
 import { useState, useEffect } from "react";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./components/Footer";
+import { CheckCircle2, ChevronDown, Stethoscope } from "lucide-react";
+
 import {
   Activity,
-  CheckCircle2,
-  ChevronDown,
-  Footprints,
   HeartPulse,
-  Stethoscope,
+  Syringe,
+  ShieldPlus,
+  Footprints,
+  Droplets,
+  Wind,
+  Network,
+  Microscope,
+  Ambulance,
+  GitBranch,
+  Cpu,
+  Star,
 } from "lucide-react";
+
 import TestimonialSlider from "./components/Testimonial";
 import faq from "./assets/faq.png";
 import FinalCTA from "./components/CTA";
@@ -33,7 +46,6 @@ import FloatingContactActions from "./components/ContactActions";
 import himanshu from "./assets/logo-removebg-preview.png";
 import Link from "next/link";
 import partners from "./assets/ayusync.webp";
-//xyz
 
 const faqs = [
   {
@@ -60,24 +72,69 @@ const faqs = [
 
 const services = [
   {
-    title: "Varicose Vein Treatments",
-    desc: "Comprehensive evaluation and minimally invasive treatment options for varicose veins, including laser and endovenous procedures.",
-    icon: Stethoscope,
+    title: "Varicose Veins, Chronic Venous Disorders & Lymphatic Care",
+    desc: "Comprehensive management of varicose veins, venous insufficiency, and lymphatic disorders using minimally invasive techniques.",
+    icon: Droplets,
   },
   {
-    title: "Dialysis Access & AV Fistula Care",
-    desc: "Expert creation, maintenance, and salvage of AV fistulas and dialysis access for patients with chronic kidney disease.",
-    icon: Activity,
-  },
-  {
-    title: "Peripheral Artery Disease (PAD)",
-    desc: "Advanced diagnosis and treatment of peripheral artery disease using endovascular, open, and hybrid revascularization techniques.",
+    title: "Pelvic Venous Disorders & Gonadal Vein Disease",
+    desc: "Advanced diagnosis and treatment of pelvic congestion syndrome and gonadal vein disorders causing chronic pelvic pain.",
     icon: HeartPulse,
   },
   {
-    title: "Diabetic Foot & Wound Care",
-    desc: "Multidisciplinary management of diabetic foot ulcers and complex wounds with a strong focus on limb salvage.",
+    title: "AV Fistula, Dialysis Access & Central Venous Care",
+    desc: "Creation, maintenance, and salvage of dialysis access including AV fistulas, grafts, and central venous interventions.",
+    icon: Syringe,
+  },
+  {
+    title: "Peripheral Artery Disease (PAD) & Advanced Limb Salvage",
+    desc: "Endovascular and surgical treatment of PAD focused on restoring blood flow and preventing limb loss.",
+    icon: ShieldPlus,
+  },
+  {
+    title: "Diabetic Foot, Wound Care & Minor Amputations",
+    desc: "Specialized care for diabetic foot ulcers, chronic wounds, infection control, and limb-preserving procedures.",
     icon: Footprints,
+  },
+  {
+    title: "Deep Vein Thrombosis (DVT) & Advanced Venous Interventions",
+    desc: "Expert management of acute and chronic DVT using catheter-based thrombolysis and venous reconstruction.",
+    icon: Activity,
+  },
+  {
+    title: "Pulmonary Embolism (PE) Management",
+    desc: "Rapid diagnosis and minimally invasive treatment of pulmonary embolism to reduce mortality and complications.",
+    icon: Wind,
+  },
+  {
+    title: "Aortic, Visceral & Renal Artery Interventions",
+    desc: "Endovascular treatment of complex aortic, visceral, and renal artery diseases using advanced stent technologies.",
+    icon: Network,
+  },
+  {
+    title: "Onco-Vascular Surgery & Rare Vascular Disorders",
+    desc: "Specialized vascular procedures in oncology patients and management of rare and complex vascular conditions.",
+    icon: Microscope,
+  },
+  {
+    title: "Vascular Trauma, Pediatric & Iatrogenic Vascular Injuries",
+    desc: "Emergency and reconstructive care for traumatic, pediatric, and procedure-related vascular injuries.",
+    icon: Ambulance,
+  },
+  {
+    title: "AV Malformations & Complex Vascular Anomalies",
+    desc: "Multidisciplinary treatment of arteriovenous malformations and congenital vascular anomalies.",
+    icon: GitBranch,
+  },
+  {
+    title: "ECMO Cannulation & Large-Bore Access Care",
+    desc: "Expert cannulation and management of ECMO and other large-bore vascular access systems in critical care.",
+    icon: Cpu,
+  },
+  {
+    title: "Special Interests",
+    desc: "Focused expertise in advanced vascular techniques, complex cases, and emerging endovascular innovations.",
+    icon: Star,
   },
 ];
 
@@ -265,45 +322,57 @@ export default function Home() {
         {/* SECTION HEADER */}
         <div className="w-11/12 md:w-5/6 mx-auto flex gap-2 justify-between mb-14">
           <div className="hidden lg:block"></div>
+
           <h2
-            className="
-        text-3xl md:text-4xl font-bold 
-        text-[var(--med-primary)]
-        mb-4
-      "
+            className="text-3xl md:text-4xl font-bold text-[var(--med-primary)] mb-4"
             data-aos="fade-up"
           >
             Our Services
           </h2>
+
           <Link href="/services">
             <ButtonFill text="All Services" />
           </Link>
         </div>
 
-        {/* SERVICES GRID */}
-        <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, idx) => {
-            const Icon = service.icon;
-            const isAlt = idx % 2 !== 0;
+        {/* SERVICES CAROUSEL */}
+        <div className="w-11/12 md:w-5/6 mx-auto">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            pagination={{ clickable: true }}
+            spaceBetween={24}
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 4 },
+            }}
+            className="pb-12"
+          >
+            {services.map((service, idx) => {
+              const Icon = service.icon;
+              const isAlt = idx % 2 !== 0;
 
-            return (
-              <div
-                key={idx}
-                className={`
-                rounded-2xl p-8 text-center transition-all duration-300
+              return (
+                <SwiperSlide key={idx}>
+                  <div
+                    className={`
+                h-full rounded-2xl p-8 text-center transition-all duration-300
                 border border-[var(--med-border)]
                 ${
                   isAlt
                     ? "bg-[var(--med-primary)] text-white"
                     : "bg-[var(--med-light)] text-[var(--med-text)]"
                 }
-                hover:-translate-y-2
-                hover:shadow-xl
+                hover:-translate-y-2 hover:shadow-xl
               `}
-              >
-                {/* ICON */}
-                <div
-                  className={`
+                  >
+                    {/* ICON */}
+                    <div
+                      className={`
                   w-16 h-16 mx-auto mb-6 rounded-full
                   flex items-center justify-center
                   ${
@@ -312,24 +381,28 @@ export default function Home() {
                       : "bg-[var(--med-primary)] text-white"
                   }
                 `}
-                >
-                  <Icon size={32} />
-                </div>
+                    >
+                      <Icon size={32} />
+                    </div>
 
-                {/* TITLE */}
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+                    {/* TITLE */}
+                    <h3 className="text-xl font-semibold mb-4">
+                      {service.title}
+                    </h3>
 
-                {/* DESCRIPTION */}
-                <p
-                  className={`text-sm leading-relaxed ${
-                    isAlt ? "text-white/90" : "text-[var(--med-text)]/70"
-                  }`}
-                >
-                  {service.desc}
-                </p>
-              </div>
-            );
-          })}
+                    {/* DESCRIPTION */}
+                    <p
+                      className={`text-sm leading-relaxed ${
+                        isAlt ? "text-white/90" : "text-[var(--med-text)]/70"
+                      }`}
+                    >
+                      {service.desc}
+                    </p>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </section>
 
