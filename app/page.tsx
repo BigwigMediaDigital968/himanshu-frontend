@@ -33,6 +33,7 @@ import FloatingContactActions from "./components/ContactActions";
 import himanshu from "./assets/logo-removebg-preview.png";
 import Link from "next/link";
 import partners from "./assets/ayusync.webp";
+//xyz
 
 const faqs = [
   {
