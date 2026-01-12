@@ -260,6 +260,80 @@ export default function Home() {
 
       <WhyChooseUs />
 
+      <section className="py-12 bg-white">
+        {/* SECTION HEADER */}
+        <div className="w-11/12 md:w-5/6 mx-auto flex gap-2 justify-between mb-14">
+          <div className="hidden lg:block"></div>
+          <h2
+            className="
+        text-3xl md:text-4xl font-bold 
+        text-[var(--med-primary)]
+        mb-4
+      "
+            data-aos="fade-up"
+          >
+            Our Services
+          </h2>
+          <Link href="/services">
+            <ButtonFill text="All Services" />
+          </Link>
+        </div>
+
+        {/* SERVICES GRID */}
+        <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((service, idx) => {
+            const Icon = service.icon;
+            const isAlt = idx % 2 !== 0;
+
+            return (
+              <div
+                key={idx}
+                className={`
+                rounded-2xl p-8 text-center transition-all duration-300
+                border border-[var(--med-border)]
+                ${
+                  isAlt
+                    ? "bg-[var(--med-primary)] text-white"
+                    : "bg-[var(--med-light)] text-[var(--med-text)]"
+                }
+                hover:-translate-y-2
+                hover:shadow-xl
+              `}
+              >
+                {/* ICON */}
+                <div
+                  className={`
+                  w-16 h-16 mx-auto mb-6 rounded-full
+                  flex items-center justify-center
+                  ${
+                    isAlt
+                      ? "bg-white/20 text-white"
+                      : "bg-[var(--med-primary)] text-white"
+                  }
+                `}
+                >
+                  <Icon size={32} />
+                </div>
+
+                {/* TITLE */}
+                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+
+                {/* DESCRIPTION */}
+                <p
+                  className={`text-sm leading-relaxed ${
+                    isAlt ? "text-white/90" : "text-[var(--med-text)]/70"
+                  }`}
+                >
+                  {service.desc}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <ConditionsWeTreat />
+
       <section className="py-12 bg-[var(--med-light)]">
         <div className="w-11/12 md:w-5/6 mx-auto">
           {/* Section Header */}
@@ -356,80 +430,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section className="py-12 bg-white">
-        {/* SECTION HEADER */}
-        <div className="w-11/12 md:w-5/6 mx-auto flex gap-2 justify-between mb-14">
-          <div className="hidden lg:block"></div>
-          <h2
-            className="
-        text-3xl md:text-4xl font-bold 
-        text-[var(--med-primary)]
-        mb-4
-      "
-            data-aos="fade-up"
-          >
-            Our Services
-          </h2>
-          <Link href="/services">
-            <ButtonFill text="All Services" />
-          </Link>
-        </div>
-
-        {/* SERVICES GRID */}
-        <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, idx) => {
-            const Icon = service.icon;
-            const isAlt = idx % 2 !== 0;
-
-            return (
-              <div
-                key={idx}
-                className={`
-                rounded-2xl p-8 text-center transition-all duration-300
-                border border-[var(--med-border)]
-                ${
-                  isAlt
-                    ? "bg-[var(--med-primary)] text-white"
-                    : "bg-[var(--med-light)] text-[var(--med-text)]"
-                }
-                hover:-translate-y-2
-                hover:shadow-xl
-              `}
-              >
-                {/* ICON */}
-                <div
-                  className={`
-                  w-16 h-16 mx-auto mb-6 rounded-full
-                  flex items-center justify-center
-                  ${
-                    isAlt
-                      ? "bg-white/20 text-white"
-                      : "bg-[var(--med-primary)] text-white"
-                  }
-                `}
-                >
-                  <Icon size={32} />
-                </div>
-
-                {/* TITLE */}
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-
-                {/* DESCRIPTION */}
-                <p
-                  className={`text-sm leading-relaxed ${
-                    isAlt ? "text-white/90" : "text-[var(--med-text)]/70"
-                  }`}
-                >
-                  {service.desc}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      <ConditionsWeTreat />
 
       <section className="py-14 relative overflow-hidden">
         <div className="relative w-11/12 md:w-5/6 mx-auto">

@@ -114,12 +114,7 @@ export default function Nav() {
           >
             About
           </Link>
-          <Link
-            href="/gallery"
-            className="text-black hover:text-(--med-primary) transition"
-          >
-            Gallery
-          </Link>
+
           {/* PODCAST DROPDOWN */}
           <div
             className="relative"
@@ -217,6 +212,12 @@ export default function Nav() {
           >
             Blog
           </Link>
+          <Link
+            href="/gallery"
+            className="text-black hover:text-(--med-primary) transition"
+          >
+            Gallery
+          </Link>
           {/* <Link
             href="/contact-us"
             className="text-black hover:text-(--med-primary) transition"
@@ -229,10 +230,9 @@ export default function Nav() {
 
         {/* RIGHT — Call + Menu */}
         <div className="hidden lg:flex items-center gap-6">
-          <ButtonFill
-            onClick={() => setOpenPopup(true)}
-            text="Request a Callback"
-          />
+          <Link href="/popUp">
+            <ButtonFill text="Request a Callback" />
+          </Link>
 
           <button
             onClick={() => setSideOpen(true)}
