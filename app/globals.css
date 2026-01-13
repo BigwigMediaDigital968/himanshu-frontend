@@ -270,3 +270,21 @@ html {
   font-weight: 600;
   cursor: pointer;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--med-primary);
+  width: 42px;
+  height: 42px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 0.8;
+}

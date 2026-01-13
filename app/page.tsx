@@ -7,14 +7,16 @@ import PopupForm from "./components/Popup";
 import { useState, useEffect } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./components/Footer";
 import { CheckCircle2, ChevronDown, Stethoscope } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import {
   Activity,
@@ -332,13 +334,45 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* CAROUSEL */}
-        <div className="w-11/12 md:w-5/6 mx-auto">
+        {/* CAROUSEL WITH OUTSIDE ARROWS */}
+        <div className="w-11/12 md:w-5/6 mx-auto relative">
+          {/* LEFT ARROW */}
+          <button
+            className="hidden md:flex swiper-prev absolute -left-12 lg:-left-20
+
+ top-1/2 -translate-y-1/2 z-10
+          w-12 h-12 rounded-full bg-white shadow-lg
+          items-center justify-center
+          text-[var(--med-primary)]
+          hover:bg-[var(--med-primary)] hover:text-white
+          transition"
+            aria-label="Previous service"
+          >
+            <ChevronLeft size={22} />
+          </button>
+
+          {/* RIGHT ARROW */}
+          <button
+            className="hidden md:flex swiper-next absolute -right-12 lg:-right-20 top-1/2 -translate-y-1/2 z-10
+          w-12 h-12 rounded-full bg-white shadow-lg
+          items-center justify-center
+          text-[var(--med-primary)]
+          hover:bg-[var(--med-primary)] hover:text-white
+          transition"
+            aria-label="Next service"
+          >
+            <ChevronRight size={22} />
+          </button>
+
           <Swiper
-            modules={[Autoplay]}
+            modules={[Autoplay, Navigation]}
             autoplay={{
               delay: 3500,
               disableOnInteraction: false,
+            }}
+            navigation={{
+              prevEl: ".swiper-prev",
+              nextEl: ".swiper-next",
             }}
             spaceBetween={24}
             breakpoints={{
