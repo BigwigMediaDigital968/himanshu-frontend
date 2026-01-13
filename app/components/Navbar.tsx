@@ -133,12 +133,21 @@ export default function Nav() {
 
             {podcastOpen && (
               <div className="absolute -left-4 pt-8 bg-transparent top-full">
-                <div className="bg-white shadow-xl  py-3 w-56 text-black animate-fadeIn border border-(--med-border)">
+                <div className="bg-white shadow-xl py-3 w-56 text-black animate-fadeIn border border-(--med-border)">
                   <Link
                     href="/podcast"
-                    className="block px-4 py-2 hover:bg-(--med-light) hover:text-(--med-primary)"
+                    className="flex items-center gap-3 px-4 py-2 hover:bg-(--med-light) hover:text-(--med-primary)"
                   >
-                    Doc Talk Show
+                    {/* SAMPLE LOGO */}
+                    <Image
+                      src="/sample-logo.png"
+                      alt="Podcast Logo"
+                      width={28}
+                      height={28}
+                      className="rounded-md"
+                    />
+
+                    <span className="font-medium">Doc Talk Show</span>
                   </Link>
                 </div>
               </div>
@@ -170,9 +179,21 @@ export default function Nav() {
                     <div className="flex items-center justify-between px-4 py-2 cursor-pointer hover:bg-(--med-light)">
                       <Link
                         href="/workshop/avf-care"
-                        className="block px-4 py-2 hover:bg-(--med-light) hover:text-(--med-primary)"
+                        className="flex items-center gap-3 px-4 py-3 transition-all duration-200 hover:bg-(--med-light) hover:text-(--med-primary)"
                       >
-                        AVF Care Workshop
+                        {/* LOGO */}
+                        <Image
+                          src="/sample-logo.png"
+                          alt="AVF Care Workshop"
+                          width={28}
+                          height={28}
+                          className="rounded-md shrink-0"
+                        />
+
+                        {/* TEXT */}
+                        <span className="font-medium whitespace-nowrap">
+                          AVF Care Workshop
+                        </span>
                       </Link>
                       {/* <ChevronDown size={14} className="-rotate-90" /> */}
                     </div>
