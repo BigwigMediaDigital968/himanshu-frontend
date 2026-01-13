@@ -185,6 +185,48 @@ const teamMembers = [
   },
 ];
 
+const collaborations = [
+  {
+    name: "AyuSynk Devices",
+    logo: partners,
+    desc: (
+      <>
+        Collaborative development of an{" "}
+        <strong>AI-enabled digital stethoscope</strong> designed for{" "}
+        <strong>remote AV fistula monitoring</strong>. This innovation enables
+        early detection of vascular access complications and continuous care
+        beyond hospital settings.
+      </>
+    ),
+    tags: ["AI-Enabled Diagnostics", "Remote Monitoring", "AV Fistula Care"],
+  },
+  {
+    name: "MedTech Innovations",
+    logo: partners,
+    desc: (
+      <>
+        Partnership focused on{" "}
+        <strong>advanced vascular imaging systems</strong> to enhance diagnostic
+        accuracy and procedural planning in complex arterial and venous
+        diseases.
+      </>
+    ),
+    tags: ["Vascular Imaging", "Endovascular Planning", "Precision Care"],
+  },
+  {
+    name: "VascuSense Health",
+    logo: partners,
+    desc: (
+      <>
+        Joint research on <strong>wearable vascular monitoring devices</strong>{" "}
+        aimed at early detection of peripheral arterial disease and
+        post-procedure follow-up.
+      </>
+    ),
+    tags: ["Wearable Health Tech", "PAD Monitoring", "Preventive Care"],
+  },
+];
+
 export default function Home() {
   const [openPopup, setOpenPopup] = useState(false);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -540,10 +582,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-14 relative overflow-hidden">
+      <section className="py-14 relative overflow-hidden bg-white">
         <div className="relative w-11/12 md:w-5/6 mx-auto">
-          {/* Title */}
-          <div className="text-center mb-10">
+          {/* TITLE */}
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)]">
               Industry Collaboration
             </h2>
@@ -553,65 +595,109 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Glass Card */}
-          <div
-            className="
-        bg-white/70 backdrop-blur-xl
-        border border-[var(--med-border)]
-        rounded-3xl
-        px-6 md:px-12 py-10
-        shadow-md
-      "
-          >
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              {/* Logo */}
-              <div
-                className="
-            w-full md:w-1/4
-            flex items-center justify-center
-            bg-white/80 backdrop-blur
-            border border-[var(--med-border)]
-            rounded-2xl
-            p-6
-            shadow-sm
-          "
-              >
-                <Image
-                  src={partners} // import your logo
-                  alt="AyuSynk Devices"
-                  className="max-h-16 object-contain"
-                />
-              </div>
+          {/* CAROUSEL WRAPPER */}
+          <div className="relative">
+            {/* LEFT ARROW */}
+            <button
+              className="hidden md:flex collab-prev absolute -left-16 top-1/2 -translate-y-1/2 z-10
+            w-12 h-12 rounded-full bg-white shadow-lg
+            items-center justify-center
+            text-[var(--med-primary)]
+            hover:bg-[var(--med-primary)] hover:text-white
+            transition"
+              aria-label="Previous collaboration"
+            >
+              <ChevronLeft size={22} />
+            </button>
 
-              {/* Content */}
-              <div className="w-full md:w-3/4 text-center md:text-left">
-                <h3 className="text-xl md:text-2xl font-semibold text-[var(--med-text)] mb-3">
-                  AyuSynk Devices
-                </h3>
+            {/* RIGHT ARROW */}
+            <button
+              className="hidden md:flex collab-next absolute -right-16 top-1/2 -translate-y-1/2 z-10
+            w-12 h-12 rounded-full bg-white shadow-lg
+            items-center justify-center
+            text-[var(--med-primary)]
+            hover:bg-[var(--med-primary)] hover:text-white
+            transition"
+              aria-label="Next collaboration"
+            >
+              <ChevronRight size={22} />
+            </button>
 
-                <p className="text-gray-600 leading-relaxed">
-                  Collaborative development of an{" "}
-                  <strong>AI-enabled digital stethoscope </strong>
-                  designed for <strong>remote AV fistula monitoring</strong>.
-                  This innovation aims to enable early detection of vascular
-                  access complications, improve patient outcomes, and support
-                  continuous monitoring beyond hospital settings.
-                </p>
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              navigation={{
+                prevEl: ".collab-prev",
+                nextEl: ".collab-next",
+              }}
+              spaceBetween={32}
+              slidesPerView={1}
+            >
+              {collaborations.map((item, idx) => (
+                <SwiperSlide key={idx}>
+                  {/* GLASS CARD */}
+                  <div
+                    className="
+                    bg-white/70 backdrop-blur-xl
+                    border border-[var(--med-border)]
+                    rounded-3xl
+                    px-6 md:px-12 py-10
+                    shadow-md
+                  "
+                  >
+                    <div className="flex flex-col md:flex-row items-center gap-8">
+                      {/* LOGO */}
+                      <div
+                        className="
+                        w-full md:w-1/4
+                        flex items-center justify-center
+                        bg-white/80 backdrop-blur
+                        border border-[var(--med-border)]
+                        rounded-2xl
+                        p-6
+                        shadow-sm
+                      "
+                      >
+                        <Image
+                          src={item.logo}
+                          alt={item.name}
+                          className="max-h-16 object-contain"
+                        />
+                      </div>
 
-                {/* Optional highlight pills */}
-                <div className="flex flex-wrap gap-3 mt-5 justify-center md:justify-start">
-                  <span className="px-4 py-1.5 text-xs font-medium rounded-full bg-[var(--med-light)] text-[var(--med-primary)] border border-[var(--med-border)]">
-                    AI-Enabled Diagnostics
-                  </span>
-                  <span className="px-4 py-1.5 text-xs font-medium rounded-full bg-[var(--med-light)] text-[var(--med-primary)] border border-[var(--med-border)]">
-                    Remote Monitoring
-                  </span>
-                  <span className="px-4 py-1.5 text-xs font-medium rounded-full bg-[var(--med-light)] text-[var(--med-primary)] border border-[var(--med-border)]">
-                    AV Fistula Care
-                  </span>
-                </div>
-              </div>
-            </div>
+                      {/* CONTENT */}
+                      <div className="w-full md:w-3/4 text-center md:text-left">
+                        <h3 className="text-xl md:text-2xl font-semibold text-[var(--med-text)] mb-3">
+                          {item.name}
+                        </h3>
+
+                        <p className="text-gray-600 leading-relaxed">
+                          {item.desc}
+                        </p>
+
+                        {/* TAGS */}
+                        <div className="flex flex-wrap gap-3 mt-5 justify-center md:justify-start">
+                          {item.tags.map((tag, i) => (
+                            <span
+                              key={i}
+                              className="px-4 py-1.5 text-xs font-medium rounded-full
+                              bg-[var(--med-light)]
+                              text-[var(--med-primary)]
+                              border border-[var(--med-border)]"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </section>
