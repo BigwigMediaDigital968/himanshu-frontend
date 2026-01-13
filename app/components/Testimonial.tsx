@@ -68,38 +68,69 @@ export default function TestimonialSlider() {
           {/* SWIPER */}
           <Swiper
             modules={[Navigation, Autoplay]}
-            slidesPerView={1}
             loop={true}
             autoplay={{ delay: 4000 }}
             navigation={{
               nextEl: ".testi-next",
               prevEl: ".testi-prev",
             }}
-            className="mySwiper"
+            slidesPerView={1}
+            spaceBetween={24}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 32,
+              },
+            }}
           >
             {testimonials.map((t, i) => (
               <SwiperSlide key={i}>
-                <p className="text-xl mt-5 md:text-2xl font-semibold text-[var(--med-text)] mb-10 leading-relaxed">
-                  “{t.msg}”
-                </p>
-
-                <div className="flex items-center gap-4">
+                <div className="relative h-full">
+                  {/* Dialogue Bubble */}
                   <div
                     className="
-                w-14 h-14 rounded-full bg-[var(--med-primary)]
-                text-white flex items-center justify-center text-xl font-bold
-              "
+            relative bg-white
+            border border-[var(--med-border)]
+            rounded-3xl p-8
+            shadow-sm hover:shadow-md
+            transition-all duration-300
+          "
                   >
-                    {t.initial}
+                    <p className="text-lg md:text-xl font-semibold text-[var(--med-text)] leading-relaxed">
+                      “{t.msg}”
+                    </p>
+
+                    {/* Speech Tail */}
+                    <div
+                      className="
+              absolute -bottom-4 left-10
+              w-6 h-6 bg-white
+              border-l border-b border-[var(--med-border)]
+              rotate-45
+            "
+                    />
                   </div>
 
-                  <div>
-                    <h4 className="text-lg font-bold text-[var(--med-text)]">
-                      {t.name}
-                    </h4>
-                    <p className="text-[var(--med-text)]/60 text-sm">
-                      {t.location}
-                    </p>
+                  {/* Author */}
+                  <div className="flex items-center gap-4 mt-8 pl-6">
+                    <div
+                      className="
+              w-12 h-12 rounded-full bg-[var(--med-primary)]
+              text-white flex items-center justify-center
+              text-lg font-bold
+            "
+                    >
+                      {t.initial}
+                    </div>
+
+                    <div>
+                      <h4 className="text-base font-bold text-[var(--med-text)]">
+                        {t.name}
+                      </h4>
+                      <p className="text-[var(--med-text)]/60 text-sm">
+                        {t.location}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
