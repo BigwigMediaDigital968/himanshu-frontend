@@ -8,8 +8,7 @@ import "swiper/css/pagination";
 
 type Condition = {
   title: string;
-  youtubeId: string; // only the ID (recommended)
-  // OR you can store full youtube URL if you want
+  youtubeId: string;
 };
 
 const conditions: Condition[] = [
@@ -18,24 +17,24 @@ const conditions: Condition[] = [
     youtubeId: "gvADB-nshqc",
   },
   {
-    title: "DIALYSIS & AV FISTULA CARE",
-    youtubeId: "VIDEO_ID_2",
+    title: "BLOOD VESSEL BLOCKAGE",
+    youtubeId: "pFddNZC67rQ",
   },
   {
-    title: "BLOCKED LEG ARTERIES / POOR BLOOD CIRCULATION",
-    youtubeId: "VIDEO_ID_3",
+    title: "DEEP VEIN THROMBOSIS DVT",
+    youtubeId: "G4dz_vbYYDU",
   },
   {
-    title: "DIABETIC FOOT & NON-HEALING WOUNDS",
-    youtubeId: "VIDEO_ID_4",
+    title: "AV GRAFT PUNCTURE",
+    youtubeId: "FNwy-ZlK2RE",
   },
   {
-    title: "BLOOD CLOTS (DVT)",
-    youtubeId: "VIDEO_ID_5",
+    title: "INSTRUCTIONS AFTER AV FISTULA SURGERY",
+    youtubeId: "MeoXB2zY-tQ",
   },
   {
-    title: "AORTA & MAJOR ARTERIES",
-    youtubeId: "VIDEO_ID_6",
+    title: "PERIPHERAL ARTERY DISEASE",
+    youtubeId: "to5YgVhc-xk",
   },
 ];
 
