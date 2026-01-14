@@ -1,48 +1,41 @@
 "use client";
 
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
-import condition1 from "../assets/conditionTreat/AORTA & MAJOR ARTERIES.png";
-import condition2 from "../assets/conditionTreat/BLOCKED LEG ARTERIES _ POOR BLOOD CIRCULATION.png";
-import condition3 from "../assets/conditionTreat/BLOOD CLOTS (DVT).png";
-import condition4 from "../assets/conditionTreat/DIABETIC FOOT & NON-HEALING WOUNDS.png";
-import condition5 from "../assets/conditionTreat/DIALYSIS & AV FISTULA CARE.png";
-import condition6 from "../assets/conditionTreat/VARICOSE VEINS.png";
-
 type Condition = {
   title: string;
-  image: any;
+  youtubeId: string; // only the ID (recommended)
+  // OR you can store full youtube URL if you want
 };
 
 const conditions: Condition[] = [
   {
     title: "VARICOSE VEINS",
-    image: condition6,
+    youtubeId: "gvADB-nshqc",
   },
   {
     title: "DIALYSIS & AV FISTULA CARE",
-    image: condition5,
+    youtubeId: "VIDEO_ID_2",
   },
   {
-    title: "BLOCKED LEG ARTERIES / POOR BLOOD CIRCULATION ",
-    image: condition2,
+    title: "BLOCKED LEG ARTERIES / POOR BLOOD CIRCULATION",
+    youtubeId: "VIDEO_ID_3",
   },
   {
-    title: "DIABETIC FOOT & NON-HEALING WOUNDS ",
-    image: condition4,
+    title: "DIABETIC FOOT & NON-HEALING WOUNDS",
+    youtubeId: "VIDEO_ID_4",
   },
   {
     title: "BLOOD CLOTS (DVT)",
-    image: condition3,
+    youtubeId: "VIDEO_ID_5",
   },
   {
     title: "AORTA & MAJOR ARTERIES",
-    image: condition1,
+    youtubeId: "VIDEO_ID_6",
   },
 ];
 
@@ -56,20 +49,26 @@ const ConditionCard = ({ item }: { item: Condition }) => (
       hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(11,141,133,0.25)]
     "
   >
-    {/* IMAGE */}
+    {/* VIDEO */}
     <div className="relative w-full h-48 overflow-hidden">
-      <Image
-        src={item.image}
-        alt={item.title}
-        fill
-        className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:blur-[1px]"
+      <iframe
+        src={`https://www.youtube.com/embed/${item.youtubeId}?autoplay=0&mute=1&controls=0&rel=0&modestbranding=1`}
+        title={item.title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="
+          absolute inset-0 w-full h-full
+          object-cover
+          transition-all duration-700
+          group-hover:scale-110
+        "
       />
 
-      {/* SOFT OVERLAY (always on) */}
-      <div className="absolute inset-0 bg-black/20" />
+      {/* SOFT OVERLAY */}
+      <div className="absolute inset-0 bg-black/20 pointer-events-none" />
 
       {/* TEXT GRADIENT */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
 
       {/* TITLE */}
       <div className="absolute bottom-4 left-4 right-4 z-10">
@@ -98,13 +97,13 @@ export default function ConditionsWeTreat() {
         ))}
       </div>
 
-      {/* MOBILE SLIDER (AUTO SLIDE) */}
+      {/* MOBILE SLIDER */}
       <div className="md:hidden w-full px-4">
         <Swiper
           modules={[Pagination, Autoplay]}
           pagination={{ clickable: true }}
           autoplay={{
-            delay: 3000,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           spaceBetween={16}
