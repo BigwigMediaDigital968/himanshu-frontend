@@ -140,7 +140,7 @@ export default function Nav() {
                   >
                     {/* SAMPLE LOGO */}
                     <Image
-                      src="/sample-logo.png"
+                      src="/podcast-logo.png"
                       alt="Podcast Logo"
                       width={28}
                       height={28}
@@ -183,7 +183,7 @@ export default function Nav() {
                       >
                         {/* LOGO */}
                         <Image
-                          src="/sample-logo.png"
+                          src="/avf-logo.png"
                           alt="AVF Care Workshop"
                           width={28}
                           height={28}

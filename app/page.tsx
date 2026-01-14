@@ -705,53 +705,55 @@ export default function Home() {
       <TestimonialSlider />
 
       <section className="w-full py-20 bg-gray-50">
+        {" "}
         <div className="max-w-6xl mx-auto px-4">
+          {" "}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* AVF Workshop */}
+            {" "}
+            {/* AVF Workshop */}{" "}
             <div className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-blue-50 to-white p-10 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+              {" "}
               <span className="inline-block mb-3 text-sm font-semibold text-blue-600">
-                Hands-on Training
-              </span>
-
-              <h2 className="text-3xl font-semibold mb-4">AVF Workshop</h2>
-
+                {" "}
+                Hands-on Training{" "}
+              </span>{" "}
+              <h2 className="text-3xl font-semibold mb-4">AVF Workshop</h2>{" "}
               <p className="text-gray-600 mb-8 leading-relaxed">
+                {" "}
                 Hands-on AVF workshops focused on vascular access planning,
                 surgical techniques, and post-procedure care. Designed for
-                clinicians and healthcare professionals.
-              </p>
-
+                clinicians and healthcare professionals.{" "}
+              </p>{" "}
               <Link href="/workshop/avf-care">
-                <ButtonFill text="Explore Workshop" />
-              </Link>
-
-              {/* Decorative Blur */}
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-200/40 rounded-full blur-3xl pointer-events-none" />
-            </div>
-
-            {/* Podcast */}
+                {" "}
+                <ButtonFill text="Explore Workshop" />{" "}
+              </Link>{" "}
+              {/* Decorative Blur */}{" "}
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-200/40 rounded-full blur-3xl pointer-events-none" />{" "}
+            </div>{" "}
+            {/* Podcast */}{" "}
             <div className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-green-50 to-white p-10 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+              {" "}
               <span className="inline-block mb-3 text-sm font-semibold text-green-600">
-                Expert Conversations
-              </span>
-
-              <h2 className="text-3xl font-semibold mb-4">Podcast</h2>
-
+                {" "}
+                Expert Conversations{" "}
+              </span>{" "}
+              <h2 className="text-3xl font-semibold mb-4">Podcast</h2>{" "}
               <p className="text-gray-600 mb-8 leading-relaxed">
+                {" "}
                 Listen to expert-led discussions on vascular health, patient
                 care, innovations, and real-world medical insights from industry
-                professionals.
-              </p>
-
+                professionals.{" "}
+              </p>{" "}
               <Link href="/podcast">
-                <ButtonFill text="Listen Now" />
-              </Link>
-
-              {/* Decorative Blur */}
-              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-green-200/40 rounded-full blur-3xl pointer-events-none" />
-            </div>
-          </div>
-        </div>
+                {" "}
+                <ButtonFill text="Listen Now" />{" "}
+              </Link>{" "}
+              {/* Decorative Blur */}{" "}
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-green-200/40 rounded-full blur-3xl pointer-events-none" />{" "}
+            </div>{" "}
+          </div>{" "}
+        </div>{" "}
       </section>
 
       <section
