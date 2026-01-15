@@ -10,6 +10,7 @@ const menu = [
   { name: "Queries", href: "/admin/queries" },
   { name: "Cards Info", href: "/admin/info" },
   { name: "Blogs", href: "/admin/blogs" },
+  { name: "Gallery", href: "/admin/gallery" },
 ];
 
 export default function AdminSidebar() {
