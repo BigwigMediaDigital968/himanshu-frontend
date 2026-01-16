@@ -9,192 +9,31 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import type { StaticImageData } from "next/image";
-import image1 from "../assets/gallery/avfcare/1-12.webp";
-import image2 from "../assets/gallery/avfcare/1-14.webp";
-import image3 from "../assets/gallery/avfcare/1-15.webp";
-import image4 from "../assets/gallery/avfcare/1-19.webp";
-import image5 from "../assets/gallery/avfcare/1-23.webp";
-import image6 from "../assets/gallery/avfcare/1-9.webp";
-import image7 from "../assets/gallery/avfcare/DSC00077-scaled-1.webp";
-import image8 from "../assets/gallery/avfcare/DSC_0972-scaled-1.webp";
-import image9 from "../assets/gallery/avfcare/DSC_1036-scaled-1.webp";
-import image10 from "../assets/gallery/avfcare/Picture23.webp";
-import image12 from "../assets/gallery/podcast/IMG_5282.webp";
-import image13 from "../assets/gallery/podcast/IMG_5304.webp";
-import image14 from "../assets/gallery/podcast/_DSC5049.webp";
-import image15 from "../assets/gallery/avfcare/DSC00019.webp";
-import image16 from "../assets/gallery/avfcare/DSC09998.webp";
-import image17 from "../assets/gallery/avfcare/DSC00030.webp";
-import image18 from "../assets/gallery/himanshu/1.webp";
-import image19 from "../assets/gallery/himanshu/2.webp";
-import image20 from "../assets/gallery/himanshu/3.webp";
-import image21 from "../assets/gallery/himanshu/4.webp";
-import image22 from "../assets/gallery/himanshu/5.webp";
-import image23 from "../assets/gallery/himanshu/6.webp";
-import image24 from "../assets/gallery/himanshu/7.webp";
-import image25 from "../assets/gallery/himanshu/8.webp";
-import image26 from "../assets/gallery/podcast/DSC00209.webp";
 import FinalCTA from "../components/CTA";
 
 /* ------------------ TYPES ------------------ */
-type Category = "Dr. Himanshu" | "avf" | "podcast" | "training";
+type Category = "DR. Himanshu" | "AVF care" | "Podcast" | "training";
 
-type GalleryItem =
-  | {
-      type: "single";
-      src: string | StaticImageData;
+interface GalleryImage {
+  _id: string;
+  url: string;
+  category: Category;
+  createdAt: string;
+}
 
-      category: Category;
-    }
-  | {
-      type: "beforeAfter";
-      before: string;
-      after: string;
-      category: Category;
-    };
-
-/* ------------------ DATA ------------------ */
-const galleryImages: GalleryItem[] = [
-  {
-    type: "single",
-    src: image1,
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image2,
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image3,
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image4,
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image5,
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image6,
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image7,
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image8,
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image9,
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image10,
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image12,
-    category: "podcast",
-  },
-  {
-    type: "single",
-    src: image13,
-    category: "podcast",
-  },
-  {
-    type: "single",
-    src: image14,
-    category: "podcast",
-  },
-  {
-    type: "single",
-    src: image15,
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image16,
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image17,
-    category: "avf",
-  },
-  {
-    type: "single",
-    src: image18,
-    category: "Dr. Himanshu",
-  },
-  {
-    type: "single",
-    src: image19,
-    category: "Dr. Himanshu",
-  },
-  {
-    type: "single",
-    src: image20,
-    category: "Dr. Himanshu",
-  },
-  {
-    type: "single",
-    src: image21,
-    category: "Dr. Himanshu",
-  },
-  {
-    type: "single",
-    src: image22,
-    category: "Dr. Himanshu",
-  },
-  {
-    type: "single",
-    src: image23,
-    category: "Dr. Himanshu",
-  },
-  {
-    type: "single",
-    src: image24,
-    category: "Dr. Himanshu",
-  },
-  {
-    type: "single",
-    src: image25,
-    category: "Dr. Himanshu",
-  },
-  {
-    type: "single",
-    src: image26,
-    category: "podcast",
-  },
-
-  // {
-  //   type: "beforeAfter",
-  //   before: "https://images.unsplash.com/photo-1579154204601-01588f351e67",
-  //   after: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5",
-  //   title: "AVF Before & After",
-  //   category: "avf",
-  // },
-];
+type GalleryItem = {
+  type: "single";
+  src: string;
+  category: Category;
+  _id: string;
+};
 
 /* ------------------ COMPONENT ------------------ */
 export default function Gallery() {
-  const [activeTab, setActiveTab] = useState<Category>("Dr. Himanshu");
+  const [activeTab, setActiveTab] = useState<Category>("DR. Himanshu");
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
+  const [galleryImages, setGalleryImages] = useState<GalleryItem[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
@@ -206,6 +45,31 @@ export default function Gallery() {
     };
     window.addEventListener("keydown", escHandler);
     return () => window.removeEventListener("keydown", escHandler);
+  }, []);
+
+  // Fetch gallery images from API
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        setLoading(true);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/gallery`);
+        const data = await res.json();
+        const images = (data.data || data || []).map((img: GalleryImage) => ({
+          type: "single" as const,
+          src: img.url,
+          category: img.category,
+          _id: img._id,
+        }));
+        setGalleryImages(images);
+      } catch (error) {
+        console.error("Error fetching gallery images:", error);
+        setGalleryImages([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchImages();
   }, []);
 
   const filteredImages = galleryImages.filter(
@@ -239,33 +103,33 @@ export default function Gallery() {
           <div className="flex items-center justify-center gap-2 mb-10 overflow-x-auto py-2">
             <button
               className={`btn-9 btn-sm transition-all ${
-                activeTab === "Dr. Himanshu"
+                activeTab === "DR. Himanshu"
                   ? "!bg-[var(--med-primary-dark)] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
                   : "!bg-[var(--med-primary)]"
               }`}
-              onClick={() => setActiveTab("Dr. Himanshu")}
+              onClick={() => setActiveTab("DR. Himanshu")}
             >
-              Dr. Himanshu
+              DR. Himanshu
             </button>
 
             <button
               className={`btn-9 btn-sm transition-all ${
-                activeTab === "avf"
+                activeTab === "AVF care"
                   ? "!bg-[var(--med-primary-dark)] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
                   : "!bg-[var(--med-primary)]"
               }`}
-              onClick={() => setActiveTab("avf")}
+              onClick={() => setActiveTab("AVF care")}
             >
               AVF Care
             </button>
 
             <button
               className={`btn-9 btn-sm transition-all ${
-                activeTab === "podcast"
+                activeTab === "Podcast"
                   ? "!bg-[var(--med-primary-dark)] !text-white ring-2 ring-[#64bab4] ring-offset-2 shadow-md"
                   : "!bg-[var(--med-primary)]"
               }`}
-              onClick={() => setActiveTab("podcast")}
+              onClick={() => setActiveTab("Podcast")}
             >
               Podcast
             </button>
@@ -283,7 +147,16 @@ export default function Gallery() {
           </div>
 
           {/* GRID / EMPTY STATE */}
-          {filteredImages.length === 0 ? (
+          {loading ? (
+            <div className="flex items-center justify-center py-20">
+              <div className="text-center">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#64bab4]/10 flex items-center justify-center">
+                  <span className="text-2xl animate-spin">⏳</span>
+                </div>
+                <p className="text-gray-600">Loading images...</p>
+              </div>
+            </div>
+          ) : filteredImages.length === 0 ? (
             <div className="flex items-center justify-center py-20">
               <div className="max-w-sm w-full text-center bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-sm">
                 {/* Icon */}
@@ -303,19 +176,20 @@ export default function Gallery() {
             </div>
           ) : (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredImages.map((item, i) => (
+              {filteredImages.map((item) => (
                 <motion.div
-                  key={i}
+                  key={item._id}
                   whileHover={{ scale: 1.03 }}
                   className="rounded-2xl overflow-hidden cursor-pointer"
                   onClick={() => setSelectedItem(item)}
                 >
                   <Image
-                    src={item.type === "single" ? item.src : item.after}
+                    src={item.src}
                     alt={item.category}
                     width={600}
                     height={400}
                     className="h-[260px] w-full object-contain"
+                    unoptimized
                   />
                 </motion.div>
               ))}
@@ -347,20 +221,14 @@ export default function Gallery() {
                 ✕ Close
               </button>
 
-              {selectedItem.type === "single" ? (
-                <Image
-                  src={selectedItem.src}
-                  alt={selectedItem.category}
-                  width={800}
-                  height={300}
-                  className="rounded-xl object-contain w-full max-h-[80vh]"
-                />
-              ) : (
-                <BeforeAfterSlider
-                  before={selectedItem.before}
-                  after={selectedItem.after}
-                />
-              )}
+              <Image
+                src={selectedItem.src}
+                alt={selectedItem.category}
+                width={800}
+                height={300}
+                className="rounded-xl object-contain w-full max-h-[80vh]"
+                unoptimized
+              />
             </motion.div>
           </motion.div>
         )}
@@ -369,38 +237,6 @@ export default function Gallery() {
       <Footer />
       <PopupForm open={false} onClose={() => {}} />
       <FloatingContactActions />
-    </div>
-  );
-}
-
-/* ------------------ BEFORE AFTER ------------------ */
-function BeforeAfterSlider({
-  before,
-  after,
-}: {
-  before: string;
-  after: string;
-}) {
-  const [pos, setPos] = useState(50);
-
-  return (
-    <div className="relative h-[70vh] rounded-xl overflow-hidden">
-      <Image src={after} fill alt="" className="object-cover" />
-      <div
-        className="absolute top-0 left-0 h-full overflow-hidden"
-        style={{ width: `${pos}%` }}
-      >
-        <Image src={before} fill alt="" className="object-cover" />
-      </div>
-
-      <input
-        type="range"
-        min="0"
-        max="100"
-        value={pos}
-        onChange={(e) => setPos(+e.target.value)}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 w-1/2"
-      />
     </div>
   );
 }
