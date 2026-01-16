@@ -27,6 +27,7 @@ export default function Nav() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [podcastOpen, setPodcastOpen] = useState(false);
   const [workshopOpen, setWorkshopOpen] = useState(false);
+  const [insightsOpen, setInsightsOpen] = useState(false);
 
   return (
     <header className="sticky top-0 w-full bg-white border-b  shadow-sm z-50">
@@ -227,12 +228,41 @@ export default function Nav() {
             )}
           </div>
 
-          <Link
-            href="/blogs"
-            className="text-black hover:text-(--med-primary) transition"
+          {/* INSIGHTS DROPDOWN */}
+          <div
+            className="relative"
+            onMouseEnter={() => setInsightsOpen(true)}
+            onMouseLeave={() => setInsightsOpen(false)}
           >
-            Blog
-          </Link>
+            <button className="text-black flex items-center gap-1 hover:text-(--med-primary)">
+              Insights
+              <ChevronDown
+                size={16}
+                className={`transition-transform ${
+                  insightsOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {insightsOpen && (
+              <div className="absolute -left-4 pt-8 bg-transparent top-full">
+                <div className="bg-white shadow-xl py-3 w-56 text-black animate-fadeIn border border-(--med-border)">
+                  <Link
+                    href="/blogs"
+                    className="block px-4 py-2 hover:bg-(--med-light) hover:text-(--med-primary)"
+                  >
+                    Blogs
+                  </Link>
+                  <Link
+                    href="/featured"
+                    className="block px-4 py-2 hover:bg-(--med-light) hover:text-(--med-primary)"
+                  >
+                    Featured
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
           <Link
             href="/gallery"
             className="text-black hover:text-(--med-primary) transition"
@@ -500,13 +530,20 @@ export default function Nav() {
             </div>
           </details> */}
 
-          <Link
-            href="/blogs"
-            onClick={() => setMobileOpen(false)}
-            className="text-[var(--med-primary)]"
-          >
-            Blog
-          </Link>
+          {/* INSIGHTS */}
+          <details>
+            <summary className="cursor-pointer text-[var(--med-primary)]">
+              Insights
+            </summary>
+            <div className="ml-4 mt-2 flex flex-col gap-2 text-[var(--med-primary)]">
+              <Link href="/blogs" onClick={() => setMobileOpen(false)}>
+                Blogs
+              </Link>
+              <Link href="/featured" onClick={() => setMobileOpen(false)}>
+                Featured
+              </Link>
+            </div>
+          </details>
           {/* <Link
             href="/contact-us"
             onClick={() => setMobileOpen(false)}
