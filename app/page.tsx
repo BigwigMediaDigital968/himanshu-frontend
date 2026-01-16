@@ -264,6 +264,7 @@ export default function Home() {
         >
           {/* LEFT: content */}
           <div data-aos="fade-right" className="space-y-6">
+            {/* NAME & DESIGNATION */}
             <div className="leading-tight">
               <p className="text-3xl md:text-4xl font-bold text-(--med-primary) transition">
                 Dr. Himanshu Verma
@@ -273,16 +274,38 @@ export default function Home() {
               </p>
             </div>
 
-            <p className="text-[var(--med-text)]/90 leading-relaxed mb-4 text-justify">
-              Dr. Himanshu Verma is a Director - Vascular & Endovascular Surgeon
-              (specializes in diagnosing, managing, and treating diseases of the
-              blood vessels) with over 17 years of extensive clinical experience
-              in managing complex arterial, venous, lymphatic, and
-              dialysis-access disorders. He is widely recognized for treating
-              high-risk and limb- or life-threatening vascular conditions using
-              advanced, evidence-based techniques.
+            {/* ABOUT TEXT */}
+            <p className="text-[var(--med-text)]/90 leading-relaxed text-justify">
+              <span className="font-semibold text-[var(--med-primary)]">
+                About Dr. Himanshu Verma
+              </span>
+              <br />
+              Dr. Himanshu Verma is a highly experienced Vascular & Endovascular
+              Surgeon with over 17 years of expertise, currently serving as
+              Director – Vascular & Endovascular Surgery at Fortis FMRI,
+              Gurgaon.
             </p>
 
+            <p className="text-[var(--med-text)]/90 leading-relaxed text-justify">
+              He specializes in AV fistula and dialysis access surgery, varicose
+              veins, peripheral arterial disease, diabetic foot care, and limb
+              salvage, using advanced minimally invasive, endovascular, and
+              hybrid techniques. Known for his patient-centric, evidence-based
+              approach, Dr. Verma focuses on durable outcomes, limb
+              preservation, and minimizing repeat procedures for complex
+              vascular conditions.
+            </p>
+
+            {/* <p className="text-[var(--med-text)]/90 leading-relaxed text-justify mb-4">
+              Dr. Verma follows a patient-centric, evidence-based approach,
+              focusing on long-term access preservation, limb salvage, and
+              reducing repeat procedures—particularly for patients with chronic
+              kidney disease and complex vascular conditions. He practices at
+              Fortis FMRI, Gurgaon, a leading tertiary care hospital with
+              advanced vascular and hybrid operating facilities.
+            </p> */}
+
+            {/* HIGHLIGHTS */}
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               <li className="flex items-start gap-3 rounded-xl border border-[var(--med-border)] bg-[var(--med-light)] px-4 py-3 transition hover:border-[var(--med-primary)] hover:shadow-sm">
                 <CheckCircle2
@@ -310,7 +333,7 @@ export default function Home() {
                   size={20}
                 />
                 <span className="text-[var(--med-text)]/85">
-                  Expertise in minimally invasive & hybrid vascular procedures
+                  Expertise in AV fistula, dialysis access & limb salvage
                 </span>
               </li>
 
@@ -320,13 +343,13 @@ export default function Home() {
                   size={20}
                 />
                 <span className="text-[var(--med-text)]/85">
-                  Patient-centric, multidisciplinary approach to complex cases
+                  Patient-centric, evidence-based vascular care
                 </span>
               </li>
             </ul>
 
+            {/* CTA */}
             <div>
-              {/* keep using your ButtonFill; setOpenPopup should come from outer scope */}
               <ButtonFill
                 onClick={() => setOpenPopup(true)}
                 text="Request a Callback"
