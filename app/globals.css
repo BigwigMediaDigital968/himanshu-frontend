@@ -169,10 +169,20 @@ html {
 
 /* -----------------------blog--------------------- */
 
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+/* ================= QUILL EDITOR ================= */
+
 .react-quill-editor {
-  height: 300px; /* or whatever you prefer */
+  height: 300px;
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 }
 
 .react-quill-editor .ql-toolbar {
@@ -182,50 +192,50 @@ html {
 .react-quill-editor .ql-container {
   flex: 1;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-.no-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
+/* ================= BLOG CONTENT ================= */
 
 .blog-content {
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   font-size: 1rem;
+  overflow-x: hidden; /* 🔥 KEY FIX */
+  box-sizing: border-box;
 }
 
+/* Headings */
 .blog-content h1 {
   font-size: 2.25rem;
   font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0 1rem;
 }
 
 .blog-content h2 {
   font-size: 2rem;
   font-weight: 500;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  margin: 1.5rem 0 0.75rem;
 }
 
 .blog-content h3 {
   font-size: 1.5rem;
   font-weight: 500;
-  margin-top: 1.25rem;
-  margin-bottom: 0.5rem;
+  margin: 1.25rem 0 0.5rem;
 }
 
+/* Paragraphs */
 .blog-content p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   font-size: 18px;
+  word-wrap: break-word; /* 🔥 prevents overflow */
+  overflow-wrap: break-word;
 }
 
+/* Lists */
 .blog-content ul,
 .blog-content ol {
   padding-left: 1.5rem;
@@ -237,26 +247,66 @@ html {
   margin-bottom: 0.5rem;
 }
 
-.blog-content a {
-  color: #b10203; /* Tailwind blue-600 */
-  text-decoration: none;
+.blog-content ul {
+  list-style-type: disc;
 }
 
+.blog-content ol {
+  list-style-type: decimal;
+}
+
+/* Links */
+.blog-content a {
+  color: #086b65;
+  text-decoration: none;
+  word-break: break-word; /* 🔥 long URLs fix */
+}
+
+/* Blockquote */
 .blog-content blockquote {
-  border-left: 4px solid #d1d5db; /* gray-300 */
+  border-left: 4px solid #d1d5db;
   padding-left: 1rem;
-  color: #6b7280; /* gray-500 */
+  color: #6b7280;
   font-style: italic;
   margin: 1rem 0;
 }
 
-.blog-content ul {
-  list-style-type: disc; /* bullets */
+/* ================= MEDIA SAFETY ================= */
+
+/* Images / embeds */
+.blog-content img,
+.blog-content video,
+.blog-content iframe {
+  max-width: 100% !important; /* 🔥 MOST IMPORTANT */
+  height: auto !important;
+  display: block;
 }
 
-.blog-content ol {
-  list-style-type: decimal; /* numbers */
+/* Tables */
+.blog-content table {
+  width: 100%;
+  max-width: 100%;
+  display: block; /* 🔥 allows scroll inside */
+  overflow-x: auto;
+  border-collapse: collapse;
 }
+
+/* Code blocks */
+.blog-content pre,
+.blog-content code {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap; /* 🔥 prevents page scroll */
+  word-break: break-word;
+}
+
+/* Universal safety net */
+.blog-content * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ================= CTA ================= */
 
 .blog-popup-cta {
   margin: 30px 0;
