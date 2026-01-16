@@ -28,6 +28,15 @@ import PhoneInput from "react-phone-input-2";
 import { FaWhatsapp } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+
+import partners from "../assets/ayusync.webp";
+
 const awards = [
   {
     title: "Best Poster – AVATAR 2018",
@@ -58,6 +67,48 @@ const awards = [
     title: "Journal Reviewer",
     desc: "Reviewer for the Indian Journal of Vascular & Endovascular Surgery.",
     icon: ClipboardCheck,
+  },
+];
+
+const collaborations = [
+  {
+    name: "AyuSynk Devices",
+    logo: partners,
+    desc: (
+      <>
+        Collaborative development of an{" "}
+        <strong>AI-enabled digital stethoscope</strong> designed for{" "}
+        <strong>remote AV fistula monitoring</strong>. This innovation enables
+        early detection of vascular access complications and continuous care
+        beyond hospital settings.
+      </>
+    ),
+    tags: ["AI-Enabled Diagnostics", "Remote Monitoring", "AV Fistula Care"],
+  },
+  {
+    name: "MedTech Innovations",
+    logo: partners,
+    desc: (
+      <>
+        Partnership focused on{" "}
+        <strong>advanced vascular imaging systems</strong> to enhance diagnostic
+        accuracy and procedural planning in complex arterial and venous
+        diseases.
+      </>
+    ),
+    tags: ["Vascular Imaging", "Endovascular Planning", "Precision Care"],
+  },
+  {
+    name: "VascuSense Health",
+    logo: partners,
+    desc: (
+      <>
+        Joint research on <strong>wearable vascular monitoring devices</strong>{" "}
+        aimed at early detection of peripheral arterial disease and
+        post-procedure follow-up.
+      </>
+    ),
+    tags: ["Wearable Health Tech", "PAD Monitoring", "Preventive Care"],
   },
 ];
 
@@ -397,42 +448,125 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-12 bg-[var(--med-light)]">
-        <div className="w-11/12 md:w-5/6 mx-auto">
-          <div
-            className="
-        flex flex-col md:flex-row
-        items-start md:items-center
-        gap-6
-        bg-white
-        border border-[var(--med-border)]
-        rounded-3xl
-        p-8
-        shadow-[0_18px_40px_rgba(11,141,133,0.12)]
-      "
-            data-aos="fade-up"
-          >
-            {/* ICON */}
-            <div className="w-14 h-14 rounded-full bg-[var(--med-primary)]/15 flex items-center justify-center shrink-0">
-              <Handshake className="text-[var(--med-primary)]" size={28} />
-            </div>
+      <section className="py-14 relative overflow-hidden bg-white">
+        <div className="relative w-11/12 md:w-5/6 mx-auto">
+          {/* TITLE */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)]">
+              Industry Collaboration
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-gray-600">
+              Partnering with innovative healthcare technology companies to
+              advance vascular diagnostics and remote patient monitoring.
+            </p>
+          </div>
 
-            {/* CONTENT */}
-            <div>
-              <h3 className="text-xl font-semibold text-[var(--med-text)] mb-2">
-                Industry Collaboration
-              </h3>
-              <p className="text-[var(--med-text)]/80 leading-relaxed">
-                Collaboration with <strong>AyuSynk Devices</strong> on the
-                development of an{" "}
-                <strong>AI-enabled digital stethoscope</strong> for remote
-                monitoring of <strong>AV fistula function</strong>.
-              </p>
-            </div>
+          {/* CAROUSEL WRAPPER */}
+          <div className="relative">
+            {/* LEFT ARROW */}
+            <button
+              className="hidden md:flex collab-prev absolute -left-16 top-1/2 -translate-y-1/2 z-10
+                  w-12 h-12 rounded-full bg-white shadow-lg
+                  items-center justify-center
+                  text-[var(--med-primary)]
+                  hover:bg-[var(--med-primary)] hover:text-white
+                  transition"
+              aria-label="Previous collaboration"
+            >
+              <ChevronLeft size={22} />
+            </button>
+
+            {/* RIGHT ARROW */}
+            <button
+              className="hidden md:flex collab-next absolute -right-16 top-1/2 -translate-y-1/2 z-10
+                  w-12 h-12 rounded-full bg-white shadow-lg
+                  items-center justify-center
+                  text-[var(--med-primary)]
+                  hover:bg-[var(--med-primary)] hover:text-white
+                  transition"
+              aria-label="Next collaboration"
+            >
+              <ChevronRight size={22} />
+            </button>
+
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              navigation={{
+                prevEl: ".collab-prev",
+                nextEl: ".collab-next",
+              }}
+              spaceBetween={32}
+              slidesPerView={1}
+            >
+              {collaborations.map((item, idx) => (
+                <SwiperSlide key={idx}>
+                  {/* GLASS CARD */}
+                  <div
+                    className="
+                          bg-white/70 backdrop-blur-xl
+                          border border-[var(--med-border)]
+                          rounded-3xl
+                          px-6 md:px-12 py-10
+                          shadow-md
+                        "
+                  >
+                    <div className="flex flex-col md:flex-row items-center gap-8">
+                      {/* LOGO */}
+                      <div
+                        className="
+                              w-full md:w-1/4
+                              flex items-center justify-center
+                              bg-white/80 backdrop-blur
+                              border border-[var(--med-border)]
+                              rounded-2xl
+                              p-6
+                              shadow-sm
+                            "
+                      >
+                        <Image
+                          src={item.logo}
+                          alt={item.name}
+                          className="max-h-16 object-contain"
+                        />
+                      </div>
+
+                      {/* CONTENT */}
+                      <div className="w-full md:w-3/4 text-center md:text-left">
+                        <h3 className="text-xl md:text-2xl font-semibold text-[var(--med-text)] mb-3">
+                          {item.name}
+                        </h3>
+
+                        <p className="text-gray-600 leading-relaxed">
+                          {item.desc}
+                        </p>
+
+                        {/* TAGS */}
+                        <div className="flex flex-wrap gap-3 mt-5 justify-center md:justify-start">
+                          {item.tags.map((tag, i) => (
+                            <span
+                              key={i}
+                              className="px-4 py-1.5 text-xs font-medium rounded-full
+                                    bg-[var(--med-light)]
+                                    text-[var(--med-primary)]
+                                    border border-[var(--med-border)]"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </section>
-
       <section className="py-12 ">
         <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* LEFT — CONTACT INFO */}
