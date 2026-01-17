@@ -686,7 +686,7 @@ export default function About() {
                 <div>
                   <p className="font-semibold text-[var(--med-text)]">Phone</p>
                   <p className="text-[var(--med-text)]/70 text-sm">
-                    +91 88268 33598
+                    <a href="tel:+918826833598">+91 88268 33598</a>
                   </p>
                 </div>
               </div>
