@@ -200,31 +200,31 @@ const collaborations = [
     ),
     tags: ["AI-Enabled Diagnostics", "Remote Monitoring", "AV Fistula Care"],
   },
-  {
-    name: "MedTech Innovations",
-    logo: partners,
-    desc: (
-      <>
-        Partnership focused on{" "}
-        <strong>advanced vascular imaging systems</strong> to enhance diagnostic
-        accuracy and procedural planning in complex arterial and venous
-        diseases.
-      </>
-    ),
-    tags: ["Vascular Imaging", "Endovascular Planning", "Precision Care"],
-  },
-  {
-    name: "VascuSense Health",
-    logo: partners,
-    desc: (
-      <>
-        Joint research on <strong>wearable vascular monitoring devices</strong>{" "}
-        aimed at early detection of peripheral arterial disease and
-        post-procedure follow-up.
-      </>
-    ),
-    tags: ["Wearable Health Tech", "PAD Monitoring", "Preventive Care"],
-  },
+  // {
+  //   name: "MedTech Innovations",
+  //   logo: partners,
+  //   desc: (
+  //     <>
+  //       Partnership focused on{" "}
+  //       <strong>advanced vascular imaging systems</strong> to enhance diagnostic
+  //       accuracy and procedural planning in complex arterial and venous
+  //       diseases.
+  //     </>
+  //   ),
+  //   tags: ["Vascular Imaging", "Endovascular Planning", "Precision Care"],
+  // },
+  // {
+  //   name: "VascuSense Health",
+  //   logo: partners,
+  //   desc: (
+  //     <>
+  //       Joint research on <strong>wearable vascular monitoring devices</strong>{" "}
+  //       aimed at early detection of peripheral arterial disease and
+  //       post-procedure follow-up.
+  //     </>
+  //   ),
+  //   tags: ["Wearable Health Tech", "PAD Monitoring", "Preventive Care"],
+  // },
 ];
 
 export default function Home() {

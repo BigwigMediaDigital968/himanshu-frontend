@@ -36,6 +36,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import partners from "../assets/ayusync.webp";
+import assets from "../assets/vascular-surgery-society-image.jpeg";
 
 const awards = [
   {
@@ -85,31 +86,31 @@ const collaborations = [
     ),
     tags: ["AI-Enabled Diagnostics", "Remote Monitoring", "AV Fistula Care"],
   },
-  {
-    name: "MedTech Innovations",
-    logo: partners,
-    desc: (
-      <>
-        Partnership focused on{" "}
-        <strong>advanced vascular imaging systems</strong> to enhance diagnostic
-        accuracy and procedural planning in complex arterial and venous
-        diseases.
-      </>
-    ),
-    tags: ["Vascular Imaging", "Endovascular Planning", "Precision Care"],
-  },
-  {
-    name: "VascuSense Health",
-    logo: partners,
-    desc: (
-      <>
-        Joint research on <strong>wearable vascular monitoring devices</strong>{" "}
-        aimed at early detection of peripheral arterial disease and
-        post-procedure follow-up.
-      </>
-    ),
-    tags: ["Wearable Health Tech", "PAD Monitoring", "Preventive Care"],
-  },
+  // {
+  //   name: "MedTech Innovations",
+  //   logo: partners,
+  //   desc: (
+  //     <>
+  //       Partnership focused on{" "}
+  //       <strong>advanced vascular imaging systems</strong> to enhance diagnostic
+  //       accuracy and procedural planning in complex arterial and venous
+  //       diseases.
+  //     </>
+  //   ),
+  //   tags: ["Vascular Imaging", "Endovascular Planning", "Precision Care"],
+  // },
+  // {
+  //   name: "VascuSense Health",
+  //   logo: partners,
+  //   desc: (
+  //     <>
+  //       Joint research on <strong>wearable vascular monitoring devices</strong>{" "}
+  //       aimed at early detection of peripheral arterial disease and
+  //       post-procedure follow-up.
+  //     </>
+  //   ),
+  //   tags: ["Wearable Health Tech", "PAD Monitoring", "Preventive Care"],
+  // },
 ];
 
 export default function About() {
@@ -444,6 +445,84 @@ export default function About() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Association with society of Vascular Surgery */}
+      <section
+        className="w-full py-16"
+        style={{ backgroundColor: "var(--med-light)" }}
+      >
+        {/* HEADER */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)] mb-4">
+            Association with the Society of Vascular Surgery (SVS)
+          </h2>
+          <p className="text-[var(--med-text)]/70 max-w-2xl mx-auto">
+            Alignment with International Vascular Surgery Standards
+          </p>
+        </div>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            {/* Left: Image */}
+            <div className="w-full">
+              <Image
+                src={assets}
+                alt="International Vascular Surgery Standards"
+                width={600}
+                height={450}
+                className="rounded-xl shadow-md object-cover border w-full h-auto"
+                style={{ borderColor: "var(--med-border)" }}
+              />
+            </div>
+
+            {/* Right: Content */}
+            <div>
+              <p
+                className="mb-4 leading-relaxed"
+                style={{ color: "var(--med-text)" }}
+              >
+                Our vascular and endovascular practice is guided by
+                evidence-based protocols and internationally accepted clinical
+                standards.
+              </p>
+
+              <p
+                className="mb-4 leading-relaxed"
+                style={{ color: "var(--med-text)" }}
+              >
+                <span
+                  className="font-semibold"
+                  style={{ color: "var(--med-primary)" }}
+                >
+                  Dr. Himanshu Verma
+                </span>{" "}
+                is an International Member of the Society of Vascular Surgery
+                (SVS), USA, the world’s leading professional body dedicated to
+                advancing vascular health through research, education, and
+                clinical guidelines.
+              </p>
+
+              <p
+                className="mb-4 leading-relaxed"
+                style={{ color: "var(--med-text)" }}
+              >
+                Our clinical decision-making, patient counselling, and treatment
+                planning are aligned with SVS clinical practice guidelines,
+                adapted thoughtfully to Indian patient profiles and healthcare
+                settings.
+              </p>
+
+              <p
+                className="leading-relaxed"
+                style={{ color: "var(--med-text)" }}
+              >
+                We believe that combining international standards with local
+                clinical expertise leads to safer procedures, better long-term
+                outcomes, and informed patient participation in care.
+              </p>
+            </div>
           </div>
         </div>
       </section>
