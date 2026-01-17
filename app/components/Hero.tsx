@@ -69,7 +69,7 @@ export default function HeroCarousel() {
               className="flex flex-col items-center text-center"
             >
               <p className="text-2xl md:text-4xl font-extrabold text-[var(--med-primary)]">
-                6+
+                20+
               </p>
               <p className="text-[var(--med-text)]/70 mt-1 text-sm tracking-wide">
                 Awards & Achievements
@@ -83,10 +83,10 @@ export default function HeroCarousel() {
               className="flex flex-col items-center text-center"
             >
               <p className="text-2xl md:text-4xl font-extrabold text-[var(--med-primary)]">
-                Director
+                5000+
               </p>
               <p className="text-[var(--med-text)]/70 mt-1 text-sm tracking-wide">
-                Vascular & Endovascular Surgeon
+                Vascular & Endovascular Surgeries
               </p>
             </div>
           </div>

@@ -8,7 +8,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ButtonFill from "../components/Button";
 
-import whychooseus from "../assets/img10.jpg";
+import whychooseus from "../assets/expert-consultation.jpeg";
+import Link from "next/link";
 
 export default function WhyChooseUs() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -36,13 +37,15 @@ export default function WhyChooseUs() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             {/* LEFT IMAGE */}
             <div data-aos="fade-right">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src={whychooseus} // replace with your image
-                  alt="Medical Team"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+              <Link href="/popUp">
+                <div className="relative rounded-2xl overflow-hidden border-2 shadow-xl">
+                  <Image
+                    src={whychooseus} // replace with your image
+                    alt="Medical Team"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </Link>
             </div>
 
             {/* RIGHT CONTENT */}
