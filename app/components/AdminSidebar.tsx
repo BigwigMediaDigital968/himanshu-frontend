@@ -11,6 +11,7 @@ const menu = [
   { name: "Cards Info", href: "/admin/info" },
   { name: "Blogs", href: "/admin/blogs" },
   { name: "Gallery", href: "/admin/gallery" },
+  { name: "Featured", href: "/admin/featured" },
 ];
 
 export default function AdminSidebar() {

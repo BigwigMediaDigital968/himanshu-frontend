@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
             className="text-3xl md:text-4xl font-bold mb-2 text-[var(--med-primary)] mb-10  "
             data-aos="fade-up"
           >
-            Expert Second Opinions Made Simple
+            Expert Second Opinions in Vascular Surgery
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
@@ -50,14 +50,18 @@ export default function WhyChooseUs() {
 
             {/* RIGHT CONTENT */}
             <div data-aos="fade-right">
+              <p className="text-[var(--med-text)]/80 leading-relaxed mb-5 text-justify">
+                Seeking a second opinion is a responsible step, and we respect
+                every patient’s right to fully understand their diagnosis,
+                treatment options, and outcomes. At our centre, second opinions
+                are offered with complete independence and objectivity.
+              </p>
               <p className="text-[var(--med-text)]/80 leading-relaxed mb-8 text-justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                earum incidunt autem, impedit veniam fugit nisi nam hic cumque
-                quidem ullam, aspernatur culpa. Similique eius earum qui
-                perspiciatis accusantium ad ipsam libero, adipisci ex. Ipsam
-                nisi dolore velit, aut dignissimos amet nulla incidunt adipisci
-                praesentium quae vel, eligendi quisquam repellat suscipit eius
-                alias minima tempora harum. Explicabo, labore? Fugiat, iste.
+                To ensure a focused and meaningful consultation, we request that
+                appointments be booked through our Second Opinion portal.
+                Sharing brief medical details and reports in advance helps Dr.
+                Himanshu Verma review your case beforehand and provide clear,
+                confident guidance.
               </p>
 
               {/* CHECK LIST */}
