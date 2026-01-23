@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import popup from "../assets/popup.png";
+import popup from "../assets/himanshu-image.webp";
+import { Loader } from "lucide-react";
 
 interface InfoItem {
   _id: string;
@@ -31,13 +32,14 @@ export default function UserInfoCarouselPopup() {
   ----------------------------------------- */
   if (infoList.length === 0) {
     return (
-      <div className="relative h-full w-full overflow-hidden">
+      <div className="relative h-full w-full overflow-hidden items-center justify-center flex">
         <img
           src={popup.src}
           alt="popup"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* <div className="absolute inset-0 bg-black/30" /> */}
+        <Loader />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
     );
   }
