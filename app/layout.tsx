@@ -5,6 +5,7 @@ import Script from "next/script";
 import "./globals.css";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import FloatingSocialLeft from "./components/SocialAction";
+import GA4RouteTracker from "./components/GA4RouteTracker";
 
 const GA_ID = "G-DMZ306T4Y5";
 const GTM_ID = "GTM-5VTKZ62N";
@@ -49,8 +50,8 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${GA_ID}', {
-                page_path: window.location.pathname,
+              gtag('config', '${GA_ID}', { 
+              send_page_view: false 
               });
             `,
           }}
@@ -99,6 +100,8 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+
+        <GA4RouteTracker />
 
         {children}
 
