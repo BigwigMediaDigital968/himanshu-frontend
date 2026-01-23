@@ -39,10 +39,10 @@ export default function UserInfoModal({
   if (!open) return null;
 
   const handleSubmit = async () => {
-    if (!title || !description) {
-      alert("Title and description are required");
-      return;
-    }
+    // if (!title || !description) {
+    //   alert("Title and description are required");
+    //   return;
+    // }
 
     try {
       setLoading(true);

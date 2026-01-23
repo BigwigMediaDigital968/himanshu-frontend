@@ -37,7 +37,7 @@ export default function UserInfoCarouselPopup() {
           alt="popup"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30" />
+        {/* <div className="absolute inset-0 bg-black/30" /> */}
       </div>
     );
   }
@@ -46,6 +46,7 @@ export default function UserInfoCarouselPopup() {
      NORMAL FLOW
   ----------------------------------------- */
   const item = infoList[current];
+  const hasText = Boolean(item?.title?.trim() || item?.description?.trim());
   const heroImage = item.images?.[0]?.url;
   const hasMultiple = infoList.length > 1;
 
@@ -64,10 +65,8 @@ export default function UserInfoCarouselPopup() {
       ) : (
         <div className="absolute inset-0 bg-[var(--med-light)]" />
       )}
-
       {/* OVERLAY */}
-      <div className="absolute inset-0 bg-black/60" />
-
+      {hasText && <div className="absolute inset-0 bg-black/60" />}
       {/* CONTENT */}
       <div className="relative z-10 h-full flex flex-col">
         {/* TITLE */}

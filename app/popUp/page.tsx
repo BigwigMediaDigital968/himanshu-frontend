@@ -76,7 +76,7 @@ const RequestCallbackPage = () => {
         {
           method: "POST",
           body: formData,
-        }
+        },
       );
 
       const data = await res.json();
@@ -105,7 +105,7 @@ const RequestCallbackPage = () => {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, otp }),
-        }
+        },
       );
 
       const data = await res.json();
@@ -139,7 +139,7 @@ const RequestCallbackPage = () => {
                 </h1>
                 <p className="text-sm text-gray-600 mb-6">
                   Share your concern and our medical team will get back to you
-                  shortly.
+                  shortly. hehhe
                 </p>
 
                 <form

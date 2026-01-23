@@ -1,12 +1,16 @@
 "use client";
 import { useEffect, useState } from "react";
 import UserInfoModal from "../../components/UserInfoModal";
+import Image from "next/image";
 
 interface InfoItem {
   _id: string;
   title: string;
   description: string;
-  images: { url: string }[];
+  images: {
+    _id: number;
+    url: string;
+  }[];
   createdAt: string;
 }
 
@@ -30,6 +34,8 @@ export default function AdminInfoPage() {
     }
   };
 
+  // console.log(infoList);
+
   useEffect(() => {
     fetchInfo();
   }, []);
@@ -37,7 +43,7 @@ export default function AdminInfoPage() {
   // 🔹 Delete info
   const handleDelete = async (id: string) => {
     const confirmed = window.confirm(
-      "Are you sure you want to delete this info?"
+      "Are you sure you want to delete this info?",
     );
     if (!confirmed) return;
 
@@ -102,9 +108,28 @@ export default function AdminInfoPage() {
                 </p>
 
                 {item.images?.length > 0 && (
-                  <p className="text-xs text-gray-400 mt-2">
-                    {item.images.length} image(s) attached
-                  </p>
+                  <div className="mt-2">
+                    <p className="text-xs text-gray-400">
+                      {item.images.length} image(s) attached
+                    </p>
+
+                    <div className="mt-2 grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-6">
+                      {item.images.map((img, idx) => (
+                        <div
+                          key={img._id || idx}
+                          className="relative aspect-square overflow-hidden rounded-md border bg-gray-50"
+                        >
+                          <Image
+                            src={img.url}
+                            alt={`${item.title || "Attachment"} ${idx + 1}`}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 16vw"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 )}
               </div>
 

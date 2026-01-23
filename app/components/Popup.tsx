@@ -105,7 +105,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ open, onClose }) => {
         {
           method: "POST",
           body: formData,
-        }
+        },
       );
 
       const data = await res.json();
@@ -135,7 +135,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ open, onClose }) => {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, otp }),
-        }
+        },
       );
 
       const data = await res.json();
