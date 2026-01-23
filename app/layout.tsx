@@ -28,6 +28,7 @@ export const metadata: Metadata = {
   verification: {
     google: "QsEIkRNuuaYqyxrpzeMswOHuFu1tiZAWjXhvtK8R3LI",
   },
+  metadataBase: new URL("https://www.drhimanshuverma.com"),
 };
 
 export default function RootLayout({
