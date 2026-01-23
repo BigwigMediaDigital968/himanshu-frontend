@@ -6,6 +6,7 @@ import "./globals.css";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import FloatingSocialLeft from "./components/SocialAction";
 import GA4RouteTracker from "./components/GA4RouteTracker";
+import { Suspense } from "react";
 
 const GA_ID = "G-DMZ306T4Y5";
 const GTM_ID = "GTM-5VTKZ62N";
@@ -101,7 +102,9 @@ export default function RootLayout({
           />
         </noscript>
 
-        <GA4RouteTracker />
+        <Suspense fallback={null}>
+          <GA4RouteTracker />
+        </Suspense>
 
         {children}
 
