@@ -73,11 +73,46 @@ export default function Gallery() {
   }, []);
 
   const filteredImages = galleryImages.filter(
-    (img) => img.category === activeTab
+    (img) => img.category === activeTab,
   );
 
   return (
     <div>
+      {/* SEO Metadata tags */}
+
+      <title>Gallery | Vascular Workshops, Patient Care & Medical Events</title>
+
+      <meta
+        name="title"
+        content="Gallery | Vascular Workshops, Patient Care & Medical Events"
+      />
+      <meta
+        name="description"
+        content="View images from vascular workshops, AV fistula care programs, medical conferences, and patient awareness initiatives led by Dr. Himanshu Verma."
+      />
+
+      <link rel="canonical" href="https://www.drhimanshuverma.com/featured" />
+
+      <meta
+        property="og:title"
+        content="Gallery | Vascular Workshops, Patient Care & Medical Events"
+      />
+      <meta
+        property="og:description"
+        content="View images from vascular workshops, AV fistula care programs, medical conferences and patient awareness initiatives."
+      />
+      <meta
+        property="og:image"
+        content="https://www.drhimanshuverma.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-removebg-preview.2f05ed1b.png&w=1920&q=75"
+      />
+      <meta
+        property="og:url"
+        content="https://www.drhimanshuverma.com/gallery"
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Dr Himanshu Verma" />
+      <meta property="og:locale" content="en_IN" />
+
       <Nav />
 
       {/* HERO */}

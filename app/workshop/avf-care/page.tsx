@@ -55,6 +55,24 @@ export default function AVFCareWorkshop() {
 
   return (
     <>
+      <title>
+        AV Fistula Care Workshop | Dialysis Access Education by Expert Surgeon
+      </title>
+
+      <meta
+        name="title"
+        content="AV Fistula Care Workshop | Dialysis Access Education by Expert Surgeon"
+      />
+      <meta
+        name="description"
+        content="Join the AV Fistula Care Workshop focused on dialysis access care, complication prevention, and long-term fistula health guided by a vascular specialist."
+      />
+
+      <link
+        rel="canonical"
+        href="https://www.drhimanshuverma.com/workshop/avf-care"
+      />
+
       <Nav />
 
       {/* HERO SECTION */}

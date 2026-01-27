@@ -12,7 +12,7 @@ export default function HeroCarousel() {
         {/* BACKGROUND VIDEO */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
-          src="/himanshu.mp4" // 👈 replace with your video path
+          src="/himanshu-verma-video-home.mp4" // 👈 replace with your video path
           autoPlay
           muted
           loop

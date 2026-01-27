@@ -250,6 +250,70 @@ export default function Home() {
 
   return (
     <div>
+      {/* SEO Meta Data */}
+
+      <title>
+        Dr. Himanshu Verma | Vascular & Endovascular Surgeon in Gurgaon
+      </title>
+      <meta
+        name="title"
+        content="Dr. Himanshu Verma | Vascular & Endovascular Surgeon in Gurgaon"
+      />
+      <meta
+        name="description"
+        content="Dr. Himanshu Verma is a leading Vascular & Endovascular Surgeon in Gurgaon with 17+ years’ experience, specializing in AV fistula, varicose veins, PAD & limb salvage."
+      />
+
+      <link rel="canonical" href="https://www.drhimanshuverma.com/" />
+
+      {/* <meta
+        name="keywords"
+        content="property dealer in gurugram, real estate agent in gurgaon, commercial property gurgaon, residential property gurgaon, buy property gurgaon, sell property gurgaon, crownpoint estates"
+      /> */}
+      {/* <meta name="author" content="Dr. Himanshu Verma" />
+      <meta name="robots" content="index, follow" />
+      <meta name="googlebot" content="index, follow, max-image-preview:large" /> */}
+
+      {/* <meta
+        property="og:title"
+        content="Property Dealer in Gurugram | Crownpoint Estates"
+      />
+      <meta
+        property="og:description"
+        content="Crownpoint Estates is a trusted property dealer in Gurugram with 15+ years of experience. Buy, sell, lease & rent residential and commercial properties in Gurgaon and Delhi NCR."
+      />
+      <meta
+        property="og:image"
+        content="https://www.crownpointestates.com/og/crownpoint-estates-og.jpg"
+      />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta
+        property="og:image:alt"
+        content="Crownpoint Estates - Property Dealer in Gurugram"
+      />
+      <meta property="og:url" content="https://www.crownpointestates.com/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Crownpoint Estates" />
+      <meta property="og:locale" content="en_IN" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="Property Dealer in Gurugram | Crownpoint Estates"
+      />
+      <meta
+        name="twitter:description"
+        content="Buy, sell, lease & rent premium residential and commercial properties in Gurugram and Delhi NCR with Crownpoint Estates."
+      />
+      <meta
+        name="twitter:image"
+        content="https://www.crownpointestates.com/og/crownpoint-estates-og.jpg"
+      /> */}
+
+      <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
       <Nav />
       <HeroCarousel />
 

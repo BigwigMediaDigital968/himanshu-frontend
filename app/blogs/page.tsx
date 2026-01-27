@@ -45,7 +45,7 @@ export default function Blog() {
     const fetchBlogs = async () => {
       try {
         const res = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_BASE}/blog/viewblog`
+          `${process.env.NEXT_PUBLIC_API_BASE}/blog/viewblog`,
         );
         setBlogs(res.data || []);
       } catch (error) {
@@ -60,116 +60,133 @@ export default function Blog() {
   }, []);
 
   return (
-    <div>
-      <Nav />
+    <>
+      <title>
+        Vascular Health Blogs | AV Fistula, Varicose Veins & Limb Care
+      </title>
 
-      {/* ================= HERO ================= */}
-      <section className="py-16 bg-[#64bab4] rounded-r-full">
-        <div className="w-11/12 md:w-5/6 mx-auto">
-          <p className="text-sm md:text-base font-semibold tracking-widest text-[var(--med-text)] mb-4 uppercase">
-            Medical Knowledge & Awareness
-          </p>
+      <meta
+        name="title"
+        content="Vascular Health Blogs | AV Fistula, Varicose Veins & Limb Care"
+      />
+      <meta
+        name="description"
+        content="Read expert blogs on vascular diseases, AV fistula care, varicose veins, peripheral artery disease, diabetic foot & limb salvage awareness."
+      />
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 uppercase">
-            Blogs & Health Insights
-          </h1>
+      <link rel="canonical" href="https://www.drhimanshuverma.com/blogs" />
 
-          <p className="text-white/80 text-lg leading-relaxed max-w-2xl">
-            Expert articles, medical insights, and patient awareness content
-            focused on vascular and endovascular health.
-          </p>
-        </div>
-      </section>
+      <div>
+        <Nav />
 
-      {/* ================= CONTENT ================= */}
-      <section className="py-20 bg-white">
-        <div className="w-11/12 md:w-5/6 mx-auto">
-          {/* LOADING STATE */}
-          {loading && (
-            <div className="flex flex-col items-center py-24">
-              <div className="w-12 h-12 border-4 border-[var(--med-primary)] border-t-transparent rounded-full animate-spin mb-4" />
-              <p className="text-gray-500">Loading blogs...</p>
-            </div>
-          )}
+        {/* ================= HERO ================= */}
+        <section className="py-16 bg-[#64bab4] rounded-r-full">
+          <div className="w-11/12 md:w-5/6 mx-auto">
+            <p className="text-sm md:text-base font-semibold tracking-widest text-[var(--med-text)] mb-4 uppercase">
+              Medical Knowledge & Awareness
+            </p>
 
-          {/* EMPTY STATE */}
-          {!loading && blogs.length === 0 && (
-            <div
-              className="max-w-xl mx-auto bg-[var(--med-light)] border border-[var(--med-border)] rounded-3xl p-12 text-center"
-              data-aos="fade-up"
-            >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[var(--med-primary)]/15 flex items-center justify-center">
-                <FileText size={28} className="text-[var(--med-primary)]" />
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 uppercase">
+              Blogs & Health Insights
+            </h1>
+
+            <p className="text-white/80 text-lg leading-relaxed max-w-2xl">
+              Expert articles, medical insights, and patient awareness content
+              focused on vascular and endovascular health.
+            </p>
+          </div>
+        </section>
+
+        {/* ================= CONTENT ================= */}
+        <section className="py-20 bg-white">
+          <div className="w-11/12 md:w-5/6 mx-auto">
+            {/* LOADING STATE */}
+            {loading && (
+              <div className="flex flex-col items-center py-24">
+                <div className="w-12 h-12 border-4 border-[var(--med-primary)] border-t-transparent rounded-full animate-spin mb-4" />
+                <p className="text-gray-500">Loading blogs...</p>
               </div>
+            )}
 
-              <h2 className="text-2xl font-semibold text-[var(--med-text)] mb-4">
-                No Blogs Available Yet
-              </h2>
+            {/* EMPTY STATE */}
+            {!loading && blogs.length === 0 && (
+              <div
+                className="max-w-xl mx-auto bg-[var(--med-light)] border border-[var(--med-border)] rounded-3xl p-12 text-center"
+                data-aos="fade-up"
+              >
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[var(--med-primary)]/15 flex items-center justify-center">
+                  <FileText size={28} className="text-[var(--med-primary)]" />
+                </div>
 
-              <p className="text-[var(--med-text)]/70 leading-relaxed mb-8">
-                We are currently working on informative articles and medical
-                insights to help you better understand vascular and endovascular
-                health. Please check back soon.
-              </p>
+                <h2 className="text-2xl font-semibold text-[var(--med-text)] mb-4">
+                  No Blogs Available Yet
+                </h2>
 
-              <ButtonFill
-                onClick={() => setOpenPopup(true)}
-                text="Request a Consultation"
-              />
-            </div>
-          )}
+                <p className="text-[var(--med-text)]/70 leading-relaxed mb-8">
+                  We are currently working on informative articles and medical
+                  insights to help you better understand vascular and
+                  endovascular health. Please check back soon.
+                </p>
 
-          {/* BLOG LIST */}
-          {!loading && blogs.length > 0 && (
-            <div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
-              data-aos="fade-up"
-            >
-              {blogs.map((blog) => (
-                <a
-                  key={blog._id}
-                  href={`/blogs/${blog.slug}`}
-                  className="group bg-white border border-[var(--med-border)] rounded-3xl overflow-hidden shadow hover:shadow-xl transition"
-                >
-                  {/* IMAGE */}
-                  <div className="relative h-56 overflow-hidden">
-                    <Image
-                      src={blog.coverImage}
-                      alt={blog.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  </div>
+                <ButtonFill
+                  onClick={() => setOpenPopup(true)}
+                  text="Request a Consultation"
+                />
+              </div>
+            )}
 
-                  {/* CONTENT */}
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-[var(--med-text)] mb-2 line-clamp-2">
-                      {blog.title}
-                    </h3>
+            {/* BLOG LIST */}
+            {!loading && blogs.length > 0 && (
+              <div
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+                data-aos="fade-up"
+              >
+                {blogs.map((blog) => (
+                  <a
+                    key={blog._id}
+                    href={`/blogs/${blog.slug}`}
+                    className="group bg-white border border-[var(--med-border)] rounded-3xl overflow-hidden shadow hover:shadow-xl transition"
+                  >
+                    {/* IMAGE */}
+                    <div className="relative h-56 overflow-hidden">
+                      <Image
+                        src={blog.coverImage}
+                        alt={blog.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    </div>
 
-                    <p className="text-sm text-[var(--med-text)]/70 mb-1">
-                      {new Date(blog.datePublished).toLocaleDateString()}
-                    </p>
+                    {/* CONTENT */}
+                    <div className="p-6">
+                      <h3 className="text-lg font-semibold text-[var(--med-text)] mb-2 line-clamp-2">
+                        {blog.title}
+                      </h3>
 
-                    <p className="text-sm text-[var(--med-text)]/70">
-                      By <span className="font-medium">{blog.author}</span>
-                    </p>
+                      <p className="text-sm text-[var(--med-text)]/70 mb-1">
+                        {new Date(blog.datePublished).toLocaleDateString()}
+                      </p>
 
-                    <span className="inline-block mt-4 text-[var(--med-primary)] font-semibold">
-                      Read More →
-                    </span>
-                  </div>
-                </a>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
+                      <p className="text-sm text-[var(--med-text)]/70">
+                        By <span className="font-medium">{blog.author}</span>
+                      </p>
 
-      <Footer />
-      <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />
-      <FloatingContactActions />
-    </div>
+                      <span className="inline-block mt-4 text-[var(--med-primary)] font-semibold">
+                        Read More →
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+
+        <Footer />
+        <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />
+        <FloatingContactActions />
+      </div>
+    </>
   );
 }
