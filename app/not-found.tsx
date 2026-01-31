@@ -24,7 +24,7 @@ export default function NotFound() {
           {/* Main Message */}
           <div className="mb-8 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-(--med-text)">
-              Page Not Found
+              Page Not Found!
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Oops! The page you're looking for seems to have wandered off. It
