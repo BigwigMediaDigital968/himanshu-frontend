@@ -367,16 +367,15 @@ export default function PelvicVenousDisorder() {
                   {activeContent.title}
                 </h2>
 
-                {/* <div className="space-y-10">
+                <div className="space-y-10">
                   {activeContent.sections.map((section, idx) => (
                     <div key={idx}>
                       <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
                         {section.heading}
                       </h3>
 
-                      {section.isFaq ? (
+                      {"isFaq" in section && section.isFaq ? (
                         <div className="space-y-6 mt-6">
-                          
                           {section.faqs.map((faq, fIdx) => (
                             <div
                               key={fIdx}
@@ -400,7 +399,7 @@ export default function PelvicVenousDisorder() {
                       )}
                     </div>
                   ))}
-                </div> */}
+                </div>
 
                 <div className="mt-12 pt-8 border-t border-gray-100 flex justify-center">
                   <ButtonFill
