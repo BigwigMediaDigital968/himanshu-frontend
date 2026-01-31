@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 import FinalCTA from "../../components/CTA";
 import FloatingContactActions from "../../components/ContactActions";
 import ButtonFill from "../../components/Button";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ChevronDown } from "lucide-react";
 
 const contentData = {
   pelvicVenous: {
@@ -246,6 +246,7 @@ export default function PelvicVenousDisorder() {
   const [activeTab, setActiveTab] = useState<"pelvicVenous" | "gonadalVein">(
     "pelvicVenous",
   );
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   useEffect(() => {
     AOS.init({
@@ -376,19 +377,49 @@ export default function PelvicVenousDisorder() {
 
                       {"isFaq" in section && section.isFaq ? (
                         <div className="space-y-6 mt-6">
-                          {section.faqs.map((faq, fIdx) => (
-                            <div
-                              key={fIdx}
-                              className="bg-[var(--med-light)] p-5 rounded-2xl border border-[var(--med-border)]"
-                            >
-                              <h4 className="font-semibold text-[var(--med-primary)] mb-2 text-lg">
-                                {faq.q}
-                              </h4>
-                              <p className="text-gray-700 leading-relaxed">
-                                {faq.a}
-                              </p>
-                            </div>
-                          ))}
+                          <div className="space-y-4 mt-6">
+                            {section.faqs.map((faq, fIdx) => {
+                              const isOpen = openFaqIndex === fIdx;
+
+                              return (
+                                <div
+                                  key={fIdx}
+                                  className="border border-[var(--med-border)] rounded-2xl overflow-hidden bg-[var(--med-light)]"
+                                >
+                                  {/* QUESTION */}
+                                  <button
+                                    type="button"
+                                    onClick={() =>
+                                      setOpenFaqIndex(isOpen ? null : fIdx)
+                                    }
+                                    className="w-full flex justify-between items-center px-6 py-5 text-left"
+                                  >
+                                    <span className="font-semibold text-[var(--med-primary)] text-lg">
+                                      {faq.q}
+                                    </span>
+
+                                    <ChevronDown
+                                      size={22}
+                                      className={`text-[var(--med-primary)] transition-transform duration-300 ${
+                                        isOpen ? "rotate-180" : ""
+                                      }`}
+                                    />
+                                  </button>
+
+                                  {/* ANSWER */}
+                                  <div
+                                    className={`px-6 overflow-hidden transition-all duration-300 ${
+                                      isOpen ? "max-h-40 pb-5" : "max-h-0"
+                                    }`}
+                                  >
+                                    <p className="text-gray-700 leading-relaxed">
+                                      {faq.a}
+                                    </p>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
                         </div>
                       ) : (
                         section.content
