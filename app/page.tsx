@@ -82,6 +82,7 @@ const services = [
     title: "Pelvic Venous Disorders & Gonadal Vein Disease",
     desc: "Advanced diagnosis and treatment of pelvic congestion syndrome and gonadal vein disorders causing chronic pelvic pain.",
     icon: HeartPulse,
+    link: "/services/pelvic-venous-disorder",
   },
   {
     title: "AV Fistula, Dialysis Access & Central Venous Care",
@@ -515,10 +516,9 @@ export default function Home() {
               const Icon = service.icon;
               const isAlt = idx % 2 !== 0;
 
-              return (
-                <SwiperSlide key={idx}>
-                  <div
-                    className={`
+              const CardContent = (
+                <div
+                  className={`
                     h-full min-h-[340px]
                     rounded-2xl p-8 text-center
                     transition-all duration-300
@@ -531,11 +531,11 @@ export default function Home() {
                     }
                     hover:-translate-y-2 hover:shadow-xl
                   `}
-                  >
-                    <div>
-                      {/* ICON */}
-                      <div
-                        className={`
+                >
+                  <div>
+                    {/* ICON */}
+                    <div
+                      className={`
                         w-16 h-16 mx-auto mb-6 rounded-full
                         flex items-center justify-center
                         ${
@@ -544,25 +544,37 @@ export default function Home() {
                             : "bg-[var(--med-primary)] text-white"
                         }
                       `}
-                      >
-                        <Icon size={32} />
-                      </div>
-
-                      {/* TITLE */}
-                      <h3 className="text-lg font-semibold mb-4 leading-snug">
-                        {service.title}
-                      </h3>
-
-                      {/* DESCRIPTION */}
-                      <p
-                        className={`text-sm leading-relaxed ${
-                          isAlt ? "text-white/90" : "text-[var(--med-text)]/70"
-                        }`}
-                      >
-                        {service.desc}
-                      </p>
+                    >
+                      <Icon size={32} />
                     </div>
+
+                    {/* TITLE */}
+                    <h3 className="text-lg font-semibold mb-4 leading-snug">
+                      {service.title}
+                    </h3>
+
+                    {/* DESCRIPTION */}
+                    <p
+                      className={`text-sm leading-relaxed ${
+                        isAlt ? "text-white/90" : "text-[var(--med-text)]/70"
+                      }`}
+                    >
+                      {service.desc}
+                    </p>
                   </div>
+                </div>
+              );
+
+              return (
+                <SwiperSlide key={idx}>
+                  {/* @ts-ignore */}
+                  {service.link ? (
+                    <Link href={service.link} className="block h-full">
+                      {CardContent}
+                    </Link>
+                  ) : (
+                    CardContent
+                  )}
                 </SwiperSlide>
               );
             })}
