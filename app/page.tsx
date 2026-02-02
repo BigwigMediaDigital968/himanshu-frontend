@@ -5,6 +5,7 @@ import HeroCarousel from "./components/Hero";
 import ButtonFill from "./components/Button";
 import PopupForm from "./components/Popup";
 import { useState, useEffect } from "react";
+import Script from "next/script";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -228,6 +229,19 @@ const collaborations = [
   // },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
 export default function Home() {
   const [openPopup, setOpenPopup] = useState(false);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -251,6 +265,15 @@ export default function Home() {
 
   return (
     <div>
+      {/* FAQ Schema Markup */}
+      <Script
+        id="homepage-faq-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
       {/* SEO Meta Data */}
 
       <title>

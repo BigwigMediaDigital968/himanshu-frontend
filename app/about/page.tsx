@@ -1,5 +1,7 @@
 "use client";
 
+import Script from "next/script";
+
 import Image from "next/image";
 import doctorImg from "../assets/logo-removebg-preview.png"; // replace with actual image
 import Nav from "../components/Navbar";
@@ -113,6 +115,74 @@ const collaborations = [
   // },
 ];
 
+const physicianSchema = {
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  name: "Dr. Himanshu Verma",
+  image: "https://www.drhimanshuverma.com/logo-removebg-preview.png", // optional but recommended
+  description:
+    "Dr. Himanshu Verma is a highly experienced Vascular & Endovascular Surgeon with over 17 years of clinical expertise. He is Director – Vascular & Endovascular Surgery at Fortis Memorial Research Centre, Gurgaon, specializing in complex arterial, venous, lymphatic, and dialysis-access disorders using advanced minimally invasive and evidence-based techniques.",
+  medicalSpecialty: ["Vascular Surgery", "Endovascular Surgery"],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress:
+      "Fortis Memorial Research Centre, Opposite HUDA City Centre, Sector 44",
+    addressLocality: "Gurugram",
+    addressRegion: "Haryana",
+    postalCode: "122003",
+    addressCountry: "IN",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "28.4541",
+    longitude: "77.0720",
+  },
+  telephone: "+91-8826833598",
+  url: "https://www.drhimanshuverma.com/about",
+  priceRange: "₹₹₹",
+  openingHours: ["Mo-Sa 10:00-18:00"],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "501",
+  },
+  alumniOf: [
+    {
+      "@type": "CollegeOrUniversity",
+      name: "Banaras Hindu University",
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      name: "Narayana Hrudayalaya, Bangalore",
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      name: "Mayo Clinic, USA",
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      name: "Johns Hopkins Hospital, USA",
+    },
+  ],
+  knowsAbout: [
+    "Varicose Veins Treatment",
+    "Peripheral Artery Disease",
+    "Diabetic Foot Care",
+    "Endovascular Procedures",
+    "Limb Salvage Surgery",
+    "Dialysis Access Surgery",
+    "Pelvic Venous Disease",
+    "Onco-Vascular Surgery",
+    "Aneurysm Repair",
+    "Vascular Trauma & Emergency Care",
+  ],
+  sameAs: [
+    // add real profiles when available
+    // "https://www.linkedin.com/in/…",
+    // "https://www.google.com/maps?cid=…"
+  ],
+};
+
 export default function About() {
   const [openPopup, setOpenPopup] = useState(false);
 
@@ -126,6 +196,15 @@ export default function About() {
   }, []);
   return (
     <>
+      {/* Physician Schema Markup */}
+      <Script
+        id="about-physician-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(physicianSchema),
+        }}
+      />
       {/* SEO Meta Tags */}
 
       <title>
