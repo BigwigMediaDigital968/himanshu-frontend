@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 import FinalCTA from "../components/CTA";
 import FloatingContactActions from "../components/ContactActions";
 import ButtonFill from "../components/Button";
+import Link from "next/link";
 
 export default function Services() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -220,6 +221,7 @@ export default function Services() {
               <ServiceCard
                 id="pelvic-venous-disorders"
                 title="Pelvic Venous Disorders & Gonadal Vein Disease"
+                link="/services/pelvic-venous-disorder"
                 items={[
                   "Pelvic Congestion Syndrome (PCS) due to pelvic venous reflux",
                   "Vulval, vaginal, and perineal varicosities",
@@ -419,10 +421,12 @@ function ServiceCard({
   id,
   title,
   items,
+  link,
 }: {
   id: string;
   title: string;
   items: ServiceItem[];
+  link?: string;
 }) {
   return (
     <div
@@ -484,6 +488,18 @@ function ServiceCard({
           );
         })}
       </ul>
+
+      {/* Learn More Link */}
+      {link && (
+        <div className="mt-6 flex justify-end">
+          <Link
+            href={link}
+            className="text-[var(--med-primary)] font-semibold hover:underline inline-flex items-center gap-1 transition-transform hover:translate-x-1"
+          >
+            Learn more &rarr;
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
