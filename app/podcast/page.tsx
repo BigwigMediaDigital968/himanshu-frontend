@@ -98,6 +98,24 @@ export default function Podcast() {
       />
       <link rel="canonical" href="https://www.drhimanshuverma.com/podcast" />
 
+      {/* <!-- Open Graph Meta Tags --> */}
+      <meta
+        property="og:title"
+        content="Dr. Himanshu Verma | Vascular & Endovascular Surgeon in Gurgaon"
+      />
+      <meta
+        property="og:description"
+        content="Dr. Himanshu Verma is a leading Vascular & Endovascular Surgeon in Gurgaon with 17+ years of experience, specializing in AV fistula, varicose veins, peripheral arterial disease (PAD) & limb salvage using advanced minimally invasive techniques."
+      />
+      <meta
+        property="og:image"
+        content="https://www.drhimanshuverma.com/_next/static/media/logo-removebg-preview.2f05ed1b.png"
+      />
+      <meta property="og:url" content="https://www.drhimanshuverma.com/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Dr Himanshu Verma" />
+      <meta property="og:locale" content="en_IN" />
+
       <div>
         <Nav />
 
