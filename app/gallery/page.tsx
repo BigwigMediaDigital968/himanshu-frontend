@@ -91,7 +91,7 @@ export default function Gallery() {
         content="View images from vascular workshops, AV fistula care programs, medical conferences, and patient awareness initiatives led by Dr. Himanshu Verma."
       />
 
-      <link rel="canonical" href="https://www.drhimanshuverma.com/featured" />
+      <link rel="canonical" href="https://www.drhimanshuverma.com/gallery" />
 
       {/* <!-- Open Graph Meta Tags --> */}
       <meta
