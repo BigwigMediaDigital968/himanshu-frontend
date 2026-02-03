@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 
 import "./globals.css";
+import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import FloatingSocialLeft from "./components/SocialAction";
 import GA4RouteTracker from "./components/GA4RouteTracker";
@@ -106,6 +107,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <GA4RouteTracker />
         </Suspense>
+        <ScrollToTop />
 
         {children}
 
