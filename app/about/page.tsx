@@ -6,7 +6,7 @@ import Image from "next/image";
 import doctorImg from "../assets/logo-removebg-preview.png"; // replace with actual image
 import Nav from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import PopupForm from "../components/Popup";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -27,6 +27,7 @@ import { Award, GraduationCap } from "lucide-react";
 import { Trophy, Medal, Star } from "lucide-react";
 import FloatingContactActions from "../components/ContactActions";
 import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import { FaWhatsapp } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 
@@ -185,6 +186,120 @@ const physicianSchema = {
 
 export default function About() {
   const [openPopup, setOpenPopup] = useState(false);
+  const [phone, setPhone] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [disease, setDisease] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [images, setImages] = useState<File[]>([]);
+  const [pdf, setPdf] = useState<File | null>(null);
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  // OTP & FLOW STATES
+  const [otpSent, setOtpSent] = useState(false);
+  const [otp, setOtp] = useState("");
+  const [success, setSuccess] = useState(false);
+
+  // -----------------------------
+  // Handle file selection
+  // -----------------------------
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    if (!files.length) return;
+
+    const pdfFile = files.find((f) => f.type === "application/pdf");
+    const imageFiles = files.filter((f) => f.type.startsWith("image/"));
+
+    if (pdfFile && imageFiles.length > 0) {
+      alert("Please upload either images OR a PDF, not both.");
+      e.target.value = "";
+      return;
+    }
+
+    if (pdfFile) {
+      setPdf(pdfFile);
+      setImages([]);
+    } else {
+      setImages(imageFiles);
+      setPdf(null);
+    }
+  };
+
+  // -----------------------------
+  // STEP 1: SEND OTP
+  // -----------------------------
+  const handleSendOtp = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    if (!name || !phone || !email || !disease) {
+      setError("Please fill all required fields");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("phone", phone);
+      formData.append("email", email);
+      formData.append("disease", disease);
+      formData.append("message", message);
+
+      images.forEach((img) => formData.append("images", img));
+      if (pdf) formData.append("report", pdf);
+
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE}/appointment/send-otp`,
+        {
+          method: "POST",
+          body: formData,
+        },
+      );
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message);
+
+      setOtpSent(true); // 🔑 show OTP field
+    } catch (err: any) {
+      setError(err.message || "Failed to send OTP");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // -----------------------------
+  // STEP 2: VERIFY OTP
+  // -----------------------------
+  const handleVerifyOtp = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE}/appointment/verify-otp`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, otp }),
+        },
+      );
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message);
+
+      setSuccess(true); // ✅ close form
+    } catch (err: any) {
+      setError(err.message || "Invalid OTP");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // INITIALIZE AOS
   useEffect(() => {
@@ -866,46 +981,58 @@ export default function About() {
             shadow-[0_20px_40px_rgba(11,141,133,0.15)]
           "
             >
-              <h3 className="text-2xl font-bold text-[var(--med-primary)] mb-6">
-                Send Us a Message
-              </h3>
+              {!success ? (
+                <>
+                  <h3 className="text-2xl font-bold text-[var(--med-primary)] mb-6">
+                    Send Us a Message
+                  </h3>
 
-              <form className="space-y-2">
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  className="
+                  <form
+                    className="space-y-4"
+                    onSubmit={otpSent ? handleVerifyOtp : handleSendOtp}
+                  >
+                    <input
+                      type="text"
+                      placeholder="Full Name"
+                      className="
                 w-full px-4 py-3 rounded-lg
                 border border-[var(--med-border)]
                 focus:ring-2 focus:ring-[var(--med-primary)]
                 outline-none
               "
-                />
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
 
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      className="
                 w-full px-4 py-3 rounded-lg
                 border border-[var(--med-border)]
                 focus:ring-2 focus:ring-[var(--med-primary)]
                 outline-none
               "
-                />
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
 
-                <div className="w-full">
-                  <PhoneInput
-                    country="in"
-                    enableSearch
-                    countryCodeEditable={false}
-                    placeholder="Phone Number"
-                    inputClass="!w-full !h-[48px] !pl-14 !pr-4 !rounded-lg !border !border-gray-300 focus:!ring-2 focus:!ring-teal-500"
-                  />
-                </div>
+                    <div className="w-full">
+                      <PhoneInput
+                        country="in"
+                        enableSearch
+                        value={phone}
+                        onChange={(value) => setPhone("+" + value)}
+                        countryCodeEditable={false}
+                        placeholder="Phone Number"
+                        inputClass="!w-full !h-[48px] !pl-14 !pr-4 !rounded-lg !border !border-gray-300 focus:!ring-2 focus:!ring-teal-500"
+                        containerClass="!w-full"
+                      />
+                    </div>
 
-                <div>
-                  <select
-                    className="
+                    <div>
+                      <select
+                        className="
       w-full mt-1 px-4 py-2.5 rounded-lg
       border border-gray-300
       bg-white/10
@@ -913,63 +1040,66 @@ export default function About() {
       focus:outline-none
       focus:border-[var(--med-primary)]
     "
-                    defaultValue=""
-                  >
-                    <option value="" disabled>
-                      Select Disease
-                    </option>
-                    <option value="Varicose Vein Treatments">
-                      Varicose Vein Treatments
-                    </option>
-                    <option value="Dialysis Access (AV Fistula & CKD Care)">
-                      Dialysis Access (AV Fistula & CKD Care)
-                    </option>
-                    <option value="Peripheral Artery Disease – Diagnosis & Treatment">
-                      Peripheral Artery Disease – Diagnosis & Treatment
-                    </option>
-                    <option value="Aortic & Major Vessel Interventions">
-                      Aortic & Major Vessel Interventions
-                    </option>
-                    <option value="Visceral Artery Interventions">
-                      Visceral Artery Interventions
-                    </option>
-                    <option value="Carotid & Upper-Body Artery Procedures">
-                      Carotid & Upper-Body Artery Procedures
-                    </option>
-                    <option value="Venous & Lymphedema Care">
-                      Venous & Lymphedema Care
-                    </option>
-                    <option value="Diabetic Foot & Wound Care">
-                      Diabetic Foot & Wound Care
-                    </option>
-                    <option value="Diagnostic & Support Services">
-                      Diagnostic & Support Services
-                    </option>
-                    <option value="AV Fistula Care Workshop">
-                      AV Fistula Care Workshop
-                    </option>
-                    <option value="Preventive & Advisory Services">
-                      Preventive & Advisory Services
-                    </option>
-                  </select>
-                </div>
+                        value={disease}
+                        onChange={(e) => setDisease(e.target.value)}
+                      >
+                        <option value="">Select Disease</option>
+                        <option value="Varicose Vein Treatments">
+                          Varicose Vein Treatments
+                        </option>
+                        <option value="Dialysis Access (AV Fistula & CKD Care)">
+                          Dialysis Access (AV Fistula & CKD Care)
+                        </option>
+                        <option value="Peripheral Artery Disease – Diagnosis & Treatment">
+                          Peripheral Artery Disease – Diagnosis & Treatment
+                        </option>
+                        <option value="Aortic & Major Vessel Interventions">
+                          Aortic & Major Vessel Interventions
+                        </option>
+                        <option value="Visceral Artery Interventions">
+                          Visceral Artery Interventions
+                        </option>
+                        <option value="Carotid & Upper-Body Artery Procedures">
+                          Carotid & Upper-Body Artery Procedures
+                        </option>
+                        <option value="Venous & Lymphedema Care">
+                          Venous & Lymphedema Care
+                        </option>
+                        <option value="Diabetic Foot & Wound Care">
+                          Diabetic Foot & Wound Care
+                        </option>
+                        <option value="Diagnostic & Support Services">
+                          Diagnostic & Support Services
+                        </option>
+                        <option value="AV Fistula Care Workshop">
+                          AV Fistula Care Workshop
+                        </option>
+                        <option value="Preventive & Advisory Services">
+                          Preventive & Advisory Services
+                        </option>
+                      </select>
+                    </div>
 
-                <textarea
-                  rows={4}
-                  placeholder="Your Message"
-                  className="
+                    <textarea
+                      rows={4}
+                      placeholder="Your Message"
+                      className="
                 w-full px-4 py-3 rounded-lg
                 border border-[var(--med-border)]
                 focus:ring-2 focus:ring-[var(--med-primary)]
                 outline-none resize-none
               "
-                />
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                    />
 
-                <div>
-                  <input
-                    type="file"
-                    accept="application/pdf"
-                    className="
+                    <div>
+                      <input
+                        type="file"
+                        accept="application/pdf,image/*"
+                        multiple
+                        onChange={handleFileChange}
+                        className="
       w-full px-4 py-2.5
       rounded-lg
       border border-gray-300
@@ -983,11 +1113,67 @@ export default function About() {
       focus:outline-none
       focus:border-[var(--med-primary)]
     "
+                      />
+                    </div>
+
+                    {/* 🔑 OTP FIELD (APPEARS AFTER SEND OTP) */}
+                    {otpSent && (
+                      <input
+                        type="text"
+                        maxLength={6}
+                        value={otp}
+                        onChange={(e) => setOtp(e.target.value)}
+                        placeholder="Enter 6-digit OTP"
+                        className="w-full px-4 py-2.5 rounded-lg border text-center tracking-widest"
+                      />
+                    )}
+
+                    {error && <p className="text-red-500 text-sm">{error}</p>}
+
+                    <ButtonFill
+                      type="submit"
+                      disabled={loading}
+                      text={
+                        loading
+                          ? otpSent
+                            ? "Verifying..."
+                            : "Sending OTP..."
+                          : otpSent
+                            ? "Verify OTP"
+                            : "Submit"
+                      }
+                      className="w-full"
+                    />
+                  </form>
+                </>
+              ) : (
+                /* ✅ SUCCESS MESSAGE */
+                <div className="text-center py-20">
+                  <h2 className="text-2xl font-bold text-green-600 mb-3">
+                    Appointment Confirmed 🎉
+                  </h2>
+                  <p className="text-gray-600 mb-6">
+                    Thank you! Our medical team will contact you shortly.
+                  </p>
+
+                  <ButtonFill
+                    text="Submit Another"
+                    className="w-full"
+                    onClick={() => {
+                      setSuccess(false);
+                      setOtpSent(false);
+                      setOtp("");
+                      setName("");
+                      setEmail("");
+                      setPhone("");
+                      setDisease("");
+                      setMessage("");
+                      setImages([]);
+                      setPdf(null);
+                    }}
                   />
                 </div>
-
-                <ButtonFill type="submit" text="Submit" className="w-full" />
-              </form>
+              )}
             </div>
           </div>
         </section>
