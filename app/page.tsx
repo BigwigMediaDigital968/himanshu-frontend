@@ -539,31 +539,31 @@ export default function Home() {
               const CardContent = (
                 <div
                   className={`
-                    h-full min-h-[340px]
-                    rounded-2xl p-8 text-center
-                    transition-all duration-300
-                    border border-[var(--med-border)]
-                    flex flex-col justify-between
-                    ${
-                      isAlt
-                        ? "bg-[var(--med-primary)] text-white"
-                        : "bg-[var(--med-light)] text-[var(--med-text)]"
-                    }
-                    hover:-translate-y-2 hover:shadow-xl
-                  `}
+      h-full min-h-[340px]
+      rounded-2xl p-8 text-center
+      transition-all duration-300
+      border border-[var(--med-border)]
+      flex flex-col justify-between
+      ${
+        isAlt
+          ? "bg-[var(--med-primary)] text-white"
+          : "bg-[var(--med-light)] text-[var(--med-text)]"
+      }
+      hover:-translate-y-2 hover:shadow-xl
+    `}
                 >
                   <div>
                     {/* ICON */}
                     <div
                       className={`
-                        w-16 h-16 mx-auto mb-6 rounded-full
-                        flex items-center justify-center
-                        ${
-                          isAlt
-                            ? "bg-white/20 text-white"
-                            : "bg-[var(--med-primary)] text-white"
-                        }
-                      `}
+          w-16 h-16 mx-auto mb-6 rounded-full
+          flex items-center justify-center
+          ${
+            isAlt
+              ? "bg-white/20 text-white"
+              : "bg-[var(--med-primary)] text-white"
+          }
+        `}
                     >
                       <Icon size={32} />
                     </div>
@@ -582,21 +582,29 @@ export default function Home() {
                       {service.desc}
                     </p>
                   </div>
+
+                  {/* READ MORE */}
+                  {service.link && (
+                    <Link
+                      href={service.link}
+                      className={`
+          mt-6 inline-flex items-center justify-center
+          text-sm font-medium
+          ${
+            isAlt
+              ? "text-white underline underline-offset-4"
+              : "text-[var(--med-primary)]"
+          }
+          hover:opacity-80 transition
+        `}
+                    >
+                      Read more →
+                    </Link>
+                  )}
                 </div>
               );
 
-              return (
-                <SwiperSlide key={idx}>
-                  {/* @ts-ignore */}
-                  {service.link ? (
-                    <Link href={service.link} className="block h-full">
-                      {CardContent}
-                    </Link>
-                  ) : (
-                    CardContent
-                  )}
-                </SwiperSlide>
-              );
+              return <SwiperSlide key={idx}>{CardContent}</SwiperSlide>;
             })}
           </Swiper>
         </div>

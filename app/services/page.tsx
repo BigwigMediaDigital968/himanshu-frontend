@@ -514,7 +514,7 @@ function ServiceCard({
             href={link}
             className="text-[var(--med-primary)] font-semibold hover:underline inline-flex items-center gap-1 transition-transform hover:translate-x-1"
           >
-            Learn more &rarr;
+            Read more &rarr;
           </Link>
         </div>
       )}
