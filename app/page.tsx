@@ -89,6 +89,7 @@ const services = [
     title: "AV Fistula, Dialysis Access & Central Venous Care",
     desc: "Creation, maintenance, and salvage of dialysis access including AV fistulas, grafts, and central venous interventions.",
     icon: Syringe,
+    link: "/services/av-dialysis-central-care",
   },
   {
     title: "Peripheral Artery Disease (PAD) & Advanced Limb Salvage",
@@ -590,11 +591,7 @@ export default function Home() {
                       className={`
           mt-6 inline-flex items-center justify-center
           text-sm font-medium
-          ${
-            isAlt
-              ? "text-white underline underline-offset-4"
-              : "text-[var(--med-primary)]"
-          }
+          ${isAlt ? "text-white " : "text-[var(--med-primary)]"}
           hover:opacity-80 transition
         `}
                     >

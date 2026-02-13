@@ -259,6 +259,7 @@ export default function Services() {
               <ServiceCard
                 id="dialysis-access"
                 title="AV Fistula, Dialysis Access & Central Venous Care"
+                link="/services/av-dialysis-central-care"
                 items={[
                   "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
                   "Balloon-assisted maturation (BAM angioplasty)",
