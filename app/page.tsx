@@ -78,6 +78,7 @@ const services = [
     title: "Varicose Veins, Chronic Venous Disorders & Lymphatic Care",
     desc: "Comprehensive management of varicose veins, venous insufficiency, and lymphatic disorders using minimally invasive techniques.",
     icon: Droplets,
+    link: "/services/varicose-veins-treatment",
   },
   {
     title: "Pelvic Venous Disorders & Gonadal Vein Disease",
@@ -89,7 +90,7 @@ const services = [
     title: "AV Fistula, Dialysis Access & Central Venous Care",
     desc: "Creation, maintenance, and salvage of dialysis access including AV fistulas, grafts, and central venous interventions.",
     icon: Syringe,
-    link: "/services/av-dialysis-central-care",
+    link: "/services/av-fistula",
   },
   {
     title: "Peripheral Artery Disease (PAD) & Advanced Limb Salvage",
@@ -479,7 +480,7 @@ export default function Home() {
           </h2>
 
           <Link href="/services">
-            <button className="px-6 py-2 rounded-full bg-[var(--med-primary)] text-white font-medium hover:opacity-90 transition">
+            <button className="px-6 py-2 cursor-pointer rounded-full bg-[var(--med-primary)] text-white font-medium hover:opacity-90 transition">
               All Services
             </button>
           </Link>
