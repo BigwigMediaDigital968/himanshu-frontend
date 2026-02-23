@@ -63,9 +63,15 @@ export default function AVFCareWorkshop() {
         name="title"
         content="AV Fistula Care Workshop | Dialysis Access Education by Expert Surgeon"
       />
+
       <meta
         name="description"
-        content="Join the AV Fistula Care Workshop focused on dialysis access care, complication prevention, and long-term fistula health guided by a vascular specialist."
+        content="Join the AV Fistula Care Workshop led by Dr. Himanshu Verma to learn about dialysis access care, complication prevention, fistula maintenance and long-term vascular health."
+      />
+
+      <meta
+        name="keywords"
+        content="AV fistula care workshop India, dialysis access workshop Gurgaon, fistula care education, AV fistula complication prevention, dialysis patient education India, vascular workshop Gurgaon, fistula maintenance tips, AV fistula awareness program"
       />
 
       <link
@@ -73,23 +79,53 @@ export default function AVFCareWorkshop() {
         href="https://www.drhimanshuverma.com/workshop/avf-care"
       />
 
-      {/* <!-- Open Graph Meta Tags --> */}
+      {/* Open Graph Meta Tags */}
       <meta
         property="og:title"
-        content="Dr. Himanshu Verma | Vascular & Endovascular Surgeon in Gurgaon"
+        content="AV Fistula Care Workshop | Dialysis Access Education"
       />
+
       <meta
         property="og:description"
-        content="Dr. Himanshu Verma is a leading Vascular & Endovascular Surgeon in Gurgaon with 17+ years of experience, specializing in AV fistula, varicose veins, peripheral arterial disease (PAD) & limb salvage using advanced minimally invasive techniques."
+        content="Educational workshop on AV fistula care, dialysis access safety and complication prevention conducted by vascular specialist Dr. Himanshu Verma."
       />
+
       <meta
         property="og:image"
-        content="https://www.drhimanshuverma.com/_next/static/media/logo-removebg-preview.2f05ed1b.png"
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
       />
-      <meta property="og:url" content="https://www.drhimanshuverma.com/" />
-      <meta property="og:type" content="website" />
+
+      <meta
+        property="og:url"
+        content="https://www.drhimanshuverma.com/workshop/avf-care"
+      />
+
+      <meta property="og:type" content="event" />
       <meta property="og:site_name" content="Dr Himanshu Verma" />
       <meta property="og:locale" content="en_IN" />
+
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+
+      <meta
+        name="twitter:title"
+        content="AV Fistula Care Workshop | Dialysis Access Education"
+      />
+
+      <meta
+        name="twitter:description"
+        content="Attend an expert-led workshop on AV fistula care and dialysis access health by Dr. Himanshu Verma."
+      />
+
+      <meta
+        name="twitter:image"
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
+      />
+
+      <meta
+        name="twitter:url"
+        content="https://www.drhimanshuverma.com/workshop/avf-care"
+      />
 
       <Nav />
 

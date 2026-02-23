@@ -69,30 +69,63 @@ export default function Blog() {
         name="title"
         content="Vascular Health Blogs | AV Fistula, Varicose Veins & Limb Care"
       />
+
       <meta
         name="description"
-        content="Read expert blogs on vascular diseases, AV fistula care, varicose veins, peripheral artery disease, diabetic foot & limb salvage awareness."
+        content="Explore expert-written blogs by Dr. Himanshu Verma on vascular diseases, AV fistula care, varicose veins, peripheral artery disease (PAD), diabetic foot care and limb salvage awareness."
+      />
+
+      <meta
+        name="keywords"
+        content="vascular health blogs India, AV fistula blogs, varicose veins articles, PAD awareness blogs, diabetic foot care articles, limb salvage blog India, vascular disease education, vascular surgery blog Gurgaon, patient awareness vascular health"
       />
 
       <link rel="canonical" href="https://www.drhimanshuverma.com/blogs" />
 
-      {/* <!-- Open Graph Meta Tags --> */}
+      {/* Open Graph Meta Tags */}
       <meta
         property="og:title"
-        content="Dr. Himanshu Verma | Vascular & Endovascular Surgeon in Gurgaon"
+        content="Vascular Health Blogs | Expert Insights by Dr. Himanshu Verma"
       />
+
       <meta
         property="og:description"
-        content="Dr. Himanshu Verma is a leading Vascular & Endovascular Surgeon in Gurgaon with 17+ years of experience, specializing in AV fistula, varicose veins, peripheral arterial disease (PAD) & limb salvage using advanced minimally invasive techniques."
+        content="Read informative blogs on vascular health, AV fistula care, varicose veins treatment, PAD awareness and limb preservation written for patient education."
       />
+
       <meta
         property="og:image"
-        content="https://www.drhimanshuverma.com/_next/static/media/logo-removebg-preview.2f05ed1b.png"
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
       />
-      <meta property="og:url" content="https://www.drhimanshuverma.com/" />
+
+      <meta property="og:url" content="https://www.drhimanshuverma.com/blogs" />
+
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Dr Himanshu Verma" />
       <meta property="og:locale" content="en_IN" />
+
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+
+      <meta
+        name="twitter:title"
+        content="Vascular Health Blogs | AV Fistula, Varicose Veins & Limb Care"
+      />
+
+      <meta
+        name="twitter:description"
+        content="Patient-focused blogs on vascular health, AV fistula, varicose veins, PAD, diabetic foot care and limb salvage."
+      />
+
+      <meta
+        name="twitter:image"
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
+      />
+
+      <meta
+        name="twitter:url"
+        content="https://www.drhimanshuverma.com/blogs"
+      />
 
       <div>
         <Nav />

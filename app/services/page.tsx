@@ -29,34 +29,71 @@ export default function Services() {
       <title>
         Vascular Surgery Treatments in Gurgaon | AV Fistula, Varicose Veins, PAD
       </title>
+
       <meta
         name="title"
         content="Vascular Surgery Treatments in Gurgaon | AV Fistula, Varicose Veins, PAD"
       />
+
       <meta
         name="description"
-        content="Explore advanced vascular treatments including AV fistula surgery, dialysis access, varicose veins, diabetic foot care & limb salvage using minimally invasive techniques."
+        content="Explore advanced vascular surgery treatments in Gurgaon including AV fistula surgery, dialysis access, varicose veins laser treatment, peripheral arterial disease (PAD), diabetic foot care and limb salvage procedures by Dr. Himanshu Verma."
+      />
+
+      <meta
+        name="keywords"
+        content="vascular surgery treatments Gurgaon, AV fistula surgery India, dialysis access surgery, varicose veins laser treatment Gurgaon, peripheral artery disease treatment, diabetic foot care India, limb salvage surgery, minimally invasive vascular surgery, endovascular procedures Gurgaon, vascular disease treatment"
       />
 
       <link rel="canonical" href="https://www.drhimanshuverma.com/services" />
 
-      {/* <!-- Open Graph Meta Tags --> */}
+      {/* Open Graph Meta Tags */}
       <meta
         property="og:title"
-        content="Dr. Himanshu Verma | Vascular & Endovascular Surgeon in Gurgaon"
+        content="Vascular Surgery Treatments in Gurgaon | AV Fistula, Varicose Veins, PAD"
       />
+
       <meta
         property="og:description"
-        content="Dr. Himanshu Verma is a leading Vascular & Endovascular Surgeon in Gurgaon with 17+ years of experience, specializing in AV fistula, varicose veins, peripheral arterial disease (PAD) & limb salvage using advanced minimally invasive techniques."
+        content="Advanced vascular and endovascular treatments in Gurgaon including AV fistula, dialysis access, varicose veins laser therapy, PAD treatment and limb salvage using minimally invasive techniques by Dr. Himanshu Verma."
       />
+
       <meta
         property="og:image"
-        content="https://www.drhimanshuverma.com/_next/static/media/logo-removebg-preview.2f05ed1b.png"
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
       />
-      <meta property="og:url" content="https://www.drhimanshuverma.com/" />
+
+      <meta
+        property="og:url"
+        content="https://www.drhimanshuverma.com/services"
+      />
+
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Dr Himanshu Verma" />
       <meta property="og:locale" content="en_IN" />
+
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+
+      <meta
+        name="twitter:title"
+        content="Vascular Surgery Treatments in Gurgaon | AV Fistula, Varicose Veins, PAD"
+      />
+
+      <meta
+        name="twitter:description"
+        content="Comprehensive vascular surgery services including AV fistula, dialysis access, varicose veins laser treatment, PAD and limb salvage procedures in Gurgaon."
+      />
+
+      <meta
+        name="twitter:image"
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
+      />
+
+      <meta
+        name="twitter:url"
+        content="https://www.drhimanshuverma.com/services"
+      />
 
       <div className="bg-[var(--med-light)]">
         <Nav />

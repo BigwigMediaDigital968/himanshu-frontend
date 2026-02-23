@@ -324,35 +324,66 @@ export default function About() {
 
       <title>
         About Dr. Himanshu Verma | Vascular & Endovascular Surgeon, Fortis FMRI
+        Gurgaon
       </title>
+
       <meta
         name="title"
-        content="About Dr. Himanshu Verma | Vascular & Endovascular Surgeon, Fortis FMRI"
+        content="About Dr. Himanshu Verma | Vascular & Endovascular Surgeon, Fortis FMRI Gurgaon"
       />
+
       <meta
         name="description"
-        content="Know Dr. Himanshu Verma, Director – Vascular & Endovascular Surgery at Fortis FMRI Gurgaon, with 17+ years of expertise in complex vascular and limb-saving procedures."
+        content="Learn about Dr. Himanshu Verma, Director – Vascular & Endovascular Surgery at Fortis Memorial Research Institute (FMRI), Gurgaon. With 17+ years of experience, he specializes in advanced vascular, endovascular and limb-saving procedures."
+      />
+
+      <meta
+        name="keywords"
+        content="Dr Himanshu Verma profile, About Dr Himanshu Verma, vascular surgeon Fortis FMRI Gurgaon, endovascular specialist India, experienced vascular surgeon Gurgaon, limb salvage expert Gurgaon, AV fistula specialist India, vascular surgery director Fortis"
       />
 
       <link rel="canonical" href="https://www.drhimanshuverma.com/about" />
 
-      {/* <!-- Open Graph Meta Tags --> */}
+      {/* Open Graph Meta Tags */}
       <meta
         property="og:title"
-        content="Dr. Himanshu Verma | Vascular & Endovascular Surgeon in Gurgaon"
+        content="About Dr. Himanshu Verma | Vascular & Endovascular Surgeon, Fortis FMRI Gurgaon"
       />
+
       <meta
         property="og:description"
-        content="Dr. Himanshu Verma is a leading Vascular & Endovascular Surgeon in Gurgaon with 17+ years of experience, specializing in AV fistula, varicose veins, peripheral arterial disease (PAD) & limb salvage using advanced minimally invasive techniques."
+        content="Dr. Himanshu Verma is Director – Vascular & Endovascular Surgery at Fortis FMRI Gurgaon with 17+ years of experience in complex vascular interventions, limb salvage, AV fistula and minimally invasive endovascular procedures."
       />
+
       <meta
         property="og:image"
-        content="https://www.drhimanshuverma.com/_next/static/media/logo-removebg-preview.2f05ed1b.png"
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
       />
-      <meta property="og:url" content="https://www.drhimanshuverma.com/" />
-      <meta property="og:type" content="website" />
+
+      <meta property="og:url" content="https://www.drhimanshuverma.com/about" />
+
+      <meta property="og:type" content="profile" />
       <meta property="og:site_name" content="Dr Himanshu Verma" />
       <meta property="og:locale" content="en_IN" />
+
+      {/* twitter card */}
+
+      <meta name="twitter:card" content="summary_large_image" />
+
+      <meta
+        name="twitter:title"
+        content="About Dr. Himanshu Verma | Vascular & Endovascular Surgeon, Fortis FMRI Gurgaon"
+      />
+
+      <meta
+        name="twitter:description"
+        content="Director – Vascular & Endovascular Surgery at Fortis FMRI Gurgaon with 17+ years of experience in advanced vascular and limb-saving procedures."
+      />
+
+      <meta
+        name="twitter:image"
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
+      />
 
       <div>
         <Nav />

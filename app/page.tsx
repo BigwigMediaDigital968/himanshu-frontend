@@ -290,6 +290,11 @@ export default function Home() {
         content="Dr. Himanshu Verma is a leading Vascular & Endovascular Surgeon in Gurgaon with 17+ years’ experience, specializing in AV fistula, varicose veins, PAD & limb salvage."
       />
 
+      <meta
+        name="keywords"
+        content="vascular surgeon Gurgaon, endovascular surgeon Gurgaon, Dr Himanshu Verma, best vascular doctor Gurgaon, AV fistula surgeon India, varicose veins treatment Gurgaon, PAD treatment India, limb salvage specialist Gurgaon, dialysis access surgeon, vascular specialist Fortis FMRI"
+      />
+
       <link rel="canonical" href="https://www.drhimanshuverma.com/" />
 
       {/* <!-- Open Graph Meta Tags --> */}
@@ -303,36 +308,27 @@ export default function Home() {
       />
       <meta
         property="og:image"
-        content="https://www.drhimanshuverma.com/_next/static/media/logo-removebg-preview.2f05ed1b.png"
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
       />
       <meta property="og:url" content="https://www.drhimanshuverma.com/" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Dr Himanshu Verma" />
       <meta property="og:locale" content="en_IN" />
 
-      {/* <meta
-        name="keywords"
-        content="property dealer in gurugram, real estate agent in gurgaon, commercial property gurgaon, residential property gurgaon, buy property gurgaon, sell property gurgaon, crownpoint estates"
-      /> */}
-      {/* <meta name="author" content="Dr. Himanshu Verma" />
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow, max-image-preview:large" /> */}
-
-      {/* 
-
+      {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:title"
-        content="Property Dealer in Gurugram | Crownpoint Estates"
+        content="Dr. Himanshu Verma | Vascular & Endovascular Surgeon in Gurgaon"
       />
       <meta
         name="twitter:description"
-        content="Buy, sell, lease & rent premium residential and commercial properties in Gurugram and Delhi NCR with Crownpoint Estates."
+        content="Dr. Himanshu Verma is a leading Vascular & Endovascular Surgeon in Gurgaon with 17+ years of experience, specializing in AV fistula, varicose veins, peripheral arterial disease (PAD) & limb salvage using advanced minimally invasive techniques."
       />
       <meta
         name="twitter:image"
-        content="https://www.crownpointestates.com/og/crownpoint-estates-og.jpg"
-      /> */}
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
+      />
 
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -86,30 +86,66 @@ export default function Gallery() {
         name="title"
         content="Gallery | Vascular Workshops, Patient Care & Medical Events"
       />
+
       <meta
         name="description"
-        content="View images from vascular workshops, AV fistula care programs, medical conferences, and patient awareness initiatives led by Dr. Himanshu Verma."
+        content="Browse photos from vascular workshops, AV fistula care programs, medical conferences, patient awareness initiatives and community outreach activities led by Dr. Himanshu Verma."
+      />
+
+      <meta
+        name="keywords"
+        content="vascular workshop gallery, AV fistula care events, vascular surgery conference photos, patient awareness program gallery, medical workshop images India, vascular health events Gurgaon, Dr Himanshu Verma gallery, vascular awareness initiatives"
       />
 
       <link rel="canonical" href="https://www.drhimanshuverma.com/gallery" />
 
-      {/* <!-- Open Graph Meta Tags --> */}
+      {/* Open Graph Meta Tags */}
       <meta
         property="og:title"
-        content="Dr. Himanshu Verma | Vascular & Endovascular Surgeon in Gurgaon"
+        content="Gallery | Vascular Workshops & Medical Events by Dr. Himanshu Verma"
       />
+
       <meta
         property="og:description"
-        content="Dr. Himanshu Verma is a leading Vascular & Endovascular Surgeon in Gurgaon with 17+ years of experience, specializing in AV fistula, varicose veins, peripheral arterial disease (PAD) & limb salvage using advanced minimally invasive techniques."
+        content="View images from vascular workshops, AV fistula awareness programs, medical conferences and patient education initiatives."
       />
+
       <meta
         property="og:image"
-        content="https://www.drhimanshuverma.com/_next/static/media/logo-removebg-preview.2f05ed1b.png"
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
       />
-      <meta property="og:url" content="https://www.drhimanshuverma.com/" />
+
+      <meta
+        property="og:url"
+        content="https://www.drhimanshuverma.com/gallery"
+      />
+
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Dr Himanshu Verma" />
       <meta property="og:locale" content="en_IN" />
+
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+
+      <meta
+        name="twitter:title"
+        content="Gallery | Vascular Workshops, Patient Care & Medical Events"
+      />
+
+      <meta
+        name="twitter:description"
+        content="Explore photo highlights from vascular workshops, AV fistula programs, medical conferences and patient awareness events."
+      />
+
+      <meta
+        name="twitter:image"
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
+      />
+
+      <meta
+        name="twitter:url"
+        content="https://www.drhimanshuverma.com/gallery"
+      />
 
       <Nav />
 

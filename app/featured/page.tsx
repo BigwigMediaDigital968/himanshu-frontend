@@ -72,30 +72,66 @@ export default function Featured() {
         name="title"
         content="Dr. Himanshu Verma in Media | Awards, Features & Expert Talks"
       />
+
       <meta
         name="description"
-        content="Explore media features, interviews, recognitions, and expert appearances highlighting contributions to vascular and endovascular surgery."
+        content="Explore media coverage, awards, interviews, conference appearances and recognitions highlighting Dr. Himanshu Verma’s contributions to vascular and endovascular surgery."
+      />
+
+      <meta
+        name="keywords"
+        content="Dr Himanshu Verma media coverage, vascular surgeon awards India, vascular expert interviews, Fortis vascular surgeon recognition, vascular surgery conferences India, expert vascular talks, vascular surgeon achievements, medical expert features India"
       />
 
       <link rel="canonical" href="https://www.drhimanshuverma.com/featured" />
 
-      {/* <!-- Open Graph Meta Tags --> */}
+      {/* Open Graph Meta Tags */}
       <meta
         property="og:title"
-        content="Dr. Himanshu Verma | Vascular & Endovascular Surgeon in Gurgaon"
+        content="Dr. Himanshu Verma in Media | Awards & Expert Features"
       />
+
       <meta
         property="og:description"
-        content="Dr. Himanshu Verma is a leading Vascular & Endovascular Surgeon in Gurgaon with 17+ years of experience, specializing in AV fistula, varicose veins, peripheral arterial disease (PAD) & limb salvage using advanced minimally invasive techniques."
+        content="Discover awards, expert interviews, media features and professional recognitions of Dr. Himanshu Verma, Vascular & Endovascular Surgeon."
       />
+
       <meta
         property="og:image"
-        content="https://www.drhimanshuverma.com/_next/static/media/logo-removebg-preview.2f05ed1b.png"
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
       />
-      <meta property="og:url" content="https://www.drhimanshuverma.com/" />
-      <meta property="og:type" content="website" />
+
+      <meta
+        property="og:url"
+        content="https://www.drhimanshuverma.com/featured"
+      />
+
+      <meta property="og:type" content="profile" />
       <meta property="og:site_name" content="Dr Himanshu Verma" />
       <meta property="og:locale" content="en_IN" />
+
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+
+      <meta
+        name="twitter:title"
+        content="Dr. Himanshu Verma in Media | Awards & Expert Talks"
+      />
+
+      <meta
+        name="twitter:description"
+        content="Media coverage, interviews, recognitions and conference appearances of Dr. Himanshu Verma, Vascular & Endovascular Surgeon."
+      />
+
+      <meta
+        name="twitter:image"
+        content="https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg"
+      />
+
+      <meta
+        name="twitter:url"
+        content="https://www.drhimanshuverma.com/featured"
+      />
 
       <div>
         <Nav />

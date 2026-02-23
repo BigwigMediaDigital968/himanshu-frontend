@@ -12,7 +12,7 @@ export default function ChronicVenousContent() {
   const faqs = [
     {
       q: "How to reverse chronic venous insufficiency?",
-      a: "Chronic Venous Insufficiency cannot always be fully reversed, but early-stage CVI can significantly improve with compression therapy, exercise, and proper vein care.",
+      a: "Chronic Venous Insufficiency cannot always be fully reversed, but early-stage Chronic Venous Insufficiency can improve with compression, exercise, and proper vein care.",
     },
     {
       q: "What is the root cause of venous insufficiency?",
@@ -23,7 +23,7 @@ export default function ChronicVenousContent() {
       a: "Early signs of Chronic Venous Insufficiency include leg heaviness, mild swelling, aching, and visible veins.",
     },
     {
-      q: "What exercises should be avoided?",
+      q: "What exercises should be avoided with venous insufficiency?",
       a: "High-impact activities that strain the legs for long periods may worsen Chronic Venous Insufficiency. Low-impact exercises like walking are usually better.",
     },
     {
@@ -31,8 +31,8 @@ export default function ChronicVenousContent() {
       a: "Yes, untreated Chronic Venous Insufficiency can reduce skin nutrition and cause venous ulcers over time.",
     },
     {
-      q: "When should I see a doctor?",
-      a: "If swelling, pain, or skin changes persist, it is wise to consult early before Chronic Venous Insufficiency progresses",
+      q: "When should I see a doctor for chronic venous insufficiency?",
+      a: "If swelling, pain, or skin changes persist, it is wise to consult early before Chronic Venous Insufficiency progresses.",
     },
   ];
 
@@ -64,7 +64,7 @@ export default function ChronicVenousContent() {
         </p>
       </div>
 
-      <div className="h-px bg-gray-100 my-10" />
+      <div className="h-px bg-gray-300 my-10" />
 
       {/* HOW IT AFFECTS BODY */}
       <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
@@ -99,7 +99,7 @@ export default function ChronicVenousContent() {
         thereby decreasing one's overall quality of life.
       </p>
 
-      <div className="h-px bg-gray-100 my-10" />
+      <div className="h-px bg-gray-300 my-10" />
 
       {/* SYMPTOMS */}
       <h2 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
@@ -135,7 +135,7 @@ export default function ChronicVenousContent() {
         slow down the progression of your disease.
       </p>
 
-      <div className="h-px bg-gray-100 mb-10" />
+      <div className="h-px bg-gray-300 mb-10" />
 
       {/* CAUSES */}
       <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
@@ -166,7 +166,7 @@ export default function ChronicVenousContent() {
         the provision of more personalized treatment.
       </p>
 
-      <div className="h-px bg-gray-100 my-10" />
+      <div className="h-px bg-gray-300 my-10" />
 
       {/* STAGES */}
       <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
@@ -179,10 +179,10 @@ export default function ChronicVenousContent() {
 
       <ul className="space-y-3 my-5">
         {[
-          "Stage 1 – Swelling and leg ache",
-          "Stage 2 – Prominent varicose veins",
-          "Stage 3 – Skin that becomes thicker and changes in color;",
-          "Stage 4 – Leg ulcers that do not heal",
+          "Swelling and leg ache",
+          "Prominent varicose veins",
+          "Skin that becomes thicker and changes in color;",
+          "Leg ulcers that do not heal",
         ].map((item, i) => (
           <li key={i} className="flex items-start gap-3">
             <span className="mt-1.5 h-2 w-2 rounded-full bg-[var(--med-primary)]" />
@@ -196,7 +196,7 @@ export default function ChronicVenousContent() {
         easily treated when you seek medical treatment early.
       </p>
 
-      <div className="h-px bg-gray-100 my-10" />
+      <div className="h-px bg-gray-300 my-10" />
 
       {/* LIFESTYLE & DIAGNOSIS */}
       <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
@@ -229,7 +229,7 @@ export default function ChronicVenousContent() {
         Making incremental changes can lead to meaningful results.
       </p>
 
-      <div className="h-px bg-gray-100 my-10" />
+      <div className="h-px bg-gray-300 my-10" />
 
       {/* TREATMENT */}
       <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
@@ -285,7 +285,7 @@ export default function ChronicVenousContent() {
         of developing complications.
       </p>
 
-      <div className="h-px bg-gray-100 my-10" />
+      <div className="h-px bg-gray-300 my-10" />
 
       {/* FAQ SECTION */}
       <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-6">

@@ -77,7 +77,7 @@ export default function VaricoseVeinsContent() {
         </p>
       </div>
 
-      <div className="h-px bg-gray-100 mb-10" />
+      <div className="h-px bg-gray-300 mb-10" />
 
       {/* SYMPTOMS & CAUSES */}
       <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
@@ -93,6 +93,11 @@ export default function VaricoseVeinsContent() {
       <h4 className="text-lg font-semibold text-gray-800 mb-4">
         What Are the Symptoms of Varicose Veins?
       </h4>
+
+      <p className="text-gray-700 mb-5">
+        Varicose veins can present themselves in various ways. Common symptoms
+        include:
+      </p>
 
       <ul className="space-y-3 mb-6">
         {[
@@ -122,6 +127,10 @@ export default function VaricoseVeinsContent() {
         What Causes Varicose Veins?
       </h4>
 
+      <p className="text-gray-700 mb-5">
+        Reasons for the development of varicose veins:
+      </p>
+
       <ul className="space-y-3 mb-6">
         {[
           "Valve weakness or damaged veins, causing blood pooling",
@@ -144,7 +153,7 @@ export default function VaricoseVeinsContent() {
         to happier, healthier veins today!
       </p>
 
-      <div className="h-px bg-gray-100 mb-10" />
+      <div className="h-px bg-gray-300 mb-10" />
 
       {/* COMPLICATIONS */}
       <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
@@ -170,14 +179,17 @@ export default function VaricoseVeinsContent() {
         ))}
       </ul>
 
-      <p className="text-gray-700 leading-relaxed mb-10">
+      <p className="text-gray-700 leading-relaxed mb-5">
         Early referral and interventions will prevent these complications. Dr.
         Himanshu provides individualized care for patients experiencing varicose
-        veins, chronic venous disorders, and lymphatic issues. Book an
-        appointment now to protect your long-term leg health.
+        veins, chronic venous disorders, and lymphatic issues.
       </p>
 
-      <div className="h-px bg-gray-100 mb-10" />
+      <p className="font-medium text-[var(--med-primary)]">
+        Book an appointment now to protect your long-term leg health.
+      </p>
+
+      <div className="h-px bg-gray-300 my-10" />
 
       {/* TREATMENT */}
       <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
@@ -191,26 +203,79 @@ export default function VaricoseVeinsContent() {
         alleviate pain, and prevent complications.
       </p>
 
-      <ul className="space-y-3 mb-10">
-        {[
-          "Endovenous Laser Treatment (EVLT) for Varicose Veins",
-          "Medical Glue Treatment (Cyanoacrylate Closure)",
-          "Foam Sclerotherapy",
-          "Microphlebectomy / Stab Phlebectomy",
-          "Iliac Vein Stenting",
-          "Deep Vein Thrombolysis",
-          "DVT Mechanical Thrombectomy",
-          "IVC Filter Insertion & Retrieval",
-          "Pulmonary Embolism Suction Thrombectomy",
-        ].map((item, i) => (
-          <li key={i} className="flex items-start gap-3">
-            <span className="mt-1.5 h-2 w-2 rounded-full bg-[var(--med-primary)]" />
-            <span className="text-gray-700">{item}</span>
-          </li>
-        ))}
-      </ul>
+      <p className="font-bold">Common treatment approaches include:</p>
 
-      <div className="h-px bg-gray-100 mb-10" />
+      <p className="text-gray-700 my-5">
+        <b className="text-[var(--med-primary)]">
+          Endovenous Laser Treatment (EVLT) for Varicose Veins –{" "}
+        </b>{" "}
+        Endovenous Laser Treatment (EVLT) is among the best procedures for
+        treating varicose veins.
+      </p>
+
+      <p className="text-gray-700 my-5">
+        <b className="text-[var(--med-primary)]">
+          Medical Glue Treatment (Cyanoacrylate Closure) –{" "}
+        </b>{" "}
+        This involves medical glue instead of compression stockings to close
+        varicose veins.
+      </p>
+
+      <p className="text-gray-700 my-5">
+        <b className="text-[var(--med-primary)]">Foam Sclerotherapy – </b> A
+        foam solution is injected into the problematic veins to shrink and
+        eventually get rid of them.
+      </p>
+
+      <p className="text-gray-700 my-5">
+        <b className="text-[var(--med-primary)]">
+          Microphlebectomy / Stab Phlebectomy –{" "}
+        </b>{" "}
+        Slits are made to remove superficial veins safely and effectively.
+      </p>
+
+      <p className="text-gray-700 my-5">
+        <b className="text-[var(--med-primary)]">Iliac Vein Stenting – </b> May
+        help reduce venous hypertension by opening narrowed or compressed veins.
+      </p>
+
+      <p className="text-gray-700 my-5">
+        <b className="text-[var(--med-primary)]">Deep Vein Thrombolysis – </b>{" "}
+        Destroys dangerous blood clots in the deep veins.
+      </p>
+
+      <p className="text-gray-700 my-5">
+        <b className="text-[var(--med-primary)]">
+          DVT Mechanical Thrombectomy –{" "}
+        </b>{" "}
+        Extracts clots from deep veins with the help of dedicated devices.
+      </p>
+
+      <p className="text-gray-700 my-5">
+        <b className="text-[var(--med-primary)]">
+          IVC Filter Insertion & Retrieval{" "}
+        </b>
+        The insertion and removal of the IVC filter prevent clots from reaching
+        the lungs.
+      </p>
+
+      <p className="text-gray-700 my-5">
+        <b className="text-[var(--med-primary)]">
+          Pulmonary Embolism Suction Thrombectomy –{" "}
+        </b>{" "}
+        A procedure to take out the clot from the lung and ultimately save life.
+      </p>
+
+      <p className="text-gray-700">
+        Early treatment of this disease can prevent other serious problems, such
+        as ulcers and blood clots, or chronic venous insufficiency.
+        Personalized care makes it possible to utilize the right option for your
+        symptoms and vein condition. And if your legs feel heavy, swollen, and
+        painful, then contact Dr Himanshu today to find the best course of
+        treatment for your veins.
+      </p>
+
+      <div className="h-px bg-gray-300 my-10" />
 
       {/* FAQ */}
       <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-6">
