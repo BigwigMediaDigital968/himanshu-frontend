@@ -24,8 +24,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Himanshu Verma",
-  description: "Vascular & Endovascular Surgeon",
+  // title: "Himanshu Verma",
+  // description: "Vascular & Endovascular Surgeon",
   verification: {
     google: "QsEIkRNuuaYqyxrpzeMswOHuFu1tiZAWjXhvtK8R3LI",
   },
