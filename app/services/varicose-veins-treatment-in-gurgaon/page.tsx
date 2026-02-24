@@ -3,7 +3,7 @@ import VaricoseVeinsContent from "./VaricoseVeinsContent";
 import { Metadata } from "next";
 
 const SITE_URL = "https://www.drhimanshuverma.com";
-const PAGE_URL = `${SITE_URL}/varicose-veins-treatment-in-gurgaon`;
+const PAGE_URL = `${SITE_URL}/services/varicose-veins-treatment-in-gurgaon`;
 const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
