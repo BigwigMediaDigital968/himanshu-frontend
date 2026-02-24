@@ -49,7 +49,7 @@ export default function ServiceLayout3({
 
               <div className="flex flex-col gap-3">
                 <Link
-                  href="/services/varicose-veins-treatment"
+                  href="/services/varicose-veins-treatment-in-gurgaon"
                   className={`px-5 py-4 rounded-xl transition-all duration-300 ${
                     active === "varicose"
                       ? "bg-[var(--med-primary)] text-white shadow-lg"
@@ -60,7 +60,7 @@ export default function ServiceLayout3({
                 </Link>
 
                 <Link
-                  href="/services/chronic-venous-insufficiency"
+                  href="/services/chronic-venous-insufficiency-treatment-in-gurgaon"
                   className={`px-5 py-4 rounded-xl transition-all duration-300 ${
                     active === "chronic"
                       ? "bg-[var(--med-primary)] text-white shadow-lg"
@@ -71,7 +71,7 @@ export default function ServiceLayout3({
                 </Link>
 
                 <Link
-                  href="/services/lymphatic-care"
+                  href="/services/lymphatic-care-treatment-in-gurgaon"
                   className={`px-5 py-4 rounded-xl transition-all duration-300 ${
                     active === "lymphatic"
                       ? "bg-[var(--med-primary)] text-white shadow-lg"

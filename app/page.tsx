@@ -78,19 +78,19 @@ const services = [
     title: "Varicose Veins, Chronic Venous Disorders & Lymphatic Care",
     desc: "Comprehensive management of varicose veins, venous insufficiency, and lymphatic disorders using minimally invasive techniques.",
     icon: Droplets,
-    link: "/services/varicose-veins-treatment",
+    link: "/services/varicose-veins-treatment-in-gurgaon",
   },
   {
     title: "Pelvic Venous Disorders & Gonadal Vein Disease",
     desc: "Advanced diagnosis and treatment of pelvic congestion syndrome and gonadal vein disorders causing chronic pelvic pain.",
     icon: HeartPulse,
-    link: "/services/pelvic-venous-disorder",
+    link: "/services/pelvic-venous-disorder-treatment-in-gurgaon",
   },
   {
     title: "AV Fistula, Dialysis Access & Central Venous Care",
     desc: "Creation, maintenance, and salvage of dialysis access including AV fistulas, grafts, and central venous interventions.",
     icon: Syringe,
-    link: "/services/av-fistula",
+    link: "/services/av-fistula-treatment-in-gurgaon",
   },
   {
     title: "Peripheral Artery Disease (PAD) & Advanced Limb Salvage",

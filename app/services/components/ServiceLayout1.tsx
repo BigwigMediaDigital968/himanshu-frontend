@@ -49,7 +49,7 @@ export default function ServiceLayout1({
 
               <div className="flex flex-col gap-3">
                 <Link
-                  href="/services/pelvic-venous-disorder"
+                  href="/services/pelvic-venous-disorder-treatment-in-gurgaon"
                   className={`px-5 py-4 rounded-xl transition-all duration-300 ${
                     active === "pelvic"
                       ? "bg-[var(--med-primary)] text-white shadow-lg"
@@ -60,7 +60,7 @@ export default function ServiceLayout1({
                 </Link>
 
                 <Link
-                  href="/services/gonadal-vein-disease"
+                  href="/services/gonadal-vein-disease-treatment-in-gurgaon"
                   className={`px-5 py-4 rounded-xl transition-all duration-300 ${
                     active === "gonadal"
                       ? "bg-[var(--med-primary)] text-white shadow-lg"

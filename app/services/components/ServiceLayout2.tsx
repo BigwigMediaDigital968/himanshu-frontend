@@ -49,7 +49,7 @@ export default function ServiceLayout1({
 
               <div className="flex flex-col gap-3">
                 <Link
-                  href="/services/av-fistula"
+                  href="/services/av-fistula-treatment-in-gurgaon"
                   className={`px-5 py-4 rounded-xl transition-all duration-300 ${
                     active === "avfistula"
                       ? "bg-[var(--med-primary)] text-white shadow-lg"
@@ -60,7 +60,7 @@ export default function ServiceLayout1({
                 </Link>
 
                 <Link
-                  href="/services/dialysis-access"
+                  href="/services/dialysis-access-treatment-in-gurgaon"
                   className={`px-5 py-4 rounded-xl transition-all duration-300 ${
                     active === "dialysisaccess"
                       ? "bg-[var(--med-primary)] text-white shadow-lg"
@@ -71,7 +71,7 @@ export default function ServiceLayout1({
                 </Link>
 
                 <Link
-                  href="/services/central-venous-care"
+                  href="/services/central-venous-care-treatment-in-gurgaon"
                   className={`px-5 py-4 rounded-xl transition-all duration-300 ${
                     active === "venouscare"
                       ? "bg-[var(--med-primary)] text-white shadow-lg"

@@ -252,6 +252,7 @@ export default function Services() {
               <ServiceCard
                 id="varicose-veins"
                 title="Varicose Veins, Chronic Venous Disorders & Lymphatic Care"
+                link="/services/varicose-veins-treatment-in-gurgaon"
                 items={[
                   "Varicose veins and chronic venous insufficiency",
                   "Superficial, deep, and perforator venous reflux",
@@ -276,7 +277,7 @@ export default function Services() {
               <ServiceCard
                 id="pelvic-venous-disorders"
                 title="Pelvic Venous Disorders & Gonadal Vein Disease"
-                link="/services/pelvic-venous-disorder"
+                link="/services/pelvic-venous-disorder-treatment-in-gurgaon"
                 items={[
                   "Pelvic Congestion Syndrome (PCS) due to pelvic venous reflux",
                   "Vulval, vaginal, and perineal varicosities",
@@ -296,7 +297,7 @@ export default function Services() {
               <ServiceCard
                 id="dialysis-access"
                 title="AV Fistula, Dialysis Access & Central Venous Care"
-                link="/services/av-dialysis-central-care"
+                link="/services/av-fistula-treatment-in-gurgaon"
                 items={[
                   "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
                   "Balloon-assisted maturation (BAM angioplasty)",
