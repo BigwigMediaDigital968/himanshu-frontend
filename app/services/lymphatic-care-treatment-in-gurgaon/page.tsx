@@ -3,7 +3,7 @@ import LymphaticCareContent from "./LymphaticCareContent";
 import { Metadata } from "next";
 
 const PAGE_URL =
-  "https://www.drhimanshuverma.com/services/lymphatic-care-lymphedema-treatment-in-gurgaon";
+  "https://www.drhimanshuverma.com/services/lymphatic-care-treatment-in-gurgaon";
 
 const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
