@@ -7,7 +7,6 @@ import Nav from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import ButtonFill from "@/app/components/Button";
 import PopupForm from "@/app/components/Popup";
-
 import heroImg from "../../assets/avfcare/red-header.png";
 import selfav from "../../assets/avfcare/Self-Examinations-involves-placing-stethoscope-1536x864.webp";
 import Dietary from "../../assets/avfcare/Dietary-Modification-in-CKD-1536x819.webp";
@@ -129,9 +128,25 @@ export default function AVFCareWorkshop() {
 
       <Nav />
 
-      {/* HERO SECTION */}
       <section className="relative w-full h-[85vh] min-h-[600px] overflow-hidden">
-        {/* Background Image */}
+
+        {/* Background Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/avf-care-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+      </section>
+
+      {/* HERO SECTION */}
+      {/* <section className="relative w-full h-[85vh] min-h-[600px] overflow-hidden">
+       
         <Image
           src={heroImg}
           alt="AV Fistula Care Workshop"
@@ -140,10 +155,10 @@ export default function AVFCareWorkshop() {
           className="object-cover lg:block hidden"
         />
 
-        {/* Red Overlay */}
+   
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--med-primary)]/20 via-[var(--med-primary)]/5 to-transparent" />
 
-        {/* Content */}
+    
         <div className="relative z-10 h-full flex items-center">
           <div className="w-11/12 md:w-5/6 mx-auto">
             <div className="max-w-xl">
@@ -155,7 +170,6 @@ export default function AVFCareWorkshop() {
                 A Lifeline for a Lifetime
               </h1>
 
-              {/* Accent line */}
               <div className="w-16 h-1 bg-[var(--med-primary)] rounded-full mb-6" />
 
               <p className="text-black/80 leading-relaxed mb-6 text-justify">
@@ -185,7 +199,7 @@ export default function AVFCareWorkshop() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="relative py-32 bg-[var(--med-light)]">
         <div className="w-11/12 md:w-5/6 mx-auto space-y-32">
