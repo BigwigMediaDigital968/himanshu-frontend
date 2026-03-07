@@ -244,6 +244,79 @@ const faqSchema = {
   })),
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalOrganization",
+      "@id": "https://www.drhimanshuverma.com/#organization",
+      name: "Dr Himanshu Verma Vascular Clinic",
+      url: "https://www.drhimanshuverma.com/",
+      logo: "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg",
+      image:
+        "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg",
+      telephone: "+91 8826833598",
+      email: "varenyamvascular@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress:
+          "Fortis Memorial Research Centre, Opposite HUDA City Centre, Sector 44",
+        addressLocality: "Gurugram",
+        addressRegion: "Haryana",
+        postalCode: "122003",
+        addressCountry: "IN",
+      },
+      areaServed: [
+        {
+          "@type": "City",
+          name: "Gurugram",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Delhi NCR",
+        },
+      ],
+      department: {
+        "@id": "https://www.drhimanshuverma.com/#physician",
+      },
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://www.drhimanshuverma.com/#physician",
+      name: "Dr Himanshu Verma",
+      url: "https://www.drhimanshuverma.com/",
+      image:
+        "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg",
+      jobTitle: "Vascular Surgeon",
+      medicalSpecialty: "VascularSurgery",
+      worksFor: {
+        "@id": "https://www.drhimanshuverma.com/#organization",
+      },
+      affiliation: {
+        "@type": "Hospital",
+        name: "Fortis Memorial Research Institute",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Sector 44",
+          addressLocality: "Gurugram",
+          addressRegion: "Haryana",
+          postalCode: "122003",
+          addressCountry: "IN",
+        },
+      },
+      knowsAbout: [
+        "Varicose Veins Treatment",
+        "Peripheral Artery Disease Treatment",
+        "AV Fistula Surgery",
+        "Dialysis Access Management",
+        "Pelvic Congestion Syndrome Treatment",
+        "Deep Vein Thrombosis Treatment",
+        "Endovascular Treatment",
+      ],
+    },
+  ],
+};
+
 export default function Home() {
   const [openPopup, setOpenPopup] = useState(false);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -276,8 +349,18 @@ export default function Home() {
           __html: JSON.stringify(faqSchema),
         }}
       />
-      {/* SEO Meta Data */}
 
+      {/* Organization Schema Markup */}
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema),
+        }}
+      />
+
+      {/* SEO Meta Data */}
       <title>
         Dr. Himanshu Verma | Vascular & Endovascular Surgeon in Gurgaon
       </title>
@@ -542,11 +625,10 @@ export default function Home() {
       transition-all duration-300
       border border-[var(--med-border)]
       flex flex-col justify-between
-      ${
-        isAlt
-          ? "bg-[var(--med-primary)] text-white"
-          : "bg-[var(--med-light)] text-[var(--med-text)]"
-      }
+      ${isAlt
+                      ? "bg-[var(--med-primary)] text-white"
+                      : "bg-[var(--med-light)] text-[var(--med-text)]"
+                    }
       hover:-translate-y-2 hover:shadow-xl
     `}
                 >
@@ -556,11 +638,10 @@ export default function Home() {
                       className={`
           w-16 h-16 mx-auto mb-6 rounded-full
           flex items-center justify-center
-          ${
-            isAlt
-              ? "bg-white/20 text-white"
-              : "bg-[var(--med-primary)] text-white"
-          }
+          ${isAlt
+                          ? "bg-white/20 text-white"
+                          : "bg-[var(--med-primary)] text-white"
+                        }
         `}
                     >
                       <Icon size={32} />
@@ -573,9 +654,8 @@ export default function Home() {
 
                     {/* DESCRIPTION */}
                     <p
-                      className={`text-sm leading-relaxed ${
-                        isAlt ? "text-white/90" : "text-[var(--med-text)]/70"
-                      }`}
+                      className={`text-sm leading-relaxed ${isAlt ? "text-white/90" : "text-[var(--med-text)]/70"
+                        }`}
                     >
                       {service.desc}
                     </p>
@@ -673,11 +753,10 @@ export default function Home() {
     transition-all duration-500 ease-out
     flex flex-col justify-end
 
-    ${
-      activeIndex === index
-        ? "translate-y-0 opacity-100"
-        : "translate-y-full opacity-0"
-    }
+    ${activeIndex === index
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-full opacity-0"
+                    }
 
     lg:translate-y-full
     lg:opacity-100
@@ -903,16 +982,14 @@ export default function Home() {
                   {faq.q}
                 </span>
                 <ChevronDown
-                  className={`transition-transform duration-300 ${
-                    openIndex === i ? "rotate-180" : ""
-                  }`}
+                  className={`transition-transform duration-300 ${openIndex === i ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
               <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  openIndex === i ? "max-h-72 opacity-100" : "max-h-0 opacity-0"
-                }`}
+                className={`transition-all duration-500 ease-in-out overflow-hidden ${openIndex === i ? "max-h-72 opacity-100" : "max-h-0 opacity-0"
+                  }`}
               >
                 <div className="px-5 pb-5 text-[var(--med-text)]/80 leading-relaxed">
                   {faq.a}
