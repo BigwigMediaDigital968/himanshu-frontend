@@ -625,10 +625,11 @@ export default function Home() {
       transition-all duration-300
       border border-[var(--med-border)]
       flex flex-col justify-between
-      ${isAlt
-                      ? "bg-[var(--med-primary)] text-white"
-                      : "bg-[var(--med-light)] text-[var(--med-text)]"
-                    }
+      ${
+        isAlt
+          ? "bg-[var(--med-primary)] text-white"
+          : "bg-[var(--med-light)] text-[var(--med-text)]"
+      }
       hover:-translate-y-2 hover:shadow-xl
     `}
                 >
@@ -638,10 +639,11 @@ export default function Home() {
                       className={`
           w-16 h-16 mx-auto mb-6 rounded-full
           flex items-center justify-center
-          ${isAlt
-                          ? "bg-white/20 text-white"
-                          : "bg-[var(--med-primary)] text-white"
-                        }
+          ${
+            isAlt
+              ? "bg-white/20 text-white"
+              : "bg-[var(--med-primary)] text-white"
+          }
         `}
                     >
                       <Icon size={32} />
@@ -654,8 +656,9 @@ export default function Home() {
 
                     {/* DESCRIPTION */}
                     <p
-                      className={`text-sm leading-relaxed ${isAlt ? "text-white/90" : "text-[var(--med-text)]/70"
-                        }`}
+                      className={`text-sm leading-relaxed ${
+                        isAlt ? "text-white/90" : "text-[var(--med-text)]/70"
+                      }`}
                     >
                       {service.desc}
                     </p>
@@ -753,10 +756,11 @@ export default function Home() {
     transition-all duration-500 ease-out
     flex flex-col justify-end
 
-    ${activeIndex === index
-                      ? "translate-y-0 opacity-100"
-                      : "translate-y-full opacity-0"
-                    }
+    ${
+      activeIndex === index
+        ? "translate-y-0 opacity-100"
+        : "translate-y-full opacity-0"
+    }
 
     lg:translate-y-full
     lg:opacity-100
@@ -924,7 +928,10 @@ export default function Home() {
                 surgical techniques, and post-procedure care. Designed for
                 clinicians and healthcare professionals.{" "}
               </p>{" "}
-              <Link href="/workshop/avf-care">
+              <Link
+                href="https://avfcareworkshop.com/workshops/"
+                rel="nofollow noopener noreferrer"
+              >
                 {" "}
                 <ButtonFill text="Explore Workshop" />{" "}
               </Link>{" "}
@@ -945,7 +952,10 @@ export default function Home() {
                 care, innovations, and real-world medical insights from industry
                 professionals.{" "}
               </p>{" "}
-              <Link href="/podcast">
+              <Link
+                href="https://www.youtube.com/@doctalkshow"
+                rel="nofollow noopener noreferrer"
+              >
                 {" "}
                 <ButtonFill text="Listen Now" />{" "}
               </Link>{" "}
@@ -982,14 +992,16 @@ export default function Home() {
                   {faq.q}
                 </span>
                 <ChevronDown
-                  className={`transition-transform duration-300 ${openIndex === i ? "rotate-180" : ""
-                    }`}
+                  className={`transition-transform duration-300 ${
+                    openIndex === i ? "rotate-180" : ""
+                  }`}
                 />
               </button>
 
               <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden ${openIndex === i ? "max-h-72 opacity-100" : "max-h-0 opacity-0"
-                  }`}
+                className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                  openIndex === i ? "max-h-72 opacity-100" : "max-h-0 opacity-0"
+                }`}
               >
                 <div className="px-5 pb-5 text-[var(--med-text)]/80 leading-relaxed">
                   {faq.a}
