@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pelvic Venous Disorders Treatment in Gurgaon | Dr. Himanshu Verma",
     description:
-      "Expert minimally invasive treatment for Pelvic Congestion Syndrome (PCS) and pelvic venous disorders in Gurgaon.",
+      "Get expert Pelvic Venous Disorders Treatment in Gurgaon by Dr. Himanshu Verma. Advanced diagnosis and minimally invasive care for pelvic congestion syndrome (PCS).",
     url: PAGE_URL,
     siteName: "Dr. Himanshu Verma",
     images: [
@@ -75,42 +75,42 @@ const faqSchema = {
       name: "How are pelvic venous disorders diagnosed?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pelvic venous disorders are diagnosed through physical examination and imaging tests such as ultrasound, CT scan, MRI, or venography. Patients experiencing symptoms can consult a vascular specialist for pelvic venous disorder treatment in Gurgaon for accurate diagnosis and care."
-      }
+        text: "Pelvic venous disorders are diagnosed through physical examination and imaging tests such as ultrasound, CT scan, MRI, or venography. Patients experiencing symptoms can consult a vascular specialist for pelvic venous disorder treatment in Gurgaon for accurate diagnosis and care.",
+      },
     },
     {
       "@type": "Question",
       name: "What causes pelvic venous disorders?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pelvic venous disorders are usually caused by weakened vein valves, hormonal changes, genetic factors, or prolonged pressure on the pelvic veins."
-      }
+        text: "Pelvic venous disorders are usually caused by weakened vein valves, hormonal changes, genetic factors, or prolonged pressure on the pelvic veins.",
+      },
     },
     {
       "@type": "Question",
       name: "Can pelvic venous disorders be prevented?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Maintaining a healthy lifestyle, engaging in regular exercise, and avoiding prolonged sitting or standing may help reduce the risk of pelvic venous disorders."
-      }
+        text: "Maintaining a healthy lifestyle, engaging in regular exercise, and avoiding prolonged sitting or standing may help reduce the risk of pelvic venous disorders.",
+      },
     },
     {
       "@type": "Question",
       name: "Are pelvic venous disorders painful?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, pelvic venous disorders can cause symptoms ranging from mild discomfort to severe pelvic pain, especially after prolonged standing."
-      }
+        text: "Yes, pelvic venous disorders can cause symptoms ranging from mild discomfort to severe pelvic pain, especially after prolonged standing.",
+      },
     },
     {
       "@type": "Question",
       name: "Is treatment for pelvic venous disorders effective?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. With early diagnosis and appropriate medical intervention, pelvic venous disorder treatment can significantly reduce symptoms and improve quality of life."
-      }
-    }
-  ]
+        text: "Yes. With early diagnosis and appropriate medical intervention, pelvic venous disorder treatment can significantly reduce symptoms and improve quality of life.",
+      },
+    },
+  ],
 };
 
 const medicalSchema = {
@@ -130,9 +130,9 @@ const medicalSchema = {
         addressLocality: "Gurugram",
         addressRegion: "Haryana",
         postalCode: "122003",
-        addressCountry: "IN"
+        addressCountry: "IN",
       },
-      areaServed: ["Gurugram", "Delhi NCR"]
+      areaServed: ["Gurugram", "Delhi NCR"],
     },
     {
       "@type": "Physician",
@@ -141,8 +141,8 @@ const medicalSchema = {
       jobTitle: "Vascular Surgeon",
       medicalSpecialty: "VascularSurgery",
       worksFor: {
-        "@id": "https://www.drhimanshuverma.com/#clinic"
-      }
+        "@id": "https://www.drhimanshuverma.com/#clinic",
+      },
     },
     {
       "@type": "MedicalProcedure",
@@ -152,16 +152,15 @@ const medicalSchema = {
       howPerformed:
         "Treatment includes pelvic vein embolization under imaging guidance to relieve chronic pelvic pain.",
       provider: {
-        "@id": "https://www.drhimanshuverma.com/#doctor"
-      }
-    }
-  ]
+        "@id": "https://www.drhimanshuverma.com/#doctor",
+      },
+    },
+  ],
 };
 
 export default function PelvicVenousDisorder() {
   return (
     <>
-
       {/* Medical Schema */}
       <script
         type="application/ld+json"

@@ -12,35 +12,84 @@ export default function VaricoseVeinsContent() {
   const faqs = [
     {
       q: "What are the main causes of varicose veins?",
-      a: "Weak vein valves, genetics, prolonged standing, aging, pregnancy, and excess weight are the most common causes.",
+      a: (
+        <p>
+          Weak vein valves, genetics, prolonged standing, aging, pregnancy, and
+          excess weight are the most common causes. These conditions often
+          require professional evaluation and{" "}
+          <b>varicose veins treatment in Gurgaon.</b>
+        </p>
+      ),
     },
     {
       q: "Are varicose veins a worry?",
-      a: "They can become a concern if pain, swelling, skin changes, or ulcers develop. Early evaluation helps prevent complications.",
+      a: (
+        <p>
+          They can become a concern if pain, swelling, skin changes, or ulcers
+          develop. Early evaluation and{" "}
+          <b>varicose veins treatment in Gurgaon</b> help prevent complications.
+        </p>
+      ),
     },
     {
       q: "Is walking good for varicose veins?",
-      a: "Yes. Walking improves blood circulation in the legs and reduces pressure in the veins, making it one of the best daily habits for vein health.",
+      a: (
+        <p>
+          Yes. Walking improves blood circulation in the legs and reduces
+          pressure in the veins, making it one of the best daily habits for vein
+          health alongside proper <b>varicose veins treatment in Gurgaon</b>.
+        </p>
+      ),
     },
     {
       q: "Can varicose veins go away on their own?",
-      a: "Minor varicose veins may improve with lifestyle changes, but most require medical evaluation for long-term relief.",
+      a: (
+        <p>
+          Minor varicose veins may improve with lifestyle changes, but most
+          require medical evaluation and{" "}
+          <b>varicose veins treatment in Gurgaon</b> for long-term relief.
+        </p>
+      ),
     },
     {
       q: "Is treatment for varicose veins painful?",
-      a: "Most modern procedures are minimally invasive and designed for patient comfort. Dr. Himanshu ensures a safe and effective approach.",
+      a: (
+        <p>
+          Most modern procedures used in{" "}
+          <b>varicose veins treatment in Gurgaon</b> are minimally invasive and
+          designed for patient comfort.
+        </p>
+      ),
     },
     {
       q: "Can varicose veins cause serious health problems?",
-      a: "Yes. If untreated, they can lead to ulcers, blood clots, or chronic venous insufficiency.",
+      a: (
+        <p>
+          Yes. If untreated, they can lead to ulcers, blood clots, or chronic
+          venous insufficiency, which is why timely{" "}
+          <b>varicose veins treatment in Gurgaon</b> is recommended.
+        </p>
+      ),
     },
     {
       q: "How can I prevent varicose veins?",
-      a: "Regular exercise, maintaining a healthy weight, avoiding prolonged standing or sitting, and wearing compression stockings can help reduce risk.",
+      a: (
+        <p>
+          Regular exercise, maintaining a healthy weight, avoiding prolonged
+          standing or sitting, and wearing compression stockings can help reduce
+          the risk and complement <b>varicose veins treatment in Gurgaon</b>.
+        </p>
+      ),
     },
     {
       q: "When should I see a doctor?",
-      a: "Seek medical attention if you notice swelling, persistent pain, or skin changes around your veins. Early consultation ensures better outcomes.",
+      a: (
+        <p>
+          Seek medical attention if you notice swelling, persistent pain, or
+          skin changes around your veins. Early consultation ensures better
+          outcomes and timely <b>varicose veins treatment in Gurgaon</b>.
+        </p>
+      ),
     },
   ];
 
@@ -48,7 +97,7 @@ export default function VaricoseVeinsContent() {
     <>
       {/* TITLE */}
       <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)] mb-8">
-        Varicose Veins Treatment by an Expert Varicose Vein Specialist
+        Varicose Veins Treatment in Gurgaon by Dr Himanshu Verma
       </h2>
 
       {/* INTRO */}
@@ -59,21 +108,26 @@ export default function VaricoseVeinsContent() {
           the valves in the veins, allowing blood flow in the reverse direction
           (backward) and thus pooling; the pooling of the blood leads to
           swelling and also to the appearance of bulging out of the skin.
-        </p>
-
-        <p className="text-gray-700 leading-relaxed">
           Varicose veins are often thought of as only being a cosmetic problem;
           however, they can be a sign of other vascular problems and, if left
           untreated, preventable damage may result and/or lead to more serious
           conditions.
         </p>
 
+        <p className="text-gray-700 leading-relaxed">
+          If you are looking for varicose veins treatment in Gurgaon, early
+          consultation with a specialist can help prevent complications and
+          improve your vein health.
+        </p>
+
         <p className="font-medium text-[var(--med-primary)]">
           Should you see varicose veins, spider veins, bluish veins, or have
           discomfort in your legs, you will want to consult a qualified varicose
-          vein specialist such as Dr. Himanshu, so as to provide early diagnosis
-          and effective varicose veins treatment. Schedule a consultation today
-          to understand your vein health.
+          vein specialist such as Dr. Himanshu for{" "}
+          <b>varicose veins treatment in Gurgaon</b>, so as to provide early
+          diagnosis and effective care. Schedule a consultation today to
+          understand your vein health and explore the best options for{" "}
+          <b>varicose veins treatment in Gurgaon</b>.
         </p>
       </div>
 
@@ -85,8 +139,10 @@ export default function VaricoseVeinsContent() {
       </h3>
 
       <p className="text-gray-700 leading-relaxed mb-6">
-        Comprehending that the symptoms and causes of varicose veins are
-        invaluable in their early detection and effective management.
+        Comprehending the symptoms and causes of varicose veins is invaluable in
+        their early detection and effective management. People seeking varicose
+        veins treatment in Gurgaon should understand the warning signs to ensure
+        timely medical attention.
       </p>
 
       {/* SYMPTOMS */}
@@ -116,10 +172,11 @@ export default function VaricoseVeinsContent() {
       </ul>
 
       <p className="text-gray-700 leading-relaxed mb-10">
-        The symptoms vary in unseemly nature, can become severe, and worsen over
-        time. Nonetheless, early palliation can keep you from going further down
-        this dark path. When your legs are heavy or aching, consult Dr Himanshu
-        whether a visit to further discuss your unique needs is in order.
+        The symptoms vary in severity and can worsen over time. Nonetheless,
+        early treatment can prevent progression of the condition. If you
+        experience heavy or aching legs, consult Dr. Himanshu for proper
+        evaluation and varicose veins treatment in Gurgaon tailored to your
+        specific condition.
       </p>
 
       {/* CAUSES */}
@@ -128,17 +185,17 @@ export default function VaricoseVeinsContent() {
       </h4>
 
       <p className="text-gray-700 mb-5">
-        Reasons for the development of varicose veins:
+        Reasons for the development of varicose veins include:
       </p>
 
       <ul className="space-y-3 mb-6">
         {[
           "Valve weakness or damaged veins, causing blood pooling",
           "Aging - wall deterioration in elderly veins is natural",
-          "Genetics: those with relatives afflicted by varicose veins have the condition more often",
+          "Genetics - those with relatives afflicted by varicose veins have the condition more often",
           "Remaining upright and sitting for long periods of time (which conspires to wear on your leg veins)",
           "Pregnancy - as a result of greater blood volume and bodily hormone shifts",
-          "Obesity (as this puts undue pressure on the veins)",
+          "Obesity – which puts excessive pressure on the veins",
         ].map((item, i) => (
           <li key={i} className="flex items-start gap-3">
             <span className="mt-1.5 h-2 w-2 rounded-full bg-[var(--med-primary)]" />
@@ -149,8 +206,9 @@ export default function VaricoseVeinsContent() {
 
       <p className="text-gray-700 leading-relaxed mb-10">
         Early treatment and lifestyle modifications can help lower the risk of
-        complications. Don’t wait until it’s too late; get started on the path
-        to happier, healthier veins today!
+        complications. If you notice early symptoms, consulting a specialist for
+        varicose veins treatment in Gurgaon can help protect your long-term vein
+        health.
       </p>
 
       <div className="h-px bg-gray-300 mb-10" />
@@ -161,16 +219,22 @@ export default function VaricoseVeinsContent() {
       </h3>
 
       <p className="text-gray-700 leading-relaxed mb-6">
-        While most people have mild symptoms, if left untreated, varicose veins
-        can lead to complications such as:
+        While many people experience mild symptoms, untreated varicose veins can
+        lead to serious complications. This is why timely varicose veins
+        treatment in Gurgaon is recommended for patients experiencing persistent
+        symptoms.
+      </p>
+
+      <p className="text-gray-700 font-medium leading-relaxed mb-6">
+        Possible complications include:
       </p>
 
       <ul className="space-y-3 mb-10">
         {[
           "Ulcers on the skin near the ankle due to long-term pooling of fluid",
           "Superficial or deep venous thrombosis (blood clots) that may be life-threatening",
-          "With chronic venous insufficiency, however, blood flow is compromised, and there may be swelling and skin changes.",
-          "Hemorrhage from the veins that lie near the surface of the skin",
+          "Chronic venous insufficiency, where blood flow is compromised, causing swelling and skin changes",
+          "Hemorrhage from veins located near the surface of the skin",
         ].map((item, i) => (
           <li key={i} className="flex items-start gap-3">
             <span className="mt-1.5 h-2 w-2 rounded-full bg-[var(--med-primary)]" />
@@ -180,9 +244,10 @@ export default function VaricoseVeinsContent() {
       </ul>
 
       <p className="text-gray-700 leading-relaxed mb-5">
-        Early referral and interventions will prevent these complications. Dr.
-        Himanshu provides individualized care for patients experiencing varicose
-        veins, chronic venous disorders, and lymphatic issues.
+        Early referral and intervention can help prevent these complications.
+        Dr. Himanshu offers comprehensive varicose veins treatment in Gurgaon
+        for patients dealing with chronic venous disorders and lymphatic issues.
+        Book an appointment today to ensure long-term leg health.
       </p>
 
       <p className="font-medium text-[var(--med-primary)]">
@@ -197,28 +262,30 @@ export default function VaricoseVeinsContent() {
       </h3>
 
       <p className="text-gray-700 leading-relaxed mb-6">
-        The treatment of varicose veins will depend on how bad your symptoms are
-        and the cause (underlying venous condition). Dr. Himanshu provides
-        minimally invasive as well as complex procedures to improve blood flow,
-        alleviate pain, and prevent complications.
+        The treatment of varicose veins depends on the severity of symptoms and
+        the underlying venous condition. Patients seeking varicose veins
+        treatment in Gurgaon can benefit from advanced minimally invasive
+        procedures designed to improve blood flow, relieve discomfort, and
+        prevent complications.
       </p>
 
       <p className="font-bold">Common treatment approaches include:</p>
 
       <p className="text-gray-700 my-5">
         <b className="text-[var(--med-primary)]">
-          Endovenous Laser Treatment (EVLT) for Varicose Veins –{" "}
+          Endovenous Laser Treatment (EVLT) –{" "}
         </b>{" "}
-        Endovenous Laser Treatment (EVLT) is among the best procedures for
-        treating varicose veins.
+        One of the most effective procedures used in modern varicose veins
+        treatment in Gurgaon. It uses laser energy to close the damaged vein.
       </p>
 
       <p className="text-gray-700 my-5">
         <b className="text-[var(--med-primary)]">
           Medical Glue Treatment (Cyanoacrylate Closure) –{" "}
         </b>{" "}
-        This involves medical glue instead of compression stockings to close
-        varicose veins.
+        A modern technique used in varicose veins treatment in Gurgaon where
+        medical glue seals the affected vein without the need for multiple
+        compression sessions.
       </p>
 
       <p className="text-gray-700 my-5">
@@ -231,48 +298,46 @@ export default function VaricoseVeinsContent() {
         <b className="text-[var(--med-primary)]">
           Microphlebectomy / Stab Phlebectomy –{" "}
         </b>{" "}
-        Slits are made to remove superficial veins safely and effectively.
+        Small incisions are made to safely remove superficial varicose veins.
       </p>
 
       <p className="text-gray-700 my-5">
-        <b className="text-[var(--med-primary)]">Iliac Vein Stenting – </b> May
-        help reduce venous hypertension by opening narrowed or compressed veins.
+        <b className="text-[var(--med-primary)]">Iliac Vein Stenting – </b> Used
+        to treat venous hypertension by opening narrowed or compressed veins.
       </p>
 
       <p className="text-gray-700 my-5">
-        <b className="text-[var(--med-primary)]">Deep Vein Thrombolysis – </b>{" "}
-        Destroys dangerous blood clots in the deep veins.
+        <b className="text-[var(--med-primary)]">Deep Vein Thrombolysis – </b> A
+        specialized procedure that dissolves dangerous clots in the deep veins.
       </p>
 
       <p className="text-gray-700 my-5">
         <b className="text-[var(--med-primary)]">
           DVT Mechanical Thrombectomy –{" "}
         </b>{" "}
-        Extracts clots from deep veins with the help of dedicated devices.
+        Removes clots from deep veins using advanced medical devices.
       </p>
 
       <p className="text-gray-700 my-5">
         <b className="text-[var(--med-primary)]">
           IVC Filter Insertion & Retrieval{" "}
         </b>
-        The insertion and removal of the IVC filter prevent clots from reaching
-        the lungs.
+        Helps prevent blood clots from reaching the lungs.
       </p>
 
       <p className="text-gray-700 my-5">
         <b className="text-[var(--med-primary)]">
           Pulmonary Embolism Suction Thrombectomy –{" "}
         </b>{" "}
-        A procedure to take out the clot from the lung and ultimately save life.
+        A life-saving procedure used to remove clots from the lungs.
       </p>
 
       <p className="text-gray-700">
-        Early treatment of this disease can prevent other serious problems, such
-        as ulcers and blood clots, or chronic venous insufficiency.
-        Personalized care makes it possible to utilize the right option for your
-        symptoms and vein condition. And if your legs feel heavy, swollen, and
-        painful, then contact Dr Himanshu today to find the best course of
-        treatment for your veins.
+        Early diagnosis and the right varicose veins treatment in Gurgaon can
+        help prevent serious complications such as ulcers, blood clots, and
+        chronic venous insufficiency. If your legs feel heavy, swollen, or
+        painful, consult Dr. Himanshu to find the most suitable varicose veins
+        treatment in Gurgaon for your condition.
       </p>
 
       <div className="h-px bg-gray-300 my-10" />

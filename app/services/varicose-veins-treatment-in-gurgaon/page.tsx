@@ -201,7 +201,7 @@ export default function VaricoseVeinsPage() {
                 name: "Dr. Himanshu Verma - Vascular Surgeon",
                 image: OG_IMAGE,
                 url: PAGE_URL,
-                telephone: "+91-8826833598", 
+                telephone: "+91-8826833598",
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "Your Clinic Address",

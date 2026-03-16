@@ -10,10 +10,11 @@ const OG_IMAGE =
 
 export const metadata: Metadata = {
   title:
-    "AV Fistula Surgery in Gurgaon | Dialysis Access Specialist | Dr. Himanshu Verma",
+    "AV Fistula Treatment in Gurgaon | Dialysis Access Specialist | Dr. Himanshu Verma",
   description:
-    "Expert AV fistula creation in Gurgaon for safe, durable and long-term dialysis access by Dr. Himanshu Verma, vascular surgeon.",
+    "Expert AV Fistula Treatment in Gurgaon for safe, durable and long-term dialysis access by Dr. Himanshu Verma, vascular surgeon.",
   keywords: [
+    "AV fistula treatment in Gurgaon",
     "AV fistula surgery in Gurgaon",
     "AV fistula surgeon Gurgaon",
     "dialysis access specialist",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "AV Fistula Surgery in Gurgaon | Dr. Himanshu Verma",
+    title: "AV Fistula Treatment in Gurgaon | Dr. Himanshu Verma",
     description:
       "Gold standard vascular access procedure for long-term dialysis patients performed with precision and safety.",
     url: PAGE_URL,
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "AV Fistula Surgery in Gurgaon",
+        alt: "AV Fistula Treatment in Gurgaon",
       },
     ],
     locale: "en_IN",
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "AV Fistula Surgery in Gurgaon | Dr. Himanshu Verma",
+    title: "AV Fistula Treatment in Gurgaon | Dr. Himanshu Verma",
     description:
       "Specialized arteriovenous fistula creation for reliable dialysis access.",
     images: [OG_IMAGE],

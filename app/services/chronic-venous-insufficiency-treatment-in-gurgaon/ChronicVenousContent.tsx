@@ -46,21 +46,24 @@ export default function ChronicVenousContent() {
       {/* INTRO */}
       <div className="space-y-6 mb-10">
         <p className="text-gray-700 leading-relaxed">
-          Chronic Venous Insufficiency (CVI) is a long-term condition where the
-          veins in your legs struggle to send blood back to the heart. The
-          valves inside the veins weaken or become damaged, allowing blood to
-          pool in the legs. Over time, CVI can affect daily comfort, skin
-          health, and mobility if not managed early.
+          <b>Chronic Venous Insufficiency in Gurgaon</b> is a long-term
+          condition where the veins in your legs struggle to send blood back to
+          the heart. In Chronic Venous Insufficiency, the valves inside the
+          veins weaken or get damaged, allowing blood to pool in the legs. Over
+          time, <b>Chronic Venous Insufficiency in Gurgaon</b> can affect daily
+          comfort, skin health, and mobility if not managed early.
         </p>
 
         <p className="text-gray-700 leading-relaxed">
           If you notice leg heaviness or swelling that worsens by evening, it
-          may be time to take action before symptoms progress.
+          may be time to understand{" "}
+          <b>Chronic Venous Insufficiency in Gurgaon</b>
+          better and take action before symptoms progress.
         </p>
 
         <p className="font-medium text-[var(--med-primary)]">
           Feeling tired in your legs by evening? Learn how you can manage
-          Chronic Venous Insufficiency today.
+          <b>Chronic Venous Insufficiency in Gurgaon</b> today.
         </p>
       </div>
 
@@ -72,11 +75,11 @@ export default function ChronicVenousContent() {
       </h3>
 
       <p className="text-gray-700 leading-relaxed">
-        Chronic venous insufficiency typically occurs in the lower legs and is
-        characterized by high pressure in the veins due to inadequate blood
-        return. This condition leads to swelling of the legs and damage to the
-        skin. The effects of chronic venous insufficiency will worsen over time
-        and may cause:
+        <b>Chronic Venous Insufficiency in Gurgaon</b> typically occurs in the
+        lower legs and is characterized by high pressure in the veins due to
+        inadequate blood return. This condition leads to swelling of the legs
+        and damage to the skin. The effects of chronic venous insufficiency will
+        worsen over time and may cause:
       </p>
 
       <ul className="space-y-3 my-5">
@@ -85,7 +88,6 @@ export default function ChronicVenousContent() {
           "Skin that is discolored and itchy",
           "Reduced oxygen in the tissue",
           "Wounds that heal slowly",
-          "Reduced walking comfort and quality of life",
         ].map((item, i) => (
           <li key={i} className="flex items-start gap-3">
             <span className="mt-1.5 h-2 w-2 rounded-full bg-[var(--med-primary)]" />
@@ -95,8 +97,8 @@ export default function ChronicVenousContent() {
       </ul>
 
       <p className="text-gray-700 leading-relaxed">
-        Chronic venous insufficiency may also decrease comfort with walking,
-        thereby decreasing one's overall quality of life.
+        <b>Chronic Venous Insufficiency in Gurgaon</b> may also decrease comfort
+        with walking, thereby decreasing one's overall quality of life.
       </p>
 
       <div className="h-px bg-gray-300 my-10" />
@@ -117,11 +119,10 @@ export default function ChronicVenousContent() {
       <ul className="space-y-3 my-5">
         {[
           "Leg heaviness or aching",
-          "Swelling after prolonged sitting or standing",
-          "Visible varicose veins ((large, bulging veins in your legs))",
+          "Swollen legs after prolonged sitting or standing",
+          "Varicose veins (large, bulging veins in your legs)",
           "Darkened skin around the ankles",
           "Leg cramps or restless legs",
-          "Venous ulcers (open sores) are a sign of advanced chronic venous insufficiency.",
         ].map((item, i) => (
           <li key={i} className="flex items-start gap-3">
             <span className="mt-1.5 h-2 w-2 rounded-full bg-[var(--med-primary)]" />
@@ -130,9 +131,15 @@ export default function ChronicVenousContent() {
         ))}
       </ul>
 
+      <p className="text-gray-700 leading-relaxed">
+        Venous ulcers (open sores) are a sign of advanced{" "}
+        <b>Chronic Venous Insufficiency in Gurgaon</b>.
+      </p>
+
       <p className="text-gray-700 leading-relaxed mb-10">
-        If you can relate to any of these symptoms, seeking treatment early can
-        slow down the progression of your disease.
+        If you can relate to any of these symptoms, seeking treatment early for
+        <b>Chronic Venous Insufficiency in Gurgaon</b> can slow down the
+        progression of your disease.
       </p>
 
       <div className="h-px bg-gray-300 mb-10" />
@@ -142,8 +149,8 @@ export default function ChronicVenousContent() {
         What causes chronic venous insufficiency?
       </h3>
       <p className="text-gray-700">
-        Chronic venous insufficiency usually arises as a result of any of the
-        following:{" "}
+        Chronic Venous Insufficiency in Gurgaon usually arises as a result of
+        any of the following:{" "}
       </p>
 
       <ul className="space-y-3 my-5">
