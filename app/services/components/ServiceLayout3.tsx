@@ -56,7 +56,7 @@ export default function ServiceLayout3({
                       : "bg-[var(--med-light)] text-gray-700 hover:bg-gray-100 hover:shadow-sm"
                   }`}
                 >
-                  Varicose Venous Disorder
+                  Varicose Veins
                 </Link>
 
                 <Link
@@ -67,7 +67,7 @@ export default function ServiceLayout3({
                       : "bg-[var(--med-light)] text-gray-700 hover:bg-gray-100 hover:shadow-sm"
                   }`}
                 >
-                  Chronic Venous
+                  Chronic Venous Insufficiency
                 </Link>
 
                 <Link
