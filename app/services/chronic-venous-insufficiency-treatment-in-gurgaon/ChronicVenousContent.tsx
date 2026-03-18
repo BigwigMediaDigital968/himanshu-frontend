@@ -12,7 +12,16 @@ export default function ChronicVenousContent() {
   const faqs = [
     {
       q: "How to reverse chronic venous insufficiency?",
-      a: "Chronic Venous Insufficiency cannot always be fully reversed, but early-stage Chronic Venous Insufficiency can improve with compression, exercise, and proper vein care.",
+      a: (
+        <>
+          <p>
+            Chronic Venous Insufficiency cannot always be fully reversed, but
+            early-stage Chronic Venous Insufficiency can improve with
+            compression, exercise, and proper vein care provided through{" "}
+            <b>Chronic Venous Insufficiency Treatment in Gurgaon</b>.
+          </p>
+        </>
+      ),
     },
     {
       q: "What is the root cause of venous insufficiency?",
@@ -24,46 +33,87 @@ export default function ChronicVenousContent() {
     },
     {
       q: "What exercises should be avoided with venous insufficiency?",
+      a: (
+        <>
+          <p>
+            Early signs of Chronic Venous Insufficiency include leg heaviness,
+            mild swelling, aching, and visible veins. Seeking{" "}
+            <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> early can
+            help manage these symptoms.
+          </p>
+        </>
+      ),
+    },
+    {
+      q: "What exercises should be avoided with venous insufficiency?",
       a: "High-impact activities that strain the legs for long periods may worsen Chronic Venous Insufficiency. Low-impact exercises like walking are usually better.",
     },
     {
       q: "Can chronic venous insufficiency lead to ulcers?",
-      a: "Yes, untreated Chronic Venous Insufficiency can reduce skin nutrition and cause venous ulcers over time.",
+      a: (
+        <>
+          <p>
+            Yes, untreated Chronic Venous Insufficiency can reduce skin
+            nutrition and cause venous ulcers over time. Seeking{" "}
+            <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> early can
+            help prevent this complication.
+          </p>
+        </>
+      ),
     },
     {
       q: "When should I see a doctor for chronic venous insufficiency?",
-      a: "If swelling, pain, or skin changes persist, it is wise to consult early before Chronic Venous Insufficiency progresses.",
+      a: (
+        <>
+          <p>
+            If swelling, pain, or skin changes persist, it is wise to consult
+            early for <b>Chronic Venous Insufficiency Treatment in Gurgaon</b>{" "}
+            before the condition progresses.
+          </p>
+        </>
+      ),
     },
   ];
 
   return (
     <>
       {/* TITLE */}
-      <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)] mb-8">
+      <h1 className="text-4xl md:text-4xl font-bold text-[var(--med-primary)] mb-8">
+        Chronic Venous Insufficiency Treatment in Gurgaon
+      </h1>
+      <h2 className="text-2xl md:text-4xl font-bold text-[var(--med-primary)] mb-8">
         What is chronic venous insufficiency?
       </h2>
 
       {/* INTRO */}
       <div className="space-y-6 mb-10">
         <p className="text-gray-700 leading-relaxed">
-          <b>Chronic Venous Insufficiency in Gurgaon</b> is a long-term
-          condition where the veins in your legs struggle to send blood back to
-          the heart. In Chronic Venous Insufficiency, the valves inside the
-          veins weaken or get damaged, allowing blood to pool in the legs. Over
-          time, <b>Chronic Venous Insufficiency in Gurgaon</b> can affect daily
-          comfort, skin health, and mobility if not managed early.
+          Chronic Venous Insufficiency is a long-term condition where the veins
+          in your legs struggle to send blood back to the heart. In Chronic
+          Venous Insufficiency, the valves inside the veins weaken or get
+          damaged, allowing blood to pool in the legs. Over time, Chronic Venous
+          Insufficiency can affect daily comfort, skin health, and mobility if
+          not managed early.
+        </p>
+
+        <p className="text-gray-700 leading-relaxed">
+          People experiencing these symptoms often search for{" "}
+          <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> to manage
+          vein health and prevent complications.
         </p>
 
         <p className="text-gray-700 leading-relaxed">
           If you notice leg heaviness or swelling that worsens by evening, it
-          may be time to understand{" "}
-          <b>Chronic Venous Insufficiency in Gurgaon</b>
-          better and take action before symptoms progress.
+          may be time to understand Chronic Venous Insufficiency better and take
+          action before symptoms progress. Early consultation for{" "}
+          <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> can help
+          prevent the condition from worsening.
         </p>
 
         <p className="font-medium text-[var(--med-primary)]">
-          Feeling tired in your legs by evening? Learn how you can manage
-          <b>Chronic Venous Insufficiency in Gurgaon</b> today.
+          Feeling tired in your legs by evening? Learn how{" "}
+          <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> can help you
+          manage Chronic Venous Insufficiency today.
         </p>
       </div>
 
@@ -75,11 +125,11 @@ export default function ChronicVenousContent() {
       </h3>
 
       <p className="text-gray-700 leading-relaxed">
-        <b>Chronic Venous Insufficiency in Gurgaon</b> typically occurs in the
-        lower legs and is characterized by high pressure in the veins due to
-        inadequate blood return. This condition leads to swelling of the legs
-        and damage to the skin. The effects of chronic venous insufficiency will
-        worsen over time and may cause:
+        Chronic venous insufficiency typically occurs in the lower legs and is
+        characterized by high pressure in the veins due to inadequate blood
+        return. This condition leads to swelling of the legs and damage to the
+        skin. The effects of chronic venous insufficiency will worsen over time
+        and may cause:
       </p>
 
       <ul className="space-y-3 my-5">
@@ -97,8 +147,11 @@ export default function ChronicVenousContent() {
       </ul>
 
       <p className="text-gray-700 leading-relaxed">
-        <b>Chronic Venous Insufficiency in Gurgaon</b> may also decrease comfort
-        with walking, thereby decreasing one's overall quality of life.
+        Chronic venous insufficiency may also decrease comfort with walking,
+        thereby decreasing one's overall quality of life. Patients experiencing
+        these symptoms may consider consulting a specialist for{" "}
+        <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> to improve
+        circulation and reduce discomfort.
       </p>
 
       <div className="h-px bg-gray-300 my-10" />
@@ -137,9 +190,9 @@ export default function ChronicVenousContent() {
       </p>
 
       <p className="text-gray-700 leading-relaxed mb-10">
-        If you can relate to any of these symptoms, seeking treatment early for
-        <b>Chronic Venous Insufficiency in Gurgaon</b> can slow down the
-        progression of your disease.
+        If you can relate to any of these symptoms, seeking{" "}
+        <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> early can help
+        slow down the progression of the disease and improve leg health.
       </p>
 
       <div className="h-px bg-gray-300 mb-10" />
@@ -149,17 +202,18 @@ export default function ChronicVenousContent() {
         What causes chronic venous insufficiency?
       </h3>
       <p className="text-gray-700">
-        Chronic Venous Insufficiency in Gurgaon usually arises as a result of
-        any of the following:{" "}
+        Chronic Venous Insufficiency usually arises as a result of any of the
+        following:{" "}
       </p>
 
       <ul className="space-y-3 my-5">
         {[
-          "Weak or damaged vein valves",
+          "weak vein valves",
           "Prolonged standing or sitting",
           "Obesity (overweight people) or",
-          "Lack of physical activity, having previous pregnancies, or ",
-          "Due to prior leg vein injury/clots. ",
+          "lack of physical activity",
+          "previous pregnancies",
+          "prior leg vein injury or blood clots",
         ].map((item, i) => (
           <li key={i} className="flex items-start gap-3">
             <span className="mt-1.5 h-2 w-2 rounded-full bg-[var(--med-primary)]" />
@@ -169,8 +223,10 @@ export default function ChronicVenousContent() {
       </ul>
 
       <p className="text-gray-700">
-        Learning the specific cause of chronic venous insufficiency allows for
-        the provision of more personalized treatment.
+        Understanding the root cause of the condition can help doctors recommend
+        the most suitable{" "}
+        <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> for long-term
+        vein health.
       </p>
 
       <div className="h-px bg-gray-300 my-10" />
@@ -187,7 +243,7 @@ export default function ChronicVenousContent() {
       <ul className="space-y-3 my-5">
         {[
           "Swelling and leg ache",
-          "Prominent varicose veins",
+          "Obvious varicose veins",
           "Skin that becomes thicker and changes in color;",
           "Leg ulcers that do not heal",
         ].map((item, i) => (
@@ -199,8 +255,9 @@ export default function ChronicVenousContent() {
       </ul>
 
       <p className="text-gray-700">
-        You may find that early stage Chronic Venous Insufficiency is more
-        easily treated when you seek medical treatment early.
+        Early diagnosis and timely{" "}
+        <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> can help manage
+        symptoms before the condition progresses to more advanced stages.
       </p>
 
       <div className="h-px bg-gray-300 my-10" />
@@ -212,14 +269,15 @@ export default function ChronicVenousContent() {
 
       <p className="text-gray-700">
         Diagnosing chronic venous insufficiency consists of a physical
-        examination and imaging studies to evaluate the veins. The following
+        examination and imaging studies to evaluate the veins. Doctors may
+        recommend Chronic Venous Insufficiency Treatment in Gurgaon based on the
+        severity of symptoms and vein health. <br /> <br /> The following
         lifestyle habits have a significant impact on the management of chronic
         venous insufficiency:
       </p>
 
       <ul className="space-y-3 my-5">
         {[
-          "Physical examination and vein imaging",
           "Regular exercise by walking.",
           "Elevating your legs.",
           "Maintaining a healthy weight",
@@ -233,7 +291,9 @@ export default function ChronicVenousContent() {
       </ul>
 
       <p className="text-gray-700">
-        Making incremental changes can lead to meaningful results.
+        These lifestyle adjustments often complement{" "}
+        <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> and help
+        improve circulation in the legs.
       </p>
 
       <div className="h-px bg-gray-300 my-10" />
@@ -244,24 +304,27 @@ export default function ChronicVenousContent() {
       </h3>
 
       <p className="text-gray-700">
-        The Management of Chronic Venous Insufficiency will include minimizing
-        swelling, promoting healthy blood circulation, and supporting the
-        general health of the legs as a whole. Some common treatments are:
+        Several advanced options are available for{" "}
+        <b>Chronic Venous Insufficiency Treatment in Gurgaon</b>, depending on
+        the severity of the condition and overall vein health. The management of
+        Chronic Venous Insufficiency focuses on reducing swelling, improving
+        blood flow, and supporting overall leg health. <br /> <br />
+        Some common treatments included in{" "}
+        <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> are:
       </p>
 
       <p className="text-gray-700 mt-5">
         <b className="text-[var(--med-primary)]">Compression Therapy:</b>{" "}
         Support stockings, bandages, or socks are tools used to help the venous
-        function of the legs, which will ultimately assist in reducing swelling
-        of the legs.
+        function of the legs, which ultimately assist in reducing swelling.
       </p>
 
       <p className="text-gray-700 my-5">
         <b className="text-[var(--med-primary)]">
           Manual Lymphatic Drainage (MLD):{" "}
         </b>{" "}
-        This is a gentle, hands-on approach that encourages the movement of
-        fluids and provides relief from discomfort.
+        This gentle hands-on therapy encourages the movement of fluids and helps
+        relieve discomfort.
       </p>
 
       <p className="text-gray-700 my-5">
@@ -274,22 +337,25 @@ export default function ChronicVenousContent() {
 
       <p className="text-gray-700 my-5">
         <b className="text-[var(--med-primary)]">Ulcer Healing Protocols: </b>{" "}
-        Address skin protection for chronic venous insufficiency-related ulcers
-        and assist with the promotion of healing.
+        Skin protection and wound care techniques help promote healing of venous
+        ulcers.
       </p>
 
       <p className="text-gray-700 my-5">
         <b className="text-[var(--med-primary)]">
           Iliac vein Stents for Ulcers that do not heal:{" "}
         </b>{" "}
-        Surgical procedure performed on deeper veins to increase blood
-        circulation for more stubbornly non-healing ulcers.
+        A surgical procedure performed on deeper veins to increase blood
+        circulation for stubborn non-healing ulcers.
       </p>
 
       <p className="text-gray-700">
-        When Chronic Venous Insufficiency is identified early and treated
-        properly it will result in an easier way of life and lessen the chance
-        of developing complications.
+        With the right <b>Chronic Venous Insufficiency Treatment in Gurgaon</b>,
+        patients can experience improved mobility, reduced swelling, and better
+        overall quality of life. <br /> <br /> When Chronic Venous Insufficiency
+        is identified early and managed with proper{" "}
+        <b>Chronic Venous Insufficiency Treatment in Gurgaon</b>, it can
+        significantly reduce the risk of complications.
       </p>
 
       <div className="h-px bg-gray-300 my-10" />

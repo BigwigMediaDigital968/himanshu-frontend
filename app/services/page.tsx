@@ -130,9 +130,16 @@ export default function Services() {
                 <ol className="space-y-3 text-sm">
                   {[
                     {
-                      label:
-                        "Varicose Veins, Chronic Venous Disorders & Lymphatic Care",
+                      label: "Varicose Veins",
                       id: "varicose-veins",
+                    },
+                    {
+                      label: "Chronic Venous Insufficiency",
+                      id: "chronic-venous-disorders",
+                    },
+                    {
+                      label: "Lymphatic Care",
+                      id: "lymphatic-care",
                     },
                     {
                       label: "Pelvic Venous Disorders & Gonadal Vein Disease",
@@ -249,10 +256,63 @@ export default function Services() {
 
             {/* RIGHT CONTENT */}
             <div className="lg:col-span-2 space-y-16">
+              {/* Varicose Veins */}
               <ServiceCard
                 id="varicose-veins"
-                title="Varicose Veins, Chronic Venous Disorders & Lymphatic Care"
+                title="Varicose Veins"
                 link="/services/varicose-veins-treatment-in-gurgaon"
+                items={[
+                  "Varicose veins and chronic venous insufficiency",
+                  "Superficial, deep, and perforator venous reflux",
+                  "Venous ulcers and non-healing venous wounds",
+                  "Compression therapy, multilayer bandaging, and ulcer care",
+                  "Manual lymphatic drainage (MLD) and compression therapy for lymphedema",
+                  "Management of recurrent and complex venous disease",
+                  {
+                    title: "Minimally invasive venous treatments including:",
+                    subItems: [
+                      "Endovenous Laser Therapy (EVLT)",
+                      "Radiofrequency Ablation (RFA)",
+                      "Cyanoacrylate glue closure",
+                      "Foam sclerotherapy",
+                      "Stab phlebectomy",
+                      "Iliac vein stenting for deep venous obstruction",
+                    ],
+                  },
+                ]}
+              />
+
+              {/* Chronic Venous Disorders */}
+              <ServiceCard
+                id="chronic-venous-disorders"
+                title="Chronic Venous Insufficiency"
+                link="/services/chronic-venous-insufficiency-treatment-in-gurgaon"
+                items={[
+                  "Varicose veins and chronic venous insufficiency",
+                  "Superficial, deep, and perforator venous reflux",
+                  "Venous ulcers and non-healing venous wounds",
+                  "Compression therapy, multilayer bandaging, and ulcer care",
+                  "Manual lymphatic drainage (MLD) and compression therapy for lymphedema",
+                  "Management of recurrent and complex venous disease",
+                  {
+                    title: "Minimally invasive venous treatments including:",
+                    subItems: [
+                      "Endovenous Laser Therapy (EVLT)",
+                      "Radiofrequency Ablation (RFA)",
+                      "Cyanoacrylate glue closure",
+                      "Foam sclerotherapy",
+                      "Stab phlebectomy",
+                      "Iliac vein stenting for deep venous obstruction",
+                    ],
+                  },
+                ]}
+              />
+
+              {/* Lymphatic Care */}
+              <ServiceCard
+                id="lymphatic-care"
+                title="Lymphatic Care"
+                link="/services/lymphatic-care-treatment-in-gurgaon"
                 items={[
                   "Varicose veins and chronic venous insufficiency",
                   "Superficial, deep, and perforator venous reflux",
