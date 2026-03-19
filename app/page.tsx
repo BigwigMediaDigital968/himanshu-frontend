@@ -432,19 +432,19 @@ export default function Home() {
           <div data-aos="fade-right" className="space-y-6">
             {/* NAME & DESIGNATION */}
             <div className="leading-tight">
-              <p className="text-3xl md:text-4xl font-bold text-(--med-primary) transition">
-                Dr. Himanshu Verma
-              </p>
-              <p className="text-lg text-gray-500">
+              <h1 className="text-3xl md:text-4xl font-bold text-(--med-primary) transition">
+                Best Vascular & Endovascular Surgeon in Gurgaon
+              </h1>
+              {/* <p className="text-lg text-gray-500">
                 Director – Vascular & Endovascular Surgeon
-              </p>
+              </p> */}
             </div>
 
             {/* ABOUT TEXT */}
+            <h2 className="font-semibold text-[var(--med-primary)] mb-0">
+              About Dr. Himanshu Verma
+            </h2>
             <p className="text-[var(--med-text)]/90 leading-relaxed text-justify">
-              <span className="font-semibold text-[var(--med-primary)]">
-                About Dr. Himanshu Verma
-              </span>
               <br />
               Dr. Himanshu Verma is a highly experienced Vascular & Endovascular
               Surgeon with over 17 years of expertise, currently serving as
@@ -470,6 +470,14 @@ export default function Home() {
               Fortis FMRI, Gurgaon, a leading tertiary care hospital with
               advanced vascular and hybrid operating facilities.
             </p> */}
+            <div className="leading-tight">
+              <h2 className="text-xl md:text-2xl font-bold text-(--med-primary) transition">
+                Dr. Himanshu Verma
+              </h2>
+              <p className="text-lg text-gray-500">
+                Director – Vascular & Endovascular Surgeon
+              </p>
+            </div>
 
             {/* HIGHLIGHTS */}
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
