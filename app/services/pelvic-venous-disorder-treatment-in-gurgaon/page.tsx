@@ -75,7 +75,7 @@ const faqSchema = {
       name: "How are pelvic venous disorders diagnosed?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pelvic venous disorders are diagnosed through physical examination and imaging tests such as ultrasound, CT scan, MRI, or venography. Patients experiencing symptoms can consult a vascular specialist for pelvic venous disorder treatment in Gurgaon for accurate diagnosis and care.",
+        text: "Pelvic venous disorders treatment in Gurgaon is diagnosed through physical exams and imaging tests such as ultrasound, CT scan, MRI, or venography.",
       },
     },
     {
@@ -83,7 +83,7 @@ const faqSchema = {
       name: "What causes pelvic venous disorders?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pelvic venous disorders are usually caused by weakened vein valves, hormonal changes, genetic factors, or prolonged pressure on the pelvic veins.",
+        text: "Pelvic venous disorders are caused by weakened veins, hormonal changes, genetic factors, or prolonged pressure on pelvic veins.",
       },
     },
     {
@@ -91,7 +91,7 @@ const faqSchema = {
       name: "Can pelvic venous disorders be prevented?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Maintaining a healthy lifestyle, engaging in regular exercise, and avoiding prolonged sitting or standing may help reduce the risk of pelvic venous disorders.",
+        text: "Maintaining a healthy lifestyle, regular exercise, and avoiding prolonged sitting or standing can help reduce the risk of pelvic venous disorders.",
       },
     },
     {
@@ -99,7 +99,7 @@ const faqSchema = {
       name: "Are pelvic venous disorders painful?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, pelvic venous disorders can cause symptoms ranging from mild discomfort to severe pelvic pain, especially after prolonged standing.",
+        text: "Yes, symptoms of pelvic venous disorders can range from mild discomfort to severe pelvic pain, especially after standing for long periods.",
       },
     },
     {
@@ -107,7 +107,7 @@ const faqSchema = {
       name: "Is treatment for pelvic venous disorders effective?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. With early diagnosis and appropriate medical intervention, pelvic venous disorder treatment can significantly reduce symptoms and improve quality of life.",
+        text: "Yes, with early diagnosis and proper intervention, pelvic venous disorders treatment in Gurgaon can provide significant symptom relief and improve quality of life.",
       },
     },
   ],
@@ -178,7 +178,7 @@ export default function PelvicVenousDisorder() {
       />
 
       <ServiceLayout
-        title="Pelvic Venous Disorders"
+        title="Pelvic Venous Disorders Treatment in Gurgaon"
         description="Advanced diagnosis and treatment of pelvic congestion syndrome and pelvic venous disorders."
         active="pelvic"
       >

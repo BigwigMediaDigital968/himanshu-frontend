@@ -110,7 +110,7 @@ export default function AVFistulaPage() {
       />
 
       <ServiceLayout2
-        title="AV Fistula"
+        title="AV Fistula Treatment in Gurgaon"
         description="Gold standard vascular access for safe and long-term dialysis."
         active="avfistula"
       >
