@@ -16,15 +16,15 @@ const faqSchema = {
       name: "What are the main causes of varicose veins?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Weak vein valves, genetics, prolonged standing, aging, pregnancy, and excess weight are common causes of varicose veins. Consulting a specialist for varicose veins treatment in Gurgaon helps prevent complications.",
+        text: "Weak vein valves, genetics, prolonged standing, aging, pregnancy, and excess weight are the most common causes. These conditions often require professional evaluation and varicose veins treatment in Gurgaon.",
       },
     },
     {
       "@type": "Question",
-      name: "Are varicose veins a serious problem?",
+      name: "Are varicose veins a worry?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Varicose veins may become serious if pain, swelling, skin discoloration, or ulcers develop. Early diagnosis and treatment can help prevent complications.",
+        text: "They can become a concern if pain, swelling, skin changes, or ulcers develop. Early evaluation and varicose veins treatment in Gurgaon help prevent complications.",
       },
     },
     {
@@ -32,7 +32,7 @@ const faqSchema = {
       name: "Is walking good for varicose veins?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Walking improves blood circulation in the legs and reduces pressure in the veins, supporting vein health and recovery after treatment.",
+        text: "Yes. Walking improves blood circulation in the legs and reduces pressure in the veins, making it one of the best daily habits for vein health alongside proper varicose veins treatment in Gurgaon.",
       },
     },
     {
@@ -40,7 +40,7 @@ const faqSchema = {
       name: "Can varicose veins go away on their own?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Minor cases may improve with lifestyle changes, but most require medical evaluation and treatment from a vascular specialist.",
+        text: "Minor varicose veins may improve with lifestyle changes, but most require medical evaluation and varicose veins treatment in Gurgaon for long-term relief.",
       },
     },
     {
@@ -48,7 +48,7 @@ const faqSchema = {
       name: "Is treatment for varicose veins painful?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Modern procedures such as EVLT and endovascular techniques are minimally invasive and usually involve minimal pain with faster recovery.",
+        text: "Most modern procedures used in varicose veins treatment in Gurgaon are minimally invasive and designed for patient comfort.",
       },
     },
     {
@@ -56,7 +56,7 @@ const faqSchema = {
       name: "Can varicose veins cause serious health problems?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Untreated varicose veins may lead to venous ulcers, blood clots, or chronic venous insufficiency.",
+        text: "Yes. If untreated, they can lead to ulcers, blood clots, or chronic venous insufficiency, which is why timely varicose veins treatment in Gurgaon is recommended.",
       },
     },
     {
@@ -64,15 +64,15 @@ const faqSchema = {
       name: "How can I prevent varicose veins?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Regular exercise, maintaining a healthy weight, avoiding prolonged standing or sitting, and wearing compression stockings may help reduce the risk.",
+        text: "Regular exercise, maintaining a healthy weight, avoiding prolonged standing or sitting, and wearing compression stockings can help reduce the risk and complement varicose veins treatment in Gurgaon.",
       },
     },
     {
       "@type": "Question",
-      name: "When should I see a doctor for varicose veins?",
+      name: "When should I see a doctor?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Consult a vascular specialist if you experience swelling, pain, skin changes, or visible enlarged veins.",
+        text: "Seek medical attention if you notice swelling, persistent pain, or skin changes around your veins. Early consultation ensures better outcomes and timely varicose veins treatment in Gurgaon.",
       },
     },
   ],
@@ -251,7 +251,7 @@ export default function VaricoseVeinsPage() {
       />
 
       <ServiceLayout3
-        title="Varicose Veins Treatment"
+        title="Varicose Veins Treatment in Gurgaon | Dr. Himanshu Verma"
         description="Advanced diagnosis and minimally invasive treatment options for varicose veins, spider veins, and chronic venous disorders."
         active="varicose"
       >

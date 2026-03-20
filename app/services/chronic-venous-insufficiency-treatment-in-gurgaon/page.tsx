@@ -67,6 +67,61 @@ export const metadata: Metadata = {
   },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How to reverse chronic venous insufficiency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Chronic Venous Insufficiency cannot always be fully reversed, but early-stage cases can improve with compression therapy, exercise, and proper vein care through Chronic Venous Insufficiency Treatment in Gurgaon.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the root cause of venous insufficiency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The main root cause of Chronic Venous Insufficiency is damaged or weak vein valves that allow blood to flow backward in the veins.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are the early warning signs of CVI?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Early signs include leg heaviness, mild swelling, aching, and visible veins. Seeking Chronic Venous Insufficiency Treatment in Gurgaon early can help manage these symptoms effectively.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What exercises should be avoided with venous insufficiency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "High-impact activities that strain the legs for long periods may worsen Chronic Venous Insufficiency. Low-impact exercises like walking are generally recommended.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can chronic venous insufficiency lead to ulcers?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, untreated Chronic Venous Insufficiency can reduce skin nutrition and lead to venous ulcers over time, requiring advanced medical treatment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "When should I see a doctor for chronic venous insufficiency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You should consult a doctor if you experience persistent swelling, pain, or skin changes. Early consultation ensures timely Chronic Venous Insufficiency Treatment in Gurgaon and better outcomes.",
+      },
+    },
+  ],
+};
+
 export default function ChronicVenousPage() {
   return (
     <>
@@ -108,8 +163,16 @@ export default function ChronicVenousPage() {
         }}
       />
 
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+
       <ServiceLayout3
-        title="Chronic Venous Insufficiency"
+        title="Chronic Venous Insufficiency Treatment in Gurgaon"
         description="Expert diagnosis and personalized treatment for leg swelling, venous ulcers, and chronic venous insufficiency."
         active="chronic"
       >
