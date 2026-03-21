@@ -151,6 +151,10 @@ export default function Services() {
                       id: "dialysis-access",
                     },
                     {
+                      label: "Lipedema Treatment",
+                      id: "lipedema-treatment",
+                    },
+                    {
                       label:
                         "Peripheral Artery Disease (PAD) & Advanced Limb Salvage",
                       id: "pad-limb-salvage",
@@ -334,6 +338,7 @@ export default function Services() {
                 ]}
               />
 
+              {/* Pelvic Venous Disorder */}
               <ServiceCard
                 id="pelvic-venous-disorders"
                 title="Pelvic Venous Disorders & Gonadal Vein Disease"
@@ -354,10 +359,28 @@ export default function Services() {
                 ]}
               />
 
+              {/* AV Fistula */}
               <ServiceCard
                 id="dialysis-access"
                 title="AV Fistula, Dialysis Access & Central Venous Care"
                 link="/services/av-fistula-treatment-in-gurgaon"
+                items={[
+                  "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
+                  "Balloon-assisted maturation (BAM angioplasty)",
+                  "AV fistula salvage, revision, and thrombectomy",
+                  "Central venous stenosis management and stenting",
+                  "AV graft placement and revision",
+                  "Tunneled dialysis catheter (Permacath) insertion, exchange, and complex re-tunneling",
+                  "Complex central line placements, chemoports, and long-term vascular access",
+                  "Long-term dialysis access planning and failing access management",
+                ]}
+              />
+
+              {/* Lipedema Treatment  */}
+              <ServiceCard
+                id="lipedema-treatment"
+                title="Lipedema Treatment in Gurgaon "
+                link="/services/lipedema-treatment-in-gurgaon"
                 items={[
                   "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
                   "Balloon-assisted maturation (BAM angioplasty)",

@@ -3,28 +3,103 @@
 import { useState } from "react";
 import PopupForm from "@/app/components/Popup";
 import ButtonFill from "@/app/components/Button";
-import { ChevronDown } from "lucide-react";
+import {
+  ChevronDown,
+  AlertCircle,
+  Activity,
+  Stethoscope,
+  Zap,
+} from "lucide-react";
 
 export default function GonadalContent() {
   const [openPopup, setOpenPopup] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
+  const consequences = [
+    "Swelling of the veins in the stomach",
+    "Persistent pain in the lower pelvic area",
+    "Heaviness in the lower abdomen",
+    "Discomfort during long-standing hours",
+  ];
+
+  const causes = [
+    "Blood flows backward",
+    "Veins stretch and enlarge",
+    "Pressure builds in the lower abdomen",
+    "Blockage symptoms begin",
+  ];
+
+  const symptoms = [
+    "Pain in the lower pelvic area",
+    "Dull aching pain that worsens by evening",
+    "Swelling in the abdominal veins",
+    "Pain during or after long-standing",
+    "Visible enlarged veins in some cases",
+  ];
+
+  const treatments = [
+    {
+      icon: <Stethoscope size={20} className="text-[var(--med-primary)]" />,
+      title: "Pelvic Point Foam Sclerotherapy",
+      desc: "This is the main and highly effective Gonadal Vein Disease Treatment in Gurgaon. A medical foam is injected into the affected vein, causing it to close and redirect blood to healthy veins.",
+    },
+    {
+      icon: <Activity size={20} className="text-[var(--med-primary)]" />,
+      title: "Left Gonadal Vein Coil Embolization",
+      desc: "In this procedure, a tiny coil is placed inside the vein during Gonadal Vein Disease Treatment to block abnormal blood flow and relieve congestion.",
+    },
+    {
+      icon: <Zap size={20} className="text-[var(--med-primary)]" />,
+      title: "Laser Therapy",
+      desc: "Laser treatment helps seal damaged veins and improve circulation in selected cases of Gonadal Vein Disease Treatment in Gurgaon.",
+    },
+  ];
+
   const faqs = [
     {
-      q: "How is Gonadal Vein Disease diagnosed?",
-      a: "Diagnosis is confirmed through Doppler ultrasound, CT venography, MRI venography, or catheter venography to assess vein dilation and reflux.",
+      q: "What Is Gonadal Vein Syndrome?",
+      a: (
+        <>
+          Gonadal vein syndrome refers to the symptoms caused by{" "}
+          <b>gonadal vein disease</b>, especially chronic pelvic pain due to
+          venous congestion.
+        </>
+      ),
     },
     {
-      q: "What causes Gonadal Vein Disease?",
-      a: "It is caused by malfunctioning ovarian or testicular veins that allow blood to flow backward (venous reflux), leading to vein enlargement and chronic pelvic pain.",
+      q: "What Happens If the Gonadal Vein Is Blocked?",
+      a: "When blocked, blood cannot flow properly toward the heart. This increases pressure in the lower abdominal veins, leading to swelling and persistent pain.",
     },
     {
-      q: "Is embolization safe and effective?",
-      a: "Yes, embolization is a minimally invasive and highly effective treatment performed under local anesthesia with quick recovery and long-lasting symptom relief.",
+      q: "What Organs Do the Gonadal Veins Drain?",
+      a: "The gonadal veins drain blood from the ovaries in women and testes in men, carrying it back toward the heart.",
     },
     {
-      q: "Can Gonadal Vein Disease cause chronic pelvic pain?",
-      a: "Yes, it is one of the major causes of chronic pelvic pain, especially in women with pelvic congestion syndrome.",
+      q: "How is gonadal vein disease diagnosed?",
+      a: (
+        <>
+          "Ultrasound, CT scan, and venography help confirm gonadal vein
+          disease."
+        </>
+      ),
+    },
+    {
+      q: "Who is at higher risk of gonadal vein disease?",
+      a: (
+        <>
+          Women with multiple pregnancies are more prone to{" "}
+          <b>gonadal vein disease</b>.
+        </>
+      ),
+    },
+    {
+      q: "Can gonadal vein disease be cured permanently?",
+      a: (
+        <>
+          With proper intervention like embolization or foam therapy,{" "}
+          <b>gonadal vein disease</b> can be effectively managed.
+        </>
+      ),
     },
   ];
 
@@ -32,27 +107,141 @@ export default function GonadalContent() {
     <>
       {/* MAIN TITLE */}
       <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)] mb-8">
-        Gonadal Vein Disease
+        Gonadal Vein Disease Treatment in Gurgaon
       </h2>
+
+      {/* INTRO */}
+      <div className="space-y-4 mb-10">
+        <p className="text-gray-700 leading-relaxed">
+          If you are dealing with constant lower pelvic pain and unexplained
+          abdominal discomfort, it may be related to gonadal vein disease. This
+          condition affects the veins in the stomach and lower abdomen. When
+          these veins swell, blood does not flow properly toward the heart. As a
+          result, pressure builds up and causes blockage in the lower abdominal
+          region.
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          Gonadal vein disease mainly affects women, especially those who have
+          had multiple pregnancies, and timely{" "}
+          <b>Gonadal Vein Disease Treatment</b> is essential as the condition
+          can silently progress and may be misdiagnosed as general pelvic pain
+          if not evaluated by a vascular specialist like Dr. Himanshu Verma.
+        </p>
+
+        {/* Inline CTA */}
+        <div className="flex items-start gap-3 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl px-5 py-4">
+          <AlertCircle
+            size={18}
+            className="text-[var(--med-primary)] mt-0.5 flex-shrink-0"
+          />
+          <p className="text-gray-700 leading-relaxed text-sm">
+            If you are experiencing symptoms that are affecting your daily life,
+            do not ignore them.{" "}
+            <span className="font-semibold text-[var(--med-primary)]">
+              Book a consultation with Dr. Himanshu
+            </span>{" "}
+            for a proper vascular evaluation.
+          </p>
+        </div>
+
+        <div className="mt-12 py-2 border-gray-100 flex justify-center">
+          <ButtonFill
+            onClick={() => setOpenPopup(true)}
+            text="Schedule an Appointment"
+          />
+        </div>
+      </div>
+
+      <div className="h-px bg-gray-100 mb-10" />
 
       {/* WHAT IS */}
       <div className="space-y-6 mb-10">
         <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
-          What is Gonadal Vein Disease?
+          What Is Gonadal Vein Disease?
         </h3>
 
         <p className="text-gray-700 leading-relaxed">
-          Gonadal vein disease involves abnormal functioning of the gonadal
-          veins — ovarian veins in women and testicular veins in men. When these
-          veins become dilated and fail to return blood efficiently to the
-          heart, venous reflux occurs.
+          Gonadal vein disease is a vascular condition where the gonadal veins
+          become enlarged and dysfunctional. These veins are responsible for
+          draining blood from the reproductive organs. When they become weak or
+          blocked, blood pools in the pelvic region instead of moving upward
+          toward the heart.
         </p>
 
         <p className="text-gray-700 leading-relaxed">
-          This condition is a major contributor to chronic pelvic pain and is
-          commonly associated with Pelvic Congestion Syndrome (PCS), where blood
-          pools in the pelvic region instead of flowing properly.
+          This pooling increases pressure in the veins and leads to:
         </p>
+
+        <ul className="space-y-3">
+          {consequences.map((item, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <span className="mt-1.5 h-2 w-2 rounded-full bg-[var(--med-primary)] flex-shrink-0" />
+              <span className="text-gray-700">{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <p className="text-gray-700 leading-relaxed">
+          Over time, untreated gonadal vein disease can significantly reduce
+          quality of life and may require Gonadal Vein Disease Treatment in
+          Gurgaon.
+        </p>
+      </div>
+
+      <div className="h-px bg-gray-100 mb-10" />
+
+      {/* WHY DOES IT OCCUR */}
+      <div className="space-y-6 mb-10">
+        <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
+          Why Does Gonadal Vein Disease Occur?
+        </h3>
+
+        <p className="text-gray-700 leading-relaxed">
+          The main reason behind gonadal vein disease is valve failure inside
+          the veins. These valves normally prevent blood from flowing backward.
+          When they fail:
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {causes.map((cause, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-4 border border-[var(--med-border)] rounded-2xl bg-[var(--med-light)] px-5 py-4"
+            >
+              <span className="flex-shrink-0 h-8 w-8 rounded-full bg-[var(--med-primary)] text-white text-sm font-bold flex items-center justify-center">
+                {i + 1}
+              </span>
+              <span className="text-gray-700 text-sm leading-relaxed">
+                {cause}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-gray-700 leading-relaxed">
+          Hormonal changes and pregnancy increase the risk. That is why gonadal
+          vein disease treatment is more common in women.
+        </p>
+
+        {/* Inline CTA */}
+        <div className="flex items-start gap-3 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl px-5 py-4">
+          <AlertCircle
+            size={18}
+            className="text-[var(--med-primary)] mt-0.5 flex-shrink-0"
+          />
+          <p className="text-gray-700 leading-relaxed text-sm">
+            If you have chronic pelvic discomfort,{" "}
+            <span className="font-semibold text-[var(--med-primary)]">
+              early diagnosis can prevent complications.
+            </span>{" "}
+            Schedule your assessment today to explore the right{" "}
+            <span className="font-semibold text-[var(--med-primary)]">
+              {" "}
+              Gonadal Vein Disease Treatment
+            </span>{" "}
+            and understand the root cause of your pain.
+          </p>
+        </div>
       </div>
 
       <div className="h-px bg-gray-100 mb-10" />
@@ -60,51 +249,92 @@ export default function GonadalContent() {
       {/* SYMPTOMS */}
       <div className="space-y-6 mb-10">
         <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
-          Symptoms
+          Symptoms of Gonadal Vein Disease
         </h3>
 
+        <p className="text-gray-700 leading-relaxed">
+          Many patients live with symptoms of gonadal vein disease for years
+          without knowing the cause. Common signs include:
+        </p>
+
         <ul className="space-y-3">
-          {[
-            "Chronic dull ache in the pelvis",
-            "Pain that worsens during the day, especially with prolonged standing",
-            "Visible varicose veins in the genital or pelvic area",
-            "Discomfort during menstruation or intercourse",
-          ].map((item, i) => (
+          {symptoms.map((item, i) => (
             <li key={i} className="flex items-start gap-3">
               <span className="mt-1.5 h-2 w-2 rounded-full bg-[var(--med-primary)] flex-shrink-0" />
               <span className="text-gray-700">{item}</span>
             </li>
           ))}
         </ul>
+
+        <p className="text-gray-700 leading-relaxed">
+          Recognizing gonadal vein disease early allows for targeted Gonadal
+          Vein Disease Treatment in Gurgaon.
+        </p>
       </div>
 
       <div className="h-px bg-gray-100 mb-10" />
 
-      {/* DIAGNOSIS & TREATMENT */}
+      {/* TREATMENT */}
       <div className="space-y-6 mb-10">
         <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
-          Diagnosis & Treatment
+          Advanced Options for Gonadal Vein Disease Treatment
         </h3>
 
         <p className="text-gray-700 leading-relaxed">
-          Diagnosis involves imaging tests such as ultrasound, CT venography,
-          MRI venography, or catheter venography to identify abnormal vein
-          dilation and reflux.
+          Dr. Himanshu offers minimally invasive procedures for Gonadal Vein
+          Disease Treatment in Gurgaon that focus on relieving pressure and
+          restoring healthy blood flow.
         </p>
 
+        <div className="space-y-4">
+          {treatments.map((t, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-4 border border-[var(--med-border)] rounded-2xl bg-[var(--med-light)] px-6 py-5"
+            >
+              <div className="flex-shrink-0 h-10 w-10 rounded-xl bg-white border border-[var(--med-border)] flex items-center justify-center">
+                {t.icon}
+              </div>
+              <div className="space-y-1">
+                <p className="font-semibold text-[var(--med-primary)]">
+                  {t.title}
+                </p>
+                <p className="text-gray-700 leading-relaxed text-sm">
+                  {t.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
         <p className="text-gray-700 leading-relaxed">
-          Treatment typically involves minimally invasive embolization. During
-          this procedure, faulty veins are sealed using coils or medical-grade
-          embolic agents, restoring proper blood flow and relieving symptoms.
+          These Gonadal Vein Disease Treatments are performed without major
+          surgery and allow faster recovery.
         </p>
+
+        {/* Inline CTA */}
+        <div className="flex items-start gap-3 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl px-5 py-4">
+          <AlertCircle
+            size={18}
+            className="text-[var(--med-primary)] mt-0.5 flex-shrink-0"
+          />
+          <p className="text-gray-700 leading-relaxed text-sm">
+            If you want a safe and reliable solution,{" "}
+            <span className="font-semibold text-[var(--med-primary)]">
+              talk to Dr. Himanshu
+            </span>{" "}
+            about the right Gonadal Vein Disease Treatment in Gurgaon plan for
+            you.
+          </p>
+        </div>
       </div>
 
       <div className="h-px bg-gray-100 mb-10" />
 
-      {/* FAQ SECTION */}
+      {/* FAQ */}
       <div className="space-y-6">
         <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
-          FAQs
+          Frequently Asked Questions
         </h3>
 
         <div className="space-y-4">

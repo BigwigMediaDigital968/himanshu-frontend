@@ -155,7 +155,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ open, onClose }) => {
         {/* CLOSE */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-500 hover:text-black text-xl z-10"
+          className="absolute top-3 right-3 text-gray-500 hover:text-black text-xl z-10 cursor-pointer"
         >
           ✕
         </button>

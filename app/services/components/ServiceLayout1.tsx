@@ -14,7 +14,7 @@ interface ServiceLayoutProps {
   title: string;
   description: string;
   children: React.ReactNode;
-  active: "pelvic" | "gonadal";
+  active: "pelvic" | "gonadal" | "lipedema-treatment";
 }
 
 export default function ServiceLayout1({
@@ -68,6 +68,17 @@ export default function ServiceLayout1({
                   }`}
                 >
                   Gonadal Vein Disease
+                </Link>
+
+                <Link
+                  href="/services/lipedema-treatment-in-gurgaon"
+                  className={`px-5 py-4 rounded-xl transition-all duration-300 ${
+                    active === "lipedema-treatment"
+                      ? "bg-[var(--med-primary)] text-white shadow-lg"
+                      : "bg-[var(--med-light)] text-gray-700 hover:bg-gray-100 hover:shadow-sm"
+                  }`}
+                >
+                  Lipedema Treatment
                 </Link>
               </div>
 
