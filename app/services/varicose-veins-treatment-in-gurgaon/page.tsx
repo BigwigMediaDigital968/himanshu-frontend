@@ -141,112 +141,135 @@ export const metadata: Metadata = {
   },
 };
 
-const medicalSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "MedicalBusiness",
-      "@id": `${SITE_URL}/#clinic`,
-      name: "Dr Himanshu Verma Vascular Clinic",
-      url: SITE_URL,
-      image: OG_IMAGE,
-      telephone: "+91 8826833598",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress:
-          "Fortis Memorial Research Centre, Opposite HUDA City Centre, Sector 44",
-        addressLocality: "Gurugram",
-        addressRegion: "Haryana",
-        postalCode: "122003",
-        addressCountry: "IN",
-      },
-      areaServed: ["Gurugram", "Delhi NCR"],
-    },
-    {
-      "@type": "Physician",
-      "@id": `${SITE_URL}/#doctor`,
-      name: "Dr Himanshu Verma",
-      jobTitle: "Vascular Surgeon",
-      medicalSpecialty: "VascularSurgery",
-      worksFor: {
-        "@id": `${SITE_URL}/#clinic`,
-      },
-    },
-    {
-      "@type": "MedicalProcedure",
-      name: "Varicose Veins Treatment",
-      procedureType: "Minimally Invasive",
-      bodyLocation: "Leg Veins",
-      howPerformed:
-        "Treatment includes EVLT, foam sclerotherapy, and medical glue therapy performed under ultrasound guidance.",
-      provider: {
-        "@id": `${SITE_URL}/#doctor`,
-      },
-    },
-  ],
-};
-
 export default function VaricoseVeinsPage() {
   return (
     <>
-      {/* ✅ Schema Markup */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
+              /* ================= WEBSITE ================= */
+              {
+                "@type": "WebSite",
+                "@id": `${SITE_URL}/#website`,
+                url: SITE_URL,
+                name: "Dr. Himanshu Verma",
+              },
+
+              /* ================= WEBPAGE ================= */
+              {
+                "@type": "WebPage",
+                "@id": `${PAGE_URL}#webpage`,
+                url: PAGE_URL,
+                name: "Varicose Veins Treatment in Gurgaon",
+                description:
+                  "Advanced varicose veins treatment in Gurgaon including EVLT, sclerotherapy and glue therapy.",
+                inLanguage: "en-IN",
+                isPartOf: {
+                  "@id": `${SITE_URL}/#website`,
+                },
+                primaryImageOfPage: {
+                  "@type": "ImageObject",
+                  url: OG_IMAGE,
+                },
+              },
+
+              /* ================= BREADCRUMB ================= */
+              {
+                "@type": "BreadcrumbList",
+                "@id": `${PAGE_URL}#breadcrumb`,
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: SITE_URL,
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Services",
+                    item: `${SITE_URL}/services`,
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 3,
+                    name: "Varicose Veins Treatment in Gurgaon",
+                    item: PAGE_URL,
+                  },
+                ],
+              },
+
+              /* ================= BUSINESS ================= */
               {
                 "@type": "MedicalBusiness",
-                name: "Dr. Himanshu Verma - Vascular Surgeon",
+                "@id": `${SITE_URL}/#clinic`,
+                name: "Dr Himanshu Verma Vascular Clinic",
                 image: OG_IMAGE,
-                url: PAGE_URL,
+                url: SITE_URL,
                 telephone: "+91-8826833598",
                 address: {
                   "@type": "PostalAddress",
-                  streetAddress: "Your Clinic Address",
-                  addressLocality: "Gurgaon",
+                  streetAddress: "Fortis Memorial Research Centre, Sector 44",
+                  addressLocality: "Gurugram",
                   addressRegion: "Haryana",
-                  postalCode: "122001",
+                  postalCode: "122003",
                   addressCountry: "IN",
                 },
-                areaServed: "Gurgaon",
+                areaServed: ["Gurugram", "Delhi NCR"],
               },
+
+              /* ================= DOCTOR ================= */
               {
                 "@type": "Physician",
-                name: "Dr. Himanshu Verma",
+                "@id": `${SITE_URL}/#doctor`,
+                name: "Dr Himanshu Verma",
+                jobTitle: "Vascular Surgeon",
                 medicalSpecialty: "Vascular Surgery",
                 worksFor: {
-                  "@type": "MedicalBusiness",
-                  name: "Dr. Himanshu Verma - Vascular Clinic",
+                  "@id": `${SITE_URL}/#clinic`,
                 },
               },
+
+              /* ================= CONDITION ================= */
+              {
+                "@type": "MedicalCondition",
+                name: "Varicose Veins",
+                alternateName: "Chronic Venous Insufficiency",
+                description:
+                  "A condition where veins become enlarged and twisted due to faulty valves, causing pain, swelling, and circulation issues.",
+                signOrSymptom: [
+                  { "@type": "MedicalSymptom", name: "Bulging veins in legs" },
+                  { "@type": "MedicalSymptom", name: "Leg pain or heaviness" },
+                  { "@type": "MedicalSymptom", name: "Swelling in legs" },
+                  { "@type": "MedicalSymptom", name: "Skin discoloration" },
+                  { "@type": "MedicalSymptom", name: "Ulcers near ankles" },
+                ],
+              },
+
+              /* ================= PROCEDURE ================= */
               {
                 "@type": "MedicalProcedure",
                 name: "Varicose Veins Treatment",
                 procedureType: "Minimally Invasive",
                 bodyLocation: "Leg Veins",
                 howPerformed:
-                  "Performed using EVLT, foam sclerotherapy, or medical glue under ultrasound guidance.",
+                  "Performed using EVLT (laser), foam sclerotherapy, or medical glue under ultrasound guidance.",
+                provider: {
+                  "@id": `${SITE_URL}/#doctor`,
+                },
+              },
+
+              /* ================= FAQ ================= */
+              {
+                "@type": "FAQPage",
+                "@id": `${PAGE_URL}#faq`,
+                mainEntity: faqSchema.mainEntity,
               },
             ],
           }),
-        }}
-      />
-
-      {/* Medical Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(medicalSchema),
-        }}
-      />
-
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
         }}
       />
 

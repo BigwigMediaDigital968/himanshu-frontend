@@ -11,6 +11,7 @@ import {
   Zap,
   Activity,
 } from "lucide-react";
+import { GiH2O } from "react-icons/gi";
 
 export default function VaricoseVeinsContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -223,12 +224,6 @@ export default function VaricoseVeinsContent() {
           relieve discomfort, and prevent complications -{" "}
           <b>PERSONALIZED FOR YOU</b>.
         </p>
-        {/* <button
-          onClick={() => setOpenPopup(true)}
-          className="inline-flex items-center gap-2 bg-white text-[var(--med-primary)] font-semibold px-6 py-3 rounded-full text-sm hover:bg-white/90 transition-all"
-        >
-          Schedule a Consultation with Dr. Himanshu
-        </button> */}
         <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/20">
           {[
             ["9 Procedures", "Treatment Options"],
@@ -269,9 +264,9 @@ export default function VaricoseVeinsContent() {
 
         {/* CTA card */}
         <div className="md:col-span-2 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl p-6 space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[var(--med-primary)]">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--med-primary)]">
             When to Consult
-          </p>
+          </h2>
           <p className="text-gray-700 text-sm leading-relaxed">
             Should you see varicose veins, spider veins, bluish veins, or have
             discomfort in your legs, consult a qualified specialist such as{" "}
@@ -302,12 +297,12 @@ export default function VaricoseVeinsContent() {
       {/* ── SYMPTOMS & CAUSES ── */}
       <div className="mb-14">
         <div className="mb-8">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[var(--med-primary)] mb-2">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--med-primary)] mb-2">
             Symptoms & Causes
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-            Understanding Varicose Veins
           </h2>
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
+            Understanding Varicose Veins
+          </h3>
           <p className="text-gray-600 mt-2 max-w-2xl">
             Comprehending the symptoms and causes of varicose veins is
             invaluable in their early detection and effective management. People

@@ -142,22 +142,29 @@ export default function Services() {
                       id: "lymphatic-care",
                     },
                     {
-                      label: "Pelvic Venous Disorders & Gonadal Vein Disease",
+                      label: "Pelvic Venous Disorders",
                       id: "pelvic-venous-disorders",
+                    },
+                    {
+                      label: "Gonadal Vein Disease",
+                      id: "gondal-vein-disease",
                     },
                     {
                       label:
                         "AV Fistula, Dialysis Access & Central Venous Care",
                       id: "dialysis-access",
                     },
+                    // {
+                    //   label: "Lipedema Treatment",
+                    //   id: "lipedema-treatment",
+                    // },
                     {
-                      label: "Lipedema Treatment",
-                      id: "lipedema-treatment",
+                      label: "Peripheral Artery Disease (PAD)",
+                      id: "pad-art",
                     },
                     {
-                      label:
-                        "Peripheral Artery Disease (PAD) & Advanced Limb Salvage",
-                      id: "pad-limb-salvage",
+                      label: "Advanced Limb Salvage",
+                      id: "limb-salvage",
                     },
                     {
                       label: "Diabetic Foot, Wound Care & Minor Amputations",
@@ -341,8 +348,29 @@ export default function Services() {
               {/* Pelvic Venous Disorder */}
               <ServiceCard
                 id="pelvic-venous-disorders"
-                title="Pelvic Venous Disorders & Gonadal Vein Disease"
+                title="Pelvic Venous Disorders"
                 link="/services/pelvic-venous-disorder-treatment-in-gurgaon"
+                items={[
+                  "Pelvic Congestion Syndrome (PCS) due to pelvic venous reflux",
+                  "Vulval, vaginal, and perineal varicosities",
+                  "Male varicocele related to gonadal vein reflux",
+                  "Integrated management of pelvic and lower-limb venous reflux",
+                  {
+                    title:
+                      "Image-guided, minimally invasive endovascular treatments including:",
+                    subItems: [
+                      "Pelvic vein embolization / coiling",
+                      "Gonadal (ovarian and testicular) vein embolization",
+                    ],
+                  },
+                ]}
+              />
+
+              {/* Gondal Vein */}
+              <ServiceCard
+                id="gondal-vein-disease"
+                title="Gonadal Vein Disease"
+                link="/services/gonadal-vein-disease-treatment-in-gurgaon"
                 items={[
                   "Pelvic Congestion Syndrome (PCS) due to pelvic venous reflux",
                   "Vulval, vaginal, and perineal varicosities",
@@ -377,7 +405,7 @@ export default function Services() {
               />
 
               {/* Lipedema Treatment  */}
-              <ServiceCard
+              {/* <ServiceCard
                 id="lipedema-treatment"
                 title="Lipedema Treatment in Gurgaon "
                 link="/services/lipedema-treatment-in-gurgaon"
@@ -391,11 +419,47 @@ export default function Services() {
                   "Complex central line placements, chemoports, and long-term vascular access",
                   "Long-term dialysis access planning and failing access management",
                 ]}
+              /> */}
+
+              {/* Peripheral Artery Disease */}
+              <ServiceCard
+                id="pad-art"
+                title="Peripheral Artery Disease (PAD)"
+                link="/services/peripheral-artery-disease-treatment-in-gurgaon"
+                items={[
+                  "Peripheral arterial disease and critical limb ischemia",
+                  "Non-healing ischemic and diabetic foot ulcers",
+                  {
+                    title: "Endovascular angioplasty and stenting including:",
+                    subItems: [
+                      "Tibial angioplasty",
+                      "Below-the-ankle and plantar artery angioplasty",
+                      "Popliteal artery angioplasty and stenting",
+                      "Superficial femoral artery (SFA) angioplasty and stenting",
+                      "Iliac artery angioplasty and stenting",
+                    ],
+                  },
+                  "Common femoral artery endarterectomy with patch plasty",
+                  "Open bypass surgery and hybrid revascularization",
+                  {
+                    title: "Aorto-iliac disease management including:",
+                    subItems: [
+                      "Kissing iliac stents",
+                      "Distal aortic and iliac bifurcation stenting",
+                      "CERAB (Covered Endovascular Reconstruction of the Aortic Bifurcation)",
+                      "Aorto-bifemoral bypass and endovascular reconstructions",
+                    ],
+                  },
+                  "Internal iliac artery angioplasty in selected cases (including erectile dysfunction)",
+                  "High-risk, multi-level limb salvage procedures",
+                ]}
               />
 
+              {/* Advance Limb */}
               <ServiceCard
-                id="pad-limb-salvage"
-                title="Peripheral Artery Disease (PAD) & Advanced Limb Salvage"
+                id="limb-salvage"
+                title="Advanced Limb Salvage"
+                link="/services/limb-salvage-surgery-in-gurgaon"
                 items={[
                   "Peripheral arterial disease and critical limb ischemia",
                   "Non-healing ischemic and diabetic foot ulcers",

@@ -1,4 +1,4 @@
-import ServiceLayout1 from "../components/ServiceLayout1";
+import ServiceLayout from "../components/ServiceLayout";
 import GonadalContent from "./GonadalContent";
 import { Metadata } from "next";
 
@@ -213,13 +213,12 @@ export default function GonadalVeinDisease() {
         }}
       />
 
-      <ServiceLayout1
+      <ServiceLayout
         title="Gonadal Vein Disease Treatment in Gurgaon"
         description="Comprehensive diagnosis and minimally invasive treatment for ovarian and testicular vein reflux disorders."
-        active="gonadal"
       >
         <GonadalContent />
-      </ServiceLayout1>
+      </ServiceLayout>
     </>
   );
 }

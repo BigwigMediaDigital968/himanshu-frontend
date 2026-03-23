@@ -1,9 +1,9 @@
-import ServiceLayout from "../components/ServiceLayout1";
+import ServiceLayout from "../components/ServiceLayout";
 import PelvicContent from "./PelvicContent";
 import { Metadata } from "next";
 
-const PAGE_URL =
-  "https://www.drhimanshuverma.com/services/pelvic-venous-disorder-treatment-in-gurgaon";
+const SITE_URL = "https://www.drhimanshuverma.com";
+const PAGE_URL = `${SITE_URL}/services/pelvic-venous-disorder-treatment-in-gurgaon`;
 
 const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
@@ -11,14 +11,13 @@ const OG_IMAGE =
 export const metadata: Metadata = {
   title: "Pelvic Venous Disorders Treatment in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Advanced diagnosis and minimally invasive treatment for pelvic venous disorders and pelvic congestion syndrome (PCS) by Dr. Himanshu Verma in Gurgaon.",
+    "Advanced diagnosis and minimally invasive treatment for pelvic venous disorders and pelvic congestion syndrome (PCS) in Gurgaon.",
   keywords: [
-    "pelvic venous disorders treatment",
-    "pelvic congestion syndrome treatment",
+    "pelvic venous disorders treatment Gurgaon",
+    "pelvic congestion syndrome treatment Gurgaon",
     "PCS treatment Gurgaon",
-    "pelvic vein embolization",
-    "pelvic pain vascular specialist",
-    "Dr. Himanshu Verma vascular surgeon",
+    "pelvic vein embolization Gurgaon",
+    "pelvic pain vascular specialist Gurgaon",
   ],
 
   alternates: {
@@ -26,9 +25,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Pelvic Venous Disorders Treatment in Gurgaon | Dr. Himanshu Verma",
+    title: "Pelvic Venous Disorders Treatment in Gurgaon",
     description:
-      "Get expert Pelvic Venous Disorders Treatment in Gurgaon by Dr. Himanshu Verma. Advanced diagnosis and minimally invasive care for pelvic congestion syndrome (PCS).",
+      "Expert care for pelvic congestion syndrome (PCS) including pelvic vein embolization.",
     url: PAGE_URL,
     siteName: "Dr. Himanshu Verma",
     images: [
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Pelvic Venous Disorders Treatment in Gurgaon",
+        alt: "Pelvic Venous Disorders Treatment",
       },
     ],
     locale: "en_IN",
@@ -45,142 +44,181 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Pelvic Venous Disorders Treatment in Gurgaon | Dr. Himanshu Verma",
+    title: "Pelvic Venous Disorders Treatment in Gurgaon",
     description:
-      "Minimally invasive pelvic vein embolization & PCS treatment in Gurgaon.",
+      "Advanced PCS treatment with minimally invasive embolization techniques.",
     images: [OG_IMAGE],
-    site: "@drhimanshuverma",
-    creator: "@drhimanshuverma",
   },
 
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
   },
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How are pelvic venous disorders diagnosed?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Pelvic venous disorders treatment in Gurgaon is diagnosed through physical exams and imaging tests such as ultrasound, CT scan, MRI, or venography.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What causes pelvic venous disorders?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Pelvic venous disorders are caused by weakened veins, hormonal changes, genetic factors, or prolonged pressure on pelvic veins.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can pelvic venous disorders be prevented?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Maintaining a healthy lifestyle, regular exercise, and avoiding prolonged sitting or standing can help reduce the risk of pelvic venous disorders.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are pelvic venous disorders painful?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, symptoms of pelvic venous disorders can range from mild discomfort to severe pelvic pain, especially after standing for long periods.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is treatment for pelvic venous disorders effective?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, with early diagnosis and proper intervention, pelvic venous disorders treatment in Gurgaon can provide significant symptom relief and improve quality of life.",
-      },
-    },
-  ],
-};
-
-const medicalSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "MedicalBusiness",
-      "@id": "https://www.drhimanshuverma.com/#clinic",
-      name: "Dr Himanshu Verma Vascular Clinic",
-      url: PAGE_URL,
-      image: OG_IMAGE,
-      telephone: "+91 8826833598",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress:
-          "Fortis Memorial Research Centre, Opposite HUDA City Centre, Sector 44",
-        addressLocality: "Gurugram",
-        addressRegion: "Haryana",
-        postalCode: "122003",
-        addressCountry: "IN",
-      },
-      areaServed: ["Gurugram", "Delhi NCR"],
-    },
-    {
-      "@type": "Physician",
-      "@id": "https://www.drhimanshuverma.com/#doctor",
-      name: "Dr Himanshu Verma",
-      jobTitle: "Vascular Surgeon",
-      medicalSpecialty: "VascularSurgery",
-      worksFor: {
-        "@id": "https://www.drhimanshuverma.com/#clinic",
-      },
-    },
-    {
-      "@type": "MedicalProcedure",
-      name: "Pelvic Venous Disorder Treatment",
-      procedureType: "Minimally Invasive",
-      bodyLocation: "Pelvic Veins",
-      howPerformed:
-        "Treatment includes pelvic vein embolization under imaging guidance to relieve chronic pelvic pain.",
-      provider: {
-        "@id": "https://www.drhimanshuverma.com/#doctor",
-      },
-    },
-  ],
 };
 
 export default function PelvicVenousDisorder() {
   return (
     <>
-      {/* Medical Schema */}
+      {/* ✅ FULL STRUCTURED DATA */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(medicalSchema),
-        }}
-      />
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              /* ================= BUSINESS ================= */
+              {
+                "@type": "MedicalBusiness",
+                "@id": `${SITE_URL}/#clinic`,
+                name: "Dr Himanshu Verma Vascular Clinic",
+                url: SITE_URL,
+                image: OG_IMAGE,
+                telephone: "+91 8826833598",
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "Fortis Memorial Research Centre, Sector 44",
+                  addressLocality: "Gurugram",
+                  addressRegion: "Haryana",
+                  postalCode: "122003",
+                  addressCountry: "IN",
+                },
+                areaServed: ["Gurugram", "Delhi NCR"],
+              },
 
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
+              /* ================= DOCTOR ================= */
+              {
+                "@type": "Physician",
+                "@id": `${SITE_URL}/#doctor`,
+                name: "Dr Himanshu Verma",
+                jobTitle: "Vascular Surgeon",
+                medicalSpecialty: "VascularSurgery",
+                worksFor: {
+                  "@id": `${SITE_URL}/#clinic`,
+                },
+              },
+
+              /* ================= CONDITION ================= */
+              {
+                "@type": "MedicalCondition",
+                name: "Pelvic Venous Disorders",
+                alternateName: "Pelvic Congestion Syndrome (PCS)",
+                description:
+                  "A condition caused by enlarged or weakened pelvic veins leading to chronic pelvic pain, heaviness, and discomfort.",
+                signOrSymptom: [
+                  { "@type": "MedicalSymptom", name: "Chronic pelvic pain" },
+                  { "@type": "MedicalSymptom", name: "Pelvic heaviness" },
+                  { "@type": "MedicalSymptom", name: "Pain after standing" },
+                  {
+                    "@type": "MedicalSymptom",
+                    name: "Lower abdominal discomfort",
+                  },
+                ],
+              },
+
+              /* ================= PROCEDURE ================= */
+              {
+                "@type": "MedicalProcedure",
+                name: "Pelvic Vein Embolization",
+                procedureType: "Minimally Invasive Vascular Procedure",
+                bodyLocation: "Pelvic Veins",
+                howPerformed:
+                  "A catheter-based procedure performed under imaging guidance to block abnormal veins and relieve pelvic congestion symptoms.",
+                provider: {
+                  "@id": `${SITE_URL}/#doctor`,
+                },
+              },
+
+              /* ================= WEBPAGE ================= */
+              {
+                "@type": "WebPage",
+                "@id": PAGE_URL,
+                url: PAGE_URL,
+                name: "Pelvic Venous Disorders Treatment in Gurgaon",
+                description:
+                  "Advanced treatment for pelvic congestion syndrome including embolization and vascular care.",
+                inLanguage: "en-IN",
+                isPartOf: {
+                  "@type": "WebSite",
+                  name: "Dr Himanshu Verma",
+                  url: SITE_URL,
+                },
+                primaryImageOfPage: {
+                  "@type": "ImageObject",
+                  url: OG_IMAGE,
+                },
+              },
+
+              /* ================= BREADCRUMB ================= */
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: SITE_URL,
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Services",
+                    item: `${SITE_URL}/services`,
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 3,
+                    name: "Pelvic Venous Disorders Treatment in Gurgaon",
+                    item: PAGE_URL,
+                  },
+                ],
+              },
+
+              /* ================= FAQ ================= */
+              {
+                "@type": "FAQPage",
+                mainEntity: [
+                  {
+                    "@type": "Question",
+                    name: "How are pelvic venous disorders diagnosed?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Diagnosis includes ultrasound, CT scan, MRI, or venography.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "What causes pelvic venous disorders?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Weak veins, hormonal changes, genetics, or pressure on pelvic veins.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Are pelvic venous disorders painful?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, symptoms range from mild discomfort to chronic pelvic pain.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Is treatment effective?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, minimally invasive treatments like embolization provide significant relief.",
+                    },
+                  },
+                ],
+              },
+            ],
+          }),
         }}
       />
 
       <ServiceLayout
         title="Pelvic Venous Disorders Treatment in Gurgaon"
         description="Advanced diagnosis and treatment of pelvic congestion syndrome and pelvic venous disorders."
-        active="pelvic"
       >
         <PelvicContent />
       </ServiceLayout>

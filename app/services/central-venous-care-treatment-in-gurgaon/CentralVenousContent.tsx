@@ -172,9 +172,9 @@ export default function CentralVenousContent() {
             backgroundSize: "24px 24px",
           }}
         />
-        <p className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-3">
+        <h3 className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-3">
           Vascular Specialist · Gurgaon
-        </p>
+        </h3>
         <h2 className="text-3xl font-bold text-white leading-tight mb-4">
           Central Venous Care in Gurgaon
         </h2>
@@ -183,12 +183,7 @@ export default function CentralVenousContent() {
           Catheter care covering insertion, maintenance, and complication
           management by Dr. Himanshu.
         </p>
-        {/* <button
-          onClick={() => setOpenPopup(true)}
-          className="inline-flex items-center gap-2 bg-white text-[var(--med-primary)] font-semibold px-6 py-3 rounded-full text-sm hover:bg-white/90 transition-all"
-        >
-          Book a Consultation with Dr. Himanshu
-        </button> */}
+
         <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/20">
           {[
             ["4 Types", "Catheter Options"],
@@ -248,9 +243,9 @@ export default function CentralVenousContent() {
 
         {/* Uses card */}
         <div className="md:col-span-2 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl p-6 space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[var(--med-primary)] mb-4">
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-[var(--med-primary)] mb-4">
             What Central Lines Are Used For
-          </p>
+          </h3>
           {catheterUses.map((item) => (
             <div key={item} className="flex items-start gap-3">
               <CheckCircle2 className="w-4 h-4 text-[var(--med-primary)] mt-0.5 flex-shrink-0" />
@@ -443,9 +438,9 @@ export default function CentralVenousContent() {
           <div className="grid md:grid-cols-2">
             <div className="bg-[var(--med-primary)] p-6 flex flex-col justify-center gap-3">
               <Stethoscope className="w-7 h-7 text-white/60" />
-              <h3 className="text-lg font-bold text-white">
+              <h2 className="text-lg font-bold text-white">
                 Who Performs a Central Venous Catheter Placement?
-              </h3>
+              </h2>
               <p className="text-white/80 text-sm leading-relaxed">
                 Dr. Himanshu, a vascular specialist, performs central venous
                 catheter placements using image guidance such as ultrasound or
@@ -666,9 +661,9 @@ export default function CentralVenousContent() {
       <div className="rounded-2xl border border-[var(--med-border)] bg-[var(--med-light)] p-8">
         <div className="flex items-center gap-2 mb-4">
           <Zap className="w-5 h-5 text-[var(--med-primary)]" />
-          <p className="text-xl font-bold text-gray-800">
+          <h2 className="text-xl font-bold text-gray-800">
             Expert Central Venous Care, Right Here in Gurgaon.
-          </p>
+          </h2>
         </div>
         <p className="text-gray-600 text-sm mb-6">
           Whether you need catheter placement, maintenance, or advanced
