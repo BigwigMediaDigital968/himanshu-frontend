@@ -1,23 +1,26 @@
 import ServiceLayout from "../components/ServiceLayout";
-import DialysisAccessContent from "./DialysisAccessContent";
+import WoundContent from "./WoundContent";
 import { Metadata } from "next";
 
 const PAGE_URL =
-  "https://www.drhimanshuverma.com/services/dialysis-access-treatment-in-gurgaon";
+  "https://www.drhimanshuverma.com/services/diabetic-wound-care-treatment-in-gurgaon";
 
 const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
+/* ================= META ================= */
 export const metadata: Metadata = {
-  title: "Dialysis Access Surgeon in Gurgaon | AV Fistula & AV Graft Care",
+  title: "Diabetic Wound Care in Gurgaon",
   description:
-    "Consult Dr. Himanshu, a top Dialysis Access Surgeon in Gurgaon, for AV Fistula, AV Graft, and Permacath care to ensure safe and effective dialysis.",
+    "Get expert Diabetic Wound Care in Gurgaon by Dr. Himanshu Verma. Advanced wound care, infection control, and specialized dressings for faster healing.",
   keywords: [
-    "Dialysis Access Surgeon in Gurgaon",
-    "AV Fistula Gurgaon",
-    "AV Graft Surgery Gurgaon",
-    "Permacath insertion Gurgaon",
-    "Dialysis Access care Gurgaon",
+    "Diabetic Wound Care in Gurgaon",
+    "diabetic wound treatment Gurgaon",
+    "diabetic foot wound care Gurgaon",
+    "diabetic ulcer treatment Gurgaon",
+    "wound care specialist Gurgaon",
+    "diabetic foot care Gurgaon",
+    "Dr Himanshu Verma wound care",
   ],
 
   alternates: {
@@ -26,9 +29,9 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Dialysis Access Surgery in Gurgaon | AV Fistula & AV Graft Care | Dr. Himanshu Verma",
+      "Diabetic Wound Care in Gurgaon | Advanced Wound Healing | Dr. Himanshu Verma",
     description:
-      "Consult Dr. Himanshu, a top Dialysis Access Surgeon in Gurgaon, for AV Fistula, AV Graft, and Permacath care to ensure safe and effective dialysis.",
+      "Expert diabetic wound care with infection control, advanced dressings, and faster healing outcomes.",
     url: PAGE_URL,
     siteName: "Dr. Himanshu Verma",
     images: [
@@ -36,7 +39,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Dialysis Access Surgery in Gurgaon",
+        alt: "Diabetic Wound Care in Gurgaon",
       },
     ],
     locale: "en_IN",
@@ -45,12 +48,12 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Dialysis Access Surgery in Gurgaon | Dr. Himanshu Verma",
+    title: "Diabetic Wound Care in Gurgaon | Dr. Himanshu Verma",
     description:
-      "Safe and reliable AV fistula, graft, and catheter solutions for dialysis patients.",
+      "Advanced diabetic wound care, infection control, and faster healing solutions.",
     images: [OG_IMAGE],
-    site: "@YourTwitterHandle", // 🔁 Replace if available
-    creator: "@YourTwitterHandle", // 🔁 Replace if available
+    site: "@YourTwitterHandle",
+    creator: "@YourTwitterHandle",
   },
 
   robots: {
@@ -66,10 +69,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function DialysisAccessPage() {
+/* ================= PAGE ================= */
+export default function DiabeticWoundCarePage() {
   return (
     <>
-      {/* ✅ Structured Data */}
+      {/* ✅ STRUCTURED DATA */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -81,9 +85,9 @@ export default function DialysisAccessPage() {
                 "@type": "WebPage",
                 "@id": PAGE_URL,
                 url: PAGE_URL,
-                name: "Dialysis Access Surgeon in Gurgaon | AV Fistula & AV Graft Care",
+                name: "Diabetic Wound Care in Gurgaon",
                 description:
-                  "Consult Dr. Himanshu, a top Dialysis Access Surgeon in Gurgaon, for AV Fistula, AV Graft, and Permacath care.",
+                  "Expert diabetic wound care, infection control, and advanced dressings for faster healing.",
                 inLanguage: "en-IN",
               },
 
@@ -106,7 +110,7 @@ export default function DialysisAccessPage() {
                   {
                     "@type": "ListItem",
                     position: 3,
-                    name: "Dialysis Access Treatment",
+                    name: "Diabetic Wound Care",
                     item: PAGE_URL,
                   },
                 ],
@@ -144,11 +148,11 @@ export default function DialysisAccessPage() {
               /* ================= MEDICAL PROCEDURE ================= */
               {
                 "@type": "MedicalProcedure",
-                name: "Dialysis Access Surgery",
-                procedureType: "Surgical Vascular Access",
-                bodyLocation: "Upper Limb Blood Vessels",
+                name: "Diabetic Wound Care",
+                procedureType: "Wound Management",
+                bodyLocation: "Feet and Lower Limbs",
                 howPerformed:
-                  "Includes AV fistula creation, AV graft placement, or tunneled dialysis catheter insertion for safe dialysis access.",
+                  "Includes wound cleaning, debridement, infection control, advanced dressings, and circulation management for diabetic patients.",
               },
 
               /* ================= FAQ SCHEMA ================= */
@@ -157,50 +161,42 @@ export default function DialysisAccessPage() {
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "What are the three types of dialysis access?",
+                    name: "What is the best diabetic wound care in Gurgaon?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "The three main types are AV fistula, AV graft, and catheter-based access such as Permacath or Templine. The choice depends on urgency, vein health, and long-term dialysis needs.",
+                      text: "The best diabetic wound care includes proper cleaning, removal of dead tissue, infection control, suitable dressings, and blood sugar management.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "What is the meaning of dialysis access?",
+                    name: "What is the best dressing for a diabetic wound?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Dialysis access is a medical pathway created in the body that allows blood to flow out for dialysis and return safely after being filtered.",
+                      text: "Dressings depend on wound type, depth, and infection risk. Moisture-retaining and antimicrobial dressings are commonly used.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "What’s the risk of clotting or infection for my access type?",
+                    name: "How long does a diabetic wound take to heal?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "All access types have some risk, but AV fistula has the lowest risk of infection and clotting compared to grafts and catheters.",
+                      text: "Healing time varies. Mild wounds may heal in weeks, while deeper ulcers take longer depending on circulation and sugar control.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "How do I care for my access site?",
+                    name: "Can diabetic wounds heal on their own?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Keep the site clean and dry, avoid pressure, and follow your doctor's instructions to maintain proper function.",
+                      text: "Some minor wounds may heal slowly, but without proper care, the risk of infection and complications increases significantly.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "How do I know if my dialysis access is not working properly?",
+                    name: "How can I prevent diabetic foot wounds?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Warning signs include swelling, pain, or reduced blood flow. Immediate medical consultation is advised.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "How long does dialysis access last?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "The lifespan varies depending on the type and care, but regular monitoring can help maintain it for years.",
+                      text: "Daily foot inspection, good sugar control, proper footwear, and regular medical checkups help prevent diabetic wounds.",
                     },
                   },
                 ],
@@ -210,11 +206,12 @@ export default function DialysisAccessPage() {
         }}
       />
 
+      {/* ✅ PAGE LAYOUT */}
       <ServiceLayout
-        title="Dialysis Access Surgeon in Gurgaon | AV Fistula & AV Graft Care"
-        description="Consult Dr. Himanshu, a top Dialysis Access Surgeon in Gurgaon, for AV Fistula, AV Graft, and Permacath care to ensure safe and effective dialysis."
+        title="Diabetic Wound Care in Gurgaon"
+        description="Get expert Diabetic Wound Care in Gurgaon by Dr. Himanshu Verma. Advanced wound care, infection control, and specialized dressings for faster healing."
       >
-        <DialysisAccessContent />
+        <WoundContent />
       </ServiceLayout>
     </>
   );

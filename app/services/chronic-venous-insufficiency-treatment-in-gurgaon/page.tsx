@@ -1,4 +1,4 @@
-import ServiceLayout3 from "../components/ServiceLayout3";
+import ServiceLayout from "../components/ServiceLayout";
 import ChronicVenousContent from "./ChronicVenousContent";
 import { Metadata } from "next";
 
@@ -223,13 +223,12 @@ export default function ChronicVenousPage() {
         }}
       />
 
-      <ServiceLayout3
+      <ServiceLayout
         title="Chronic Venous Insufficiency Treatment in Gurgaon"
         description="Expert diagnosis and personalized treatment for leg swelling, venous ulcers, and chronic venous insufficiency."
-        active="chronic"
       >
         <ChronicVenousContent />
-      </ServiceLayout3>
+      </ServiceLayout>
     </>
   );
 }

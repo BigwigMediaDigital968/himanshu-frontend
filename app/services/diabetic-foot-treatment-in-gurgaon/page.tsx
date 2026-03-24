@@ -1,23 +1,25 @@
 import ServiceLayout from "../components/ServiceLayout";
-import DialysisAccessContent from "./DialysisAccessContent";
+import DiabeticContent from "./DiabaticContent";
 import { Metadata } from "next";
 
 const PAGE_URL =
-  "https://www.drhimanshuverma.com/services/dialysis-access-treatment-in-gurgaon";
+  "https://www.drhimanshuverma.com/services/diabetic-foot-treatment-in-gurgaon";
 
 const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Dialysis Access Surgeon in Gurgaon | AV Fistula & AV Graft Care",
+  title: "Diabetic Foot Treatment in Gurgaon",
   description:
-    "Consult Dr. Himanshu, a top Dialysis Access Surgeon in Gurgaon, for AV Fistula, AV Graft, and Permacath care to ensure safe and effective dialysis.",
+    "Expert Diabetic Foot Treatment in Gurgaon by Dr. Himanshu Verma. Effective care for foot ulcers, infections, and diabetic complications.",
   keywords: [
-    "Dialysis Access Surgeon in Gurgaon",
-    "AV Fistula Gurgaon",
-    "AV Graft Surgery Gurgaon",
-    "Permacath insertion Gurgaon",
-    "Dialysis Access care Gurgaon",
+    "Diabetic Foot Treatment in Gurgaon",
+    "diabetic foot specialist in Gurgaon",
+    "diabetic foot care Gurgaon",
+    "foot ulcer treatment Gurgaon",
+    "diabetic neuropathy treatment",
+    "Dr Himanshu Verma Gurgaon",
+    "diabetic wound care Gurgaon",
   ],
 
   alternates: {
@@ -26,9 +28,9 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Dialysis Access Surgery in Gurgaon | AV Fistula & AV Graft Care | Dr. Himanshu Verma",
+      "Diabetic Foot Treatment in Gurgaon | Advanced Foot Care | Dr. Himanshu Verma",
     description:
-      "Consult Dr. Himanshu, a top Dialysis Access Surgeon in Gurgaon, for AV Fistula, AV Graft, and Permacath care to ensure safe and effective dialysis.",
+      "Expert care for diabetic foot ulcers, infections, and neuropathy with advanced treatment solutions in Gurgaon.",
     url: PAGE_URL,
     siteName: "Dr. Himanshu Verma",
     images: [
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Dialysis Access Surgery in Gurgaon",
+        alt: "Diabetic Foot Treatment in Gurgaon",
       },
     ],
     locale: "en_IN",
@@ -45,12 +47,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Dialysis Access Surgery in Gurgaon | Dr. Himanshu Verma",
+    title: "Diabetic Foot Treatment in Gurgaon | Dr. Himanshu Verma",
     description:
-      "Safe and reliable AV fistula, graft, and catheter solutions for dialysis patients.",
+      "Advanced diabetic foot care including wound management, infection control, and circulation improvement.",
     images: [OG_IMAGE],
-    site: "@YourTwitterHandle", // 🔁 Replace if available
-    creator: "@YourTwitterHandle", // 🔁 Replace if available
   },
 
   robots: {
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function DialysisAccessPage() {
+export default function DiabeticFootPage() {
   return (
     <>
       {/* ✅ Structured Data */}
@@ -76,18 +76,18 @@ export default function DialysisAccessPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
-              /* ================= WEBPAGE ================= */
+              /* WEBPAGE */
               {
                 "@type": "WebPage",
                 "@id": PAGE_URL,
                 url: PAGE_URL,
-                name: "Dialysis Access Surgeon in Gurgaon | AV Fistula & AV Graft Care",
+                name: "Diabetic Foot Treatment in Gurgaon",
                 description:
-                  "Consult Dr. Himanshu, a top Dialysis Access Surgeon in Gurgaon, for AV Fistula, AV Graft, and Permacath care.",
+                  "Expert diabetic foot care in Gurgaon for ulcers, infections, and neuropathy.",
                 inLanguage: "en-IN",
               },
 
-              /* ================= BREADCRUMB ================= */
+              /* BREADCRUMB */
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
@@ -106,13 +106,13 @@ export default function DialysisAccessPage() {
                   {
                     "@type": "ListItem",
                     position: 3,
-                    name: "Dialysis Access Treatment",
+                    name: "Diabetic Foot Treatment",
                     item: PAGE_URL,
                   },
                 ],
               },
 
-              /* ================= MEDICAL BUSINESS ================= */
+              /* MEDICAL BUSINESS */
               {
                 "@type": "MedicalBusiness",
                 name: "Dr. Himanshu Verma - Vascular Surgeon",
@@ -130,7 +130,7 @@ export default function DialysisAccessPage() {
                 medicalSpecialty: "Vascular Surgery",
               },
 
-              /* ================= PHYSICIAN ================= */
+              /* PHYSICIAN */
               {
                 "@type": "Physician",
                 name: "Dr. Himanshu Verma",
@@ -141,66 +141,56 @@ export default function DialysisAccessPage() {
                 },
               },
 
-              /* ================= MEDICAL PROCEDURE ================= */
+              /* MEDICAL CONDITION */
               {
-                "@type": "MedicalProcedure",
-                name: "Dialysis Access Surgery",
-                procedureType: "Surgical Vascular Access",
-                bodyLocation: "Upper Limb Blood Vessels",
-                howPerformed:
-                  "Includes AV fistula creation, AV graft placement, or tunneled dialysis catheter insertion for safe dialysis access.",
+                "@type": "MedicalCondition",
+                name: "Diabetic Foot",
+                description:
+                  "A complication of diabetes causing nerve damage, poor circulation, and increased risk of foot ulcers and infections.",
               },
 
-              /* ================= FAQ SCHEMA ================= */
+              /* FAQ SCHEMA */
               {
                 "@type": "FAQPage",
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "What are the three types of dialysis access?",
+                    name: "What are the first signs of Diabetic Foot?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "The three main types are AV fistula, AV graft, and catheter-based access such as Permacath or Templine. The choice depends on urgency, vein health, and long-term dialysis needs.",
+                      text: "Early signs of Diabetic Foot include numbness, tingling, mild pain, skin color changes, or small wounds that heal slowly. Consulting Dr. Himanshu Verma for Diabetic Foot Treatment in Gurgaon can help detect problems early.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "What is the meaning of dialysis access?",
+                    name: "What are the 5 main symptoms of diabetic neuropathy?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Dialysis access is a medical pathway created in the body that allows blood to flow out for dialysis and return safely after being filtered.",
+                      text: "Numbness, burning pain, tingling, muscle weakness, and sensitivity to touch.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "What’s the risk of clotting or infection for my access type?",
+                    name: "Can Diabetic Foot be prevented?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "All access types have some risk, but AV fistula has the lowest risk of infection and clotting compared to grafts and catheters.",
+                      text: "Yes. Proper blood sugar control, daily foot checks, and early medical care significantly reduce Diabetic Foot risk. Preventive consultations for Diabetic Foot Treatment in Gurugram can also help detect early signs.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "How do I care for my access site?",
+                    name: "When should I see a doctor?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Keep the site clean and dry, avoid pressure, and follow your doctor's instructions to maintain proper function.",
+                      text: "You should seek care from a diabetic foot specialist in Gurgaon if you notice pain, numbness, wounds, or infections that do not heal within a few days. Early Diabetic Foot Treatment in Gurgaon with Dr. Himanshu Verma can prevent complications.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "How do I know if my dialysis access is not working properly?",
+                    name: "Is Diabetic Foot treatment painful?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Warning signs include swelling, pain, or reduced blood flow. Immediate medical consultation is advised.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "How long does dialysis access last?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "The lifespan varies depending on the type and care, but regular monitoring can help maintain it for years.",
+                      text: "Most Diabetic Foot treatments focus on comfort, wound healing, and preventing further damage, with minimal discomfort. Dr. Himanshu Verma offers Diabetic Foot Treatment in Gurgaon with a patient-focused approach to ensure effective and comfortable care.",
                     },
                   },
                 ],
@@ -211,10 +201,10 @@ export default function DialysisAccessPage() {
       />
 
       <ServiceLayout
-        title="Dialysis Access Surgeon in Gurgaon | AV Fistula & AV Graft Care"
-        description="Consult Dr. Himanshu, a top Dialysis Access Surgeon in Gurgaon, for AV Fistula, AV Graft, and Permacath care to ensure safe and effective dialysis."
+        title="Diabetic Foot Treatment in Gurgaon"
+        description="Expert Diabetic Foot Treatment in Gurgaon by Dr. Himanshu Verma. Effective care for foot ulcers, infections, and diabetic complications."
       >
-        <DialysisAccessContent />
+        <DiabeticContent />
       </ServiceLayout>
     </>
   );

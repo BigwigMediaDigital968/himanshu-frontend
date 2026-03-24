@@ -1,4 +1,4 @@
-import ServiceLayout2 from "../components/ServiceLayout2";
+import ServiceLayout from "../components/ServiceLayout";
 import CentralVenousContent from "./CentralVenousContent";
 import { Metadata } from "next";
 
@@ -225,13 +225,12 @@ export default function CentralVenousCarePage() {
         }}
       />
 
-      <ServiceLayout2
+      <ServiceLayout
         title="Central Venous Care in Gurgaon: Expert Treatment for Better Vascular Health"
         description="Advanced central line placement and vascular intervention treatments."
-        active="venouscare"
       >
         <CentralVenousContent />
-      </ServiceLayout2>
+      </ServiceLayout>
     </>
   );
 }

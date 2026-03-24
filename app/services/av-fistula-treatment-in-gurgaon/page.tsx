@@ -1,4 +1,4 @@
-import ServiceLayout2 from "../components/ServiceLayout2";
+import ServiceLayout from "../components/ServiceLayout";
 import AVFistulaContent from "./AVFistulaContent";
 import { Metadata } from "next";
 
@@ -219,13 +219,12 @@ export default function AVFistulaPage() {
         }}
       />
 
-      <ServiceLayout2
+      <ServiceLayout
         title="AV Fistula Treatment in Gurgaon"
         description="Gold standard vascular access for safe and long-term dialysis."
-        active="avfistula"
       >
         <AVFistulaContent />
-      </ServiceLayout2>
+      </ServiceLayout>
     </>
   );
 }

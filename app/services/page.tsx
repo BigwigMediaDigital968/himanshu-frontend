@@ -150,14 +150,17 @@ export default function Services() {
                       id: "gondal-vein-disease",
                     },
                     {
-                      label:
-                        "AV Fistula, Dialysis Access & Central Venous Care",
+                      label: "AV Fistula",
+                      id: "av-fistula",
+                    },
+                    {
+                      label: "Dialysis Access",
                       id: "dialysis-access",
                     },
-                    // {
-                    //   label: "Lipedema Treatment",
-                    //   id: "lipedema-treatment",
-                    // },
+                    {
+                      label: "Central Venous Care",
+                      id: "central-venous-care",
+                    },
                     {
                       label: "Peripheral Artery Disease (PAD)",
                       id: "pad-art",
@@ -167,8 +170,16 @@ export default function Services() {
                       id: "limb-salvage",
                     },
                     {
-                      label: "Diabetic Foot, Wound Care & Minor Amputations",
+                      label: "Diabetic Foot",
                       id: "diabetic-foot",
+                    },
+                    {
+                      label: "Wound Care",
+                      id: "wound-care",
+                    },
+                    {
+                      label: "Minor Amputations",
+                      id: "minor-ampu",
                     },
                     {
                       label:
@@ -213,30 +224,10 @@ export default function Services() {
                           block: "start",
                         })
                       }
-                      className="
-        group
-        flex items-start gap-3
-        cursor-pointer
-        text-gray-600
-        hover:text-[var(--med-primary)]
-        transition
-      "
+                      className="group flex items-start gap-3 cursor-pointer text-gray-600 hover:text-[var(--med-primary)] transition"
                     >
                       {/* Highlighted number */}
-                      <span
-                        className="
-          flex h-6 w-6 items-center justify-center
-          rounded-full
-          bg-[var(--med-light)]
-          text-[var(--med-primary)]
-          text-xs font-semibold
-          border border-[var(--med-border)]
-          group-hover:bg-[var(--med-primary)]
-          group-hover:text-white
-          transition
-          flex-shrink-0
-        "
-                      >
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--med-light)] text-[var(--med-primary)] text-xs font-semibold border border-[var(--med-border)] group-hover:bg-[var(--med-primary)] group-hover:text-white transition flex-shrink-0">
                         {i + 1}
                       </span>
 
@@ -268,9 +259,11 @@ export default function Services() {
             {/* RIGHT CONTENT */}
             <div className="lg:col-span-2 space-y-16">
               {/* Varicose Veins */}
+
               <ServiceCard
                 id="varicose-veins"
                 title="Varicose Veins"
+                desc="Varicose veins are swollen, twisted veins caused by poor blood flow, leading to pain, heaviness, and visible vein changes. Minimally invasive treatments like laser and RFA effectively restore circulation with quick recovery."
                 link="/services/varicose-veins-treatment-in-gurgaon"
                 items={[
                   "Varicose veins and chronic venous insufficiency",
@@ -297,6 +290,7 @@ export default function Services() {
               <ServiceCard
                 id="chronic-venous-disorders"
                 title="Chronic Venous Insufficiency"
+                desc="Chronic venous insufficiency occurs when leg veins fail to return blood efficiently, causing swelling, pain, skin changes, and ulcers. Advanced treatments like laser, RFA, and compression therapy improve circulation and promote healing."
                 link="/services/chronic-venous-insufficiency-treatment-in-gurgaon"
                 items={[
                   "Varicose veins and chronic venous insufficiency",
@@ -323,6 +317,7 @@ export default function Services() {
               <ServiceCard
                 id="lymphatic-care"
                 title="Lymphatic Care"
+                desc="Lymphatic disorders cause fluid buildup (lymphedema), leading to swelling, discomfort, and recurrent infections. Specialized care including MLD, compression therapy, and advanced techniques helps improve drainage and reduce swelling."
                 link="/services/lymphatic-care-treatment-in-gurgaon"
                 items={[
                   "Varicose veins and chronic venous insufficiency",
@@ -349,6 +344,7 @@ export default function Services() {
               <ServiceCard
                 id="pelvic-venous-disorders"
                 title="Pelvic Venous Disorders"
+                desc="Pelvic venous disorders occur due to abnormal vein flow in the pelvis, causing chronic pain, varicosities, and discomfort. Minimally invasive embolization treatments effectively block faulty veins and relieve symptoms."
                 link="/services/pelvic-venous-disorder-treatment-in-gurgaon"
                 items={[
                   "Pelvic Congestion Syndrome (PCS) due to pelvic venous reflux",
@@ -370,6 +366,7 @@ export default function Services() {
               <ServiceCard
                 id="gondal-vein-disease"
                 title="Gonadal Vein Disease"
+                desc="Gonadal vein disease leads to abnormal blood flow in ovarian or testicular veins, causing pelvic pain or varicocele. Minimally invasive embolization treatments effectively seal faulty veins and relieve symptoms."
                 link="/services/gonadal-vein-disease-treatment-in-gurgaon"
                 items={[
                   "Pelvic Congestion Syndrome (PCS) due to pelvic venous reflux",
@@ -389,8 +386,9 @@ export default function Services() {
 
               {/* AV Fistula */}
               <ServiceCard
-                id="dialysis-access"
-                title="AV Fistula, Dialysis Access & Central Venous Care"
+                id="av-fistula"
+                title="AV Fistula"
+                desc="AV fistula and dialysis access procedures create reliable blood flow for safe and effective dialysis treatment. Advanced techniques ensure long-term access function, fewer complications, and better patient outcomes."
                 link="/services/av-fistula-treatment-in-gurgaon"
                 items={[
                   "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
@@ -403,12 +401,12 @@ export default function Services() {
                   "Long-term dialysis access planning and failing access management",
                 ]}
               />
-
-              {/* Lipedema Treatment  */}
-              {/* <ServiceCard
-                id="lipedema-treatment"
-                title="Lipedema Treatment in Gurgaon "
-                link="/services/lipedema-treatment-in-gurgaon"
+              {/* Dialysis Access */}
+              <ServiceCard
+                id="dialysis-access"
+                title="Dialysis Access"
+                desc="AV fistula and dialysis access procedures create reliable blood flow for safe and effective dialysis treatment. Advanced techniques ensure long-term access function, fewer complications, and better patient outcomes."
+                link="/services/dialysis-access-treatment-in-gurgaon"
                 items={[
                   "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
                   "Balloon-assisted maturation (BAM angioplasty)",
@@ -419,12 +417,30 @@ export default function Services() {
                   "Complex central line placements, chemoports, and long-term vascular access",
                   "Long-term dialysis access planning and failing access management",
                 ]}
-              /> */}
+              />
+              {/* central venous care */}
+              <ServiceCard
+                id="central-venous-care"
+                title="Central Venous Care"
+                desc="AV fistula and dialysis access procedures create reliable blood flow for safe and effective dialysis treatment. Advanced techniques ensure long-term access function, fewer complications, and better patient outcomes."
+                link="/services/central-venous-care-treatment-in-gurgaon"
+                items={[
+                  "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
+                  "Balloon-assisted maturation (BAM angioplasty)",
+                  "AV fistula salvage, revision, and thrombectomy",
+                  "Central venous stenosis management and stenting",
+                  "AV graft placement and revision",
+                  "Tunneled dialysis catheter (Permacath) insertion, exchange, and complex re-tunneling",
+                  "Complex central line placements, chemoports, and long-term vascular access",
+                  "Long-term dialysis access planning and failing access management",
+                ]}
+              />
 
               {/* Peripheral Artery Disease */}
               <ServiceCard
                 id="pad-art"
                 title="Peripheral Artery Disease (PAD)"
+                desc="Peripheral artery disease (PAD) reduces blood flow to the limbs, causing pain, ulcers, and risk of limb loss. Advanced angioplasty, stenting, and bypass procedures restore circulation and improve limb health."
                 link="/services/peripheral-artery-disease-treatment-in-gurgaon"
                 items={[
                   "Peripheral arterial disease and critical limb ischemia",
@@ -459,6 +475,7 @@ export default function Services() {
               <ServiceCard
                 id="limb-salvage"
                 title="Advanced Limb Salvage"
+                desc="Advanced limb salvage focuses on restoring blood flow and healing non-healing wounds to prevent amputation. Combined endovascular and surgical techniques help save limbs and improve quality of life."
                 link="/services/limb-salvage-surgery-in-gurgaon"
                 items={[
                   "Peripheral arterial disease and critical limb ischemia",
@@ -489,9 +506,39 @@ export default function Services() {
                 ]}
               />
 
+              {/* Diabitic Foot */}
               <ServiceCard
                 id="diabetic-foot"
-                title="Diabetic Foot, Wound Care & Minor Amputations"
+                title="Diabetic Foot"
+                desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
+                link="/services/diabetic-foot-treatment-in-gurgaon"
+                items={[
+                  "Advanced diabetic foot management",
+                  "Surgical wound debridement",
+                  "Toe and forefoot amputations",
+                  "Integrated wound care and revascularization strategies",
+                ]}
+              />
+
+              {/* Wound Care */}
+              <ServiceCard
+                id="wound-care"
+                title="Wound Care"
+                desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
+                link="/services/diabetic-wound-care-in-gurgaon"
+                items={[
+                  "Advanced diabetic foot management",
+                  "Surgical wound debridement",
+                  "Toe and forefoot amputations",
+                  "Integrated wound care and revascularization strategies",
+                ]}
+              />
+
+              {/* Minor Ampu */}
+              <ServiceCard
+                id="minor-ampu"
+                title="Minor Amputations"
+                desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
                 items={[
                   "Advanced diabetic foot management",
                   "Surgical wound debridement",
@@ -503,6 +550,7 @@ export default function Services() {
               <ServiceCard
                 id="dvt-advanced-venous"
                 title="Deep Vein Thrombosis (DVT) & Advanced Venous Interventions"
+                desc="Deep vein thrombosis (DVT) involves blood clots in deep veins, causing pain, swelling, and risk of serious complications. Advanced treatments like thrombolysis, thrombectomy, and stenting help restore normal blood flow."
                 items={[
                   "Acute and chronic deep vein thrombosis (DVT)",
                   "Post-thrombotic syndrome management",
@@ -515,14 +563,17 @@ export default function Services() {
               <ServiceCard
                 id="pulmonary-embolism"
                 title="Pulmonary Embolism (PE) Management"
+                desc="Pulmonary embolism is a serious condition where blood clots block arteries in the lungs, potentially life-threatening. Rapid diagnosis and advanced catheter-based treatments help restore blood flow and improve survival."
                 items={[
                   "Comprehensive pulmonary embolism management under a multidisciplinary Pulmonary Embolism Response Team (PERT) program",
                   "Catheter-based interventions in selected high-risk pulmonary embolism cases",
                 ]}
               />
+
               <ServiceCard
                 id="aortic-visceral-renal"
                 title="Aortic, Visceral & Renal Artery Interventions"
+                desc="Aortic, visceral, and renal artery diseases can affect blood supply to vital organs, leading to serious complications. Advanced endovascular and surgical interventions restore circulation and prevent life-threatening outcomes."
                 items={[
                   "Abdominal and thoracic aortic aneurysm repair (EVAR / TEVAR)",
                   "Aortic angioplasty and stenting for complex aortic syndromes",
@@ -546,9 +597,11 @@ export default function Services() {
                   "Open mesenteric revascularization and ileo-SMA bypass procedures",
                 ]}
               />
+
               <ServiceCard
                 id="onco-vascular"
                 title="Onco-Vascular Surgery & Rare Vascular Disorders"
+                desc="Onco-vascular surgery manages tumors involving blood vessels and rare vascular disorders requiring complex care. Specialized surgical techniques ensure safe tumor removal while preserving critical blood flow."
                 items={[
                   "Vascular involvement in complex tumor resections (onco-vascular surgery)",
                   "IVC tumor thrombus management",
@@ -561,6 +614,7 @@ export default function Services() {
               <ServiceCard
                 id="vascular-trauma"
                 title="Vascular Trauma, Pediatric & Iatrogenic Vascular Injuries"
+                desc="Vascular injuries from trauma, medical procedures, or pediatric conditions require urgent and specialized care. Advanced surgical and endovascular techniques help restore blood flow and prevent life-threatening complications."
                 items={[
                   "Arterial and venous vascular trauma management",
                   "Pediatric vascular injuries",
@@ -573,6 +627,7 @@ export default function Services() {
               <ServiceCard
                 id="av-malformations"
                 title="AV Malformations & Complex Vascular Anomalies"
+                desc="Arteriovenous malformations (AVMs) are abnormal connections between arteries and veins that can disrupt normal blood flow. Advanced embolization and surgical treatments help control symptoms and prevent complications."
                 items={[
                   "Peripheral and visceral arteriovenous malformations (AVMs)",
                   "Endovascular embolization and surgical management of vascular malformations",
@@ -582,6 +637,7 @@ export default function Services() {
               <ServiceCard
                 id="ecmo-access"
                 title="ECMO Cannulation & Large-Bore Access Care"
+                desc="ECMO and large-bore access procedures require precise vascular expertise for critically ill patients. Specialized care ensures safe cannulation, optimal flow, and management of access-related complications."
                 items={[
                   "ECMO cannulation support",
                   "Management of large-bore arterial and venous access",
@@ -592,6 +648,7 @@ export default function Services() {
               <ServiceCard
                 id="special-interests"
                 title="Special Interests"
+                desc="Specialized expertise in complex and high-risk vascular conditions requiring advanced planning and precision. Focus on minimally invasive techniques and multidisciplinary care for optimal patient outcomes."
                 items={[
                   "High-risk and redo vascular procedures",
                   "Complex multi-level revascularization",
@@ -625,11 +682,13 @@ function ServiceCard({
   id,
   title,
   items,
+  desc,
   link,
 }: {
   id: string;
   title: string;
   items: ServiceItem[];
+  desc: string;
   link?: string;
 }) {
   return (
@@ -646,8 +705,10 @@ function ServiceCard({
         </h2>
       </div>
 
+      <p>{desc}</p>
+
       {/* Items */}
-      <ul className="grid sm:grid-cols-2 gap-4">
+      {/* <ul className="grid sm:grid-cols-2 gap-4">
         {items.map((item, i) => {
           // ✅ Normal item
           if (typeof item === "string") {
@@ -691,7 +752,7 @@ function ServiceCard({
             </li>
           );
         })}
-      </ul>
+      </ul> */}
 
       {/* Learn More Link */}
       {link && (

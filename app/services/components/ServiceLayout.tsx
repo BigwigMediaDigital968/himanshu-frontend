@@ -6,7 +6,6 @@ import FinalCTA from "@/app/components/CTA";
 import FloatingContactActions from "@/app/components/ContactActions";
 import PopupForm from "@/app/components/Popup";
 import ButtonFill from "@/app/components/Button";
-import Link from "next/link";
 import { useState } from "react";
 import PageTransition from "@/app/components/PageTransition";
 
