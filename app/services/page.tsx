@@ -182,6 +182,18 @@ export default function Services() {
                       id: "minor-ampu",
                     },
                     {
+                      label: "Amputation Surgery",
+                      id: "amp-sur",
+                    },
+                    {
+                      label: "Deep Vein Thrombosis",
+                      id: "deep-vein",
+                    },
+                    {
+                      label: "Pulmonary Embolism",
+                      id: "pul-emb",
+                    },
+                    {
                       label:
                         "Deep Vein Thrombosis (DVT) & Advanced Venous Interventions",
                       id: "dvt-advanced-venous",
@@ -418,6 +430,7 @@ export default function Services() {
                   "Long-term dialysis access planning and failing access management",
                 ]}
               />
+
               {/* central venous care */}
               <ServiceCard
                 id="central-venous-care"
@@ -539,6 +552,48 @@ export default function Services() {
                 id="minor-ampu"
                 title="Minor Amputations"
                 desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
+                items={[
+                  "Advanced diabetic foot management",
+                  "Surgical wound debridement",
+                  "Toe and forefoot amputations",
+                  "Integrated wound care and revascularization strategies",
+                ]}
+              />
+
+              {/* Amputation Surgery */}
+              <ServiceCard
+                id="amp-sur"
+                title="Amputation Surgery"
+                desc="Amputation surgery is performed when severe vascular disease, trauma, or infection compromises blood flow and threatens overall health. Timely surgical intervention, advanced techniques, and comprehensive rehabilitation support help preserve quality of life, prevent complications, and promote optimal recovery."
+                link="/services/amputation-surgery-in-gurgaon"
+                items={[
+                  "Advanced diabetic foot management",
+                  "Surgical wound debridement",
+                  "Toe and forefoot amputations",
+                  "Integrated wound care and revascularization strategies",
+                ]}
+              />
+
+              {/* Deep Vein Thrombosis */}
+              <ServiceCard
+                id="deep-vein"
+                title="Deep Vein Thrombosis"
+                desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
+                link="/services/deep-vein-thrombosis-treatment-in-gurgaon"
+                items={[
+                  "Advanced diabetic foot management",
+                  "Surgical wound debridement",
+                  "Toe and forefoot amputations",
+                  "Integrated wound care and revascularization strategies",
+                ]}
+              />
+
+              {/* Deep Vein Thrombosis */}
+              <ServiceCard
+                id="pul-emb"
+                title="Pulmonary Embolism"
+                desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
+                link="/services/pulmonary-embolism-treatment-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
                   "Surgical wound debridement",
