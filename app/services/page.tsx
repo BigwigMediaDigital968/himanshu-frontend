@@ -24,8 +24,6 @@ export default function Services() {
 
   return (
     <>
-      {/* SEO Meta Tags */}
-
       <title>
         Vascular Surgery Treatments in Gurgaon | AV Fistula, Varicose Veins, PAD
       </title>
