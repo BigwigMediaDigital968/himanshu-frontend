@@ -192,8 +192,11 @@ export default function Services() {
                       id: "pul-emb",
                     },
                     {
-                      label:
-                        "Deep Vein Thrombosis (DVT) & Advanced Venous Interventions",
+                      label: "Abdominal Aortic Aneurysm",
+                      id: "abd-aor",
+                    },
+                    {
+                      label: "Advanced Venous Interventions",
                       id: "dvt-advanced-venous",
                     },
                     {
@@ -209,8 +212,19 @@ export default function Services() {
                       id: "onco-vascular",
                     },
                     {
-                      label:
-                        "Vascular Trauma, Pediatric & Iatrogenic Vascular Injuries",
+                      label: "Vascular Trauma",
+                      id: "vas-tra",
+                    },
+                    {
+                      label: "ONCO Vascular Surgery",
+                      id: "onc-vas",
+                    },
+                    {
+                      label: "Arteriovenous Malformation",
+                      id: "art-mal",
+                    },
+                    {
+                      label: "Pediatric & Iatrogenic Vascular Injuries",
                       id: "vascular-trauma",
                     },
                     {
@@ -586,12 +600,68 @@ export default function Services() {
                 ]}
               />
 
-              {/* Deep Vein Thrombosis */}
+              {/* Pulmonary Embolism */}
               <ServiceCard
                 id="pul-emb"
                 title="Pulmonary Embolism"
                 desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
                 link="/services/pulmonary-embolism-treatment-in-gurgaon"
+                items={[
+                  "Advanced diabetic foot management",
+                  "Surgical wound debridement",
+                  "Toe and forefoot amputations",
+                  "Integrated wound care and revascularization strategies",
+                ]}
+              />
+
+              {/* Abdominal Aortic Aneurysm */}
+              <ServiceCard
+                id="abd-aor"
+                title="Abdominal Aortic Aneurysm"
+                desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
+                link="/services/abdominal-aortic-aneurysm-treatment-in-gurgaon"
+                items={[
+                  "Advanced diabetic foot management",
+                  "Surgical wound debridement",
+                  "Toe and forefoot amputations",
+                  "Integrated wound care and revascularization strategies",
+                ]}
+              />
+
+              {/* Vascular Trauma Treatment  */}
+              <ServiceCard
+                id="vas-tra"
+                title="Vascular Trauma"
+                desc="Vascular trauma represents one of the most critical medical emergencies, involving damage to the body's blood vessels, arteries, veins, or capillaries that transport blood throughout the body."
+                link="/services/vascular-trauma-treatment-in-gurgaon"
+                items={[
+                  "Advanced diabetic foot management",
+                  "Surgical wound debridement",
+                  "Toe and forefoot amputations",
+                  "Integrated wound care and revascularization strategies",
+                ]}
+              />
+
+              {/* ONCO Vascular  */}
+              <ServiceCard
+                id="onc-vas"
+                title="ONCO Vascular Surgery"
+                desc="Vascular trauma represents one of the most critical medical emergencies, involving damage to the body's blood vessels, arteries, veins, or capillaries that transport blood throughout the body."
+                link="/services/onco-vascular-surgery-in-gurgaon"
+                items={[
+                  "Advanced diabetic foot management",
+                  "Surgical wound debridement",
+                  "Toe and forefoot amputations",
+                  "Integrated wound care and revascularization strategies",
+                ]}
+              />
+
+              {/* Arteriovenous Malformation  */}
+              <ServiceCard
+                id="art-mal"
+                title="Arteriovenous Malformation"
+                desc="Vascular trauma represents one of the most critical medical emergencies, involving damage to the body's blood vessels, arteries, veins, or capillaries that transport blood throughout the body."
+                link="/services/arteriovenous-malformation-treatment-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
                   "Surgical wound debridement",
