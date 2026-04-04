@@ -287,7 +287,7 @@ export default function Services() {
               <ServiceCard
                 id="varicose-veins"
                 title="Varicose Veins"
-                desc="Varicose veins are swollen, twisted veins caused by poor blood flow, leading to pain, heaviness, and visible vein changes. Minimally invasive treatments like laser and RFA effectively restore circulation with quick recovery."
+                desc="Varicose veins are swollen, twisted veins caused by poor blood circulation, leading to pain, heaviness, and visible veins. Advanced varicose veins treatment, like laser and RFA, offers safe, effective relief with faster recovery."
                 link="/services/varicose-veins-treatment-in-gurgaon"
                 items={[
                   "Varicose veins and chronic venous insufficiency",
@@ -314,7 +314,7 @@ export default function Services() {
               <ServiceCard
                 id="chronic-venous-disorders"
                 title="Chronic Venous Insufficiency"
-                desc="Chronic venous insufficiency occurs when leg veins fail to return blood efficiently, causing swelling, pain, skin changes, and ulcers. Advanced treatments like laser, RFA, and compression therapy improve circulation and promote healing."
+                desc="Chronic venous insufficiency occurs when leg veins cannot return blood properly, causing swelling, pain, skin changes, and ulcers. Advanced chronic venous insufficiency treatment improves circulation and prevents complications for long-term relief."
                 link="/services/chronic-venous-insufficiency-treatment-in-gurgaon"
                 items={[
                   "Varicose veins and chronic venous insufficiency",
@@ -341,7 +341,7 @@ export default function Services() {
               <ServiceCard
                 id="lymphatic-care"
                 title="Lymphatic Care"
-                desc="Lymphatic disorders cause fluid buildup (lymphedema), leading to swelling, discomfort, and recurrent infections. Specialized care including MLD, compression therapy, and advanced techniques helps improve drainage and reduce swelling."
+                desc="Lymphatic disorders can cause swelling, heaviness, and discomfort due to poor lymph flow. Expert lymphatic care and lymphedema treatment help reduce swelling, improve circulation, and enhance quality of life with personalized management."
                 link="/services/lymphatic-care-treatment-in-gurgaon"
                 items={[
                   "Varicose veins and chronic venous insufficiency",
@@ -368,7 +368,7 @@ export default function Services() {
               <ServiceCard
                 id="pelvic-venous-disorders"
                 title="Pelvic Venous Disorders"
-                desc="Pelvic venous disorders occur due to abnormal vein flow in the pelvis, causing chronic pain, varicosities, and discomfort. Minimally invasive embolization treatments effectively block faulty veins and relieve symptoms."
+                desc="Pelvic venous disorders occur due to enlarged pelvic veins, leading to chronic pelvic pain, heaviness, and discomfort. Advanced pelvic venous disorder treatment helps relieve symptoms and improve daily life with minimally invasive procedures."
                 link="/services/pelvic-venous-disorder-treatment-in-gurgaon"
                 items={[
                   "Pelvic Congestion Syndrome (PCS) due to pelvic venous reflux",
@@ -390,7 +390,7 @@ export default function Services() {
               <ServiceCard
                 id="gondal-vein-disease"
                 title="Gonadal Vein Disease"
-                desc="Gonadal vein disease leads to abnormal blood flow in ovarian or testicular veins, causing pelvic pain or varicocele. Minimally invasive embolization treatments effectively seal faulty veins and relieve symptoms."
+                desc="Gonadal vein disease occurs due to enlarged or faulty veins, causing pelvic pain, heaviness, and discomfort, especially in women. Advanced gonadal vein treatment provides effective relief through minimally invasive procedures. "
                 link="/services/gonadal-vein-disease-treatment-in-gurgaon"
                 items={[
                   "Pelvic Congestion Syndrome (PCS) due to pelvic venous reflux",
@@ -412,7 +412,7 @@ export default function Services() {
               <ServiceCard
                 id="av-fistula"
                 title="AV Fistula"
-                desc="AV fistula and dialysis access procedures create reliable blood flow for safe and effective dialysis treatment. Advanced techniques ensure long-term access function, fewer complications, and better patient outcomes."
+                desc="An AV fistula is a surgical connection between an artery and vein, created for effective dialysis access. Proper AV fistula care ensures better blood flow, fewer complications, and long-term function for patients undergoing kidney dialysis. "
                 link="/services/av-fistula-treatment-in-gurgaon"
                 items={[
                   "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
@@ -429,7 +429,7 @@ export default function Services() {
               <ServiceCard
                 id="dialysis-access"
                 title="Dialysis Access"
-                desc="AV fistula and dialysis access procedures create reliable blood flow for safe and effective dialysis treatment. Advanced techniques ensure long-term access function, fewer complications, and better patient outcomes."
+                desc="Dialysis access is a vital procedure for patients with kidney failure, allowing efficient blood flow during treatment. Options like AV fistula, graft, or catheter ensure safe and reliable dialysis access for long-term care."
                 link="/services/dialysis-access-treatment-in-gurgaon"
                 items={[
                   "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
@@ -447,7 +447,7 @@ export default function Services() {
               <ServiceCard
                 id="central-venous-care"
                 title="Central Venous Care"
-                desc="AV fistula and dialysis access procedures create reliable blood flow for safe and effective dialysis treatment. Advanced techniques ensure long-term access function, fewer complications, and better patient outcomes."
+                desc="Central venous care focuses on managing central veins used for dialysis and long-term treatments. Conditions like vein blockage or narrowing can affect blood flow, and timely central venous treatment helps maintain safe, effective access. "
                 link="/services/central-venous-care-treatment-in-gurgaon"
                 items={[
                   "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
@@ -465,7 +465,7 @@ export default function Services() {
               <ServiceCard
                 id="pad-art"
                 title="Peripheral Artery Disease (PAD)"
-                desc="Peripheral artery disease (PAD) reduces blood flow to the limbs, causing pain, ulcers, and risk of limb loss. Advanced angioplasty, stenting, and bypass procedures restore circulation and improve limb health."
+                desc="Peripheral artery disease (PAD) occurs when arteries narrow, reducing blood flow to the legs, causing pain, cramps, or slow-healing wounds. Early peripheral artery disease treatment improves circulation and prevents serious complications."
                 link="/services/peripheral-artery-disease-treatment-in-gurgaon"
                 items={[
                   "Peripheral arterial disease and critical limb ischemia",
@@ -500,7 +500,7 @@ export default function Services() {
               <ServiceCard
                 id="limb-salvage"
                 title="Advanced Limb Salvage"
-                desc="Advanced limb salvage focuses on restoring blood flow and healing non-healing wounds to prevent amputation. Combined endovascular and surgical techniques help save limbs and improve quality of life."
+                desc="Advanced limb salvage focuses on saving legs affected by severe infections, poor circulation, or non-healing wounds. Specialized advanced limb salvage treatment restores blood flow, promotes healing, and helps avoid amputation with timely care"
                 link="/services/limb-salvage-surgery-in-gurgaon"
                 items={[
                   "Peripheral arterial disease and critical limb ischemia",
@@ -535,7 +535,7 @@ export default function Services() {
               <ServiceCard
                 id="diabetic-foot"
                 title="Diabetic Foot"
-                desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
+                desc="Diabetic foot is a serious condition caused by poor circulation and nerve damage, leading to wounds, infections, or ulcers. Early diabetic foot treatment helps prevent complications and supports faster healing with proper care. "
                 link="/services/diabetic-foot-treatment-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -549,7 +549,7 @@ export default function Services() {
               <ServiceCard
                 id="wound-care"
                 title="Wound Care"
-                desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
+                desc="Wound care focuses on treating slow-healing or infected wounds caused by poor circulation, diabetes, or injury. Advanced wound care treatment promotes faster healing, prevents infection, and improves overall skin health with proper medical care. "
                 link="/services/diabetic-wound-care-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -576,7 +576,7 @@ export default function Services() {
               <ServiceCard
                 id="amp-sur"
                 title="Amputation Surgery"
-                desc="Amputation surgery is performed when severe vascular disease, trauma, or infection compromises blood flow and threatens overall health. Timely surgical intervention, advanced techniques, and comprehensive rehabilitation support help preserve quality of life, prevent complications, and promote optimal recovery."
+                desc="Amputation surgery is performed when severe infection or poor blood flow makes limb-saving difficult. Expert amputation care focuses on safety, faster recovery, and rehabilitation to help patients regain mobility and quality of life. "
                 link="/services/amputation-surgery-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -590,7 +590,7 @@ export default function Services() {
               <ServiceCard
                 id="deep-vein"
                 title="Deep Vein Thrombosis"
-                desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
+                desc="Deep vein thrombosis (DVT) occurs when a blood clot forms in deep veins, usually in the legs, causing pain and swelling. Early deep vein thrombosis treatment prevents serious complications like pulmonary embolism. "
                 link="/services/deep-vein-thrombosis-treatment-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -604,7 +604,7 @@ export default function Services() {
               <ServiceCard
                 id="pul-emb"
                 title="Pulmonary Embolism"
-                desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
+                desc="Pulmonary embolism is a serious condition where a blood clot blocks the arteries in the lungs, causing sudden breathlessness and chest pain. Immediate pulmonary embolism treatment is crucial to prevent life-threatening complications."
                 link="/services/pulmonary-embolism-treatment-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -618,7 +618,7 @@ export default function Services() {
               <ServiceCard
                 id="abd-aor"
                 title="Abdominal Aortic Aneurysm"
-                desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
+                desc="An abdominal aortic aneurysm is a bulging of the main artery in the abdomen that can rupture if untreated. Early abdominal aortic aneurysm treatment helps prevent serious complications with timely monitoring or minimally invasive repair. "
                 link="/services/abdominal-aortic-aneurysm-treatment-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -632,7 +632,7 @@ export default function Services() {
               <ServiceCard
                 id="vas-tra"
                 title="Vascular Trauma"
-                desc="Vascular trauma represents one of the most critical medical emergencies, involving damage to the body's blood vessels, arteries, veins, or capillaries that transport blood throughout the body."
+                desc="Vascular trauma refers to injury to blood vessels caused by accidents, cuts, or fractures, leading to bleeding or reduced blood flow. Timely vascular trauma treatment is crucial to restoring circulation and preventing complications."
                 link="/services/vascular-trauma-treatment-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -646,7 +646,7 @@ export default function Services() {
               <ServiceCard
                 id="onc-vas"
                 title="ONCO Vascular Surgery"
-                desc="Vascular trauma represents one of the most critical medical emergencies, involving damage to the body's blood vessels, arteries, veins, or capillaries that transport blood throughout the body."
+                desc="Onco vascular surgery focuses on managing blood vessels affected by cancer or tumor growth. Advanced onco vascular surgery helps safely remove tumors, restore blood flow, and support better treatment outcomes."
                 link="/services/onco-vascular-surgery-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -660,7 +660,7 @@ export default function Services() {
               <ServiceCard
                 id="art-mal"
                 title="Arteriovenous Malformation"
-                desc="Vascular trauma represents one of the most critical medical emergencies, involving damage to the body's blood vessels, arteries, veins, or capillaries that transport blood throughout the body."
+                desc="Arteriovenous malformation (AVM) is an abnormal connection between arteries and veins, disrupting normal blood flow and causing pain, swelling, or bleeding. Advanced arteriovenous malformation treatment helps manage symptoms and prevent complications."
                 link="/services/arteriovenous-malformation-treatment-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",

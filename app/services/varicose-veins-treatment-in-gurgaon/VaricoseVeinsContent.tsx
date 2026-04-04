@@ -152,35 +152,41 @@ export default function VaricoseVeinsContent() {
       desc: "Small incisions are made to safely remove superficial varicose veins.",
     },
     {
-      name: "Iliac Vein Stenting",
-      badge: "Hypertension",
-      badgeClass: "bg-orange-100 text-orange-700",
-      desc: "Used to treat venous hypertension by opening narrowed or compressed veins.",
+      name: "Radiofrequency Ablation (RFA)",
+      badge: "Advanced",
+      badgeClass: "bg-emerald-100 text-emerald-700",
+      desc: "A minimally invasive treatment that uses radiofrequency heat to seal damaged veins. Improves blood flow, reduces pain and swelling, and ensures faster recovery with minimal discomfort.",
     },
-    {
-      name: "Deep Vein Thrombolysis",
-      badge: "Clot Dissolution",
-      badgeClass: "bg-red-100 text-red-700",
-      desc: "A specialized procedure that dissolves dangerous clots in the deep veins.",
-    },
-    {
-      name: "DVT Mechanical Thrombectomy",
-      badge: "Clot Removal",
-      badgeClass: "bg-rose-100 text-rose-700",
-      desc: "Removes clots from deep veins using advanced medical devices.",
-    },
-    {
-      name: "IVC Filter Insertion & Retrieval",
-      badge: "Clot Prevention",
-      badgeClass: "bg-amber-100 text-amber-700",
-      desc: "Helps prevent blood clots from reaching the lungs.",
-    },
-    {
-      name: "Pulmonary Embolism Suction Thrombectomy",
-      badge: "Life-Saving",
-      badgeClass: "bg-red-100 text-red-700",
-      desc: "A life-saving procedure used to remove clots from the lungs.",
-    },
+    // {
+    //   name: "Iliac Vein Stenting",
+    //   badge: "Hypertension",
+    //   badgeClass: "bg-orange-100 text-orange-700",
+    //   desc: "Used to treat venous hypertension by opening narrowed or compressed veins.",
+    // },
+    // {
+    //   name: "Deep Vein Thrombolysis",
+    //   badge: "Clot Dissolution",
+    //   badgeClass: "bg-red-100 text-red-700",
+    //   desc: "A specialized procedure that dissolves dangerous clots in the deep veins.",
+    // },
+    // {
+    //   name: "DVT Mechanical Thrombectomy",
+    //   badge: "Clot Removal",
+    //   badgeClass: "bg-rose-100 text-rose-700",
+    //   desc: "Removes clots from deep veins using advanced medical devices.",
+    // },
+    // {
+    //   name: "IVC Filter Insertion & Retrieval",
+    //   badge: "Clot Prevention",
+    //   badgeClass: "bg-amber-100 text-amber-700",
+    //   desc: "Helps prevent blood clots from reaching the lungs.",
+    // },
+    // {
+    //   name: "Pulmonary Embolism Suction Thrombectomy",
+    //   badge: "Life-Saving",
+    //   badgeClass: "bg-red-100 text-red-700",
+    //   desc: "A life-saving procedure used to remove clots from the lungs.",
+    // },
   ];
 
   const BulletItem = ({

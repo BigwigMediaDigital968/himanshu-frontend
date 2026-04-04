@@ -16,7 +16,7 @@ import "swiper/css/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./components/Footer";
-import { CheckCircle2, ChevronDown, Stethoscope } from "lucide-react";
+import { CheckCircle2, ChevronDown, Scissors, Stethoscope } from "lucide-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import {
@@ -61,7 +61,27 @@ const faqs = [
   },
   {
     q: "What conditions are treated by Dr. Himanshu Verma?",
-    a: "Dr. Himanshu Verma treats a wide range of vascular conditions, including varicose veins, peripheral artery disease (PAD), diabetic foot and non-healing wounds, deep vein thrombosis (DVT), aortic and peripheral aneurysms, carotid artery disease, and dialysis access problems such as AV fistula blockage or failure.",
+    a: (
+      <>
+        Dr. Himanshu Verma treats a wide range of vascular conditions, including{" "}
+        <a
+          className="text-[#0b8d85]"
+          href="https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon"
+        >
+          varicose veins
+        </a>
+        ,{" "}
+        <a
+          className="text-[#0b8d85]"
+          href="https://www.drhimanshuverma.com/services/peripheral-artery-disease-treatment-in-gurgaon"
+        >
+          peripheral artery disease (PAD)
+        </a>
+        , diabetic foot and non-healing wounds, deep vein thrombosis (DVT),
+        aortic and peripheral aneurysms, carotid artery disease, and dialysis
+        access problems such as AV fistula blockage or failure.
+      </>
+    ),
   },
   {
     q: "What is endovascular treatment and how is it beneficial?",
@@ -73,74 +93,239 @@ const faqs = [
   },
 ];
 
+// const services = [
+//   {
+//     title: "Varicose Veins, Chronic Venous Disorders & Lymphatic Care",
+//     desc: "Comprehensive management of varicose veins, venous insufficiency, and lymphatic disorders using minimally invasive techniques.",
+//     icon: Droplets,
+//     link: "/services/varicose-veins-treatment-in-gurgaon",
+//   },
+//   {
+//     title: "Pelvic Venous Disorders & Gonadal Vein Disease",
+//     desc: "Advanced diagnosis and treatment of pelvic congestion syndrome and gonadal vein disorders causing chronic pelvic pain.",
+//     icon: HeartPulse,
+//     link: "/services/pelvic-venous-disorder-treatment-in-gurgaon",
+//   },
+//   {
+//     title: "AV Fistula, Dialysis Access & Central Venous Care",
+//     desc: "Creation, maintenance, and salvage of dialysis access including AV fistulas, grafts, and central venous interventions.",
+//     icon: Syringe,
+//     link: "/services/av-fistula-treatment-in-gurgaon",
+//   },
+//   {
+//     title: "Peripheral Artery Disease (PAD) & Advanced Limb Salvage",
+//     desc: "Endovascular and surgical treatment of PAD focused on restoring blood flow and preventing limb loss.",
+//     icon: ShieldPlus,
+//   },
+//   {
+//     title: "Diabetic Foot, Wound Care & Minor Amputations",
+//     desc: "Specialized care for diabetic foot ulcers, chronic wounds, infection control, and limb-preserving procedures.",
+//     icon: Footprints,
+//   },
+//   {
+//     title: "Deep Vein Thrombosis (DVT) & Advanced Venous Interventions",
+//     desc: "Expert management of acute and chronic DVT using catheter-based thrombolysis and venous reconstruction.",
+//     icon: Activity,
+//   },
+//   {
+//     title: "Pulmonary Embolism (PE) Management",
+//     desc: "Rapid diagnosis and minimally invasive treatment of pulmonary embolism to reduce mortality and complications.",
+//     icon: Wind,
+//   },
+//   {
+//     title: "Aortic, Visceral & Renal Artery Interventions",
+//     desc: "Endovascular treatment of complex aortic, visceral, and renal artery diseases using advanced stent technologies.",
+//     icon: Network,
+//   },
+//   {
+//     title: "Onco-Vascular Surgery & Rare Vascular Disorders",
+//     desc: "Specialized vascular procedures in oncology patients and management of rare and complex vascular conditions.",
+//     icon: Microscope,
+//   },
+//   {
+//     title: "Vascular Trauma, Pediatric & Iatrogenic Vascular Injuries",
+//     desc: "Emergency and reconstructive care for traumatic, pediatric, and procedure-related vascular injuries.",
+//     icon: Ambulance,
+//   },
+//   {
+//     title: "AV Malformations & Complex Vascular Anomalies",
+//     desc: "Multidisciplinary treatment of arteriovenous malformations and congenital vascular anomalies.",
+//     icon: GitBranch,
+//   },
+//   {
+//     title: "ECMO Cannulation & Large-Bore Access Care",
+//     desc: "Expert cannulation and management of ECMO and other large-bore vascular access systems in critical care.",
+//     icon: Cpu,
+//   },
+//   {
+//     title: "Special Interests",
+//     desc: "Focused expertise in advanced vascular techniques, complex cases, and emerging endovascular innovations.",
+//     icon: Star,
+//   },
+// ];
+
 const services = [
   {
-    title: "Varicose Veins, Chronic Venous Disorders & Lymphatic Care",
-    desc: "Comprehensive management of varicose veins, venous insufficiency, and lymphatic disorders using minimally invasive techniques.",
+    title: "Varicose Veins",
+    desc: "Minimally invasive treatment for varicose veins with faster recovery and improved circulation.",
     icon: Droplets,
     link: "/services/varicose-veins-treatment-in-gurgaon",
   },
   {
-    title: "Pelvic Venous Disorders & Gonadal Vein Disease",
-    desc: "Advanced diagnosis and treatment of pelvic congestion syndrome and gonadal vein disorders causing chronic pelvic pain.",
+    title: "Chronic Venous Insufficiency",
+    desc: "Advanced care for long-term venous disorders causing swelling, pain, and skin changes.",
+    icon: Activity,
+    link: "/services/chronic-venous-insufficiency-treatment-in-gurgaon",
+  },
+  {
+    title: "Lymphatic Care",
+    desc: "Comprehensive management of lymphedema and lymphatic drainage disorders.",
+    icon: GitBranch,
+    link: "/services/lymphatic-care-treatment-in-gurgaon",
+  },
+  {
+    title: "Pelvic Venous Disorders",
+    desc: "Treatment for pelvic congestion syndrome and chronic pelvic pain due to vein issues.",
     icon: HeartPulse,
     link: "/services/pelvic-venous-disorder-treatment-in-gurgaon",
   },
   {
-    title: "AV Fistula, Dialysis Access & Central Venous Care",
-    desc: "Creation, maintenance, and salvage of dialysis access including AV fistulas, grafts, and central venous interventions.",
+    title: "Gonadal Vein Disease",
+    desc: "Targeted therapy for gonadal vein reflux and associated pelvic symptoms.",
+    icon: Network,
+    link: "/services/gonadal-vein-disease-treatment-in-gurgaon",
+  },
+  {
+    title: "AV Fistula",
+    desc: "Creation and repair of AV fistulas for effective dialysis access.",
     icon: Syringe,
     link: "/services/av-fistula-treatment-in-gurgaon",
   },
   {
-    title: "Peripheral Artery Disease (PAD) & Advanced Limb Salvage",
-    desc: "Endovascular and surgical treatment of PAD focused on restoring blood flow and preventing limb loss.",
+    title: "Dialysis Access",
+    desc: "Specialized procedures to establish and maintain reliable dialysis access.",
+    icon: Cpu,
+    link: "/services/dialysis-access-treatment-in-gurgaon",
+  },
+  {
+    title: "Central Venous Care",
+    desc: "Expert care for central venous lines and vascular access complications.",
     icon: ShieldPlus,
+    link: "/services/central-venous-care-treatment-in-gurgaon",
   },
   {
-    title: "Diabetic Foot, Wound Care & Minor Amputations",
-    desc: "Specialized care for diabetic foot ulcers, chronic wounds, infection control, and limb-preserving procedures.",
-    icon: Footprints,
-  },
-  {
-    title: "Deep Vein Thrombosis (DVT) & Advanced Venous Interventions",
-    desc: "Expert management of acute and chronic DVT using catheter-based thrombolysis and venous reconstruction.",
+    title: "Peripheral Artery Disease (PAD)",
+    desc: "Advanced treatment to restore blood flow and reduce limb risk.",
     icon: Activity,
+    link: "/services/peripheral-artery-disease-treatment-in-gurgaon",
+  },
+  {
+    title: "Advanced Limb Salvage",
+    desc: "Cutting-edge techniques to prevent amputations and save limbs.",
+    icon: ShieldPlus,
+    link: "/services/limb-salvage-surgery-in-gurgaon",
+  },
+  {
+    title: "Diabetic Foot",
+    desc: "Comprehensive diabetic foot care to prevent ulcers and complications.",
+    icon: Footprints,
+    link: "/services/diabetic-foot-treatment-in-gurgaon",
+  },
+  {
+    title: "Wound Care",
+    desc: "Specialized management of chronic and non-healing wounds.",
+    icon: Activity,
+    link: "/services/diabetic-wound-care-in-gurgaon",
+  },
+  {
+    title: "Minor Amputations",
+    desc: "Precision procedures for infection control and limb preservation.",
+    icon: Scissors,
+    link: "/services/amputation-surgery-in-gurgaon",
+  },
+  {
+    title: "Amputation Surgery",
+    desc: "Advanced surgical care for necessary limb removal with rehabilitation focus.",
+    icon: Ambulance,
+    link: "/services/amputation-surgery-in-gurgaon",
+  },
+  {
+    title: "Deep Vein Thrombosis",
+    desc: "Early diagnosis and treatment of blood clots in deep veins.",
+    icon: Activity,
+    link: "/services/deep-vein-thrombosis-treatment-in-gurgaon",
+  },
+  {
+    title: "Pulmonary Embolism",
+    desc: "Emergency care for life-threatening lung clots.",
+    icon: Wind,
+    link: "/services/pulmonary-embolism-treatment-in-gurgaon",
+  },
+  {
+    title: "Abdominal Aortic Aneurysm",
+    desc: "Minimally invasive repair of life-threatening aortic aneurysms.",
+    icon: Network,
+    link: "/services/abdominal-aortic-aneurysm-treatment-in-gurgaon",
+  },
+  {
+    title: "Advanced Venous Interventions",
+    desc: "Complex venous reconstruction and catheter-based therapies.",
+    icon: Activity,
+    link: "/services/deep-vein-thrombosis-treatment-in-gurgaon",
   },
   {
     title: "Pulmonary Embolism (PE) Management",
-    desc: "Rapid diagnosis and minimally invasive treatment of pulmonary embolism to reduce mortality and complications.",
+    desc: "Comprehensive PE management using advanced catheter-based techniques.",
     icon: Wind,
+    link: "/services/pulmonary-embolism-treatment-in-gurgaon",
   },
   {
     title: "Aortic, Visceral & Renal Artery Interventions",
-    desc: "Endovascular treatment of complex aortic, visceral, and renal artery diseases using advanced stent technologies.",
+    desc: "Treatment of complex arterial diseases using endovascular techniques.",
     icon: Network,
+    link: "/services/vascular-trauma-treatment-in-gurgaon", // adjust if you create specific page
   },
   {
     title: "Onco-Vascular Surgery & Rare Vascular Disorders",
-    desc: "Specialized vascular procedures in oncology patients and management of rare and complex vascular conditions.",
+    desc: "Specialized vascular procedures in cancer and rare conditions.",
     icon: Microscope,
+    link: "/services/onco-vascular-surgery-in-gurgaon",
   },
   {
-    title: "Vascular Trauma, Pediatric & Iatrogenic Vascular Injuries",
-    desc: "Emergency and reconstructive care for traumatic, pediatric, and procedure-related vascular injuries.",
+    title: "Vascular Trauma",
+    desc: "Emergency care for vascular injuries and trauma cases.",
     icon: Ambulance,
+    link: "/services/vascular-trauma-treatment-in-gurgaon",
+  },
+  {
+    title: "Arteriovenous Malformation",
+    desc: "Treatment of abnormal artery-vein connections.",
+    icon: GitBranch,
+    link: "/services/arteriovenous-malformation-treatment-in-gurgaon",
+  },
+  {
+    title: "Pediatric & Iatrogenic Vascular Injuries",
+    desc: "Special care for vascular injuries in children and medical complications.",
+    icon: Activity,
+    link: "/services/vascular-trauma-treatment-in-gurgaon",
   },
   {
     title: "AV Malformations & Complex Vascular Anomalies",
-    desc: "Multidisciplinary treatment of arteriovenous malformations and congenital vascular anomalies.",
+    desc: "Advanced multidisciplinary care for vascular anomalies.",
     icon: GitBranch,
+    link: "/services/arteriovenous-malformation-treatment-in-gurgaon",
   },
   {
     title: "ECMO Cannulation & Large-Bore Access Care",
-    desc: "Expert cannulation and management of ECMO and other large-bore vascular access systems in critical care.",
+    desc: "Critical care vascular access including ECMO support.",
     icon: Cpu,
+    link: "/services/av-dialysis-central-care",
   },
   {
     title: "Special Interests",
-    desc: "Focused expertise in advanced vascular techniques, complex cases, and emerging endovascular innovations.",
+    desc: "Focus on innovation, research, and complex vascular procedures.",
     icon: Star,
+    link: "/services",
   },
 ];
 
@@ -336,6 +521,13 @@ export default function Home() {
 
     // Cleanup (important)
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
   }, []);
 
   return (

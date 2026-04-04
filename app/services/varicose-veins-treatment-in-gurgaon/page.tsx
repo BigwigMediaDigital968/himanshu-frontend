@@ -1,3 +1,4 @@
+import ServiceLayout from "../components/ServiceLayout";
 import ServiceLayout3 from "../components/ServiceLayout3";
 import VaricoseVeinsContent from "./VaricoseVeinsContent";
 import { Metadata } from "next";
@@ -273,13 +274,12 @@ export default function VaricoseVeinsPage() {
         }}
       />
 
-      <ServiceLayout3
+      <ServiceLayout
         title="Varicose Veins Treatment in Gurgaon | Dr. Himanshu Verma"
         description="Advanced diagnosis and minimally invasive treatment options for varicose veins, spider veins, and chronic venous disorders."
-        active="varicose"
       >
         <VaricoseVeinsContent />
-      </ServiceLayout3>
+      </ServiceLayout>
     </>
   );
 }
