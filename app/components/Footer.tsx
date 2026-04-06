@@ -45,7 +45,7 @@ export default function Footer() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email }),
-        }
+        },
       );
 
       const data = await res.json();
@@ -178,19 +178,23 @@ export default function Footer() {
             <Link href="/about">About Us</Link>
           </div>
           <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
-            <Link href="/services">Services</Link>
+            <Link href="/blogs">Blogs</Link>
           </div>
           <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
-            <Link href="/gallery">Gallery</Link>
+            <Link href="/services">Services in Gurgaon</Link>
           </div>
           <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
-            <Link href="/podcast">Doc Talk Show</Link>
+            <Link href="/services/varicose-vein-treatment-in-delhi">
+              Services in Delhi
+            </Link>
+          </div>
+          <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
+            <Link href="/services/varicose-vein-treatment-in-varanasi">
+              Services in Varansi
+            </Link>
           </div>
           <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
             <Link href="/workshop/avf-care">AVF Care Workshop</Link>
-          </div>
-          <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
-            <Link href="/blogs">Blogs</Link>
           </div>
         </div>
 
