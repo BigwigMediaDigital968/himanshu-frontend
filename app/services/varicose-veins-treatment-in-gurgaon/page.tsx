@@ -82,7 +82,7 @@ const faqSchema = {
 export const metadata: Metadata = {
   title: "Varicose Veins Treatment in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Advanced varicose veins treatment by Dr. Himanshu Verma. Get expert diagnosis and minimally invasive care including EVLT, foam sclerotherapy & medical glue treatment.",
+    "Get painless varicose veins treatment in Gurgaon by Dr. Himanshu Verma at Fortis. Laser, RFA & quick recovery with minimal downtime. Book appointment today.",
   keywords: [
     "varicose veins treatment in Gurgaon",
     "varicose vein specialist in Gurgaon",

@@ -9,9 +9,9 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Diabetic Foot Treatment in Gurgaon",
+  title: "Diabetic Foot Treatment in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Expert Diabetic Foot Treatment in Gurgaon by Dr. Himanshu Verma. Effective care for foot ulcers, infections, and diabetic complications.",
+    "Expert diabetic foot treatment in Gurgaon by Dr. Himanshu Verma at Fortis. Advanced wound care & revascularization to prevent amputation. Book appointment today.",
   keywords: [
     "Diabetic Foot Treatment in Gurgaon",
     "diabetic foot specialist in Gurgaon",

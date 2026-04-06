@@ -9,9 +9,9 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Lipedema Treatment in Gurgaon | Symptoms & Treatment",
+  title: "Lipedema Treatment in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Discover Lipedema Treatment in Gurgaon, its symptoms, causes, and treatments like MLD, compression therapy, and CDT to reduce swelling and pain.",
+    "Struggling with stubborn leg swelling? Get advanced lipedema treatment in Gurgaon by Dr. Himanshu Verma at Fortis with lymphatic therapy & compression care. Book consultation.",
   keywords: [
     "Lipedema Treatment in Gurgaon",
     "lipedema symptoms",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lipedema Treatment in Gurgaon | Symptoms & Treatment",
     description:
-      "Discover Lipedema Treatment in Gurgaon, its symptoms, causes, and treatments like MLD, compression therapy, and CDT to reduce swelling and pain.",
+      "Struggling with stubborn leg swelling? Get advanced lipedema treatment in Gurgaon by Dr. Himanshu Verma at Fortis with lymphatic therapy & compression care. Book consultation.",
     url: PAGE_URL,
     siteName: "Dr. Himanshu Verma",
     images: [

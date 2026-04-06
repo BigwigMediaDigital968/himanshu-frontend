@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "https://www.drhimanshuverma.com/images/varicose-vein-treatment-varanasi-og.jpg",
+        url: "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg",
         width: 1200,
         height: 630,
         alt: "Varicose Vein Treatment in Varanasi by Dr. Himanshu Verma",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description:
       "Expert varicose vein care in Varanasi — EVLT, Foam Sclerotherapy, Medical Glue & RFA. Book your consultation today.",
     images: [
-      "https://www.drhimanshuverma.com/images/varicose-vein-treatment-varanasi-og.jpg",
+      "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg",
     ],
   },
   robots: {

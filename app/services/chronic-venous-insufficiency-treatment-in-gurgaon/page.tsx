@@ -9,9 +9,10 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Chronic Venous Insufficiency in Gurgaon | Dr. Himanshu Verma",
+  title:
+    "Chronic Venous Insufficiency Treatment in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Advanced diagnosis and minimally invasive treatment for Chronic Venous Insufficiency (CVI) in Gurgaon including swelling, pain, and venous ulcers.",
+    "Relief from leg swelling, pain & venous ulcers with expert CVI treatment in Gurgaon. Dr. Himanshu Verma at Fortis offers advanced RFA & compression therapy. Consult today.",
   keywords: [
     "chronic venous insufficiency treatment Gurgaon",
     "CVI treatment Gurgaon",

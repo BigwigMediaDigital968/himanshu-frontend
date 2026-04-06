@@ -45,12 +45,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Dialysis Access Surgery in Gurgaon | Dr. Himanshu Verma",
+    title: "Dialysis Access Surgeon in Gurgaon | Dr. Himanshu Verma",
     description:
-      "Safe and reliable AV fistula, graft, and catheter solutions for dialysis patients.",
+      "Consult top dialysis access surgeon in Gurgaon – Dr. Himanshu Verma at Fortis. Expert AV fistula, graft placement & long-term access management. Schedule your visit today.",
     images: [OG_IMAGE],
-    site: "@YourTwitterHandle", // 🔁 Replace if available
-    creator: "@YourTwitterHandle", // 🔁 Replace if available
   },
 
   robots: {

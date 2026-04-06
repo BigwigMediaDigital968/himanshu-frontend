@@ -11,7 +11,7 @@ const OG_IMAGE =
 export const metadata: Metadata = {
   title: "Pelvic Venous Disorders Treatment in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Advanced diagnosis and minimally invasive treatment for pelvic venous disorders and pelvic congestion syndrome (PCS) in Gurgaon.",
+    "Chronic pelvic pain? Consult Dr. Himanshu Verma in Gurgaon at Fortis for minimally invasive embolization treatment for pelvic venous disorders. Safe & effective care. Book now.",
   keywords: [
     "pelvic venous disorders treatment Gurgaon",
     "pelvic congestion syndrome treatment Gurgaon",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pelvic Venous Disorders Treatment in Gurgaon",
     description:
-      "Expert care for pelvic congestion syndrome (PCS) including pelvic vein embolization.",
+      "Chronic pelvic pain? Consult Dr. Himanshu Verma in Gurgaon at Fortis for minimally invasive embolization treatment for pelvic venous disorders. Safe & effective care. Book now.",
     url: PAGE_URL,
     siteName: "Dr. Himanshu Verma",
     images: [

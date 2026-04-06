@@ -554,15 +554,15 @@ export default function Home() {
 
       {/* SEO Meta Data */}
       <title>
-        Dr. Himanshu Verma | Vascular & Endovascular Surgeon in Gurgaon
+        Vascular & Endovascular Surgeon in Gurgaon | Dr. Himanshu Verma
       </title>
       <meta
         name="title"
-        content="Dr. Himanshu Verma | Vascular & Endovascular Surgeon in Gurgaon"
+        content="Vascular & Endovascular Surgeon in Gurgaon | Dr. Himanshu Verma"
       />
       <meta
         name="description"
-        content="Dr. Himanshu Verma is a leading Vascular & Endovascular Surgeon in Gurgaon with 17+ years’ experience, specializing in AV fistula, varicose veins, PAD & limb salvage."
+        content="Dr. Himanshu Verma, leading Vascular Surgeon at Fortis Gurgaon with 17+ years experience & 5000+ surgeries. Advanced, minimally invasive care. Book consultation today."
       />
 
       <meta

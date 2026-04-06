@@ -9,9 +9,9 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Gonadal Vein Disease Treatment in Gurgaon",
+  title: "Gonadal Vein Disease Treatment in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Get expert Gonadal Vein Disease Treatment in Gurgaon by Dr. Himanshu Verma. Advanced diagnosis and minimally invasive care for pelvic vein disorders.",
+    "Expert treatment for ovarian vein reflux & varicocele in Gurgaon by Dr. Himanshu Verma at Fortis. Advanced embolization for lasting pain relief. Schedule appointment today.",
   keywords: [
     "Gonadal Vein Disease Treatment in Gurgaon",
     "Gonadal vein disease treatment",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Gonadal Vein Disease Treatment in Gurgaon",
+    title: "Gonadal Vein Disease Treatment in Gurgaon | Dr. Himanshu Verma",
     description:
       "Specialized minimally invasive embolization for ovarian and testicular vein reflux disorders in Gurgaon.",
     url: PAGE_URL,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Gonadal Vein Disease Treatment in Gurgaon",
+    title: "Gonadal Vein Disease Treatment in Gurgaon | Dr. Himanshu Verma",
     description:
       "Expert embolization treatment for ovarian and testicular vein reflux.",
     images: [OG_IMAGE],

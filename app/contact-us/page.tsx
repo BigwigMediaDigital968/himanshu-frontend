@@ -17,6 +17,77 @@ import FloatingContactActions from "../components/ContactActions";
 export default function About() {
   const [openPopup, setOpenPopup] = useState(false);
 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [disease, setDisease] = useState("");
+  const [message, setMessage] = useState("");
+  const [images, setImages] = useState<File[]>([]);
+  const [pdf, setPdf] = useState<File | null>(null);
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
+
+  // FILE HANDLER
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    if (!files.length) return;
+
+    const pdfFile = files.find((f) => f.type === "application/pdf");
+    const imageFiles = files.filter((f) => f.type.startsWith("image/"));
+
+    if (pdfFile && imageFiles.length > 0) {
+      alert("Upload either images OR a PDF");
+      e.target.value = "";
+      return;
+    }
+
+    if (pdfFile) {
+      setPdf(pdfFile);
+      setImages([]);
+    } else {
+      setImages(imageFiles);
+      setPdf(null);
+    }
+  };
+
+  // SUBMIT
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    try {
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      formData.append("disease", disease);
+      formData.append("message", message);
+
+      images.forEach((img) => formData.append("images", img));
+      if (pdf) formData.append("report", pdf);
+
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE}/appointment`,
+        {
+          method: "POST",
+          body: formData,
+        },
+      );
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message);
+
+      setSuccess(true);
+    } catch (err: any) {
+      setError(err.message || "Submission failed");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   // INITIALIZE AOS
   useEffect(() => {
     AOS.init({
@@ -138,7 +209,7 @@ export default function About() {
               Send Us a Message
             </h3>
 
-            <form className="space-y-2">
+            {/* <form className="space-y-2">
               <input
                 type="text"
                 placeholder="Full Name"
@@ -227,7 +298,89 @@ export default function About() {
               </div>
 
               <ButtonFill type="submit" text="Submit" className="w-full" />
-            </form>
+            </form> */}
+            {!success ? (
+              <form className="space-y-3" onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-[var(--med-border)] focus:ring-2 focus:ring-[var(--med-primary)] outline-none"
+                />
+
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-[var(--med-border)] focus:ring-2 focus:ring-[var(--med-primary)] outline-none"
+                />
+
+                <PhoneInput
+                  country="in"
+                  value={phone}
+                  onChange={setPhone}
+                  enableSearch
+                  countryCodeEditable={false}
+                  containerClass="!w-full"
+                  inputClass="!w-full !h-[48px]"
+                />
+
+                <select
+                  value={disease}
+                  onChange={(e) => setDisease(e.target.value)}
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300"
+                >
+                  <option value="">Select Disease</option>
+                  <option value="Varicose Vein Treatments">
+                    Varicose Vein Treatments
+                  </option>
+                  <option value="Dialysis Access">Dialysis Access</option>
+                  <option value="Peripheral Artery Disease">
+                    Peripheral Artery Disease
+                  </option>
+                  <option value="Venous Care">Venous Care</option>
+                  <option value="Diabetic Foot">Diabetic Foot</option>
+                </select>
+
+                <textarea
+                  rows={4}
+                  placeholder="Your Message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="w-full px-4 py-3 rounded-lg border border-[var(--med-border)] focus:ring-2 focus:ring-[var(--med-primary)] outline-none resize-none"
+                />
+
+                <input
+                  type="file"
+                  accept="application/pdf,image/*"
+                  multiple
+                  onChange={handleFileChange}
+                  className="w-full px-4 py-2.5 rounded-lg border text-sm"
+                />
+
+                {error && <p className="text-red-500 text-sm">{error}</p>}
+
+                <ButtonFill
+                  type="submit"
+                  text={loading ? "Submitting..." : "Send Message"}
+                  className="w-full"
+                />
+              </form>
+            ) : (
+              <div className="text-center py-10">
+                <h2 className="text-xl font-bold text-green-600 mb-2">
+                  Message Sent 🎉
+                </h2>
+                <p className="text-gray-600">
+                  Our team will contact you shortly.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>

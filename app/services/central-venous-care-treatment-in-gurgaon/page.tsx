@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Central Venous Care in Gurgaon | Central Venous Catheter Treatment",
+    title: "Central Venous Care in Gurgaon | Dr. Himanshu Verma",
     description:
-      "Expert Central Venous Care in Gurgaon including central venous catheter placement and advanced vascular procedures.",
+      "Safe & advanced central venous catheter treatment in Gurgaon by Dr. Himanshu Verma at Fortis. Trusted care for dialysis access management. Book now.",
     url: PAGE_URL,
     siteName: "Dr. Himanshu Verma",
     images: [

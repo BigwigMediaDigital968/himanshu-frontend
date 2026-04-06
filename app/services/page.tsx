@@ -24,18 +24,16 @@ export default function Services() {
 
   return (
     <>
-      <title>
-        Vascular Surgery Treatments in Gurgaon | AV Fistula, Varicose Veins, PAD
-      </title>
+      <title>Vascular Surgery Treatments in Gurgaon | Dr. Himanshu Verma</title>
 
       <meta
         name="title"
-        content="Vascular Surgery Treatments in Gurgaon | AV Fistula, Varicose Veins, PAD"
+        content="Vascular Surgery Treatments in Gurgaon | Dr. Himanshu Verma"
       />
 
       <meta
         name="description"
-        content="Explore advanced vascular surgery treatments in Gurgaon including AV fistula surgery, dialysis access, varicose veins laser treatment, peripheral arterial disease (PAD), diabetic foot care and limb salvage procedures by Dr. Himanshu Verma."
+        content="Looking for the best vascular surgeon in Gurgaon? Consult Dr. Himanshu Verma at Fortis for advanced treatment of varicose veins, PAD, DVT & more. Schedule now."
       />
 
       <meta
