@@ -168,5 +168,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${SITE_URL}/services/varicose-vein-treatment-in-delhi`,
+      lastModified: today,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/services/varicose-vein-treatment-in-varanasi`,
+      lastModified: today,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }
