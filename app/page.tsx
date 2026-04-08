@@ -49,6 +49,7 @@ import FloatingContactActions from "./components/ContactActions";
 import himanshu from "./assets/logo-removebg-preview.png";
 import Link from "next/link";
 import partners from "./assets/ayusync.webp";
+import ServiceTable from "./components/ServiceTable";
 
 const faqs = [
   {
@@ -645,8 +646,14 @@ export default function Home() {
             </p>
 
             <p className="text-[var(--med-text)]/90 leading-relaxed text-justify">
-              He specializes in AV fistula and dialysis access surgery, varicose
-              veins, peripheral arterial disease, diabetic foot care, and limb
+              He specializes in AV fistula and dialysis access surgery,{" "}
+              <a
+                className="text-[var(--med-primary)]"
+                href="services/varicose-veins-treatment-in-gurgaon"
+              >
+                varicose veins
+              </a>
+              , peripheral arterial disease, diabetic foot care, and limb
               salvage, using advanced minimally invasive, endovascular, and
               hybrid techniques. Known for his patient-centric, evidence-based
               approach, Dr. Verma focuses on durable outcomes, limb
@@ -1166,6 +1173,7 @@ export default function Home() {
         </div>{" "}
       </section>
 
+      {/* FAQs */}
       <section
         className="py-12 "
         style={{
@@ -1213,6 +1221,7 @@ export default function Home() {
       </section>
 
       <FinalCTA />
+      <ServiceTable />
       <Footer />
 
       <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />

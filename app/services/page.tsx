@@ -193,22 +193,22 @@ export default function Services() {
                       label: "Abdominal Aortic Aneurysm",
                       id: "abd-aor",
                     },
-                    {
-                      label: "Advanced Venous Interventions",
-                      id: "dvt-advanced-venous",
-                    },
-                    {
-                      label: "Pulmonary Embolism (PE) Management",
-                      id: "pulmonary-embolism",
-                    },
-                    {
-                      label: "Aortic, Visceral & Renal Artery Interventions",
-                      id: "aortic-visceral-renal",
-                    },
-                    {
-                      label: "Onco-Vascular Surgery & Rare Vascular Disorders",
-                      id: "onco-vascular",
-                    },
+                    // {
+                    //   label: "Advanced Venous Interventions",
+                    //   id: "dvt-advanced-venous",
+                    // },
+                    // {
+                    //   label: "Pulmonary Embolism (PE) Management",
+                    //   id: "pulmonary-embolism",
+                    // },
+                    // {
+                    //   label: "Aortic, Visceral & Renal Artery Interventions",
+                    //   id: "aortic-visceral-renal",
+                    // },
+                    // {
+                    //   label: "Onco-Vascular Surgery & Rare Vascular Disorders",
+                    //   id: "onco-vascular",
+                    // },
                     {
                       label: "Vascular Trauma",
                       id: "vas-tra",
@@ -221,22 +221,22 @@ export default function Services() {
                       label: "Arteriovenous Malformation",
                       id: "art-mal",
                     },
-                    {
-                      label: "Pediatric & Iatrogenic Vascular Injuries",
-                      id: "vascular-trauma",
-                    },
-                    {
-                      label: "AV Malformations & Complex Vascular Anomalies",
-                      id: "av-malformations",
-                    },
-                    {
-                      label: "ECMO Cannulation & Large-Bore Access Care",
-                      id: "ecmo-access",
-                    },
-                    {
-                      label: "Special Interests",
-                      id: "special-interests",
-                    },
+                    // {
+                    //   label: "Pediatric & Iatrogenic Vascular Injuries",
+                    //   id: "vascular-trauma",
+                    // },
+                    // {
+                    //   label: "AV Malformations & Complex Vascular Anomalies",
+                    //   id: "av-malformations",
+                    // },
+                    // {
+                    //   label: "ECMO Cannulation & Large-Bore Access Care",
+                    //   id: "ecmo-access",
+                    // },
+                    // {
+                    //   label: "Special Interests",
+                    //   id: "special-interests",
+                    // },
                   ].map((item, i) => (
                     <li
                       key={i}
@@ -557,19 +557,6 @@ export default function Services() {
                 ]}
               />
 
-              {/* Minor Ampu */}
-              <ServiceCard
-                id="minor-ampu"
-                title="Minor Amputations"
-                desc="Diabetic foot conditions can lead to non-healing wounds, infections, and risk of amputation if untreated. Comprehensive wound care, revascularization, and timely interventions help preserve function and prevent complications."
-                items={[
-                  "Advanced diabetic foot management",
-                  "Surgical wound debridement",
-                  "Toe and forefoot amputations",
-                  "Integrated wound care and revascularization strategies",
-                ]}
-              />
-
               {/* Amputation Surgery */}
               <ServiceCard
                 id="amp-sur"
@@ -665,117 +652,6 @@ export default function Services() {
                   "Surgical wound debridement",
                   "Toe and forefoot amputations",
                   "Integrated wound care and revascularization strategies",
-                ]}
-              />
-
-              <ServiceCard
-                id="dvt-advanced-venous"
-                title="Deep Vein Thrombosis (DVT) & Advanced Venous Interventions"
-                desc="Deep vein thrombosis (DVT) involves blood clots in deep veins, causing pain, swelling, and risk of serious complications. Advanced treatments like thrombolysis, thrombectomy, and stenting help restore normal blood flow."
-                items={[
-                  "Acute and chronic deep vein thrombosis (DVT)",
-                  "Post-thrombotic syndrome management",
-                  "Catheter-directed thrombolysis",
-                  "Mechanical thrombectomy for venous thrombosis",
-                  "Venous stenting for chronic venous obstruction",
-                ]}
-              />
-
-              <ServiceCard
-                id="pulmonary-embolism"
-                title="Pulmonary Embolism (PE) Management"
-                desc="Pulmonary embolism is a serious condition where blood clots block arteries in the lungs, potentially life-threatening. Rapid diagnosis and advanced catheter-based treatments help restore blood flow and improve survival."
-                items={[
-                  "Comprehensive pulmonary embolism management under a multidisciplinary Pulmonary Embolism Response Team (PERT) program",
-                  "Catheter-based interventions in selected high-risk pulmonary embolism cases",
-                ]}
-              />
-
-              <ServiceCard
-                id="aortic-visceral-renal"
-                title="Aortic, Visceral & Renal Artery Interventions"
-                desc="Aortic, visceral, and renal artery diseases can affect blood supply to vital organs, leading to serious complications. Advanced endovascular and surgical interventions restore circulation and prevent life-threatening outcomes."
-                items={[
-                  "Abdominal and thoracic aortic aneurysm repair (EVAR / TEVAR)",
-                  "Aortic angioplasty and stenting for complex aortic syndromes",
-                  {
-                    title: "Renal artery angioplasty and stenting for:",
-                    subItems: [
-                      "Resistant hypertension",
-                      "Takayasu’s arteritis",
-                    ],
-                  },
-                  "Superior mesenteric artery (SMA) angioplasty and stenting",
-                  "Chronic mesenteric ischemia and weight-loss syndromes",
-                  {
-                    title: "Acute mesenteric ischemia management including:",
-                    subItems: [
-                      "SMA embolectomy",
-                      "SMA thrombolysis",
-                      "SMA thrombectomy",
-                    ],
-                  },
-                  "Open mesenteric revascularization and ileo-SMA bypass procedures",
-                ]}
-              />
-
-              <ServiceCard
-                id="onco-vascular"
-                title="Onco-Vascular Surgery & Rare Vascular Disorders"
-                desc="Onco-vascular surgery manages tumors involving blood vessels and rare vascular disorders requiring complex care. Specialized surgical techniques ensure safe tumor removal while preserving critical blood flow."
-                items={[
-                  "Vascular involvement in complex tumor resections (onco-vascular surgery)",
-                  "IVC tumor thrombus management",
-                  "Carotid body tumors and vascular neck tumors",
-                  "Thoracic outlet syndrome and cervical rib–related vascular compression",
-                  "Management of complex vascular encasement during oncologic surgery",
-                ]}
-              />
-
-              <ServiceCard
-                id="vascular-trauma"
-                title="Vascular Trauma, Pediatric & Iatrogenic Vascular Injuries"
-                desc="Vascular injuries from trauma, medical procedures, or pediatric conditions require urgent and specialized care. Advanced surgical and endovascular techniques help restore blood flow and prevent life-threatening complications."
-                items={[
-                  "Arterial and venous vascular trauma management",
-                  "Pediatric vascular injuries",
-                  "Iatrogenic vascular injuries",
-                  "Emergency vascular repairs",
-                  "Complex intravascular foreign body retrievals",
-                ]}
-              />
-
-              <ServiceCard
-                id="av-malformations"
-                title="AV Malformations & Complex Vascular Anomalies"
-                desc="Arteriovenous malformations (AVMs) are abnormal connections between arteries and veins that can disrupt normal blood flow. Advanced embolization and surgical treatments help control symptoms and prevent complications."
-                items={[
-                  "Peripheral and visceral arteriovenous malformations (AVMs)",
-                  "Endovascular embolization and surgical management of vascular malformations",
-                ]}
-              />
-
-              <ServiceCard
-                id="ecmo-access"
-                title="ECMO Cannulation & Large-Bore Access Care"
-                desc="ECMO and large-bore access procedures require precise vascular expertise for critically ill patients. Specialized care ensures safe cannulation, optimal flow, and management of access-related complications."
-                items={[
-                  "ECMO cannulation support",
-                  "Management of large-bore arterial and venous access",
-                  "Treatment of ECMO-related vascular complications",
-                ]}
-              />
-
-              <ServiceCard
-                id="special-interests"
-                title="Special Interests"
-                desc="Specialized expertise in complex and high-risk vascular conditions requiring advanced planning and precision. Focus on minimally invasive techniques and multidisciplinary care for optimal patient outcomes."
-                items={[
-                  "High-risk and redo vascular procedures",
-                  "Complex multi-level revascularization",
-                  "Image-guided and minimally invasive vascular interventions",
-                  "Dialysis access optimization and quality improvement",
-                  "Multidisciplinary care for limb salvage, venous disease, oncology, and trauma",
                 ]}
               />
             </div>

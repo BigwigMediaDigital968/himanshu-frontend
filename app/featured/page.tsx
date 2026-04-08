@@ -14,6 +14,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { Star } from "lucide-react";
+import ServiceTable from "../components/ServiceTable";
 
 /* ================= TYPES ================= */
 interface FeaturedItem {
@@ -249,6 +250,8 @@ export default function Featured() {
             )}
           </div>
         </section>
+
+        <ServiceTable />
 
         <Footer />
         <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />

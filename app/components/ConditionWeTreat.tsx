@@ -7,6 +7,7 @@ import { Play } from "lucide-react";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import ButtonFill from "./Button";
 
 type Condition = {
   title: string;
@@ -148,6 +149,13 @@ export default function ConditionsWeTreat() {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="text-center mt-16">
+        <ButtonFill
+          className="w-64"
+          href="/services"
+          text="View All Services"
+        />
       </div>
     </section>
   );

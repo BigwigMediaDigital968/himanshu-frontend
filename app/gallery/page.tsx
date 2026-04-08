@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import FinalCTA from "../components/CTA";
+import ServiceTable from "../components/ServiceTable";
 
 /* ------------------ TYPES ------------------ */
 type Category = "DR. Himanshu" | "AVF care" | "Podcast" | "training";
@@ -303,6 +304,7 @@ export default function Gallery() {
         )}
       </AnimatePresence>
       <FinalCTA />
+      <ServiceTable />
       <Footer />
       <PopupForm open={false} onClose={() => {}} />
       <FloatingContactActions />

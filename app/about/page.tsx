@@ -40,6 +40,7 @@ import "swiper/css/navigation";
 
 import partners from "../assets/ayusync.webp";
 import assets from "../assets/vascular-surgery-society-image.jpeg";
+import ServiceTable from "../components/ServiceTable";
 
 const awards = [
   {
@@ -449,10 +450,17 @@ export default function About() {
                   evidence-based, multidisciplinary, and patient-centric care.
                 </p>
 
-                <ButtonFill
-                  onClick={() => setOpenPopup(true)}
-                  text="Request a Callback"
-                />
+                <div className="flex gap-2">
+                  <ButtonFill
+                    onClick={() => setOpenPopup(true)}
+                    text="Request a Callback"
+                  />
+                  <ButtonFill
+                    className="w-52"
+                    href="/services"
+                    text="Our Services"
+                  />
+                </div>
               </div>
 
               {/* RIGHT IMAGE */}
@@ -1210,6 +1218,7 @@ export default function About() {
         </section>
 
         <FinalCTA />
+        <ServiceTable />
         <Footer />
         <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />
         <FloatingContactActions />
