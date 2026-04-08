@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import PopupForm from "@/app/components/Popup";
 import ButtonFill from "@/app/components/Button";
 import {
@@ -12,6 +12,48 @@ import {
   Activity,
 } from "lucide-react";
 import { GiH2O } from "react-icons/gi";
+
+function useInView(threshold = 0.15) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          obs.disconnect();
+        }
+      },
+      { threshold },
+    );
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return { ref, inView };
+}
+
+function AnimatedSection({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const { ref, inView } = useInView();
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0)" : "translateY(32px)",
+        transition: "opacity 0.65s ease, transform 0.65s ease",
+      }}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function VaricoseVeinsContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -575,6 +617,83 @@ export default function VaricoseVeinsContent() {
           })}
         </div>
       </div>
+
+      <AnimatedSection>
+        <section
+          style={{
+            padding: "56px 24px",
+            background: "var(--med-light)",
+            borderTop: "1px solid var(--med-border)",
+          }}
+        >
+          <div
+            style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}
+          >
+            <h2
+              style={{
+                fontSize: 22,
+                fontWeight: 800,
+                color: "var(--med-text)",
+                marginBottom: 8,
+              }}
+            >
+              Our Varicose Vein Services in Other Cities
+            </h2>
+            <p style={{ fontSize: 15, color: "#5a7a80", marginBottom: 32 }}>
+              Dr. Himanshu Verma provides expert varicose vein care across
+              multiple cities.
+            </p>
+            <div
+              style={{
+                display: "flex",
+                gap: 16,
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              {[
+                {
+                  city: "Delhi",
+                  href: "/services/varicose-vein-treatment-in-delhi",
+                },
+                {
+                  city: "Varanasi",
+                  href: "/services/varicose-vein-treatment-in-varanasi",
+                },
+              ].map((loc) => (
+                <a
+                  key={loc.city}
+                  href={loc.href}
+                  style={{
+                    padding: "13px 28px",
+                    borderRadius: 12,
+                    border: "2px solid var(--med-primary)",
+                    color: "var(--med-primary)",
+                    fontWeight: 700,
+                    textDecoration: "none",
+                    fontSize: 15,
+                    background: "#fff",
+                    transition: "all 0.25s",
+                    display: "inline-block",
+                  }}
+                  onMouseEnter={(e) => {
+                    const el = e.currentTarget as HTMLAnchorElement;
+                    el.style.background = "var(--med-primary)";
+                    el.style.color = "#fff";
+                  }}
+                  onMouseLeave={(e) => {
+                    const el = e.currentTarget as HTMLAnchorElement;
+                    el.style.background = "#fff";
+                    el.style.color = "var(--med-primary)";
+                  }}
+                >
+                  Varicose Veins Treatment in {loc.city}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
 
       {/* ── FINAL CTA ── */}
       <div className="rounded-2xl border border-[var(--med-border)] bg-[var(--med-light)] p-8">
