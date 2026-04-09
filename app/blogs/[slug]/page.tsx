@@ -9,6 +9,12 @@ interface BlogType {
   datePublished: string;
   content: string;
   slug: string;
+  faqs: {
+    question: string;
+    answer: string;
+    _id?: string;
+  }[];
+  faqSchema: string;
 }
 
 interface RelatedBlogType {
@@ -37,7 +43,7 @@ async function getBlog(slug: string): Promise<BlogType> {
 async function getRelatedBlogs(slug: string): Promise<RelatedBlogType[]> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE}/blog/related/${slug}`,
-    { cache: "no-store" }
+    { cache: "no-store" },
   );
 
   if (!res.ok) return [];
@@ -81,6 +87,86 @@ export default async function BlogDetails({
 
   const blog = await getBlog(slug);
   const relatedBlogs = await getRelatedBlogs(slug);
+  console.log("blog", blog);
+  const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
-  return <BlogClient blog={blog} relatedBlogs={relatedBlogs} />;
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: blog.title,
+    description: blog.excerpt,
+    image: blog.coverImage,
+    author: {
+      "@type": "Person",
+      name: blog.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Ethical Infrastructures Pvt Ltd",
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/avf-logo.png`, // change this
+      },
+    },
+    datePublished: blog.datePublished,
+    dateModified: blog.datePublished,
+    mainEntityOfPage: `${BASE_URL}/blogs/${blog.slug}`,
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${BASE_URL}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blogs",
+        item: `${BASE_URL}/blogs`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: blog.title,
+        item: `${BASE_URL}/blogs/${blog.slug}`,
+      },
+    ],
+  };
+
+  return (
+    <>
+      {/* ✅ Article Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
+
+      {/* ✅ Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+
+      {/* ✅ FAQ Schema (from DB) */}
+      {blog?.faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: blog.faqSchema,
+          }}
+        />
+      )}
+
+      <BlogClient blog={blog} relatedBlogs={relatedBlogs} />
+    </>
+  );
 }

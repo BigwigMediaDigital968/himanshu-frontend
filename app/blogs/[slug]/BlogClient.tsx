@@ -8,6 +8,7 @@ import BlogSidebar from "../../components/BlogSidebar";
 import Navbar from "@/app/components/Navbar";
 import PopupForm from "@/app/components/Popup";
 import Footer from "@/app/components/Footer";
+import FAQAccordion from "@/app/components/FaqsAccordion";
 
 export default function BlogClient({
   blog,
@@ -64,6 +65,17 @@ export default function BlogClient({
             className="blog-content prose prose-lg max-w-none overflow-x-hidden"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
+          <main className="p-6 max-w-2xl mx-auto">
+            <h1
+              style={{ color: "var(--med-primary)" }}
+              className="text-2xl font-bold mb-6"
+            >
+              Frequently Asked Questions
+            </h1>
+
+            {/* Just pass the data here */}
+            <FAQAccordion items={blog.faqs} />
+          </main>
         </article>
 
         {/* RIGHT – SIDEBAR */}
