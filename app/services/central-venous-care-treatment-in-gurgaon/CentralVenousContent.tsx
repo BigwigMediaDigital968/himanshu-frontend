@@ -537,6 +537,17 @@ export default function CentralVenousContent() {
         </div>
       </div>
 
+      <div className="mb-14">
+        <p className="text-gray-700 mb-6">
+          In some cases, vascular health issues extend beyond trauma and may
+          include chronic conditions such as varicose veins or peripheral artery
+          disease. We provide advanced varicose veins treatment in Gurgaon using
+          modern techniques, along with effective peripheral artery disease
+          treatment in Gurgaon to restore proper blood circulation and prevent
+          complications.
+        </p>
+      </div>
+
       {/* ── WHY CHOOSE ── */}
       <div className="mb-14 rounded-2xl overflow-hidden border border-[var(--med-border)]">
         <div className="grid md:grid-cols-2">

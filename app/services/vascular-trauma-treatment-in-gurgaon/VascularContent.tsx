@@ -4,6 +4,7 @@ import { useState } from "react";
 import PopupForm from "@/app/components/Popup";
 import ButtonFill from "@/app/components/Button";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export default function VascularContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -371,6 +372,28 @@ export default function VascularContent() {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="mb-14">
+        <p className="text-gray-700 text-sm mb-6">
+          In some cases, vascular health issues extend beyond trauma and may
+          include chronic conditions such as varicose veins or peripheral artery
+          disease. We provide advanced{" "}
+          <Link
+            href="/services/varicose-veins-treatment-in-gurgaon"
+            className="text-blue-500 font-bold hover:text-blue-700 transition-all"
+          >
+            varicose vein treatment in Gurgaon{" "}
+          </Link>{" "}
+          using modern techniques, along with effective{" "}
+          <Link
+            href={"/services/peripheral-artery-disease-treatment-in-gurgaon"}
+            className="text-blue-500 font-bold hover:text-blue-700 transition-all"
+          >
+            peripheral artery disease treatment in Gurgaon
+          </Link>{" "}
+          to restore proper blood circulation and prevent complications.
+        </p>
       </div>
 
       {/* ── CONCLUSION ── */}
