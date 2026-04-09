@@ -9,6 +9,8 @@ import FloatingContactActions from "../components/ContactActions";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import FinalCTA from "../components/CTA";
+import AboutServiceTable from "../components/AboutServiceTable";
+import { servicesData } from "../services/components/ServiceLayout";
 
 /* ------------------------------------
    PODCAST DATA TYPE
@@ -234,6 +236,36 @@ export default function Podcast() {
               </div>
             ))}
           </div>
+        </section>
+        <section>
+          <AboutServiceTable
+            title="Explore Our Services"
+            services={[
+              ...servicesData,
+              {
+                id: "onc-vas",
+                title: "ONCO Vascular Surgery",
+                desc: "Onco vascular surgery focuses on managing blood vessels affected by cancer.",
+                link: "/services/onco-vascular-surgery-in-gurgaon",
+                items: [
+                  "Tumor removal",
+                  "Vessel reconstruction",
+                  "Blood flow restoration",
+                ],
+              },
+              {
+                id: "art-mal",
+                title: "Arteriovenous Malformation",
+                desc: "Arteriovenous malformation (AVM) is an abnormal connection between arteries and veins.",
+                link: "/services/arteriovenous-malformation-treatment-in-gurgaon",
+                items: [
+                  "AVM management",
+                  "Embolization",
+                  "Surgical correction",
+                ],
+              },
+            ]}
+          />
         </section>
         <FinalCTA />
         <Footer />

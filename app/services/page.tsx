@@ -174,10 +174,6 @@ export default function Services() {
                       id: "wound-care",
                     },
                     {
-                      label: "Minor Amputations",
-                      id: "minor-ampu",
-                    },
-                    {
                       label: "Amputation Surgery",
                       id: "amp-sur",
                     },
@@ -220,6 +216,10 @@ export default function Services() {
                     {
                       label: "Arteriovenous Malformation",
                       id: "art-mal",
+                    },
+                    {
+                      label: "Minor Amputations",
+                      id: "minor-ampu",
                     },
                     // {
                     //   label: "Pediatric & Iatrogenic Vascular Injuries",
