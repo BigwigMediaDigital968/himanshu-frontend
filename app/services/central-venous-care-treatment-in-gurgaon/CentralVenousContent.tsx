@@ -12,6 +12,7 @@ import {
   Activity,
   Stethoscope,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function CentralVenousContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -541,10 +542,21 @@ export default function CentralVenousContent() {
         <p className="text-gray-700 mb-6">
           In some cases, vascular health issues extend beyond trauma and may
           include chronic conditions such as varicose veins or peripheral artery
-          disease. We provide advanced varicose veins treatment in Gurgaon using
-          modern techniques, along with effective peripheral artery disease
-          treatment in Gurgaon to restore proper blood circulation and prevent
-          complications.
+          disease. We provide advanced{" "}
+          <Link
+            href="/services/varicose-veins-treatment-in-gurgaon"
+            className="text-blue-500 font-bold hover:text-blue-700 transition-all"
+          >
+            varicose veins treatment in Gurgaon{" "}
+          </Link>{" "}
+          using modern techniques, along with effective{" "}
+          <Link
+            href="/services/peripheral-artery-disease-treatment-in-gurgaon"
+            className="text-blue-500 font-bold hover:text-blue-700 transition-all"
+          >
+            peripheral artery disease treatment in Gurgaon
+          </Link>{" "}
+          to restore proper blood circulation and prevent complications.
         </p>
       </div>
 
