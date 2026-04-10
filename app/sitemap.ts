@@ -19,8 +19,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .split("T")[0],
   }));
 
-  console.log("data", blogs[0]?.slug);
-
   return [
     {
       url: `${SITE_URL}/`,
