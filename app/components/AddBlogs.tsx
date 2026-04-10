@@ -108,7 +108,6 @@ const AddBlog = ({
       blogData.append("title", formData.title);
       blogData.append("slug", formData.slug);
       blogData.append("excerpt", formData.excerpt);
-      blogData.append("content", formData.content);
       blogData.append("author", formData.author);
       blogData.append("tags", formData.tags);
 
@@ -120,7 +119,10 @@ const AddBlog = ({
       });
       blogData.append("faqs", JSON.stringify(formData.faqs));
 
-      //console.log("form data", formData, formData.faqs);
+      const cleanContent = formData.content.replace(/&nbsp;/g, " ");
+      blogData.append("content", cleanContent);
+
+      //console.log("form data", blogData.get("content"));
 
       const res = await fetch(
         existingBlog
@@ -132,6 +134,11 @@ const AddBlog = ({
         },
       );
       const data = await res.json();
+      {
+        /**const res = await setTimeout(() => {
+        return { ok: false };
+      }, 1000); */
+      }
       if (res.ok) {
         alert(existingBlog ? "Blog updated" : "Blog added");
         onSuccess();
@@ -194,9 +201,9 @@ const AddBlog = ({
               <ReactQuill
                 theme="snow"
                 value={formData.content}
-                onChange={(value) =>
-                  setFormData((prev) => ({ ...prev, content: value }))
-                }
+                onChange={(value) => {
+                  setFormData((prev) => ({ ...prev, content: value }));
+                }}
                 modules={{ toolbar: toolbarOptions }}
                 className="react-quill-editor"
               />
