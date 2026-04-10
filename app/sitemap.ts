@@ -2,8 +2,24 @@ import type { MetadataRoute } from "next";
 
 const SITE_URL = "https://www.drhimanshuverma.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const today = new Date().toISOString().split("T")[0];
+
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/blog/viewblog`, {
+    next: { revalidate: 60 }, // cache + auto refresh
+  });
+
+  const data = await res.json();
+  const blogs = data || [];
+
+  const blogUrls = blogs.map((blog: any) => ({
+    url: `${SITE_URL}/blogs/${blog.slug}`,
+    lastModified: new Date(blog.lastUpdated || blog.datePublished || Date.now())
+      .toISOString()
+      .split("T")[0],
+  }));
+
+  console.log("data", blogs[0]?.slug);
 
   return [
     {
@@ -180,5 +196,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    ...blogUrls,
   ];
 }
