@@ -321,7 +321,7 @@ export default function ServiceLayout({
 
           {/* CONTENT */}
 
-          <div className="lg:col-span-8 bg-white p-10 rounded-3xl shadow-lg">
+          <div className="lg:col-span-8 bg-white p-5 sm:p-10 rounded-3xl shadow-lg">
             <PageTransition>{children}</PageTransition>
             <AboutServiceTable
               title="Explore Our Services"

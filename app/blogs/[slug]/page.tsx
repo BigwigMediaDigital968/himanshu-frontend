@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import BlogClient from "./BlogClient";
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+
 interface BlogType {
   title: string;
   excerpt: string;
@@ -51,31 +53,31 @@ async function getRelatedBlogs(slug: string): Promise<RelatedBlogType[]> {
 }
 
 /* ===================== SEO METADATA ===================== */
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: Promise<{ slug: string }>;
-// }): Promise<Metadata> {
-//   const { slug } = await params; // ✅ REQUIRED in Next 15
-//   const blog = await getBlog(slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params; // ✅ REQUIRED in Next 15
+  const blog = await getBlog(slug);
 
-//   return {
-//     title: blog.title,
-//     description: blog.excerpt,
-//     alternates: {
-//       canonical: `https://www.ethicalinfrastructures.com/blogs/${blog.slug}`,
-//     },
-//     openGraph: {
-//       title: blog.title,
-//       description: blog.excerpt,
-//       type: "article",
-//       url: `https://www.ethicalinfrastructures.com/blogs/${blog.slug}`,
-//       images: [{ url: blog.coverImage }],
-//       siteName: "Ethical Infrastructures Pvt Ltd",
-//       locale: "en_IN",
-//     },
-//   };
-// }
+  return {
+    title: blog.title,
+    description: blog.excerpt,
+    alternates: {
+      canonical: `${BASE_URL}/blogs/${blog.slug}`,
+    },
+    openGraph: {
+      title: blog.title,
+      description: blog.excerpt,
+      type: "article",
+      url: `${BASE_URL}/blogs/${blog.slug}`,
+      images: [{ url: blog.coverImage }],
+      siteName: "Dr. Himanshu Verma",
+      locale: "en_IN",
+    },
+  };
+}
 
 /* ===================== PAGE ===================== */
 export default async function BlogDetails({
@@ -88,7 +90,6 @@ export default async function BlogDetails({
   const blog = await getBlog(slug);
   const relatedBlogs = await getRelatedBlogs(slug);
   console.log("blog", blog);
-  const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -102,7 +103,7 @@ export default async function BlogDetails({
     },
     publisher: {
       "@type": "Organization",
-      name: "Ethical Infrastructures Pvt Ltd",
+      name: "Dr. Himanshu Verma",
       logo: {
         "@type": "ImageObject",
         url: `${BASE_URL}/avf-logo.png`, // change this
@@ -137,6 +138,7 @@ export default async function BlogDetails({
       },
     ],
   };
+  console.log(blog);
 
   return (
     <>

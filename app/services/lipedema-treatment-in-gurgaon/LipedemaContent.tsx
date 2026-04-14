@@ -256,6 +256,11 @@ export default function LipedemaContent() {
           as fat found throughout the body. Consulting a specialist for Lipedema
           Treatment in Gurgaon can help in early diagnosis and management.
         </p>
+        <img
+          src="/services/lipedema/Lipedema-1.png"
+          alt="Lipedema Diagram"
+          className="w-full rounded-lg border border-gray-200"
+        />
 
         <p className="text-gray-700 leading-relaxed">
           Overeating or insufficient exercise does not cause lipedema. The fat
@@ -331,7 +336,12 @@ export default function LipedemaContent() {
         </p>
       </div>
 
-      <div className="h-px bg-gray-100 mb-10" />
+      <div className="h-px bg-gray-100 mb-5" />
+      <img
+        src="/services/lipedema/Lipedema-2.png"
+        alt="Lipedema Diagram"
+        className="w-full rounded-lg border border-gray-200 mb-5"
+      />
 
       {/* SYMPTOMS */}
       <div className="space-y-6 mb-10">

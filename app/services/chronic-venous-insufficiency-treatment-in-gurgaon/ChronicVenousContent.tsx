@@ -275,6 +275,13 @@ export default function ChronicVenousContent() {
         </div>
       </div>
 
+      <div>
+        <img
+          src="/services/chronic-venous-insufficiency/sein-stripping-1.png"
+          alt="What is Chronic Venous Insufficiency?"
+          className="w-full rounded-lg border border-gray-200 mb-5"
+        />
+      </div>
       {/* ── SYMPTOMS & CAUSES ── */}
       <div className="mb-14">
         <div className="mb-8">
@@ -458,6 +465,14 @@ export default function ChronicVenousContent() {
             </p>
           </div>
         </div>
+      </div>
+
+      <div>
+        <img
+          src="/services/chronic-venous-insufficiency/sein-stripping-2.png"
+          alt="Treatment of Chronic Venous Insufficiency"
+          className="w-full rounded-lg border border-gray-200 mb-5"
+        />
       </div>
 
       {/* ── TREATMENT OPTIONS ── */}
