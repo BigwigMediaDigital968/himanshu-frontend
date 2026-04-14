@@ -208,7 +208,7 @@ export default function PelvicContent() {
       </div>
 
       {/* ── WHAT ARE PELVIC VENOUS DISORDERS ── */}
-      <div className="grid md:grid-cols-5 gap-8 mb-14 items-start">
+      <div className="grid md:grid-cols-5 gap-8 mb-6 items-start">
         <div className="md:col-span-3 space-y-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
             What are Pelvic Venous Disorders?
@@ -249,6 +249,14 @@ export default function PelvicContent() {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="mb-6">
+        <img
+          src="/services/pelvic-venous-disorder/pelvic-venous-disorder-1.png"
+          alt="What are Pelvic Venous Disorders?"
+          className="w-full rounded-lg border border-gray-200"
+        />
       </div>
 
       {/* ── SYMPTOMS ── */}
@@ -342,6 +350,14 @@ export default function PelvicContent() {
           Early detection of Pelvic Venous Disorders can prevent complications
           and help plan effective treatment.
         </div>
+      </div>
+
+      <div className="mb-6">
+        <img
+          src="/services/pelvic-venous-disorder/pelvic-venous-disorder-treatment.png"
+          alt="What are Pelvic Venous Disorders?"
+          className="w-full rounded-lg border border-gray-200"
+        />
       </div>
 
       {/* ── TREATMENT OPTIONS ── */}
