@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import BlogClient from "./BlogClient";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+const BASE_URL = "https://www.drhimanshuverma.com";
 
 interface BlogType {
   title: string;
@@ -65,13 +65,13 @@ export async function generateMetadata({
     title: blog.title,
     description: blog.excerpt,
     alternates: {
-      canonical: `${BASE_URL}blogs/${blog.slug}`,
+      canonical: `https://www.drhimanshuverma.com/blogs/${blog.slug}`,
     },
     openGraph: {
       title: blog.title,
       description: blog.excerpt,
       type: "article",
-      url: `${BASE_URL}blogs/${blog.slug}`,
+      url: `https://www.drhimanshuverma.com/blogs/${blog.slug}`,
       images: [{ url: blog.coverImage }],
       siteName: "Dr. Himanshu Verma",
       locale: "en_IN",
@@ -105,12 +105,12 @@ export default async function BlogDetails({
       name: "Dr. Himanshu Verma",
       logo: {
         "@type": "ImageObject",
-        url: `${BASE_URL}avf-logo.png`, // change this
+        url: `https://www.drhimanshuverma.com/avf-logo.png`, // change this
       },
     },
     datePublished: blog.datePublished,
     dateModified: blog.datePublished,
-    mainEntityOfPage: `${BASE_URL}blogs/${blog.slug}`,
+    mainEntityOfPage: `https://www.drhimanshuverma.com/blogs/${blog.slug}`,
   };
 
   const breadcrumbSchema = {
@@ -121,19 +121,19 @@ export default async function BlogDetails({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: `${BASE_URL}`,
+        item: `https://www.drhimanshuverma.com/`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: `${BASE_URL}blogs`,
+        item: `https://www.drhimanshuverma.com/blogs`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: blog.title,
-        item: `${BASE_URL}blogs/${blog.slug}`,
+        item: `https://www.drhimanshuverma.com/blogs/${blog.slug}`,
       },
     ],
   };
