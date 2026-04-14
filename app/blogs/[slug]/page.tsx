@@ -9,6 +9,7 @@ interface BlogType {
   coverImage: string;
   author: string;
   datePublished: string;
+  tags: string[];
   content: string;
   slug: string;
   faqs: {
@@ -64,6 +65,7 @@ export async function generateMetadata({
   return {
     title: blog.title,
     description: blog.excerpt,
+    keywords: blog.tags.join(", "),
     alternates: {
       canonical: `https://www.drhimanshuverma.com/blogs/${blog.slug}`,
     },
@@ -137,6 +139,8 @@ export default async function BlogDetails({
       },
     ],
   };
+
+  console.log(blog);
 
   return (
     <>
