@@ -65,13 +65,13 @@ export async function generateMetadata({
     title: blog.title,
     description: blog.excerpt,
     alternates: {
-      canonical: `${BASE_URL}/blogs/${blog.slug}`,
+      canonical: `${BASE_URL}blogs/${blog.slug}`,
     },
     openGraph: {
       title: blog.title,
       description: blog.excerpt,
       type: "article",
-      url: `${BASE_URL}/blogs/${blog.slug}`,
+      url: `${BASE_URL}blogs/${blog.slug}`,
       images: [{ url: blog.coverImage }],
       siteName: "Dr. Himanshu Verma",
       locale: "en_IN",
@@ -89,7 +89,6 @@ export default async function BlogDetails({
 
   const blog = await getBlog(slug);
   const relatedBlogs = await getRelatedBlogs(slug);
-  console.log("blog", blog);
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -106,12 +105,12 @@ export default async function BlogDetails({
       name: "Dr. Himanshu Verma",
       logo: {
         "@type": "ImageObject",
-        url: `${BASE_URL}/avf-logo.png`, // change this
+        url: `${BASE_URL}avf-logo.png`, // change this
       },
     },
     datePublished: blog.datePublished,
     dateModified: blog.datePublished,
-    mainEntityOfPage: `${BASE_URL}/blogs/${blog.slug}`,
+    mainEntityOfPage: `${BASE_URL}blogs/${blog.slug}`,
   };
 
   const breadcrumbSchema = {
@@ -128,17 +127,16 @@ export default async function BlogDetails({
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: `${BASE_URL}/blogs`,
+        item: `${BASE_URL}blogs`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: blog.title,
-        item: `${BASE_URL}/blogs/${blog.slug}`,
+        item: `${BASE_URL}blogs/${blog.slug}`,
       },
     ],
   };
-  console.log(blog);
 
   return (
     <>
