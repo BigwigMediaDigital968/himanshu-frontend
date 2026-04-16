@@ -34,12 +34,12 @@ const FAQAccordion = ({ items }: FAQAccordionProps) => {
             onClick={() => toggleAccordion(index)}
             className="w-full flex items-center justify-between p-4 text-left focus:outline-none group"
           >
-            <span
+            <h3
               className="font-semibold text-base md:text-lg transition-colors"
               style={{ color: "var(--med-text)" }}
             >
               {item.question}
-            </span>
+            </h3>
             <ChevronDown
               size={20}
               className={`transition-transform duration-300 shrink-0 ${openIndex === index ? "rotate-180" : ""}`}
@@ -54,12 +54,12 @@ const FAQAccordion = ({ items }: FAQAccordionProps) => {
                 : "max-h-0 opacity-0"
             }`}
           >
-            <div
+            <p
               className="p-4 pt-0 leading-relaxed text-sm md:text-base"
               style={{ color: "var(--med-text)" }}
             >
               {item.answer}
-            </div>
+            </p>
           </div>
         </div>
       ))}

@@ -740,7 +740,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-2xl w-[300px] sm:w-[420px] md:w-[520px] h-[220px] sm:h-[320px] md:h-[450px] border">
                 <Image
                   src={himanshu}
-                  alt="Doctor"
+                  alt="Doctor himanshu verma vascular surgeon in gurgaon image"
                   fill
                   className="object-contain object-center transform transition-transform duration-700"
                   priority

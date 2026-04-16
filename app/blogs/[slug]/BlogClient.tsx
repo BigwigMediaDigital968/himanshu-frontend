@@ -65,13 +65,13 @@ export default function BlogClient({
             className="blog-content prose prose-lg max-w-none overflow-x-hidden"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
-          <main className="p-6 max-w-2xl mx-auto">
-            <h1
+          <main className="p-5 max-w-4xl mx-auto">
+            <h2
               style={{ color: "var(--med-primary)" }}
               className="text-2xl font-bold mb-6"
             >
               Frequently Asked Questions
-            </h1>
+            </h2>
 
             {/* Just pass the data here */}
             <FAQAccordion items={blog.faqs} />

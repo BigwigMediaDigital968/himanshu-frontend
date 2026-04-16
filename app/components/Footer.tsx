@@ -266,14 +266,14 @@ export default function Footer() {
       <div className="border-t pt-5 relative z-10 w-11/12 md:w-5/6 mx-auto flex flex-col md:flex-row justify-between mt-4 text-center text-white/50 text-xs md:text-sm">
         <p>© {new Date().getFullYear()} All Rights Reserved.</p>
         <br />
-        <h2>
+        <p>
           Design & Developed by{" "}
           <span className="text-[var(--med-primary)] font-semibold">
             <Link href="https://www.bigwigmediadigital.com">
               Bigwig Media Digital
             </Link>
           </span>
-        </h2>
+        </p>
       </div>
     </footer>
   );
