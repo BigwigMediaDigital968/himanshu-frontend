@@ -4,6 +4,10 @@ import { useState } from "react";
 import PopupForm from "@/app/components/Popup";
 import ButtonFill from "@/app/components/Button";
 import { ChevronDown } from "lucide-react";
+import diafoot1 from "../../assets/service/diabatic-foot/1.png";
+import diafoot2 from "../../assets/service/diabatic-foot/2.png";
+import diafoot3 from "../../assets/service/diabatic-foot/3.png";
+import Image from "next/image";
 
 export default function DiabeticContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -114,6 +118,13 @@ export default function DiabeticContent() {
         </p>
       </div>
 
+      <Image
+        src={diafoot1}
+        sizes="80"
+        alt="Diabetic Foot Treatment in Gurgaon image"
+        className="rounded-2xl mb-14"
+      />
+
       {/* WHAT IS DIABETES */}
       <div className="mb-14">
         <h2 className="text-2xl font-bold mb-4 text-gray-800">
@@ -180,6 +191,13 @@ export default function DiabeticContent() {
         </div>
       </div>
 
+      <Image
+        src={diafoot2}
+        sizes="80"
+        alt="Diabetic Foot Treatment in Gurgaon image"
+        className="rounded-2xl mb-14"
+      />
+
       {/* SYMPTOMS */}
       <div className="mb-14">
         <h2 className="text-2xl font-bold mb-4 text-gray-800">
@@ -227,6 +245,13 @@ export default function DiabeticContent() {
           help you understand your Diabetic Foot risk and next steps.
         </p>
       </div>
+
+      <Image
+        src={diafoot3}
+        sizes="80"
+        alt="Diabetic Foot Treatment in Gurgaon image"
+        className="rounded-2xl mb-14"
+      />
 
       {/* MANAGEMENT */}
       <div className="mb-14">
