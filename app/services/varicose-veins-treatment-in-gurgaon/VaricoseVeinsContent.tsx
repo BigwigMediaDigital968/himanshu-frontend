@@ -13,6 +13,37 @@ import {
 } from "lucide-react";
 import { GiH2O } from "react-icons/gi";
 
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image, { StaticImageData } from "next/image";
+
+// 1. Define the type to handle both string URLs and imported assets
+type ImageSource = string | StaticImageData;
+
+interface CarouselItem {
+  id: number;
+  src: ImageSource;
+  alt: string;
+}
+
+import glueTerat from "@/app/assets/service/varicose/glue-treatment.jpeg";
+import symptomsImage from "@/app/assets/service/varicose/symptoms.jpg";
+import laserTerat from "@/app/assets/service/varicose/laser-trestment.jpeg";
+
+const carouselImages: CarouselItem[] = [
+  {
+    id: 1,
+    src: glueTerat,
+    alt: "Modern Villa",
+  },
+  // { id: 2, src: HeroImage, alt: "Local Asset Example" },
+  {
+    id: 3,
+    src: laserTerat,
+    alt: "Kitchen Design",
+  },
+];
+
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
@@ -66,8 +97,8 @@ export default function VaricoseVeinsContent() {
         <p>
           Weak vein valves, genetics, prolonged standing, aging, pregnancy, and
           excess weight are the most common causes. These conditions often
-          require professional evaluation and{" "}
-          <b>varicose veins treatment in Gurgaon.</b>
+          require professional evaluation and varicose veins treatment in
+          Gurgaon.
         </p>
       ),
     },
@@ -170,35 +201,36 @@ export default function VaricoseVeinsContent() {
 
   const treatments = [
     {
-      name: "Endovenous Laser Treatment (EVLT)",
+      name: "EVLT (Endovenous Laser Treatment)",
       badge: "Most Effective",
       badgeClass: "bg-[var(--med-primary)] text-white",
-      desc: "One of the most effective procedures in modern varicose veins treatment in Gurgaon. Uses laser energy to close the damaged vein.",
+      desc: "One of the most effective procedures used in modern varicose veins treatment in Gurgaon. A laser fibre is inserted into the damaged vein under local anaesthesia, delivering heat that causes the vein to collapse and seal. The procedure takes 30–45 minutes, and most patients return to normal activity within 1–2 days. Best suited for larger veins such as the great saphenous vein.",
     },
     {
-      name: "Medical Glue Treatment (Cyanoacrylate Closure)",
+      name: "RFA (Radiofrequency Ablation)",
       badge: "No Compression",
       badgeClass: "bg-teal-100 text-teal-700",
-      desc: "Medical glue seals the affected vein without the need for multiple compression sessions.",
+      desc: "Radiofrequency energy is delivered through a thin catheter to heat and seal the affected vein. The procedure is well-tolerated, with same-day discharge and a recovery period similar to EVLT. Compression stockings are recommended for 1–2 weeks post-treatment.",
+    },
+    {
+      name: "Medical Glue (Cyanoacrylate Closure)",
+      badge: "Minimally Invasive",
+      badgeClass: "bg-blue-100 text-blue-700",
+      desc: "A modern technique used in varicose veins treatment in Gurgaon. Medical-grade glue is injected to seal the vein shut, with no tumescent anaesthesia and no compression stockings required. Patients typically return to normal activity the same day, making this one of the most convenient options available.",
     },
     {
       name: "Foam Sclerotherapy",
-      badge: "Minimally Invasive",
-      badgeClass: "bg-blue-100 text-blue-700",
-      desc: "A foam solution is injected into problematic veins to shrink and eventually eliminate them.",
-    },
-    {
-      name: "Microphlebectomy / Stab Phlebectomy",
       badge: "Superficial Veins",
       badgeClass: "bg-purple-100 text-purple-700",
-      desc: "Small incisions are made to safely remove superficial varicose veins.",
+      desc: "A foam solution is injected into smaller varicose or reticular veins, irritating the vein wall and causing it to shrink and be absorbed by the body. No anaesthesia is needed, and results become visible over 4–8 weeks. Multiple sessions may be required for extensive veins.",
     },
     {
-      name: "Radiofrequency Ablation (RFA)",
+      name: "Microphlebectomy (Stab Phlebectomy)",
       badge: "Advanced",
       badgeClass: "bg-emerald-100 text-emerald-700",
-      desc: "A minimally invasive treatment that uses radiofrequency heat to seal damaged veins. Improves blood flow, reduces pain and swelling, and ensures faster recovery with minimal discomfort.",
+      desc: "Bulging surface veins are removed through tiny 1–2 mm punctures using a fine hook; no stitches are required. Often combined with EVLT or RFA in a single session for complete treatment. Most patients resume daily activities within 2–3 days.",
     },
+
     // {
     //   name: "Iliac Vein Stenting",
     //   badge: "Hypertension",
@@ -290,23 +322,16 @@ export default function VaricoseVeinsContent() {
       <div className="grid md:grid-cols-5 gap-8 mb-14 items-start">
         <div className="md:col-span-3 space-y-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-            What Are Varicose Veins?
+            Varicose Veins Treatment in Gurgaon | Dr Himanshu Verma
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            The legs are the most prevalent location for varicose veins, which
-            are swollen, twisted veins. The condition develops due to the
-            weakening of the valves in the veins, allowing blood flow in the
-            reverse direction (backward) and thus pooling; the pooling of the
-            blood leads to swelling and also to the appearance of bulging out of
-            the skin. Varicose Veins Treatment are often thought of as only
-            being a cosmetic problem; however, they can be a sign of other
-            vascular problems and, if left untreated, preventable damage may
-            result and/or lead to more serious conditions.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            If you are looking for <b>varicose veins treatment in Gurgaon</b>,
-            early consultation with a specialist can help prevent complications
-            and improve your vein health.
+            The legs are the most prevalent location for varicose veins,
+            swollen, twisted veins that develop when the valves inside them
+            weaken, causing blood to flow backward and pool. This pooling leads
+            to visible bulging, swelling, and discomfort. While many consider
+            varicose veins a cosmetic concern, they can indicate underlying
+            vascular problems and, if left untreated, lead to serious
+            complications.
           </p>
         </div>
 
@@ -316,13 +341,11 @@ export default function VaricoseVeinsContent() {
             When to Consult
           </h2>
           <p className="text-gray-700 text-sm leading-relaxed">
-            Should you see varicose veins, spider veins, bluish veins, or have
-            discomfort in your legs, consult a qualified specialist such as{" "}
-            <b>Dr. Himanshu</b> for early diagnosis and effective{" "}
-            <b>varicose veins treatment in Gurgaon</b>. so as to provide early
-            diagnosis and effective care. Schedule a consultation today to
-            understand your vein health and explore the best options for{" "}
-            <b>varicose veins treatment in Gurgaon</b>.
+            You Should see varicose veins, spider veins, bluish veins, or have
+            discomfort in your legs, you will want to consult a qualified
+            varicose vein specialist, Fortis Memorial Research Centre such as Dr
+            Himanshu, a qualified vascular surgeon in Gurgaon, for early
+            diagnosis and effective care.
           </p>
           {[
             "Varicose or spider veins",
@@ -345,17 +368,17 @@ export default function VaricoseVeinsContent() {
       {/* ── SYMPTOMS & CAUSES ── */}
       <div className="mb-14">
         <div className="mb-8">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--med-primary)] mb-2">
+          {/**<h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--med-primary)] mb-2">
             Symptoms & Causes
+          </h2> */}
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+            Symptoms and Causes
           </h2>
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
-            Understanding Varicose Veins
-          </h3>
           <p className="text-gray-600 mt-2 max-w-2xl">
-            Comprehending the symptoms and causes of varicose veins is
+            Understanding the symptoms and causes of varicose veins is
             invaluable in their early detection and effective management. People
-            seeking <b>varicose veins treatment in Gurgaon</b> should understand
-            the warning signs to ensure timely medical attention.
+            seeking varicose veins treatment in Gurgaon should understand the
+            warning signs to ensure timely medical attention.
           </p>
         </div>
 
@@ -380,10 +403,9 @@ export default function VaricoseVeinsContent() {
             <p className="text-xs text-gray-500 mt-4">
               The symptoms vary in severity and can worsen over time.
               Nonetheless, early treatment can prevent progression of the
-              condition. If you experience heavy or aching legs, consult Dr.
-              Himanshu for proper evaluation and{" "}
-              <b>varicose veins treatment in Gurgaon</b> tailored to your
-              specific condition.
+              condition. If you experience heavy or aching legs, consult Dr
+              Himanshu for proper evaluation and varicose veins treatment in
+              Gurgaon tailored to your specific condition.
             </p>
           </div>
 
@@ -406,7 +428,7 @@ export default function VaricoseVeinsContent() {
             <p className="text-xs text-gray-500 mt-4">
               Early treatment and lifestyle modifications can help lower the
               risk of complications. If you notice early symptoms, consulting a
-              specialist for <b>varicose veins treatment in Gurgaon</b> can help
+              specialist for varicose veins treatment in Gurgaon can help
               protect your long-term vein health.
             </p>
           </div>
@@ -423,6 +445,12 @@ export default function VaricoseVeinsContent() {
             text="Schedule an Appointment"
           />
         </div>
+        <div className="flex justify-center mt-10">
+          <Image
+            src={symptomsImage}
+            alt="varicose veins treatment in Gurgaon"
+          />
+        </div>
       </div>
 
       {/* ── COMPLICATIONS ── */}
@@ -436,10 +464,12 @@ export default function VaricoseVeinsContent() {
           </h2>
           <p className="text-gray-600 mt-2 max-w-2xl">
             While many people experience mild symptoms, untreated varicose veins
-            can lead to serious complications. This is why timely{" "}
-            <b>varicose veins treatment in Gurgaon</b> is recommended for
-            patients experiencing persistent symptoms. Possible complications
-            include:
+            can lead to serious complications. This is why timely varicose veins
+            treatment in Gurgaon is recommended for patients experiencing
+            persistent symptoms. Possible complications include:
+          </p>
+          <p className="text-gray-600 mt-2 max-w-2xl">
+            Possible complications include:
           </p>
         </div>
 
@@ -460,9 +490,10 @@ export default function VaricoseVeinsContent() {
         <div className="flex flex-col sm:flex-row items-center gap-4 p-6 rounded-2xl bg-[var(--med-light)] border border-[var(--med-border)]">
           <p className="text-gray-700 text-sm flex-1">
             Early referral and intervention can help prevent these
-            complications. Dr. Himanshu offers comprehensive{" "}
-            <b>varicose veins treatment in Gurgaon</b> for patients dealing with
-            chronic venous disorders and lymphatic issues.
+            complications. Dr Himanshu offers comprehensive varicose veins
+            treatment in Gurgaon for patients dealing with chronic venous
+            disorders and lymphatic issues. Book an appointment today to ensure
+            long-term leg health.
           </p>
           <ButtonFill
             onClick={() => setOpenPopup(true)}
@@ -481,11 +512,14 @@ export default function VaricoseVeinsContent() {
             Advanced Varicose Veins Treatment Options
           </h2>
           <p className="text-gray-600 mt-2 max-w-2xl">
-            The Varicose Veins Treatment depends on the severity of symptoms and
-            the underlying venous condition. Patients seeking{" "}
-            <b>varicose veins treatment in Gurgaon</b> can benefit from advanced
-            minimally invasive procedures designed to improve blood flow,
-            relieve discomfort, and prevent complications.
+            The treatment of varicose veins depends on the severity of symptoms
+            and the underlying venous condition. Patients seeking varicose veins
+            treatment in Gurgaon can benefit from advanced minimally invasive
+            procedures designed to improve blood flow, relieve discomfort, and
+            prevent complications.
+          </p>
+          <p className="text-gray-600 mt-2 max-w-2xl">
+            Common treatment approaches include:
           </p>
         </div>
 
@@ -510,14 +544,17 @@ export default function VaricoseVeinsContent() {
           ))}
         </div>
 
+        <div>
+          <Carousel />
+        </div>
+
         <div className="rounded-2xl bg-[var(--med-primary)] text-white px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm font-medium text-white/90 max-w-xl">
-            Early diagnosis and the right{" "}
-            <b>varicose veins treatment in Gurgaon</b> can help prevent serious
-            complications such as ulcers, blood clots, and chronic venous
-            insufficiency. If your legs feel heavy, swollen, or painful, consult
-            Dr. Himanshu to find the most suitable{" "}
-            <b>varicose veins treatment in Gurgaon</b> for your condition.
+            Early diagnosis and the right varicose veins treatment in Gurgaon
+            can help prevent serious complications such as ulcers, blood clots,
+            and chronic venous insufficiency. If your legs feel heavy, swollen,
+            or painful, consult Dr Himanshu to find the most suitable varicose
+            veins treatment in Gurgaon for your condition.
           </p>
           <button
             onClick={() => setOpenPopup(true)}
@@ -534,13 +571,21 @@ export default function VaricoseVeinsContent() {
           <div className="bg-[var(--med-primary)] p-8 flex flex-col justify-center gap-4">
             <ShieldCheck className="w-8 h-8 text-white/60" />
             <h2 className="text-2xl font-bold text-white">
-              Why Choose Dr. Himanshu Verma?
+              Why Choose Dr Himanshu Verma for Varicose Vein
             </h2>
             <p className="text-white/80 text-sm leading-relaxed">
-              With expertise in advanced endovascular techniques and
-              comprehensive vascular care, Dr. Himanshu delivers the most
-              effective and personalized{" "}
-              <b className="text-white">varicose veins treatment in Gurgaon</b>.
+              If you are looking for varicose veins treatment in Gurgaon, early
+              consultation with a specialist can help prevent complications and
+              improve your vein health. In this regard, Dr Himanshu Verma is a
+              board-certified MBBS, MS, and Vascular and Endovascular Surgeon
+              with over 17 years of clinical experience. He holds an MCh in
+              Vascular Surgery and is a member of the Vascular Society of India
+              and FEVS. Practising at Fortis Memorial Research Institute, Sector
+              44, Gurgaon, Dr Verma has performed more than 5,000 minimally
+              invasive vein procedures, including EVLT, Radiofrequency Ablation
+              (RFA), and Medical Glue Closure (Cyanoacrylate). His clinical
+              focus is on achieving lasting relief through evidence-based,
+              patient-centred care with minimal recovery time.
             </p>
           </div>
           <div className="bg-[var(--med-light)] p-8 flex flex-col justify-center gap-4">
@@ -567,7 +612,7 @@ export default function VaricoseVeinsContent() {
       <div className="mb-14">
         <div className="mb-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-[var(--med-primary)] mb-2">
-            Common Questions
+            Frequently Asked Questions
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800">FAQs</h2>
         </div>
@@ -721,3 +766,78 @@ export default function VaricoseVeinsContent() {
     </div>
   );
 }
+
+const Carousel = () => {
+  const [index, setIndex] = useState(0);
+
+  const nextStep = () => {
+    setIndex((prev) => (prev === carouselImages.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevStep = () => {
+    setIndex((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1));
+  };
+
+  const onDragEnd = (event: any, info: any) => {
+    if (info.offset.x < -50) nextStep();
+    if (info.offset.x > 50) prevStep();
+  };
+
+  return (
+    <section className="bg-white py-12 px-6">
+      <div className="max-w-7xl mx-auto">
+        {/* Container height matches your luxury aesthetic */}
+        <div className="relative  w-full aspect-video overflow-hidden rounded-3xl bg-gray-50 shadow-sm">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={carouselImages[index].id}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="absolute inset-0 w-full h-full"
+            >
+              <motion.div
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                onDragEnd={onDragEnd}
+                className="w-full h-full relative cursor-grab active:cursor-grabbing"
+              >
+                {/* 2. Use Next.js Image for optimization and local asset support */}
+                <Image
+                  src={carouselImages[index].src}
+                  alt={carouselImages[index].alt}
+                  fill
+                  priority
+                  className="max-w-[400px] aspect-square mx-auto"
+                />
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* ── CONTROLS ── */}
+        </div>
+        <div className=" inset-x-0 bottom-8 flex justify-center items-center gap-6 z-10 mt-5">
+          <button
+            onClick={prevStep}
+            className="w-12 h-12 rounded-full bg-white/90 backdrop-blur  border border-[var(--med-primary)] shadow-md flex items-center justify-center text-navy-900 hover:bg-[var(--med-primary)] hover:text-white transition-all"
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          <div className="bg-white/90 backdrop-blur border border-[var(--med-primary)] px-5 py-2 rounded-full shadow-md text-[10px] font-bold tracking-[0.2em] text-navy-900/60 uppercase">
+            {index + 1} <span className="mx-2 text-gold-400">/</span>{" "}
+            {carouselImages.length}
+          </div>
+
+          <button
+            onClick={nextStep}
+            className="w-12 h-12 rounded-full bg-white/90 backdrop-blur border border-[var(--med-primary)] shadow-md flex items-center justify-center text-navy-900 hover:bg-[var(--med-primary)] hover:text-white transition-all"
+          >
+            <ChevronRight size={24} />
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
