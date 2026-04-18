@@ -110,12 +110,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     //   changeFrequency: "monthly",
     //   priority: 0.7,
     // },
-    // {
-    //   url: `${SITE_URL}/services/central-venous-care-treatment-in-gurgaon`,
-    //   lastModified: today,
-    //   changeFrequency: "monthly",
-    //   priority: 0.7,
-    // },
+    {
+      url: `${SITE_URL}/services/central-venous-care-treatment-in-gurgaon`,
+      lastModified: today,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     // {
     //   url: `${SITE_URL}/services/peripheral-artery-disease-treatment-in-gurgaon`,
     //   lastModified: today,
@@ -164,12 +164,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     //   changeFrequency: "monthly",
     //   priority: 0.7,
     // },
-    // {
-    //   url: `${SITE_URL}/services/vascular-trauma-treatment-in-gurgaon`,
-    //   lastModified: today,
-    //   changeFrequency: "monthly",
-    //   priority: 0.7,
-    // },
+    {
+      url: `${SITE_URL}/services/vascular-trauma-treatment-in-gurgaon`,
+      lastModified: today,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     // {
     //   url: `${SITE_URL}/services/onco-vascular-surgery-in-gurgaon`,
     //   lastModified: today,
