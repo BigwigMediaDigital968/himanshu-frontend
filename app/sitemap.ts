@@ -116,12 +116,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.7,
     },
-    // {
-    //   url: `${SITE_URL}/services/peripheral-artery-disease-treatment-in-gurgaon`,
-    //   lastModified: today,
-    //   changeFrequency: "monthly",
-    //   priority: 0.7,
-    // },
+    {
+      url: `${SITE_URL}/services/peripheral-artery-disease-treatment-in-gurgaon`,
+      lastModified: today,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     // {
     //   url: `${SITE_URL}/services/limb-salvage-surgery-in-gurgaon`,
     //   lastModified: today,
