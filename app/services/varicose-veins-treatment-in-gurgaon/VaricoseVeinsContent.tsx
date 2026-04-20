@@ -29,6 +29,8 @@ interface CarouselItem {
 import glueTerat from "@/app/assets/service/varicose/glue-treatment.jpeg";
 import symptomsImage from "@/app/assets/service/varicose/symptoms.jpg";
 import laserTerat from "@/app/assets/service/varicose/laser-trestment.jpeg";
+import TestimonialsServices from "@/app/components/TestimonialService";
+import { VericoseGurgaon } from "@/app/data/testimonialData";
 
 const carouselImages: CarouselItem[] = [
   {
@@ -278,6 +280,27 @@ export default function VaricoseVeinsContent() {
     </li>
   );
 
+  const diagnosisSteps = [
+    {
+      name: "01. Clinical Examination",
+      badge: "In-Person",
+      badgeClass: "bg-blue-100 text-blue-700",
+      desc: "You'll be assessed while standing, so your veins are more visible. Your doctor checks for swelling, skin changes, tenderness, and slow-healing sores.",
+    },
+    {
+      name: "02. Medical History Review",
+      badge: "Consultation",
+      badgeClass: "bg-purple-100 text-purple-700",
+      desc: "We'll discuss your symptoms, aching, cramping, burning, or heaviness, to build a complete picture of your vascular health.",
+    },
+    {
+      name: "03. Venous Doppler Ultrasound",
+      badge: "Gold Standard",
+      badgeClass: "bg-amber-100 text-amber-700",
+      desc: "Sound waves map blood flow in your veins, revealing valve failures, reflux, and hidden clots beneath the skin's surface.",
+    },
+  ];
+
   return (
     <div className="font-sans">
       {/* ── HERO ── */}
@@ -375,10 +398,16 @@ export default function VaricoseVeinsContent() {
             Symptoms and Causes
           </h2>
           <p className="text-gray-600 mt-2 max-w-2xl">
-            Understanding the symptoms and causes of varicose veins is
-            invaluable in their early detection and effective management. People
-            seeking varicose veins treatment in Gurgaon should understand the
-            warning signs to ensure timely medical attention.
+            Understanding the causes and{" "}
+            <a
+              className="text-(--med-primary)"
+              href="https://www.drhimanshuverma.com/blogs/symptoms-of-varicose-veins-you-should-not-ignore"
+            >
+              symptoms of varicose veins
+            </a>{" "}
+            is invaluable in their early detection and effective management.
+            People seeking varicose veins treatment in Gurgaon should understand
+            the warning signs to ensure timely medical attention.
           </p>
         </div>
 
@@ -502,6 +531,77 @@ export default function VaricoseVeinsContent() {
         </div>
       </div>
 
+      {/* ── DIAGNOSIS PROCESS ── */}
+      <div className="mb-14">
+        <div className="mb-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-[var(--med-primary)] mb-2">
+            Precise Evaluation
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+            How are Varicose Veins Diagnosed?
+          </h2>
+          <p className="text-gray-600 mt-2 max-w-2xl">
+            Getting an accurate{" "}
+            <a
+              className="text-(--med-primary)"
+              href="https://www.drhimanshuverma.com/blogs/how-are-varicose-veins-diagnosed-tests-and-procedures-explained"
+            >
+              varicose veins diagnosis
+            </a>{" "}
+            is the first step toward relief. Our evaluation is non-invasive,
+            painless, and typically completed within 30–45 minutes, with no
+            needles, no radiation, and no recovery time needed.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-4 mb-6">
+          {diagnosisSteps.map((step) => (
+            <div
+              key={step.name}
+              className="border border-[var(--med-border)] rounded-2xl p-5 bg-white hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-start justify-between gap-2 mb-3">
+                <h3 className="font-bold text-gray-800 text-sm leading-snug">
+                  {step.name}
+                </h3>
+                <span
+                  className={`text-xs font-semibold px-2.5 py-1 rounded-full flex-shrink-0 whitespace-nowrap ${step.badgeClass}`}
+                >
+                  {step.badge}
+                </span>
+              </div>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {step.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="text-2xl md:text-2xl font-bold text-gray-800">
+          The gold standard: Venous Doppler Ultrasound
+        </h2>
+        <p className="text-gray-600 mt-2 max-w-2xl mb-5">
+          This painless scan identifies exactly where valves are failing,
+          measures the severity of backward blood flow (reflux), and rules out
+          deep vein thrombosis, giving your specialist everything needed to
+          create a personalized treatment plan.
+        </p>
+
+        <div className="rounded-2xl bg-[var(--med-primary)] text-white px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm font-medium text-white/90 max-w-xl">
+            This comprehensive scan identifies exactly where valves are failing
+            and measures the severity of reflux, giving your specialist
+            everything needed to create a personalized treatment plan.
+          </p>
+          <button
+            onClick={() => setOpenPopup(true)}
+            className="flex-shrink-0 bg-white text-[var(--med-primary)] font-semibold px-5 py-2.5 rounded-full text-sm hover:bg-white/90 transition-all cursor-pointer"
+          >
+            Book Your Ultrasound
+          </button>
+        </div>
+      </div>
+
       {/* ── TREATMENT OPTIONS ── */}
       <div className="mb-14">
         <div className="mb-8">
@@ -563,6 +663,11 @@ export default function VaricoseVeinsContent() {
             Consult Dr. Himanshu
           </button>
         </div>
+      </div>
+
+      {/* Testimonials */}
+      <div className="mb-14">
+        <TestimonialsServices testimonials={VericoseGurgaon} />
       </div>
 
       {/* ── WHY CHOOSE ── */}
