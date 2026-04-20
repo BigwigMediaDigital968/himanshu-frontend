@@ -25,7 +25,7 @@ export default function robots(): MetadataRoute.Robots {
           "/services/lymphatic-care-treatment-in-gurgaon",
           "/services/onco-vascular-surgery-in-gurgaon",
           "/services/pelvic-venous-disorder-treatment-in-gurgaon",
-          "/services/peripheral-artery-disease-treatment-in-gurgaon",
+          // "/services/peripheral-artery-disease-treatment-in-gurgaon",
           "/services/pulmonary-embolism-treatment-in-gurgaon",
           "/services/varicose-vein-treatment-in-varanasi",
           "/services/varicose-vein-treatment-in-delhi",
