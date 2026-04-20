@@ -466,7 +466,7 @@ export default function VaricoseVeinsContent() {
             While many people experience mild symptoms, untreated varicose veins
             can lead to serious complications. This is why timely varicose veins
             treatment in Gurgaon is recommended for patients experiencing
-            persistent symptoms. Possible complications include:
+            persistent symptoms.
           </p>
           <p className="text-gray-600 mt-2 max-w-2xl">
             Possible complications include:
