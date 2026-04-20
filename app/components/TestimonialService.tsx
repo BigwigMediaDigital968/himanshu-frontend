@@ -53,7 +53,7 @@ export default function TestimonialsServices({ testimonials }: Props) {
           </h2>
         </div>
 
-        <div className="relative group px-2 md:px-12 max-w-[320px] md:max-w-full">
+        <div className="relative group px-2 md:px-12 max-w-[300px] md:max-w-full">
           <div
             className="overflow-hidden cursor-grab active:cursor-grabbing"
             ref={emblaRef}
