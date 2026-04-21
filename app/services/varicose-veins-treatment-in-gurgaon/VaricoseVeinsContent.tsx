@@ -36,13 +36,13 @@ const carouselImages: CarouselItem[] = [
   {
     id: 1,
     src: glueTerat,
-    alt: "Modern Villa",
+    alt: "varicose veins treatment in Gurgaon",
   },
   // { id: 2, src: HeroImage, alt: "Local Asset Example" },
   {
     id: 3,
     src: laserTerat,
-    alt: "Kitchen Design",
+    alt: "varicose veins treatment in Gurgaon",
   },
 ];
 
