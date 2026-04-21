@@ -269,9 +269,10 @@ export default function Services() {
         <section className="py-16 ">
           <div className="w-11/12 md:w-5/6 mx-auto grid lg:grid-cols-3 gap-5">
             {/* LEFT STICKY INDEX */}
-            <aside className="hidden lg:block lg:col-span-1 sticky top-28 h-fit">
-              <div className="bg-white rounded-2xl p-6 border border-[var(--med-border)] shadow-sm h-[50vh] overflow-auto">
-                <h2 className="font-semibold underline text-[var(--med-primary)] text-2xl mb-4">
+            <aside className="lg:col-span-1 md:sticky top-28 h-fit">
+              <div className="bg-white rounded-2xl p-6 border border-[var(--med-border)] shadow-sm lg:h-[50vh] lg:overflow-auto">
+                {/* ✅ SHOW ALWAYS */}
+                <h2 className="font-semibold underline text-[var(--med-primary)] text-xl md:text-2xl mb-4">
                   Our Services
                 </h2>
                 <ol className="space-y-3 text-sm">
