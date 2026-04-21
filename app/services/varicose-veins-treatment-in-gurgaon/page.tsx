@@ -263,6 +263,151 @@ export default function VaricoseVeinsPage() {
                 },
               },
 
+              {
+                "@type": "MedicalProcedure",
+                "@id":
+                  "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon#evlt",
+                name: "Endovenous Laser Treatment (EVLT)",
+                alternateName: "Laser Surgery for Varicose Veins",
+                description:
+                  "A laser fibre is inserted into the damaged vein under local anaesthesia, delivering heat that seals the vein permanently.",
+                procedureType: "PercutaneousProcedure",
+                bodyLocation: "Great saphenous vein, lower legs",
+                image:
+                  "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg",
+                mainEntityOfPage: {
+                  "@id":
+                    "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon",
+                },
+                preparation:
+                  "Local tumescent anaesthesia; no hospital stay required.",
+                howPerformed:
+                  "Laser fibre is inserted under ultrasound guidance and heat is applied to seal the vein.",
+                followup:
+                  "Return to normal activity within 1–2 days. Compression stockings recommended.",
+                provider: {
+                  "@id": "https://www.drhimanshuverma.com/#doctor",
+                },
+                availableAtOrFrom: {
+                  "@id": "https://www.drhimanshuverma.com/#clinic",
+                },
+                url: "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon",
+              },
+
+              {
+                "@type": "MedicalProcedure",
+                "@id":
+                  "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon#rfa",
+                name: "Radiofrequency Ablation (RFA)",
+                alternateName: "RF Ablation for Varicose Veins",
+                description:
+                  "Radiofrequency energy is used to heat and seal the vein.",
+                procedureType: "PercutaneousProcedure",
+                bodyLocation: "Saphenous veins, lower extremities",
+                image:
+                  "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg",
+                mainEntityOfPage: {
+                  "@id":
+                    "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon",
+                },
+                preparation: "Local anaesthesia; day-care procedure.",
+                howPerformed:
+                  "A catheter delivers radiofrequency energy to close the vein.",
+                followup:
+                  "Same-day discharge. Resume normal activity within 1–2 days.",
+                provider: {
+                  "@id": "https://www.drhimanshuverma.com/#doctor",
+                },
+                availableAtOrFrom: {
+                  "@id": "https://www.drhimanshuverma.com/#clinic",
+                },
+                url: "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon",
+              },
+
+              {
+                "@type": "MedicalProcedure",
+                "@id":
+                  "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon#medical-glue",
+                name: "Medical Glue Closure (Cyanoacrylate Closure)",
+                alternateName: "VenaSeal Treatment",
+                description:
+                  "Medical adhesive is injected into the vein to seal it without anaesthesia.",
+                procedureType: "PercutaneousProcedure",
+                bodyLocation: "Great and small saphenous veins",
+                image:
+                  "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg",
+                mainEntityOfPage: {
+                  "@id":
+                    "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon",
+                },
+                preparation: "No anaesthesia required.",
+                howPerformed: "A catheter delivers adhesive along the vein.",
+                followup: "Immediate return to normal activity.",
+                provider: {
+                  "@id": "https://www.drhimanshuverma.com/#doctor",
+                },
+                availableAtOrFrom: {
+                  "@id": "https://www.drhimanshuverma.com/#clinic",
+                },
+                url: "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon",
+              },
+
+              {
+                "@type": "MedicalProcedure",
+                "@id":
+                  "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon#foam-sclerotherapy",
+                name: "Foam Sclerotherapy",
+                alternateName: "Injection Treatment for Varicose Veins",
+                description:
+                  "A foam solution is injected into veins causing them to shrink and close.",
+                procedureType: "NoninvasiveProcedure",
+                bodyLocation: "Spider veins, lower legs",
+                image:
+                  "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg",
+                mainEntityOfPage: {
+                  "@id":
+                    "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon",
+                },
+                preparation: "No anaesthesia required.",
+                howPerformed: "Foam sclerosant is injected into the vein.",
+                followup: "Compression stockings recommended.",
+                provider: {
+                  "@id": "https://www.drhimanshuverma.com/#doctor",
+                },
+                availableAtOrFrom: {
+                  "@id": "https://www.drhimanshuverma.com/#clinic",
+                },
+                url: "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon",
+              },
+
+              {
+                "@type": "MedicalProcedure",
+                "@id":
+                  "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon#microphlebectomy",
+                name: "Microphlebectomy",
+                alternateName: "Ambulatory Phlebectomy",
+                description:
+                  "Varicose veins are removed through tiny punctures.",
+                procedureType: "PercutaneousProcedure",
+                bodyLocation: "Superficial veins, lower legs",
+                image:
+                  "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg",
+                mainEntityOfPage: {
+                  "@id":
+                    "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon",
+                },
+                preparation: "Local anaesthesia used.",
+                howPerformed: "Small punctures are made to remove veins.",
+                followup: "Resume activities within 2–3 days.",
+                provider: {
+                  "@id": "https://www.drhimanshuverma.com/#doctor",
+                },
+                availableAtOrFrom: {
+                  "@id": "https://www.drhimanshuverma.com/#clinic",
+                },
+                url: "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon",
+              },
+
               /* ================= FAQ ================= */
               {
                 "@type": "FAQPage",
