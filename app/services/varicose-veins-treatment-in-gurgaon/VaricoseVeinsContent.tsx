@@ -99,8 +99,7 @@ export default function VaricoseVeinsContent() {
         <p>
           Weak vein valves, genetics, prolonged standing, aging, pregnancy, and
           excess weight are the most common causes. These conditions often
-          require professional evaluation and varicose veins treatment in
-          Gurgaon.
+          require professional evaluation and varicose veins treatment.
         </p>
       ),
     },
@@ -109,8 +108,8 @@ export default function VaricoseVeinsContent() {
       a: (
         <p>
           They can become a concern if pain, swelling, skin changes, or ulcers
-          develop. Early evaluation and{" "}
-          <b>varicose veins treatment in Gurgaon</b> help prevent complications.
+          develop. Early evaluation and varicose veins treatment in Gurgaon help
+          prevent complications.
         </p>
       ),
     },
@@ -120,7 +119,7 @@ export default function VaricoseVeinsContent() {
         <p>
           Yes. Walking improves blood circulation in the legs and reduces
           pressure in the veins, making it one of the best daily habits for vein
-          health alongside proper <b>varicose veins treatment in Gurgaon</b>.
+          health alongside proper varicose veins treatment in Gurgaon.
         </p>
       ),
     },
@@ -129,8 +128,8 @@ export default function VaricoseVeinsContent() {
       a: (
         <p>
           Minor varicose veins may improve with lifestyle changes, but most
-          require medical evaluation and{" "}
-          <b>varicose veins treatment in Gurgaon</b> for long-term relief.
+          require medical evaluation and varicose veins treatment in Gurgaon for
+          long-term relief.
         </p>
       ),
     },
@@ -138,9 +137,11 @@ export default function VaricoseVeinsContent() {
       q: "Is treatment for varicose veins painful?",
       a: (
         <p>
-          Most modern procedures used in{" "}
-          <b>varicose veins treatment in Gurgaon</b> are minimally invasive and
-          designed for patient comfort.
+          Modern minimally invasive treatments involve significantly less
+          discomfort and faster recovery times compared to traditional surgical
+          stripping. Most patients experience only mild, manageable sensations
+          during these quick procedures and can resume normal activities almost
+          immediately.
         </p>
       ),
     },
@@ -148,9 +149,10 @@ export default function VaricoseVeinsContent() {
       q: "Can varicose veins cause serious health problems?",
       a: (
         <p>
-          Yes. If untreated, they can lead to ulcers, blood clots, or chronic
-          venous insufficiency, which is why timely{" "}
-          <b>varicose veins treatment in Gurgaon</b> is recommended.
+          Varicose veins can lead to serious complications like blood clots
+          (DVT), chronic ulcers, and severe bleeding. Early medical care is
+          essential to manage these risks and safeguard your long-term vascular
+          health.
         </p>
       ),
     },
@@ -160,7 +162,7 @@ export default function VaricoseVeinsContent() {
         <p>
           Regular exercise, maintaining a healthy weight, avoiding prolonged
           standing or sitting, and wearing compression stockings can help reduce
-          the risk and complement <b>varicose veins treatment in Gurgaon</b>.
+          the risk and complement varicose veins treatment in Gurgaon.
         </p>
       ),
     },
@@ -170,7 +172,7 @@ export default function VaricoseVeinsContent() {
         <p>
           Seek medical attention if you notice swelling, persistent pain, or
           skin changes around your veins. Early consultation ensures better
-          outcomes and timely <b>varicose veins treatment in Gurgaon</b>.
+          outcomes and timely varicose veins treatment in Gurgaon.
         </p>
       ),
     },
@@ -342,13 +344,14 @@ export default function VaricoseVeinsContent() {
       </div>
 
       {/* ── INTRO ── */}
-      <div className="grid md:grid-cols-5 gap-8 mb-14 items-start">
-        <div className="md:col-span-3 space-y-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-            Varicose Veins Treatment in Gurgaon | Dr Himanshu Verma
-          </h2>
+      <div className=" gap-8 mb-14 items-start">
+        <div className="col-span-3 space-y-4">
           <p className="text-gray-700 leading-relaxed">
-            The legs are the most prevalent location for varicose veins,
+            Dr Himanshu Verma is a board-certified Vascular and Endovascular
+            Surgeon with over 17 years of experience, offering advanced varicose
+            veins treatment in Gurgaon at Fortis Memorial Research Institute,
+            Sector 44, Gurgaon. With more than 5,000 minimally invasive vein
+            procedures performed, he specialises in treating varicose veins,
             swollen, twisted veins that develop when the valves inside them
             weaken, causing blood to flow backward and pool. This pooling leads
             to visible bulging, swelling, and discomfort. While many consider
@@ -359,7 +362,7 @@ export default function VaricoseVeinsContent() {
         </div>
 
         {/* CTA card */}
-        <div className="md:col-span-2 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl p-6 space-y-4">
+        <div className="w-full bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl p-6 mt-4 space-y-4">
           <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--med-primary)]">
             When to Consult
           </h2>
@@ -377,14 +380,16 @@ export default function VaricoseVeinsContent() {
             "Leg swelling or discomfort",
           ].map((item) => (
             <div key={item} className="flex items-start gap-3">
-              <CheckCircle2 className="w-4 h-4 text-[var(--med-primary)] mt-0.5 flex-shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-[var(--med-primary)] flex-shrink-0" />
               <span className="text-gray-700 text-sm">{item}</span>
             </div>
           ))}
-          <ButtonFill
-            onClick={() => setOpenPopup(true)}
-            text="Schedule a Consultation"
-          />
+          <div className="flex mt-2">
+            <ButtonFill
+              onClick={() => setOpenPopup(true)}
+              text="Schedule a Consultation"
+            />
+          </div>
         </div>
       </div>
 
