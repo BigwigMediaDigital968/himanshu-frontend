@@ -10,6 +10,7 @@ import FinalCTA from "../components/CTA";
 import FloatingContactActions from "../components/ContactActions";
 import ButtonFill from "../components/Button";
 import Link from "next/link";
+import ServiceFaqs from "./ServiceFaqs";
 
 export default function Services() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -33,7 +34,7 @@ export default function Services() {
 
       <meta
         name="description"
-        content="Looking for the best vascular surgeon in Gurgaon? Consult Dr. Himanshu Verma at Fortis for advanced treatment of varicose veins, PAD, DVT & more. Schedule now."
+        content="Expert vascular & endovascular surgery in Gurgaon - Varicose Veins, AV Fistula, Diabetic Foot, PAD & more. Consult Dr. Himanshu Verma at Fortis Hospital, Sector 44."
       />
 
       <meta
@@ -91,6 +92,156 @@ export default function Services() {
         content="https://www.drhimanshuverma.com/services"
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "MedicalBusiness",
+              name: "Dr. Himanshu Verma - Vascular & Endovascular Surgeon",
+              url: "https://www.drhimanshuverma.com/services",
+              telephone: "+918826833598",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Fortis Memorial Research Centre, Sector 44",
+                addressLocality: "Gurugram",
+                addressRegion: "Haryana",
+                postalCode: "122003",
+                addressCountry: "IN",
+              },
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Vascular Surgery Services",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "MedicalProcedure",
+                      name: "Varicose Veins Treatment",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "MedicalProcedure",
+                      name: "AV Fistula",
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://www.drhimanshuverma.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Services",
+                  item: "https://www.drhimanshuverma.com/services",
+                },
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What is vascular surgery and when is it needed?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Vascular surgery is a medical specialty that treats diseases of the blood vessels,arteries, veins, and lymphatic system, outside of the heart and brain. It is needed when conditions like blocked arteries, varicose veins, aneurysms, blood clots, or diabetic foot complications affect blood flow and cannot be managed with medication alone. Both open surgical and minimally invasive endovascular techniques are used depending on the condition.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What is the difference between vascular surgery and endovascular surgery?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Vascular surgery involves traditional open surgical procedures to repair orVascular surgery involves traditional open surgical procedures to repair or bypass damaged blood vessels. Endovascular surgery is a minimally invasive approach where the surgeon works through small incisions using catheters, stents, or grafts guided by imaging. Endovascular procedures typically result in less pain, shorter hospital stays, and faster recovery compared to open surgery.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Who is Dr. Himanshu Verma and what is his specialisation?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Dr. Himanshu Verma is a Vascular and Endovascular Surgeon based in Gurugram, Haryana. He practices at Fortis Memorial Research Centre, Sector 44, Gurugram, and specialises in advanced, evidence-based vascular care including minimally invasive treatments for varicose veins, AV fistula, peripheral artery disease, diabetic foot, deep vein thrombosis, aortic aneurysm, and more. He is known for combining surgical expertise with a patient-first approach.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What services does Dr. Himanshu Verma offer?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Dr. Himanshu Verma offers a comprehensive range of vascular and endovascular services including: Varicose Veins Treatment, Chronic Venous Insufficiency, AV Fistula Creation and Care, Dialysis Access, Peripheral Artery Disease (PAD) Treatment, Diabetic Foot Management, Wound Care, Deep Vein Thrombosis (DVT) Treatment, Pulmonary Embolism Management, Abdominal Aortic Aneurysm Repair, Limb Salvage Surgery, Amputation Surgery, Lymphatic Care, Pelvic Venous Disorders, Onco Vascular Surgery, and Arteriovenous Malformation Treatment.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What is an AV Fistula and why is it created?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "An AV (Arteriovenous) Fistula is a surgically created connection between an artery and a vein, most commonly in the forearm or upper arm. It is primarily created for patients with chronic kidney disease who require regular haemodialysis. The fistula allows large volumes of blood to be drawn out, cleaned by the dialysis machine, and returned efficiently. It is considered the gold standard for dialysis access due to its durability, lower infection risk, and better long-term outcomes compared to grafts or catheters.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What are the treatment options for varicose veins available at Dr. Himanshu Verma's clinic?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Dr. Himanshu Verma offers advanced, minimally invasive treatments for varicose veins including Laser Ablation (EVLA), Radiofrequency Ablation (RFA), Sclerotherapy, and VenaSeal. These procedures are performed as day-care treatments with no general anaesthesia required in most cases, minimal downtime, and significantly less pain compared to traditional vein stripping surgery. The choice of treatment depends on the severity and pattern of the varicose veins.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Where is Dr. Himanshu Verma's clinic located and how can I book an appointment?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Dr. Himanshu Verma practices at Fortis Memorial Research Centre, Opposite HUDA City Centre, Sector 44, Gurugram, Haryana 122003. To book an appointment, you can call or WhatsApp at +91 88268 33598, or email at varenyamvascular@gmail.com. You can also request a callback directly through the website at drhimanshuverma.com.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Is Dr. Himanshu Verma available for consultations in Delhi or other cities?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, in addition to his primary practice in Gurugram, Dr. Himanshu Verma is available for vascular surgery consultations in Delhi and Varanasi. Patients from across NCR and other regions can book appointments through the website or contact the clinic directly at +91 88268 33598 to confirm availability and consultation schedules at specific locations.",
+                  },
+                },
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "Physician",
+              name: "Dr. Himanshu Verma",
+              url: "https://www.drhimanshuverma.com",
+              medicalSpecialty: "Vascular Surgery",
+              worksFor: {
+                "@type": "Hospital",
+                name: "Fortis Memorial Research Centre",
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "Sector 44, Opposite HUDA City Centre",
+                  addressLocality: "Gurugram",
+                  addressRegion: "Haryana",
+                  postalCode: "122003",
+                  addressCountry: "IN",
+                },
+              },
+            },
+          ]),
+        }}
+      />
+
       <div className="bg-[var(--med-light)]">
         <Nav />
 
@@ -120,9 +271,9 @@ export default function Services() {
             {/* LEFT STICKY INDEX */}
             <aside className="hidden lg:block lg:col-span-1 sticky top-28 h-fit">
               <div className="bg-white rounded-2xl p-6 border border-[var(--med-border)] shadow-sm h-[50vh] overflow-auto">
-                <h3 className="font-semibold underline text-[var(--med-primary)] text-2xl mb-4">
+                <h2 className="font-semibold underline text-[var(--med-primary)] text-2xl mb-4">
                   Our Services
-                </h3>
+                </h2>
                 <ol className="space-y-3 text-sm">
                   {[
                     {
@@ -170,7 +321,7 @@ export default function Services() {
                       id: "diabetic-foot",
                     },
                     {
-                      label: "Wound Care",
+                      label: "Diabetic Wound Care",
                       id: "wound-care",
                     },
                     {
@@ -189,22 +340,7 @@ export default function Services() {
                       label: "Abdominal Aortic Aneurysm",
                       id: "abd-aor",
                     },
-                    // {
-                    //   label: "Advanced Venous Interventions",
-                    //   id: "dvt-advanced-venous",
-                    // },
-                    // {
-                    //   label: "Pulmonary Embolism (PE) Management",
-                    //   id: "pulmonary-embolism",
-                    // },
-                    // {
-                    //   label: "Aortic, Visceral & Renal Artery Interventions",
-                    //   id: "aortic-visceral-renal",
-                    // },
-                    // {
-                    //   label: "Onco-Vascular Surgery & Rare Vascular Disorders",
-                    //   id: "onco-vascular",
-                    // },
+
                     {
                       label: "Vascular Trauma",
                       id: "vas-tra",
@@ -219,24 +355,8 @@ export default function Services() {
                     },
                     {
                       label: "Minor Amputations",
-                      id: "minor-ampu",
+                      id: "min-amp",
                     },
-                    // {
-                    //   label: "Pediatric & Iatrogenic Vascular Injuries",
-                    //   id: "vascular-trauma",
-                    // },
-                    // {
-                    //   label: "AV Malformations & Complex Vascular Anomalies",
-                    //   id: "av-malformations",
-                    // },
-                    // {
-                    //   label: "ECMO Cannulation & Large-Bore Access Care",
-                    //   id: "ecmo-access",
-                    // },
-                    // {
-                    //   label: "Special Interests",
-                    //   id: "special-interests",
-                    // },
                   ].map((item, i) => (
                     <li
                       key={i}
@@ -285,7 +405,13 @@ export default function Services() {
               <ServiceCard
                 id="varicose-veins"
                 title="Varicose Veins"
-                desc="Varicose veins are swollen, twisted veins caused by poor blood circulation, leading to pain, heaviness, and visible veins. Advanced varicose veins treatment, like laser and RFA, offers safe, effective relief with faster recovery."
+                desc="Varicose veins are enlarged, twisted veins that develop when venous valves weaken,
+causing blood to pool in the legs. Left untreated, they can progress to chronic pain, skin
+discolouration, and venous ulcers. Dr. Himanshu Verma offers evidence-based, minimally
+invasive treatments including Laser Ablation (EVLA), Radiofrequency Ablation (RFA),
+Sclerotherapy, and VenaSeal, all performed as day-care procedures with minimal downtime
+and no general anaesthesia in most cases.
+"
                 link="/services/varicose-veins-treatment-in-gurgaon"
                 items={[
                   "Varicose veins and chronic venous insufficiency",
@@ -312,7 +438,13 @@ export default function Services() {
               <ServiceCard
                 id="chronic-venous-disorders"
                 title="Chronic Venous Insufficiency"
-                desc="Chronic venous insufficiency occurs when leg veins cannot return blood properly, causing swelling, pain, skin changes, and ulcers. Advanced chronic venous insufficiency treatment improves circulation and prevents complications for long-term relief."
+                desc="Chronic venous insufficiency (CVI) occurs when leg veins fail to return blood efficiently to the
+heart, leading to persistent swelling, heaviness, skin changes, and non-healing ulcers. It is
+one of the most underdiagnosed vascular conditions in India. Dr. Himanshu Verma uses a
+combination of compression therapy, endovenous procedures, and lifestyle guidance to
+manage CVI effectively, prevent disease progression, and restore long-term circulatory
+health.
+"
                 link="/services/chronic-venous-insufficiency-treatment-in-gurgaon"
                 items={[
                   "Varicose veins and chronic venous insufficiency",
@@ -339,7 +471,13 @@ export default function Services() {
               <ServiceCard
                 id="lymphatic-care"
                 title="Lymphatic Care"
-                desc="Lymphatic disorders can cause swelling, heaviness, and discomfort due to poor lymph flow. Expert lymphatic care and lymphedema treatment help reduce swelling, improve circulation, and enhance quality of life with personalized management."
+                desc="Lymphoedema and lymphatic disorders cause progressive swelling, skin thickening, and
+recurrent infections due to impaired lymph drainage. Without timely management, the
+condition can significantly reduce quality of life and lead to permanent tissue changes. Dr.
+Himanshu Verma provides personalised lymphatic care including complete decongestive
+therapy (CDT), compression management, and surgical options where appropriate, tailored
+to each patient's stage and lifestyle needs.
+"
                 link="/services/lymphatic-care-treatment-in-gurgaon"
                 items={[
                   "Varicose veins and chronic venous insufficiency",
@@ -366,7 +504,13 @@ export default function Services() {
               <ServiceCard
                 id="pelvic-venous-disorders"
                 title="Pelvic Venous Disorders"
-                desc="Pelvic venous disorders occur due to enlarged pelvic veins, leading to chronic pelvic pain, heaviness, and discomfort. Advanced pelvic venous disorder treatment helps relieve symptoms and improve daily life with minimally invasive procedures."
+                desc="Pelvic venous disorders, including pelvic congestion syndrome, arise from incompetent or
+dilated pelvic veins that cause chronic pelvic pain, heaviness, and discomfort, particularly in
+women of reproductive age. These conditions are frequently misdiagnosed as
+gynaecological issues. Dr. Himanshu Verma specialises in minimally invasive ovarian and
+pelvic vein embolisation procedures that effectively reduce pain and improve daily function
+without the need for open surgery.
+"
                 link="/services/pelvic-venous-disorder-treatment-in-gurgaon"
                 items={[
                   "Pelvic Congestion Syndrome (PCS) due to pelvic venous reflux",
@@ -388,7 +532,12 @@ export default function Services() {
               <ServiceCard
                 id="gondal-vein-disease"
                 title="Gonadal Vein Disease"
-                desc="Gonadal vein disease occurs due to enlarged or faulty veins, causing pelvic pain, heaviness, and discomfort, especially in women. Advanced gonadal vein treatment provides effective relief through minimally invasive procedures. "
+                desc="Gonadal vein incompetence leads to reflux of blood in the ovarian or testicular veins,
+contributing to pelvic pain, varicocele, and venous congestion. This condition is often
+overlooked despite being a significant cause of chronic discomfort. Dr. Himanshu Verma
+offers targeted endovascular embolisation for gonadal vein disease, a safe, image-guided,
+day-care procedure that eliminates reflux and provides lasting symptom relief with minimal
+recovery time."
                 link="/services/gonadal-vein-disease-treatment-in-gurgaon"
                 items={[
                   "Pelvic Congestion Syndrome (PCS) due to pelvic venous reflux",
@@ -410,7 +559,12 @@ export default function Services() {
               <ServiceCard
                 id="av-fistula"
                 title="AV Fistula"
-                desc="An AV fistula is a surgical connection between an artery and vein, created for effective dialysis access. Proper AV fistula care ensures better blood flow, fewer complications, and long-term function for patients undergoing kidney dialysis. "
+                desc="An arteriovenous (AV) fistula is a surgically created connection between an artery and a
+vein, primarily used as a dialysis access point for patients with chronic kidney disease. It is
+considered the gold standard for haemodialysis access due to its durability, lower infection
+risk, and superior long-term outcomes. Dr. Himanshu Verma performs AV fistula creation and
+maintenance with precision, ensuring optimal blood flow and prolonged access function for
+dialysis-dependent patients."
                 link="/services/av-fistula-treatment-in-gurgaon"
                 items={[
                   "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
@@ -427,7 +581,12 @@ export default function Services() {
               <ServiceCard
                 id="dialysis-access"
                 title="Dialysis Access"
-                desc="Dialysis access is a vital procedure for patients with kidney failure, allowing efficient blood flow during treatment. Options like AV fistula, graft, or catheter ensure safe and reliable dialysis access for long-term care."
+                desc="Reliable dialysis access is critical for patients with end-stage renal disease undergoing
+regular haemodialysis. Access options include AV fistula, synthetic AV graft, and tunnelled
+central venous catheters, each suited to different clinical situations. Dr. Himanshu Verma
+evaluates each patient's vascular anatomy and medical condition to recommend and create
+the most appropriate, durable dialysis access, minimising complications and ensuring
+consistent treatment delivery over the long term."
                 link="/services/dialysis-access-treatment-in-gurgaon"
                 items={[
                   "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
@@ -445,7 +604,12 @@ export default function Services() {
               <ServiceCard
                 id="central-venous-care"
                 title="Central Venous Care"
-                desc="Central venous care focuses on managing central veins used for dialysis and long-term treatments. Conditions like vein blockage or narrowing can affect blood flow, and timely central venous treatment helps maintain safe, effective access. "
+                desc="Central venous care involves the management of large veins, including the jugular,
+subclavian, and femoral veins, used for dialysis, chemotherapy, long-term medication, and
+nutritional support. Conditions such as central vein stenosis or thrombosis can compromise
+access and treatment efficacy. Dr. Himanshu Verma offers expert diagnosis and
+endovascular treatment of central venous obstruction, including balloon angioplasty and
+stenting, to restore safe and effective venous access."
                 link="/services/central-venous-care-treatment-in-gurgaon"
                 items={[
                   "AV fistula creation (radiocephalic, brachiocephalic, brachiobasilic vein transposition – staged)",
@@ -463,7 +627,12 @@ export default function Services() {
               <ServiceCard
                 id="pad-art"
                 title="Peripheral Artery Disease (PAD)"
-                desc="Peripheral artery disease (PAD) occurs when arteries narrow, reducing blood flow to the legs, causing pain, cramps, or slow-healing wounds. Early peripheral artery disease treatment improves circulation and prevents serious complications."
+                desc="Peripheral artery disease (PAD) occurs when atherosclerosis narrows the arteries supplying
+blood to the legs, causing pain during walking (claudication), non-healing wounds, and in
+severe cases, critical limb ischaemia. PAD significantly increases the risk of heart attack and
+stroke if left unmanaged. Dr. Himanshu Verma offers both endovascular interventions,
+angioplasty and stenting, and open surgical bypass to restore circulation, relieve symptoms,
+and protect long-term limb and cardiovascular health."
                 link="/services/peripheral-artery-disease-treatment-in-gurgaon"
                 items={[
                   "Peripheral arterial disease and critical limb ischemia",
@@ -498,7 +667,13 @@ export default function Services() {
               <ServiceCard
                 id="limb-salvage"
                 title="Advanced Limb Salvage"
-                desc="Advanced limb salvage focuses on saving legs affected by severe infections, poor circulation, or non-healing wounds. Specialized advanced limb salvage treatment restores blood flow, promotes healing, and helps avoid amputation with timely care"
+                desc="Critical limb-threatening ischaemia (CLTI) presents a high risk of amputation without timely
+intervention. Advanced limb salvage combines vascular reconstruction, wound management,
+and infection control to restore blood flow and preserve the affected limb. Dr. Himanshu
+Verma employs a multidisciplinary approach, integrating endovascular procedures, bypass
+surgery, and specialised wound care, to achieve the best possible outcomes for patients
+facing limb loss due to severe vascular compromise.
+"
                 link="/services/limb-salvage-surgery-in-gurgaon"
                 items={[
                   "Peripheral arterial disease and critical limb ischemia",
@@ -533,7 +708,13 @@ export default function Services() {
               <ServiceCard
                 id="diabetic-foot"
                 title="Diabetic Foot"
-                desc="Diabetic foot is a serious condition caused by poor circulation and nerve damage, leading to wounds, infections, or ulcers. Early diabetic foot treatment helps prevent complications and supports faster healing with proper care. "
+                desc="Diabetic foot complications arise from the combination of peripheral neuropathy and poor
+arterial circulation, leading to slow-healing wounds, deep infections, and ulcers that can
+progress rapidly. Early vascular assessment and intervention are critical to preventing
+amputation. Dr. Himanshu Verma provides comprehensive diabetic foot care, including
+vascular restoration through angioplasty or bypass, wound debridement, infection
+management, and long-term monitoring to protect limb integrity and improve patient
+outcomes."
                 link="/services/diabetic-foot-treatment-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -546,8 +727,13 @@ export default function Services() {
               {/* Wound Care */}
               <ServiceCard
                 id="wound-care"
-                title="Wound Care"
-                desc="Wound care focuses on treating slow-healing or infected wounds caused by poor circulation, diabetes, or injury. Advanced wound care treatment promotes faster healing, prevents infection, and improves overall skin health with proper medical care. "
+                title="Diabetic Wound Care"
+                desc="Chronic wounds in diabetic patients result from impaired blood supply, nerve damage, and
+reduced immunity, making healing slow, infection likely, and recurrence common. Effective
+wound care requires addressing the underlying vascular insufficiency alongside local wound
+treatment. Dr. Himanshu Verma's approach integrates revascularisation, advanced wound
+dressings, offloading strategies, and infection control to promote healing, prevent
+deterioration, and reduce the risk of limb-threatening complications in diabetic patients."
                 link="/services/diabetic-wound-care-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -561,7 +747,12 @@ export default function Services() {
               <ServiceCard
                 id="amp-sur"
                 title="Amputation Surgery"
-                desc="Amputation surgery is performed when severe infection or poor blood flow makes limb-saving difficult. Expert amputation care focuses on safety, faster recovery, and rehabilitation to help patients regain mobility and quality of life. "
+                desc="When severe infection, gangrene, or critical ischaemia makes limb preservation no longer
+viable, amputation surgery becomes a life-saving intervention. The goal is to remove the
+affected tissue at the most appropriate level while preserving maximum function for
+rehabilitation. Dr. Himanshu Verma performs amputation surgery with a focus on patient
+safety, optimal wound closure, and post-operative recovery planning, ensuring patients are
+supported through every step toward regaining mobility and quality of life."
                 link="/services/amputation-surgery-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -574,8 +765,14 @@ export default function Services() {
               {/* Deep Vein Thrombosis */}
               <ServiceCard
                 id="deep-vein"
-                title="Deep Vein Thrombosis"
-                desc="Deep vein thrombosis (DVT) occurs when a blood clot forms in deep veins, usually in the legs, causing pain and swelling. Early deep vein thrombosis treatment prevents serious complications like pulmonary embolism. "
+                title="Deep Vein Thrombosis (DVT)"
+                desc="Deep vein thrombosis (DVT) occurs when a blood clot forms in the deep veins, most
+commonly in the legs, causing pain, swelling, and redness. If untreated, the clot can dislodge
+and travel to the lungs, causing a life-threatening pulmonary embolism. Dr. Himanshu Verma
+provides prompt diagnosis through duplex ultrasound and manages DVT with
+anticoagulation therapy, catheter-directed thrombolysis, or mechanical thrombectomy
+depending on the severity and clinical presentation.
+"
                 link="/services/deep-vein-thrombosis-treatment-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -589,7 +786,12 @@ export default function Services() {
               <ServiceCard
                 id="pul-emb"
                 title="Pulmonary Embolism"
-                desc="Pulmonary embolism is a serious condition where a blood clot blocks the arteries in the lungs, causing sudden breathlessness and chest pain. Immediate pulmonary embolism treatment is crucial to prevent life-threatening complications."
+                desc="Pulmonary embolism (PE) is a medical emergency in which a blood clot, typically originating
+from the leg veins, blocks one or more pulmonary arteries, causing sudden breathlessness,
+chest pain, and reduced oxygen levels. Immediate diagnosis and treatment are essential to
+prevent cardiac arrest and death. Dr. Himanshu Verma is experienced in managing high-risk
+PE through catheter-directed thrombolysis and percutaneous thrombectomy, offering rapid,
+targeted intervention to restore pulmonary blood flow."
                 link="/services/pulmonary-embolism-treatment-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -603,7 +805,13 @@ export default function Services() {
               <ServiceCard
                 id="abd-aor"
                 title="Abdominal Aortic Aneurysm"
-                desc="An abdominal aortic aneurysm is a bulging of the main artery in the abdomen that can rupture if untreated. Early abdominal aortic aneurysm treatment helps prevent serious complications with timely monitoring or minimally invasive repair. "
+                desc="An abdominal aortic aneurysm (AAA) is an abnormal bulging of the aorta, the body's largest
+artery, in the abdomen. It is often asymptomatic until rupture, which carries an extremely
+high mortality rate. Regular surveillance is essential for at-risk individuals, including older
+men and smokers. Dr. Himanshu Verma offers both endovascular aneurysm repair (EVAR)
+and open surgical repair, selecting the safest approach based on aneurysm size, anatomy,
+and the patient's overall health status.
+"
                 link="/services/abdominal-aortic-aneurysm-treatment-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -617,7 +825,12 @@ export default function Services() {
               <ServiceCard
                 id="vas-tra"
                 title="Vascular Trauma"
-                desc="Vascular trauma refers to injury to blood vessels caused by accidents, cuts, or fractures, leading to bleeding or reduced blood flow. Timely vascular trauma treatment is crucial to restoring circulation and preventing complications."
+                desc="Vascular trauma involves injury to arteries or veins caused by road accidents, penetrating
+wounds, fractures, or iatrogenic injury. It is a time-critical emergency, uncontrolled vascular
+injury can cause severe blood loss, limb ischaemia, and death within minutes. Dr. Himanshu
+Verma is trained in emergency vascular repair, including open vessel reconstruction and
+endovascular stent-graft placement, to rapidly restore circulation, control haemorrhage, and
+preserve both limb and life following vascular injury."
                 link="/services/vascular-trauma-treatment-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -631,7 +844,13 @@ export default function Services() {
               <ServiceCard
                 id="onc-vas"
                 title="ONCO Vascular Surgery"
-                desc="Onco vascular surgery focuses on managing blood vessels affected by cancer or tumor growth. Advanced onco vascular surgery helps safely remove tumors, restore blood flow, and support better treatment outcomes."
+                desc="Cancer and its treatments can directly involve or compromise major blood vessels, through
+tumour invasion, surgical resection, or treatment-related thrombosis. Onco vascular surgery
+addresses these complex vascular challenges in cancer patients, often in collaboration with
+oncology and surgical teams. Dr. Himanshu Verma provides expert vascular support for
+cancer surgeries including vessel reconstruction, tumour thrombus removal, and
+management of treatment-related vascular complications to ensure safe oncological
+outcomes."
                 link="/services/onco-vascular-surgery-in-gurgaon"
                 items={[
                   "Advanced diabetic foot management",
@@ -644,9 +863,34 @@ export default function Services() {
               {/* Arteriovenous Malformation  */}
               <ServiceCard
                 id="art-mal"
-                title="Arteriovenous Malformation"
-                desc="Arteriovenous malformation (AVM) is an abnormal connection between arteries and veins, disrupting normal blood flow and causing pain, swelling, or bleeding. Advanced arteriovenous malformation treatment helps manage symptoms and prevent complications."
+                title="Arteriovenous Malformation (AVM)"
+                desc="Arteriovenous malformations (AVMs) are abnormal tangles of blood vessels that create
+direct connections between arteries and veins, bypassing the normal capillary system. They
+can cause pain, swelling, skin discolouration, bleeding, and in some locations,
+life-threatening complications. Dr. Himanshu Verma evaluates each AVM individually, using
+imaging-guided embolisation, sclerotherapy, surgical excision, or a combination of
+approaches, to reduce symptoms and prevent progression with the least invasive method
+possible."
                 link="/services/arteriovenous-malformation-treatment-in-gurgaon"
+                items={[
+                  "Advanced diabetic foot management",
+                  "Surgical wound debridement",
+                  "Toe and forefoot amputations",
+                  "Integrated wound care and revascularization strategies",
+                ]}
+              />
+
+              {/* Minor Amputaion  */}
+              <ServiceCard
+                id="min-amp"
+                title="Minor Amputations"
+                desc="Minor amputations involve the surgical removal of a toe, part of the foot, or a small section of
+the lower limb affected by gangrene, deep infection, or irreversible ischaemia, typically in
+diabetic or PAD patients. The primary goal is to eliminate the source of infection while
+preserving as much functional limb as possible. Dr. Himanshu Verma performs minor
+amputations with careful pre-operative vascular assessment to optimise wound healing and
+support the patient's return to mobility."
+                link="#"
                 items={[
                   "Advanced diabetic foot management",
                   "Surgical wound debridement",
@@ -657,6 +901,8 @@ export default function Services() {
             </div>
           </div>
         </section>
+
+        <ServiceFaqs />
 
         <FinalCTA />
         <Footer />
@@ -758,7 +1004,7 @@ function ServiceCard({
             href={link}
             className="text-[var(--med-primary)] font-semibold hover:underline inline-flex items-center gap-1 transition-transform hover:translate-x-1"
           >
-            Read more &rarr;
+            Book a Consultation &rarr;
           </Link>
         </div>
       )}
