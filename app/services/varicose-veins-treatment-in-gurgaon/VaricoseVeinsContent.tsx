@@ -208,7 +208,7 @@ export default function VaricoseVeinsContent() {
       name: "EVLT (Endovenous Laser Treatment)",
       badge: "Most Effective",
       badgeClass: "bg-[var(--med-primary)] text-white",
-      desc: "One of the most effective procedures used in modern varicose veins treatment in Gurgaon. A laser fibre is inserted into the damaged vein under local anaesthesia, delivering heat that causes the vein to collapse and seal. The procedure takes 30–45 minutes, and most patients return to normal activity within 1–2 days. Best suited for larger veins such as the great saphenous vein.",
+      desc: "One of the most effective procedures used in modern varicose veins treatment. A laser fibre is inserted into the damaged vein under local anaesthesia, delivering heat that causes the vein to collapse and seal. The procedure takes 30–45 minutes, and most patients return to normal activity within 1–2 days. Best suited for larger veins such as the great saphenous vein.",
     },
     {
       name: "RFA (Radiofrequency Ablation)",
@@ -220,7 +220,7 @@ export default function VaricoseVeinsContent() {
       name: "Medical Glue (Cyanoacrylate Closure)",
       badge: "Minimally Invasive",
       badgeClass: "bg-blue-100 text-blue-700",
-      desc: "A modern technique used in varicose veins treatment in Gurgaon. Medical-grade glue is injected to seal the vein shut, with no tumescent anaesthesia and no compression stockings required. Patients typically return to normal activity the same day, making this one of the most convenient options available.",
+      desc: "A modern technique used in varicose veins treatment. Medical-grade glue is injected to seal the vein shut, with no tumescent anaesthesia and no compression stockings required. Patients typically return to normal activity the same day, making this one of the most convenient options available.",
     },
     {
       name: "Foam Sclerotherapy",
@@ -367,11 +367,7 @@ export default function VaricoseVeinsContent() {
             When to Consult
           </h2>
           <p className="text-gray-700 text-sm leading-relaxed">
-            You Should see varicose veins, spider veins, bluish veins, or have
-            discomfort in your legs, you will want to consult a qualified
-            varicose vein specialist, Fortis Memorial Research Centre such as Dr
-            Himanshu, a qualified vascular surgeon in Gurgaon, for early
-            diagnosis and effective care.
+            If you notice varicose veins, spider veins, or persistent leg discomfort, consult Dr Himanshu Verma at Fortis Memorial Research Institute, Sector 44, Gurgaon for an accurate diagnosis and a personalised treatment plan.
           </p>
           {[
             "Varicose or spider veins",
@@ -655,7 +651,7 @@ export default function VaricoseVeinsContent() {
 
         <div className="rounded-2xl bg-[var(--med-primary)] text-white px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm font-medium text-white/90 max-w-xl">
-            Early diagnosis and the right varicose veins treatment in Gurgaon
+            Early diagnosis and the right varicose veins treatment
             can help prevent serious complications such as ulcers, blood clots,
             and chronic venous insufficiency. If your legs feel heavy, swollen,
             or painful, consult Dr Himanshu to find the most suitable varicose
@@ -733,35 +729,31 @@ export default function VaricoseVeinsContent() {
             return (
               <div
                 key={i}
-                className={`border rounded-2xl overflow-hidden transition-colors ${
-                  isOpen
-                    ? "border-[var(--med-primary)] bg-[var(--med-light)]"
-                    : "border-[var(--med-border)] bg-white"
-                }`}
+                className={`border rounded-2xl overflow-hidden transition-colors ${isOpen
+                  ? "border-[var(--med-primary)] bg-[var(--med-light)]"
+                  : "border-[var(--med-border)] bg-white"
+                  }`}
               >
                 <button
                   onClick={() => setOpenFaqIndex(isOpen ? null : i)}
                   className="w-full flex justify-between items-center px-6 py-4 text-left gap-4"
                 >
                   <span
-                    className={`font-semibold text-sm md:text-base pr-2 ${
-                      isOpen ? "text-[var(--med-primary)]" : "text-gray-800"
-                    }`}
+                    className={`font-semibold text-sm md:text-base pr-2 ${isOpen ? "text-[var(--med-primary)]" : "text-gray-800"
+                      }`}
                   >
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`flex-shrink-0 w-4 h-4 transition-transform duration-300 ${
-                      isOpen
-                        ? "rotate-180 text-[var(--med-primary)]"
-                        : "text-gray-400"
-                    }`}
+                    className={`flex-shrink-0 w-4 h-4 transition-transform duration-300 ${isOpen
+                      ? "rotate-180 text-[var(--med-primary)]"
+                      : "text-gray-400"
+                      }`}
                   />
                 </button>
                 <div
-                  className={`px-6 overflow-hidden transition-all duration-300 ${
-                    isOpen ? "max-h-60 pb-5" : "max-h-0"
-                  }`}
+                  className={`px-6 overflow-hidden transition-all duration-300 ${isOpen ? "max-h-60 pb-5" : "max-h-0"
+                    }`}
                 >
                   <div className="text-gray-700 text-sm leading-relaxed">
                     {faq.a}
