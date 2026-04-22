@@ -104,9 +104,9 @@ export default function RootLayout({
           />
         </noscript>
 
-        <Suspense fallback={null}>
+        {/**<Suspense fallback={null}>
           <GA4RouteTracker />
-        </Suspense>
+        </Suspense> */}
         <Suspense fallback={null}>
           <ScrollToTop />
         </Suspense>
