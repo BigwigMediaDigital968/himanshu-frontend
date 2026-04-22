@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import ReactQuill from "react-quill-new";
 import "react-quill-new/dist/quill.snow.css";
@@ -355,11 +356,10 @@ const AddBlog = ({
             </button>
             <button
               type="submit"
-              className={`px-4 py-2 text-white rounded ${
-                submitting
+              className={`px-4 py-2 text-white rounded ${submitting
                   ? "bg-gray-500 cursor-not-allowed"
                   : "bg-blue-600 hover:bg-blue-700"
-              }`}
+                }`}
               disabled={submitting}
             >
               {submitting
