@@ -7,7 +7,7 @@ import FloatingContactActions from "@/app/components/ContactActions";
 import PopupForm from "@/app/components/Popup";
 import ButtonFill from "@/app/components/Button";
 import Link from "next/link";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import PageTransition from "@/app/components/PageTransition";
 
 interface ServiceLayoutProps {
@@ -50,33 +50,30 @@ export default function ServiceLayout1({
               <div className="flex flex-col gap-3">
                 <Link
                   href="/services/av-fistula-treatment-in-gurgaon"
-                  className={`px-5 py-4 rounded-xl transition-all duration-300 ${
-                    active === "avfistula"
-                      ? "bg-[var(--med-primary)] text-white shadow-lg"
-                      : "bg-[var(--med-light)] text-gray-700 hover:bg-gray-100 hover:shadow-sm"
-                  }`}
+                  className={`px-5 py-4 rounded-xl transition-all duration-300 ${active === "avfistula"
+                    ? "bg-[var(--med-primary)] text-white shadow-lg"
+                    : "bg-[var(--med-light)] text-gray-700 hover:bg-gray-100 hover:shadow-sm"
+                    }`}
                 >
                   AV Fistula
                 </Link>
 
                 <Link
                   href="/services/dialysis-access-treatment-in-gurgaon"
-                  className={`px-5 py-4 rounded-xl transition-all duration-300 ${
-                    active === "dialysisaccess"
-                      ? "bg-[var(--med-primary)] text-white shadow-lg"
-                      : "bg-[var(--med-light)] text-gray-700 hover:bg-gray-100 hover:shadow-sm"
-                  }`}
+                  className={`px-5 py-4 rounded-xl transition-all duration-300 ${active === "dialysisaccess"
+                    ? "bg-[var(--med-primary)] text-white shadow-lg"
+                    : "bg-[var(--med-light)] text-gray-700 hover:bg-gray-100 hover:shadow-sm"
+                    }`}
                 >
                   Dialysis Access
                 </Link>
 
                 <Link
                   href="/services/central-venous-care-treatment-in-gurgaon"
-                  className={`px-5 py-4 rounded-xl transition-all duration-300 ${
-                    active === "venouscare"
-                      ? "bg-[var(--med-primary)] text-white shadow-lg"
-                      : "bg-[var(--med-light)] text-gray-700 hover:bg-gray-100 hover:shadow-sm"
-                  }`}
+                  className={`px-5 py-4 rounded-xl transition-all duration-300 ${active === "venouscare"
+                    ? "bg-[var(--med-primary)] text-white shadow-lg"
+                    : "bg-[var(--med-light)] text-gray-700 hover:bg-gray-100 hover:shadow-sm"
+                    }`}
                 >
                   Central Venous Care
                 </Link>
@@ -102,7 +99,9 @@ export default function ServiceLayout1({
 
           {/* CONTENT */}
           <div className="lg:col-span-8 bg-white p-10 rounded-3xl shadow-lg">
-            <PageTransition>{children}</PageTransition>
+            <Suspense fallback={null}>
+              <PageTransition>{children}</PageTransition>
+            </Suspense>
           </div>
         </div>
       </section>

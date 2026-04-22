@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 import Image from "next/image";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
@@ -74,7 +74,9 @@ export default function BlogClient({
             </h2>
 
             {/* Just pass the data here */}
-            <FAQAccordion items={blog.faqs} />
+            <Suspense fallback={null}>
+              <FAQAccordion items={blog.faqs} />
+            </Suspense>
           </main>
         </article>
 

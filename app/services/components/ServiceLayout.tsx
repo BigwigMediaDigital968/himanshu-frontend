@@ -6,7 +6,7 @@ import FinalCTA from "@/app/components/CTA";
 import FloatingContactActions from "@/app/components/ContactActions";
 import PopupForm from "@/app/components/Popup";
 import ButtonFill from "@/app/components/Button";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import PageTransition from "@/app/components/PageTransition";
 import AboutServiceTable from "@/app/components/AboutServiceTable";
 import { usePathname } from "next/navigation";
@@ -322,7 +322,9 @@ export default function ServiceLayout({
           {/* CONTENT */}
 
           <div className="lg:col-span-8 bg-white p-5 sm:p-10 rounded-3xl shadow-lg">
-            <PageTransition>{children}</PageTransition>
+            <Suspense fallback={null}>
+              <PageTransition>{children}</PageTransition>
+            </Suspense>
             <AboutServiceTable
               title="Explore Our Services"
               services={servicesData}
