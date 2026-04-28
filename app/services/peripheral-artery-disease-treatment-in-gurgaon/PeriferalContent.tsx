@@ -305,6 +305,13 @@ export default function PeripheralArteryContent() {
           ))}
         </div>
       </div>
+      <div className="mb-6">
+        <img
+          src="/services/peripheral-artery-disease/peripheral-artery-disease-banner.png"
+          alt="Peripheral Artery
+            Disease treatment in Gurgaon"
+        />
+      </div>
 
       {/* ── INTRO + WHO IS A SPECIALIST ── */}
       <div className="grid  gap-8 mb-14 items-start">
