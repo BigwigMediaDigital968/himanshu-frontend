@@ -11,6 +11,7 @@ import {
   Zap,
   Activity,
 } from "lucide-react";
+import TestimonialsServices from "@/app/components/TestimonialService";
 
 export default function PeripheralArteryContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -19,37 +20,31 @@ export default function PeripheralArteryContent() {
   const faqs = [
     {
       q: "What are the symptoms of blocked arteries in the legs?",
-      a: "Pain or cramping while walking, numbness, cold feet, slow-healing wounds, and shiny skin.",
+      a: "The most common symptom is leg pain or cramping while walking that eases with rest (intermittent claudication). Other signs include numbness, cold feet, skin changes, and slow-healing wounds. Severe cases may cause rest pain, indicating critical limb ischemia requiring urgent treatment.",
     },
     {
-      q: "How to test for Peripheral Artery Disease?",
-      a: "Ankle-Brachial Index (ABI), Doppler ultrasound, and angiography.",
+      q: "How is Peripheral Artery Disease tested and diagnosed?",
+      a: "Diagnosis starts with the Ankle-Brachial Index (ABI), a simple, painless test. An ABI below 0.9 confirms PAD. As part of our comprehensive Peripheral Artery Disease treatment in Gurgaon, Doppler ultrasound, CT angiography, and DSA are then used to map blockage location and severity to plan treatment.",
     },
     {
       q: "What is considered the first symptom of peripheral arterial disease?",
-      a: "Intermittent leg pain while walking is called claudication.",
+      a: "Intermittent claudication, leg pain triggered by walking and relieved by rest, is typically the first symptom. Many early-stage patients have no symptoms at all, making screening important for those with diabetes, smoking history, or age over 50.",
     },
     {
       q: "Can PAD lead to heart problems?",
-      a: "Yes, it increases the risk of heart attack and stroke.",
+      a: "Yes. PAD and coronary artery disease share the same cause. Having PAD roughly doubles the risk of heart attack and stroke, which is why cardiovascular risk factor control is a core part of PAD management.",
     },
     {
       q: "Is PAD reversible?",
-      a: "Lifestyle changes and medical interventions can significantly improve symptoms and blood flow.",
+      a: "PAD cannot be fully reversed, but its progression can be significantly slowed. Smoking cessation, exercise, medications, and endovascular procedures can restore blood flow and allow most patients to return to normal daily activity.",
     },
     {
-      q: "How quickly should I seek Peripheral Artery Disease treatment in Gurgaon?",
-      a: (
-        <p className="text-gray-700 text-sm leading-relaxed">
-          Immediate consultation for{" "}
-          <b>Peripheral Artery Disease treatment in Gurgaon</b> is important if
-          you notice leg pain, slow-healing wounds, or cold feet.
-        </p>
-      ),
+      q: "How quickly should I seek treatment if I suspect PAD?",
+      a: "Seek consultation promptly if you notice leg pain on walking, cold or discoloured feet, or slow-healing wounds. Early Peripheral Artery Disease treatment in Gurgaon significantly reduces the risk of serious complications. Sudden severe leg pain with pallor and coldness is a vascular emergency. Go to the hospital immediately.",
     },
     {
       q: "What is the best treatment for leg artery blockage?",
-      a: "Treatment depends on severity and may include angioplasty for leg arteries, medications, or bypass surgery recommended by a specialist.",
+      a: "It depends on the severity and location of the blockage. For patients seeking Peripheral Artery Disease treatment in Gurgaon, shorter blockages are typically treated with angioplasty and stenting. Complex or longer blockages may require bypass surgery. Dr. Himanshu Verma will recommend the most appropriate option after reviewing your imaging results.",
     },
   ];
 
@@ -59,47 +54,42 @@ export default function PeripheralArteryContent() {
     "Cold lower legs or feet",
     "Slow-healing wounds or ulcers on toes or feet",
     "Shiny skin, hair loss, or changes in nail growth",
-    "Weak or absent pulse in the legs or feet",
+    "A weak or nonexistent pulse in the feet or legs",
   ];
 
   const facts = [
-    "Millions worldwide are affected, often without knowing it.",
-    "Smoking, diabetes, high blood pressure, and high cholesterol are key risk factors.",
-    "Adults over 50 are more susceptible.",
-    "PAD reduces mobility and can affect quality of life.",
-    "Early diagnosis improves treatment success.",
-    "Lifestyle changes enhance the effectiveness of medical treatment.",
-    "PAD increases the risk of heart attack and stroke.",
-    "Imaging techniques like ultrasound and angiography are essential for detection.",
-    "Minimally invasive procedures can restore blood flow safely.",
-    "Regular follow-up is crucial for long-term vascular health.",
+    "PAD affects an estimated 200 million people worldwide, yet many remain undiagnosed due to absent symptoms.",
+    "Smoking is the strongest modifiable risk factor; smokers are up to 4x more likely to develop PAD.",
+    "Diabetes worsens PAD outcomes, increasing the risk of below-knee disease and limb-threatening ischemia.",
+    "Adults over 50 with diabetes or a smoking history should be screened proactively, even without symptoms.",
+    "Up to 50% of PAD patients have no leg symptoms; the disease is often detected only during cardiovascular screening.",
+    "PAD is a strong predictor of heart attack and stroke.",
+    "Smoking cessation and supervised exercise can meaningfully improve walking ability and quality of life in early PAD.",
+    "The Ankle-Brachial Index (ABI) is a simple, non-invasive test that detects PAD with high accuracy in routine clinical settings.",
+    "Angioplasty and stenting restore blood flow with shorter recovery times than open bypass surgery.",
+    "PAD is progressive, and treated vessels can re-narrow (restenosis), making regular specialist follow-up essential.",
   ];
 
   const diagnosisSteps = [
     {
       num: "01",
-      title: "Medical History & Physical Exam",
-      desc: "A detailed review of symptoms, risk factors, and clinical examination.",
+      title: "Medical History & Physical Examination",
+      desc: "A detailed review of your symptoms, cardiovascular risk factors, smoking history, and diabetes status, combined with physical examination of pulses in the legs and feet.",
     },
     {
       num: "02",
       title: "Ankle-Brachial Index (ABI) Test",
-      desc: "Compares blood pressure in the ankle and arm to assess artery narrowing.",
+      desc: "A quick, painless comparison of blood pressure measured at the ankle versus the arm. An ABI below 0.9 is diagnostic of PAD. Severely low readings indicate critical limb ischemia requiring urgent intervention.",
     },
     {
       num: "03",
       title: "Doppler Ultrasound",
-      desc: "Non-invasive imaging to evaluate blood flow and detect blockages.",
+      desc: "Non-invasive colour Doppler imaging used to visualize blood flow through arteries, detect the location and severity of blockages, and assess flow velocity.",
     },
     {
       num: "04",
-      title: "Digital Subtraction Angiography (DSA)",
-      desc: "Detailed X-ray imaging to map blood vessels and locate blockages precisely.",
-    },
-    {
-      num: "05",
       title: "CT or MR Angiography",
-      desc: "Advanced cross-sectional imaging for a comprehensive view of affected arteries.",
+      desc: "Advanced cross-sectional imaging providing a comprehensive three-dimensional view of affected arteries, particularly useful for planning complex multi-level disease treatment.",
     },
   ];
 
@@ -120,11 +110,144 @@ export default function PeripheralArteryContent() {
     "Embolectomy for Acute Limb Ischemia",
   ];
 
+  const treatmentOptions = [
+    {
+      title: "Digital Subtraction Angiography (DSA)",
+      desc: "Used both as a diagnostic tool and as the imaging platform for performing endovascular interventions in the same session.",
+    },
+    {
+      title: "Iliac Artery Angioplasty & Stenting",
+      desc: "Balloon expansion of narrowed iliac arteries (supplying the pelvis and legs) followed by placement of a metal stent to keep the vessel open.",
+    },
+    {
+      title: "Femoral Artery Angioplasty",
+      desc: "Balloon catheter treatment of blockages in the common femoral artery, which is the main artery supplying the thigh and lower leg.",
+    },
+    {
+      title: "Femoral Endarterectomy",
+      desc: "Surgical removal of plaque buildup from inside the femoral artery, typically used for localized disease at the groin level.",
+    },
+    {
+      title: "Superficial Femoral Artery (SFA) Angioplasty",
+      desc: "Balloon-based opening of blockages in the SFA, one of the most commonly affected arteries in PAD patients.",
+    },
+    {
+      title: "SFA Drug-Eluting Balloon Angioplasty",
+      desc: "An advanced form of SFA angioplasty using a balloon coated with anti-restenosis medication, which is released into the artery wall to reduce the risk of re-narrowing after treatment.",
+    },
+    {
+      title: "SFA Stenting",
+      desc: "Placement of a self-expanding metal stent in the SFA to maintain patency after angioplasty, used when balloon treatment alone is insufficient.",
+    },
+    {
+      title: "Below-Knee (BTK / TBL) Angioplasty",
+      desc: "Technically demanding endovascular treatment of blocked arteries in the calf and foot, critical for limb salvage in patients with diabetic foot disease or critical limb ischemia.",
+    },
+    {
+      title: "Femoro-Popliteal Bypass",
+      desc: "A surgical bypass using either the patient's own vein or a synthetic graft to reroute blood around a blocked segment of the femoral or popliteal artery.",
+    },
+    {
+      title: "Femoro-Tibial Bypass",
+      desc: "Bypass surgery extending from the femoral artery to the tibial vessels in the lower leg, typically reserved for extensive multi-level disease where endovascular options are unsuitable.",
+    },
+    {
+      title: "Tibial/Plantar Vessel Angioplasty",
+      desc: "Restoration of blood flow to the smallest vessels supplying the foot and toes is essential for wound healing in patients with diabetic foot and critical ischemia.",
+    },
+    {
+      title: "Intravascular Lithotripsy (Shockwave Therapy)",
+      desc: "A newer technology using sonic pressure waves to break up heavily calcified (hardened) plaque within artery walls, making them amenable to balloon treatment when conventional angioplasty would fail.",
+    },
+    {
+      title: "IVUS - Intravascular Ultrasound Guided Procedures",
+      desc: "Use of a miniature ultrasound probe inside the artery to guide stent placement with precision, ensuring optimal sizing and position, reducing the risk of complications and restenosis.",
+    },
+    {
+      title: "Embolectomy for Acute Limb Ischemia",
+      desc: "Emergency surgical removal of a blood clot that has suddenly blocked an artery, causing acute loss of blood supply to the limb. This is a limb- and life-saving procedure requiring immediate intervention.",
+    },
+  ];
+
   const lifestyle = [
-    "Quit smoking",
-    "Maintain a healthy diet",
-    "Exercise regularly",
-    "Control blood pressure and cholesterol",
+    "Quit smoking, the single most impactful step; smoking cessation significantly slows PAD progression",
+    "Supervised exercise therapy, structured walking programmes have strong clinical evidence for improving claudication symptoms",
+    "A heart-healthy diet, reducing saturated fats and increasing fibre, slows arterial plaque progression",
+    "Blood pressure control, current guidelines recommend a target below 130/80 mmHg in PAD patients",
+    "Cholesterol and diabetes management, statin therapy, and glycaemic control are cornerstones of PAD medical management",
+  ];
+
+  const testimonials = [
+    {
+      id: 1,
+      name: "Rakesh Chawla",
+      content:
+        "I had been ignoring cramps in my calves for almost a year, assuming it was just muscle fatigue. When the pain started, even while walking short distances, I consulted Dr. Himanshu Verma. He immediately suspected Peripheral Artery Disease and got a Doppler test done. The blockage was identified early, and he treated it with a minimally invasive angioplasty. Within a week, I could walk comfortably again. Very precise diagnosis.",
+      rating: 5,
+    },
+    {
+      id: 2,
+      name: "Preeti Bansal",
+      content:
+        "My mother (age 68) had discoloration in her toes and constant leg pain at night. We were really worried. Dr. Himanshu calmly explained that it was advanced PAD and needed urgent attention. He performed a procedure to restore blood flow, and the improvement was visible within days. His confidence really reassured us.",
+      rating: 5,
+    },
+    {
+      id: 3,
+      name: "Kunal Aggarwal",
+      content:
+        "I am diabetic, so when I started having numbness and slow-healing wounds on my foot, it became serious. Dr. Himanshu Verma handled my case very carefully, considering my sugar levels. He planned the treatment step-by-step and avoided major surgery. My wound has healed now, and circulation is much better.",
+      rating: 5,
+    },
+    {
+      id: 4,
+      name: "Ritu Chhabra",
+      content:
+        "What I liked most about Dr. Himanshu was that he didn’t rush into procedures. He first tried medication and lifestyle correction for my PAD symptoms. When that didn’t fully help, he suggested the next step. Very ethical doctor, not money-minded.",
+      rating: 5,
+    },
+    {
+      id: 5,
+      name: "Mohit Sachdeva",
+      content:
+        "I was unable to walk more than 100 meters without severe pain in my legs. After treatment from Dr. Himanshu Verma, I can now walk almost 2–3 km daily. He explained everything clearly, even showing the blockage in reports. That transparency really built trust.",
+      rating: 5,
+    },
+    {
+      id: 6,
+      name: "Sushma Kohli",
+      content:
+        "My father had a high risk of amputation due to poor blood circulation caused by PAD. Dr. Himanshu Verma treated him with an endovascular procedure and literally saved his leg. We are extremely grateful for his expertise.",
+      rating: 5,
+    },
+    {
+      id: 7,
+      name: "Varun Talwar",
+      content:
+        "I visited Dr. Himanshu after experiencing a cold sensation and weakness in my legs. He diagnosed early-stage Peripheral Artery Disease and treated it before it got worse. His preventive approach really made a difference.",
+      rating: 5,
+    },
+    {
+      id: 8,
+      name: "Neelam Ahuja",
+      content:
+        "Very humble and approachable doctor. I never felt rushed during the consultation. He answered all my questions about PAD and made sure I understood the treatment options. Recovery was smooth and well-monitored.",
+      rating: 5,
+    },
+    {
+      id: 9,
+      name: "Tarun Oberoi",
+      content:
+        "I had already consulted two doctors before meeting Dr. Himanshu Verma, but wasn’t satisfied. He gave a completely different perspective and suggested a less invasive solution. The results were excellent, and I avoided a major surgery.",
+      rating: 5,
+    },
+    {
+      id: 10,
+      name: "Shweta Suri",
+      content:
+        "My husband’s case was complicated because of his smoking history and severe artery blockage. Dr. Himanshu handled it very professionally and planned the treatment carefully. The improvement in his walking ability has been life-changing.",
+      rating: 5,
+    },
   ];
 
   const BulletItem = ({
@@ -164,10 +287,10 @@ export default function PeripheralArteryContent() {
           Peripheral Artery Disease is a serious circulatory condition where
           narrowed arteries reduce blood flow to the limbs. If left untreated,
           it can cause pain, mobility issues, and in severe cases, limb loss.
-          Our clinic provides personalized care for every patient, ensuring
-          accurate diagnosis and effective treatment. Consulting a qualified
-          <b>Peripheral Artery Disease Specialist</b> ensures timely diagnosis
-          and prevents complications.
+          Our clinic provides personalized Peripheral Artery Disease treatment
+          in Gurgaon for every patient, ensuring accurate diagnosis and
+          effective treatment. Consulting a qualified Peripheral Artery Disease
+          Specialist ensures timely diagnosis and prevents complications.
         </p>
         <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/20">
           {[
@@ -190,22 +313,20 @@ export default function PeripheralArteryContent() {
             Who Is a Peripheral Artery Disease Specialist?
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            Peripheral Artery Disease is a serious circulatory condition where
-            narrowed arteries reduce blood flow to the limbs. If left untreated,
-            it can cause pain, mobility issues, and in severe cases, limb loss.
-            Consulting a qualified <b>Peripheral Artery Disease Specialist</b>{" "}
-            ensures timely diagnosis and prevents complications.
+            A Peripheral Artery Disease specialist is a trained vascular surgeon
+            who focuses on diagnosing and treating conditions affecting arteries
+            outside the heart and brain. Dr. Himanshu Verma is a Vascular &
+            Endovascular Surgeon practising at Fortis Memorial Research Centre,
+            Sector 44, Gurgaon. He holds an MCh in Vascular & Endovascular
+            Surgery and has extensive experience managing complex arterial and
+            venous conditions, including PAD.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            A <b>Peripheral Artery Disease specialist in Gurgaon</b> is a
-            trained vascular expert who focuses on conditions affecting the
-            arteries outside the heart. <b>Dr. Himanshu Verma</b>, a highly
-            experienced Vascular & Endovascular Surgeon, is skilled in
-            identifying blockages, assessing blood flow, and recommending
-            personalized <b>Peripheral Artery Disease treatment in Gurgaon</b>.
-            Under his care, patients receive guidance ranging from lifestyle
-            changes to advanced minimally invasive procedures tailored to their
-            specific condition.
+            Under Dr. Himanshu Verma's care, patients seeking Peripheral Artery
+            Disease treatment in Gurgaon receive a thorough evaluation of their
+            arterial health, followed by a personalized treatment plan ranging
+            from lifestyle modifications and medications to advanced minimally
+            invasive endovascular procedures.
           </p>
         </div>
 
@@ -215,10 +336,10 @@ export default function PeripheralArteryContent() {
             Why Early Consultation Matters
           </p>
           {[
-            "Prevents limb loss and serious complications",
-            "Accurate diagnosis of artery blockages",
-            "Personalized minimally invasive treatment",
-            "Guidance from a specialist at every step",
+            "Prevents limb loss and serious vascular complications",
+            "Enables accurate mapping of artery blockages before they worsen",
+            "Opens access to minimally invasive treatment options with faster recovery",
+            "Ensures ongoing specialist monitoring of a progressive condition",
           ].map((item) => (
             <div key={item} className="flex items-start gap-3">
               <CheckCircle2 className="w-4 h-4 text-[var(--med-primary)] mt-0.5 flex-shrink-0" />
@@ -238,8 +359,13 @@ export default function PeripheralArteryContent() {
             What Are Peripheral Artery Disease Symptoms?
           </h2>
           <p className="text-gray-600 mt-2 max-w-2xl">
-            Peripheral Artery Disease symptoms often start subtly and worsen
-            over time. Watch for:
+            <a
+              href="https://www.drhimanshuverma.com/blogs/peripheral-artery-disease-treatment-for-better-blood-flow"
+              className="text-blue-500 font-medium"
+            >
+              Peripheral Artery Disease
+            </a>{" "}
+            symptoms often start subtly and worsen over time. Watch for:
           </p>
         </div>
 
@@ -257,13 +383,20 @@ export default function PeripheralArteryContent() {
           ))}
         </div>
 
+        <div className="mb-6">
+          <p className="text-gray-600 text-sm font-medium ">
+            Early detection can prevent serious complications. If you notice any
+            of these signs, consult a Peripheral Artery Disease Specialist
+            immediately.
+          </p>
+        </div>
+
         <div className="flex flex-col sm:flex-row items-center gap-4 p-6 rounded-2xl bg-[var(--med-light)] border border-[var(--med-border)]">
           <div className="flex items-center gap-2 flex-1">
             <AlertTriangle className="w-5 h-5 text-orange-500 flex-shrink-0" />
             <p className="text-gray-700 text-sm font-medium">
-              Early detection can prevent serious complications and improve
-              mobility. Experiencing any of these symptoms? Contact us
-              immediately for a thorough assessment.
+              Experiencing any of these symptoms? Contact us immediately for a
+              thorough assessment.
             </p>
           </div>
           <ButtonFill
@@ -282,6 +415,13 @@ export default function PeripheralArteryContent() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
             10 Evidence-Based Facts About Peripheral Artery Disease
           </h2>
+          <p className="text-gray-600 mt-2">
+            The following facts are drawn from published clinical guidelines,
+            including those of the American Heart Association (AHA), the
+            European Society of Cardiology (ESC), and the Vascular Society of
+            India, forming the foundation of evidence-based Peripheral Artery
+            Disease treatment in Gurgaon at our clinic.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -308,12 +448,14 @@ export default function PeripheralArteryContent() {
             Our Diagnostic Process
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-            How Our Peripheral Artery Disease Specialist Diagnoses the Condition
+            How Dr. Himanshu Verma Diagnoses Peripheral Artery Disease Treatment
+            in Gurgaon
           </h2>
           <p className="text-gray-600 mt-2 max-w-2xl">
-            Our diagnosis process is thorough and patient-focused. Accurate
-            diagnosis ensures you receive the most effective{" "}
-            <b>Peripheral Artery Disease treatment in Gurgaon</b>.
+            Our diagnostic approach to Peripheral Artery Disease treatment in
+            Gurgaon is systematic, evidence-based, and tailored to each
+            patient's clinical picture. Accurate staging of disease severity
+            determines which treatment will deliver the best outcome.
           </p>
         </div>
 
@@ -357,35 +499,49 @@ export default function PeripheralArteryContent() {
             Treatment Options for Peripheral Artery Disease
           </h2>
           <p className="text-gray-600 mt-2 max-w-2xl">
-            Every procedure is performed under the guidance of an experienced{" "}
-            <b>Peripheral Artery Disease Specialist</b> to ensure safety and
-            precision. We provide advanced{" "}
-            <b>Peripheral Artery Disease treatment in Gurgaon</b> tailored to
-            each patient, including:
+            Every procedure is performed under the guidance of an experienced
+            Peripheral Artery Disease Specialist to ensure safety and precision.
+            We provide advanced{" "}
+            <a
+              href="https://www.drhimanshuverma.com/blogs/symptoms-of-pad-warning-signs-you-should-never-ignore"
+              className="text-blue-500 font-medium "
+            >
+              Peripheral Artery Disease treatment in Gurgaon
+            </a>{" "}
+            tailored to each patient, including:
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-          {treatments.map((t, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
+          {treatmentOptions.map((t, i) => (
             <div
-              key={t}
+              key={i + "treatment-options"}
               className="border border-[var(--med-border)] rounded-2xl p-4 bg-white hover:shadow-md transition-shadow flex items-start gap-3"
             >
               <span className="text-xs font-bold text-[var(--med-primary)] opacity-40 flex-shrink-0 mt-0.5">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="text-sm font-medium text-gray-800 leading-snug">
-                {t}
-              </span>
+              <div className="text-sm text-gray-800 leading-snug">
+                <p className="font-medium">{t.title}</p>
+                <p className="text-gray-600 mt-2">{t.desc}</p>
+              </div>
             </div>
           ))}
+        </div>
+        <div className="mb-4">
+          <p className="text-gray-600">
+            Our goal is to restore blood flow, relieve symptoms, and improve
+            your quality of life. Every patient deserves care from an
+            experienced Peripheral Artery Disease Specialist using the most
+            advanced techniques available.
+          </p>
         </div>
 
         <div className="rounded-2xl bg-[var(--med-primary)] text-white px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm font-medium text-white/90 max-w-xl">
-            Start your treatment journey now. Speak with our specialists for
-            Peripheral Artery Disease treatment in Gurgaon to find the best
-            solution for you.
+            Start your treatment journey now. Speak with our specialists for the
+            best Peripheral Artery Disease treatment in Gurgaon tailored to your
+            condition.
           </p>
           <button
             onClick={() => setOpenPopup(true)}
@@ -397,7 +553,7 @@ export default function PeripheralArteryContent() {
       </div>
 
       {/* ── LIFESTYLE + WHY CHOOSE ── */}
-      <div className="mb-14 grid md:grid-cols-2 gap-6">
+      <div className="mb-14 grid md:grid-cols-1 gap-6">
         {/* Lifestyle */}
         <div className="rounded-2xl border border-[var(--med-border)] bg-[var(--med-light)] p-6">
           <div className="flex items-center gap-2 mb-4">
@@ -407,7 +563,9 @@ export default function PeripheralArteryContent() {
             </h2>
           </div>
           <p className="text-gray-600 text-sm mb-4">
-            Alongside medical procedures, lifestyle changes play a key role:
+            Lifestyle changes are a core part of effective Peripheral Artery
+            Disease treatment in Gurgaon. Medical and surgical treatment works
+            best when supported by the following:
           </p>
           <ul className="space-y-2">
             {lifestyle.map((l) => (
@@ -421,35 +579,44 @@ export default function PeripheralArteryContent() {
           <div className="bg-[var(--med-primary)] p-6 flex flex-col justify-center gap-3">
             <ShieldCheck className="w-7 h-7 text-white/60" />
             <h2 className="text-lg font-bold text-white">
-              Why Choose Dr. Himanshu Verma?
+              Why Choose Dr. Himanshu Verma for Peripheral Artery Disease
+              Treatment
             </h2>
             <p className="text-white/80 text-sm leading-relaxed">
-              A highly experienced Vascular & Endovascular Surgeon offering 14
-              advanced procedures for{" "}
-              <b className="text-white">
-                Peripheral Artery Disease treatment in Gurgaon
-              </b>
-              .
+              Dr. Himanshu Verma | MCh, Vascular & Endovascular Surgery |
+              Consultant Vascular & Endovascular Surgeon, Fortis Memorial
+              Research Centre, Sector 44, Gurgaon, bringing over 17 years of
+              dedicated vascular expertise to every patient seeking Peripheral
+              Artery Disease treatment in Gurgaon.
             </p>
           </div>
           <div className="bg-[var(--med-light)] p-6 flex flex-col gap-3">
             {[
-              "Personalized treatment for every patient",
-              "Minimally invasive, faster recovery",
-              "Advanced imaging-guided procedures",
-              "Comprehensive follow-up care",
+              "1000+ successful endovascular and surgical procedures performed",
+              "Proficient in 14 advanced endovascular and surgical procedures for PAD",
+              "Subspecialty expertise in complex below-knee and multi-level arterial disease",
+              "Imaging-guided, minimally invasive approach as first choice",
+              "Member, Vascular Society of India",
+              "Personalized treatment planning for every patient",
+              "Comprehensive follow-up care to monitor long-term vessel patency",
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <CheckCircle2 className="w-4 h-4 text-[var(--med-primary)] mt-0.5 flex-shrink-0" />
                 <span className="text-gray-700 text-sm">{item}</span>
               </div>
             ))}
-            <ButtonFill
-              onClick={() => setOpenPopup(true)}
-              text="Schedule an Appointment"
-            />
+            <div>
+              <ButtonFill
+                onClick={() => setOpenPopup(true)}
+                text="Schedule an Appointment"
+              />
+            </div>
           </div>
         </div>
+      </div>
+
+      <div className="mb-14">
+        <TestimonialsServices testimonials={testimonials} />
       </div>
 
       {/* ── FAQ ── */}
