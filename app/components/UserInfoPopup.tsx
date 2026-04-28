@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import popup from "../assets/himanshu-image.webp";
+import popup from "../assets/Dr-Himanshu.png";
 import { Loader } from "lucide-react";
 
 interface InfoItem {
