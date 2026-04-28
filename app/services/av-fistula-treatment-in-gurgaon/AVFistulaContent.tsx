@@ -12,10 +12,29 @@ import {
   ShieldCheck,
   Zap,
 } from "lucide-react";
+import ServiceCarousel from "../ServiceCarousal";
 
 export default function AVFistulaContent() {
   const [openPopup, setOpenPopup] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const typesCarousl = [
+    {
+      id: 1,
+      src: "/services/av-fistula/av-fistula-surgery-1.jpeg",
+      alt: "AV fistula surgery procedure for dialysis access",
+    },
+    {
+      id: 2,
+      src: "/services/av-fistula/av-fistula-basilic-vein-transposition.jpeg",
+      alt: "Basilic vein transposition surgery for AV fistula creation",
+    },
+    {
+      id: 3,
+      src: "/services/av-fistula/av-fistula-angioplasty.jpeg",
+      alt: "Angioplasty treatment to restore AV fistula function",
+    }
+  ];
 
   const faqs = [
     {
@@ -254,7 +273,7 @@ export default function AVFistulaContent() {
       </div>
 
       {/* ── WHAT IS ── */}
-      <div className="grid md:grid-cols-5 gap-8 mb-14 items-start">
+      <div className="grid md:grid-cols-5 gap-8 mb-7 items-start">
         <div className="md:col-span-3 space-y-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
             What Is an AV Fistula?
@@ -289,6 +308,10 @@ export default function AVFistulaContent() {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="mb-6">
+        <img src="/services/av-fistula/av-fistula-banner.jpeg" alt="AV fistula surgery procedure for dialysis access" />
       </div>
 
       {/* ── PROTOCOL ── */}
@@ -390,6 +413,9 @@ export default function AVFistulaContent() {
           and artery quality, patient age, and dialysis needs during{" "}
           <b>AV Fistula Treatment in Gurgaon</b>.
         </p>
+        <div className="mb-4">
+        <ServiceCarousel images={typesCarousl} />
+      </div>
         <div className="flex flex-col sm:flex-row items-center gap-4 p-6 rounded-2xl bg-[var(--med-light)] border border-[var(--med-border)]">
           <p className="text-gray-700 font-medium flex-1 text-sm">
             To learn about the type of AV Fistula that is right for you?
