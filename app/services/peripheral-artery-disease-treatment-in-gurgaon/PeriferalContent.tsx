@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import PopupForm from "@/app/components/Popup";
 import ButtonFill from "@/app/components/Button";
 import {
@@ -10,6 +10,8 @@ import {
   ShieldCheck,
   Zap,
   Activity,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import TestimonialsServices from "@/app/components/TestimonialService";
 
@@ -248,6 +250,24 @@ export default function PeripheralArteryContent() {
         "My husband’s case was complicated because of his smoking history and severe artery blockage. Dr. Himanshu handled it very professionally and planned the treatment carefully. The improvement in his walking ability has been life-changing.",
       rating: 5,
     },
+  ];
+
+    const typesCarousl = [
+    {
+      id: 1,
+      src: "/services/av-fistula/av-fistula-surgery-1.jpeg",
+      alt: "AV fistula surgery procedure for dialysis access",
+    },
+    {
+      id: 2,
+      src: "/services/av-fistula/av-fistula-basilic-vein-transposition.jpeg",
+      alt: "Basilic vein transposition surgery for AV fistula creation",
+    },
+    {
+      id: 3,
+      src: "/services/av-fistula/av-fistula-angioplasty.jpeg",
+      alt: "Angioplasty treatment to restore AV fistula function",
+    }
   ];
 
   const BulletItem = ({
@@ -543,6 +563,10 @@ export default function PeripheralArteryContent() {
             advanced techniques available.
           </p>
         </div>
+peripheral-artery-disease-1
+        <div>
+
+        </div>
 
         <div className="rounded-2xl bg-[var(--med-primary)] text-white px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm font-medium text-white/90 max-w-xl">
@@ -557,6 +581,10 @@ export default function PeripheralArteryContent() {
             Speak with Our Specialists
           </button>
         </div>
+      </div>
+
+      <div className="w-[85vw] lg:w-full overflow-hidden">
+        <AutoCarousel images={['/services/peripheral-artery-disease/peripheral-artery-disease-1.png', '/services/peripheral-artery-disease/peripheral-artery-disease-2.png', '/services/peripheral-artery-disease/peripheral-artery-disease-3.png', '/services/peripheral-artery-disease/peripheral-artery-disease-4.png']} />
       </div>
 
       {/* ── LIFESTYLE + WHY CHOOSE ── */}
@@ -707,3 +735,136 @@ export default function PeripheralArteryContent() {
     </div>
   );
 }
+interface CarouselProps {
+  images: string[];
+  autoPlayInterval?: number;
+}
+
+const AutoCarousel: React.FC<CarouselProps> = ({ 
+  images, 
+  autoPlayInterval = 5000 
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [containerWidth, setContainerWidth] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number | null>(null);
+  
+  // Total pages: since we show 2 images at a time
+  const totalPages = Math.ceil(images.length / 2);
+
+  // Update width on resize to keep it responsive
+  useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.offsetWidth);
+      }
+    };
+
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
+  }, [totalPages]);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
+  };
+
+  // Auto-play logic
+  useEffect(() => {
+    const timer = setInterval(nextSlide, autoPlayInterval);
+    return () => clearInterval(timer);
+  }, [nextSlide, autoPlayInterval]);
+
+  // Touch handlers for Swiping
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.nativeEvent.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartX.current) return;
+    const touchEndX = e.nativeEvent.changedTouches[0].clientX;
+    const diff = touchStartX.current - touchEndX;
+
+    if (Math.abs(diff) > 50) { // Swipe threshold
+      if (diff > 0) nextSlide();
+      else prevSlide();
+    }
+    touchStartX.current = null;
+  };
+
+  return (
+    <div className="w-full overflow-hidden max-w-4xl mx-auto px-4 group">
+      {/* Main Container */}
+      <div 
+        ref={containerRef}
+        className="relative overflow-hidden rounded-2xl bg-gray-100"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        {/* Slides Wrapper */}
+        <div 
+          className="flex transition-transform duration-500 ease-out"
+          style={{ 
+            transform: `translateX(-${currentIndex * containerWidth}px)`,
+            width: `${totalPages * 100}%`
+          }}
+        >
+          {/* Mapping through images in pairs */}
+          {Array.from({ length: totalPages }).map((_, pageIdx) => (
+            <div 
+              key={pageIdx} 
+              className="flex flex-wrap sm:flex-nowrap gap-4 p-2" 
+              style={{ width: `${containerWidth}px` }}
+            >
+              {images.slice(pageIdx * 2, pageIdx * 2 + 2).map((src, imgIdx) => (
+                <div key={imgIdx} className="sm:flex-1 relative overflow-hidden rounded-xl shadow-md">
+                  <img 
+                    src={src} 
+                    alt={`Slide ${pageIdx}-${imgIdx}`}
+                    className="h-full object-cover mx-auto"
+                  />
+                </div>
+              ))}
+              {/* Fallback for odd number of images */}
+              {images.slice(pageIdx * 2, pageIdx * 2 + 2).length === 1 && (
+                <div className="flex-1" />
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
+        >
+          <ChevronLeft
+           className="w-6 h-6 text-gray-800" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
+        >
+          <ChevronRight className="w-6 h-6 text-gray-800" />
+        </button>
+      </div>
+
+      {/* Navigation Dots */}
+      <div className="flex justify-center gap-2 mt-4">
+        {Array.from({ length: totalPages }).map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`h-2 transition-all duration-300 rounded-full ${
+              currentIndex === idx ? "w-8 bg-blue-600" : "w-2 bg-gray-300 hover:bg-gray-400"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
