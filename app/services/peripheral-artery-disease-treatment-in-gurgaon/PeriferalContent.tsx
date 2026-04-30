@@ -252,7 +252,7 @@ export default function PeripheralArteryContent() {
     },
   ];
 
-    const typesCarousl = [
+  const typesCarousl = [
     {
       id: 1,
       src: "/services/av-fistula/av-fistula-surgery-1.jpeg",
@@ -563,7 +563,7 @@ export default function PeripheralArteryContent() {
             advanced techniques available.
           </p>
         </div>
-peripheral-artery-disease-1
+        peripheral-artery-disease-1
         <div>
 
         </div>
@@ -669,35 +669,31 @@ peripheral-artery-disease-1
             return (
               <div
                 key={i}
-                className={`border rounded-2xl overflow-hidden transition-colors ${
-                  isOpen
+                className={`border rounded-2xl overflow-hidden transition-colors ${isOpen
                     ? "border-[var(--med-primary)] bg-[var(--med-light)]"
                     : "border-[var(--med-border)] bg-white"
-                }`}
+                  }`}
               >
                 <button
                   onClick={() => setOpenFaqIndex(isOpen ? null : i)}
                   className="w-full flex justify-between items-center px-6 py-4 text-left gap-4"
                 >
                   <span
-                    className={`font-semibold text-sm md:text-base pr-2 ${
-                      isOpen ? "text-[var(--med-primary)]" : "text-gray-800"
-                    }`}
+                    className={`font-semibold text-sm md:text-base pr-2 ${isOpen ? "text-[var(--med-primary)]" : "text-gray-800"
+                      }`}
                   >
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`flex-shrink-0 w-4 h-4 transition-transform duration-300 ${
-                      isOpen
+                    className={`flex-shrink-0 w-4 h-4 transition-transform duration-300 ${isOpen
                         ? "rotate-180 text-[var(--med-primary)]"
                         : "text-gray-400"
-                    }`}
+                      }`}
                   />
                 </button>
                 <div
-                  className={`px-6 overflow-hidden transition-all duration-300 ${
-                    isOpen ? "max-h-60 pb-5" : "max-h-0"
-                  }`}
+                  className={`px-6 overflow-hidden transition-all duration-300 ${isOpen ? "max-h-60 pb-5" : "max-h-0"
+                    }`}
                 >
                   <div className="text-gray-700 text-sm leading-relaxed">
                     {faq.a}
@@ -740,15 +736,15 @@ interface CarouselProps {
   autoPlayInterval?: number;
 }
 
-const AutoCarousel: React.FC<CarouselProps> = ({ 
-  images, 
-  autoPlayInterval = 5000 
+const AutoCarousel: React.FC<CarouselProps> = ({
+  images,
+  autoPlayInterval = 5000
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number | null>(null);
-  
+
   // Total pages: since we show 2 images at a time
   const totalPages = Math.ceil(images.length / 2);
 
@@ -799,32 +795,32 @@ const AutoCarousel: React.FC<CarouselProps> = ({
   return (
     <div className="w-full overflow-hidden max-w-4xl mx-auto px-4 group">
       {/* Main Container */}
-      <div 
+      <div
         ref={containerRef}
         className="relative overflow-hidden rounded-2xl bg-gray-100"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
         {/* Slides Wrapper */}
-        <div 
+        <div
           className="flex transition-transform duration-500 ease-out"
-          style={{ 
+          style={{
             transform: `translateX(-${currentIndex * containerWidth}px)`,
             width: `${totalPages * 100}%`
           }}
         >
           {/* Mapping through images in pairs */}
           {Array.from({ length: totalPages }).map((_, pageIdx) => (
-            <div 
-              key={pageIdx} 
-              className="flex flex-wrap sm:flex-nowrap gap-4 p-2" 
+            <div
+              key={pageIdx}
+              className="flex flex-wrap sm:flex-nowrap gap-4 p-2"
               style={{ width: `${containerWidth}px` }}
             >
               {images.slice(pageIdx * 2, pageIdx * 2 + 2).map((src, imgIdx) => (
                 <div key={imgIdx} className="sm:flex-1 relative overflow-hidden rounded-xl shadow-md">
-                  <img 
-                    src={src} 
-                    alt={`Slide ${pageIdx}-${imgIdx}`}
+                  <img
+                    src={src}
+                    alt={`Peripheral Artery Disease treatment in Gurgaon`}
                     className="h-full object-cover mx-auto"
                   />
                 </div>
@@ -843,7 +839,7 @@ const AutoCarousel: React.FC<CarouselProps> = ({
           className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
         >
           <ChevronLeft
-           className="w-6 h-6 text-gray-800" />
+            className="w-6 h-6 text-gray-800" />
         </button>
         <button
           onClick={nextSlide}
@@ -859,9 +855,8 @@ const AutoCarousel: React.FC<CarouselProps> = ({
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            className={`h-2 transition-all duration-300 rounded-full ${
-              currentIndex === idx ? "w-8 bg-blue-600" : "w-2 bg-gray-300 hover:bg-gray-400"
-            }`}
+            className={`h-2 transition-all duration-300 rounded-full ${currentIndex === idx ? "w-8 bg-blue-600" : "w-2 bg-gray-300 hover:bg-gray-400"
+              }`}
           />
         ))}
       </div>
