@@ -11,12 +11,14 @@ interface ServiceTableProps {
   services: Service[];
   currentPath?: string;
   title?: string;
+  isBlogPage?: boolean;
 }
 
 const AboutServiceTable = ({
   services,
   currentPath,
   title = "Our Specialized Treatments & Services",
+  isBlogPage = false,
 }: ServiceTableProps) => {
   // Filter out the service that matches the current URL
   const filteredServices = currentPath
@@ -39,7 +41,7 @@ const AboutServiceTable = ({
           <Link
             key={index}
             href={service.link}
-            className="group relative flex items-center justify-center p-6 min-h-[100px] text-center transition-all duration-200 border-r border-b hover:z-10 animate-scaleIn"
+            className={`group relative flex items-center justify-center p-6 min-h-[100px] text-center transition-all duration-200 border-r border-b hover:z-10 animate-scaleIn`}
             style={{
               borderColor: "var(--med-border)",
               backgroundColor: "white",
@@ -54,7 +56,7 @@ const AboutServiceTable = ({
 
             {/* Service Text */}
             <span
-              className="relative text-lg font-medium group-hover:text-[var(--med-primary-dark)] transition-all duration-300"
+              className={`relative ${isBlogPage ? 'text-base' : 'text-lg'} font-medium group-hover:text-[var(--med-primary-dark)] transition-all duration-300`}
               style={{ color: "var(--med-primary)" }}
             >
               {service.title}

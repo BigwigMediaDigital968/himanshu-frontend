@@ -9,6 +9,90 @@ import Navbar from "@/app/components/Navbar";
 import PopupForm from "@/app/components/Popup";
 import Footer from "@/app/components/Footer";
 import FAQAccordion from "@/app/components/FaqsAccordion";
+import AboutServiceTable from "@/app/components/AboutServiceTable";
+
+const services = [
+  {
+    title: "Varicose Veins Treatment in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon"
+  },
+  {
+    title: "Chronic Venous Insufficiency Treatment in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/chronic-venous-insufficiency-treatment-in-gurgaon"
+  },
+  {
+    title: "Lipedema Treatment in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/lymphatic-care-treatment-in-gurgaon"
+  },
+  {
+    title: "Pelvic Venous Disorders Treatment in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/pelvic-venous-disorder-treatment-in-gurgaon"
+  },
+  {
+    title: "Gonadal Vein Disease Treatment in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/gonadal-vein-disease-treatment-in-gurgaon"
+  },
+  {
+    title: "AV Fistula Treatment in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/av-fistula-treatment-in-gurgaon"
+  },
+  {
+    title: "Dialysis Access Surgeon in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/dialysis-access-treatment-in-gurgaon"
+  },
+  {
+    title: "Central Venous Care in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/central-venous-care-treatment-in-gurgaon"
+  },
+  {
+    title: "Peripheral Artery Disease Treatment in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/peripheral-artery-disease-treatment-in-gurgaon"
+  },
+  {
+    title: "Limb Salvage Surgery in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/limb-salvage-surgery-in-gurgaon"
+  },
+  {
+    title: "Diabetic Foot Treatment in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/diabetic-foot-treatment-in-gurgaon"
+  },
+  {
+    title: "Diabetic Wound Care in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/diabetic-wound-care-in-gurgaon"
+  },
+  {
+    title: "Amputation Surgery in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/amputation-surgery-in-gurgaon"
+  },
+  {
+    title: "Deep Vein Thrombosis Treatment in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/deep-vein-thrombosis-treatment-in-gurgaon"
+  },
+  {
+    title: "Pulmonary Embolism Treatment in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/pulmonary-embolism-treatment-in-gurgaon"
+  },
+  {
+    title: "Abdominal Aortic Aneurysm Treatment in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/abdominal-aortic-aneurysm-treatment-in-gurgaon"
+  },
+  {
+    title: "Vascular Trauma Treatment",
+    link: "https://www.drhimanshuverma.com/services/vascular-trauma-treatment-in-gurgaon"
+  },
+  {
+    title: "ONCO Vascular Surgery",
+    link: "https://www.drhimanshuverma.com/services/onco-vascular-surgery-in-gurgaon"
+  },
+  {
+    title: "Arteriovenous Malformation Treatment in Gurgaon",
+    link: "https://www.drhimanshuverma.com/services/arteriovenous-malformation-treatment-in-gurgaon"
+  },
+  {
+    title: "Minor Amputations",
+    link: ""
+  }
+];
 
 export default function BlogClient({
   blog,
@@ -65,6 +149,15 @@ export default function BlogClient({
             className="blog-content prose prose-lg max-w-none overflow-x-hidden"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
+          <div>
+            <AboutServiceTable
+              title="Explore Our Services"
+              services={services}
+              currentPath={""}
+
+              isBlogPage={true}
+            />
+          </div>
           <main className="p-5 max-w-4xl mx-auto">
             <h2
               style={{ color: "var(--med-primary)" }}
