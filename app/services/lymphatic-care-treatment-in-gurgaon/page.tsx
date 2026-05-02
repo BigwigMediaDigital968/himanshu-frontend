@@ -251,8 +251,8 @@ export default function LipedemaPage() {
       />
 
       <ServiceLayout
-        title="Lipedema Treatment in Gurgaon"
-        description="Comprehensive diagnosis and non-surgical management of lipedema through MLD, compression therapy, and CDT."
+        title="Lipedema Treatment in Gurgaon by Dr. Himanshu Verma"
+        description="Dr. Himanshu Verma, MCh Vascular Surgeon and Director of Vascular and Endovascular Surgery at Fortis FMRI, Gurgaon, provides specialized Lipedema Treatment in Gurgaon with over 17 years of clinical experience in managing complex lymphatic and vascular disorders."
       >
         <LipedemaContent />
       </ServiceLayout>
