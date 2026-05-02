@@ -1,5 +1,5 @@
 "use client";
-import { Trash2 } from "lucide-react";
+import { Trash2, Calendar, Phone, Mail, FileText, Image as ImageIcon, CheckCircle2, Circle, ChevronLeft, ChevronRight, Download, X, ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 
 interface Appointment {
@@ -19,28 +19,37 @@ export default function AppointmentsPage() {
   const [appointments, setAppointments] = useState<Appointment[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Image Viewer State
   const [viewerOpen, setViewerOpen] = useState(false);
   const [viewerImages, setViewerImages] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const fetchAppointments = async () => {
-      try {
-        const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_BASE}/appointment`
-        );
-        const data = await res.json();
-        setAppointments(data.data || []);
-      } catch (error) {
-        console.error("Failed to fetch appointments");
-      } finally {
-        setLoading(false);
-      }
-    };
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+  const fetchAppointments = async () => {
+    try {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/appointment`);
+      const data = await res.json();
+      setAppointments(data.data || []);
+    } catch {
+      console.error("Failed to fetch appointments");
+    } finally {
+      setLoading(false);
+    }
+  };
 
+  useEffect(() => {
     fetchAppointments();
   }, []);
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (!viewerOpen) return;
+      if (e.key === "ArrowLeft") setCurrentIndex((i) => Math.max(0, i - 1));
+      if (e.key === "ArrowRight") setCurrentIndex((i) => Math.min(viewerImages.length - 1, i + 1));
+      if (e.key === "Escape") setViewerOpen(false);
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [viewerOpen, viewerImages.length]);
 
   const openViewer = (images: { url: string }[]) => {
     setViewerImages(images.map((img) => img.url));
@@ -49,239 +58,355 @@ export default function AppointmentsPage() {
   };
 
   const toggleMark = async (id: string, marked: boolean) => {
-    try {
-      await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE}/appointment/${id}/mark`,
-        {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ marked }),
-        }
-      );
-
-      setAppointments((prev) =>
-        prev.map((a) => (a._id === id ? { ...a, marked } : a))
-      );
-    } catch (err) {
-      alert("Failed to update mark status");
-    }
+    setAppointments((prev) => prev.map((a) => (a._id === id ? { ...a, marked } : a)));
   };
 
   const deleteAppointment = async (id: string) => {
     if (!confirm("Are you sure you want to delete this appointment?")) return;
-
     try {
-      await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/appointment/${id}`, {
-        method: "DELETE",
-      });
-
+      await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/appointment/${id}`, { method: "DELETE" });
       setAppointments((prev) => prev.filter((a) => a._id !== id));
-    } catch (err) {
+    } catch {
       alert("Failed to delete appointment");
     }
   };
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Appointments</h1>
+    <div className="min-h-screen bg-gray-50 p-6">
 
-      {/* LOADING */}
-      {loading && (
-        <div className="bg-white p-6 rounded shadow text-gray-600">
-          Loading appointments...
-        </div>
-      )}
-
-      {/* EMPTY STATE */}
-      {!loading && appointments.length === 0 && (
-        <div className="bg-white rounded shadow p-12 text-center">
-          <div className="text-4xl mb-3">📅</div>
-          <h3 className="text-lg font-semibold">No Appointments Yet</h3>
-          <p className="text-gray-500 text-sm mt-2">
-            New appointment requests will appear here.
+      {/* Header */}
+      <div className="mb-6">
+        <h1 className="text-2xl font-semibold text-gray-900">Appointments</h1>
+        {!loading && (
+          <p className="text-sm text-gray-400 mt-1">
+            {appointments.length} {appointments.length === 1 ? "appointment" : "appointments"}
           </p>
+        )}
+      </div>
+
+      {/* Loading Skeleton */}
+      {loading && (
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <table className="w-full">
+            <thead className="bg-gray-50 border-b border-gray-100">
+              <tr>
+                {["Patient", "Phone", "Disease", "Attachments", "Date", "Actions"].map((h) => (
+                  <th key={h} className="px-5 py-3.5 text-left text-xs font-semibold text-gray-400 uppercase tracking-wide">
+                    {h}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[...Array(5)].map((_, i) => (
+                <tr key={i} className="border-b border-gray-50">
+                  {[28, 24, 20, 16, 20, 14].map((w, j) => (
+                    <td key={j} className="px-3 py-4">
+                      <div className={`h-3 w-${w} bg-gray-100 rounded-full animate-pulse`} />
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       )}
 
-      {/* DATA */}
-      {!loading && appointments.length > 0 && (
-        <>
-          {/* 🖥 DESKTOP TABLE */}
-          <div className="hidden md:block bg-white rounded shadow overflow-x-auto">
-            <table className="w-full text-left">
-              <thead className="bg-gray-100">
-                <tr>
-                  <th className="p-3">Name</th>
-                  <th className="p-3">Phone</th>
-                  <th className="p-3">Disease</th>
-                  <th className="p-3">Attachments</th>
-                  <th className="p-3">Date</th>
-                  <th className="p-3">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {appointments.map((appt) => (
-                  <tr key={appt._id} className="border-t">
-                    <td className="p-3 font-medium">{appt.name}</td>
-                    <td className="p-3">{appt.phone}</td>
-                    <td className="p-3">{appt.disease}</td>
+      {/* Empty State */}
+      {!loading && appointments.length === 0 && (
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-16 text-center">
+          <div className="text-5xl mb-4">📅</div>
+          <h3 className="text-base font-semibold text-gray-800">No Appointments Yet</h3>
+          <p className="text-sm text-gray-400 mt-2">New appointment requests will appear here.</p>
+        </div>
+      )}
 
-                    <td className="p-3">
+      {/* Desktop Table */}
+      {!loading && appointments.length > 0 && (
+        <div className="hidden md:block bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <table className="w-full">
+            <thead className="bg-gray-50 border-b border-gray-100">
+              <tr>
+                {["Patient", "Phone", "Disease", "Attachments", "Date", "Actions"].map((h) => (
+                  <th key={h} className="px-5 py-3.5 text-left text-xs font-semibold text-gray-400 uppercase tracking-wide">
+                    {h}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-50">
+              {appointments.map((appt) => (
+                <>
+                  <tr
+                    key={appt._id}
+                    onClick={() => setExpandedId(expandedId === appt._id ? null : appt._id)}
+                    className="hover:bg-gray-50/70 transition-colors cursor-pointer"
+                  >
+
+                    {/* Patient */}
+                    <td className="px-3 py-4 pl-4">
+                      <div className="font-medium text-gray-900 text-sm">{appt.name}</div>
+                      {appt.email && (
+                        <div className="text-xs text-gray-400 mt-0.5">{appt.email}</div>
+                      )}
+                    </td>
+
+                    {/* Phone */}
+                    <td className="px-3 py-4">
+                      <span className="text-sm text-gray-600 font-mono">{appt.phone}</span>
+                    </td>
+
+                    {/* Disease */}
+                    <td className="px-3 py-4">
+                      <span className="inline-block px-2.5 py-1 rounded-full text-sm font-medium text-indigo-600">
+                        {appt.disease}
+                      </span>
+                    </td>
+
+                    {/* Attachments */}
+                    <td className="px-3 py-4">
                       {appt.images?.length ? (
                         <button
                           onClick={() => openViewer(appt.images!)}
-                          className="text-blue-600 underline"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors"
                         >
-                          View Images ({appt.images.length})
+                          <ImageIcon size={12} />
+                          {appt.images.length} image{appt.images.length > 1 ? "s" : ""}
                         </button>
                       ) : appt.report ? (
                         <a
                           href={`${appt.report.url}?fl_attachment`}
                           target="_blank"
-                          className="text-blue-600 underline"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-amber-50 text-amber-600 hover:bg-amber-100 transition-colors"
                         >
-                          Download PDF
+                          <FileText size={12} />
+                          PDF Report
                         </a>
                       ) : (
-                        <span className="text-gray-400">—</span>
+                        <span className="text-xs text-gray-300">—</span>
                       )}
                     </td>
 
-                    <td className="p-3">
-                      {new Date(appt.createdAt).toLocaleDateString()}
+                    {/* Date */}
+                    <td className="px-3 py-4">
+                      <span className="text-sm text-gray-500">
+                        {new Date(appt.createdAt).toLocaleDateString("en-IN", {
+                          day: "numeric",
+                          month: "short",
+                          year: "numeric",
+                        })}
+                      </span>
                     </td>
-                    <td className="p-3 flex items-center gap-3">
-                      {/* MARK */}
-                      <input
-                        type="checkbox"
-                        checked={appt.marked}
-                        onChange={(e) => toggleMark(appt._id, e.target.checked)}
-                        className="w-4 h-4 cursor-pointer"
-                        title="Mark appointment"
-                      />
 
-                      {/* DELETE */}
-                      <button
-                        onClick={() => deleteAppointment(appt._id)}
-                        className="text-red-600 hover:text-red-800"
-                        title="Delete appointment"
-                      >
-                        <Trash2 />
-                      </button>
+                    {/* Actions */}
+                    <td className="px-3 py-4">
+                      <div className="flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
+                        <button
+                          onClick={() => toggleMark(appt._id, !appt.marked)}
+                          title={appt.marked ? "Unmark" : "Mark as reviewed"}
+                          className={`p-2 rounded-lg transition-all cursor-pointer hover:bg-gray-100 ${appt.marked ? "text-emerald-500" : "text-gray-300 hover:text-gray-400"
+                            }`}
+                        >
+                          {appt.marked ? <CheckCircle2 size={16} /> : <Circle size={16} />}
+                        </button>
+                        <button
+                          onClick={() => deleteAppointment(appt._id)}
+                          className="p-2 rounded-lg text-red-400 cursor-pointer hover:text-red-500 hover:bg-red-50 transition-all"
+                        >
+                          <Trash2 size={16} />
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setExpandedId(expandedId === appt._id ? null : appt._id);
+                          }}
+                          className={`p-2 rounded-lg transition-all cursor-pointer hover:bg-gray-100 text-gray-400 ${expandedId === appt._id ? "bg-gray-100 rotate-180" : ""
+                            }`}
+                        >
+                          <ChevronDown size={16} />
+                        </button>
+                      </div>
                     </td>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                  {expandedId === appt._id && (
+                    <tr className="bg-gray-50/60">
+                      <td colSpan={6} className="px-3 py-4 border-b border-gray-100">
+                        <div className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1.5">
+                          Message
+                        </div>
+                        <p className="text-sm text-gray-600 leading-relaxed">
+                          {appt.message || <span className="text-gray-300 italic">No message provided.</span>}
+                        </p>
+                      </td>
+                    </tr>
+                  )}
 
-          {/* 📱 MOBILE CARDS */}
-          <div className="md:hidden space-y-4">
-            {appointments.map((appt) => (
-              <div
-                key={appt._id}
-                className="bg-white rounded shadow p-4 space-y-2"
-              >
-                <div className="font-semibold text-lg">{appt.name}</div>
+                </>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
 
-                <div className="text-sm text-gray-600">📞 {appt.phone}</div>
+      {/* Mobile Cards */}
+      {!loading && appointments.length > 0 && (
+        <div className="md:hidden space-y-3">
+          {appointments.map((appt) => (
+            <div key={appt._id} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4">
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <div className="font-semibold text-gray-900">{appt.name}</div>
+                  <span className="inline-block mt-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-50 text-indigo-600">
+                    {appt.disease}
+                  </span>
+                </div>
+                <button
+                  onClick={() => toggleMark(appt._id, !appt.marked)}
+                  className={`mt-0.5 transition-colors ${appt.marked ? "text-emerald-500" : "text-gray-300"}`}
+                >
+                  {appt.marked ? <CheckCircle2 size={22} /> : <Circle size={22} />}
+                </button>
+              </div>
 
-                <div className="text-sm">
-                  <strong>Disease:</strong> {appt.disease}
+              <div className="space-y-1.5 text-sm text-gray-500">
+                <div className="flex items-center gap-2">
+                  <Phone size={13} className="text-gray-300" />
+                  <span className="font-mono">{appt.phone}</span>
+                </div>
+                {appt.email && (
+                  <div className="flex items-center gap-2">
+                    <Mail size={13} className="text-gray-300" />
+                    <span>{appt.email}</span>
+                  </div>
+                )}
+
+                <div className="flex items-center gap-2">
+                  <Calendar size={13} className="text-gray-300" />
+                  <span>
+                    {new Date(appt.createdAt).toLocaleDateString("en-IN", {
+                      day: "numeric", month: "short", year: "numeric",
+                    })}
+                  </span>
                 </div>
 
-                <div className="text-sm">
-                  <strong>Date:</strong>{" "}
-                  {new Date(appt.createdAt).toLocaleDateString()}
-                </div>
+                {appt.message && (
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <Mail size={13} className="text-gray-300" />
+                      <span>Message</span>
+                    </div>
+                    <p className="ml-6">{appt.message}</p>
+                  </div>
+                )}
+              </div>
 
-                <div className="pt-2">
+              <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-50">
+                <div>
                   {appt.images?.length ? (
                     <button
                       onClick={() => openViewer(appt.images!)}
-                      className="text-blue-600 underline"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-blue-50 text-blue-600"
                     >
-                      View Images ({appt.images.length})
+                      <ImageIcon size={12} />
+                      {appt.images.length} image{appt.images.length > 1 ? "s" : ""}
                     </button>
                   ) : appt.report ? (
                     <a
                       href={`${appt.report.url}?fl_attachment`}
                       target="_blank"
-                      className="text-blue-600 underline"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-amber-50 text-amber-600"
                     >
-                      Download PDF
+                      <FileText size={12} />
+                      PDF Report
                     </a>
                   ) : (
-                    <span className="text-gray-400 text-sm">
-                      No attachments
-                    </span>
+                    <span className="text-xs text-gray-300">No attachments</span>
                   )}
                 </div>
-
-                <div className="flex items-center justify-between pt-3 border-t mt-2">
-                  <label className="flex items-center gap-2 text-sm">
-                    <input
-                      type="checkbox"
-                      checked={appt.marked}
-                      onChange={(e) => toggleMark(appt._id, e.target.checked)}
-                    />
-                    Marked
-                  </label>
-
-                  <button
-                    onClick={() => deleteAppointment(appt._id)}
-                    className="text-red-600 text-sm"
-                  >
-                    Delete 🗑
-                  </button>
-                </div>
+                <button
+                  onClick={() => deleteAppointment(appt._id)}
+                  className="p-1.5 rounded-lg text-red-300 hover:text-red-500 hover:bg-red-50 transition-all"
+                >
+                  <Trash2 size={15} />
+                </button>
               </div>
-            ))}
-          </div>
-        </>
+            </div>
+          ))}
+        </div>
       )}
 
-      {/* 🖼 IMAGE VIEWER MODAL */}
+      {/* Image Viewer Modal */}
       {viewerOpen && (
-        <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center">
-          <div className="relative bg-black rounded-lg max-w-4xl w-full mx-4">
+        <div
+          className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4"
+          onClick={() => setViewerOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-3xl bg-neutral-900 rounded-2xl overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={() => setViewerOpen(false)}
-              className="absolute top-3 right-3 text-white text-2xl"
+              className="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center rounded-full font-medium bg-white/70 hover:bg-white/80 text-black transition-colors"
             >
-              ✕
+              <X size={15} className="
+              " />
             </button>
 
             <img
               src={viewerImages[currentIndex]}
-              alt="attachment"
-              className="w-full max-h-[80vh] object-contain"
+              alt={`Attachment ${currentIndex + 1}`}
+              className="w-full max-h-[70vh] object-contain bg-black"
             />
 
-            <div className="flex items-center justify-between px-4 py-3 text-white">
+            {viewerImages.length > 1 && (
+              <div className="flex gap-2 px-4 py-2.5 bg-black/40 overflow-x-auto">
+                {viewerImages.map((url, i) => (
+                  <img
+                    key={i}
+                    src={url}
+                    alt=""
+                    onClick={() => setCurrentIndex(i)}
+                    className={`w-12 h-12 flex-shrink-0 rounded-lg object-cover cursor-pointer transition-all ${i === currentIndex
+                      ? "ring-2 ring-blue-400 opacity-100"
+                      : "opacity-40 hover:opacity-70"
+                      }`}
+                  />
+                ))}
+              </div>
+            )}
+
+            <div className="flex items-center justify-between px-4 py-3 bg-neutral-800">
               <button
                 disabled={currentIndex === 0}
                 onClick={() => setCurrentIndex((i) => i - 1)}
-                className="disabled:opacity-40"
+                className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm text-white bg-white/10 hover:bg-white/20 disabled:opacity-30 disabled:cursor-default transition-colors"
               >
-                ◀ Prev
+                <ChevronLeft size={15} /> Prev
               </button>
+
+              <span className="text-xs text-neutral-400 font-mono">
+                {currentIndex + 1} / {viewerImages.length}
+              </span>
 
               <a
                 href={viewerImages[currentIndex]}
                 download
                 target="_blank"
-                className="underline"
+                rel="noreferrer"
+                className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors"
               >
-                Download
+                <Download size={13} /> <span className="hidden md:inline">Download</span>
               </a>
 
               <button
                 disabled={currentIndex === viewerImages.length - 1}
                 onClick={() => setCurrentIndex((i) => i + 1)}
-                className="disabled:opacity-40"
+                className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm text-white bg-white/10 hover:bg-white/20 disabled:opacity-30 disabled:cursor-default transition-colors"
               >
-                Next ▶
+                Next <ChevronRight size={15} />
               </button>
             </div>
           </div>
