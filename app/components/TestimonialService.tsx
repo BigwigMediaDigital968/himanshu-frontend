@@ -8,8 +8,9 @@ import { Testimonial } from "../data/testimonialData";
 
 type Props = {
   testimonials: Testimonial[];
+  title?: string;
 };
-export default function TestimonialsServices({ testimonials }: Props) {
+export default function TestimonialsServices({ testimonials, title }: Props) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 5000, stopOnInteraction: false }),
   ]);
@@ -49,7 +50,7 @@ export default function TestimonialsServices({ testimonials }: Props) {
             Patient Stories
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-[var(--med-text)]">
-            What Our Patients Say
+            {title || "What Our Patients Say"}
           </h2>
         </div>
 

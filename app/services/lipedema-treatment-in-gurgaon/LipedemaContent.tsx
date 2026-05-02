@@ -10,6 +10,7 @@ import {
   Stethoscope,
   Wind,
 } from "lucide-react";
+import TestimonialsServices from "@/app/components/TestimonialService";
 
 export default function LipedemaContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -24,183 +25,250 @@ export default function LipedemaContent() {
 
   const stages = [
     {
-      label: "Stage 1",
-      points: [
-        "Skin surface appears smooth and normal",
-        "Small nodules can be felt beneath the skin",
-        "Fat is evenly distributed, but tenderness may already be present",
-      ],
+      title: "Stage 1",
+      content: (
+        <>
+          <p>The skin appears smooth and normal. Small nodules can be felt beneath the surface.</p>
+          <p>Tenderness may already be present, often mistaken for general muscle soreness.</p>
+        </>
+      ),
     },
     {
-      label: "Stage 2",
-      points: [
-        "Skin becomes uneven with a lumpy or mattress-like texture",
-        "Larger fat nodules form",
-        "Swelling and discomfort become more noticeable",
-      ],
+      title: "Stage 2",
+      content: (
+        <>
+          <p>The skin develops a lumpy or mattress-like texture. Larger fat nodules form.</p>
+          <p>Swelling becomes more persistent, particularly toward the end of the day.</p>
+        </>
+      ),
     },
     {
-      label: "Stage 3",
-      points: [
-        "Large, hardened fat masses develop",
-        "Mobility may be affected",
-        "Pain and swelling increase significantly",
-      ],
+      title: "Stage 3",
+      content: (
+        <>
+          <p>Large, hardened fat masses develop in the legs and hips.</p>
+          <p>
+            Mobility becomes restricted and daily activities such as walking and climbing stairs
+            become increasingly difficult.
+          </p>
+        </>
+      ),
     },
     {
-      label: "Stage 4 (Lipo-Lymphedema)",
-      points: [
-        "Lipedema combines with lymphedema",
-        "Severe swelling due to fluid buildup",
-        "Requires prompt and specialized medical care",
-      ],
+      title: "Stage 4 (Lipo-Lymphedema)",
+      content: (
+        <>
+          <p>
+            Lipedema combines with Lymphedema, resulting in severe fluid buildup and compounded swelling.
+          </p>
+          <p>
+            This stage requires immediate and comprehensive specialist care.
+          </p>
+        </>
+      ),
     },
   ];
 
   const symptoms = [
     {
       title: "Symmetrical Swelling",
-      desc: "All limbs are equally swollen, with normal-sized feet and hands being a main indicator, as this isn't typical for other swollen conditions.",
+      desc: "Both legs or arms are affected equally, while hands and feet remain completely normal in size",
     },
     {
       title: "Heaviness That Worsens During the Day",
-      desc: "People often do fine in the morning, but by the end of the day, their legs feel heavy, tight, and painful.",
+      desc: "Legs feel increasingly tight, heavy, and painful as the day progresses",
     },
     {
-      title: "Easy and Unexplained Bruising",
-      desc: "Hyper-elastic tissue causes easy bruising and little trauma shows.",
+      title: "Easy Bruising",
+      desc: "Even minimal contact causes significant bruising due to fragile tissue",
     },
     {
       title: "Pain and Tenderness",
-      desc: "Pressing on swelled areas can be excruciating and not just uncomfortable. Light pressure could cause pain.",
+      desc: "Light pressure on affected areas can cause intense, disproportionate pain",
     },
     {
       title: "No Relief From Elevation",
-      desc: "Elevated limbs do not show any significant reduction of swelling.",
+      desc: "Swelling does not reduce when the limbs are elevated",
     },
     {
       title: "Column-Like Leg Shape",
-      desc: "Legs appear completely straight and round with an obvious cutoff of swelling at the ankles.",
+      desc: "Legs appear uniformly wide with a sudden swelling cutoff at the ankles",
     },
     {
       title: "Resistance to Diet and Exercise",
-      desc: "If you notice these symptoms, consulting a specialist for Lipedema Treatment in Gurgaon can help with proper diagnosis and management.",
+      desc: "Fat deposits in affected areas simply do not reduce despite consistent healthy habits",
     },
-  ];
+  ]
 
   const causes = [
     {
       title: "Hormonal Influence",
-      desc: "Lipedema commonly appears or worsens during times of hormonal change: Puberty, Pregnancy, and Menopause. This suggests hormones play a significant role, and many patients experiencing these changes often explore Lipedema Treatment in Gurgaon to manage their symptoms.",
+      desc: " Lipedema commonly appears or worsens during puberty, pregnancy, and menopause, suggesting estrogen plays a central role in triggering abnormal fat deposition.",
     },
     {
       title: "Genetic Factors",
-      desc: "A family history of similar symptoms greatly increases the risk. Many patients report that their mother or grandmother experienced the same issues, which indicates a strong genetic connection often discussed during consultations for Lipedema Treatment in Gurgaon.",
+      desc: "Lipedema runs in families. If your mother or grandmother experienced similar symptoms, your risk is considerably higher and early screening is strongly recommended.",
     },
     {
       title: "Lymphatic Dysfunction",
-      desc: "The lymphatic system does not function properly, leading to fat and fluid accumulation. This dysfunction is not related to lifestyle choices, and specialized Lipedema Treatment in Gurgaon can help manage swelling and improve lymphatic flow.",
+      desc: "The lymphatic system in Lipedema patients does not function efficiently, leading to abnormal fat behavior and fluid accumulation. This is not caused by lifestyle choices and requires targeted clinical management.",
     },
   ];
 
   const complications = [
     {
-      title: "Lymphedema",
-      desc: "Fluid buildup may develop on top of lipedema, worsening swelling and discomfort.",
+      title: "Lipo-Lymphedema",
+      desc: "Secondary lymphedema develops, compounding swelling and tissue damage",
     },
     {
-      title: "Decrease in Mobility",
-      desc: "Difficult to walk, go upstairs, and do your day-to-day tasks with pain and great discomfort.",
+      title: "Loss of Mobility",
+      desc: "Walking, climbing stairs, and daily tasks become progressively harder",
     },
     {
-      title: "Damage to Joints",
-      desc: "Putting added strain on hips, knees, and ankles can result in long-term joint issues.",
+      title: "Joint Damage",
+      desc: "Excess weight on hips, knees, and ankles leads to chronic orthopedic strain",
     },
     {
-      title: "Mental / Emotional Toll",
-      desc: "Long-term pain causes body image issues and also loss of self-esteem, as well as anxiety and depression, especially after trying so many failed, repeated weight loss attempts.",
+      title: "Emotional Impact",
+      desc: "Anxiety, depression, and loss of self-esteem are commonly reported, especially after years of misdiagnosis",
     },
     {
       title: "Skin Infections",
-      desc: "Tight, swollen tissue can increase the chance of developing an infection; if not treated, it can lead to complications.",
+      desc: "Compromised tissue increases the risk of severe bacterial infections such as cellulitis",
     },
     {
       title: "Chronic Pain",
-      desc: "Early Lipedema Treatment in Gurgaon can help reduce these complications and improve overall mobility and comfort.",
+      desc: "Pain intensifies over time, affecting sleep and daily functioning",
     },
   ];
 
   const treatments = [
     {
       icon: <Stethoscope size={20} className="text-[var(--med-primary)]" />,
-      title: "MLD (Manual Lymphatic Drainage)",
-      desc: "MLD is a form of therapeutic massage that improves the flow of lymph. Receiving this type of Lipedema treatment regularly can reduce swelling, reduce pain, and improve the health of your tissues.",
+      title: "Manual Lymphatic Drainage (MLD)",
+      desc: "A specialized, gentle massage technique that stimulates lymphatic flow.",
+      points: [
+        "Reduce visible swelling in legs and arms",
+        "Relieve pain, tenderness, and heaviness",
+        "Improve lymphatic circulation and tissue health",
+      ],
     },
     {
       icon: <Wind size={20} className="text-[var(--med-primary)]" />,
       title: "Compression Garments",
-      desc: "Compression garments are custom-ordered to apply targeted pressure on the lymphatics and play a key role in Lipedema treatment by improving fluid movement and minimizing swelling. They support the lymphatic system, prevent accumulation of excess fluid, and provide a sustained effect of the therapy after treatment.",
+      desc: "Custom-fitted, medically prescribed garments that apply graduated pressure to lymphatic vessels.",
+      points: [
+        "Support and stimulate the lymphatic system",
+        "Prevent re-accumulation of fluid between sessions",
+        "Sustain the benefits of MLD and CDT over the long term",
+      ],
     },
     {
       icon: <Activity size={20} className="text-[var(--med-primary)]" />,
-      title: "CDT (Complete Decongestive Therapy)",
-      desc: "CDT is a comprehensive approach used in Lipedema treatment that methodically implements MLD and compression therapy along with gentle exercises such as walking. These therapies are commonly included in specialized Lipedema Treatment in Gurgaon to help control symptoms and improve quality of life.",
+      title: "Complete Decongestive Therapy (CDT)",
+      desc: "CDT is the gold-standard treatment protocol for Lipedema, recognized by the International Society of Lymphology.",
+      points: [
+        "Manual Lymphatic Drainage sessions",
+        "Custom compression bandaging",
+        "Low-impact guided exercise such as walking and water aerobics",
+        "Skincare protocols to reduce infection risk",
+        "Patient education on self-management between clinic visits",
+      ],
     },
-  ];
+  ]
 
   const faqs = [
     {
-      q: "What is the main cause of lipedema?",
+      q: "What is the main cause of Lipedema?",
       a: (
         <>
-          The exact cause of lipedema is not fully known, but hormonal changes
-          and genetic factors are considered the main contributors. Many people
-          experiencing these symptoms consult specialists for{" "}
-          <b>Lipedema Treatment in Gurgaon</b> for proper diagnosis and care.
+          Hormonal changes during puberty, pregnancy, and menopause, combined with genetic predisposition and lymphatic dysfunction, are the primary contributing factors.
+          <b> It is not caused by diet or lifestyle.</b>
         </>
       ),
     },
     {
-      q: "How is lipedema treated?",
+      q: "How is Lipedema treated?",
       a: (
         <>
-          Lipedema is commonly managed with Lipedema treatment such as{" "}
-          <b>Manual Lymphatic Drainage (MLD)</b>, compression therapy, and{" "}
-          <b>Complete Decongestive Therapy (CDT)</b>. Many clinics offering
-          Lipedema Treatment in Gurgaon use these methods to help reduce
-          swelling and improve comfort.
+          Through a structured combination of <b>MLD</b>, <b>CDT</b>, and custom compression garment therapy, as recommended by the International Society of Lymphology.
+          Dr. Himanshu Verma personalizes every treatment plan based on the patient's stage and clinical presentation.
         </>
       ),
     },
     {
-      q: "How do you know if you have lipedema?",
-      a: "Common signs include symmetrical swelling in the legs or arms, pain, easy bruising, and normal-sized hands and feet. If you notice these symptoms, consulting a specialist for Lipedema Treatment in Gurgaon can help confirm the diagnosis.",
-    },
-    {
-      q: "Can lipedema go away with weight loss?",
+      q: "How do I know if I have Lipedema?",
       a: (
         <>
-          No, <b>lipedema fat usually does not respond to diet or exercise</b>.
-          Patients often seek Lipedema Treatment in Gurgaon to manage symptoms
-          and control swelling.
+          Key indicators include symmetrical leg or arm swelling with normal-sized hands and feet, persistent pain, easy bruising, and fat that does not respond to diet or exercise.
+          <b> A clinical examination by Dr. Himanshu Verma is needed for a formal diagnosis.</b>
         </>
       ),
     },
     {
-      q: "Is lipedema painful?",
-      a: "Yes, lipedema can cause pain, tenderness, and heaviness in the affected areas. With proper Lipedema Treatment in Gurgaon, these symptoms can often be managed effectively.",
-    },
-    {
-      q: "How is lipedema different from obesity?",
+      q: "Can Lipedema go away with weight loss?",
       a: (
         <>
-          Lipedema causes <b>symmetrical fat buildup</b> mainly in the legs and
-          arms, while the hands and feet remain unaffected. Specialists
-          providing Lipedema Treatment in Gurgaon can help differentiate
-          lipedema from obesity and suggest the right Lipedema treatment
-          approach.
+          No. Lipedema fat is physiologically different from ordinary body fat and does not respond to caloric restriction or exercise.
+          <b> Specialized lymphatic care is required.</b>
         </>
       ),
+    },
+    {
+      q: "Is Lipedema painful?",
+      a: (
+        <>
+          Yes. Pain, tenderness, and heaviness in affected areas are hallmark symptoms.
+          With proper treatment including <b>MLD</b> and <b>CDT</b>, these symptoms can be significantly reduced.
+        </>
+      ),
+    },
+    {
+      q: "How is Lipedema different from obesity?",
+      a: (
+        <>
+          Lipedema causes symmetrical fat buildup specifically in the legs and arms, leaves hands and feet unaffected, does not respond to weight loss, and is consistently painful.
+          <b> Obesity does not share these characteristics.</b> A thorough clinical assessment by Dr. Himanshu Verma can clearly differentiate the two.
+        </>
+      ),
+    },
+  ];
+  const lipedemaReviews = [
+    {
+      id: 12,
+      name: "Ritu Malhotra",
+      content:
+        "I had been struggling with unexplained fat in my legs for years until I was diagnosed with lipedema. The treatment I received in Gurgaon was life-changing. The doctor explained everything clearly, and my pain has reduced significantly after the procedure.",
+      rating: 5,
+    },
+    {
+      id: 13,
+      name: "Priya Arora",
+      content:
+        "After trying multiple weight loss methods without results, I finally found the right diagnosis. My lipedema treatment journey in Gurgaon was smooth, and the results are visible within weeks. Highly satisfied with the care and support.",
+      rating: 5,
+    },
+    {
+      id: 14,
+      name: "Sneha Kapoor",
+      content:
+        "The best thing about getting lipedema treatment in Gurgaon was the advanced technology and experienced doctors. My mobility has improved, and I feel much more confident now.",
+      rating: 5,
+    },
+    {
+      id: 15,
+      name: "Meenakshi Sharma",
+      procedure: "Liposuction-based Lipedema Treatment",
+      content:
+        "I opted for liposuction-based lipedema treatment, and it was the best decision. The recovery was quick, and the results exceeded my expectations. The medical team was very professional.",
+      rating: 5,
+    },
+    {
+      id: 16,
+      name: "Anjali Verma",
+      content:
+        "Very professional and supportive doctors. From consultation to post-treatment care, everything was handled perfectly. I would recommend Gurgaon for anyone dealing with lipedema.",
+      rating: 5,
     },
   ];
 
@@ -214,13 +282,10 @@ export default function LipedemaContent() {
       {/* INTRO */}
       <div className="space-y-4 mb-10">
         <p className="text-gray-700 leading-relaxed">
-          If you've ever had that feeling, then you can relate to many other
-          people suffering from lipedema. Many patients today seek Lipedema
-          Treatment in Gurgaon to manage this condition and improve their
-          quality of life. For them, the feeling of always having heavy, swollen
-          legs persists regardless of their fitness regimen and diet choices.
-          And the worst part about it is that even though they are doing
-          everything correctly, their bodies appear to be working against them.
+          Do your legs feel heavy, swollen, and painful despite eating right and exercising regularly? You may be experiencing Lipedema, a chronic medical condition that is frequently misdiagnosed across India.
+        </p> <p className="text-gray-700 leading-relaxed">
+          Dr. Himanshu Verma, MCh Vascular Surgeon and Director of Vascular and Endovascular Surgery at Fortis FMRI, Gurgaon, provides specialized Lipedema Treatment in Gurgaon with over 17 years of clinical experience in managing complex lymphatic and vascular disorders.
+
         </p>
 
         {/* Inline CTA */}
@@ -244,17 +309,21 @@ export default function LipedemaContent() {
 
       {/* WHAT IS LIPEDEMA */}
       <div className="space-y-6 mb-10">
-        <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-800">
           What is Lipedema?
-        </h3>
+        </h2>
 
         <p className="text-gray-700 leading-relaxed">
-          Lipedema is a long-lasting and progressively severe problem with fatty
-          tissue that can become disproportionately accumulated in the legs,
-          thighs, hips, and sometimes the arms (but most commonly in the legs
-          and thighs). The fat associated with lipedema does not behave the same
-          as fat found throughout the body. Consulting a specialist for Lipedema
-          Treatment in Gurgaon can help in early diagnosis and management.
+          Lipedema is a chronic, progressive condition characterized by disproportionate accumulation of fatty tissue, most commonly in the legs, thighs, hips, and occasionally the arms.
+
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          Unlike ordinary body fat, Lipedema fat does not respond to diet or exercise. It is a physiological condition with hormonal, genetic, and lymphatic roots, not a result of lifestyle choices.
+
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          Patients seeking Lipedema Treatment in Gurgaon often arrive after years of being incorrectly told their condition is caused by poor lifestyle habits.
+
         </p>
         <img
           src="/services/lipedema/Lipedema-1.png"
@@ -262,46 +331,42 @@ export default function LipedemaContent() {
           className="w-full rounded-lg border border-gray-200"
         />
 
-        <p className="text-gray-700 leading-relaxed">
-          Overeating or insufficient exercise does not cause lipedema. The fat
-          associated with lipedema is resistant to the usual methods of losing
-          weight. Therefore, dieting and exercising will not have much, if any,
-          effect on the fatty tissue that has developed as a result of lipedema.
-        </p>
+
 
         <p className="text-gray-700 leading-relaxed font-medium text-gray-800">
           Key characteristics include:
         </p>
 
         <ul className="space-y-3">
-          {keyCharacteristics.map((item, i) => (
+          {[
+            "Disproportionate fat accumulation in the lower body",
+            "Painful and tender tissue even under light pressure",
+            "Easy and unexplained bruising",
+            "Persistent swelling that does not improve with rest",
+            "Primarily affects women and often runs in families",
+          ].map((item, i) => (
             <li key={i} className="flex items-start gap-3">
               <span className="mt-1.5 h-2 w-2 rounded-full bg-[var(--med-primary)] flex-shrink-0" />
               <span className="text-gray-700">{item}</span>
             </li>
           ))}
         </ul>
-
-        <p className="text-gray-700 leading-relaxed">
-          Lipedema primarily affects <strong>women</strong> and often has a{" "}
-          <strong>genetic link</strong>, meaning it can run in families.
-        </p>
       </div>
 
       <div className="h-px bg-gray-100 mb-10" />
 
       {/* STAGES */}
       <div className="space-y-6 mb-10">
-        <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-800">
           Stages of Lipedema
-        </h3>
+        </h2>
 
         <p className="text-gray-700 leading-relaxed">
           Understanding these Stages of Lipedema can also help patients seek the
           right Lipedema Treatment in Gurgaon at the appropriate time.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-1 gap-4">
           {stages.map((stage, i) => (
             <div
               key={i}
@@ -311,12 +376,12 @@ export default function LipedemaContent() {
                 <span className="flex-shrink-0 h-8 w-8 rounded-full bg-[var(--med-primary)] text-white text-sm font-bold flex items-center justify-center">
                   {i + 1}
                 </span>
-                <p className="font-semibold text-[var(--med-primary)]">
-                  {stage.label}
-                </p>
+                <h3 className="font-semibold text-[var(--med-primary)]">
+                  {stage?.title}
+                </h3>
               </div>
-              <ul className="space-y-2">
-                {stage.points.map((pt, j) => (
+              {/* <ul className="space-y-2">
+                {stage?.points?.map((pt, j) => (
                   <li key={j} className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[var(--med-primary)] flex-shrink-0" />
                     <span className="text-gray-700 text-sm leading-relaxed">
@@ -324,15 +389,17 @@ export default function LipedemaContent() {
                     </span>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
+              <div className="space-y-2">
+                {stage?.content}
+              </div>
             </div>
           ))}
         </div>
 
         <p className="text-gray-700 leading-relaxed">
-          Early diagnosis can slow progression and prevent complications, and
-          timely Lipedema Treatment in Gurgaon can help manage symptoms
-          effectively.
+          Early diagnosis and timely treatment under Dr. Himanshu Verma can slow progression and prevent complications significantly.
+
         </p>
       </div>
 
@@ -345,14 +412,12 @@ export default function LipedemaContent() {
 
       {/* SYMPTOMS */}
       <div className="space-y-6 mb-10">
-        <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-800">
           What are the Symptoms of Lipedema?
-        </h3>
+        </h2>
 
         <p className="text-gray-700 leading-relaxed">
-          Spotting early Symptoms of Lipedema gives you a better shot at keeping
-          it under control. Here are some ways Lipedema Treatment in Gurgaon is
-          different from regular weight gain:
+          Recognizing Lipedema early gives you the best chance of managing it before it progresses. These symptoms set it apart from general weight gain:
         </p>
 
         <div className="space-y-4">
@@ -361,7 +426,7 @@ export default function LipedemaContent() {
               key={i}
               className="flex items-start gap-4 border border-[var(--med-border)] rounded-2xl bg-[var(--med-light)] px-6 py-5"
             >
-              <span className="flex-shrink-0 mt-0.5 h-2 w-2 rounded-full bg-[var(--med-primary)]" />
+              <span className="flex-shrink-0 mt-2 h-2 w-2 rounded-full bg-[var(--med-primary)]" />
               <div className="space-y-1">
                 <p className="font-semibold text-[var(--med-primary)]">
                   {item.title}
@@ -379,16 +444,12 @@ export default function LipedemaContent() {
 
       {/* CAUSES */}
       <div className="space-y-6 mb-10">
-        <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
-          What causes Lipedema?
-        </h3>
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-800">
+          What Causes Lipedema?
+        </h2>
 
         <p className="text-gray-700 leading-relaxed">
-          We don't have the complete answer yet, but researchers know enough to
-          point at a few culprits. While the exact cause is still being
-          researched, several factors are strongly linked. Understanding these
-          causes can also help patients seek the right Lipedema Treatment in
-          Gurgaon at an early stage.
+          The exact cause is still being researched, but three primary factors are strongly linked:
         </p>
 
         <div className="space-y-4">
@@ -419,14 +480,12 @@ export default function LipedemaContent() {
 
       {/* COMPLICATIONS */}
       <div className="space-y-6 mb-10">
-        <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
-          What are the Complications of Lipedema?
-        </h3>
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-800">
+          Complications of Untreated Lipedema
+        </h2>
 
         <p className="text-gray-700 leading-relaxed">
-          Without proper care, lipedema can lead to several complications.
-          Seeking timely Lipedema Treatment in Gurgaon can help manage symptoms
-          and reduce these risks.
+          Without timely care, Lipedema can lead to serious complications:
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -435,28 +494,36 @@ export default function LipedemaContent() {
               key={i}
               className="border border-[var(--med-border)] rounded-2xl bg-[var(--med-light)] px-5 py-4 space-y-1"
             >
-              <p className="font-semibold text-[var(--med-primary)] text-sm">
+              <h3 className="font-semibold text-[var(--med-primary)] text-sm">
                 {item.title}
-              </p>
+              </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
                 {item.desc}
               </p>
+
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="flex justify-center">
+
+        <ButtonFill
+          onClick={() => setOpenPopup(true)}
+          text="Schedule an Appointment"
+        />
       </div>
 
       <div className="h-px bg-gray-100 mb-10" />
 
       {/* TREATMENT */}
       <div className="space-y-6 mb-10">
-        <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-800">
           Treatment of Lipedema
-        </h3>
+        </h2>
 
         <p className="text-gray-700 leading-relaxed">
-          Lipedema is not curable, but if Lipedema Treatment is done correctly,
-          it will significantly improve both your symptoms and quality of life.
+          Lipedema has no permanent cure, but the right treatment delivered consistently under expert supervision can dramatically improve symptoms and quality of life.
         </p>
 
         <div className="space-y-4">
@@ -475,27 +542,27 @@ export default function LipedemaContent() {
                 <p className="text-gray-700 leading-relaxed text-sm">
                   {t.desc}
                 </p>
+                <ul className="space-y-1 mt-2">
+                  {t?.points?.map((pt, j) => (
+                    <li key={j} className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[var(--med-primary)] flex-shrink-0" />
+                      <span className="text-gray-700 text-sm leading-relaxed">
+                        {pt}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
         </div>
 
         {/* Inline CTA */}
-        <div className="flex items-start gap-3 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl px-5 py-4">
-          <AlertCircle
-            size={18}
-            className="text-[var(--med-primary)] mt-0.5 flex-shrink-0"
-          />
-          <p className="text-gray-700 leading-relaxed text-sm">
-            If you want a safe and reliable solution,{" "}
-            <span className="font-semibold text-[var(--med-primary)]">
-              talk to Dr. Himanshu
-            </span>{" "}
-            about the right Lipedema Treatment in Gurgaon plan for you.
-          </p>
-        </div>
-      </div>
 
+      </div>
+      <div className="mb-14">
+        <TestimonialsServices testimonials={lipedemaReviews} title="Words of our patients" />
+      </div>
       <div className="h-px bg-gray-100 mb-10" />
 
       {/* FAQ */}
@@ -524,16 +591,14 @@ export default function LipedemaContent() {
 
                   <ChevronDown
                     size={22}
-                    className={`text-[var(--med-primary)] transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
+                    className={`text-[var(--med-primary)] transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
                 <div
-                  className={`px-6 overflow-hidden transition-all duration-300 ${
-                    isOpen ? "max-h-52 pb-5" : "max-h-0"
-                  }`}
+                  className={`px-6 overflow-hidden transition-all duration-300 ${isOpen ? "max-h-52 pb-5" : "max-h-0"
+                    }`}
                 >
                   <p className="text-gray-700 leading-relaxed">{faq.a}</p>
                 </div>
@@ -549,6 +614,27 @@ export default function LipedemaContent() {
           onClick={() => setOpenPopup(true)}
           text="Schedule an Appointment"
         />
+      </div>
+
+      <div className="mt-6 space-y-3">
+        <p className="text-gray-700 leading-relaxed">
+          Living with Lipedema is physically and emotionally draining, but meaningful improvement is achievable with the right specialist and the right plan.
+
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+
+          Dr. Himanshu Verma, MCh, Vascular Surgeon and Director of Vascular and Endovascular Surgery at Fortis FMRI, Gurgaon, is available for in-person consultations to assess your condition and design a personalized treatment plan.
+        </p>   <p className="text-gray-700 leading-relaxed">
+
+          Contact Dr. Himanshu Verma for Lipedema Treatment in Gurgaon at Fortis FMRI, Gurgaon.
+        </p>
+      </div>
+      <div className="mt-6">
+        <div className="rounded-2xl bg-[var(--med-primary)] text-white px-6 py-5 items-center justify-between gap-4">
+          <p className="text-sm text-white/90">
+            <strong>Disclaimer:</strong> The information provided on this page is intended for general educational purposes only and does not constitute medical advice, diagnosis, or treatment. Individual medical conditions vary, and results differ from patient to patient. Please consult Dr. Himanshu Verma or a qualified medical professional before making any decisions regarding your health or treatment. In case of a medical emergency, please contact your nearest hospital immediately.
+          </p>
+        </div>
       </div>
 
       <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />
