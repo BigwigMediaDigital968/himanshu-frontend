@@ -97,8 +97,53 @@ export default function LipedemaPage() {
               // ── Physician ────────────────────────────────────────────────
               {
                 "@type": "Physician",
-                name: "Dr. Himanshu Verma",
-                medicalSpecialty: "Vascular Surgery",
+                "name": "Dr. Himanshu Verma",
+                "description": "Dr. Himanshu Verma is the Director of Vascular and Endovascular Surgery at Fortis FMRI, Gurgaon, with over 17 years of clinical experience in managing complex arterial, venous, lymphatic, and dialysis-access disorders including Lipedema and Lymphedema.",
+                "medicalSpecialty": [
+                  "Vascular Surgery",
+                  "Endovascular Surgery",
+                  "Lymphatic Care",
+                  "Lipedema Treatment"
+                ],
+                "hasCredential": [
+                  {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "degree",
+                    "name": "MBBS"
+                  },
+                  {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "degree",
+                    "name": "MS"
+                  },
+                  {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "degree",
+                    "name": "MCh (Vascular Surgery)"
+                  },
+                  {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "certification",
+                    "name": "FEVS (Fellow of European Board of Vascular Surgery)"
+                  }
+                ],
+                "jobTitle": "Director, Vascular and Endovascular Surgery",
+                "worksFor": {
+                  "@type": "Hospital",
+                  "name": "Fortis FMRI",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Sector 44",
+                    "addressLocality": "Gurgaon",
+                    "addressRegion": "Haryana",
+                    "postalCode": "122002",
+                    "addressCountry": "IN"
+                  }
+                },
+                "url": "https://www.drhimanshuverma.com",
+                "sameAs": [
+                  "https://www.fortishealthcare.com/doctors/dr-himanshu-verma"
+                ]
               },
 
               // ── MedicalCondition ─────────────────────────────────────────
@@ -171,22 +216,22 @@ export default function LipedemaPage() {
                   itemListElement: [
                     {
                       "@type": "ListItem",
-                      position: 1,
-                      name: "Home",
-                      item: "https://www.drhimanshuverma.com",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://www.drhimanshuverma.com"
                     },
                     {
                       "@type": "ListItem",
-                      position: 2,
-                      name: "Services",
-                      item: "https://www.drhimanshuverma.com/services",
+                      "position": 2,
+                      "name": "Services",
+                      "item": "https://www.drhimanshuverma.com/services"
                     },
                     {
                       "@type": "ListItem",
-                      position: 3,
-                      name: "Lipedema Treatment in Gurgaon",
-                      item: PAGE_URL,
-                    },
+                      "position": 3,
+                      "name": "Lipedema Treatment in Gurgaon",
+                      "item": "https://www.drhimanshuverma.com/services/lymphatic-care-treatment-in-gurgaon"
+                    }
                   ],
                 },
               },
@@ -194,58 +239,58 @@ export default function LipedemaPage() {
               // ── FAQPage ──────────────────────────────────────────────────
               {
                 "@type": "FAQPage",
-                mainEntity: [
+                "@id": PAGE_URL + "#faq",
+                "mainEntity": [
                   {
                     "@type": "Question",
-                    name: "What is the main cause of lipedema?",
-                    acceptedAnswer: {
+                    "name": "What is the main cause of Lipedema?",
+                    "acceptedAnswer": {
                       "@type": "Answer",
-                      text: "The exact cause of lipedema is not fully known, but hormonal changes and genetic factors are considered the main contributors. Many people experiencing these symptoms consult specialists for Lipedema Treatment in Gurgaon for proper diagnosis and care.",
-                    },
+                      "text": "Hormonal changes during puberty, pregnancy, and menopause, combined with genetic predisposition and lymphatic dysfunction, are the primary contributing factors. It is not caused by diet or lifestyle."
+                    }
                   },
                   {
                     "@type": "Question",
-                    name: "How is lipedema treated?",
-                    acceptedAnswer: {
+                    "name": "How is Lipedema treated?",
+                    "acceptedAnswer": {
                       "@type": "Answer",
-                      text: "Lipedema is commonly managed with Manual Lymphatic Drainage (MLD), compression therapy, and Complete Decongestive Therapy (CDT). Many clinics offering Lipedema Treatment in Gurgaon use these methods to help reduce swelling and improve comfort.",
-                    },
+                      "text": "Lipedema is treated through a structured combination of Manual Lymphatic Drainage (MLD), Complete Decongestive Therapy (CDT), and custom compression garment therapy."
+                    }
                   },
                   {
                     "@type": "Question",
-                    name: "How do you know if you have lipedema?",
-                    acceptedAnswer: {
+                    "name": "How do I know if I have Lipedema?",
+                    "acceptedAnswer": {
                       "@type": "Answer",
-                      text: "Common signs include symmetrical swelling in the legs or arms, pain, easy bruising, and normal-sized hands and feet. If you notice these symptoms, consulting a specialist for Lipedema Treatment in Gurgaon can help confirm the diagnosis.",
-                    },
+                      "text": "Key indicators include symmetrical leg or arm swelling with normal-sized hands and feet, persistent pain, easy bruising, and fat that does not respond to diet or exercise."
+                    }
                   },
                   {
                     "@type": "Question",
-                    name: "Can lipedema go away with weight loss?",
-                    acceptedAnswer: {
+                    "name": "Can Lipedema go away with weight loss?",
+                    "acceptedAnswer": {
                       "@type": "Answer",
-                      text: "No, lipedema fat usually does not respond to diet or exercise. Patients often seek Lipedema Treatment in Gurgaon to manage symptoms and control swelling.",
-                    },
+                      "text": "No. Lipedema fat is physiologically different from ordinary body fat and does not respond to caloric restriction or exercise."
+                    }
                   },
                   {
                     "@type": "Question",
-                    name: "Is lipedema painful?",
-                    acceptedAnswer: {
+                    "name": "Is Lipedema painful?",
+                    "acceptedAnswer": {
                       "@type": "Answer",
-                      text: "Yes, lipedema can cause pain, tenderness, and heaviness in the affected areas. With proper Lipedema Treatment in Gurgaon, these symptoms can often be managed effectively.",
-                    },
+                      "text": "Yes. Pain, tenderness, and heaviness in affected areas are hallmark symptoms of Lipedema."
+                    }
                   },
                   {
                     "@type": "Question",
-                    name: "How is lipedema different from obesity?",
-                    acceptedAnswer: {
+                    "name": "How is Lipedema different from obesity?",
+                    "acceptedAnswer": {
                       "@type": "Answer",
-                      text: "Lipedema causes symmetrical fat buildup mainly in the legs and arms, while the hands and feet remain unaffected. Specialists providing Lipedema Treatment in Gurgaon can help differentiate lipedema from obesity and suggest the right Lipedema treatment approach.",
-                    },
-                  },
-                ],
-              },
-            ],
+                      "text": "Lipedema causes symmetrical fat buildup in the legs and arms while leaving hands and feet unaffected, and it does not respond to weight loss unlike obesity."
+                    }
+                  }
+                ]
+              }],
           }),
         }}
       />
