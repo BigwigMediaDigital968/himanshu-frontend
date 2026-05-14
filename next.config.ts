@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
         destination: "/services/varicose-veins-treatment-in-gurgaon",
         permanent: true,
       },
+      {
+        source: "/services/av-fistula",
+        destination: "/services/av-fistula-treatment-in-gurgaon",
+        permanent: true,
+      },
     ];
   },
 };

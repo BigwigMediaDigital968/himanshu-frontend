@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           "/admin",
           "/login",
-
+          "https://www.drhimanshuverma.com/favicon.ico",
           // Block specific service pages
           // "/services/abdominal-aortic-aneurysm-treatment-in-gurgaon",
           // "/services/amputation-surgery-in-gurgaon",
