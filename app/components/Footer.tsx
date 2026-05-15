@@ -183,7 +183,7 @@ export default function Footer() {
           <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
             <Link href="/services">Services in Gurgaon</Link>
           </div>
-          <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
+          {/* <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
             <Link href="/services/varicose-vein-treatment-in-delhi">
               Services in Delhi
             </Link>
@@ -192,7 +192,7 @@ export default function Footer() {
             <Link href="/services/varicose-vein-treatment-in-varanasi">
               Services in Varansi
             </Link>
-          </div>
+          </div> */}
           <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
             <Link href="/workshop/avf-care">AVF Care Workshop</Link>
           </div>

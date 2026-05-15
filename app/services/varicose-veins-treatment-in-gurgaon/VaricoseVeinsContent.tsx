@@ -11,13 +11,11 @@ import {
   Zap,
   Activity,
 } from "lucide-react";
-import { GiH2O } from "react-icons/gi";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 
-// 1. Define the type to handle both string URLs and imported assets
 type ImageSource = string | StaticImageData;
 
 interface CarouselItem {
@@ -234,37 +232,6 @@ export default function VaricoseVeinsContent() {
       badgeClass: "bg-emerald-100 text-emerald-700",
       desc: "Bulging surface veins are removed through tiny 1–2 mm punctures using a fine hook; no stitches are required. Often combined with EVLT or RFA in a single session for complete treatment. Most patients resume daily activities within 2–3 days.",
     },
-
-    // {
-    //   name: "Iliac Vein Stenting",
-    //   badge: "Hypertension",
-    //   badgeClass: "bg-orange-100 text-orange-700",
-    //   desc: "Used to treat venous hypertension by opening narrowed or compressed veins.",
-    // },
-    // {
-    //   name: "Deep Vein Thrombolysis",
-    //   badge: "Clot Dissolution",
-    //   badgeClass: "bg-red-100 text-red-700",
-    //   desc: "A specialized procedure that dissolves dangerous clots in the deep veins.",
-    // },
-    // {
-    //   name: "DVT Mechanical Thrombectomy",
-    //   badge: "Clot Removal",
-    //   badgeClass: "bg-rose-100 text-rose-700",
-    //   desc: "Removes clots from deep veins using advanced medical devices.",
-    // },
-    // {
-    //   name: "IVC Filter Insertion & Retrieval",
-    //   badge: "Clot Prevention",
-    //   badgeClass: "bg-amber-100 text-amber-700",
-    //   desc: "Helps prevent blood clots from reaching the lungs.",
-    // },
-    // {
-    //   name: "Pulmonary Embolism Suction Thrombectomy",
-    //   badge: "Life-Saving",
-    //   badgeClass: "bg-red-100 text-red-700",
-    //   desc: "A life-saving procedure used to remove clots from the lungs.",
-    // },
   ];
 
   const BulletItem = ({
@@ -367,7 +334,10 @@ export default function VaricoseVeinsContent() {
             When to Consult
           </h2>
           <p className="text-gray-700 text-sm leading-relaxed">
-            If you notice varicose veins, spider veins, or persistent leg discomfort, consult Dr Himanshu Verma at Fortis Memorial Research Institute, Sector 44, Gurgaon for an accurate diagnosis and a personalised treatment plan.
+            If you notice varicose veins, spider veins, or persistent leg
+            discomfort, consult Dr Himanshu Verma at Fortis Memorial Research
+            Institute, Sector 44, Gurgaon for an accurate diagnosis and a
+            personalised treatment plan.
           </p>
           {[
             "Varicose or spider veins",
@@ -603,6 +573,58 @@ export default function VaricoseVeinsContent() {
         </div>
       </div>
 
+      {/* ── WHY CHOOSE ── */}
+      <div className="mb-14 rounded-2xl overflow-hidden border border-[var(--med-border)]">
+        <div className="grid md:grid-cols-2">
+          <div className="bg-[var(--med-primary)] p-8 flex flex-col justify-center gap-4">
+            <ShieldCheck className="w-8 h-8 text-white/60" />
+            <h2 className="text-2xl font-bold text-white">
+              Why Choose Dr Himanshu Verma for Varicose Vein
+            </h2>
+            <p className="text-white/80 text-sm leading-relaxed">
+              If you are looking for varicose veins treatment in Gurgaon, early
+              consultation with a specialist can help prevent complications and
+              improve your vein health. In this regard, Dr Himanshu Verma is a
+              board-certified MBBS, MS, and Vascular and Endovascular Surgeon
+              with over 17 years of clinical experience. He holds an MCh in
+              Vascular Surgery and is a member of the Vascular Society of India
+              and FEVS. Practising at Fortis Memorial Research Institute, Sector
+              44, Gurgaon, Dr Verma has performed more than 5,000 minimally
+              invasive vein procedures, including EVLT, Radiofrequency Ablation
+              (RFA), and Medical Glue Closure (Cyanoacrylate). His clinical
+              focus is on achieving lasting relief through evidence-based,
+              patient-centred care with minimal recovery time.
+            </p>
+          </div>
+          <div className="bg-[var(--med-light)] p-8 flex flex-col justify-center gap-4">
+            <p className="text-sm leading-relaxed">
+              His clinical focus is on achieving lasting relief through
+              evidence-based, patient-centred care with minimal recovery time.
+              <br /> <br /> He has authored 29+ peer-reviewed research
+              publications and 9 book chapters, with presentations at
+              international platforms including the VEITH Symposium, New York,
+              reflecting a commitment to evidence-based vascular practice.
+            </p>
+
+            {[
+              "Minimally invasive, faster recovery",
+              "9 advanced treatment procedures available",
+              "Personalized care for every patient",
+              "Expert in chronic venous & lymphatic disorders",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3">
+                <CheckCircle2 className="w-4 h-4 text-[var(--med-primary)] mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700 text-sm">{item}</span>
+              </div>
+            ))}
+            <ButtonFill
+              onClick={() => setOpenPopup(true)}
+              text="Schedule an Appointment"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* ── TREATMENT OPTIONS ── */}
       <div className="mb-14">
         <div className="mb-8">
@@ -651,10 +673,10 @@ export default function VaricoseVeinsContent() {
 
         <div className="rounded-2xl bg-[var(--med-primary)] text-white px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm font-medium text-white/90 max-w-xl">
-            Early diagnosis and the right varicose veins treatment
-            can help prevent serious complications such as ulcers, blood clots,
-            and chronic venous insufficiency. If your legs feel heavy, swollen,
-            or painful, consult Dr Himanshu to find the most suitable varicose
+            Early diagnosis and the right varicose veins treatment can help
+            prevent serious complications such as ulcers, blood clots, and
+            chronic venous insufficiency. If your legs feel heavy, swollen, or
+            painful, consult Dr Himanshu to find the most suitable varicose
             veins treatment in Gurgaon for your condition.
           </p>
           <button
@@ -669,49 +691,6 @@ export default function VaricoseVeinsContent() {
       {/* Testimonials */}
       <div className="mb-14">
         <TestimonialsServices testimonials={VericoseGurgaon} />
-      </div>
-
-      {/* ── WHY CHOOSE ── */}
-      <div className="mb-14 rounded-2xl overflow-hidden border border-[var(--med-border)]">
-        <div className="grid md:grid-cols-2">
-          <div className="bg-[var(--med-primary)] p-8 flex flex-col justify-center gap-4">
-            <ShieldCheck className="w-8 h-8 text-white/60" />
-            <h2 className="text-2xl font-bold text-white">
-              Why Choose Dr Himanshu Verma for Varicose Vein
-            </h2>
-            <p className="text-white/80 text-sm leading-relaxed">
-              If you are looking for varicose veins treatment in Gurgaon, early
-              consultation with a specialist can help prevent complications and
-              improve your vein health. In this regard, Dr Himanshu Verma is a
-              board-certified MBBS, MS, and Vascular and Endovascular Surgeon
-              with over 17 years of clinical experience. He holds an MCh in
-              Vascular Surgery and is a member of the Vascular Society of India
-              and FEVS. Practising at Fortis Memorial Research Institute, Sector
-              44, Gurgaon, Dr Verma has performed more than 5,000 minimally
-              invasive vein procedures, including EVLT, Radiofrequency Ablation
-              (RFA), and Medical Glue Closure (Cyanoacrylate). His clinical
-              focus is on achieving lasting relief through evidence-based,
-              patient-centred care with minimal recovery time.
-            </p>
-          </div>
-          <div className="bg-[var(--med-light)] p-8 flex flex-col justify-center gap-4">
-            {[
-              "Minimally invasive, faster recovery",
-              "9 advanced treatment procedures available",
-              "Personalized care for every patient",
-              "Expert in chronic venous & lymphatic disorders",
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3">
-                <CheckCircle2 className="w-4 h-4 text-[var(--med-primary)] mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-sm">{item}</span>
-              </div>
-            ))}
-            <ButtonFill
-              onClick={() => setOpenPopup(true)}
-              text="Schedule an Appointment"
-            />
-          </div>
-        </div>
       </div>
 
       {/* ── FAQ ── */}
@@ -729,31 +708,35 @@ export default function VaricoseVeinsContent() {
             return (
               <div
                 key={i}
-                className={`border rounded-2xl overflow-hidden transition-colors ${isOpen
-                  ? "border-[var(--med-primary)] bg-[var(--med-light)]"
-                  : "border-[var(--med-border)] bg-white"
-                  }`}
+                className={`border rounded-2xl overflow-hidden transition-colors ${
+                  isOpen
+                    ? "border-[var(--med-primary)] bg-[var(--med-light)]"
+                    : "border-[var(--med-border)] bg-white"
+                }`}
               >
                 <button
                   onClick={() => setOpenFaqIndex(isOpen ? null : i)}
                   className="w-full flex justify-between items-center px-6 py-4 text-left gap-4"
                 >
                   <span
-                    className={`font-semibold text-sm md:text-base pr-2 ${isOpen ? "text-[var(--med-primary)]" : "text-gray-800"
-                      }`}
+                    className={`font-semibold text-sm md:text-base pr-2 ${
+                      isOpen ? "text-[var(--med-primary)]" : "text-gray-800"
+                    }`}
                   >
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`flex-shrink-0 w-4 h-4 transition-transform duration-300 ${isOpen
-                      ? "rotate-180 text-[var(--med-primary)]"
-                      : "text-gray-400"
-                      }`}
+                    className={`flex-shrink-0 w-4 h-4 transition-transform duration-300 ${
+                      isOpen
+                        ? "rotate-180 text-[var(--med-primary)]"
+                        : "text-gray-400"
+                    }`}
                   />
                 </button>
                 <div
-                  className={`px-6 overflow-hidden transition-all duration-300 ${isOpen ? "max-h-60 pb-5" : "max-h-0"
-                    }`}
+                  className={`px-6 overflow-hidden transition-all duration-300 ${
+                    isOpen ? "max-h-60 pb-5" : "max-h-0"
+                  }`}
                 >
                   <div className="text-gray-700 text-sm leading-relaxed">
                     {faq.a}

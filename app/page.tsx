@@ -238,12 +238,12 @@ const services = [
     icon: Activity,
     link: "/services/diabetic-wound-care-in-gurgaon",
   },
-  {
-    title: "Minor Amputations",
-    desc: "Precision procedures for infection control and limb preservation.",
-    icon: Scissors,
-    link: "/services/amputation-surgery-in-gurgaon",
-  },
+  // {
+  //   title: "Minor Amputations",
+  //   desc: "Precision procedures for infection control and limb preservation.",
+  //   icon: Scissors,
+  //   link: "/services/amputation-surgery-in-gurgaon",
+  // },
   {
     title: "Amputation Surgery",
     desc: "Advanced surgical care for necessary limb removal with rehabilitation focus.",
@@ -383,9 +383,10 @@ const collaborations = [
       <>
         Collaborative development of an{" "}
         <strong>AI-enabled digital stethoscope</strong> designed for{" "}
-        <strong>remote AV fistula monitoring</strong>. This innovation enables
-        early detection of vascular access complications and continuous care
-        beyond hospital settings.
+        <strong>remote AV fistula monitoring</strong>. This means your fistula
+        can be monitored from home - <b>fewer hospital visits</b>. This
+        innovation enables early detection of vascular access complications and
+        continuous care beyond hospital settings.
       </>
     ),
     tags: ["AI-Enabled Diagnostics", "Remote Monitoring", "AV Fistula Care"],
@@ -554,12 +555,10 @@ export default function Home() {
       />
 
       {/* SEO Meta Data */}
-      <title>
-        Vascular & Endovascular Surgeon in Gurgaon | Dr. Himanshu Verma
-      </title>
+      <title>Vascular & Endovascular Surgeon in Gurgaon | Dr. Himanshu</title>
       <meta
         name="title"
-        content="Vascular & Endovascular Surgeon in Gurgaon | Dr. Himanshu Verma"
+        content="Vascular & Endovascular Surgeon in Gurgaon | Dr. Himanshu"
       />
       <meta
         name="description"
@@ -635,7 +634,7 @@ export default function Home() {
 
             {/* ABOUT TEXT */}
             <h2 className="font-semibold text-[var(--med-primary)] mb-0">
-              About Dr. Himanshu Verma
+              About
             </h2>
             <p className="text-[var(--med-text)]/90 leading-relaxed text-justify">
               <br />
@@ -725,7 +724,7 @@ export default function Home() {
             <div>
               <ButtonFill
                 onClick={() => setOpenPopup(true)}
-                text="Request a Callback"
+                text="Book Appointment"
               />
             </div>
           </div>

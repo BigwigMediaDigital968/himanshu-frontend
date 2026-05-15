@@ -82,7 +82,7 @@ const faqSchema = {
 export const metadata: Metadata = {
   title: "Varicose Veins Treatment in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Get painless varicose veins treatment in Gurgaon by Dr. Himanshu Verma at Fortis. Laser, RFA & quick recovery with minimal downtime. Book appointment today.",
+    "Get invasive varicose veins treatment in Gurgaon by Dr. Himanshu Verma at Fortis. Laser, RFA & quick recovery with minimal downtime. Book appointment today.",
   keywords: [
     "varicose veins treatment in Gurgaon",
     "varicose vein specialist in Gurgaon",
@@ -576,7 +576,7 @@ export default function VaricoseVeinsPage() {
 
       <ServiceLayout
         title="Varicose Veins Treatment in Gurgaon | Dr. Himanshu Verma"
-        description="Advanced diagnosis and minimally invasive treatment options for varicose veins, spider veins, and chronic venous disorders."
+        description="Advanced diagnosis and minimally invasive treatment options for varicose veins, spider veins, and chronic venous disorders. Medically reviewed by Dr. Himanshu Verma - MCh Vascular Surgery | Director, Fortis FMRI | Member, Vascular Society of India | Last updated: May 2025"
       >
         <VaricoseVeinsContent />
       </ServiceLayout>

@@ -267,7 +267,7 @@ export default function PeripheralArteryContent() {
       id: 3,
       src: "/services/av-fistula/av-fistula-angioplasty.jpeg",
       alt: "Angioplasty treatment to restore AV fistula function",
-    }
+    },
   ];
 
   const BulletItem = ({
@@ -304,13 +304,14 @@ export default function PeripheralArteryContent() {
           Peripheral Artery Disease Treatment in Gurgaon
         </h2>
         <p className="text-white/70 text-sm md:text-base max-w-xl mb-8">
-          Peripheral Artery Disease is a serious circulatory condition where
-          narrowed arteries reduce blood flow to the limbs. If left untreated,
-          it can cause pain, mobility issues, and in severe cases, limb loss.
-          Our clinic provides personalized Peripheral Artery Disease treatment
-          in Gurgaon for every patient, ensuring accurate diagnosis and
-          effective treatment. Consulting a qualified Peripheral Artery Disease
-          Specialist ensures timely diagnosis and prevents complications.
+          If your legs ache when you walk but feel better at rest, it could be
+          more than muscle fatigue - it may be Peripheral Artery Disease, a
+          condition where blocked leg arteries silently increase your risk of
+          heart attack, stroke, and limb loss. Our clinic provides personalized
+          Peripheral Artery Disease treatment in Gurgaon for every patient,
+          ensuring accurate diagnosis and effective treatment. Consulting a
+          qualified Peripheral Artery Disease Specialist ensures timely
+          diagnosis and prevents complications.
         </p>
         <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/20">
           {[
@@ -328,8 +329,7 @@ export default function PeripheralArteryContent() {
       <div className="mb-6">
         <img
           src="/services/peripheral-artery-disease/peripheral-artery-disease-banner.png"
-          alt="Peripheral Artery
-            Disease treatment in Gurgaon"
+          alt="PAD treatment in Gurgaon image 2"
         />
       </div>
 
@@ -538,7 +538,6 @@ export default function PeripheralArteryContent() {
             tailored to each patient, including:
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
           {treatmentOptions.map((t, i) => (
             <div
@@ -564,10 +563,7 @@ export default function PeripheralArteryContent() {
           </p>
         </div>
         peripheral-artery-disease-1
-        <div>
-
-        </div>
-
+        <div></div>
         <div className="rounded-2xl bg-[var(--med-primary)] text-white px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm font-medium text-white/90 max-w-xl">
             Start your treatment journey now. Speak with our specialists for the
@@ -584,7 +580,14 @@ export default function PeripheralArteryContent() {
       </div>
 
       <div className="w-[85vw] lg:w-full overflow-hidden">
-        <AutoCarousel images={['/services/peripheral-artery-disease/peripheral-artery-disease-1.png', '/services/peripheral-artery-disease/peripheral-artery-disease-2.png', '/services/peripheral-artery-disease/peripheral-artery-disease-3.png', '/services/peripheral-artery-disease/peripheral-artery-disease-4.png']} />
+        <AutoCarousel
+          images={[
+            "/services/peripheral-artery-disease/peripheral-artery-disease-1.png",
+            "/services/peripheral-artery-disease/peripheral-artery-disease-2.png",
+            "/services/peripheral-artery-disease/peripheral-artery-disease-3.png",
+            "/services/peripheral-artery-disease/peripheral-artery-disease-4.png",
+          ]}
+        />
       </div>
 
       {/* ── LIFESTYLE + WHY CHOOSE ── */}
@@ -618,11 +621,9 @@ export default function PeripheralArteryContent() {
               Treatment
             </h2>
             <p className="text-white/80 text-sm leading-relaxed">
-              Dr. Himanshu Verma | MCh, Vascular & Endovascular Surgery |
-              Consultant Vascular & Endovascular Surgeon, Fortis Memorial
-              Research Centre, Sector 44, Gurgaon, bringing over 17 years of
-              dedicated vascular expertise to every patient seeking Peripheral
-              Artery Disease treatment in Gurgaon.
+              Dr. Himanshu Verma is an MCh-qualified Vascular and Endovascular
+              Surgeon at Fortis FMRI, Gurgaon, with 17+ years of dedicated
+              experience in PAD diagnosis and treatment.
             </p>
           </div>
           <div className="bg-[var(--med-light)] p-6 flex flex-col gap-3">
@@ -669,31 +670,35 @@ export default function PeripheralArteryContent() {
             return (
               <div
                 key={i}
-                className={`border rounded-2xl overflow-hidden transition-colors ${isOpen
+                className={`border rounded-2xl overflow-hidden transition-colors ${
+                  isOpen
                     ? "border-[var(--med-primary)] bg-[var(--med-light)]"
                     : "border-[var(--med-border)] bg-white"
-                  }`}
+                }`}
               >
                 <button
                   onClick={() => setOpenFaqIndex(isOpen ? null : i)}
                   className="w-full flex justify-between items-center px-6 py-4 text-left gap-4"
                 >
                   <span
-                    className={`font-semibold text-sm md:text-base pr-2 ${isOpen ? "text-[var(--med-primary)]" : "text-gray-800"
-                      }`}
+                    className={`font-semibold text-sm md:text-base pr-2 ${
+                      isOpen ? "text-[var(--med-primary)]" : "text-gray-800"
+                    }`}
                   >
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`flex-shrink-0 w-4 h-4 transition-transform duration-300 ${isOpen
+                    className={`flex-shrink-0 w-4 h-4 transition-transform duration-300 ${
+                      isOpen
                         ? "rotate-180 text-[var(--med-primary)]"
                         : "text-gray-400"
-                      }`}
+                    }`}
                   />
                 </button>
                 <div
-                  className={`px-6 overflow-hidden transition-all duration-300 ${isOpen ? "max-h-60 pb-5" : "max-h-0"
-                    }`}
+                  className={`px-6 overflow-hidden transition-all duration-300 ${
+                    isOpen ? "max-h-60 pb-5" : "max-h-0"
+                  }`}
                 >
                   <div className="text-gray-700 text-sm leading-relaxed">
                     {faq.a}
@@ -738,7 +743,7 @@ interface CarouselProps {
 
 const AutoCarousel: React.FC<CarouselProps> = ({
   images,
-  autoPlayInterval = 5000
+  autoPlayInterval = 5000,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
@@ -757,8 +762,8 @@ const AutoCarousel: React.FC<CarouselProps> = ({
     };
 
     updateWidth();
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
   const nextSlide = useCallback(() => {
@@ -785,7 +790,8 @@ const AutoCarousel: React.FC<CarouselProps> = ({
     const touchEndX = e.nativeEvent.changedTouches[0].clientX;
     const diff = touchStartX.current - touchEndX;
 
-    if (Math.abs(diff) > 50) { // Swipe threshold
+    if (Math.abs(diff) > 50) {
+      // Swipe threshold
       if (diff > 0) nextSlide();
       else prevSlide();
     }
@@ -806,7 +812,7 @@ const AutoCarousel: React.FC<CarouselProps> = ({
           className="flex transition-transform duration-500 ease-out"
           style={{
             transform: `translateX(-${currentIndex * containerWidth}px)`,
-            width: `${totalPages * 100}%`
+            width: `${totalPages * 100}%`,
           }}
         >
           {/* Mapping through images in pairs */}
@@ -817,7 +823,10 @@ const AutoCarousel: React.FC<CarouselProps> = ({
               style={{ width: `${containerWidth}px` }}
             >
               {images.slice(pageIdx * 2, pageIdx * 2 + 2).map((src, imgIdx) => (
-                <div key={imgIdx} className="sm:flex-1 relative overflow-hidden rounded-xl shadow-md">
+                <div
+                  key={imgIdx}
+                  className="sm:flex-1 relative overflow-hidden rounded-xl shadow-md"
+                >
                   <img
                     src={src}
                     alt={`Peripheral Artery Disease treatment in Gurgaon`}
@@ -838,8 +847,7 @@ const AutoCarousel: React.FC<CarouselProps> = ({
           onClick={prevSlide}
           className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
         >
-          <ChevronLeft
-            className="w-6 h-6 text-gray-800" />
+          <ChevronLeft className="w-6 h-6 text-gray-800" />
         </button>
         <button
           onClick={nextSlide}
@@ -855,8 +863,11 @@ const AutoCarousel: React.FC<CarouselProps> = ({
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            className={`h-2 transition-all duration-300 rounded-full ${currentIndex === idx ? "w-8 bg-blue-600" : "w-2 bg-gray-300 hover:bg-gray-400"
-              }`}
+            className={`h-2 transition-all duration-300 rounded-full ${
+              currentIndex === idx
+                ? "w-8 bg-blue-600"
+                : "w-2 bg-gray-300 hover:bg-gray-400"
+            }`}
           />
         ))}
       </div>

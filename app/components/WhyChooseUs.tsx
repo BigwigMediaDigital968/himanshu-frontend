@@ -51,10 +51,9 @@ export default function WhyChooseUs() {
             {/* RIGHT CONTENT */}
             <div data-aos="fade-right">
               <p className="text-[var(--med-text)]/80 leading-relaxed mb-5 text-justify">
-                Seeking a second opinion is a responsible step, and we respect
-                every patient’s right to fully understand their diagnosis,
-                treatment options, and outcomes. At our centre, second opinions
-                are offered with complete independence and objectivity.
+                Not sure about your diagnosis? Dr. Verma offers independent
+                second opinions - share your reports and get clarity before
+                deciding.
               </p>
               <p className="text-[var(--med-text)]/80 leading-relaxed mb-8 text-justify">
                 To ensure a focused and meaningful consultation, we request that
@@ -86,7 +85,7 @@ export default function WhyChooseUs() {
               {/* CTA */}
               <ButtonFill
                 onClick={() => setOpenPopup(true)}
-                text="Let’s Clear Your Doubts"
+                text="Book Appointment"
               />
             </div>
           </div>

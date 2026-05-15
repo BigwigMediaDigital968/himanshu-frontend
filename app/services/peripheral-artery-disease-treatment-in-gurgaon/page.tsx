@@ -601,7 +601,7 @@ export default function PeripheralArteryPage() {
 
       <ServiceLayout
         title="Peripheral Artery Disease Treatment in Gurgaon"
-        description="Medically reviewed by Dr. Himanshu Verma, MCh (Vascular & Endovascular Surgery) | Fortis Memorial Research Centre, Gurgaon |"
+        description="Medically reviewed by Dr. Himanshu Verma, MCh Vascular Surgery | Director, Fortis FMRI Gurgaon | Last reviewed: April 2025"
       >
         <PeripheralArteryContent />
       </ServiceLayout>
