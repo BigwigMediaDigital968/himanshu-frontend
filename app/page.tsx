@@ -562,7 +562,7 @@ export default function Home() {
       />
       <meta
         name="description"
-        content="Dr. Himanshu Verma, leading Vascular Surgeon at Fortis Gurgaon with 17+ years experience & 5000+ surgeries. Advanced, minimally invasive care. Book consultation today."
+        content="Vascular Surgeon at Fortis Gurgaon. 17+ years experience, 5000+ surgeries. Minimally invasive treatment. Book your consultation today."
       />
 
       <meta
