@@ -622,8 +622,12 @@ export default function PeripheralArteryContent() {
             </h2>
             <p className="text-white/80 text-sm leading-relaxed">
               Dr. Himanshu Verma is an MCh-qualified Vascular and Endovascular
-              Surgeon at Fortis FMRI, Gurgaon, with 17+ years of dedicated
-              experience in PAD diagnosis and treatment.
+              Surgeon at Fortis Memorial Research Centre, Gurgaon, with 17+
+              years of dedicated experience in diagnosing and treating
+              Peripheral Artery Disease. He has authored 29+ peer-reviewed
+              research publications across vascular surgery, and his treatment
+              protocols are based on AHA, ESC, and Vascular Society of India
+              clinical guidelines.
             </p>
           </div>
           <div className="bg-[var(--med-light)] p-6 flex flex-col gap-3">
