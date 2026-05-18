@@ -401,11 +401,11 @@ export default function VaricoseVeinsContent() {
               ))}
             </ul>
             <p className="text-xs text-gray-500 mt-4">
-              The symptoms vary in severity and can worsen over time.
-              Nonetheless, early treatment can prevent progression of the
-              condition. If you experience heavy or aching legs, consult Dr
-              Himanshu for proper evaluation and varicose veins treatment in
-              Gurgaon tailored to your specific condition.
+              Symptoms can vary from person to person and may gradually get
+              worse if ignored. However, getting checked early can help avoid
+              further complications. If you often feel heaviness, pain, or
+              tiredness in your legs, consult Dr Himanshu for a proper diagnosis
+              and the right treatment based on your condition.
             </p>
           </div>
 
@@ -426,10 +426,10 @@ export default function VaricoseVeinsContent() {
               ))}
             </ul>
             <p className="text-xs text-gray-500 mt-4">
-              Early treatment and lifestyle modifications can help lower the
-              risk of complications. If you notice early symptoms, consulting a
-              specialist for varicose veins treatment in Gurgaon can help
-              protect your long-term vein health.
+              Early treatment and lifestyle changes can help reduce the risk of
+              complications. If you notice early symptoms, consulting a
+              specialist at the right time can help protect your long-term vein
+              health.
             </p>
           </div>
         </div>
@@ -464,9 +464,9 @@ export default function VaricoseVeinsContent() {
           </h2>
           <p className="text-gray-600 mt-2 max-w-2xl">
             While many people experience mild symptoms, untreated varicose veins
-            can lead to serious complications. This is why timely varicose veins
-            treatment in Gurgaon is recommended for patients experiencing
-            persistent symptoms.
+            can sometimes lead to serious complications. That’s why getting
+            timely treatment from a specialist in Gurgaon is important if the
+            symptoms persist.
           </p>
           <p className="text-gray-600 mt-2 max-w-2xl">
             Possible complications include:
@@ -490,10 +490,9 @@ export default function VaricoseVeinsContent() {
         <div className="flex flex-col sm:flex-row items-center gap-4 p-6 rounded-2xl bg-[var(--med-light)] border border-[var(--med-border)]">
           <p className="text-gray-700 text-sm flex-1">
             Early referral and intervention can help prevent these
-            complications. Dr Himanshu offers comprehensive varicose veins
-            treatment in Gurgaon for patients dealing with chronic venous
-            disorders and lymphatic issues. Book an appointment today to ensure
-            long-term leg health.
+            complications. Dr Himanshu offers comprehensive treatment for
+            patients dealing with chronic venous disorders and lymphatic issues.
+            Book an appointment today to ensure long-term leg health.
           </p>
           <ButtonFill
             onClick={() => setOpenPopup(true)}
@@ -673,11 +672,10 @@ export default function VaricoseVeinsContent() {
 
         <div className="rounded-2xl bg-[var(--med-primary)] text-white px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm font-medium text-white/90 max-w-xl">
-            Early diagnosis and the right varicose veins treatment can help
-            prevent serious complications such as ulcers, blood clots, and
-            chronic venous insufficiency. If your legs feel heavy, swollen, or
-            painful, consult Dr Himanshu to find the most suitable varicose
-            veins treatment in Gurgaon for your condition.
+            Early diagnosis and the right treatment can help prevent serious
+            complications such as ulcers, blood clots, and chronic venous
+            insufficiency. If your legs feel heavy, swollen, or painful, consult
+            Dr Himanshu to find the most suitable treatment for your condition.
           </p>
           <button
             onClick={() => setOpenPopup(true)}
