@@ -789,9 +789,8 @@ export default function VaricoseVeinsContent() {
                   href: "/services/varicose-vein-treatment-in-varanasi",
                 },
               ].map((loc) => (
-                <a
+                <p
                   key={loc.city}
-                  href={loc.href}
                   style={{
                     padding: "13px 28px",
                     borderRadius: 12,
@@ -804,19 +803,9 @@ export default function VaricoseVeinsContent() {
                     transition: "all 0.25s",
                     display: "inline-block",
                   }}
-                  onMouseEnter={(e) => {
-                    const el = e.currentTarget as HTMLAnchorElement;
-                    el.style.background = "var(--med-primary)";
-                    el.style.color = "#fff";
-                  }}
-                  onMouseLeave={(e) => {
-                    const el = e.currentTarget as HTMLAnchorElement;
-                    el.style.background = "#fff";
-                    el.style.color = "var(--med-primary)";
-                  }}
                 >
                   Varicose Veins Treatment in {loc.city}
-                </a>
+                </p>
               ))}
             </div>
           </div>
