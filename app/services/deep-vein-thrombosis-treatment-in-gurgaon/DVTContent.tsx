@@ -121,7 +121,7 @@ export default function DVTContent() {
       <div className="grid md:grid-cols-5 gap-8 mb-14 items-start">
         <div className="md:col-span-3 space-y-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-            Deep Vein Thrombosis Treatment in Gurgaon
+            Deep Vein Thrombosis Treatment
           </h2>
           <p className="text-gray-700 leading-relaxed">
             Deep Vein Thrombosis is a condition caused by a clot forming inside
@@ -207,8 +207,7 @@ export default function DVTContent() {
             </ul>
             <p className="text-xs text-gray-500">
               Recognizing these signs early can help you seek{" "}
-              <b>Deep Vein Thrombosis Treatment in Gurgaon</b> at the right
-              time.
+              <b>Deep Vein Thrombosis Treatment</b> at the right time.
             </p>
           </div>
 
@@ -343,23 +342,27 @@ export default function DVTContent() {
             </h2>
           </div>
           <p className="text-gray-600 text-sm mb-4">
-            If you are looking for{" "}
-            <b>Deep Vein Thrombosis Treatment in Gurgaon</b>, personalized
-            treatment plans can ensure effective recovery. Treating DVT focuses
-            primarily on halting existing clots and preventing the formation of
-            new ones. The specifics of a treatment plan will vary depending on
-            the severity of the condition and the patient's general state of
-            health.
+            If you are looking for Deep Vein Thrombosis treatment, personalized
+            care can support effective recovery and help reduce the risk of
+            complications. Treatment mainly focuses on stopping existing clots
+            from growing and preventing new clots from forming. The right
+            treatment approach depends on the severity of the condition and the
+            patient’s overall health.
           </p>
-          <h3 className="text-sm font-semibold text-gray-800 mb-2">
-            Two often-used forms of DVT treatment are:
-          </h3>
+          <p className="text-sm text-gray-600 mb-4">
+            Dr. Himanshu Verma provides advanced care for Deep Vein Thrombosis
+            Treatment in Gurgaon, offering treatment plans tailored to each
+            patient’s condition and recovery needs.
+            <br />
+            <br />
+            Two commonly recommended treatment approaches include:
+          </p>
           <ul className="space-y-2 mb-4">
             {[
-              "Medications that thin the blood",
-              "Compression stockings to promote blood flow in the legs",
-              "Lifestyle modifications that keep blood flowing",
-              "Advanced medical treatment for more serious cases",
+              "Blood-thinning medications",
+              "Compression stockings to improve blood circulation in the legs",
+              "Lifestyle modifications that support healthy blood flow",
+              "Advanced medical procedures for more serious cases",
             ].map((s) => (
               <li
                 key={s}
@@ -371,10 +374,10 @@ export default function DVTContent() {
             ))}
           </ul>
           <p className="text-xs text-gray-500">
-            Patients searching for <b>DVT Treatment in Gurgaon</b> can benefit
-            from advanced and minimally invasive options. Choosing the right
-            expert for <b>Deep Vein Thrombosis Treatment in Gurgaon</b> plays a
-            crucial role in recovery.
+            Patients can benefit from modern and minimally invasive treatment
+            options that help improve recovery outcomes and long-term vein
+            health. hrombosis Treatment in Gurgaon plays a crucial role in
+            recovery.
           </p>
         </div>
       </div>
