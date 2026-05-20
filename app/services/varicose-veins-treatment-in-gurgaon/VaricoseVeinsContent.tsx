@@ -746,7 +746,7 @@ export default function VaricoseVeinsContent() {
         </div>
       </div>
 
-      <AnimatedSection>
+      {/* <AnimatedSection>
         <section
           style={{
             padding: "56px 24px",
@@ -810,7 +810,7 @@ export default function VaricoseVeinsContent() {
             </div>
           </div>
         </section>
-      </AnimatedSection>
+      </AnimatedSection> */}
 
       {/* ── FINAL CTA ── */}
       <div className="rounded-2xl border border-[var(--med-border)] bg-[var(--med-light)] p-8">
