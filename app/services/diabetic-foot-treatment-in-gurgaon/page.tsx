@@ -202,7 +202,7 @@ export default function DiabeticFootPage() {
 
       <ServiceLayout
         title="Diabetic Foot Treatment in Gurgaon"
-        description="Expert Diabetic Foot Treatment in Gurgaon by Dr. Himanshu Verma. Effective care for foot ulcers, infections, and diabetic complications."
+        description="Dr. Himanshu Verma provides advanced care for diabetic foot ulcers, infections, wounds, and other diabetes-related foot complications to help protect your foot health and mobility."
       >
         <DiabeticContent />
       </ServiceLayout>

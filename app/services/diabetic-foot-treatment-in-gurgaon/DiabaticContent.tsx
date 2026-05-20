@@ -108,9 +108,11 @@ export default function DiabeticContent() {
           the risk of infections or wounds that do not heal properly. Diabetic
           Foot problems often start small but can become serious if ignored.
           Early care and awareness play a major role in protecting foot health
-          and mobility. <br /> <br /> People experiencing these symptoms often
-          look for Diabetic Foot Treatment in Gurgaon to manage complications
-          early and protect their feet from further damage. <br /> <br />
+          and mobility. <br /> <br /> People experiencing symptoms such as pain,
+          numbness, tingling, swelling, or slow-healing wounds should seek
+          timely medical attention to prevent further complications and protect
+          their foot health.
+          <br /> <br />
           If you notice changes in your feet, pain, numbness, or slow-healing
           wounds, it may be time to consult Dr. Himanshu Verma for Diabetic Foot
           Treatment in Gurgaon. He is a trusted diabetic foot specialist in
@@ -262,13 +264,15 @@ export default function DiabeticContent() {
           Diabetic Foot care focuses on treating wounds, improving circulation,
           and preventing future damage. Simple steps such as proper footwear,
           blood sugar control, and timely medical attention can make a big
-          difference. <br />
-          <br /> Dr. Himanshu Verma provides Diabetic Foot Treatment in Gurgaon,
-          offering advanced wound care, infection management, circulation
-          improvement, and preventive foot care strategies to support long-term
-          foot health. <br /> <br /> With the right Diabetic Foot Treatment in
-          Gurugram, patients can experience improved healing, reduced infection
-          risk, and better overall foot health.
+          difference.
+          <br />
+          <br /> Dr. Himanshu Verma provides Diabetic Foot Treatment in
+          Gurugram, offering advanced wound care, infection management,
+          circulation improvement, and preventive foot care strategies to
+          support long-term foot health.
+          <br /> <br /> With the right care and timely treatment, patients can
+          experience improved healing, reduced infection risk, and better
+          overall foot health.
         </p>
       </div>
 
