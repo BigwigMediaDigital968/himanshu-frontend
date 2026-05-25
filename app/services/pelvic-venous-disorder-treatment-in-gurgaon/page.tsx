@@ -218,7 +218,19 @@ export default function PelvicVenousDisorder() {
 
       <ServiceLayout
         title="Pelvic Venous Disorders Treatment in Gurgaon"
-        description="Advanced diagnosis and treatment of pelvic congestion syndrome and pelvic venous disorders."
+        description={
+          <>
+            Experiencing chronic pelvic pain that no one seems to explain? You
+            may be dealing with a vascular condition and it's treatable.
+            <br />
+            <br />
+            Dr. Himanshu Verma, a specialist Vascular & Endovascular Surgeon at
+            Fortis Memorial Research Centre, Gurugram, offers minimally invasive
+            diagnosis and treatment for Pelvic Congestion Syndrome (PCS) and
+            related pelvic vein disorders. With imaging-guided precision and a
+            personalised approach, most patients return home the same day.
+          </>
+        }
       >
         <PelvicContent />
       </ServiceLayout>
