@@ -9,9 +9,9 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Lipedema Treatment in Gurgaon | Dr. Himanshu Verma",
+  title: "Lipedema & Lymphatic Care in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Struggling with stubborn leg swelling? Get advanced lipedema treatment in Gurgaon by Dr. Himanshu Verma at Fortis with lymphatic therapy & compression care. Book consultation.",
+    "Lipedema and lymphatic care in Gurgaon by Dr. Himanshu Verma. MLD, CDT, compression therapy, and vascular care. Book a consultation today.",
   keywords: [
     "Lipedema Treatment in Gurgaon",
     "lipedema symptoms",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Lipedema Treatment in Gurgaon | Symptoms & Treatment",
+    title: "Lipedema & Lymphatic Care in Gurgaon | Dr. Himanshu Verma",
     description:
-      "Struggling with stubborn leg swelling? Get advanced lipedema treatment in Gurgaon by Dr. Himanshu Verma at Fortis with lymphatic therapy & compression care. Book consultation.",
+      "Lipedema and lymphatic care in Gurgaon by Dr. Himanshu Verma. MLD, CDT, compression therapy, and vascular care. Book a consultation today.",
     url: PAGE_URL,
     siteName: "Dr. Himanshu Verma",
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Lipedema Treatment in Gurgaon",
+        alt: "Lipedema & Lymphatic Care in Gurgaon",
       },
     ],
     locale: "en_IN",
@@ -48,24 +48,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Lipedema Treatment in Gurgaon | Symptoms & Treatment",
+    title: "Lipedema & Lymphatic Care in Gurgaon | Dr. Himanshu Verma",
     description:
       "Expert Lipedema Treatment in Gurgaon — MLD, compression therapy, and CDT for swelling and pain relief.",
     images: [OG_IMAGE],
-    site: "@drhimanshuverma",
-    creator: "@drhimanshuverma",
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
   },
 };
 
@@ -251,8 +237,8 @@ export default function LipedemaPage() {
       />
 
       <ServiceLayout
-        title="Lipedema Treatment in Gurgaon by Dr. Himanshu Verma"
-        description="Dr. Himanshu Verma, MCh Vascular Surgeon and Director of Vascular and Endovascular Surgery at Fortis FMRI, Gurgaon, provides specialized Lipedema Treatment in Gurgaon with over 17 years of clinical experience in managing complex lymphatic and vascular disorders."
+        title="Lipedema & Lymphatic Care Treatment in Gurgaon"
+        description="If you have been living with unexplained leg swelling, heaviness, or disproportionate fat that does not respond to diet or exercise, you may be dealing with a lymphatic or lipedema-related condition and you deserve a specialist, not guesswork.Dr. Himanshu Verma, MCh (Vascular Surgery), Director - Vascular & Endovascular Surgery at Fortis FMRI, Gurgaon, provides evidence-based lymphatic care and lipedema treatment with over 17 years of clinical experience. His practice is guided by International Society of Lymphology (ISL) protocols, adapted to individual patient needs. "
       >
         <LipedemaContent />
       </ServiceLayout>

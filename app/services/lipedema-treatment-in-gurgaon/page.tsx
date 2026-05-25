@@ -97,53 +97,54 @@ export default function LipedemaPage() {
               // ── Physician ────────────────────────────────────────────────
               {
                 "@type": "Physician",
-                "name": "Dr. Himanshu Verma",
-                "description": "Dr. Himanshu Verma is the Director of Vascular and Endovascular Surgery at Fortis FMRI, Gurgaon, with over 17 years of clinical experience in managing complex arterial, venous, lymphatic, and dialysis-access disorders including Lipedema and Lymphedema.",
-                "medicalSpecialty": [
+                name: "Dr. Himanshu Verma",
+                description:
+                  "Dr. Himanshu Verma is the Director of Vascular and Endovascular Surgery at Fortis FMRI, Gurgaon, with over 17 years of clinical experience in managing complex arterial, venous, lymphatic, and dialysis-access disorders including Lipedema and Lymphedema.",
+                medicalSpecialty: [
                   "Vascular Surgery",
                   "Endovascular Surgery",
                   "Lymphatic Care",
-                  "Lipedema Treatment"
+                  "Lipedema Treatment",
                 ],
-                "hasCredential": [
+                hasCredential: [
                   {
                     "@type": "EducationalOccupationalCredential",
-                    "credentialCategory": "degree",
-                    "name": "MBBS"
+                    credentialCategory: "degree",
+                    name: "MBBS",
                   },
                   {
                     "@type": "EducationalOccupationalCredential",
-                    "credentialCategory": "degree",
-                    "name": "MS"
+                    credentialCategory: "degree",
+                    name: "MS",
                   },
                   {
                     "@type": "EducationalOccupationalCredential",
-                    "credentialCategory": "degree",
-                    "name": "MCh (Vascular Surgery)"
+                    credentialCategory: "degree",
+                    name: "MCh (Vascular Surgery)",
                   },
                   {
                     "@type": "EducationalOccupationalCredential",
-                    "credentialCategory": "certification",
-                    "name": "FEVS (Fellow of European Board of Vascular Surgery)"
-                  }
+                    credentialCategory: "certification",
+                    name: "FEVS (Fellow of European Board of Vascular Surgery)",
+                  },
                 ],
-                "jobTitle": "Director, Vascular and Endovascular Surgery",
-                "worksFor": {
+                jobTitle: "Director, Vascular and Endovascular Surgery",
+                worksFor: {
                   "@type": "Hospital",
-                  "name": "Fortis FMRI",
-                  "address": {
+                  name: "Fortis FMRI",
+                  address: {
                     "@type": "PostalAddress",
-                    "streetAddress": "Sector 44",
-                    "addressLocality": "Gurgaon",
-                    "addressRegion": "Haryana",
-                    "postalCode": "122002",
-                    "addressCountry": "IN"
-                  }
+                    streetAddress: "Sector 44",
+                    addressLocality: "Gurgaon",
+                    addressRegion: "Haryana",
+                    postalCode: "122002",
+                    addressCountry: "IN",
+                  },
                 },
-                "url": "https://www.drhimanshuverma.com",
-                "sameAs": [
-                  "https://www.fortishealthcare.com/doctors/dr-himanshu-verma"
-                ]
+                url: "https://www.drhimanshuverma.com",
+                sameAs: [
+                  "https://www.fortishealthcare.com/doctors/dr-himanshu-verma",
+                ],
               },
 
               // ── MedicalCondition ─────────────────────────────────────────
@@ -216,22 +217,22 @@ export default function LipedemaPage() {
                   itemListElement: [
                     {
                       "@type": "ListItem",
-                      "position": 1,
-                      "name": "Home",
-                      "item": "https://www.drhimanshuverma.com"
+                      position: 1,
+                      name: "Home",
+                      item: "https://www.drhimanshuverma.com",
                     },
                     {
                       "@type": "ListItem",
-                      "position": 2,
-                      "name": "Services",
-                      "item": "https://www.drhimanshuverma.com/services"
+                      position: 2,
+                      name: "Services",
+                      item: "https://www.drhimanshuverma.com/services",
                     },
                     {
                       "@type": "ListItem",
-                      "position": 3,
-                      "name": "Lipedema Treatment in Gurgaon",
-                      "item": "https://www.drhimanshuverma.com/services/lymphatic-care-treatment-in-gurgaon"
-                    }
+                      position: 3,
+                      name: "Lipedema Treatment in Gurgaon",
+                      item: "https://www.drhimanshuverma.com/services/lymphatic-care-treatment-in-gurgaon",
+                    },
                   ],
                 },
               },
@@ -240,57 +241,58 @@ export default function LipedemaPage() {
               {
                 "@type": "FAQPage",
                 "@id": PAGE_URL + "#faq",
-                "mainEntity": [
+                mainEntity: [
                   {
                     "@type": "Question",
-                    "name": "What is the main cause of Lipedema?",
-                    "acceptedAnswer": {
+                    name: "What is the main cause of Lipedema?",
+                    acceptedAnswer: {
                       "@type": "Answer",
-                      "text": "Hormonal changes during puberty, pregnancy, and menopause, combined with genetic predisposition and lymphatic dysfunction, are the primary contributing factors. It is not caused by diet or lifestyle."
-                    }
+                      text: "Hormonal changes during puberty, pregnancy, and menopause, combined with genetic predisposition and lymphatic dysfunction, are the primary contributing factors. It is not caused by diet or lifestyle.",
+                    },
                   },
                   {
                     "@type": "Question",
-                    "name": "How is Lipedema treated?",
-                    "acceptedAnswer": {
+                    name: "How is Lipedema treated?",
+                    acceptedAnswer: {
                       "@type": "Answer",
-                      "text": "Lipedema is treated through a structured combination of Manual Lymphatic Drainage (MLD), Complete Decongestive Therapy (CDT), and custom compression garment therapy."
-                    }
+                      text: "Lipedema is treated through a structured combination of Manual Lymphatic Drainage (MLD), Complete Decongestive Therapy (CDT), and custom compression garment therapy.",
+                    },
                   },
                   {
                     "@type": "Question",
-                    "name": "How do I know if I have Lipedema?",
-                    "acceptedAnswer": {
+                    name: "How do I know if I have Lipedema?",
+                    acceptedAnswer: {
                       "@type": "Answer",
-                      "text": "Key indicators include symmetrical leg or arm swelling with normal-sized hands and feet, persistent pain, easy bruising, and fat that does not respond to diet or exercise."
-                    }
+                      text: "Key indicators include symmetrical leg or arm swelling with normal-sized hands and feet, persistent pain, easy bruising, and fat that does not respond to diet or exercise.",
+                    },
                   },
                   {
                     "@type": "Question",
-                    "name": "Can Lipedema go away with weight loss?",
-                    "acceptedAnswer": {
+                    name: "Can Lipedema go away with weight loss?",
+                    acceptedAnswer: {
                       "@type": "Answer",
-                      "text": "No. Lipedema fat is physiologically different from ordinary body fat and does not respond to caloric restriction or exercise."
-                    }
+                      text: "No. Lipedema fat is physiologically different from ordinary body fat and does not respond to caloric restriction or exercise.",
+                    },
                   },
                   {
                     "@type": "Question",
-                    "name": "Is Lipedema painful?",
-                    "acceptedAnswer": {
+                    name: "Is Lipedema painful?",
+                    acceptedAnswer: {
                       "@type": "Answer",
-                      "text": "Yes. Pain, tenderness, and heaviness in affected areas are hallmark symptoms of Lipedema."
-                    }
+                      text: "Yes. Pain, tenderness, and heaviness in affected areas are hallmark symptoms of Lipedema.",
+                    },
                   },
                   {
                     "@type": "Question",
-                    "name": "How is Lipedema different from obesity?",
-                    "acceptedAnswer": {
+                    name: "How is Lipedema different from obesity?",
+                    acceptedAnswer: {
                       "@type": "Answer",
-                      "text": "Lipedema causes symmetrical fat buildup in the legs and arms while leaving hands and feet unaffected, and it does not respond to weight loss unlike obesity."
-                    }
-                  }
-                ]
-              }],
+                      text: "Lipedema causes symmetrical fat buildup in the legs and arms while leaving hands and feet unaffected, and it does not respond to weight loss unlike obesity.",
+                    },
+                  },
+                ],
+              },
+            ],
           }),
         }}
       />
