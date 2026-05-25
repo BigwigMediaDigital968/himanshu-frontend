@@ -11,13 +11,20 @@ const OG_IMAGE =
 export const metadata: Metadata = {
   title:
     "Chronic Venous Insufficiency Treatment in Gurgaon | Dr. Himanshu Verma",
+
   description:
-    "Relief from leg swelling, pain & venous ulcers with expert CVI treatment in Gurgaon. Dr. Himanshu Verma at Fortis offers advanced RFA & compression therapy. Consult today.",
+    "Expert chronic venous insufficiency treatment in Gurgaon by Dr. Himanshu Verma at Fortis Memorial Research Institute. Specialist in EVLT, RFA, venous ulcer management, and compression therapy.",
+
   keywords: [
     "chronic venous insufficiency treatment Gurgaon",
     "CVI treatment Gurgaon",
     "leg swelling treatment Gurgaon",
-    "venous ulcer treatment",
+    "venous ulcer treatment Gurgaon",
+    "EVLT for CVI Gurgaon",
+    "RFA vein treatment Gurgaon",
+    "vascular surgeon Gurgaon",
+    "Dr Himanshu Verma CVI specialist",
+    "compression therapy Gurgaon",
     "vein specialist Gurgaon",
   ],
 
@@ -28,10 +35,13 @@ export const metadata: Metadata = {
   openGraph: {
     title:
       "Chronic Venous Insufficiency Treatment in Gurgaon | Dr. Himanshu Verma",
+
     description:
-      "Expert care for CVI including swelling, venous ulcers and vein reflux treatment.",
+      "Advanced diagnosis and minimally invasive treatment for chronic venous insufficiency including EVLT, RFA, venous ulcer care and compression therapy.",
+
     url: PAGE_URL,
     siteName: "Dr. Himanshu Verma",
+
     images: [
       {
         url: OG_IMAGE,
@@ -40,117 +50,113 @@ export const metadata: Metadata = {
         alt: "Chronic Venous Insufficiency Treatment in Gurgaon",
       },
     ],
+
     locale: "en_IN",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
+
     title:
       "Chronic Venous Insufficiency Treatment in Gurgaon | Dr. Himanshu Verma",
-    description: "Advanced CVI treatment for swelling, pain and ulcers.",
+
+    description:
+      "Expert CVI treatment in Gurgaon for swelling, venous ulcers, pain and venous reflux.",
+
     images: [OG_IMAGE],
   },
 
   robots: {
     index: true,
     follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
 export default function ChronicVenousPage() {
   return (
     <>
-      {/* ✅ FULL STRUCTURED DATA */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+
             "@graph": [
-              /* ================= BUSINESS ================= */
+              /* ================= WEBSITE ================= */
+
               {
-                "@type": "MedicalBusiness",
-                "@id": `${SITE_URL}/#clinic`,
-                name: "Dr Himanshu Verma Vascular Clinic",
+                "@type": "WebSite",
+
+                "@id": `${SITE_URL}/#website`,
+
                 url: SITE_URL,
-                image: OG_IMAGE,
-                telephone: "+91 8826833598",
-                address: {
-                  "@type": "PostalAddress",
-                  streetAddress: "Fortis Memorial Research Centre, Sector 44",
-                  addressLocality: "Gurugram",
-                  addressRegion: "Haryana",
-                  postalCode: "122003",
-                  addressCountry: "IN",
-                },
-                areaServed: ["Gurugram", "Delhi NCR"],
+
+                name: "Dr. Himanshu Verma",
               },
 
-              /* ================= DOCTOR ================= */
-              {
-                "@type": "Physician",
-                "@id": `${SITE_URL}/#doctor`,
-                name: "Dr Himanshu Verma",
-                jobTitle: "Vascular Surgeon",
-                medicalSpecialty: "VascularSurgery",
-                worksFor: {
-                  "@id": `${SITE_URL}/#clinic`,
-                },
-              },
+              /* ================= MEDICAL WEBPAGE ================= */
 
-              /* ================= CONDITION ================= */
               {
-                "@type": "MedicalCondition",
-                name: "Chronic Venous Insufficiency",
-                alternateName: "CVI",
-                description:
-                  "A condition where vein valves in the legs do not function properly, leading to blood pooling, swelling, pain, and venous ulcers.",
-                signOrSymptom: [
-                  { "@type": "MedicalSymptom", name: "Leg swelling" },
-                  { "@type": "MedicalSymptom", name: "Heaviness in legs" },
-                  { "@type": "MedicalSymptom", name: "Pain or aching" },
-                  { "@type": "MedicalSymptom", name: "Skin discoloration" },
-                  { "@type": "MedicalSymptom", name: "Venous ulcers" },
-                ],
-              },
+                "@type": "MedicalWebPage",
 
-              /* ================= PROCEDURE ================= */
-              {
-                "@type": "MedicalProcedure",
-                name: "Chronic Venous Insufficiency Treatment",
-                procedureType: "Minimally Invasive Vein Treatment",
-                bodyLocation: "Lower Limb Veins",
-                howPerformed:
-                  "Includes duplex ultrasound evaluation, endovenous laser or radiofrequency ablation, compression therapy, and advanced wound care.",
-                provider: {
-                  "@id": `${SITE_URL}/#doctor`,
-                },
-              },
+                "@id": `${PAGE_URL}#webpage`,
 
-              /* ================= WEBPAGE ================= */
-              {
-                "@type": "WebPage",
-                "@id": PAGE_URL,
-                url: PAGE_URL,
                 name: "Chronic Venous Insufficiency Treatment in Gurgaon",
+
+                url: PAGE_URL,
+
                 description:
-                  "Expert diagnosis and treatment for CVI including swelling, pain and venous ulcers.",
+                  "Expert chronic venous insufficiency treatment in Gurgaon by Dr. Himanshu Verma, MCh Vascular Surgery, Fortis Memorial Research Institute. Specialist in EVLT, RFA, venous ulcer management, and compression therapy.",
+
+                medicalAudience: "Patient",
+
                 inLanguage: "en-IN",
+
                 isPartOf: {
-                  "@type": "WebSite",
-                  name: "Dr Himanshu Verma",
-                  url: SITE_URL,
+                  "@id": `${SITE_URL}/#website`,
                 },
+
                 primaryImageOfPage: {
                   "@type": "ImageObject",
                   url: OG_IMAGE,
                 },
+
+                about: {
+                  "@type": "MedicalCondition",
+
+                  name: "Chronic Venous Insufficiency",
+
+                  alternateName: ["CVI", "Venous Insufficiency"],
+
+                  associatedAnatomy: {
+                    "@type": "AnatomicalStructure",
+                    name: "Leg veins",
+                  },
+                },
+
+                reviewedBy: {
+                  "@id": `${SITE_URL}/#doctor`,
+                },
+
+                dateReviewed: "2025-05",
               },
 
               /* ================= BREADCRUMB ================= */
+
               {
                 "@type": "BreadcrumbList",
+
+                "@id": `${PAGE_URL}#breadcrumb`,
+
                 itemListElement: [
                   {
                     "@type": "ListItem",
@@ -158,12 +164,14 @@ export default function ChronicVenousPage() {
                     name: "Home",
                     item: SITE_URL,
                   },
+
                   {
                     "@type": "ListItem",
                     position: 2,
                     name: "Services",
                     item: `${SITE_URL}/services`,
                   },
+
                   {
                     "@type": "ListItem",
                     position: 3,
@@ -173,48 +181,268 @@ export default function ChronicVenousPage() {
                 ],
               },
 
+              /* ================= MEDICAL BUSINESS ================= */
+
+              {
+                "@type": "MedicalBusiness",
+
+                "@id": `${SITE_URL}/#clinic`,
+
+                name: "Dr. Himanshu Verma — Vascular Surgery",
+
+                image: OG_IMAGE,
+
+                url: PAGE_URL,
+
+                telephone: "+91-8826833598",
+
+                address: {
+                  "@type": "PostalAddress",
+
+                  streetAddress:
+                    "Fortis Memorial Research Institute, Sector 44",
+
+                  addressLocality: "Gurgaon",
+
+                  addressRegion: "Haryana",
+
+                  postalCode: "122002",
+
+                  addressCountry: "IN",
+                },
+
+                aggregateRating: {
+                  "@type": "AggregateRating",
+
+                  ratingValue: "4.9",
+
+                  reviewCount: "300",
+                },
+
+                areaServed: ["Gurgaon", "Delhi NCR"],
+              },
+
+              /* ================= DOCTOR ================= */
+
+              {
+                "@type": "Physician",
+
+                "@id": `${SITE_URL}/#doctor`,
+
+                name: "Dr. Himanshu Verma",
+
+                jobTitle: "Vascular & Endovascular Surgeon",
+
+                medicalSpecialty: "Vascular Surgery",
+
+                hasCredential: "MCh Vascular Surgery",
+
+                worksFor: {
+                  "@id": `${SITE_URL}/#clinic`,
+                },
+
+                memberOf: [
+                  {
+                    "@type": "Organization",
+                    name: "Vascular Society of India",
+                  },
+
+                  {
+                    "@type": "Organization",
+                    name: "European Venous and Lymphatic Society",
+                  },
+                ],
+
+                affiliation: {
+                  "@type": "Hospital",
+
+                  name: "Fortis Memorial Research Institute",
+
+                  address: {
+                    "@type": "PostalAddress",
+
+                    addressLocality: "Gurgaon",
+
+                    addressRegion: "Haryana",
+
+                    postalCode: "122002",
+
+                    addressCountry: "IN",
+                  },
+                },
+
+                url: `${SITE_URL}/about`,
+              },
+
+              /* ================= MEDICAL CONDITION ================= */
+
+              {
+                "@type": "MedicalCondition",
+
+                "@id": `${PAGE_URL}#condition`,
+
+                name: "Chronic Venous Insufficiency",
+
+                alternateName: ["CVI", "Venous Insufficiency"],
+
+                description:
+                  "A chronic venous disorder caused by valve dysfunction in the leg veins resulting in venous reflux, swelling, pain, skin changes, and venous ulcers.",
+
+                associatedAnatomy: {
+                  "@type": "AnatomicalStructure",
+                  name: "Leg veins",
+                },
+
+                signOrSymptom: [
+                  {
+                    "@type": "MedicalSymptom",
+                    name: "Leg heaviness",
+                  },
+
+                  {
+                    "@type": "MedicalSymptom",
+                    name: "Ankle swelling",
+                  },
+
+                  {
+                    "@type": "MedicalSymptom",
+                    name: "Varicose veins",
+                  },
+
+                  {
+                    "@type": "MedicalSymptom",
+                    name: "Skin discolouration",
+                  },
+
+                  {
+                    "@type": "MedicalSymptom",
+                    name: "Venous ulcers",
+                  },
+                ],
+              },
+
+              /* ================= PROCEDURE ================= */
+
+              {
+                "@type": "MedicalProcedure",
+
+                "@id": `${PAGE_URL}#procedure`,
+
+                name: "Chronic Venous Insufficiency Treatment",
+
+                procedureType: "Minimally Invasive Vein Treatment",
+
+                bodyLocation: "Lower limb veins",
+
+                howPerformed:
+                  "Treatment may include Duplex Doppler ultrasound evaluation, EVLT, radiofrequency ablation, foam sclerotherapy, compression therapy, and venous ulcer management based on disease stage.",
+
+                provider: {
+                  "@id": `${SITE_URL}/#doctor`,
+                },
+              },
+
               /* ================= FAQ ================= */
+
               {
                 "@type": "FAQPage",
+
+                "@id": `${PAGE_URL}#faq`,
+
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "How to reverse chronic venous insufficiency?",
+
+                    name: "What are the signs and symptoms of chronic venous insufficiency?",
+
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "CVI cannot always be reversed but can be effectively managed with compression therapy, lifestyle changes, and medical treatment.",
+
+                      text: "The signs and symptoms of chronic venous insufficiency include persistent leg heaviness and aching, ankle swelling that worsens through the day, burning or itching around the lower leg, visible varicose veins, skin discolouration near the ankle, nighttime cramps, and in advanced cases, slow-healing venous ulcers.",
                     },
                   },
+
                   {
                     "@type": "Question",
-                    name: "What is the root cause of venous insufficiency?",
+
+                    name: "What are the stages of chronic venous insufficiency?",
+
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Weak or damaged vein valves that cause backward blood flow.",
+
+                      text: "CVI is staged using the CEAP classification from C0 (no visible signs) to C6 (active venous ulcer). The stage determines the urgency and type of treatment required. Most patients presenting for treatment are at stages C2 to C4.",
                     },
                   },
+
                   {
                     "@type": "Question",
-                    name: "What are early signs of CVI?",
+
+                    name: "What is the difference between varicose veins and chronic venous insufficiency?",
+
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Leg heaviness, swelling, aching, and visible veins.",
+
+                      text: "Varicose veins are a visible manifestation of venous valve failure. Chronic venous insufficiency is the underlying condition causing them along with swelling, skin changes, and ulcers.",
                     },
                   },
+
                   {
                     "@type": "Question",
-                    name: "Can CVI cause ulcers?",
+
+                    name: "How is chronic venous insufficiency diagnosed?",
+
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Yes, untreated CVI can lead to venous ulcers.",
+
+                      text: "Diagnosis involves clinical examination, CEAP staging, and Venous Duplex Doppler Ultrasound which maps valve function, measures reflux, and rules out deep vein thrombosis.",
                     },
                   },
+
                   {
                     "@type": "Question",
-                    name: "When should I see a doctor?",
+
+                    name: "Is chronic venous insufficiency treatment covered by insurance in India?",
+
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "If you have swelling, pain, or skin changes in legs.",
+
+                      text: "Yes. Procedures including EVLT and RFA for symptomatic chronic venous insufficiency are covered under most major health insurance plans in India, including Mediclaim.",
+                    },
+                  },
+
+                  {
+                    "@type": "Question",
+
+                    name: "How long does chronic venous insufficiency treatment take?",
+
+                    acceptedAnswer: {
+                      "@type": "Answer",
+
+                      text: "Most procedural treatments are completed in 30 to 60 minutes under local anaesthesia with same-day discharge. Patients walk out unassisted.",
+                    },
+                  },
+
+                  {
+                    "@type": "Question",
+
+                    name: "Can chronic venous insufficiency be reversed?",
+
+                    acceptedAnswer: {
+                      "@type": "Answer",
+
+                      text: "Treated veins are permanently sealed and the reflux driving symptoms is eliminated. Lifestyle modification and regular Doppler follow-up significantly reduce long-term recurrence.",
+                    },
+                  },
+
+                  {
+                    "@type": "Question",
+
+                    name: "When should I see a doctor for chronic venous insufficiency?",
+
+                    acceptedAnswer: {
+                      "@type": "Answer",
+
+                      text: "Seek evaluation as soon as you notice persistent leg swelling, skin discolouration near the ankle, varicose veins causing discomfort, or any wound that is not healing.",
                     },
                   },
                 ],
@@ -226,7 +454,33 @@ export default function ChronicVenousPage() {
 
       <ServiceLayout
         title="Chronic Venous Insufficiency Treatment in Gurgaon"
-        description="Expert diagnosis and personalized treatment for leg swelling, venous ulcers, and chronic venous insufficiency."
+        description={
+          <div>
+            <p>
+              This page has been written and reviewed by Dr. Himanshu Verma, MCh
+              (Vascular Surgery), Vascular & Endovascular Surgeon, Fortis
+              Memorial Research Institute, Gurgaon. Content is intended for
+              informational purposes only and does not substitute professional
+              medical consultation, diagnosis, or treatment. Always consult a
+              qualified medical professional for individual advice.{" "}
+              <i>Last reviewed: May 2025</i>
+            </p>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              <span className="px-3 py-1 rounded-full bg-white/20 text-sm font-medium">
+                6 Stages
+              </span>
+
+              <span className="px-3 py-1 rounded-full bg-white/20 text-sm font-medium">
+                5 Treatments
+              </span>
+
+              <span className="px-3 py-1 rounded-full bg-white/20 text-sm font-medium">
+                Same-Day Diagnosis
+              </span>
+            </div>
+          </div>
+        }
       >
         <ChronicVenousContent />
       </ServiceLayout>

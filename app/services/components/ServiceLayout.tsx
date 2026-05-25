@@ -13,7 +13,7 @@ import { usePathname } from "next/navigation";
 
 interface ServiceLayoutProps {
   title: string;
-  description: string;
+  description: React.ReactNode;
   children: React.ReactNode;
 }
 
@@ -291,7 +291,7 @@ export default function ServiceLayout({
       <section className="py-16 bg-[#64bab4] rounded-b-3xl">
         <div className="w-11/12 md:w-5/6 mx-auto">
           <h1 className="text-4xl font-bold text-white mb-6">{title}</h1>
-          <p className="text-white/80 max-w-3xl">{description}</p>
+          <div className="text-white/80 max-w-3xl">{description}</div>
         </div>
       </section>
 
@@ -299,8 +299,8 @@ export default function ServiceLayout({
       <section className="py-16">
         <div className="w-11/12 md:w-5/6 mx-auto grid lg:grid-cols-12 gap-10">
           {/* SIDEBAR */}
-          <aside className="lg:col-span-4 lg:sticky lg:top-28 h-fit">
-            <div className="bg-white rounded-3xl p-6 border border-[var(--med-border)] shadow-md">
+          <aside className="lg:col-span-3 lg:sticky lg:top-28 h-fit text-center">
+            <div className="bg-white rounded-3xl p-3 border border-[var(--med-border)] shadow-md">
               {/* Sidebar CTA */}
               <div className="bg-[var(--med-light)] rounded-2xl p-6 border border-[var(--med-border)]">
                 <h4 className="font-semibold text-[var(--med-primary)] mb-2">
@@ -321,7 +321,7 @@ export default function ServiceLayout({
 
           {/* CONTENT */}
 
-          <div className="lg:col-span-8 bg-white p-5 sm:p-10 rounded-3xl shadow-lg">
+          <div className="lg:col-span-9 bg-white p-5 sm:p-10 rounded-3xl shadow-lg">
             <Suspense fallback={null}>
               <PageTransition>{children}</PageTransition>
             </Suspense>

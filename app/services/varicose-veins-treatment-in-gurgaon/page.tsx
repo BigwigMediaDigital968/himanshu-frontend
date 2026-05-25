@@ -1,5 +1,4 @@
 import ServiceLayout from "../components/ServiceLayout";
-import ServiceLayout3 from "../components/ServiceLayout3";
 import VaricoseVeinsContent from "./VaricoseVeinsContent";
 import { Metadata } from "next";
 
@@ -125,8 +124,6 @@ export const metadata: Metadata = {
     description:
       "Advanced minimally invasive treatment for varicose veins in Gurgaon.",
     images: [OG_IMAGE],
-    // site: "@YourTwitterHandle",
-    // creator: "@YourTwitterHandle",
   },
 
   robots: {
@@ -575,8 +572,8 @@ export default function VaricoseVeinsPage() {
       />
 
       <ServiceLayout
-        title="Varicose Veins Treatment in Gurgaon | Dr. Himanshu Verma"
-        description="Advanced diagnosis and minimally invasive treatment options for varicose veins, spider veins, and chronic venous disorders. Medically reviewed by Dr. Himanshu Verma - MCh Vascular Surgery | Director, Fortis FMRI | Member, Vascular Society of India | Last updated: May 2025"
+        title="Varicose Veins Treatment in Gurgaon | Dr. Himanshu Verma - Fortis Hospital"
+        description="This page has been written and reviewed by Dr. Himanshu Verma, MCh (Vascular Surgery), Vascular & Endovascular Surgeon, Fortis Memorial Research Institute, Gurgaon. Content is intended for informational purposes only and does not substitute professional medical consultation, diagnosis, or treatment. Always consult a qualified medical professional for individual advice. Last reviewed: May 2025"
       >
         <VaricoseVeinsContent />
       </ServiceLayout>

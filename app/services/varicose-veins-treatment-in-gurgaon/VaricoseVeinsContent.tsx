@@ -1,8 +1,16 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import PopupForm from "@/app/components/Popup";
 import ButtonFill from "@/app/components/Button";
+import glueTerat from "@/app/assets/service/varicose/glue-treatment.jpeg";
+import symptomsImage from "@/app/assets/service/varicose/symptoms.jpg";
+import laserTerat from "@/app/assets/service/varicose/laser-trestment.jpeg";
+import TestimonialsServices from "@/app/components/TestimonialService";
+import { VericoseGurgaon } from "@/app/data/testimonialData";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image, { StaticImageData } from "next/image";
 import {
   ChevronDown,
   CheckCircle2,
@@ -12,10 +20,6 @@ import {
   Activity,
 } from "lucide-react";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
-
 type ImageSource = string | StaticImageData;
 
 interface CarouselItem {
@@ -24,67 +28,18 @@ interface CarouselItem {
   alt: string;
 }
 
-import glueTerat from "@/app/assets/service/varicose/glue-treatment.jpeg";
-import symptomsImage from "@/app/assets/service/varicose/symptoms.jpg";
-import laserTerat from "@/app/assets/service/varicose/laser-trestment.jpeg";
-import TestimonialsServices from "@/app/components/TestimonialService";
-import { VericoseGurgaon } from "@/app/data/testimonialData";
-
 const carouselImages: CarouselItem[] = [
   {
     id: 1,
     src: glueTerat,
     alt: "varicose veins treatment in Gurgaon",
   },
-  // { id: 2, src: HeroImage, alt: "Local Asset Example" },
   {
     id: 3,
     src: laserTerat,
     alt: "varicose veins treatment in Gurgaon",
   },
 ];
-
-function useInView(threshold = 0.15) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [inView, setInView] = useState(false);
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          obs.disconnect();
-        }
-      },
-      { threshold },
-    );
-    if (ref.current) obs.observe(ref.current);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return { ref, inView };
-}
-
-function AnimatedSection({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  const { ref, inView } = useInView();
-  return (
-    <div
-      ref={ref}
-      className={className}
-      style={{
-        opacity: inView ? 1 : 0,
-        transform: inView ? "translateY(0)" : "translateY(32px)",
-        transition: "opacity 0.65s ease, transform 0.65s ease",
-      }}
-    >
-      {children}
-    </div>
-  );
-}
 
 export default function VaricoseVeinsContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -298,12 +253,12 @@ export default function VaricoseVeinsContent() {
         </p>
         <div className="grid grid-col-1 sm:grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/20">
           {[
-            ["9 Procedures", "Treatment Options"],
             ["Minimally Invasive", "Preferred Approach"],
-            ["Early Detection", "Best Outcomes"],
+            ["Same-Day Discharge", "fast Recovery"],
+            ["Back to Life in 48 Hours", "Get Back on Your Feet"],
           ].map(([val, label]) => (
             <div key={label}>
-              <p className="text-white font-bold text-base md:text-xl">{val}</p>
+              <p className="text-white font-bold text-base md:text-sm">{val}</p>
               <p className="text-white/60 text-xs md:text-sm">{label}</p>
             </div>
           ))}
@@ -745,72 +700,6 @@ export default function VaricoseVeinsContent() {
           })}
         </div>
       </div>
-
-      {/* <AnimatedSection>
-        <section
-          style={{
-            padding: "56px 24px",
-            background: "var(--med-light)",
-            borderTop: "1px solid var(--med-border)",
-          }}
-        >
-          <div
-            style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}
-          >
-            <h2
-              style={{
-                fontSize: 22,
-                fontWeight: 800,
-                color: "var(--med-text)",
-                marginBottom: 8,
-              }}
-            >
-              Our Varicose Vein Services in Other Cities
-            </h2>
-            <p style={{ fontSize: 15, color: "#5a7a80", marginBottom: 32 }}>
-              Dr. Himanshu Verma provides expert varicose vein care across
-              multiple cities.
-            </p>
-            <div
-              style={{
-                display: "flex",
-                gap: 16,
-                justifyContent: "center",
-                flexWrap: "wrap",
-              }}
-            >
-              {[
-                {
-                  city: "Delhi",
-                  href: "/services/varicose-vein-treatment-in-delhi",
-                },
-                {
-                  city: "Varanasi",
-                  href: "/services/varicose-vein-treatment-in-varanasi",
-                },
-              ].map((loc) => (
-                <p
-                  key={loc.city}
-                  style={{
-                    padding: "13px 28px",
-                    borderRadius: 12,
-                    border: "2px solid var(--med-primary)",
-                    color: "var(--med-primary)",
-                    fontWeight: 700,
-                    textDecoration: "none",
-                    fontSize: 15,
-                    background: "#fff",
-                    transition: "all 0.25s",
-                    display: "inline-block",
-                  }}
-                >
-                  Varicose Veins Treatment in {loc.city}
-                </p>
-              ))}
-            </div>
-          </div>
-        </section>
-      </AnimatedSection> */}
 
       {/* ── FINAL CTA ── */}
       <div className="rounded-2xl border border-[var(--med-border)] bg-[var(--med-light)] p-8">

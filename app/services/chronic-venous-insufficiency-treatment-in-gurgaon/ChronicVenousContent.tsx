@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   Zap,
   HeartPulse,
+  Quote,
 } from "lucide-react";
 
 export default function ChronicVenousContent() {
@@ -19,101 +20,205 @@ export default function ChronicVenousContent() {
 
   const faqs = [
     {
-      q: "How to reverse chronic venous insufficiency?",
+      q: "What are the signs and symptoms of chronic venous insufficiency?",
       a: (
         <p>
-          Chronic Venous Insufficiency cannot always be fully reversed, but
-          early-stage Chronic Venous Insufficiency can improve with compression,
-          exercise, and proper vein care provided through{" "}
-          <b>Chronic Venous Insufficiency Treatment in Gurgaon</b>.
+          The signs and symptoms of chronic venous insufficiency include
+          persistent leg heaviness and aching, ankle swelling that worsens
+          through the day, burning or itching around the lower leg, visible
+          varicose veins, skin discolouration or hardening near the ankle,
+          nighttime cramps, and in advanced cases, slow-healing ulcers near the
+          ankle. Many patients experience these symptoms for months or years
+          before seeking evaluation — early assessment always leads to better
+          outcomes.
         </p>
       ),
     },
+
     {
-      q: "What is the root cause of venous insufficiency?",
-      a: "The main root cause of Chronic Venous Insufficiency is damaged or weak vein valves that allow blood to flow backward.",
-    },
-    {
-      q: "What are the early warning signs of CVI?",
+      q: "What are the stages of chronic venous insufficiency?",
       a: (
         <p>
-          Early signs of Chronic Venous Insufficiency include leg heaviness,
-          mild swelling, aching, and visible veins. Seeking{" "}
-          <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> early can
-          help manage these symptoms.
+          CVI is staged using the CEAP classification from C0 (no visible signs)
+          to C6 (active venous ulcer). The stage determines the urgency and type
+          of treatment required. Most patients presenting for treatment are at
+          stages C2 to C4, where a single minimally invasive procedure provides
+          excellent and lasting results.
         </p>
       ),
     },
+
     {
-      q: "What exercises should be avoided with venous insufficiency?",
-      a: "High-impact activities that strain the legs for long periods may worsen Chronic Venous Insufficiency. Low-impact exercises like walking are usually better.",
-    },
-    {
-      q: "Can chronic venous insufficiency lead to ulcers?",
+      q: "What is the difference between varicose veins and chronic venous insufficiency?",
       a: (
         <p>
-          Yes, untreated Chronic Venous Insufficiency can reduce skin nutrition
-          and cause venous ulcers over time, which may require advanced{" "}
-          <b>Chronic Venous Insufficiency Treatment in Gurgaon</b>.
+          Varicose veins are a visible manifestation of venous valve failure.
+          Chronic venous insufficiency is the underlying condition causing them
+          — along with swelling, skin changes, and ulcers. Not all CVI patients
+          have prominent varicose veins, but the underlying venous dysfunction
+          is the same. Both conditions are assessed and treated by Dr. Himanshu
+          Verma.
         </p>
       ),
     },
+
+    {
+      q: "How is chronic venous insufficiency diagnosed?",
+      a: (
+        <p>
+          Diagnosis involves a clinical examination, CEAP staging, and a Venous
+          Duplex Doppler Ultrasound — the gold standard investigation that maps
+          valve function, measures reflux, and rules out deep vein thrombosis.
+          Results are available the same day. No hospital admission is required
+          for the diagnostic assessment.
+        </p>
+      ),
+    },
+
+    {
+      q: "Is chronic venous insufficiency treatment covered by insurance in India?",
+      a: (
+        <p>
+          Yes. Chronic venous insufficiency treatment in Gurgaon — including
+          EVLT and Radiofrequency Ablation — is covered under most major health
+          insurance plans in India, including Mediclaim. Our team assists with
+          pre-authorisation and documentation before your procedure.
+        </p>
+      ),
+    },
+
+    {
+      q: "How long does treatment take?",
+      a: (
+        <p>
+          Most procedural treatments are completed in 30–60 minutes under local
+          anaesthesia with same-day discharge. Patients walk out unassisted.
+          Compression therapy is an ongoing management strategy used alongside
+          or instead of procedures depending on disease stage.
+        </p>
+      ),
+    },
+
+    {
+      q: "Can chronic venous insufficiency be reversed?",
+      a: (
+        <p>
+          Treated veins are permanently sealed and the reflux driving your
+          symptoms is eliminated. However, CVI is a systemic tendency of the
+          venous system — new insufficiency can develop over time, particularly
+          if underlying risk factors are not addressed. Lifestyle modification
+          and annual follow-up with Doppler assessment significantly reduce
+          long-term recurrence.
+        </p>
+      ),
+    },
+
     {
       q: "When should I see a doctor for chronic venous insufficiency?",
       a: (
         <p>
-          If swelling, pain, or skin changes persist, it is wise to consult
-          early for <b>Chronic Venous Insufficiency Treatment in Gurgaon</b>{" "}
-          before the condition progresses.
+          Seek evaluation as soon as you notice persistent leg swelling, skin
+          discolouration near the ankle, varicose veins causing discomfort, or
+          any wound that is not healing. At early stages, CVI is straightforward
+          to treat — the best outcomes consistently follow prompt evaluation.
         </p>
       ),
     },
   ];
 
   const bodyEffects = [
-    "The buildup of fluid in the ankles and legs",
-    "Skin that is discolored and itchy",
-    "Reduced oxygen in the tissue",
-    "Wounds that heal slowly",
+    "Fluid leaks from vein walls into surrounding tissue, causing swelling",
+    "Reduced oxygen delivery leads to skin changes and slow tissue breakdown",
+    "Chronic inflammation damages the skin, causing discolouration and hardening",
+    "In advanced stages, the skin breaks down entirely, forming open venous ulcers",
   ];
 
   const symptoms = [
-    "Leg heaviness or aching",
-    "Swollen legs after prolonged sitting or standing",
-    "Varicose veins (large, bulging veins in your legs)",
-    "Darkened skin around the ankles",
-    "Leg cramps or restless legs",
+    "Persistent heaviness, aching, or fatigue in the legs worse after prolonged standing or sitting",
+    "Swelling in the ankles and lower legs, particularly by end of day",
+    "Burning, itching, or throbbing sensation around the lower leg or ankle",
+    "Visible varicose veins or dilated surface veins",
+    "Skin discolouration - brownish or reddish staining near the ankles",
+    "Hardening or tightening of the skin around the lower leg (lipodermatosclerosis)",
+    "Nighttime leg cramps and restless legs",
+    "Slow-healing wounds or open ulcers near the ankle",
+    "A feeling of tightness in the calf when walking",
   ];
 
   const causes = [
-    "Weak vein valves",
-    "Prolonged standing or sitting",
-    "Obesity (overweight people)",
-    "Lack of physical activity",
-    "Previous pregnancies",
-    "Prior leg vein injury or blood clots",
+    "Damaged or weakened vein valves - the primary underlying cause",
+    "Previous deep vein thrombosis (DVT) - clots can permanently damage valve function",
+    "Genetics and family history of venous disease",
+    "Prolonged standing or sitting - occupational risk for teachers, healthcare workers, IT professionals, and retail staff",
+    "Pregnancy - increased venous pressure and hormonal changes affect valve competence",
+    "Obesity - sustained excess pressure on the venous system",
+    "Aging - progressive weakening of vein wall elasticity and valve function",
+    "Sedentary lifestyle - reduced calf muscle pump activity essential for venous return",
   ];
 
   const stages = [
     {
-      num: "01",
-      title: "Swelling & Ache",
-      desc: "Initial fluid buildup and leg heaviness, especially by evening.",
+      stage: "C0",
+      title: "No visible signs of venous disease",
+      notice: "Aching or heaviness with no visible changes",
     },
     {
-      num: "02",
-      title: "Obvious Varicose Veins",
-      desc: "Visible, bulging veins appear on the legs as pressure increases.",
+      stage: "C1",
+      title: "Spider veins or reticular veins",
+      notice: "Fine red or blue surface veins",
     },
     {
-      num: "03",
-      title: "Skin Changes",
-      desc: "Skin becomes thicker and changes in color around the ankles.",
+      stage: "C2",
+      title: "Varicose veins",
+      notice: "Bulging, rope-like veins on the leg",
     },
     {
-      num: "04",
-      title: "Non-Healing Ulcers",
-      desc: "Leg ulcers that do not heal - a sign of advanced CVI requiring urgent care.",
+      stage: "C3",
+      title: "Oedema",
+      notice: "Ankle and lower leg swelling without skin changes",
+    },
+    {
+      stage: "C4",
+      title: "Skin changes",
+      notice:
+        "Discolouration, hardening, or eczema-like changes near the ankle",
+    },
+    {
+      stage: "C5",
+      title: "Healed venous ulcer",
+      notice: "History of ulceration, now healed",
+    },
+    {
+      stage: "C6",
+      title: "Active venous ulcer",
+      notice: "Open wound on the lower leg that is not healing",
+    },
+  ];
+
+  const complications = [
+    {
+      title: "Venous Ulcers",
+      desc: "Open, slow-healing wounds near the ankle — the most serious complication of CVI",
+    },
+    {
+      title: "Lipodermatosclerosis",
+      desc: "Permanent hardening and darkening of the skin around the lower leg",
+    },
+    {
+      title: "Chronic Oedema",
+      desc: "Persistent swelling that no longer resolves with rest or elevation",
+    },
+    {
+      title: "Superficial Thrombophlebitis",
+      desc: "Painful inflammation and clotting in surface veins",
+    },
+    {
+      title: "Deep Vein Thrombosis (DVT)",
+      desc: "Blood clots in the deeper veins — potentially life-threatening",
+    },
+    {
+      title: "Skin Breakdown",
+      desc: "Eczema-like changes and fragile skin prone to injury and infection",
     },
   ];
 
@@ -127,33 +232,62 @@ export default function ChronicVenousContent() {
   const treatments = [
     {
       name: "Compression Therapy",
-      badge: "First-Line",
-      badgeClass: "bg-[var(--med-primary)] text-white",
-      desc: "Support stockings, bandages, or socks help the venous function of the legs and assist in reducing swelling.",
+      badge: "First-Line Management",
+      badgeClass: "bg-blue-100 text-blue-700 border border-blue-200",
+      desc: "Medical-grade compression stockings apply graduated external pressure to the leg, reducing venous pooling, controlling oedema, and slowing disease progression. Used at all stages — alone for early CVI or alongside procedural treatment for moderate to advanced cases.",
+      details: [
+        "Anaesthesia: None",
+        "Recovery: Ongoing management",
+        "Best for: All stages, especially C1–C3; post-procedure maintenance",
+      ],
     },
     {
-      name: "Manual Lymphatic Drainage (MLD)",
-      badge: "Gentle Therapy",
-      badgeClass: "bg-teal-100 text-teal-700",
-      desc: "This gentle hands-on therapy encourages the movement of fluids and helps relieve discomfort.",
+      name: "EVLT — Endovenous Laser Treatment",
+      badge: "Most Effective for Reflux",
+      badgeClass: "bg-emerald-100 text-emerald-700 border border-emerald-200",
+      desc: "Laser energy delivered through a thin fibre permanently seals the incompetent superficial vein, eliminating the source of venous reflux that drives CVI progression.",
+      details: [
+        "Procedure time: 30–45 minutes",
+        "Discharge: Same day",
+        "Recovery: 1–2 days",
+        "Best for: Great saphenous vein incompetence — the most common underlying cause of CVI",
+      ],
     },
     {
-      name: "Lymphedema Treatment Program",
-      badge: "Combined Care",
-      badgeClass: "bg-blue-100 text-blue-700",
-      desc: "A combined program using compression, exercise, and skin care to reduce long-term swelling in the legs.",
+      name: "RFA — Radiofrequency Ablation",
+      badge: "Most Comfortable",
+      badgeClass: "bg-purple-100 text-purple-700 border border-purple-200",
+      desc: "Radiofrequency energy delivered via a catheter heats and permanently closes the refluxing vein wall. Equally effective to EVLT with excellent patient comfort.",
+      details: [
+        "Procedure time: 30–45 minutes",
+        "Discharge: Same day",
+        "Recovery: 1–2 days",
+        "Best for: Medium to large incompetent saphenous or perforator veins",
+      ],
     },
     {
-      name: "Ulcer Healing Protocols",
-      badge: "Wound Care",
-      badgeClass: "bg-orange-100 text-orange-700",
-      desc: "Skin protection and wound care techniques to help promote healing of venous ulcers.",
+      name: "Foam Sclerotherapy",
+      badge: "Spider & Smaller Veins",
+      badgeClass: "bg-pink-100 text-pink-700 border border-pink-200",
+      desc: "A foam solution injected into smaller varicose or reticular veins causes the vein wall to collapse and be absorbed naturally. Also used for residual veins following ablation.",
+      details: [
+        "Procedure time: 15–20 minutes",
+        "Discharge: Immediate",
+        "Recovery: Same day",
+        "Best for: Small varicose veins, spider veins, residual post-ablation veins",
+      ],
     },
     {
-      name: "Iliac Vein Stents for Non-Healing Ulcers",
-      badge: "Advanced",
-      badgeClass: "bg-purple-100 text-purple-700",
-      desc: "A surgical procedure performed on deeper veins to increase blood circulation for stubborn non-healing ulcers.",
+      name: "Venous Ulcer Management",
+      badge: "Advanced CVI — C5 & C6",
+      badgeClass: "bg-red-100 text-red-700 border border-red-200",
+      desc: "For patients with active or recurrent venous ulcers, treatment combines wound care, compression therapy, correction of the underlying venous reflux, and nutritional support. Correcting the reflux source is essential — without it, ulcers cannot close permanently.",
+      details: [
+        "Procedure: Reflux ablation + specialist wound management",
+        "Monitoring: Regular wound review and Doppler reassessment",
+        "Goal: Ulcer closure and prevention of recurrence",
+        "Best for: Advanced CVI at stage C5 or C6",
+      ],
     },
   ];
 
@@ -222,41 +356,35 @@ export default function ChronicVenousContent() {
             What is Chronic Venous Insufficiency?
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            Chronic Venous Insufficiency is a long-term condition where the
-            veins in your legs struggle to send blood back to the heart. In
-            Chronic Venous Insufficiency, the valves inside the veins weaken or
-            get damaged, allowing blood to pool in the legs. Over time, Chronic
-            Venous Insufficiency can affect daily comfort, skin health, and
-            mobility if not managed early.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            People experiencing these symptoms often search for{" "}
-            <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> to manage
-            vein health and prevent complications.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            If you notice leg heaviness or swelling that worsens by evening, it
-            may be time to understand Chronic Venous Insufficiency better and
-            take action before symptoms progress. Early consultation for{" "}
-            <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> can help
-            prevent the condition from worsening.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            Feeling tired in your legs by evening? Learn how Chronic Venous
-            Insufficiency Treatment in Gurgaon can help you manage Chronic
-            Venous Insufficiency today.
+            Chronic venous insufficiency (CVI) is a long-term vascular condition
+            in which the veins in your legs are unable to return blood to the
+            heart efficiently. Inside a healthy vein, small one-way valves open
+            to allow blood to flow upward and close to stop it falling back.
+            When these valves weaken or become damaged, blood flows backward and
+            pools in the lower leg, a process called venous reflux. Over time,
+            this sustained pooling raises the pressure inside the veins,
+            progressively damaging the vein walls, surrounding skin, and deeper
+            tissues of the leg.
+            <br />
+            <br />
+            CVI is not a cosmetic problem. It is a chronic, progressive medical
+            condition that worsens without treatment. Untreated CVI is one of
+            the leading causes of venous leg ulcers - wounds that can take
+            months to heal and significantly reduce quality of life. Many
+            patients who seek chronic venous insufficiency treatment in Gurgaon
+            have been managing symptoms for years without knowing the underlying
+            cause.
           </p>
         </div>
 
         {/* Key facts card */}
         <div className="md:col-span-2 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl p-6 space-y-3">
           <h2 className="text-md font-semibold uppercase tracking-widest text-[var(--med-primary)] mb-4">
-            How does chronic venous insufficiency affect my body?
+            How Does Chronic Venous Insufficiency Affect the Body?
           </h2>
           <p className="text-gray-600 text-sm mb-3">
-            Chronic venous insufficiency typically occurs in the lower legs and
-            is characterized by high pressure due to inadequate blood return.
-            Effects include:
+            When venous pressure remains persistently elevated, the following
+            changes occur in the lower limb:
           </p>
           {bodyEffects.map((item) => (
             <div key={item} className="flex items-start gap-3">
@@ -265,12 +393,9 @@ export default function ChronicVenousContent() {
             </div>
           ))}
           <p className="text-xs text-gray-500 mt-2">
-            Chronic venous insufficiency may also decrease comfort with walking,
-            thereby decreasing one's overall quality of life. Patients
-            experiencing these symptoms may consider consulting a specialist
-            like Dr. Himanshu Verma for{" "}
-            <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> to improve
-            circulation and reduce discomfort.
+            This progression is why early diagnosis matters. The earlier the
+            condition is identified, the simpler and more effective the
+            treatment.
           </p>
         </div>
       </div>
@@ -282,8 +407,9 @@ export default function ChronicVenousContent() {
           className="w-full rounded-lg border border-gray-200 mb-5"
         />
       </div>
+
       {/* ── SYMPTOMS & CAUSES ── */}
-      <div className="mb-14">
+      <div className="my-14">
         <div className="mb-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-[var(--med-primary)] mb-2">
             Symptoms & Causes
@@ -291,6 +417,15 @@ export default function ChronicVenousContent() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
             What are the signs and symptoms of chronic venous insufficiency?
           </h2>
+          <p className="text-sm text-gray-500 mt-2">
+            Recognising the signs and symptoms of chronic venous insufficiency
+            at an early stage is the single most important factor in preventing
+            disease progression. Many patients normalise symptoms like leg
+            heaviness after standing, mild ankle swelling, or persistent itching
+            - as routine tiredness. They are not. They are the body's earliest
+            warning signals of venous disease, and acting on them before skin
+            changes or ulcers develop leads to significantly better outcomes.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -299,7 +434,7 @@ export default function ChronicVenousContent() {
             <div className="flex items-center gap-2 mb-4">
               <AlertTriangle className="w-5 h-5 text-orange-500" />
               <h3 className="text-base font-bold text-gray-800">
-                Signs & Symptoms of CVI
+                Signs and Symptoms of Chronic Venous Insufficiency
               </h3>
             </div>
             <p className="text-gray-600 text-sm mb-4">
@@ -313,12 +448,6 @@ export default function ChronicVenousContent() {
             <p className="text-xs text-gray-600 mt-4 italic">
               Venous ulcers (open sores) are a sign of advanced Chronic Venous
               Insufficiency.
-            </p>
-            <p className="text-gray-600 text-sm mt-2">
-              If you can relate to any of these symptoms, seeking{" "}
-              <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> early can
-              help slow down the progression of the disease and improve leg
-              health.{" "}
             </p>
           </div>
 
@@ -361,7 +490,7 @@ export default function ChronicVenousContent() {
       </div>
 
       {/* ── STAGES ── */}
-      <div className="mb-14">
+      <div className="my-14">
         <div className="mb-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-[var(--med-primary)] mb-2">
             Disease Progression
@@ -369,39 +498,75 @@ export default function ChronicVenousContent() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
             What Are the Stages of Chronic Venous Insufficiency?
           </h2>
-          <p className="text-gray-600 mt-2 max-w-2xl">
-            Chronic Venous Insufficiency deteriorates through stages. Early
-            diagnosis and timely{" "}
-            <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> can help
-            manage symptoms before the condition progresses.
+          <p className="text-gray-600 mt-2">
+            The stages of chronic venous insufficiency are classified using the
+            internationally recognised CEAP grading system from C0 (no visible
+            signs) to C6 (active venous ulcer). Understanding your stage
+            determines the most appropriate treatment and how urgently it is
+            needed.
           </p>
         </div>
 
-        <div className="space-y-0">
-          {stages.map((stage, i) => (
-            <div key={stage.num} className="grid md:grid-cols-12 gap-0">
-              <div className="md:col-span-1 flex md:flex-col items-center gap-3 md:gap-0 mb-3 md:mb-0">
-                <div className="w-10 h-10 rounded-full bg-[var(--med-primary)] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-                  {stage.num}
-                </div>
-                {i < stages.length - 1 && (
-                  <div
-                    className="hidden md:block w-px flex-1 bg-[var(--med-border)] my-2 mx-auto"
-                    style={{ minHeight: "40px" }}
-                  />
-                )}
+        <div className="overflow-hidden rounded-2xl border border-[var(--med-border)] bg-white">
+          {/* Header */}
+          <div className="grid grid-cols-12 bg-[var(--med-light)] border-b border-[var(--med-border)]">
+            <div className="col-span-2 p-4 font-semibold text-center text-sm text-gray-800">
+              CEAP Stage
+            </div>
+
+            <div className="col-span-4 p-4 font-semibold text-sm text-gray-800 border-l border-[var(--med-border)]">
+              Description
+            </div>
+
+            <div className="col-span-6 p-4 font-semibold text-sm text-gray-800 border-l border-[var(--med-border)]">
+              What You May Notice
+            </div>
+          </div>
+
+          {/* Rows */}
+          {stages.map((stage, index) => (
+            <div
+              key={stage.stage}
+              className={`grid grid-cols-12 ${
+                index !== stages.length - 1
+                  ? "border-b border-[var(--med-border)]"
+                  : ""
+              }`}
+            >
+              <div className="col-span-2 p-4 text-sm text-center font-semibold text-[var(--med-primary)]">
+                {stage.stage}
               </div>
-              <div className="md:col-span-11 pb-8 md:pl-6">
-                <h3 className="text-base font-bold text-gray-800 mb-1">
-                  {stage.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{stage.desc}</p>
+
+              <div className="col-span-4 p-4 text-sm text-gray-700 border-l border-[var(--med-border)]">
+                {stage.title}
+              </div>
+
+              <div className="col-span-6 p-4 text-sm text-gray-600 border-l border-[var(--med-border)]">
+                {stage.notice}
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-2 rounded-2xl bg-[var(--med-primary)] text-white px-6 py-4 text-center font-semibold text-sm md:text-base">
+        {/* Bottom Note */}
+        <div className="my-6 space-y-2 text-sm text-gray-700 leading-relaxed">
+          <p>
+            Treating CVI at stage <strong>C2</strong> or <strong>C3</strong>{" "}
+            usually requires one outpatient session with same-day discharge.
+          </p>
+
+          <p>
+            Treating it at <strong>C6</strong> requires weeks of wound care and
+            multiple procedures.
+          </p>
+
+          <p>
+            The decision to seek early evaluation is, in almost every case, the
+            most important one a patient will make.
+          </p>
+        </div>
+
+        <div className="rounded-2xl bg-[var(--med-primary)] text-white px-6 py-4 text-center font-semibold text-sm md:text-base">
           Early diagnosis and timely{" "}
           <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> can help
           manage symptoms before the condition progresses to more advanced
@@ -409,60 +574,143 @@ export default function ChronicVenousContent() {
         </div>
       </div>
 
-      {/* ── DIAGNOSIS & LIFESTYLE ── */}
-      <div className="mb-14">
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Diagnosis */}
-          <div className="rounded-2xl border border-[var(--med-border)] bg-[var(--med-light)] p-6">
-            <div className="flex items-center gap-2 mb-4">
-              <HeartPulse className="w-5 h-5 text-[var(--med-primary)]" />
-              <h2 className="text-lg font-bold text-gray-800">
-                Diagnosis of CVI
-              </h2>
+      {/* ── COMPLICATIONS ── */}
+      <section className="my-14">
+        <div className="mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            What Are the Serious Complications of Untreated CVI?
+          </h2>
+
+          <p className="text-gray-700 leading-relaxed max-w-4xl">
+            When left without treatment, the sustained increase in venous
+            pressure progressively damages the leg:
+          </p>
+        </div>
+
+        {/* Table */}
+        <div className="overflow-hidden rounded-2xl border border-[var(--med-border)] bg-white">
+          {/* Header */}
+          <div className="grid grid-cols-12 bg-[var(--med-light)] border-b border-[var(--med-border)]">
+            <div className="col-span-4 p-4 font-semibold text-sm text-gray-800">
+              Complication
             </div>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Diagnosing chronic venous insufficiency consists of a physical
-              examination and imaging studies to evaluate the veins. Doctors may
-              recommend <b>Chronic Venous Insufficiency Treatment in Gurgaon</b>{" "}
-              based on the severity of symptoms and vein health.
-            </p>
-            <div className="mt-4 space-y-2">
-              {[
-                "Physical examination",
-                "Doppler ultrasound imaging",
-                "Venography if needed",
-                "Assessment of vein health & severity",
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-[var(--med-primary)] mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">{item}</span>
-                </div>
-              ))}
+
+            <div className="col-span-8 p-4 font-semibold text-sm text-gray-800 border-l border-[var(--med-border)]">
+              What It Means
             </div>
           </div>
 
-          {/* Lifestyle */}
-          <div className="rounded-2xl border border-[var(--med-border)] bg-[var(--med-light)] p-6">
-            <div className="flex items-center gap-2 mb-4">
-              <Activity className="w-5 h-5 text-[var(--med-primary)]" />
-              <h2 className="text-lg font-bold text-gray-800">
-                Lifestyle & Management
+          {/* Rows */}
+          {complications.map((item, index) => (
+            <div
+              key={item.title}
+              className={`grid grid-cols-12 ${
+                index !== complications.length - 1
+                  ? "border-b border-[var(--med-border)]"
+                  : ""
+              }`}
+            >
+              <div className="col-span-4 p-4 text-sm font-medium text-gray-900">
+                {item.title}
+              </div>
+
+              <div className="col-span-8 p-4 text-sm text-gray-700 border-l border-[var(--med-border)] leading-relaxed">
+                {item.desc}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Footer Note */}
+        <div className="mt-6">
+          <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+            Early intervention prevents all of these outcomes. Do not wait until
+            symptoms worsen.
+          </p>
+        </div>
+      </section>
+
+      {/* ── DIAGNOSIS & LIFESTYLE ── */}
+      <div className="my-14">
+        <div className="rounded-3xl border border-[var(--med-border)] bg-white overflow-hidden shadow-sm">
+          {/* Header */}
+          <div className="bg-[var(--med-light)] border-b border-[var(--med-border)] px-6 md:px-8 py-6">
+            <div className="flex items-center gap-3 mb-3">
+              <HeartPulse className="w-6 h-6 text-[var(--med-primary)]" />
+
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                How Is Chronic Venous Insufficiency Diagnosed?
               </h2>
             </div>
-            <p className="text-gray-600 text-sm mb-4">
-              The following lifestyle habits have a significant impact on the
-              management of chronic venous insufficiency:
+
+            <p className="text-gray-700 leading-relaxed max-w-5xl">
+              Accurate diagnosis defines the stage, identifies the underlying
+              venous anatomy, and guides every treatment decision. Dr. Himanshu
+              Verma conducts a structured, stepwise assessment for every
+              patient.
             </p>
-            <ul className="space-y-2">
-              {lifestyle.map((l) => (
-                <BulletItem key={l} text={l} />
-              ))}
-            </ul>
-            <p className="text-xs text-gray-500 mt-4">
-              These lifestyle adjustments often complement{" "}
-              <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> and help
-              improve circulation in the legs.
-            </p>
+          </div>
+
+          {/* Steps */}
+          <div className="divide-y divide-[var(--med-border)]">
+            {[
+              {
+                step: "Step 1",
+                title: "Clinical Examination",
+                desc: "A thorough physical assessment of both legs in the standing position. Dr. Himanshu evaluates the distribution of varicosities, skin changes, oedema, and any areas of ulceration or wound breakdown.",
+              },
+              {
+                step: "Step 2",
+                title: "CEAP Classification",
+                desc: "Each patient is formally graded using the CEAP system (C0 to C6) to determine disease severity and prioritise the type and urgency of intervention required.",
+              },
+              {
+                step: "Step 3",
+                title: "Venous Duplex Doppler Ultrasound",
+                desc: "The gold standard diagnostic tool for CVI. This painless 20-minute scan maps the entire venous system of the leg — identifying where valves are failing, quantifying venous reflux, ruling out deep vein thrombosis, and confirming the anatomy needed to plan treatment.",
+                highlight:
+                  "Results are available the same day. No hospital admission required.",
+              },
+              {
+                step: "Step 4",
+                title: "Venography or CT Venogram (if indicated)",
+                desc: "In complex or recurrent cases, or where deep venous obstruction is suspected, advanced imaging is arranged to provide a complete anatomical picture before treatment planning.",
+              },
+              {
+                step: "Step 5",
+                title: "Personalised Treatment Plan",
+                desc: "A fully individualised treatment plan is prepared based on all findings — taking into account disease stage, symptom burden, lifestyle, occupation, and the patient's own goals.",
+              },
+            ].map((item, index) => (
+              <div
+                key={item.step}
+                className="grid md:grid-cols-12 gap-6 px-6 md:px-8 py-7"
+              >
+                {/* Left Step */}
+                <div className="md:col-span-2">
+                  <div className="inline-flex items-center justify-center rounded-full bg-[var(--med-primary)] text-white text-sm font-semibold px-4 py-2">
+                    {item.step}
+                  </div>
+                </div>
+
+                {/* Right Content */}
+                <div className="md:col-span-10">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-700 leading-relaxed">{item.desc}</p>
+
+                  {item.highlight && (
+                    <div className="mt-4 rounded-xl bg-[var(--med-light)] border border-[var(--med-border)] px-4 py-3">
+                      <p className="text-sm font-medium text-gray-800">
+                        {item.highlight}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -482,42 +730,263 @@ export default function ChronicVenousContent() {
             Treatment Pathways
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-            Treatment of Chronic Venous Insufficiency
+            Chronic Venous Insufficiency Treatment in Gurgaon - Available
+            Options
           </h2>
-          <p className="text-gray-600 mt-2 max-w-2xl">
-            Several advanced options are available for{" "}
-            <b>Chronic Venous Insufficiency Treatment in Gurgaon</b>, depending
-            on the severity of the condition and overall vein health. The
-            management focuses on reducing swelling, improving blood flow, and
-            supporting overall leg health. <br /> <br />
-            Some common treatments included in Chronic Venous Insufficiency
-            Treatment in Gurgaon are:
+          <p className="text-gray-600 mt-2 max-w-4xl">
+            CVI is a progressive condition, but it is highly treatable
+            particularly when addressed before reaching advanced stages. Every
+            patient receives a personalised treatment plan based on their CEAP
+            stage, Doppler findings, symptom severity, lifestyle, and goals. All
+            procedures are minimally invasive, performed under local
+            anaesthesia, and require no overnight hospital stay.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-          {treatments.map((t) => (
-            <div
-              key={t.name}
-              className="border border-[var(--med-border)] rounded-2xl p-5 bg-white hover:shadow-md transition-shadow"
-            >
-              <div className="flex items-start justify-between gap-2 mb-3">
-                <h3 className="font-bold text-gray-800 text-sm leading-snug">
-                  {t.name}
-                </h3>
-                <span
-                  className={`text-xs font-semibold px-2.5 py-1 rounded-full flex-shrink-0 whitespace-nowrap ${t.badgeClass}`}
-                >
-                  {t.badge}
-                </span>
+        <section className="my-14">
+          {/* Heading */}
+          <div className="mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Treatment Options for Chronic Venous Insufficiency
+            </h2>
+
+            <p className="text-gray-700 leading-relaxed max-w-5xl">
+              Treatment is selected based on the stage of disease, the pattern
+              of venous reflux, symptom severity, and the patient’s lifestyle
+              needs.
+            </p>
+          </div>
+
+          {/* Cards */}
+          <div className="grid gap-5 mb-12">
+            {treatments.map((t) => (
+              <div
+                key={t.name}
+                className="border border-[var(--med-border)] rounded-3xl p-6 bg-white hover:shadow-lg transition-all duration-300"
+              >
+                {/* Top */}
+                <div className="flex items-start justify-between gap-3 mb-4">
+                  <h3 className="font-bold text-gray-900 text-base leading-snug">
+                    {t.name}
+                  </h3>
+
+                  <span
+                    className={`text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap ${t.badgeClass}`}
+                  >
+                    {t.badge}
+                  </span>
+                </div>
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm leading-relaxed mb-5">
+                  {t.desc}
+                </p>
+
+                {/* Details */}
+                <div className="space-y-2">
+                  {t.details.map((detail) => (
+                    <div
+                      key={detail}
+                      className="flex items-start gap-2 text-sm text-gray-700"
+                    >
+                      <div className="w-1.5 h-1.5 rounded-full bg-[var(--med-primary)] mt-2 flex-shrink-0" />
+
+                      <span>{detail}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed">{t.desc}</p>
+            ))}
+          </div>
+
+          {/* Comparison Table */}
+          <div className="overflow-hidden rounded-3xl border border-[var(--med-border)] bg-white">
+            {/* Header */}
+            <h2 className="text-2xl font-bold text-gray-900 px-6 md:px-8 py-6">
+              Treatment Comparison at a Glance
+            </h2>
+            <div className="grid grid-cols-12 bg-[var(--med-light)] border-b border-[var(--med-border)]">
+              <div className="col-span-4 md:col-span-3 p-4 font-semibold text-sm text-gray-800">
+                Procedure
+              </div>
+
+              <div className="col-span-2 p-4 font-semibold text-sm text-gray-800 border-l border-[var(--med-border)]">
+                Anaesthesia
+              </div>
+
+              <div className="col-span-3 p-4 font-semibold text-sm text-gray-800 border-l border-[var(--med-border)]">
+                Recovery
+              </div>
+
+              <div className="col-span-3 md:col-span-4 p-4 font-semibold text-sm text-gray-800 border-l border-[var(--med-border)]">
+                Best For
+              </div>
             </div>
-          ))}
-        </div>
+
+            {[
+              {
+                procedure: "Compression Therapy",
+                anaesthesia: "None",
+                recovery: "Ongoing",
+                best: "All stages, maintenance",
+              },
+              {
+                procedure: "EVLT",
+                anaesthesia: "Local",
+                recovery: "1–2 days",
+                best: "Saphenous reflux, large veins",
+              },
+              {
+                procedure: "RFA",
+                anaesthesia: "Local",
+                recovery: "1–2 days",
+                best: "Large/medium vein incompetence",
+              },
+              {
+                procedure: "Foam Sclerotherapy",
+                anaesthesia: "None",
+                recovery: "Same day",
+                best: "Small veins, residual veins",
+              },
+              {
+                procedure: "Venous Ulcer Programme",
+                anaesthesia: "Local/None",
+                recovery: "Ongoing",
+                best: "C5–C6 advanced disease",
+              },
+            ].map((row, index, arr) => (
+              <div
+                key={row.procedure}
+                className={`grid grid-cols-12 ${
+                  index !== arr.length - 1
+                    ? "border-b border-[var(--med-border)]"
+                    : ""
+                }`}
+              >
+                <div className="col-span-4 md:col-span-3 p-4 text-sm font-medium text-gray-900">
+                  {row.procedure}
+                </div>
+
+                <div className="col-span-2 p-4 text-sm text-gray-700 border-l border-[var(--med-border)]">
+                  {row.anaesthesia}
+                </div>
+
+                <div className="col-span-3 p-4 text-sm text-gray-700 border-l border-[var(--med-border)]">
+                  {row.recovery}
+                </div>
+
+                <div className="col-span-3 md:col-span-4 p-4 text-sm text-gray-700 border-l border-[var(--med-border)]">
+                  {row.best}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Risk */}
+        <section className="my-14">
+          <div className="overflow-hidden rounded-3xl border border-[var(--med-border)] bg-white shadow-sm">
+            {/* Header */}
+            <div className="bg-red-50 border-b border-[var(--med-border)] px-6 md:px-8 py-6">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+                  <AlertTriangle className="w-5 h-5 text-red-600" />
+                </div>
+
+                <h3 className="text-lg md:text-xl font-bold text-gray-900">
+                  Risks and What to Expect
+                </h3>
+              </div>
+
+              <p className="text-gray-700 leading-relaxed max-w-5xl">
+                All procedures are safe and well-tolerated. Patients should be
+                aware of the following:
+              </p>
+            </div>
+
+            {/* Content */}
+            <div className="divide-y divide-[var(--med-border)]">
+              {/* Common */}
+              <div className="grid md:grid-cols-12 gap-6 px-6 md:px-8 py-7">
+                <div className="md:col-span-3">
+                  <div className="inline-flex items-center rounded-full bg-emerald-100 text-emerald-700 px-4 py-2 text-sm font-semibold">
+                    Common (Temporary)
+                  </div>
+                </div>
+
+                <div className="md:col-span-9">
+                  <p className="text-gray-700 leading-relaxed">
+                    Mild bruising, swelling, or tightness along the treated vein
+                    — usually resolves within 1–2 weeks. Skin discolouration
+                    from sclerotherapy typically fades over 2–6 months.
+                  </p>
+                </div>
+              </div>
+
+              {/* Uncommon */}
+              <div className="grid md:grid-cols-12 gap-6 px-6 md:px-8 py-7">
+                <div className="md:col-span-3">
+                  <div className="inline-flex items-center rounded-full bg-amber-100 text-amber-700 px-4 py-2 text-sm font-semibold">
+                    Uncommon
+                  </div>
+                </div>
+
+                <div className="md:col-span-9">
+                  <p className="text-gray-700 leading-relaxed">
+                    Superficial phlebitis managed with anti-inflammatory
+                    medication; small areas of temporary numbness near the
+                    treated vein.
+                  </p>
+                </div>
+              </div>
+
+              {/* Rare */}
+              <div className="grid md:grid-cols-12 gap-6 px-6 md:px-8 py-7">
+                <div className="md:col-span-3">
+                  <div className="inline-flex items-center rounded-full bg-red-100 text-red-700 px-4 py-2 text-sm font-semibold">
+                    Rare
+                  </div>
+                </div>
+
+                <div className="md:col-span-9">
+                  <p className="text-gray-700 leading-relaxed">
+                    Partial vein recanalisation; infection at the access site;
+                    deep vein thrombosis — risk minimised through pre-procedural
+                    Doppler screening and early post-procedure mobilisation.
+                  </p>
+                </div>
+              </div>
+
+              {/* Emergency */}
+              <div className="grid md:grid-cols-12 gap-6 px-6 md:px-8 py-7 bg-red-50/40">
+                <div className="md:col-span-3">
+                  <div className="inline-flex items-center rounded-full bg-red-600 text-white px-4 py-2 text-sm font-semibold">
+                    Seek Immediate Care
+                  </div>
+                </div>
+
+                <div className="md:col-span-9">
+                  <p className="text-gray-800 font-medium leading-relaxed">
+                    Seek urgent medical attention if you experience sudden leg
+                    pain with swelling, chest pain, or shortness of breath
+                    following any procedure.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="border-t border-[var(--med-border)] bg-[var(--med-light)] px-6 md:px-8 py-5">
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                Dr. Himanshu Verma reviews each patient&apos;s individual risk
+                profile in full before any treatment is recommended.
+              </p>
+            </div>
+          </div>
+        </section>
 
         <div>
-          <p className="text-gray-600 my-4 md:my-6 max-w-3xl">
+          <p className="text-gray-600 my-4 md:my-6">
             When Chronic Venous Insufficiency is identified early and managed
             with proper <b>Chronic Venous Insufficiency Treatment in Gurgaon</b>
             , it can significantly reduce the risk of complications.
@@ -542,40 +1011,303 @@ export default function ChronicVenousContent() {
         </div>
       </div>
 
-      {/* ── WHY CHOOSE ── */}
-      <div className="mb-14 rounded-2xl overflow-hidden border border-[var(--med-border)]">
-        <div className="grid md:grid-cols-2">
-          <div className="bg-[var(--med-primary)] p-8 flex flex-col justify-center gap-4">
-            <ShieldCheck className="w-8 h-8 text-white/60" />
-            <h2 className="text-2xl font-bold text-white">
-              Why Choose Dr. Himanshu Verma?
-            </h2>
-            <p className="text-white/80 text-sm leading-relaxed">
-              When Chronic Venous Insufficiency is identified early and managed
-              with proper{" "}
-              <b className="text-white">
-                Chronic Venous Insufficiency Treatment in Gurgaon
-              </b>
-              , it can significantly reduce the risk of complications.
+      {/* ── WHY CHOOSE DR. HIMANSHU VERMA ── */}
+      <div className="mb-14 rounded-3xl border border-[var(--med-border)] bg-white overflow-hidden shadow-sm">
+        {/* TOP HERO */}
+        <div className="bg-[var(--med-primary)] px-6 md:px-10 py-10 text-white">
+          <div className="max-w-4xl">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
+                <ShieldCheck className="w-7 h-7 text-white" />
+              </div>
+
+              <div>
+                <p className="text-white/70 text-sm uppercase tracking-wider">
+                  Trusted Vascular Specialist
+                </p>
+                <h2 className="text-lg md:text-xl font-bold leading-tight">
+                  Why Choose Dr. Himanshu Verma for Chronic Venous Insufficiency
+                  Treatment in Gurgaon?
+                </h2>
+              </div>
+            </div>
+
+            <p className="text-white/85 text-sm md:text-base leading-relaxed max-w-4xl">
+              Choosing the right vascular surgeon in Gurgaon is one of the most
+              important decisions in your treatment journey. Dr. Himanshu Verma
+              is among India&apos;s experienced vascular and endovascular
+              surgeons with a dedicated subspecialty focus on chronic venous and
+              lymphatic disorders.
             </p>
           </div>
-          <div className="bg-[var(--med-light)] p-8 flex flex-col justify-center gap-4">
+        </div>
+
+        {/* CONTENT */}
+        <div className="p-6 md:p-10 bg-[var(--med-light)]">
+          {/* HOSPITAL */}
+          <div className="rounded-2xl border border-[var(--med-border)] bg-white p-6 mb-8">
+            <h3 className="text-lg font-bold text-gray-800 mb-3">
+              Practising At
+            </h3>
+
+            <p className="text-sm text-gray-700 leading-relaxed">
+              <b>Fortis Memorial Research Institute, Sector 44, Gurgaon</b> —
+              accredited by both NABH and JCI, representing India&apos;s highest
+              standards for hospital safety and clinical quality.
+            </p>
+          </div>
+
+          {/* STATS */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
             {[
-              "Comprehensive evaluation and imaging",
-              "Personalized treatment for every stage",
-              "Advanced endovascular expertise",
-              "Holistic care including lifestyle guidance",
+              {
+                value: "17+",
+                label: "Years Experience",
+              },
+              {
+                value: "5,000+",
+                label: "Vein Procedures",
+              },
+              {
+                value: "29+",
+                label: "Research Publications",
+              },
+              {
+                value: "9",
+                label: "Book Chapters",
+              },
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3">
-                <CheckCircle2 className="w-4 h-4 text-[var(--med-primary)] mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-sm">{item}</span>
+              <div
+                key={item.label}
+                className="bg-white rounded-2xl border border-[var(--med-border)] p-5 text-center"
+              >
+                <div className="text-3xl font-bold text-[var(--med-primary)] mb-1">
+                  {item.value}
+                </div>
+
+                <div className="text-sm text-gray-600">{item.label}</div>
               </div>
             ))}
-            <ButtonFill
-              onClick={() => setOpenPopup(true)}
-              text="Schedule an Appointment"
-            />
           </div>
+
+          {/* QUALIFICATIONS */}
+          <div className="mb-10">
+            <h3 className="text-xl font-bold text-gray-800 mb-5">
+              Qualifications & Memberships
+            </h3>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                "MBBS, MS, MCh (Vascular Surgery) — Board-Certified Vascular & Endovascular Surgeon",
+                "Fellow, European Venous & Lymphatic Society (FEVS)",
+                "Member, Vascular Society of India (VSI)",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-start gap-3 rounded-2xl bg-white border border-[var(--med-border)] p-5"
+                >
+                  <CheckCircle2 className="w-5 h-5 text-[var(--med-primary)] mt-0.5 flex-shrink-0" />
+
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* SPECIALIZATION */}
+          <div className="mb-10">
+            <h3 className="text-xl font-bold text-gray-800 mb-5">
+              Clinical Expertise
+            </h3>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                "Specialist in EVLT, RFA, Foam Sclerotherapy, Compression Therapy, and Venous Ulcer Management",
+                "Expert in recurrent and post-thrombotic chronic venous insufficiency",
+                "Dedicated focus on complex venous and lymphatic disorders",
+                "Extensive experience in minimally invasive endovascular procedures",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-start gap-3 rounded-2xl bg-white border border-[var(--med-border)] p-5"
+                >
+                  <CheckCircle2 className="w-5 h-5 text-[var(--med-primary)] mt-0.5 flex-shrink-0" />
+
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* RESEARCH */}
+          <div className="rounded-3xl bg-white border border-[var(--med-border)] p-6 md:p-8">
+            <h3 className="text-xl font-bold text-gray-800 mb-5">
+              Research & Academic Recognition
+            </h3>
+
+            <div className="space-y-4">
+              {[
+                "29+ peer-reviewed publications in indexed medical journals",
+                "9 authored book chapters on vascular surgery",
+                "International speaker — VEITH Symposium, New York",
+                "Research referenced in clinical practice guidelines across India",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[var(--med-primary)] mt-0.5 flex-shrink-0" />
+
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="flex flex-wrap gap-4 mt-8">
+              <a
+                href="/about"
+                className="inline-flex items-center justify-center rounded-full border border-[var(--med-primary)] px-5 py-3 text-sm font-medium text-[var(--med-primary)] hover:bg-[var(--med-primary)] hover:text-white transition-colors"
+              >
+                View Full Profile & Publications →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── PATIENT TESTIMONIALS ── */}
+      <div className="my-14">
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <span className="inline-flex items-center rounded-full bg-[var(--med-light)] border border-[var(--med-border)] px-4 py-1 text-sm font-medium text-[var(--med-primary)] mb-4">
+            Real Patient Experiences
+          </span>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            What Our Patients Say
+          </h2>
+
+          <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Patients treated for chronic venous insufficiency, venous ulcers,
+            and advanced varicose vein disease share their recovery experiences
+            after treatment by Dr. Himanshu Verma.
+          </p>
+        </div>
+
+        {/* Testimonials */}
+        <div className="grid lg:grid-cols-3 gap-6">
+          {[
+            {
+              quote:
+                "I had been told my leg swelling and skin discolouration were just signs of aging. Dr. Himanshu diagnosed CVI within the first visit and explained exactly what was happening inside my veins. After EVLT, the swelling reduced within two weeks. I wish I had come sooner.",
+              name: "Arun K.",
+              role: "Retired School Principal, Gurgaon",
+              condition: "Chronic Venous Insufficiency (Stage C4)",
+              procedure: "EVLT",
+              recovery: "2 days",
+            },
+            {
+              quote:
+                "I had a venous ulcer on my left ankle for nearly eight months. Multiple dressings had failed to close it. Dr. Verma identified the reflux source on Doppler and treated it with RFA. The ulcer was fully healed within six weeks. I cannot overstate how much this changed my life.",
+              name: "Meena T.",
+              role: "Homemaker, Faridabad",
+              condition: "Chronic Venous Insufficiency (Stage C6)",
+              procedure: "RFA + Wound Management",
+              recovery: "6 weeks to full healing",
+            },
+            {
+              quote:
+                "As a surgeon myself, I was very careful about who I chose for my own CVI treatment. Dr. Himanshu's diagnostic thoroughness and procedural precision are exceptional. His knowledge of venous disease is among the best I have encountered anywhere.",
+              name: "Dr. Sanjeev R.",
+              role: "Orthopaedic Surgeon, Delhi",
+              condition: "Chronic Venous Insufficiency (Stage C3)",
+              procedure: "RFA",
+              recovery: "1 day",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="relative rounded-3xl border border-[var(--med-border)] bg-white p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+            >
+              {/* Quote Icon */}
+              <div className="w-12 h-12 rounded-2xl bg-[var(--med-light)] flex items-center justify-center mb-5">
+                <Quote className="w-6 h-6 text-[var(--med-primary)]" />
+              </div>
+
+              {/* Stars */}
+              <div className="flex items-center gap-1 mb-4">
+                {Array.from({ length: 5 }).map((_, idx) => (
+                  <span key={idx} className="text-yellow-400 text-lg">
+                    ★
+                  </span>
+                ))}
+              </div>
+
+              {/* Quote */}
+              <p className="text-gray-700 text-sm leading-relaxed mb-6">
+                "{item.quote}"
+              </p>
+
+              {/* Patient */}
+              <div className="border-t border-[var(--med-border)] pt-5">
+                <h3 className="font-bold text-gray-900">{item.name}</h3>
+                <p className="text-sm text-gray-500 mb-4">{item.role}</p>
+
+                <div className="space-y-2">
+                  <div className="flex items-start gap-2 text-sm">
+                    <span className="font-semibold text-gray-800">
+                      Condition:
+                    </span>
+                    <span className="text-gray-600">{item.condition}</span>
+                  </div>
+
+                  <div className="flex items-start gap-2 text-sm">
+                    <span className="font-semibold text-gray-800">
+                      Procedure:
+                    </span>
+                    <span className="text-gray-600">{item.procedure}</span>
+                  </div>
+
+                  <div className="flex items-start gap-2 text-sm">
+                    <span className="font-semibold text-gray-800">
+                      Recovery:
+                    </span>
+                    <span className="text-gray-600">{item.recovery}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Rating Summary */}
+        <div className="mt-10 rounded-3xl border border-[var(--med-border)] bg-[var(--med-light)] p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <div className="flex items-center gap-2 mb-2">
+              {Array.from({ length: 5 }).map((_, idx) => (
+                <span key={idx} className="text-yellow-400 text-2xl">
+                  ★
+                </span>
+              ))}
+            </div>
+
+            <h3 className="text-2xl font-bold text-gray-900 mb-1">
+              Rated 4.9 / 5
+            </h3>
+
+            <p className="text-gray-600 text-sm">
+              Based on 300+ verified Google reviews
+            </p>
+          </div>
+
+          <ButtonFill
+            onClick={() => setOpenPopup(true)}
+            text="Book Consultation"
+          />
         </div>
       </div>
 
@@ -636,26 +1368,161 @@ export default function ChronicVenousContent() {
         </div>
       </div>
 
-      {/* ── FINAL CTA ── */}
-      <div className="rounded-2xl border border-[var(--med-border)] bg-[var(--med-light)] p-8">
-        <div className="flex items-center gap-2 mb-4">
-          <Zap className="w-5 h-5 text-[var(--med-primary)]" />
-          <p className="text-xl font-bold text-gray-800">
-            Take Action Before Symptoms Progress.
+      {/* ── LONG TERM LEG HEALTH ── */}
+      <div className="mb-14 rounded-3xl overflow-hidden border border-[var(--med-border)] bg-white shadow-sm">
+        {/* Header */}
+        <div className="bg-[var(--med-primary)] px-6 md:px-10 py-8 text-white">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
+              <Activity className="w-7 h-7 text-white" />
+            </div>
+
+            <div>
+              <p className="text-sm uppercase tracking-wider text-white/70">
+                Prevention & Recovery
+              </p>
+
+              <h2 className="text-2xl md:text-3xl font-bold">
+                Protect Your Long-Term Leg Health
+              </h2>
+            </div>
+          </div>
+
+          <p className="text-white/85 max-w-4xl leading-relaxed text-sm md:text-base">
+            Evidence-based daily habits that reduce CVI progression and support
+            long-term outcomes after treatment.
           </p>
         </div>
-        <p className="text-gray-600 text-sm mb-6">
-          Feeling tired in your legs by evening?{" "}
-          <b>Chronic Venous Insufficiency Treatment in Gurgaon</b> can help you
-          manage CVI today. Schedule a structured evaluation with Dr. Himanshu
-          Verma and take the first step toward better leg health.
-        </p>
-        <div className="flex justify-center">
-          <ButtonFill
-            onClick={() => setOpenPopup(true)}
-            text="Schedule a Consultation"
-          />
+
+        {/* Content */}
+        <div className="p-6 md:p-10 bg-[var(--med-light)]">
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              {
+                title: "Walk Daily",
+                desc: "Walk for 20–30 minutes every day - the calf muscle acts as the body's natural venous pump and improves blood return from the legs.",
+              },
+              {
+                title: "Elevate Your Legs",
+                desc: "Elevate your legs above heart level for 15 minutes daily, especially after prolonged standing or sitting.",
+              },
+              {
+                title: "Wear Compression Stockings",
+                desc: "Use prescribed compression stockings consistently - compliance directly affects treatment success and symptom control.",
+              },
+              {
+                title: "Maintain Healthy Weight",
+                desc: "Maintaining a healthy body weight reduces sustained pressure on the venous system and slows disease progression.",
+              },
+              {
+                title: "Avoid Prolonged Sitting or Standing",
+                desc: "Take a movement break every 30–45 minutes if your work involves prolonged sitting or standing.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-[var(--med-border)] bg-white p-5 flex items-start gap-4"
+              >
+                <div className="w-10 h-10 rounded-xl bg-[var(--med-primary)]/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-5 h-5 text-[var(--med-primary)]" />
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-gray-800 mb-2">{item.title}</h3>
+
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Footer Note */}
+          <div className="mt-8 rounded-2xl border border-[var(--med-border)] bg-white p-5">
+            <p className="text-sm text-gray-700 leading-relaxed">
+              Long-term success in chronic venous insufficiency treatment
+              depends not only on the procedure itself, but also on maintaining
+              healthy venous circulation habits after treatment.
+            </p>
+          </div>
         </div>
+      </div>
+
+      {/* ── FINAL CTA ── */}
+      <div className="rounded-[2rem] border border-[var(--med-border)] bg-gradient-to-br from-[var(--med-light)] to-white p-6 sm:p-8 shadow-sm">
+        {/* Heading */}
+        <div className="flex items-start gap-3 mb-6">
+          <div className="w-12 h-12 rounded-2xl bg-[var(--med-primary)]/10 flex items-center justify-center flex-shrink-0">
+            <Zap className="w-6 h-6 text-[var(--med-primary)]" />
+          </div>
+
+          <div>
+            <p className="text-2xl font-bold text-gray-900 leading-tight">
+              Take Action Before Symptoms Progress
+            </p>
+            <p className="text-sm text-gray-500 mt-1">
+              Early diagnosis and timely treatment can prevent long-term vein
+              damage and improve quality of life.
+            </p>
+          </div>
+        </div>
+
+        {/* Info Cards */}
+        <div className="grid md:grid-cols-2 gap-4 mb-8">
+          {/* Hospital */}
+          <div className="rounded-2xl border border-[var(--med-border)] bg-white p-5">
+            <p className="text-sm font-semibold text-[var(--med-primary)] mb-3">
+              Hospital & Clinic
+            </p>
+
+            <div className="space-y-2 text-sm text-gray-700 leading-relaxed">
+              <p className="font-semibold text-gray-900">Dr. Himanshu Verma</p>
+
+              <p>Vascular & Endovascular Surgeon</p>
+
+              <p>
+                Fortis Memorial Research Institute
+                <br />
+                Sector 44, Opposite HUDA City Centre Metro Station
+                <br />
+                Gurgaon, Haryana — 122002
+              </p>
+            </div>
+          </div>
+
+          {/* Timing */}
+          <div className="rounded-2xl border border-[var(--med-border)] bg-white p-5">
+            <p className="text-sm font-semibold text-[var(--med-primary)] mb-3">
+              Consultation Details
+            </p>
+
+            <div className="space-y-3 text-sm text-gray-700">
+              <div className="flex items-start gap-2">
+                <span className="text-base">🏥</span>
+                <p>NABH & JCI Accredited Hospital</p>
+              </div>
+
+              <div className="flex items-start gap-2">
+                <span className="text-base">🕐</span>
+                <p>OPD: Monday to Saturday, 9:00 AM – 5:00 PM</p>
+              </div>
+
+              <div className="flex items-start gap-2">
+                <span className="text-base">🚇</span>
+                <p>Nearest Metro: HUDA City Centre (Yellow Line)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA */}
+
+        <ButtonFill
+          onClick={() => setOpenPopup(true)}
+          text="Book Appointment Online"
+          className="!bg-white !text-[var(--med-primary)] hover:!bg-white/90"
+        />
       </div>
 
       <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />
