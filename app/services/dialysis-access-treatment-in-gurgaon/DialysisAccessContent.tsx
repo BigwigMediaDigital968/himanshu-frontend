@@ -212,7 +212,7 @@ export default function DialysisAccessContent() {
         </button> */}
         <div className="mt-10 pt-8 border-t border-white/20">
           <p className="text-white/60 text-sm mb-4">
-            MBBS · MS · MCh (Vascular Surgery) | Vascular & Endovascular Surgeon, Fortis Memorial Research Institute, Gurgaon | 17+ Years of Dedicated Vascular Access Practice | International Vascular Fellowship — Mayo Clinic, USA | KDOQI Guidelines Adherent Practice | NABH & JCI Accredited Hospital
+            MBBS · MS · MCh (Vascular Surgery) <span className="text-white">|</span> Vascular & Endovascular Surgeon, Fortis Memorial Research Institute, Gurgaon <span className="text-white">|</span> 17+ Years of Dedicated Vascular Access Practice <span className="text-white">|</span> International Vascular Fellowship - Mayo Clinic, USA <span className="text-white">|</span> KDOQI Guidelines Adherent Practice <span className="text-white">|</span> NABH & JCI Accredited Hospital
           </p>
         
         <div className="grid grid-cols-3 gap-4 ">
