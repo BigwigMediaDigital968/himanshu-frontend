@@ -12,6 +12,7 @@ import {
   Activity,
   Stethoscope,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function DialysisAccessContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -64,7 +65,7 @@ export default function DialysisAccessContent() {
     "Keep the area clean and dry",
     "Avoid pressure on Dialysis Access",
     "Listen for blood flow changes in AV access",
-    "Warning signs like fistula not working or dialysis access blockage should be addressed early",
+    (<>Warning signs like fistula not working or dialysis access blockage should be addressed early</>),
   ];
 
   const accessTypes = [
@@ -72,7 +73,7 @@ export default function DialysisAccessContent() {
       name: "Permacath",
       badge: "Emergency / Short-Term",
       badgeClass: "bg-orange-100 text-orange-700",
-      desc: "Permacath is a temporary Dialysis Access option used when dialysis needs to start without delay, and it is usually placed by a skilled Dialysis Access Surgeon in Gurgaon. Permacath insertion for dialysis allows immediate treatment when urgent dialysis access is required. This Dialysis Access is placed into a large central vein, usually in the neck or chest, and can be used immediately after placement. Permacath is often chosen by a Dialysis Access Surgeon in Gurgaon when kidney function has declined suddenly or when permanent AV access is still being prepared.",
+      desc: "Permacath is a temporary Dialysis Access option used when dialysis needs to start without delay, and it is usually placed by a skilled Dialysis Access Surgeon in Gurgaon. Permacath insertion for dialysis allows immediate treatment when urgent dialysis access is required. This Dialysis Access is placed into a large central vein, usually in the neck or chest, and can be used immediately after placement. Permacath is often chosen when kidney function has declined suddenly or when permanent AV access is still being prepared.",
       desc2:
         "While Permacath is effective in urgent situations, long term Dialysis Access planning usually includes creating a permanent AV access alongside it.",
       points: permacathPoints,
@@ -149,7 +150,7 @@ export default function DialysisAccessContent() {
     },
     {
       name: "Central Venous Angioplasty",
-      desc: "This treatment improves blood flow in large central veins that affect Dialysis Access performance.",
+      desc: (<>This treatment improves blood flow in large central veins that affect Dialysis Access performance. Patients with recurring central vein narrowing may also benefit from <Link href={"services/central-venous-care-treatment-in-gurgaon"} className="text-blue-500 font-medium hover:text-blue-600 hover:underline">Central Venous Care</Link>. </>),
     },
     {
       name: "Central Venous Occlusion Recanalization",
@@ -165,7 +166,7 @@ export default function DialysisAccessContent() {
     text,
     color = "bg-[var(--med-primary)]",
   }: {
-    text: string;
+    text: string | React.ReactNode;
     color?: string;
   }) => (
     <li className="flex items-start gap-2 text-sm text-gray-700">
@@ -180,14 +181,6 @@ export default function DialysisAccessContent() {
     <div className="font-sans">
       {/* ── HERO ── */}
       <div className="relative rounded-2xl overflow-hidden bg-[var(--med-primary)] mb-12 px-6 py-10 md:px-12 md:py-14">
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 70% 50%, white 1px, transparent 1px)",
-            backgroundSize: "24px 24px",
-          }}
-        />
         <p className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-3">
           Dialysis Access Surgeon · Gurgaon
         </p>
@@ -197,25 +190,33 @@ export default function DialysisAccessContent() {
             AV Fistula & AV Graft Care by Dr. Himanshu
           </span>
         </h2>
-        <p className="text-white/60 text-sm max-w-xl mb-8">
+        <p className="text-white/60 text-sm mb-8">
           Dialysis Access is the lifeline for people who need regular dialysis.
           It allows blood to safely leave the body, get cleaned, and return
           again. When Dialysis Access is planned and created the right way,
           daily life becomes easier, and treatment becomes smoother. Dr.
           Himanshu, an experienced Dialysis Access Surgeon in Gurgaon and a
-          trusted AV Fistula Surgeon in Gurgaon, focuses on creating Dialysis
+          trusted {" "}
+          <Link href={"/services/av-fistula-treatment-in-gurgaon"}
+          className="text-white font-medium hover:text-white/80 hover:underline">AV Fistula Surgeon in Gurgaon</Link>{" "}
+          , focuses on creating Dialysis
           Access that is reliable, comfortable, and suited to each patient’s
-          body and routine. This page helps you understand Dialysis Access in
-          simple terms so you can feel confident about your care with guidance
-          from a Dialysis Access Surgeon in Gurgaon.
+          body and routine. This page helps you understand Dialysis Access in simple terms so you can feel confident about your care and treatment journey.
         </p>
+
         {/* <button
           onClick={() => setOpenPopup(true)}
           className="inline-flex items-center gap-2 bg-white text-[var(--med-primary)] font-semibold px-6 py-3 rounded-full text-sm hover:bg-white/90 transition-all"
         >
           Talk to Dr. Himanshu — Dialysis Access Specialist
         </button> */}
-        <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/20">
+        <div className="mt-10 pt-8 border-t border-white/20">
+          <p className="text-white/60 text-sm mb-4">
+            MBBS · MS · MCh (Vascular Surgery) | Vascular & Endovascular Surgeon, Fortis Memorial Research Institute, Gurgaon | 17+ Years of Dedicated Vascular Access Practice | International Vascular Fellowship — Mayo Clinic, USA | KDOQI Guidelines Adherent Practice | NABH & JCI Accredited Hospital
+          </p>
+        
+        <div className="grid grid-cols-3 gap-4 ">
+        
           {[
             ["4 Access Types", "Permacath, Graft, Fistula & More"],
             ["13 Procedures", "Complete Access Care"],
@@ -226,6 +227,7 @@ export default function DialysisAccessContent() {
               <p className="text-white/60 text-xs md:text-sm">{label}</p>
             </div>
           ))}
+        </div>
         </div>
       </div>
 
@@ -240,9 +242,7 @@ export default function DialysisAccessContent() {
             long term, and planning it with an experienced{" "}
             <b>Dialysis Access Surgeon in Gurgaon</b> helps ensure the best
             results. Proper vascular access for dialysis is essential to ensure
-            smooth and effective treatment. Without proper Dialysis Access
-            created by a Dialysis Access Surgeon in Gurgaon, dialysis sessions
-            can become painful, risky, or ineffective.
+            smooth and effective treatment. Without properly created Dialysis Access, dialysis sessions can become painful, risky, or ineffective.
           </p>
           <p className="text-gray-700 leading-relaxed">
             The goal is to ensure steady blood flow and reduce repeated needle
@@ -285,12 +285,8 @@ export default function DialysisAccessContent() {
           <p className="text-gray-600 mt-2 max-w-2xl">
             Dialysis Access placement is a planned procedure done after
             evaluating veins, arteries, and overall health by a qualified
-            <b> Dialysis Access Surgeon in Gurgaon</b>. A proper dialysis access
-            surgeon in Gurgaon reduces future problems and supports better
-            dialysis outcomes. This dialysis access procedure is designed to
-            create long term dialysis access with fewer complications. AV access
-            is also considered during planning by a Dialysis Access Surgeon in
-            Gurgaon to decide the best approach for blood flow.
+            <b> Dialysis Access Surgeon in Gurgaon</b>. A properly planned access procedure reduces future problems and supports better dialysis outcomes. This dialysis access procedure is designed to
+            create long term dialysis access with fewer complications. AV access options are also evaluated during planning to decide the most suitable approach for blood flow.
           </p>
         </div>
 
@@ -314,7 +310,7 @@ export default function DialysisAccessContent() {
               ))}
             </ul>
             <p className="text-xs text-gray-500 mt-4">
-              Options like AV fistula creation surgery or AV graft placement are
+              Options like <Link href={"/services/av-fistula-treatment-in-gurgaon"} className="text-blue-500 font-medium hover:text-blue-600 hover:underline">AV fistula creation surgery</Link>  or AV graft placement are
               selected based on vein condition and overall health.
             </p>
           </div>
@@ -334,7 +330,7 @@ export default function DialysisAccessContent() {
             </p>
             <ul className="space-y-2">
               {managementTips.map((t) => (
-                <BulletItem key={t} text={t} />
+                <BulletItem key={String(t)} text={t} />
               ))}
             </ul>
           </div>
@@ -723,7 +719,7 @@ export default function DialysisAccessContent() {
                   Graft, and catheter-based access, such as Permacath or
                   Templine. Each Dialysis Access type is chosen based on how
                   urgently dialysis is needed, vein health, and long-term
-                  treatment plans. An <b>AV Fistula Surgeon in Gurgaon</b> can
+                  treatment plans. An <Link href={"/services/av-fistula-treatment-in-gurgaon"}  className="text-blue-500 font-medium hover:text-blue-600 hover:underline">AV Fistula Surgeon in Gurgaon</Link> can
                   help you decide if an AV fistula is the most suitable
                   long-term dialysis access option based on your condition.
                 </p>
@@ -745,10 +741,7 @@ export default function DialysisAccessContent() {
               q: "What's the risk of clotting or infection for my access type?",
               a: (
                 <p className="text-gray-700 text-sm leading-relaxed">
-                  Every access carries some risk, but a{" "}
-                  <b>Dialysis Access Surgeon in Gurgaon</b> can guide you toward
-                  options like AV Fistula, which have lower infection and
-                  clotting risk.
+                  Every access type carries some risk. Dr. Himanshu can guide you toward options like AV Fistula, which have lower infection and clotting risk.
                 </p>
               ),
             },

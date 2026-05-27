@@ -448,7 +448,7 @@ export default function AVFistulaPage() {
       />
       <ServiceLayout
         title="AV Fistula Treatment in Gurgaon | Dr. Himanshu Verma - Vascular & Endovascular Surgeon, Fortis FMRI"
-        description="Gold standard vascular access for safe and long-term dialysis."
+        description="Expert AV fistula treatment in Gurgaon - gold-standard dialysis access planned, created, and preserved by Dr. Himanshu Verma at Fortis FMRI, Gurugram."
       >
         <AVFistulaContent />
       </ServiceLayout>

@@ -24,7 +24,7 @@ export default function AVFistulaContent() {
     {
       id: 1,
       src: "/services/av-fistula/av-fistula-surgery-1.jpeg",
-      alt: "AV fistula surgery procedure for dialysis access",
+      alt: "Types of AV fistula - radiocephalic, brachiocephalic, basilic vein transposition",
     },
     {
       id: 2,
@@ -82,6 +82,27 @@ export default function AVFistulaContent() {
         "I had a great experience with Dr. Himanshu Verma. From consultation to surgery and follow-up, everything was handled with utmost care. The results of my AV fistula treatment were successful, and I am very satisfied.",
       rating: 5,
     },
+    {
+    id: 6,
+    name: "Arun Kumar",
+    content:
+      "Dr. Himanshu is truly different from other doctors. He explains everything in such a simple way with drawings that I felt very confident about my fistula surgery. Highly grateful for his care and kindness.",
+    rating: 5,
+  },
+  {
+    id: 7,
+    name: "KANAPURAM SUDEEKSHITHA",
+    content:
+      "For their outstanding care during my mother's fistula surgery, I am immensely appreciative of Dr. Himanshu Verma and his staff. They demonstrated exceptional knowledge, empathy, and professionalism from the first consultation until recovery. Dr. Verma put my mother at ease and made sure we understood the procedures. Because of their careful attention, the procedure was exact and she recovered quickly. I heartily endorse Vascular Surgeon. Dr. Himanshu Verma and his staff for their commitment to patient welfare and outstanding medical care.",
+    rating: 5,
+  },
+  {
+    id: 8,
+    name: "Divyani Rao",
+    content:
+      "My mother is an dialysis patient we came to meet dr.himanshu sir for fistula creation. He explained very well and made clear my mind . My mom was very happy with treatment. Thank you for the team who cooperated. Best vascular surgeon",
+    rating: 5,
+  },
   ];
 
   const faqs = [
@@ -216,7 +237,7 @@ export default function AVFistulaContent() {
       items: [
         "Lowest complication rates of any fistula type",
         "Preserves all proximal access sites for the future",
-        "Preferred under KDOQI guidelines",
+        "Recommended as first-choice access by KDOQI and the 2019 KDIGO Clinical Practice Guideline on Vascular Access",
       ],
       note: "This is often the first choice during AV Fistula Treatment in Gurgaon when suitable veins are available.",
     },
@@ -382,13 +403,7 @@ export default function AVFistulaContent() {
           Endovascular Surgery, Fortis FMRI, Gurgaon
         </p>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Dr. Himanshu Verma is one of India's leading vascular specialists,
-          bringing over 17 years of clinical expertise in treating complex
-          arterial, venous, lymphatic, and dialysis-access disorders. As
-          Director of Vascular &amp; Endovascular Surgery at Fortis Memorial
-          Research Institute, Gurgaon, one of Delhi-NCR's premier tertiary care
-          hospitals, he delivers advanced, patient-focused vascular care using
-          evidence-based and minimally invasive techniques.
+          Dr. Himanshu Verma is one of India's leading vascular surgeons, with over 17 years of clinical expertise and more than 5,000 vascular and endovascular procedures performed. A Fellow of the European Board of Vascular Surgery (FEVS) and holder of MCh (Vascular Surgery), he serves as Director of Vascular & Endovascular Surgery at Fortis Memorial Research Institute, Gurgaon - one of Delhi-NCR's premier tertiary care hospitals. His practice spans 35+ peer-reviewed publications, and he is the founder of the AVF Care Workshop, a dedicated training programme for dialysis access professionals across India.
         </p>
         <p className="text-sm font-semibold text-gray-800 mb-3">
           His areas of specialisation include:
@@ -428,11 +443,8 @@ export default function AVFistulaContent() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
             Our AV Fistula Management Protocol
           </h2>
-          <p className="text-gray-600 mt-2 max-w-2xl">
-            Dialysis access is not a one-time surgery. It demands careful
-            planning, consistent monitoring, and timely intervention at every
-            stage. Our structured protocol for{" "}
-            <b>AV Fistula Treatment in Gurgaon</b> includes:
+          <p className="text-gray-600 mt-2">
+            Dialysis access is not a one-time surgery - it is a lifelong commitment to monitoring, timely intervention, and access preservation. Our AV fistula treatment in Gurgaon follows a structured, multi-stage protocol aligned with KDOQI (Kidney Disease Outcomes Quality Initiative) and KDIGO guidelines - the international benchmarks for dialysis vascular access care:
           </p>
         </div>
         <div className="space-y-0">
@@ -814,7 +826,7 @@ export default function AVFistulaContent() {
               ))}
             </ul>
             <p className="text-sm text-gray-600 mt-4 font-bold">
-              Schedule your AV fistula evaluation in Gurgaon today, protect your dialysis access with expert care.
+              Schedule your AV fistula treatment consultation in Gurgaon today. Protect your dialysis access with expert care from Dr. Himanshu Verma at Fortis FMRI, Gurugram.
             </p>
             <div className="mt-2">
               <ButtonFill
@@ -907,7 +919,7 @@ export default function AVFistulaContent() {
       <div className="mt-6">
         <div className="rounded-2xl bg-[var(--med-primary)] text-white px-6 py-5 items-center justify-between gap-4">
           <p className="text-sm text-white/90">
-            <strong>Disclaimer:</strong> The information provided on this page is intended for general educational purposes only and does not constitute medical advice, diagnosis, or treatment. Individual medical conditions vary, and results differ from patient to patient. Please consult Dr. Himanshu Verma or a qualified medical professional before making any decisions regarding your health or treatment. In case of a medical emergency, please contact your nearest hospital immediately. 
+            <strong>Disclaimer:</strong> This page has been written and reviewed by Dr. Himanshu Verma, MCh (Vascular Surgery), FEVS - Director, Vascular & Endovascular Surgery, Fortis Memorial Research Institute, Gurgaon. The information provided is intended for general educational purposes only and does not constitute medical advice, diagnosis, or treatment. Individual medical conditions vary and results differ from patient to patient. Always consult a qualified medical professional before making any decisions regarding your health or treatment. In case of a medical emergency, please contact your nearest hospital immediately. Last reviewed: May 2026.
           </p>
         </div>
       </div>
