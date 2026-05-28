@@ -13,68 +13,76 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What are the main causes of varicose veins?",
-      acceptedAnswer: {
+      "name": "Is varicose vein treatment covered by insurance?",
+      "acceptedAnswer": {
         "@type": "Answer",
-        text: "Weak vein valves, genetics, prolonged standing, aging, pregnancy, and excess weight are the most common causes. These conditions often require professional evaluation and varicose veins treatment in Gurgaon.",
-      },
+        "text": "Most minimally invasive procedures for symptomatic varicose veins — including EVLT and RFA — are covered under major health insurance plans in India, including Mediclaim policies. Our team will help you verify coverage before your procedure."
+      }
     },
     {
       "@type": "Question",
-      name: "Are varicose veins a worry?",
-      acceptedAnswer: {
+      "name": "How much does varicose veins treatment cost in Gurgaon?",
+      "acceptedAnswer": {
         "@type": "Answer",
-        text: "They can become a concern if pain, swelling, skin changes, or ulcers develop. Early evaluation and varicose veins treatment in Gurgaon help prevent complications.",
-      },
+        "text": "Treatment costs vary depending on the procedure, number of veins treated, and insurance coverage. During your consultation, Dr. Himanshu will provide a transparent, detailed cost estimate with no hidden charges. Contact us for a preliminary cost discussion."
+      }
     },
     {
       "@type": "Question",
-      name: "Is walking good for varicose veins?",
-      acceptedAnswer: {
+      "name": "What should I expect on my first visit?",
+      "acceptedAnswer": {
         "@type": "Answer",
-        text: "Yes. Walking improves blood circulation in the legs and reduces pressure in the veins, making it one of the best daily habits for vein health alongside proper varicose veins treatment in Gurgaon.",
-      },
+        "text": "Your first visit includes a clinical examination, medical history review, and a Venous Doppler Ultrasound. The entire assessment takes approximately 60–90 minutes. You will leave with a clear diagnosis and personalized treatment plan."
+      }
     },
     {
       "@type": "Question",
-      name: "Can varicose veins go away on their own?",
-      acceptedAnswer: {
+      "name": "How long does the procedure take?",
+      "acceptedAnswer": {
         "@type": "Answer",
-        text: "Minor varicose veins may improve with lifestyle changes, but most require medical evaluation and varicose veins treatment in Gurgaon for long-term relief.",
-      },
+        "text": "Most procedures are completed in 30–60 minutes under local anaesthesia, with same-day discharge. You will typically be able to walk out of the clinic unassisted."
+      }
     },
     {
       "@type": "Question",
-      name: "Is treatment for varicose veins painful?",
-      acceptedAnswer: {
+      "name": "Will the veins come back after treatment?",
+      "acceptedAnswer": {
         "@type": "Answer",
-        text: "Most modern procedures used in varicose veins treatment in Gurgaon are minimally invasive and designed for patient comfort.",
-      },
+        "text": "Treated veins are permanently sealed and do not return. However, new varicose veins can develop over time, particularly if underlying risk factors (obesity, prolonged standing) are not addressed. Lifestyle changes significantly reduce recurrence."
+      }
     },
     {
       "@type": "Question",
-      name: "Can varicose veins cause serious health problems?",
-      acceptedAnswer: {
+      "name": "Is treatment painful?",
+      "acceptedAnswer": {
         "@type": "Answer",
-        text: "Yes. If untreated, they can lead to ulcers, blood clots, or chronic venous insufficiency, which is why timely varicose veins treatment in Gurgaon is recommended.",
-      },
+        "text": "Modern minimally invasive techniques involve very little discomfort. Most patients report only a mild sensation during the procedure and minimal soreness for 1–2 days afterward."
+      }
     },
     {
       "@type": "Question",
-      name: "How can I prevent varicose veins?",
-      acceptedAnswer: {
+      "name": "What are the main causes of varicose veins?",
+      "acceptedAnswer": {
         "@type": "Answer",
-        text: "Regular exercise, maintaining a healthy weight, avoiding prolonged standing or sitting, and wearing compression stockings can help reduce the risk and complement varicose veins treatment in Gurgaon.",
-      },
+        "text": "Weak vein valves, genetics, prolonged standing, aging, pregnancy, and excess weight are the most common causes."
+      }
     },
     {
       "@type": "Question",
-      name: "When should I see a doctor?",
-      acceptedAnswer: {
+      "name": "Are varicose veins dangerous if left untreated?",
+      "acceptedAnswer": {
         "@type": "Answer",
-        text: "Seek medical attention if you notice swelling, persistent pain, or skin changes around your veins. Early consultation ensures better outcomes and timely varicose veins treatment in Gurgaon.",
-      },
+        "text": "Yes. Untreated varicose veins can progress to chronic venous insufficiency, venous ulcers, skin changes, and deep vein thrombosis (DVT) — a potentially serious clotting condition."
+      }
     },
+    {
+      "@type": "Question",
+      "name": "When should I see a doctor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seek evaluation if you notice persistent swelling, skin discolouration, aching that worsens through the day, or any visible veins causing discomfort. Early intervention always leads to better outcomes."
+      }
+    }
   ],
 };
 
@@ -200,30 +208,48 @@ export default function VaricoseVeinsPage() {
                 ],
               },
 
-              /* ================= BUSINESS ================= */
               {
+                "@context": "https://schema.org",
                 "@type": "MedicalBusiness",
                 "@id": `${SITE_URL}/#clinic`,
-                name: "Dr Himanshu Verma Vascular Clinic",
+
+                name: "Dr. Himanshu Verma – Varicose Vein Specialist, Gurgaon",
+
+                description:
+                  "Advanced varicose veins treatment in Gurgaon by Dr. Himanshu Verma, MCh Vascular Surgery, at Fortis Memorial Research Institute.",
+
+                url:
+                  "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon",
+
                 image: OG_IMAGE,
-                url: SITE_URL,
+
                 telephone: "+91-8826833598",
+
+                priceRange: "₹₹₹",
+
+                medicalSpecialty: "Vascular Surgery",
+
                 address: {
                   "@type": "PostalAddress",
-                  streetAddress: "Fortis Memorial Research Centre, Sector 44",
+                  streetAddress:
+                    "Fortis Memorial Research Institute, Sector 44",
                   addressLocality: "Gurugram",
                   addressRegion: "Haryana",
-                  postalCode: "122003",
+                  postalCode: "122002",
                   addressCountry: "IN",
                 },
-                areaServed: ["Gurugram", "Delhi NCR"],
-              },
 
-              {
-                "@type": "MedicalBusiness",
-                name: "Dr. Himanshu Verma – Varicose Vein Specialist, Gurgaon",
-                url: "https://www.drhimanshuverma.com/services/varicose-veins-treatment-in-gurgaon",
-                telephone: "+91-88268 33598",
+                areaServed: [
+                  {
+                    "@type": "City",
+                    name: "Gurugram",
+                  },
+                  {
+                    "@type": "AdministrativeArea",
+                    name: "Delhi NCR",
+                  },
+                ],
+
                 aggregateRating: {
                   "@type": "AggregateRating",
                   ratingValue: "5",
@@ -232,50 +258,63 @@ export default function VaricoseVeinsPage() {
                   ratingCount: "12",
                   reviewCount: "12",
                 },
+
                 review: [
                   {
                     "@type": "Review",
-                    author: { "@type": "Person", name: "Bhavna Bansal" },
+                    author: {
+                      "@type": "Person",
+                      name: "Bhavna Bansal",
+                    },
                     reviewRating: {
                       "@type": "Rating",
                       ratingValue: "5",
                       bestRating: "5",
                     },
                     reviewBody:
-                      "Dr. Himanshu Verma is not just an exceptional vascular surgeon but also a doctor who truly cares for his patients. He takes the time to explain every detail, listens patiently, and ensures you feel supported throughout recovery. A truly compassionate doctor who treats you like family.",
+                      "Dr. Himanshu Verma is not just an exceptional vascular surgeon but also a doctor who truly cares for his patients. He takes the time to explain every detail and ensures patients feel supported throughout recovery.",
                   },
                   {
                     "@type": "Review",
-                    author: { "@type": "Person", name: "K A D" },
+                    author: {
+                      "@type": "Person",
+                      name: "K A D",
+                    },
                     reviewRating: {
                       "@type": "Rating",
                       ratingValue: "5",
                       bestRating: "5",
                     },
                     reviewBody:
-                      "I was suffering from severe leg pain due to varicose veins. After laser surgery, the pain relief was almost immediate. The swelling reduced quickly and I recovered much faster than expected. Dr. Himanshu Verma is one of the best vascular surgeons in India for varicose vein treatment — highly skilled and explains everything clearly.",
+                      "I was suffering from severe leg pain due to varicose veins. After laser surgery, the pain relief was almost immediate and recovery was much faster than expected.",
                   },
                   {
                     "@type": "Review",
-                    author: { "@type": "Person", name: "Kamal Kanoujiya" },
+                    author: {
+                      "@type": "Person",
+                      name: "Kamal Kanoujiya",
+                    },
                     reviewRating: {
                       "@type": "Rating",
                       ratingValue: "5",
                       bestRating: "5",
                     },
                     reviewBody:
-                      "I was very tense about the branch-shaped veins on my legs. After consulting Dr. Himanshu, all my worries were relieved. He explained everything clearly and made me feel comfortable throughout. I highly recommend him as one of the best vascular surgeons.",
+                      "Dr. Himanshu Verma explained everything clearly and made me feel comfortable throughout the treatment process.",
                   },
                   {
                     "@type": "Review",
-                    author: { "@type": "Person", name: "Kiran Negi" },
+                    author: {
+                      "@type": "Person",
+                      name: "Kiran Negi",
+                    },
                     reviewRating: {
                       "@type": "Rating",
                       ratingValue: "5",
                       bestRating: "5",
                     },
                     reviewBody:
-                      "My leg pain and bulging vein have significantly improved following my appointment with Dr. Himanshu Verma. The compression stockings he advised are very helpful during long-term duties. Thank you so much, sir.",
+                      "My leg pain and bulging veins improved significantly after consultation. The compression stockings advised were very helpful.",
                   },
                   {
                     "@type": "Review",
@@ -289,18 +328,21 @@ export default function VaricoseVeinsPage() {
                       bestRating: "5",
                     },
                     reviewBody:
-                      "After my consultation, the pain in my legs and the enlarged veins have reduced a lot. The stockings Dr. Verma advised are very helpful, especially during long hours of standing. I am truly satisfied with the treatment. Best vascular surgeon.",
+                      "The pain in my legs and enlarged veins reduced considerably after treatment. I am very satisfied with the care received.",
                   },
                   {
                     "@type": "Review",
-                    author: { "@type": "Person", name: "Gauransh Saxena" },
+                    author: {
+                      "@type": "Person",
+                      name: "Gauransh Saxena",
+                    },
                     reviewRating: {
                       "@type": "Rating",
                       ratingValue: "5",
                       bestRating: "5",
                     },
                     reviewBody:
-                      "My bulging vein and leg pain have significantly decreased since my appointment with Dr. Himanshu Verma. The compression stocking is really useful for my long-term responsibilities. Top vascular surgeon.",
+                      "My bulging veins and leg pain have reduced significantly after consultation with Dr. Himanshu Verma.",
                   },
                   {
                     "@type": "Review",
@@ -314,62 +356,77 @@ export default function VaricoseVeinsPage() {
                       bestRating: "5",
                     },
                     reviewBody:
-                      "What really impressed me was Dr. Himanshu's direct approach — he did not suggest unnecessary tests, drugs, or therapies. He simply clarified what was actually necessary. Gurgaon's top vascular surgeon.",
+                      "What impressed me most was the honest and direct approach without suggesting unnecessary tests or medications.",
                   },
                   {
                     "@type": "Review",
-                    author: { "@type": "Person", name: "Harshith Goud" },
+                    author: {
+                      "@type": "Person",
+                      name: "Harshith Goud",
+                    },
                     reviewRating: {
                       "@type": "Rating",
                       ratingValue: "5",
                       bestRating: "5",
                     },
                     reviewBody:
-                      "After my consultation with Dr. Himanshu Verma, both my leg pain and enlarged veins have really reduced. The compression stocking is very helpful during long standing duties. Best vascular surgeon.",
+                      "Both my leg pain and enlarged veins reduced considerably after consultation and treatment.",
                   },
                   {
                     "@type": "Review",
-                    author: { "@type": "Person", name: "Harshita Kanodia" },
+                    author: {
+                      "@type": "Person",
+                      name: "Harshita Kanodia",
+                    },
                     reviewRating: {
                       "@type": "Rating",
                       ratingValue: "5",
                       bestRating: "5",
                     },
                     reviewBody:
-                      "I strongly recommend Dr. Himanshu Verma to anyone with vascular problems. His commitment to his patients' well-being and expertise in his field make him the finest vascular surgeon.",
+                      "I strongly recommend Dr. Himanshu Verma for vascular problems due to his expertise and patient care.",
                   },
                   {
                     "@type": "Review",
-                    author: { "@type": "Person", name: "Kamal Madaan" },
+                    author: {
+                      "@type": "Person",
+                      name: "Kamal Madaan",
+                    },
                     reviewRating: {
                       "@type": "Rating",
                       ratingValue: "5",
                       bestRating: "5",
                     },
                     reviewBody:
-                      "Very good experience. One of the best vascular surgeons with a golden heart. His proficiency and helping nature make him an exceptional person. If anyone is suffering from varicose veins or vascular issues, consult Dr. Himanshu Verma without any doubt.",
+                      "Very good experience. Dr. Himanshu Verma is highly skilled, caring, and professional.",
                   },
                   {
                     "@type": "Review",
-                    author: { "@type": "Person", name: "Patient Review" },
+                    author: {
+                      "@type": "Person",
+                      name: "Patient Review",
+                    },
                     reviewRating: {
                       "@type": "Rating",
                       ratingValue: "5",
                       bestRating: "5",
                     },
                     reviewBody:
-                      "Dr. Himanshu Verma is very patient and professional. He listened attentively to all my concerns and took the time to explain my diagnosis and treatment options clearly. The staff was wonderful and I am so grateful for the outstanding care I received.",
+                      "Excellent care experience. The diagnosis and treatment options were explained very clearly.",
                   },
                   {
                     "@type": "Review",
-                    author: { "@type": "Person", name: "Anonymous Patient" },
+                    author: {
+                      "@type": "Person",
+                      name: "Anonymous Patient",
+                    },
                     reviewRating: {
                       "@type": "Rating",
                       ratingValue: "5",
                       bestRating: "5",
                     },
                     reviewBody:
-                      "Dr. Himanshu Verma is one of the best vascular surgeons in India for varicose vein treatment. He is highly skilled, very humble, and explains everything clearly. I strongly recommend him to anyone looking for the best doctor for varicose veins.",
+                      "Highly skilled and humble doctor for varicose vein treatment. Strongly recommended.",
                   },
                 ],
               },

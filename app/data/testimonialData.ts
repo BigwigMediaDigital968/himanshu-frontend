@@ -35,7 +35,7 @@ export const VericoseGurgaon: Testimonial[] = [
     id: 4,
     name: "Kiran Negi",
     content:
-      "It makes me very glad to say you, sir. My leg pain and bulging vein have significantly improved following your appointment. Also, the stocking is quite useful throughout my long-term duties.",
+      "It makes me very glad to say you, sir. My leg pain and bulging vein have significantly improved following your appointment. Also, the stocking is quite useful throughout my long-term duties. Thank you so much, sir, and best wishes for your future endeavours.Best Vascular Surgeon",
     rating: 5,
   },
   {
@@ -56,7 +56,7 @@ export const VericoseGurgaon: Testimonial[] = [
     id: 7,
     name: "Raghvendra Singh Rajpoot",
     content:
-      "Due to varicose veins, I visited Dr. Himanshu. What really impressed me was his direct approach—he didn't suggest unnecessary tests, drugs, or therapies. He simply clarified what was actually necessary.",
+      "Due to varicose veins, I have visited Dr. Himanshu. What really impressed me was his direct approach—he didn't suggest unnecessary tests, drugs, or therapies. He simply clarified for us what was actually necessary.Gurgram's top vascular surgeon.",
     rating: 5,
   },
   {
