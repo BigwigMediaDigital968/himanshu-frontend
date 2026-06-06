@@ -10,6 +10,7 @@ import FinalCTA from "../../components/CTA";
 import FloatingContactActions from "../../components/ContactActions";
 import ButtonFill from "../../components/Button";
 import { ChevronRight, ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export default function DialysisServicesPage() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -28,7 +29,10 @@ export default function DialysisServicesPage() {
           content: (
             <>
               <p className="mb-4 text-gray-700 leading-relaxed">
-                An Arteriovenous (AV) Fistula is a surgically created connection
+                An {" "}
+                <Link href="/services/av-fistula-treatment-in-gurgaon" className="text-blue-500 hover:underline">
+                Arteriovenous (AV) Fistula
+                </Link> is a surgically created connection
                 between an artery and a vein, usually in the arm, to allow
                 efficient blood flow for hemodialysis.
               </p>
