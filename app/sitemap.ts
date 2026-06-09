@@ -195,5 +195,49 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     //   priority: 0.7,
     // },
     ...blogUrls,
+
+    // Trust & Compliance Pages
+    {
+      url: `${SITE_URL}/privacy-policy`,
+      lastModified: today,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${SITE_URL}/terms-and-condition`,
+      lastModified: today,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${SITE_URL}/medical-disclaimer`,
+      lastModified: today,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${SITE_URL}/editorial-policy`,
+      lastModified: today,
+      changeFrequency: "yearly",
+      priority: 0.4,
+    },
+    // {
+    //   url: `${SITE_URL}/cookie-policy`,
+    //   lastModified: today,
+    //   changeFrequency: "yearly",
+    //   priority: 0.3,
+    // },
+    // {
+    //   url: `${SITE_URL}/accessibility-statement`,
+    //   lastModified: today,
+    //   changeFrequency: "yearly",
+    //   priority: 0.2,
+    // },
+    // {
+    //   url: `${SITE_URL}/refund-cancellation-policy`,
+    //   lastModified: today,
+    //   changeFrequency: "yearly",
+    //   priority: 0.2,
+    // },
   ];
 }

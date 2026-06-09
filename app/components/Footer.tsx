@@ -263,17 +263,64 @@ export default function Footer() {
       </div> */}
 
       {/* RIGHTS & CREDITS */}
-      <div className="border-t pt-5 relative z-10 w-11/12 md:w-5/6 mx-auto flex flex-col md:flex-row justify-between mt-4 text-center text-white/50 text-xs md:text-sm">
-        <p>© {new Date().getFullYear()} All Rights Reserved.</p>
-        <br />
-        <p>
-          Design & Developed by{" "}
-          <span className="text-[var(--med-primary)] font-semibold">
-            <Link href="https://www.bigwigmediadigital.com">
+      <div className="relative z-10 mt-8 border-t border-white/10">
+        <div className="mx-auto flex w-11/12 max-w-7xl flex-col items-center gap-6 py-6 lg:flex-row lg:justify-between lg:gap-8">
+          {/* Copyright */}
+          <div className="order-3 text-center text-xs text-white/60 sm:text-sm lg:order-1 lg:text-left">
+            © {new Date().getFullYear()} Dr. Himanshu Verma. All Rights
+            Reserved.
+          </div>
+
+          {/* Legal Links */}
+          <div className="order-1 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-center text-xs text-white/70 sm:text-sm lg:order-2">
+            <Link
+              href="/privacy-policy"
+              className="transition-colors duration-300 hover:text-[var(--med-primary)]"
+            >
+              Privacy Policy
+            </Link>
+
+            <span className="hidden text-white/30 md:block">|</span>
+
+            <Link
+              href="/terms-and-conditions"
+              className="transition-colors duration-300 hover:text-[var(--med-primary)]"
+            >
+              Terms of Use
+            </Link>
+
+            <span className="hidden text-white/30 md:block">|</span>
+
+            <Link
+              href="/medical-disclaimer"
+              className="transition-colors duration-300 hover:text-[var(--med-primary)]"
+            >
+              Medical Disclaimer
+            </Link>
+
+            <span className="hidden text-white/30 md:block">|</span>
+
+            <Link
+              href="/editorial-policy"
+              className="transition-colors duration-300 hover:text-[var(--med-primary)]"
+            >
+              Editorial Policy
+            </Link>
+          </div>
+
+          {/* Developer Credit */}
+          <div className="order-2 text-center text-xs text-white/60 sm:text-sm lg:order-3 lg:text-right">
+            Design & Developed by{" "}
+            <Link
+              href="https://www.bigwigmediadigital.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[var(--med-primary)] transition-opacity duration-300 hover:opacity-80"
+            >
               Bigwig Media Digital
             </Link>
-          </span>
-        </p>
+          </div>
+        </div>
       </div>
     </footer>
   );
