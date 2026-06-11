@@ -268,60 +268,70 @@ const services = [
     icon: Network,
     link: "/services/abdominal-aortic-aneurysm-treatment-in-gurgaon",
   },
-  {
-    title: "Advanced Venous Interventions",
-    desc: "Complex venous reconstruction and catheter-based therapies.",
-    icon: Activity,
-    link: "/services/deep-vein-thrombosis-treatment-in-gurgaon",
-  },
-  {
-    title: "Pulmonary Embolism (PE) Management",
-    desc: "Comprehensive PE management using advanced catheter-based techniques.",
-    icon: Wind,
-    link: "/services/pulmonary-embolism-treatment-in-gurgaon",
-  },
-  {
-    title: "Aortic, Visceral & Renal Artery Interventions",
-    desc: "Treatment of complex arterial diseases using endovascular techniques.",
-    icon: Network,
-    link: "/services/vascular-trauma-treatment-in-gurgaon", // adjust if you create specific page
-  },
+
+  // {
+  //   title: "Advanced Venous Interventions",
+  //   desc: "Complex venous reconstruction and catheter-based therapies.",
+  //   icon: Activity,
+  //   link: "/services/deep-vein-thrombosis-treatment-in-gurgaon",
+  // },
+
+  // {
+  //   title: "Pulmonary Embolism (PE) Management",
+  //   desc: "Comprehensive PE management using advanced catheter-based techniques.",
+  //   icon: Wind,
+  //   link: "/services/pulmonary-embolism-treatment-in-gurgaon",
+  // },
+
+  // {
+  //   title: "Aortic, Visceral & Renal Artery Interventions",
+  //   desc: "Treatment of complex arterial diseases using endovascular techniques.",
+  //   icon: Network,
+  //   link: "/services/vascular-trauma-treatment-in-gurgaon",
+  // },
+
   {
     title: "Onco-Vascular Surgery & Rare Vascular Disorders",
     desc: "Specialized vascular procedures in cancer and rare conditions.",
     icon: Microscope,
     link: "/services/onco-vascular-surgery-in-gurgaon",
   },
+
   {
     title: "Vascular Trauma",
     desc: "Emergency care for vascular injuries and trauma cases.",
     icon: Ambulance,
     link: "/services/vascular-trauma-treatment-in-gurgaon",
   },
+
   {
     title: "Arteriovenous Malformation",
     desc: "Treatment of abnormal artery-vein connections.",
     icon: GitBranch,
     link: "/services/arteriovenous-malformation-treatment-in-gurgaon",
   },
-  {
-    title: "Pediatric & Iatrogenic Vascular Injuries",
-    desc: "Special care for vascular injuries in children and medical complications.",
-    icon: Activity,
-    link: "/services/vascular-trauma-treatment-in-gurgaon",
-  },
-  {
-    title: "AV Malformations & Complex Vascular Anomalies",
-    desc: "Advanced multidisciplinary care for vascular anomalies.",
-    icon: GitBranch,
-    link: "/services/arteriovenous-malformation-treatment-in-gurgaon",
-  },
-  {
-    title: "ECMO Cannulation & Large-Bore Access Care",
-    desc: "Critical care vascular access including ECMO support.",
-    icon: Cpu,
-    link: "/services/av-dialysis-central-care",
-  },
+
+  // {
+  //   title: "Pediatric & Iatrogenic Vascular Injuries",
+  //   desc: "Special care for vascular injuries in children and medical complications.",
+  //   icon: Activity,
+  //   link: "/services/vascular-trauma-treatment-in-gurgaon",
+  // },
+
+  // {
+  //   title: "AV Malformations & Complex Vascular Anomalies",
+  //   desc: "Advanced multidisciplinary care for vascular anomalies.",
+  //   icon: GitBranch,
+  //   link: "/services/arteriovenous-malformation-treatment-in-gurgaon",
+  // },
+
+  // {
+  //   title: "ECMO Cannulation & Large-Bore Access Care",
+  //   desc: "Critical care vascular access including ECMO support.",
+  //   icon: Cpu,
+  //   link: "/services/av-dialysis-central-care",
+  // },
+
   {
     title: "Special Interests",
     desc: "Focus on innovation, research, and complex vascular procedures.",
