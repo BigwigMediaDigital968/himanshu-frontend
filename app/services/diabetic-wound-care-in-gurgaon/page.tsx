@@ -10,9 +10,9 @@ const OG_IMAGE =
 
 /* ================= META ================= */
 export const metadata: Metadata = {
-  title: "Diabetic Wound Care in Gurgaon | Dr. Himanshu Verma",
+  title: "Diabetic Wound Care in Gurgaon | Fast Healing Care",
   description:
-    "Fast healing diabetic wound care in Gurgaon by Dr. Himanshu Verma at Fortis. Infection control, vascular treatment & advanced dressing techniques. Consult now.",
+    "Diabetic wound care in Gurgaon - infection control, vascular treatment & advanced dressing for fast healing. Consult Dr. Himanshu Verma.",
   keywords: [
     "Diabetic Wound Care in Gurgaon",
     "diabetic wound treatment Gurgaon",

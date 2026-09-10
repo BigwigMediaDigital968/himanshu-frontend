@@ -11,9 +11,9 @@ const OG_IMAGE =
 
 export const metadata: Metadata = {
   title:
-    "Pulmonary Embolism Treatment in Gurgaon | Best Specialist & Advanced Care | Dr. Himanshu Verma",
+    "Pulmonary Embolism Treatment in Gurgaon | Dr. Himanshu",
   description:
-    "Get expert pulmonary embolism treatment in Gurgaon with advanced care and personalized plans. Consult the best doctor for pulmonary embolism today for safe recovery.",
+    "Expert pulmonary embolism treatment in Gurgaon with advanced diagnosis & personalized care plans. Consult Dr. Himanshu Verma for safe recovery.",
   keywords: [
     "pulmonary embolism treatment in Gurgaon",
     "pulmonary embolism treatment",

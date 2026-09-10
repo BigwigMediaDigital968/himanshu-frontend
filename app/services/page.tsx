@@ -34,7 +34,7 @@ export default function Services() {
 
       <meta
         name="description"
-        content="Expert vascular & endovascular surgery in Gurgaon - Varicose Veins, AV Fistula, Diabetic Foot, PAD & more. Consult Dr. Himanshu Verma at Fortis Hospital, Sector 44."
+        content="Vascular & endovascular treatments in Gurgaon - varicose veins, AV fistula, PAD, diabetic foot & more. Consult Dr. Himanshu Verma, Fortis."
       />
 
       <meta

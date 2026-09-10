@@ -81,16 +81,16 @@ export default function Gallery() {
     <div>
       {/* SEO Metadata tags */}
 
-      <title>Gallery | Vascular Workshops, Patient Care & Medical Events</title>
+      <title>Gallery | Vascular Workshops & Patient Care Events</title>
 
       <meta
         name="title"
-        content="Gallery | Vascular Workshops, Patient Care & Medical Events"
+        content="Gallery | Vascular Workshops & Patient Care Events"
       />
 
       <meta
         name="description"
-        content="Browse photos from vascular workshops, AV fistula care programs, medical conferences, patient awareness initiatives and community outreach activities led by Dr. Himanshu Verma."
+        content="Photos from vascular workshops, AV fistula care programs, medical conferences and patient outreach events led by Dr. Himanshu Verma."
       />
 
       <meta

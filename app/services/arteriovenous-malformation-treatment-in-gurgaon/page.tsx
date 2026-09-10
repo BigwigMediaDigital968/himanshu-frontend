@@ -11,9 +11,9 @@ const OG_IMAGE =
 
 export const metadata: Metadata = {
   title:
-    "Arteriovenous Malformation Treatment in Gurgaon | AVM Specialist Care",
+    "AVM Treatment in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Get expert arteriovenous malformation treatment in Gurgaon. Advanced AVM diagnosis & personalized care to prevent complications. Book a consultation today.",
+    "Expert arteriovenous malformation (AVM) treatment in Gurgaon. Advanced diagnosis & personalized care to prevent complications. Book now.",
   keywords: [
     "arteriovenous malformation treatment in Gurgaon",
     "AVM treatment",

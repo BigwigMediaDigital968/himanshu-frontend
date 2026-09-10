@@ -9,9 +9,9 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Limb Salvage Surgery in Gurgaon | Dr. Himanshu Verma",
+  title: "Limb Salvage Surgery in Gurgaon | Avoid Amputation",
   description:
-    "Avoid amputation with expert limb salvage surgery in Gurgaon by Dr. Himanshu Verma at Fortis. Advanced endovascular care for better recovery. Book consultation.",
+    "Avoid amputation with expert limb salvage surgery in Gurgaon. Advanced endovascular care by Dr. Himanshu Verma at Fortis. Book a consult.",
   keywords: [
     "Limb salvage surgery in Gurgaon",
     "diabetic foot treatment Gurgaon",

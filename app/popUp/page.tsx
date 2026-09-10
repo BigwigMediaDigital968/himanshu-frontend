@@ -12,6 +12,15 @@ import { MedicalSelect } from "../components/Popup";
 import { SERVICES } from "../data";
 import { div } from "framer-motion/client";
 
+export const metadata = {
+  title: "Book a Consultation | Dr. Himanshu Verma",
+  description:
+    "Request a consultation with Dr. Himanshu Verma, Vascular & Endovascular Surgeon at Fortis FMRI Gurgaon.",
+  alternates: {
+    canonical: "https://www.drhimanshuverma.com/request-callback",
+  },
+};
+
 const RequestCallbackPage = () => {
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
@@ -170,7 +179,11 @@ const RequestCallbackPage = () => {
                       Diabetic Foot
                     </option>
                   </select> */}
-                  <MedicalSelect services={SERVICES} disease={disease} setDisease={setDisease} />
+                  <MedicalSelect
+                    services={SERVICES}
+                    disease={disease}
+                    setDisease={setDisease}
+                  />
 
                   <textarea
                     className="w-full px-4 py-2.5 rounded-lg h-28 border resize-none"
@@ -200,13 +213,13 @@ const RequestCallbackPage = () => {
               // ✅ SUCCESS UI
               <div className="flex items-center justify-center h-full">
                 <div className="text-center py-16">
-                <h2 className="text-2xl font-bold text-green-600 mb-3">
-                  Appointment Booked 🎉
-                </h2>
-                <p className="text-gray-600">
-                  Thank you! Our medical team will contact you shortly.
-                </p>
-              </div>
+                  <h2 className="text-2xl font-bold text-green-600 mb-3">
+                    Appointment Booked 🎉
+                  </h2>
+                  <p className="text-gray-600">
+                    Thank you! Our medical team will contact you shortly.
+                  </p>
+                </div>
               </div>
             )}
           </div>

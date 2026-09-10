@@ -4,15 +4,15 @@ import { Metadata } from "next";
 
 const SITE_URL = "https://www.drhimanshuverma.com";
 
-const PAGE_URL = `${SITE_URL}/services/onco-vascular-surgery`;
+const PAGE_URL = `${SITE_URL}/services/onco-vascular-surgery-in-gurgaon`;
 
 const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "ONCO Vascular Surgery | Expert Cancer & Vascular Care by Specialist",
+  title: "Onco-Vascular Surgery in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Get advanced ONCO vascular surgery for safe cancer treatment involving blood vessels. Consult Dr. Himanshu for expert care, precise surgery & better recovery.",
+    "Advanced onco-vascular surgery in Gurgaon for cancers involving blood vessels. Expert care, precise surgery & better recovery with Dr. Himanshu Verma.",
   keywords: [
     "ONCO vascular surgery",
     "oncovascular surgery",

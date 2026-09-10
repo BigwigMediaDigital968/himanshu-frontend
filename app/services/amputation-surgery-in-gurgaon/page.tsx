@@ -11,9 +11,9 @@ const OG_IMAGE =
 
 export const metadata: Metadata = {
   title:
-    "Amputation Surgery in Gurgaon | Expert Amputation Surgery Doctor in Gurgaon",
+    "Amputation Surgery in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Looking for Amputation Surgery in Gurgaon? Get advanced care from an experienced Amputation Surgery doctor in Gurgaon. Safe procedures, expert evaluation, and complete rehabilitation support.",
+    "Advanced amputation surgery in Gurgaon - safe procedures, expert evaluation & complete rehabilitation support from Dr. Himanshu Verma.",
   keywords: [
     "Amputation Surgery in Gurgaon",
     "Amputation Surgery doctor in Gurgaon",

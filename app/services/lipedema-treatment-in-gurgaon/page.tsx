@@ -9,9 +9,9 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Lipedema Treatment in Gurgaon | Symptoms & Treatment",
+  title: "Lipedema Treatment in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Discover Lipedema Treatment in Gurgaon, its symptoms, causes, and treatments like MLD, compression therapy, and CDT to reduce swelling and pain.",
+    "Lipedema treatment in Gurgaon - symptoms, causes & treatments like MLD, compression therapy and CDT to reduce swelling and pain.",
   keywords: [
     "Lipedema Treatment in Gurgaon",
     "lipedema symptoms",

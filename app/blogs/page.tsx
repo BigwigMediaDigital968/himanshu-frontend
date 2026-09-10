@@ -62,17 +62,17 @@ export default function Blog() {
   return (
     <>
       <title>
-        Vascular Health Blogs | AV Fistula, Varicose Veins & Limb Care
+        Vascular Health Blogs | Dr. Himanshu Verma
       </title>
 
       <meta
         name="title"
-        content="Vascular Health Blogs | AV Fistula, Varicose Veins & Limb Care"
+        content="Vascular Health Blogs | Dr. Himanshu Verma"
       />
 
       <meta
         name="description"
-        content="Explore expert-written blogs by Dr. Himanshu Verma on vascular diseases, AV fistula care, varicose veins, peripheral artery disease (PAD), diabetic foot care and limb salvage awareness."
+        content="Expert blogs by Dr. Himanshu Verma on varicose veins, AV fistula, PAD, diabetic foot care and other vascular conditions."
       />
 
       <meta

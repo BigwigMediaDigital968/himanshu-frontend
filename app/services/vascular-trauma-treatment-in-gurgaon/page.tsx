@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 const SITE_URL = "https://www.drhimanshuverma.com";
 
-const PAGE_URL = `${SITE_URL}/services/vascular-trauma-treatment`;
+const PAGE_URL = `${SITE_URL}/services/vascular-trauma-treatment-in-gurgaon`;
 
 const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Vascular Trauma Treatment | Emergency Blood Vessel Injury Care",
+    title: "Vascular Trauma Treatment in Gurgaon | 24/7 Care",
     description:
-      "Expert emergency vascular trauma care for arterial and venous injuries with advanced surgical support.",
+      "Immediate vascular trauma treatment in Gurgaon for blood vessel injuries. Expert arterial & venous trauma care with 24/7 surgical support.",
     url: PAGE_URL,
     siteName: "Dr. Himanshu Verma",
     images: [

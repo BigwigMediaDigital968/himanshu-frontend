@@ -66,17 +66,17 @@ export default function Featured() {
   return (
     <>
       <title>
-        Dr. Himanshu Verma in Media | Awards, Features & Expert Talks
+        Dr. Himanshu Verma in Media | Awards & Features
       </title>
 
       <meta
         name="title"
-        content="Dr. Himanshu Verma in Media | Awards, Features & Expert Talks"
+        content="Dr. Himanshu Verma in Media | Awards & Features"
       />
 
       <meta
         name="description"
-        content="Explore media coverage, awards, interviews, conference appearances and recognitions highlighting Dr. Himanshu Verma’s contributions to vascular and endovascular surgery."
+        content="Media coverage, awards, interviews and conference talks highlighting Dr. Himanshu Verma's work in vascular & endovascular surgery."
       />
 
       <meta

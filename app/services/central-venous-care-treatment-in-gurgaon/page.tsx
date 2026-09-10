@@ -9,9 +9,9 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Central Venous Care in Gurgaon | Central Venous Catheter Treatment",
+  title: "Central Venous Care in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Expert Central Venous Care in Gurgaon including central venous catheter placement, angioplasty, and occlusion treatment by experienced vascular specialists.",
+    "Expert central venous care in Gurgaon - catheter placement, angioplasty & occlusion treatment by Dr. Himanshu Verma, vascular specialist.",
   keywords: [
     "Central Venous Care in Gurgaon",
     "Central Venous Catheter Gurgaon",

@@ -12,7 +12,7 @@ const OG_IMAGE =
 export const metadata: Metadata = {
   title: "AV Fistula Treatment in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Need AV fistula surgery in Gurgaon? Dr. Himanshu Verma at Fortis offers expert creation, repair & dialysis access care with high success rates. Book consultation.",
+    "Need AV fistula surgery in Gurgaon? Expert fistula creation & repair with high success rates from Dr. Himanshu Verma, Fortis FMRI. Book now.",
   keywords: [
     "AV fistula treatment in Gurgaon",
     "AV fistula surgery in Gurgaon",

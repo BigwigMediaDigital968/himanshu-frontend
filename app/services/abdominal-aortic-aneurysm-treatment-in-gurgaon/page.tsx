@@ -10,9 +10,9 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Abdominal Aortic Aneurysm Treatment in Gurgaon | Advanced AAA Care",
+  title: "AAA (Abdominal Aortic Aneurysm) Treatment in Gurgaon",
   description:
-    "Get expert abdominal aortic aneurysm treatment in Gurgaon with advanced EVAR procedures. Learn symptoms, diagnosis, and safe treatment options.",
+    "Expert abdominal aortic aneurysm (AAA) treatment in Gurgaon with advanced EVAR procedures. Learn symptoms, diagnosis & treatment options.",
   keywords: [
     "abdominal aortic aneurysm treatment",
     "abdominal aortic aneurysm treatment in Gurgaon",

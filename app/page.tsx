@@ -94,77 +94,6 @@ const faqs = [
   },
 ];
 
-// const services = [
-//   {
-//     title: "Varicose Veins, Chronic Venous Disorders & Lymphatic Care",
-//     desc: "Comprehensive management of varicose veins, venous insufficiency, and lymphatic disorders using minimally invasive techniques.",
-//     icon: Droplets,
-//     link: "/services/varicose-veins-treatment-in-gurgaon",
-//   },
-//   {
-//     title: "Pelvic Venous Disorders & Gonadal Vein Disease",
-//     desc: "Advanced diagnosis and treatment of pelvic congestion syndrome and gonadal vein disorders causing chronic pelvic pain.",
-//     icon: HeartPulse,
-//     link: "/services/pelvic-venous-disorder-treatment-in-gurgaon",
-//   },
-//   {
-//     title: "AV Fistula, Dialysis Access & Central Venous Care",
-//     desc: "Creation, maintenance, and salvage of dialysis access including AV fistulas, grafts, and central venous interventions.",
-//     icon: Syringe,
-//     link: "/services/av-fistula-treatment-in-gurgaon",
-//   },
-//   {
-//     title: "Peripheral Artery Disease (PAD) & Advanced Limb Salvage",
-//     desc: "Endovascular and surgical treatment of PAD focused on restoring blood flow and preventing limb loss.",
-//     icon: ShieldPlus,
-//   },
-//   {
-//     title: "Diabetic Foot, Wound Care & Minor Amputations",
-//     desc: "Specialized care for diabetic foot ulcers, chronic wounds, infection control, and limb-preserving procedures.",
-//     icon: Footprints,
-//   },
-//   {
-//     title: "Deep Vein Thrombosis (DVT) & Advanced Venous Interventions",
-//     desc: "Expert management of acute and chronic DVT using catheter-based thrombolysis and venous reconstruction.",
-//     icon: Activity,
-//   },
-//   {
-//     title: "Pulmonary Embolism (PE) Management",
-//     desc: "Rapid diagnosis and minimally invasive treatment of pulmonary embolism to reduce mortality and complications.",
-//     icon: Wind,
-//   },
-//   {
-//     title: "Aortic, Visceral & Renal Artery Interventions",
-//     desc: "Endovascular treatment of complex aortic, visceral, and renal artery diseases using advanced stent technologies.",
-//     icon: Network,
-//   },
-//   {
-//     title: "Onco-Vascular Surgery & Rare Vascular Disorders",
-//     desc: "Specialized vascular procedures in oncology patients and management of rare and complex vascular conditions.",
-//     icon: Microscope,
-//   },
-//   {
-//     title: "Vascular Trauma, Pediatric & Iatrogenic Vascular Injuries",
-//     desc: "Emergency and reconstructive care for traumatic, pediatric, and procedure-related vascular injuries.",
-//     icon: Ambulance,
-//   },
-//   {
-//     title: "AV Malformations & Complex Vascular Anomalies",
-//     desc: "Multidisciplinary treatment of arteriovenous malformations and congenital vascular anomalies.",
-//     icon: GitBranch,
-//   },
-//   {
-//     title: "ECMO Cannulation & Large-Bore Access Care",
-//     desc: "Expert cannulation and management of ECMO and other large-bore vascular access systems in critical care.",
-//     icon: Cpu,
-//   },
-//   {
-//     title: "Special Interests",
-//     desc: "Focused expertise in advanced vascular techniques, complex cases, and emerging endovascular innovations.",
-//     icon: Star,
-//   },
-// ];
-
 const services = [
   {
     title: "Varicose Veins",
@@ -401,31 +330,6 @@ const collaborations = [
     ),
     tags: ["AI-Enabled Diagnostics", "Remote Monitoring", "AV Fistula Care"],
   },
-  // {
-  //   name: "MedTech Innovations",
-  //   logo: partners,
-  //   desc: (
-  //     <>
-  //       Partnership focused on{" "}
-  //       <strong>advanced vascular imaging systems</strong> to enhance diagnostic
-  //       accuracy and procedural planning in complex arterial and venous
-  //       diseases.
-  //     </>
-  //   ),
-  //   tags: ["Vascular Imaging", "Endovascular Planning", "Precision Care"],
-  // },
-  // {
-  //   name: "VascuSense Health",
-  //   logo: partners,
-  //   desc: (
-  //     <>
-  //       Joint research on <strong>wearable vascular monitoring devices</strong>{" "}
-  //       aimed at early detection of peripheral arterial disease and
-  //       post-procedure follow-up.
-  //     </>
-  //   ),
-  //   tags: ["Wearable Health Tech", "PAD Monitoring", "Preventive Care"],
-  // },
 ];
 
 const faqSchema = {
@@ -572,7 +476,7 @@ export default function Home() {
       />
       <meta
         name="description"
-        content="Vascular Surgeon at Fortis Gurgaon. 17+ years experience, 5000+ surgeries. Minimally invasive treatment. Book your consultation today."
+        content="Vascular Surgeon at Fortis Gurgaon, 17+ yrs experience, 5000+ surgeries. Minimally invasive care for varicose veins, PAD & AV fistula."
       />
 
       <meta

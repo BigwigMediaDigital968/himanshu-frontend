@@ -10,10 +10,10 @@ const OG_IMAGE =
 
 export const metadata: Metadata = {
   title:
-    "Chronic Venous Insufficiency Treatment in Gurgaon | Dr. Himanshu Verma",
+    "Chronic Venous Insufficiency Treatment | Gurgaon",
 
   description:
-    "Expert chronic venous insufficiency treatment in Gurgaon by Dr. Himanshu Verma at Fortis Memorial Research Institute. Specialist in EVLT, RFA, venous ulcer management, and compression therapy.",
+    "Chronic venous insufficiency treatment in Gurgaon by Dr. Himanshu Verma, Fortis FMRI. EVLT, RFA, venous ulcer care & compression therapy.",
 
   keywords: [
     "chronic venous insufficiency treatment Gurgaon",

@@ -324,18 +324,17 @@ export default function About() {
       {/* SEO Meta Tags */}
 
       <title>
-        About Dr. Himanshu Verma | Vascular & Endovascular Surgeon, Fortis FMRI
-        Gurgaon
+        About Dr. Himanshu Verma | Vascular Surgeon, Fortis
       </title>
 
       <meta
         name="title"
-        content="About Dr. Himanshu Verma | Vascular & Endovascular Surgeon, Fortis FMRI Gurgaon"
+        content="About Dr. Himanshu Verma | Vascular Surgeon, Fortis"
       />
 
       <meta
         name="description"
-        content="Learn about Dr. Himanshu Verma, Director – Vascular & Endovascular Surgery at Fortis Memorial Research Institute (FMRI), Gurgaon. With 17+ years of experience, he specializes in advanced vascular, endovascular and limb-saving procedures."
+        content="Dr. Himanshu Verma, Director - Vascular & Endovascular Surgery at Fortis FMRI Gurgaon. 17+ years experience in advanced limb-saving procedures."
       />
 
       <meta

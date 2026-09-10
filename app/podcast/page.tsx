@@ -78,6 +78,15 @@ const podcasts: Podcast[] = [
   },
 ];
 
+export const metadata = {
+  title:
+    "Vascular Health Podcast | Dr. Himanshu Verma",
+  description: "Expert insights on varicose veins, AV fistula, PAD & limb preservation, explained in a patient-friendly podcast by Dr. Himanshu Verma.",
+  alternates: {
+    canonical: "https://www.drhimanshuverma.com/podcast",
+  },
+}
+
 export default function Podcast() {
   const [openPopup, setOpenPopup] = useState(false);
 

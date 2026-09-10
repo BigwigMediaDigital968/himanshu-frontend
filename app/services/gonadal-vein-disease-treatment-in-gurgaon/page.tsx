@@ -11,7 +11,7 @@ const OG_IMAGE =
 export const metadata: Metadata = {
   title: "Gonadal Vein Disease Treatment in Gurgaon | Dr. Himanshu Verma",
   description:
-    "Expert treatment for ovarian vein reflux & varicocele in Gurgaon by Dr. Himanshu Verma at Fortis. Advanced embolization for lasting pain relief. Schedule appointment today.",
+    "Expert treatment for ovarian vein reflux & varicocele in Gurgaon - advanced embolization for lasting pain relief. Dr. Himanshu Verma.",
   keywords: [
     "Gonadal Vein Disease Treatment in Gurgaon",
     "Gonadal vein disease treatment",

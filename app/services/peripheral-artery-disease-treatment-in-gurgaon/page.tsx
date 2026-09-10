@@ -9,9 +9,9 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Peripheral Artery Disease Treatment in Gurgaon | Dr. Himanshu",
+  title: "PAD (Peripheral Artery Disease) Treatment Gurgaon",
   description:
-    "Get advanced PAD treatment in Gurgaon by Dr. Himanshu Verma at Fortis. Angioplasty, stenting & bypass to restore blood flow & prevent limb loss. Consult today.",
+    "Advanced PAD treatment in Gurgaon - angioplasty, stenting & bypass to restore blood flow & prevent limb loss. Consult Dr. Himanshu Verma.",
   keywords: [
     "Peripheral Artery Disease treatment in Gurgaon",
     "PAD treatment Gurgaon",

@@ -9,9 +9,9 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Pelvic Venous Disorders Treatment in Gurgaon | Dr. Himanshu Verma",
+  title: "Pelvic Venous Disorder Treatment in Gurgaon",
   description:
-    "Chronic pelvic pain? Consult Dr. Himanshu Verma in Gurgaon at Fortis for minimally invasive embolization treatment for pelvic venous disorders. Safe & effective care. Book now.",
+    "Chronic pelvic pain? Dr. Himanshu Verma offers minimally invasive embolization treatment for pelvic venous disorders in Gurgaon. Book now.",
   keywords: [
     "pelvic venous disorders treatment Gurgaon",
     "pelvic congestion syndrome treatment Gurgaon",
