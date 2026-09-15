@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { redirect, notFound } from "next/navigation";
 import BlogClient from "./BlogClient";
 
 const BASE_URL = "https://www.drhimanshuverma.com";
@@ -28,19 +29,25 @@ interface RelatedBlogType {
   datePublished: string;
 }
 
-async function getBlog(slug: string): Promise<BlogType> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/blog/viewblog`, {
+type BlogLookupResponse =
+  | { redirected: false; blog: BlogType }
+  | { redirected: true; slug: string };
+
+async function getBlogOrRedirect(slug: string): Promise<BlogType> {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/blog/${slug}`, {
     cache: "no-store",
   });
 
+  if (res.status === 404) notFound();
   if (!res.ok) throw new Error("Failed to fetch blog");
 
-  const blogs: BlogType[] = await res.json();
-  const found = blogs.find((b) => b.slug === slug);
+  const data: BlogLookupResponse = await res.json();
 
-  if (!found) throw new Error("Blog not found");
+  if (data.redirected) {
+    redirect(`/blogs/${data.slug}`);
+  }
 
-  return found;
+  return data.blog;
 }
 
 async function getRelatedBlogs(slug: string): Promise<RelatedBlogType[]> {
@@ -60,7 +67,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params; // ✅ REQUIRED in Next 15
-  const blog = await getBlog(slug);
+  const blog = await getBlogOrRedirect(slug);
 
   return {
     title: blog.title,
@@ -89,7 +96,7 @@ export default async function BlogDetails({
 }) {
   const { slug } = await params; // ✅ REQUIRED in Next 15
 
-  const blog = await getBlog(slug);
+  const blog = await getBlogOrRedirect(slug);
   const relatedBlogs = await getRelatedBlogs(slug);
 
   const articleSchema = {
