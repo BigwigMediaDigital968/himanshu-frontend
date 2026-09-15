@@ -11,15 +11,9 @@ import Footer from "../components/Footer";
 import { MedicalSelect } from "../components/Popup";
 import { SERVICES } from "../data";
 import { div } from "framer-motion/client";
+import Head from "next/head";
 
-export const metadata = {
-  title: "Book a Consultation | Dr. Himanshu Verma",
-  description:
-    "Request a consultation with Dr. Himanshu Verma, Vascular & Endovascular Surgeon at Fortis FMRI Gurgaon.",
-  alternates: {
-    canonical: "https://www.drhimanshuverma.com/request-callback",
-  },
-};
+
 
 const RequestCallbackPage = () => {
   const [phone, setPhone] = useState("");
@@ -102,6 +96,19 @@ const RequestCallbackPage = () => {
 
   return (
     <>
+     <Head>
+        <title>Book a Consultation | Dr. Himanshu Verma</title>
+
+        <meta
+          name="description"
+          content="Request a consultation with Dr. Himanshu Verma, Vascular & Endovascular Surgeon at Fortis FMRI Gurgaon."
+        />
+
+        <link
+          rel="canonical"
+          href="https://www.drhimanshuverma.com/request-callback"
+        />
+      </Head>
       <Nav />
 
       <main className="min-h-screen flex items-center justify-center bg-gray-50 py-16 px-4">
