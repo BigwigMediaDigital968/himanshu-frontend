@@ -18,6 +18,33 @@ import ButtonFill from "./Button";
 import Link from "next/link";
 import { useState } from "react";
 
+const socialLinks = [
+  {
+    label: "Facebook",
+    link: "https://www.facebook.com/",
+    icon: FaFacebookF,
+    className: "hover:text-blue-600",
+  },
+  {
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/",
+    icon: FaLinkedinIn,
+    className: "hover:text-blue-400",
+  },
+  {
+    label: "YouTube",
+    link: "https://www.youtube.com/",
+    icon: FaYoutube,
+    className: "hover:text-red-500",
+  },
+  {
+    label: "Instagram",
+    link: "https://www.instagram.com/",
+    icon: FaInstagram,
+    className: "hover:text-pink-400",
+  },
+];
+
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
@@ -161,10 +188,24 @@ export default function Footer() {
           </h2>
 
           <div className="flex items-center justify-center gap-4 mb-8">
-            <FaFacebookF className="text-xl cursor-pointer hover:text-blue-600" />
-            <FaLinkedinIn className="text-xl cursor-pointer hover:text-blue-400" />
-            <FaYoutube className="text-xl cursor-pointer hover:text-red-500" />
-            <FaInstagram className="text-xl cursor-pointer hover:text-pink-400" />
+            {" "}
+            {socialLinks.map((social) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={social.label}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  title={social.label}
+                  className={`text-xl cursor-pointer transition-colors duration-300 ${social.className}`}
+                >
+                  {" "}
+                  <Icon />{" "}
+                </a>
+              );
+            })}{" "}
           </div>
         </div>
 
