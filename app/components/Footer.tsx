@@ -21,25 +21,25 @@ import { useState } from "react";
 const socialLinks = [
   {
     label: "Facebook",
-    link: "https://www.facebook.com/",
+    link: "https://www.facebook.com/vermavascular",
     icon: FaFacebookF,
     className: "hover:text-blue-600",
   },
   {
     label: "LinkedIn",
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/in/drhimanshuverma/",
     icon: FaLinkedinIn,
     className: "hover:text-blue-400",
   },
   {
     label: "YouTube",
-    link: "https://www.youtube.com/",
+    link: "https://www.youtube.com/@doctalkshow",
     icon: FaYoutube,
     className: "hover:text-red-500",
   },
   {
     label: "Instagram",
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/drhimanshu_vascular/",
     icon: FaInstagram,
     className: "hover:text-pink-400",
   },
