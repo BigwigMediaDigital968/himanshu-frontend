@@ -130,7 +130,7 @@ export default function BlogClient({
       </section>
 
       {blog.coverImage && (
-        <div className="relative w-11/12 md:w-5/6 mx-auto h-[40vh] md:h-[60vh] lg:h-[100vh] rounded-xl overflow-hidden">
+        <div className="relative w-11/12 md:w-5/6 mx-auto aspect-video rounded-xl overflow-hidden">
           <Image
             src={blog.coverImage}
             alt={blog.coverImageAlt}
