@@ -34,7 +34,7 @@ export default function UserInfoCarouselPopup() {
     return (
       <div className="relative h-full w-full overflow-hidden items-center justify-center flex">
         <img
-          src={popup.src}
+          src={"https://res.cloudinary.com/dyum0r6gf/image/upload/v1768991017/himanshu/images/Untitled%20design.png"}
           alt="popup"
           className="absolute inset-0 w-full h-full object-cover"
         />
