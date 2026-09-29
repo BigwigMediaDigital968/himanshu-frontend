@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import PopupForm from "@/app/components/Popup";
 import ButtonFill from "@/app/components/Button";
 import {
@@ -690,6 +691,16 @@ export default function AVFistulaContent() {
           <p className="text-gray-600 text-sm mb-4">
             Most fistulas fail gradually and can be rescued if detected early.
             Common causes include:
+          </p>
+          <p className="text-gray-600 text-sm mb-4">
+            Understanding{" "}
+            <Link
+              href="/blogs/why-does-an-av-fistula-fail-causes-warning-signs"
+              className="text-blue-500 font-medium hover:text-blue-600 hover:underline"
+            >
+              AV fistula failure causes and warning signs
+            </Link>{" "}
+            can help in recognising access problems early.
           </p>
           <ul className="space-y-2">
             {[

@@ -475,6 +475,16 @@ export default function DialysisAccessContent() {
             </div>
           ))}
         </div>
+        <p className="text-gray-600 text-sm mt-4">
+          These changes may be associated with{" "}
+          <Link
+            href="/blogs/why-does-an-av-fistula-fail-causes-warning-signs"
+            className="text-blue-500 font-medium hover:text-blue-600 hover:underline"
+          >
+            warning signs of AV fistula failure
+          </Link>{" "}
+          and should not be ignored.
+        </p>
       </div>
 
       {/* ── COMPARISON TABLE ── */}

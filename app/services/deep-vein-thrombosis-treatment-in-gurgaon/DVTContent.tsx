@@ -12,6 +12,7 @@ import {
   ShieldCheck,
   Zap,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function DVTContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -225,6 +226,9 @@ export default function DVTContent() {
               to the walls of your veins, or increase the clotting of blood —
               which may require proper blood clot treatment to avoid
               complications.
+            </p>
+            <p className="text-gray-700 text-sm leading-relaxed mb-4">
+              For a detailed explanation, read our guide to <Link className="text-blue-600 hover:underline font-medium" href={"https://www.drhimanshuverma.com/blogs/dvt-causes-risk-factors"}>DVT causes and risk factors</Link>.
             </p>
             <ul className="space-y-2">
               {[
