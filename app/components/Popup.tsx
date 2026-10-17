@@ -42,6 +42,17 @@ const PopupForm: React.FC<PopupFormProps> = ({ open, onClose }) => {
     }
   }, [open]);
 
+  // Tell the promo popup (PopUpHandler) once the form has been dismissed
+  const wasOpen = useRef(false);
+  useEffect(() => {
+    if (open) {
+      wasOpen.current = true;
+    } else if (wasOpen.current) {
+      wasOpen.current = false;
+      window.dispatchEvent(new Event("consultation-form-closed"));
+    }
+  }, [open]);
+
   if (!open) return null;
 
   // ---------------------------------
