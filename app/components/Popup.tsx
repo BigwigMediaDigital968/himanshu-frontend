@@ -25,7 +25,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ open, onClose }) => {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState(false);
+  // const [success, setSuccess] = useState(false); // replaced by /thank-you page
 
   useEffect(() => {
     if (open) {
@@ -38,7 +38,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ open, onClose }) => {
       setPdf(null);
       setError("");
       setLoading(false);
-      setSuccess(false);
+      // setSuccess(false);
     }
   }, [open]);
 
@@ -110,7 +110,8 @@ const PopupForm: React.FC<PopupFormProps> = ({ open, onClose }) => {
       const data = await res.json();
       if (!res.ok) throw new Error(data.message);
 
-      setSuccess(true);
+      // setSuccess(true); // replaced by /thank-you redirect
+      window.location.href = "/thank-you";
     } catch (err: any) {
       setError(err.message || "Failed to submit appointment");
     } finally {
@@ -136,7 +137,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ open, onClose }) => {
 
         {/* RIGHT */}
         <div className="w-full md:w-1/2 p-8 md:min-h-[600px]">
-          {!success ? (
+          {/* {!success ? ( */}
             <>
               <h2 className="text-2xl font-bold mb-2 text-(--med-primary)">
                 Request a Consultation
@@ -220,6 +221,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ open, onClose }) => {
                 />
               </form>
             </>
+          {/* Success state removed: redirects to /thank-you instead
           ) : (
                           <div className="flex items-center justify-center h-full">
             
@@ -234,7 +236,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ open, onClose }) => {
               <ButtonFill text="Close" className="w-full" onClick={onClose} />
             </div>
             </div>
-          )}
+          {/* )} */}
         </div>
       </div>
     </div>

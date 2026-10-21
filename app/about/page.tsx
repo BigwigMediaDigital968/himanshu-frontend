@@ -295,6 +295,7 @@ export default function About() {
       if (!res.ok) throw new Error(data.message);
 
       setSuccess(true); // ✅ close form
+      window.location.href = "/thank-you";
     } catch (err: any) {
       setError(err.message || "Invalid OTP");
     } finally {

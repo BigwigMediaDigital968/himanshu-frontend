@@ -95,6 +95,7 @@ export default function SidebarSimpleForm() {
       );
 
       setStatusMessage("Thank you! Our medical team will contact you shortly.");
+      window.location.href = "/thank-you";
 
       setFormData({
         name: "",

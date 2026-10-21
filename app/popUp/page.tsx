@@ -87,6 +87,7 @@ const RequestCallbackPage = () => {
       if (!res.ok) throw new Error(data.message);
 
       setSuccess(true);
+      window.location.href = "/thank-you";
     } catch (err: any) {
       setError(err.message || "Failed to submit appointment");
     } finally {

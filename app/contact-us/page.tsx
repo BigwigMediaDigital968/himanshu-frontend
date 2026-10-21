@@ -81,6 +81,7 @@ export default function About() {
       if (!res.ok) throw new Error(data.message);
 
       setSuccess(true);
+      window.location.href = "/thank-you";
     } catch (err: any) {
       setError(err.message || "Submission failed");
     } finally {
@@ -145,9 +146,13 @@ export default function About() {
                     Address
                   </p>
                   <p className="text-[var(--med-text)]/70 text-sm">
-                    Lorem Ipsum Street, Sector 00,
+                    Fortis Memorial Research Centre,
                     <br />
-                    New Delhi, India
+                    Opposite HUDA City Centre,
+                    <br />
+                    Sector 44, Gurugram,
+                    <br />
+                    Haryana 122003
                   </p>
                 </div>
               </div>
@@ -160,7 +165,7 @@ export default function About() {
                 <div>
                   <p className="font-semibold text-[var(--med-text)]">Phone</p>
                   <p className="text-[var(--med-text)]/70 text-sm">
-                    +91 00000 00000
+                    +91 88268 33598
                   </p>
                 </div>
               </div>
@@ -173,7 +178,7 @@ export default function About() {
                 <div>
                   <p className="font-semibold text-[var(--med-text)]">Email</p>
                   <p className="text-[var(--med-text)]/70 text-sm">
-                    info@example.com
+                    varenyamvascular@gmail.com
                   </p>
                 </div>
               </div>
