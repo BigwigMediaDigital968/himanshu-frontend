@@ -246,7 +246,7 @@ export default function Footer() {
 
           <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
             <IoCallOutline className="text-xl" />
-            <p>88268 33598</p>
+            <p><a href="tel:+918826833598">88268 33598</a></p>
           </div>
           <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
             <IoLogoWhatsapp className="text-xl" />

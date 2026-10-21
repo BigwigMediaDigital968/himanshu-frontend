@@ -40,12 +40,12 @@ export default function FloatingContactActions() {
       {/* DESKTOP */}
       <div className="hidden md:block fixed bottom-0 right-0 z-50">
         <div className="flex items-center gap-5 bg-[var(--med-primary)] rounded-tl-3xl px-5 py-3 shadow-lg">
-          <a href="tel:+8826833598" className="icon-shake text-white">
+          <a href="tel:+918826833598" className="icon-shake text-white">
             <Phone size={18} />
           </a>
 
           <a
-            href="https://wa.me/8826833598"
+            href="https://wa.me/918826833598"
             target="_blank"
             rel="noopener noreferrer"
             className="icon-shake text-white hover:text-green-400"
@@ -54,7 +54,7 @@ export default function FloatingContactActions() {
           </a>
 
           <a
-            href="mailto:support@bigiwgmediadigital.com"
+            href="mailto:varenyamvascular@gmail.com"
             className="icon-shake text-white hover:text-red-600"
           >
             <Mail size={18} />
