@@ -77,7 +77,7 @@ export default function RootLayout({
         />
 
         {/* Google Tag Manager (head) */}
-        {/* <Script
+        <Script
           id="gtm-init"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -89,7 +89,7 @@ export default function RootLayout({
               })(window,document,'script','dataLayer','${GTM_ID}');
             `,
           }}
-        /> */}
+        />
 
         {/* <!-- Google tag (gtag.js) --> */}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-18527639340"></Script>
