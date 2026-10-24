@@ -11,9 +11,9 @@ const OG_IMAGE =
 
 export const metadata: Metadata = {
   title:
-    "DVT (Deep Vein Thrombosis) Treatment in Gurgaon",
+    "DVT Treatment in Gurgaon | Diagnosis & Care",
   description:
-    "Advanced deep vein thrombosis (DVT) treatment in Gurgaon - early diagnosis, blood clot care & personalized recovery plans. Dr. Himanshu Verma.",
+    "Looking for DVT treatment in Gurgaon? Dr. Himanshu Verma provides evaluation for deep vein thrombosis and discusses suitable treatment options based on each patient's condition.",
   keywords: [
     "Deep Vein Thrombosis Treatment in Gurgaon",
     "DVT Treatment in Gurgaon",

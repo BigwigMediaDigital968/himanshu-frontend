@@ -10,9 +10,9 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "AAA (Abdominal Aortic Aneurysm) Treatment in Gurgaon",
+  title: "Abdominal Aortic Aneurysm Treatment in Gurgaon | Expert Care",
   description:
-    "Expert abdominal aortic aneurysm (AAA) treatment in Gurgaon with advanced EVAR procedures. Learn symptoms, diagnosis & treatment options.",
+    "Explore abdominal aortic aneurysm treatment in Gurgaon with Dr. Himanshu Verma. Learn about specialist assessment and repair options, including EVAR when appropriate.",
   keywords: [
     "abdominal aortic aneurysm treatment",
     "abdominal aortic aneurysm treatment in Gurgaon",

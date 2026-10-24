@@ -9,9 +9,9 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Diabetic Foot Treatment in Gurgaon | Dr. Himanshu",
+  title: "Diabetic Foot Treatment in Gurgaon - Dr. Himanshu Verma",
   description:
-    "Expert diabetic foot treatment in Gurgaon - advanced wound care & revascularization to prevent amputation. Book with Dr. Himanshu Verma.",
+    "Get diabetic foot treatment in Gurgaon with Dr. Himanshu Verma. Learn about diabetic foot ulcers, wound care, infection management and circulation problems.",
   keywords: [
     "Diabetic Foot Treatment in Gurgaon",
     "diabetic foot specialist in Gurgaon",

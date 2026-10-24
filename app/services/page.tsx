@@ -25,16 +25,16 @@ export default function Services() {
 
   return (
     <>
-      <title>Vascular Surgery Treatments in Gurgaon | Dr. Himanshu Verma</title>
+      <title>Vascular Surgery Treatments in Gurgaon | Specialist Care</title>
 
       <meta
         name="title"
-        content="Vascular Surgery Treatments in Gurgaon | Dr. Himanshu Verma"
+        content="Vascular Surgery Treatments in Gurgaon | Specialist Care"
       />
 
       <meta
         name="description"
-        content="Vascular & endovascular treatments in Gurgaon - varicose veins, AV fistula, PAD, diabetic foot & more. Consult Dr. Himanshu Verma, Fortis."
+        content="Explore vascular surgery treatments in Gurgaon with Dr. Himanshu Verma. Learn about care options for vein disorders, blood clots and circulation problems."
       />
 
       <meta

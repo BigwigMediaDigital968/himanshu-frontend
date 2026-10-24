@@ -9,9 +9,9 @@ const OG_IMAGE =
   "https://res.cloudinary.com/dyum0r6gf/image/upload/v1769153488/himanshu/images/DSC05964.jpg";
 
 export const metadata: Metadata = {
-  title: "Dialysis Access Surgery in Gurgaon | Dr. Himanshu",
+  title: "Dialysis Access Surgery in Gurgaon | AV Fistula Care",
   description:
-    "Expert dialysis access surgery in Gurgaon - AV graft, AV fistula & permacath care by Dr. Himanshu Verma, Director Vascular Surgery, Fortis FMRI.",
+    "Learn about dialysis access surgery in Gurgaon with Dr. Himanshu Verma. Explore AV fistula creation, access evaluation and treatment options for dialysis access problems.",
   keywords: [
     "Dialysis Access Surgeon in Gurgaon",
     "AV Fistula Gurgaon",

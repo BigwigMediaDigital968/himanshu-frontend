@@ -87,9 +87,9 @@ const faqSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Varicose Veins Treatment in Gurgaon | Dr. Himanshu",
+  title: "Varicose Veins Treatment in Gurgaon | Expert Care",
   description:
-    "Minimally invasive varicose veins treatment in Gurgaon - laser, RFA & quick recovery with minimal downtime. Book with Dr. Himanshu Verma.",
+    "Get varicose veins treatment in Gurgaon with Dr. Himanshu Verma. Learn about treatment options for enlarged veins, leg pain and swelling.",
   keywords: [
     "varicose veins treatment in Gurgaon",
     "varicose vein specialist in Gurgaon",
