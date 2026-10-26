@@ -4,7 +4,7 @@ import Nav from "./components/Navbar";
 import HeroCarousel from "./components/Hero";
 import ButtonFill from "./components/Button";
 import PopupForm from "./components/Popup";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Script from "next/script";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -373,6 +373,8 @@ const organizationSchema = {
 
 export default function Home() {
   const [openPopup, setOpenPopup] = useState(false);
+  // Only the auto-opened lead form (not button-opened ones) triggers the promo popup
+  const autoPopupRef = useRef(false);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   // INITIALIZE AOS
@@ -384,6 +386,7 @@ export default function Home() {
     });
 
     const timer = setTimeout(() => {
+      autoPopupRef.current = true;
       setOpenPopup(true);
     }, 1500);
 
@@ -998,7 +1001,16 @@ export default function Home() {
       <ServiceTable />
       <Footer />
 
-      <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />
+      <PopupForm
+        open={openPopup}
+        onClose={() => {
+          setOpenPopup(false);
+          if (autoPopupRef.current) {
+            autoPopupRef.current = false;
+            window.dispatchEvent(new Event("consultation-form-closed"));
+          }
+        }}
+      />
       <FloatingContactActions />
       {/* <UserInfoCarouselPopup /> */}
     </div>

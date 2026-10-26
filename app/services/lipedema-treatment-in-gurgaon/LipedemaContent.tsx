@@ -3,15 +3,19 @@
 import { useState } from "react";
 import PopupForm from "@/app/components/Popup";
 import ButtonFill from "@/app/components/Button";
+import InlineCTA from "@/app/components/InlineCTA";
+import CTAButtons from "@/app/components/CTAButtons";
 import {
   ChevronDown,
-  AlertCircle,
   Activity,
   Stethoscope,
   Wind,
   ShieldCheck,
 } from "lucide-react";
 import TestimonialsServices from "@/app/components/TestimonialService";
+
+const LIPEDEMA_WHATSAPP_MESSAGE =
+  "Hello Dr. Himanshu Verma, I would like to consult about lipedema / lymphatic care treatment and book an appointment.";
 
 export default function LipedemaContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -335,39 +339,45 @@ export default function LipedemaContent() {
 
   return (
     <>
-      {/* MAIN TITLE */}
-      <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)] mb-8">
-        Lipedema Treatment in Gurgaon | Symptoms &amp; Treatment
-      </h2>
-
-      {/* INTRO */}
-      <div className="space-y-4 mb-10">
-        <p className="text-gray-700 leading-relaxed">
+      {/* HERO */}
+      <div className="relative rounded-2xl overflow-hidden bg-[var(--med-primary)] mb-12 px-6 py-10 md:px-12 md:py-14">
+        <div
+          className="absolute inset-0 opacity-5 pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 70% 50%, white 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+        <p className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-3">
+          Vascular Specialist · Gurgaon
+        </p>
+        <h2 className="text-3xl font-bold text-white leading-tight mb-4">
+          Lipedema Treatment in Gurgaon | Symptoms &amp; Treatment
+        </h2>
+        <p className="text-white/70 text-sm md:text-base w-full mb-2">
           Do your legs feel heavy, swollen, and painful despite eating right and
           exercising regularly? You may be experiencing Lipedema, a chronic
           medical condition that is frequently misdiagnosed across India.
-        </p>{" "}
-        <p className="text-gray-700 leading-relaxed">
+        </p>
+        <p className="text-white/70 text-sm md:text-base mb-2">
           Dr. Himanshu Verma, MCh Vascular Surgeon and Director of Vascular and
           Endovascular Surgery at Fortis FMRI, Gurgaon, provides specialized
           Lipedema Treatment in Gurgaon with over 17 years of clinical
           experience in managing complex lymphatic and vascular disorders.
         </p>
-        {/* Inline CTA */}
-        <div className="flex items-start gap-3 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl px-5 py-4">
-          <AlertCircle
-            size={18}
-            className="text-[var(--med-primary)] mt-0.5 flex-shrink-0"
-          />
-          <p className="text-gray-700 leading-relaxed text-sm">
-            If you are experiencing symptoms that are affecting your daily life,
-            do not ignore them.{" "}
-            <span className="font-semibold text-[var(--med-primary)]">
-              Book a consultation with Dr. Himanshu
-            </span>{" "}
-            for a proper evaluation and personalised care plan.
-          </p>
-        </div>
+        <p className="text-white/70 text-sm md:text-base mb-8">
+          If you are experiencing symptoms that are affecting your daily life,
+          do not ignore them.{" "}
+          Book a consultation with Dr. Himanshu
+          for a proper evaluation and personalised care plan.
+        </p>
+        <CTAButtons
+          onBook={() => setOpenPopup(true)}
+          buttons={["book", "call", "whatsapp"]}
+          bookLabel="Book a Consultation"
+          className="mb-6"
+        />
       </div>
 
       <div className="h-px bg-gray-100 mb-10" />
@@ -468,16 +478,19 @@ export default function LipedemaContent() {
           ))}
         </div>
 
-        <p className="text-gray-700 leading-relaxed">
-          If you are unsure of your stage, a clinical assessment with Dr.
-          Himanshu Verma will provide a clear diagnosis and a personalized care
-          plan.
-        </p>
+        <div className="rounded-2xl bg-[var(--med-primary)] text-white px-6 py-5 justify-between gap-4 flex items-center">
+          <p className="text-white leading-relaxed max-w-xl">
+            If you are unsure of your stage, a clinical assessment with Dr.
+            Himanshu Verma will provide a clear diagnosis and a personalized care
+            plan.
+          </p>
+          <div className="flex justify-center">
+            <ButtonFill className="border border-white text-white" onClick={() => setOpenPopup(true)} text="Book Assessment" />
+          </div>
+        </div>
       </div>
 
-      <div className="flex mb-5 justify-center">
-        <ButtonFill onClick={() => setOpenPopup(true)} text="Book Assessment" />
-      </div>
+
 
       <div className="h-px bg-gray-100 mb-5" />
       <img
@@ -523,6 +536,14 @@ export default function LipedemaContent() {
           evaluation by a lymphatic specialist is strongly advised.
         </p>
       </div>
+
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={LIPEDEMA_WHATSAPP_MESSAGE}
+        title="Recognise These Symptoms?"
+        subtitle="A specialist assessment can confirm whether it is lipedema or a lymphatic condition."
+        button="Book an Assessment"
+      />
 
       <div className="h-px bg-gray-100 mb-10" />
 
@@ -664,6 +685,14 @@ export default function LipedemaContent() {
           title="Words of our patients"
         />
       </div>
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={LIPEDEMA_WHATSAPP_MESSAGE}
+        title="Ready to Start Your Treatment Plan?"
+        subtitle="Get a personalised plan from Dr. Himanshu Verma at Fortis Memorial Research Institute, Gurgaon."
+        button="Schedule a Consultation"
+      />
+
       <div className="h-px bg-gray-100 mb-10" />
 
       {/* FAQ */}
@@ -692,16 +721,14 @@ export default function LipedemaContent() {
 
                   <ChevronDown
                     size={22}
-                    className={`text-[var(--med-primary)] transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
+                    className={`text-[var(--med-primary)] transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
                 <div
-                  className={`px-6 overflow-hidden transition-all duration-300 ${
-                    isOpen ? "max-h-52 pb-5" : "max-h-0"
-                  }`}
+                  className={`px-6 overflow-hidden transition-all duration-300 ${isOpen ? "max-h-52 pb-5" : "max-h-0"
+                    }`}
                 >
                   <p className="text-gray-700 leading-relaxed">{faq.a}</p>
                 </div>
@@ -712,10 +739,13 @@ export default function LipedemaContent() {
       </div>
 
       {/* FINAL CTA */}
-      <div className="mt-12 pt-8 border-t border-gray-100 flex justify-center">
-        <ButtonFill
-          onClick={() => setOpenPopup(true)}
-          text="Schedule an Appointment"
+      <div className="mt-12 pt-8 border-t border-gray-100">
+        <CTAButtons
+          variant="onLight"
+          onBook={() => setOpenPopup(true)}
+          bookLabel="Schedule an Appointment"
+          whatsappMessage={LIPEDEMA_WHATSAPP_MESSAGE}
+          className="justify-center"
         />
       </div>
 

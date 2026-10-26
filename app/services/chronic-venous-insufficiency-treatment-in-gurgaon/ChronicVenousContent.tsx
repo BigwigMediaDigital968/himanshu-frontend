@@ -3,6 +3,8 @@
 import { useState } from "react";
 import PopupForm from "@/app/components/Popup";
 import ButtonFill from "@/app/components/Button";
+import InlineCTA from "@/app/components/InlineCTA";
+import CTAButtons from "@/app/components/CTAButtons";
 import {
   ChevronDown,
   CheckCircle2,
@@ -13,6 +15,9 @@ import {
   HeartPulse,
   Quote,
 } from "lucide-react";
+
+const CVI_WHATSAPP_MESSAGE =
+  "Hello Dr. Himanshu Verma, I would like to know about chronic venous insufficiency treatment and book a consultation.";
 
 export default function ChronicVenousContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -311,7 +316,7 @@ export default function ChronicVenousContent() {
       {/* ── HERO ── */}
       <div className="relative rounded-2xl overflow-hidden bg-[var(--med-primary)] mb-12 px-6 py-10 md:px-12 md:py-14">
         <div
-          className="absolute inset-0 opacity-5"
+          className="absolute inset-0 opacity-5 pointer-events-none"
           style={{
             backgroundImage:
               "radial-gradient(circle at 70% 50%, white 1px, transparent 1px)",
@@ -329,12 +334,18 @@ export default function ChronicVenousContent() {
           CVI Treatment in Gurgaon can help prevent the condition from
           worsening.
         </p>
-        {/* <button
-          onClick={() => setOpenPopup(true)}
-          className="inline-flex items-center gap-2 bg-white text-[var(--med-primary)] font-semibold px-6 py-3 rounded-full text-sm hover:bg-white/90 transition-all"
-        >
-          Book a Consultation with Dr. Himanshu Verma
-        </button> */}
+        <CTAButtons
+          onBook={() => setOpenPopup(true)}
+          bookLabel="Book a Consultation"
+          whatsappMessage={CVI_WHATSAPP_MESSAGE}
+          whatsappLabel="WhatsApp Us"
+          className="mb-6"
+        />
+        <div className="flex flex-wrap gap-x-6 gap-y-2 text-white/90 text-xs md:text-sm font-medium">
+          <span>✅ 17+ years vascular experience</span>
+          <span>✅ Fortis Memorial Research Institute</span>
+          <span>✅ Covered under most insurance plans</span>
+        </div>
         <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/20">
           {[
             ["4 Stages", "Disease Progression"],
@@ -574,6 +585,14 @@ export default function ChronicVenousContent() {
         </div>
       </div>
 
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={CVI_WHATSAPP_MESSAGE}
+        title="Know Which Stage Your Veins Are At?"
+        subtitle="A quick Venous Doppler evaluation can confirm your stage and the right treatment plan."
+        button="Book Your Evaluation"
+      />
+
       {/* ── COMPLICATIONS ── */}
       <section className="my-14">
         <div className="mb-8">
@@ -629,6 +648,14 @@ export default function ChronicVenousContent() {
           </p>
         </div>
       </section>
+
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={CVI_WHATSAPP_MESSAGE}
+        title="Don't Wait for Ulcers or Skin Changes"
+        subtitle="Early treatment prevents complications and gives the best outcomes."
+        button="Schedule a Check-up"
+      />
 
       {/* ── DIAGNOSIS & LIFESTYLE ── */}
       <div className="my-14">
@@ -722,6 +749,14 @@ export default function ChronicVenousContent() {
           className="w-full rounded-lg border border-gray-200 mb-5"
         />
       </div>
+
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={CVI_WHATSAPP_MESSAGE}
+        title="Get a Clear Diagnosis in One Visit"
+        subtitle="Clinical examination and Venous Doppler Ultrasound with a personalised treatment plan."
+        button="Book Your Ultrasound"
+      />
 
       {/* ── TREATMENT OPTIONS ── */}
       <div className="mb-14">
@@ -1368,6 +1403,14 @@ export default function ChronicVenousContent() {
         </div>
       </div>
 
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={CVI_WHATSAPP_MESSAGE}
+        title="Still Have Questions?"
+        subtitle="Talk to our team directly and get answers before you decide."
+        button="Book a Consultation"
+      />
+
       {/* ── LONG TERM LEG HEALTH ── */}
       <div className="mb-14 rounded-3xl overflow-hidden border border-[var(--med-border)] bg-white shadow-sm">
         {/* Header */}
@@ -1518,10 +1561,10 @@ export default function ChronicVenousContent() {
 
         {/* CTA */}
 
-        <ButtonFill
-          onClick={() => setOpenPopup(true)}
-          text="Book Appointment Online"
-          className="!bg-white !text-[var(--med-primary)] hover:!bg-white/90"
+        <CTAButtons
+          onBook={() => setOpenPopup(true)}
+          bookLabel="Book Appointment Online"
+          whatsappMessage={CVI_WHATSAPP_MESSAGE}
         />
       </div>
 
