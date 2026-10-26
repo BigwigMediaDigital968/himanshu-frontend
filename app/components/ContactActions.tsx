@@ -2,6 +2,7 @@
 
 import { Phone, Mail } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
+import { getWhatsAppLink } from "../utils/whatsapp";
 
 export default function FloatingContactActions() {
   return (
@@ -18,7 +19,7 @@ export default function FloatingContactActions() {
           </a>
 
           <a
-            href="https://wa.me/918826833598"
+            href={getWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
             className="icon-shake flex flex-col items-center justify-center py-3 text-green-600"
@@ -45,7 +46,7 @@ export default function FloatingContactActions() {
           </a>
 
           <a
-            href="https://wa.me/918826833598"
+            href={getWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
             className="icon-shake text-white hover:text-green-400"

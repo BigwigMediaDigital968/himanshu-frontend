@@ -13,6 +13,7 @@ import {
   IoLogoWhatsapp,
 } from "react-icons/io5";
 import logo from "../assets/logo-removebg-preview.png";
+import { getWhatsAppLink } from "../utils/whatsapp";
 import bg from "../assets/slide1.png";
 import ButtonFill from "./Button";
 import Link from "next/link";
@@ -251,7 +252,7 @@ export default function Footer() {
           <div className="flex items-center gap-3 text-white/80 text-sm mb-3">
             <IoLogoWhatsapp className="text-xl" />
             <p>
-              <a href="https://wa.me/918826833598">88268 33598</a>
+              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">88268 33598</a>
             </p>
           </div>
 
