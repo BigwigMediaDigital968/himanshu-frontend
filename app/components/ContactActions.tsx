@@ -18,7 +18,7 @@ export default function FloatingContactActions() {
           </a>
 
           <a
-            href="https://wa.me/8826833598"
+            href="https://wa.me/918826833598"
             target="_blank"
             rel="noopener noreferrer"
             className="icon-shake flex flex-col items-center justify-center py-3 text-green-600"
