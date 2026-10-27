@@ -10,6 +10,8 @@ import {
   Zap,
   HeartPulse,
 } from "lucide-react";
+import CTAButtons from "@/app/components/CTAButtons";
+import InlineCTA from "@/app/components/InlineCTA";
 
 export default function PelvicContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -184,14 +186,14 @@ export default function PelvicContent() {
     <div className="font-sans">
       {/* ── HERO ── */}
       <div className="relative rounded-2xl overflow-hidden bg-[var(--med-primary)] mb-12 px-6 py-10 md:px-12 md:py-14">
-        <div
+        {/* <div
           className="absolute inset-0 opacity-5"
           style={{
             backgroundImage:
               "radial-gradient(circle at 70% 50%, white 1px, transparent 1px)",
             backgroundSize: "24px 24px",
           }}
-        />
+        /> */}
         <p className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-3">
           Vascular Specialist · Gurgaon
         </p>
@@ -208,6 +210,12 @@ export default function PelvicContent() {
         >
           Book a Consultation with Dr. Himanshu
         </button> */}
+        <CTAButtons
+          onBook={() => setOpenPopup(true)}
+          buttons={["book", "call", "whatsapp"]}
+          bookLabel="Book a Consultation"
+          className="mb-6"
+        />
         <div className="grid grid-cols-2 gap-4 mt-10 pt-8 border-t border-white/20">
           {[
             ["Women", "Most Commonly Affected"],
@@ -311,7 +319,7 @@ export default function PelvicContent() {
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-6 p-6 rounded-2xl bg-[var(--med-light)] border border-[var(--med-border)]">
+        <div className=" items-center gap-6 p-6 rounded-2xl bg-[var(--med-light)] border border-[var(--med-border)]">
           <p className="text-gray-700 text-sm">
             If you recognise several of these symptoms particularly if they've
             persisted for more than three to six months - a structured vascular
@@ -319,12 +327,14 @@ export default function PelvicContent() {
             frequently misattributed to other conditions, so a specialist's
             evaluation is important.
           </p>
+          <div className="mt-6">
+            <ButtonFill
+              onClick={() => setOpenPopup(true)}
+              text="Schedule an Appointment"
+            />
+          </div>
         </div>
-        <ButtonFill
-          onClick={() => setOpenPopup(true)}
-          text="Get a Specialist Assessment - Book a Consultation with Dr. Verma"
-          className="mt-6 bg-[var(--med-primary)] text-white hover:bg-[var(--med-primary)]/90"
-        />
+
       </div>
 
       {/* ── DIAGNOSIS TIMELINE ── */}
@@ -369,17 +379,29 @@ export default function PelvicContent() {
           ))}
         </div>
 
-        <div className="mt-2 rounded-2xl bg-[var(--med-primary)] text-white px-6 py-4 text-center font-semibold text-sm md:text-base">
-          Most patients receive a clear diagnostic picture within one or two
-          visits. Where venography is required, it is typically performed as a
-          day-procedure at Fortis Memorial Research Centre, Gurugram.
+        <div className="mt-2 rounded-2xl bg-[var(--med-primary)] text-white px-6 py-4 text-sm md:text-base">
+          <div>
+            <h3 className="
+           text-xl md:text-2xl font-medium mb-4">
+            Find Out If You Have PCS
+          </h3>
+          <p className="">
+            Most patients receive a clear diagnostic picture within one or two
+            visits. Where venography is required, it is typically performed as a
+            day-procedure at Fortis Memorial Research Centre, Gurugram.
+          </p>
+          </div>
+
+          <div className="mt-6">
+            <ButtonFill
+              onClick={() => setOpenPopup(true)}
+              text="Schedule an Appointment"
+              className="bg-white"
+            />
+          </div>
         </div>
 
-        <ButtonFill
-          onClick={() => setOpenPopup(true)}
-          text="Find Out If You Have PCS - Request a Diagnostic Appointments"
-          className="mt-6 bg-[var(--med-primary)] text-white hover:bg-[var(--med-primary)]/90"
-        />
+
       </div>
 
       <div className="mb-6">
@@ -623,11 +645,10 @@ export default function PelvicContent() {
             return (
               <div
                 key={i}
-                className={`border rounded-2xl overflow-hidden transition-colors ${
-                  isOpen
+                className={`border rounded-2xl overflow-hidden transition-colors ${isOpen
                     ? "border-[var(--med-primary)] bg-[var(--med-light)]"
                     : "border-[var(--med-border)] bg-white"
-                }`}
+                  }`}
               >
                 <button
                   type="button"
@@ -635,24 +656,21 @@ export default function PelvicContent() {
                   className="w-full flex justify-between cursor-pointer items-center px-6 py-4 text-left gap-4"
                 >
                   <span
-                    className={`font-semibold text-sm md:text-base pr-2 ${
-                      isOpen ? "text-[var(--med-primary)]" : "text-gray-800"
-                    }`}
+                    className={`font-semibold text-sm md:text-base pr-2 ${isOpen ? "text-[var(--med-primary)]" : "text-gray-800"
+                      }`}
                   >
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`flex-shrink-0 w-4 h-4 transition-transform duration-300 ${
-                      isOpen
+                    className={`flex-shrink-0 w-4 h-4 transition-transform duration-300 ${isOpen
                         ? "rotate-180 text-[var(--med-primary)]"
                         : "text-gray-400"
-                    }`}
+                      }`}
                   />
                 </button>
                 <div
-                  className={`px-6 overflow-hidden transition-all duration-300 ${
-                    isOpen ? "max-h-60 pb-5" : "max-h-0"
-                  }`}
+                  className={`px-6 overflow-hidden transition-all duration-300 ${isOpen ? "max-h-60 pb-5" : "max-h-0"
+                    }`}
                 >
                   <div className="text-gray-700 text-sm leading-relaxed">
                     {faq.a}
@@ -662,6 +680,13 @@ export default function PelvicContent() {
             );
           })}
         </div>
+
+         <InlineCTA
+                onBook={() => setOpenPopup(true)}
+                title="Still Have Questions?"
+                subtitle="Talk to our team directly and get answers before you decide."
+                button="Book a Consultation"
+              />
       </div>
 
       {/* ── FINAL CTA ── */}

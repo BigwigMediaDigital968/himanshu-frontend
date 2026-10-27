@@ -10,6 +10,7 @@ import {
   Stethoscope,
   Zap,
 } from "lucide-react";
+import InlineCTA from "@/app/components/InlineCTA";
 
 export default function GonadalContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -105,6 +106,7 @@ export default function GonadalContent() {
 
   return (
     <>
+    
       {/* MAIN TITLE */}
       <h2 className="text-3xl md:text-4xl font-bold text-[var(--med-primary)] mb-8">
         Gonadal Vein Disease Treatment in Gurgaon
@@ -129,27 +131,15 @@ export default function GonadalContent() {
         </p>
 
         {/* Inline CTA */}
-        <div className="flex items-start gap-3 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl px-5 py-4">
-          <AlertCircle
-            size={18}
-            className="text-[var(--med-primary)] mt-0.5 flex-shrink-0"
-          />
-          <p className="text-gray-700 leading-relaxed text-sm">
-            If you are experiencing symptoms that are affecting your daily life,
-            do not ignore them.{" "}
-            <span className="font-semibold text-[var(--med-primary)]">
-              Book a consultation with Dr. Himanshu
-            </span>{" "}
-            for a proper vascular evaluation.
-          </p>
-        </div>
 
-        <div className="mt-12 py-2 border-gray-100 flex justify-center">
-          <ButtonFill
-            onClick={() => setOpenPopup(true)}
-            text="Schedule an Appointment"
-          />
-        </div>
+
+         <InlineCTA
+                        onBook={() => setOpenPopup(true)}
+                        title="Have Symptoms?"
+                        subtitle="If you are experiencing symptoms that are affecting your daily life,
+            do not ignore them. Book a consultation with Dr. Himanshu for a proper vascular evaluation."
+                        button="Book a Consultation"
+                      />
       </div>
 
       <div className="h-px bg-gray-100 mb-10" />
@@ -224,11 +214,7 @@ export default function GonadalContent() {
         </p>
 
         {/* Inline CTA */}
-        <div className="flex items-start gap-3 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl px-5 py-4">
-          <AlertCircle
-            size={18}
-            className="text-[var(--med-primary)] mt-0.5 flex-shrink-0"
-          />
+        <div className=" items-start gap-3 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl px-5 py-4">
           <p className="text-gray-700 leading-relaxed text-sm">
             If you have chronic pelvic discomfort,{" "}
             <span className="font-semibold text-[var(--med-primary)]">
@@ -241,6 +227,13 @@ export default function GonadalContent() {
             </span>{" "}
             and understand the root cause of your pain.
           </p>
+          <div className="mt-6">
+<ButtonFill
+              onClick={() => setOpenPopup(true)}
+              text="Schedule an Appointment"
+              className=""
+            />
+          </div>
         </div>
       </div>
 
@@ -313,11 +306,8 @@ export default function GonadalContent() {
         </p>
 
         {/* Inline CTA */}
-        <div className="flex items-start gap-3 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl px-5 py-4">
-          <AlertCircle
-            size={18}
-            className="text-[var(--med-primary)] mt-0.5 flex-shrink-0"
-          />
+        <div className=" items-start gap-3 bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl px-5 py-4">
+          
           <p className="text-gray-700 leading-relaxed text-sm">
             If you want a safe and reliable solution,{" "}
             <span className="font-semibold text-[var(--med-primary)]">
@@ -326,6 +316,13 @@ export default function GonadalContent() {
             about the right Gonadal Vein Disease Treatment in Gurgaon plan for
             you.
           </p>
+          <div className="mt-6">
+<ButtonFill
+              onClick={() => setOpenPopup(true)}
+              text="Schedule an Appointment"
+              className=""
+            />
+            </div>
         </div>
       </div>
 
@@ -374,14 +371,12 @@ export default function GonadalContent() {
             );
           })}
         </div>
-      </div>
-
-      {/* FINAL CTA */}
-      <div className="mt-12 pt-8 border-t border-gray-100 flex justify-center">
-        <ButtonFill
-          onClick={() => setOpenPopup(true)}
-          text="Schedule an Appointment"
-        />
+         <InlineCTA
+                        onBook={() => setOpenPopup(true)}
+                        title="Still Have Questions?"
+                        subtitle="Talk to our team directly and get answers before you decide."
+                        button="Book a Consultation"
+                      />
       </div>
 
       <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />
