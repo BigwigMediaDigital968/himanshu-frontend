@@ -2,12 +2,16 @@
 
 import { useState } from "react";
 import PopupForm from "@/app/components/Popup";
-import ButtonFill from "@/app/components/Button";
 import { ChevronDown } from "lucide-react";
 import diafoot1 from "../../assets/service/diabatic-foot/1.png";
 import diafoot2 from "../../assets/service/diabatic-foot/2.png";
 import diafoot3 from "../../assets/service/diabatic-foot/3.png";
 import Image from "next/image";
+import CTAButtons from "@/app/components/CTAButtons";
+import InlineCTA from "@/app/components/InlineCTA";
+
+const DIABETIC_FOOT_WHATSAPP_MESSAGE =
+  "Hello Dr. Himanshu Verma, I would like to consult about diabetic foot treatment and book an appointment.";
 
 export default function DiabeticContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -81,6 +85,11 @@ export default function DiabeticContent() {
           ignored. Early care helps prevent complications and protect long-term
           mobility.
         </p>
+
+        <CTAButtons
+          onBook={() => setOpenPopup(true)}
+          whatsappMessage={DIABETIC_FOOT_WHATSAPP_MESSAGE}
+        />
 
         <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-white/20">
           {[
@@ -226,6 +235,14 @@ export default function DiabeticContent() {
         </p>
       </div>
 
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={DIABETIC_FOOT_WHATSAPP_MESSAGE}
+        title="Noticing Any of These Symptoms?"
+        subtitle="Early evaluation can prevent serious complications. Book a consultation with Dr. Himanshu Verma at Fortis FMRI, Gurgaon."
+        button="Book an Evaluation"
+      />
+
       {/* WHY EARLY CARE */}
       <div className="mb-14 bg-[var(--med-light)] p-6 rounded-2xl border">
         <h2 className="text-xl font-bold mb-3 text-gray-800">
@@ -276,6 +293,14 @@ export default function DiabeticContent() {
         </p>
       </div>
 
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={DIABETIC_FOOT_WHATSAPP_MESSAGE}
+        title="Protect Your Feet Before It's Too Late"
+        subtitle="Get a proper foot and circulation assessment and a care plan that fits you."
+        button="Book a Consultation"
+      />
+
       {/* FAQ */}
       <div className="mb-14">
         <h2 className="text-2xl font-bold mb-6 text-gray-800">
@@ -314,9 +339,12 @@ export default function DiabeticContent() {
           Early diagnosis and treatment can prevent serious complications and
           protect your mobility.
         </p>
-        <ButtonFill
-          onClick={() => setOpenPopup(true)}
-          text="Book Consultation"
+        <CTAButtons
+          variant="onLight"
+          onBook={() => setOpenPopup(true)}
+          bookLabel="Book Consultation"
+          whatsappMessage={DIABETIC_FOOT_WHATSAPP_MESSAGE}
+          className="justify-center"
         />
       </div>
 

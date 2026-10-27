@@ -4,6 +4,11 @@ import { useState } from "react";
 import PopupForm from "@/app/components/Popup";
 import ButtonFill from "@/app/components/Button";
 import { ChevronDown } from "lucide-react";
+import CTAButtons from "@/app/components/CTAButtons";
+import InlineCTA from "@/app/components/InlineCTA";
+
+const WOUND_CARE_WHATSAPP_MESSAGE =
+  "Hello Dr. Himanshu Verma, I would like to consult about diabetic wound care and book an appointment.";
 
 export default function WoundContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -80,6 +85,10 @@ export default function WoundContent() {
         <h2 className="text-3xl font-bold text-white mb-4">
           Diabetic Wound Care in Gurgaon
         </h2>
+        <CTAButtons
+          onBook={() => setOpenPopup(true)}
+          whatsappMessage={WOUND_CARE_WHATSAPP_MESSAGE}
+        />
       </div>
 
       {/* INTRO */}
@@ -106,13 +115,14 @@ export default function WoundContent() {
             infection, do not wait. Early Diabetic Wound Care in Gurgaon can
             prevent long-term damage and hospital visits.
           </p>
-        </div>
-        <div className="pt-8 border-gray-100 flex justify-center">
+          <div className="pt-8 border-gray-100">
           <ButtonFill
             onClick={() => setOpenPopup(true)}
             text="Schedule an Appointment"
           />
         </div>
+        </div>
+        
       </div>
 
       {/* WHY SPECIAL CARE */}
@@ -180,13 +190,15 @@ export default function WoundContent() {
             schedule a consultation and get clarity about the right diabetic
             wound care plan for you.
           </p>
-        </div>
-        <div className="pt-8 border-gray-100 flex justify-center">
+
+           <div className="pt-8 border-gray-100">
           <ButtonFill
             onClick={() => setOpenPopup(true)}
             text="Schedule an Appointment"
           />
         </div>
+        </div>
+       
       </div>
 
       {/* DRESSING */}
@@ -241,6 +253,14 @@ export default function WoundContent() {
         </p>
       </div>
 
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={WOUND_CARE_WHATSAPP_MESSAGE}
+        title="Wound Not Healing? Don't Wait."
+        subtitle="Early evaluation protects your mobility and prevents infection. Book a consultation with Dr. Himanshu Verma at Fortis FMRI, Gurgaon."
+        button="Book an Evaluation"
+      />
+
       {/* FAQ */}
       <div className="mb-14">
         <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
@@ -281,9 +301,12 @@ export default function WoundContent() {
           and help you heal safely.
         </p>
 
-        <ButtonFill
-          onClick={() => setOpenPopup(true)}
-          text="Schedule Consultation"
+        <CTAButtons
+          variant="onLight"
+          onBook={() => setOpenPopup(true)}
+          bookLabel="Schedule Consultation"
+          whatsappMessage={WOUND_CARE_WHATSAPP_MESSAGE}
+          className="justify-center"
         />
       </div>
 

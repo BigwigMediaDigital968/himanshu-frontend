@@ -10,6 +10,11 @@ import {
   ShieldCheck,
   Zap,
 } from "lucide-react";
+import CTAButtons from "@/app/components/CTAButtons";
+import InlineCTA from "@/app/components/InlineCTA";
+
+const AMPUTATION_WHATSAPP_MESSAGE =
+  "Hello Dr. Himanshu Verma, I would like to consult about amputation surgery / limb preservation options and book an appointment.";
 
 export default function AmputationContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -136,7 +141,7 @@ export default function AmputationContent() {
       {/* ── HERO ── */}
       <div className="relative rounded-2xl overflow-hidden bg-[var(--med-primary)] mb-12 px-6 py-10 md:px-12 md:py-14">
         <div
-          className="absolute inset-0 opacity-5"
+          className="absolute inset-0 opacity-5 pointer-events-none"
           style={{
             backgroundImage:
               "radial-gradient(circle at 70% 50%, white 1px, transparent 1px)",
@@ -165,6 +170,10 @@ export default function AmputationContent() {
           with a strong focus on patient safety, careful surgical planning, and
           long-term rehabilitation support.
         </p>
+        <CTAButtons
+          onBook={() => setOpenPopup(true)}
+          whatsappMessage={AMPUTATION_WHATSAPP_MESSAGE}
+        />
         <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/20">
           {[
             ["Life-Saving", "Intervention"],
@@ -287,6 +296,14 @@ export default function AmputationContent() {
           ))}
         </div>
       </div>
+
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={AMPUTATION_WHATSAPP_MESSAGE}
+        title="Advised to Consider Amputation? Get a Second Opinion."
+        subtitle="Limb preservation may still be possible. Book a vascular evaluation with Dr. Himanshu Verma at Fortis FMRI, Gurgaon."
+        button="Book a Second Opinion"
+      />
 
       {/* ── CAUSES AND RISK FACTORS ── */}
       <div className="rounded-2xl mb-14 border border-orange-200 bg-orange-50 p-6">
@@ -753,6 +770,14 @@ export default function AmputationContent() {
         </div>
       </div>
 
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={AMPUTATION_WHATSAPP_MESSAGE}
+        title="Have Questions About the Procedure?"
+        subtitle="Speak with Dr. Himanshu Verma's team about what to expect, recovery and rehabilitation."
+        button="Book a Consultation"
+      />
+
       {/* ── ADVANCED TREATMENTS ── */}
       <div className="mb-14">
         <div className="mb-8">
@@ -894,12 +919,13 @@ export default function AmputationContent() {
           Schedule a structured <b>Amputation Surgery in Gurgaon</b> evaluation
           today with Dr. Himanshu Verma.
         </p>
-        <div className="flex justify-center">
-          <ButtonFill
-            onClick={() => setOpenPopup(true)}
-            text="Schedule an Appointment"
-          />
-        </div>
+        <CTAButtons
+          variant="onLight"
+          onBook={() => setOpenPopup(true)}
+          bookLabel="Schedule an Appointment"
+          whatsappMessage={AMPUTATION_WHATSAPP_MESSAGE}
+          className=""
+        />
       </div>
 
       <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />
