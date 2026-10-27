@@ -14,6 +14,11 @@ import {
   ChevronRight,
 } from "lucide-react";
 import TestimonialsServices from "@/app/components/TestimonialService";
+import CTAButtons from "@/app/components/CTAButtons";
+import InlineCTA from "@/app/components/InlineCTA";
+
+const PAD_WHATSAPP_MESSAGE =
+  "Hello Dr. Himanshu Verma, I would like to consult about peripheral artery disease (PAD) treatment and book an appointment.";
 
 export default function PeripheralArteryContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -290,7 +295,7 @@ export default function PeripheralArteryContent() {
       {/* ── HERO ── */}
       <div className="relative rounded-2xl overflow-hidden bg-[var(--med-primary)] mb-12 px-6 py-10 md:px-12 md:py-14">
         <div
-          className="absolute inset-0 opacity-5"
+          className="absolute inset-0 opacity-5 pointer-events-none"
           style={{
             backgroundImage:
               "radial-gradient(circle at 70% 50%, white 1px, transparent 1px)",
@@ -313,6 +318,10 @@ export default function PeripheralArteryContent() {
           qualified Peripheral Artery Disease Specialist ensures timely
           diagnosis and prevents complications.
         </p>
+        <CTAButtons
+          onBook={() => setOpenPopup(true)}
+          whatsappMessage={PAD_WHATSAPP_MESSAGE}
+        />
         <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/20">
           {[
             ["14 Procedures", "Treatment Options"],
@@ -468,6 +477,14 @@ export default function PeripheralArteryContent() {
         </div>
       </div>
 
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={PAD_WHATSAPP_MESSAGE}
+        title="Leg Pain When You Walk? Get It Checked."
+        subtitle="Early assessment of your leg arteries can prevent serious complications. Book a consultation with Dr. Himanshu Verma at Fortis FMRI, Gurgaon."
+        button="Book an Assessment"
+      />
+
       {/* ── DIAGNOSIS ── */}
       <div className="mb-14">
         <div className="mb-8">
@@ -562,7 +579,6 @@ export default function PeripheralArteryContent() {
             advanced techniques available.
           </p>
         </div>
-        peripheral-artery-disease-1
         <div></div>
         <div className="rounded-2xl bg-[var(--med-primary)] text-white px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm font-medium text-white/90 max-w-xl">
@@ -589,6 +605,14 @@ export default function PeripheralArteryContent() {
           ]}
         />
       </div>
+
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={PAD_WHATSAPP_MESSAGE}
+        title="Not Sure Which Treatment Is Right for You?"
+        subtitle="Get a personalised plan after a proper evaluation of your arteries and overall health."
+        button="Book a Consultation"
+      />
 
       {/* ── LIFESTYLE + WHY CHOOSE ── */}
       <div className="mb-14 grid md:grid-cols-1 gap-6">
@@ -728,12 +752,13 @@ export default function PeripheralArteryContent() {
           solution for you. Schedule your consultation with Dr. Himanshu Verma
           today.
         </p>
-        <div className="flex justify-center">
-          <ButtonFill
-            onClick={() => setOpenPopup(true)}
-            text="Schedule an Appointment"
-          />
-        </div>
+        <CTAButtons
+          variant="onLight"
+          onBook={() => setOpenPopup(true)}
+          bookLabel="Schedule an Appointment"
+          whatsappMessage={PAD_WHATSAPP_MESSAGE}
+          className="justify-center"
+        />
       </div>
 
       <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />

@@ -12,6 +12,11 @@ import {
   Activity,
   Stethoscope,
 } from "lucide-react";
+import CTAButtons from "@/app/components/CTAButtons";
+import InlineCTA from "@/app/components/InlineCTA";
+
+const LIMB_SALVAGE_WHATSAPP_MESSAGE =
+  "Hello Dr. Himanshu Verma, I would like to consult about limb salvage surgery and book an appointment.";
 
 export default function LimbSalvageContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -120,7 +125,7 @@ export default function LimbSalvageContent() {
       {/* ── HERO ── */}
       <div className="relative rounded-2xl overflow-hidden bg-[var(--med-primary)] mb-12 px-6 py-10 md:px-12 md:py-14">
         <div
-          className="absolute inset-0 opacity-5"
+          className="absolute inset-0 opacity-5 pointer-events-none"
           style={{
             backgroundImage:
               "radial-gradient(circle at 70% 50%, white 1px, transparent 1px)",
@@ -141,6 +146,10 @@ export default function LimbSalvageContent() {
           diseased arm or leg instead of removing it - restoring blood flow,
           controlling infection, and preserving mobility.
         </p>
+        <CTAButtons
+          onBook={() => setOpenPopup(true)}
+          whatsappMessage={LIMB_SALVAGE_WHATSAPP_MESSAGE}
+        />
         <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/20">
           {[
             ["Limb-First", "Preservation Approach"],
@@ -312,6 +321,14 @@ export default function LimbSalvageContent() {
         </div>
       </div>
 
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={LIMB_SALVAGE_WHATSAPP_MESSAGE}
+        title="Worried About Saving Your Limb?"
+        subtitle="Early evaluation gives the best chance of preserving mobility. Book a consultation with Dr. Himanshu Verma at Fortis FMRI, Gurgaon."
+        button="Book an Evaluation"
+      />
+
       {/* ── RISKS + WHO PERFORMS ── */}
       <div className="mb-14 grid gap-6">
         {/* Risks */}
@@ -368,6 +385,14 @@ export default function LimbSalvageContent() {
           </div>
         </div>
       </div>
+
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={LIMB_SALVAGE_WHATSAPP_MESSAGE}
+        title="Have Questions About Your Treatment Options?"
+        subtitle="Speak with a vascular specialist about your case and get a clear plan before you decide."
+        button="Book a Consultation"
+      />
 
       {/* ── WHY ADVANCED LIMB SALVAGE MATTERS ── */}
       <div className="mb-14">
@@ -432,35 +457,31 @@ export default function LimbSalvageContent() {
             return (
               <div
                 key={i}
-                className={`border rounded-2xl overflow-hidden transition-colors ${
-                  isOpen
-                    ? "border-[var(--med-primary)] bg-[var(--med-light)]"
-                    : "border-[var(--med-border)] bg-white"
-                }`}
+                className={`border rounded-2xl overflow-hidden transition-colors ${isOpen
+                  ? "border-[var(--med-primary)] bg-[var(--med-light)]"
+                  : "border-[var(--med-border)] bg-white"
+                  }`}
               >
                 <button
                   onClick={() => setOpenFaqIndex(isOpen ? null : i)}
                   className="w-full flex justify-between items-center px-6 py-4 text-left gap-4"
                 >
                   <span
-                    className={`font-semibold text-sm md:text-base pr-2 ${
-                      isOpen ? "text-[var(--med-primary)]" : "text-gray-800"
-                    }`}
+                    className={`font-semibold text-sm md:text-base pr-2 ${isOpen ? "text-[var(--med-primary)]" : "text-gray-800"
+                      }`}
                   >
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`flex-shrink-0 w-4 h-4 transition-transform duration-300 ${
-                      isOpen
-                        ? "rotate-180 text-[var(--med-primary)]"
-                        : "text-gray-400"
-                    }`}
+                    className={`flex-shrink-0 w-4 h-4 transition-transform duration-300 ${isOpen
+                      ? "rotate-180 text-[var(--med-primary)]"
+                      : "text-gray-400"
+                      }`}
                   />
                 </button>
                 <div
-                  className={`px-6 overflow-hidden transition-all duration-300 ${
-                    isOpen ? "max-h-60 pb-5" : "max-h-0"
-                  }`}
+                  className={`px-6 overflow-hidden transition-all duration-300 ${isOpen ? "max-h-60 pb-5" : "max-h-0"
+                    }`}
                 >
                   <div className="text-gray-700 text-sm leading-relaxed">
                     {faq.a}
@@ -486,12 +507,18 @@ export default function LimbSalvageContent() {
           and <b>diabetic foot treatment in Gurgaon</b>. A timely consultation
           can make a real difference.
         </p>
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <ButtonFill
             onClick={() => setOpenPopup(true)}
             text="Schedule an Appointment"
           />
-        </div>
+        </div> */}
+        <CTAButtons
+          variant="onLight"
+          onBook={() => setOpenPopup(true)}
+          bookLabel="Schedule an Appointment"
+          whatsappMessage={LIMB_SALVAGE_WHATSAPP_MESSAGE}
+        />
       </div>
 
       <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />

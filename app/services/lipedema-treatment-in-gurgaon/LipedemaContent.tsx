@@ -376,7 +376,7 @@ export default function LipedemaContent() {
           onBook={() => setOpenPopup(true)}
           buttons={["book", "call", "whatsapp"]}
           bookLabel="Book a Consultation"
-          className="mb-6"
+          className="mb-4"
         />
       </div>
 
@@ -736,10 +736,17 @@ export default function LipedemaContent() {
             );
           })}
         </div>
+        <InlineCTA
+                onBook={() => setOpenPopup(true)}
+                whatsappMessage={LIPEDEMA_WHATSAPP_MESSAGE}
+                title="Still Have Questions?"
+                subtitle="Talk to our team directly and get answers before you decide."
+                button="Book a Consultation"
+              />
       </div>
 
       {/* FINAL CTA */}
-      <div className="mt-12 pt-8 border-t border-gray-100">
+      {/* <div className="mt-12 pt-8 border-t border-gray-100">
         <CTAButtons
           variant="onLight"
           onBook={() => setOpenPopup(true)}
@@ -747,7 +754,7 @@ export default function LipedemaContent() {
           whatsappMessage={LIPEDEMA_WHATSAPP_MESSAGE}
           className="justify-center"
         />
-      </div>
+      </div> */}
 
       <div className="mt-6 space-y-3">
         <p className="text-gray-700 leading-relaxed">
