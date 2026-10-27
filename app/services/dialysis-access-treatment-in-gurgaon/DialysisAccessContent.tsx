@@ -13,6 +13,11 @@ import {
   Stethoscope,
 } from "lucide-react";
 import Link from "next/link";
+import CTAButtons from "@/app/components/CTAButtons";
+import InlineCTA from "@/app/components/InlineCTA";
+
+const DIALYSIS_WHATSAPP_MESSAGE =
+  "Hello Dr. Himanshu Verma, I would like to consult about dialysis access (AV fistula / graft) and book an appointment.";
 
 export default function DialysisAccessContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -210,6 +215,13 @@ export default function DialysisAccessContent() {
         >
           Talk to Dr. Himanshu — Dialysis Access Specialist
         </button> */}
+        <CTAButtons
+                  onBook={() => setOpenPopup(true)}
+                  buttons={["book", "call", "whatsapp"]}
+                  bookLabel="Book a Consultation"
+                  whatsappMessage={DIALYSIS_WHATSAPP_MESSAGE}
+                  className="mb-6"
+                />
         <div className="mt-10 pt-8 border-t border-white/20">
           <p className="text-white/60 text-sm mb-4">
             MBBS · MS · MCh (Vascular Surgery) <span className="text-white">|</span> Vascular & Endovascular Surgeon, Fortis Memorial Research Institute, Gurgaon <span className="text-white">|</span> 17+ Years of Dedicated Vascular Access Practice <span className="text-white">|</span> International Vascular Fellowship - Mayo Clinic, USA <span className="text-white">|</span> KDOQI Guidelines Adherent Practice <span className="text-white">|</span> NABH & JCI Accredited Hospital
@@ -486,6 +498,14 @@ export default function DialysisAccessContent() {
           and should not be ignored.
         </p>
       </div>
+
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={DIALYSIS_WHATSAPP_MESSAGE}
+        title="Noticed Any of These Warning Signs?"
+        subtitle="Early evaluation of your dialysis access can prevent blockage and failure. Book a consultation with Dr. Himanshu Verma at Fortis FMRI, Gurgaon."
+        button="Book an Evaluation"
+      />
 
       {/* ── COMPARISON TABLE ── */}
       <div className="mb-14">
@@ -844,12 +864,13 @@ export default function DialysisAccessContent() {
           <b>AV Fistula Surgeon in Gurgaon</b> and get answers that fit your
           daily life.
         </p>
-        <div className="flex justify-center">
-          <ButtonFill
-            onClick={() => setOpenPopup(true)}
-            text="Schedule an Appointment"
-          />
-        </div>
+        <CTAButtons
+          variant="onLight"
+          onBook={() => setOpenPopup(true)}
+          bookLabel="Schedule an Appointment"
+          whatsappMessage={DIALYSIS_WHATSAPP_MESSAGE}
+          className="justify-center"
+        />
       </div>
 
       <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />

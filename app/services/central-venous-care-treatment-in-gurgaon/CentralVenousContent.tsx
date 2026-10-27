@@ -13,6 +13,11 @@ import {
   Stethoscope,
 } from "lucide-react";
 import Link from "next/link";
+import CTAButtons from "@/app/components/CTAButtons";
+import InlineCTA from "@/app/components/InlineCTA";
+
+const CENTRAL_VENOUS_WHATSAPP_MESSAGE =
+  "Hello Dr. Himanshu Verma, I would like to consult about central venous catheter care and book an appointment.";
 
 export default function CentralVenousContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -166,7 +171,7 @@ export default function CentralVenousContent() {
       {/* ── HERO ── */}
       <div className="relative rounded-2xl overflow-hidden bg-[var(--med-primary)] mb-12 px-6 py-10 md:px-12 md:py-14">
         <div
-          className="absolute inset-0 opacity-5"
+          className="absolute inset-0 opacity-5 pointer-events-none"
           style={{
             backgroundImage:
               "radial-gradient(circle at 70% 50%, white 1px, transparent 1px)",
@@ -184,6 +189,11 @@ export default function CentralVenousContent() {
           Catheter care covering insertion, maintenance, and complication
           management by Dr. Himanshu.
         </p>
+
+        <CTAButtons
+          onBook={() => setOpenPopup(true)}
+          whatsappMessage={CENTRAL_VENOUS_WHATSAPP_MESSAGE}
+        />
 
         <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/20">
           {[
@@ -263,6 +273,14 @@ export default function CentralVenousContent() {
           to ensure proper catheter placement and safe management.
         </p>
       </div>
+
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={CENTRAL_VENOUS_WHATSAPP_MESSAGE}
+        title="Told You May Need a Central Line?"
+        subtitle="Talk to Dr. Himanshu Verma at Fortis FMRI, Gurgaon to understand whether it is right for you and what to expect."
+        button="Book a Consultation"
+      />
 
       {/* ── CVC VS PERIPHERAL IV ── */}
       <div className="mb-14">
@@ -465,6 +483,14 @@ export default function CentralVenousContent() {
         </div>
       </div>
 
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={CENTRAL_VENOUS_WHATSAPP_MESSAGE}
+        title="Need a Central Line or Catheter Care?"
+        subtitle="Get the right catheter type, safe image-guided placement and ongoing care from Dr. Himanshu Verma at Fortis FMRI, Gurgaon."
+        button="Book a Consultation"
+      />
+
       {/* ── ADVANCED TREATMENTS ── */}
       <div className="mb-14">
         <div className="mb-8">
@@ -622,6 +648,14 @@ export default function CentralVenousContent() {
         </div>
       </div>
 
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={CENTRAL_VENOUS_WHATSAPP_MESSAGE}
+        title="Noticed Any of These Warning Signs?"
+        subtitle="Early review of your catheter site can prevent infection and other complications."
+        button="Book an Evaluation"
+      />
+
       {/* ── FAQ ── */}
       <div className="mb-14">
         <div className="mb-8">
@@ -694,12 +728,13 @@ export default function CentralVenousContent() {
           comprehensive <b>Central Venous Care in Gurgaon</b> tailored to your
           needs.
         </p>
-        <div className="flex justify-center">
-          <ButtonFill
-            onClick={() => setOpenPopup(true)}
-            text="Schedule an Appointment"
-          />
-        </div>
+        <CTAButtons
+          variant="onLight"
+          onBook={() => setOpenPopup(true)}
+          bookLabel="Schedule an Appointment"
+          whatsappMessage={CENTRAL_VENOUS_WHATSAPP_MESSAGE}
+          className="justify-center"
+        />
       </div>
 
       <PopupForm open={openPopup} onClose={() => setOpenPopup(false)} />

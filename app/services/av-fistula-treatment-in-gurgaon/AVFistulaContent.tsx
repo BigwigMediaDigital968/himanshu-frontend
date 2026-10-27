@@ -15,7 +15,12 @@ import {
 } from "lucide-react";
 import ServiceCarousel from "../ServiceCarousal";
 import TestimonialsServices from "@/app/components/TestimonialService";
+import InlineCTA from "@/app/components/InlineCTA";
+import CTAButtons from "@/app/components/CTAButtons";
 
+
+const AV_FISTULA_WHATSAPP_MESSAGE =
+  "Hello Dr. Himanshu Verma, I would like to consult about AV fistula treatment and book an appointment.";
 
 export default function AVFistulaContent() {
   const [openPopup, setOpenPopup] = useState(false);
@@ -318,38 +323,6 @@ export default function AVFistulaContent() {
   return (
     <div className="font-sans">
       {/* ── HERO ── */}
-      {/* <div className="relative rounded-2xl overflow-hidden bg-[var(--med-primary)] mb-12 px-6 py-10 md:px-12 md:py-14">
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 70% 50%, white 1px, transparent 1px)",
-            backgroundSize: "24px 24px",
-          }}
-        />
-        <p className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-3">
-          Vascular Access Specialists · Gurgaon
-        </p>
-        <h2 className="text-3xl font-bold text-white leading-tight mb-4">
-          AV Fistula Treatment in Gurgaon
-        </h2>
-        <p className="text-white/80 text-base md:text-lg max-w-xl mb-8">
-          The gold standard for hemodialysis access — expertly created,
-          monitored, and preserved for life.
-        </p>
-        <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/20">
-          {[
-            ["Lowest", "Infection Risk"],
-            ["10–20 yrs", "Fistula Lifespan"],
-            ["Gold Standard", "Dialysis Access"],
-          ].map(([val, label]) => (
-            <div key={label}>
-              <p className="text-white font-bold text-lg md:text-2xl">{val}</p>
-              <p className="text-white/60 text-xs md:text-sm">{label}</p>
-            </div>
-          ))}
-        </div>
-      </div> */}
 
       {/* ── WHAT IS ── */}
       <div className="grid gap-8 mb-7 items-start">
@@ -392,6 +365,14 @@ export default function AVFistulaContent() {
           alt="AV fistula surgery procedure for dialysis access"
         />
       </div>
+
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={AV_FISTULA_WHATSAPP_MESSAGE}
+        title="Planning for Dialysis or Worried About Your Access?"
+        subtitle="Book a vein mapping and access evaluation with Dr. Himanshu Verma at Fortis FMRI, Gurgaon."
+        button="Book a Consultation"
+      />
 
       {/* ── ABOUT DR. HIMANSHU VERMA ── */}
       <div className="mb-14 rounded-2xl border border-[var(--med-border)] bg-[var(--med-light)] p-6 md:p-8">
@@ -682,6 +663,14 @@ export default function AVFistulaContent() {
         </div>
       </div>
 
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={AV_FISTULA_WHATSAPP_MESSAGE}
+        title="Worried About Your Fistula?"
+        subtitle="Get a vein mapping and flow evaluation to find the right plan for your dialysis access."
+        button="Book an Evaluation"
+      />
+
       {/* ── WHY FAIL + DIAGNOSE ── */}
       <div className="grid md:grid-cols-2 gap-6 mb-14">
         <div className="bg-[var(--med-light)] border border-[var(--med-border)] rounded-2xl p-6">
@@ -797,6 +786,14 @@ export default function AVFistulaContent() {
           catheter dependence.
         </p>
       </div>
+
+      <InlineCTA
+        onBook={() => setOpenPopup(true)}
+        whatsappMessage={AV_FISTULA_WHATSAPP_MESSAGE}
+        title="Don't Wait Until Dialysis Is Disrupted"
+        subtitle="Early assessment protects your access and avoids emergency procedures."
+        button="Schedule a Check-up"
+      />
 
       {/* ── TESTIMONIALS ── */}
       <div className="mb-14">
@@ -919,12 +916,13 @@ export default function AVFistulaContent() {
           Schedule a structured <b>AV Fistula Treatment in Gurgaon</b>{" "}
           evaluation today.
         </p>
-        <div className="flex justify-center">
-          <ButtonFill
-            onClick={() => setOpenPopup(true)}
-            text="Schedule an Appointment"
-          />
-        </div>
+        <CTAButtons
+          variant="onLight"
+          onBook={() => setOpenPopup(true)}
+          bookLabel="Schedule an Appointment"
+          whatsappMessage={AV_FISTULA_WHATSAPP_MESSAGE}
+          className="justify-center"
+        />
       </div>
 
       <div className="mt-6">
