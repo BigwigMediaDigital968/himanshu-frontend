@@ -205,6 +205,77 @@ const MedicalProcedureschema = {
   ],
 };
 
+const FaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are the symptoms of blocked arteries in the legs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Symptoms may include leg pain or cramping during walking, cold feet, numbness, changes in skin colour and wounds that heal slowly. Some people have no obvious symptoms. A clinical assessment is needed to determine whether PAD is the cause.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How is Peripheral Artery Disease diagnosed?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Assessment may include a medical history, physical examination and an Ankle-Brachial Index (ABI) test. Doppler ultrasound or vascular imaging may be recommended when additional information is needed.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is usually an early symptom of PAD?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Pain or cramping in the leg during walking that improves after resting is a common symptom. However, symptoms vary, and some patients may not notice early warning signs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Peripheral Artery Disease affect the heart?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "PAD is associated with an increased risk of cardiovascular disease, including heart attack and stroke. People diagnosed with PAD may need assessment and management of other cardiovascular risk factors.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Peripheral Artery Disease be reversed?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "PAD is a long-term condition, and established arterial plaque does not simply disappear. However, appropriate treatment and risk-factor management can help control the condition, improve symptoms and reduce the risk of complications. The expected benefit depends on the individual case.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "When should I seek medical attention for possible PAD?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Arrange a medical assessment if you have recurring leg pain while walking, cold feet, changes in foot colour or a wound that is slow to heal. Sudden severe pain, a suddenly cold or pale limb, or sudden loss of sensation or movement requires emergency medical attention.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the best treatment for leg artery blockage?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "There is no single treatment that is best for every patient. Management may include medication and lifestyle changes, angioplasty and stenting, or bypass surgery, depending on the blockage, symptoms and overall health.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does every patient with PAD need surgery?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Some patients can be managed with risk-factor control, prescribed medicines and an appropriate exercise plan. A procedure may be considered when symptoms, the severity of reduced blood flow or limb-related complications warrant it.",
+      },
+    },
+  ],
+};
+
 export default function PeripheralArteryPage() {
   return (
     <>
@@ -298,69 +369,6 @@ export default function PeripheralArteryPage() {
                     position: 3,
                     name: "Peripheral Artery Disease Treatment in Gurgaon",
                     item: PAGE_URL,
-                  },
-                ],
-              },
-
-              /* ================= FAQ ================= */
-              {
-                "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: "What are the symptoms of blocked arteries in the legs?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Pain while walking, numbness, cold feet, slow-healing wounds, and shiny skin are common symptoms.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "How to test for Peripheral Artery Disease?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Tests include Ankle-Brachial Index (ABI), Doppler ultrasound, and angiography.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "What is the first symptom of PAD?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Intermittent leg pain while walking, known as claudication.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Can PAD lead to heart problems?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Yes, Peripheral Artery Disease increases the risk of heart attack and stroke.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Is PAD reversible?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "While not fully reversible, lifestyle changes and treatment can significantly improve symptoms.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "When should I seek treatment?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Immediate consultation is recommended if you experience leg pain, wounds, or cold feet.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "What is the best treatment for blocked leg arteries?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Treatment depends on severity and may include angioplasty, medication, or bypass surgery.",
-                    },
                   },
                 ],
               },
@@ -598,10 +606,18 @@ export default function PeripheralArteryPage() {
           __html: JSON.stringify(MedicalProcedureschema),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(FaqSchema),
+        }}
+      />
 
       <ServiceLayout
         title="Peripheral Artery Disease Treatment in Gurgaon"
         description="Medically reviewed by Dr. Himanshu Verma, MCh Vascular Surgery | Director, Fortis FMRI Gurgaon | Last reviewed: April 2025"
+        ctaContent="Leg pain, cold feet or a wound that is not healing? These symptoms may need a vascular assessment. Get your circulation evaluated to understand the cause and discuss the next steps for care."
+        cta="Book Consultation"
       >
         <PeripheralArteryContent />
       </ServiceLayout>

@@ -15,6 +15,8 @@ interface ServiceLayoutProps {
   title: string;
   description: React.ReactNode;
   children: React.ReactNode;
+  ctaContent?: React.ReactNode;
+  cta?: string;
 }
 
 export const servicesData = [
@@ -280,6 +282,8 @@ export default function ServiceLayout({
   title,
   description,
   children,
+  ctaContent,
+  cta
 }: ServiceLayoutProps) {
   const [openPopup, setOpenPopup] = useState(false);
   const pathname = usePathname();
@@ -307,12 +311,11 @@ export default function ServiceLayout({
                   Need Expert Advice?
                 </h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  Dr. Himanshu Verma specializes in treating complex pelvic
-                  venous conditions.
+                  {ctaContent || "Dr. Himanshu Verma specializes in treating complex pelvic  venous conditions."}
                 </p>
                 <ButtonFill
                   onClick={() => setOpenPopup(true)}
-                  text="Book Consultation"
+                  text={cta || "Book Consultation"}
                   className="w-full justify-center"
                 />
               </div>
