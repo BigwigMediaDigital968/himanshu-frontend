@@ -445,7 +445,10 @@ export default function PeripheralArteryPage() {
             "@type": "Physician",
             "@id": "https://www.drhimanshuverma.com/#physician",
             name: "Dr. Himanshu Verma",
-            medicalSpecialty: "Vascular Surgery",
+            medicalSpecialty: [
+              "https://schema.org/Surgical",
+              "https://schema.org/Cardiovascular",
+            ],
             description:
               "Specialist in Peripheral Artery Disease (PAD) diagnosis and minimally invasive endovascular treatments.",
             aggregateRating: {
