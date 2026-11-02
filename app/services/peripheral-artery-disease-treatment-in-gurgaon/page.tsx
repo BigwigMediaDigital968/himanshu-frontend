@@ -615,7 +615,7 @@ export default function PeripheralArteryPage() {
 
       <ServiceLayout
         title="Peripheral Artery Disease Treatment in Gurgaon"
-        description="Medically reviewed by Dr. Himanshu Verma, MCh Vascular Surgery | Director, Fortis FMRI Gurgaon | Last reviewed: April 2025"
+        description="Medically reviewed by Dr. Himanshu Verma, MCh Vascular Surgery | Director, Fortis FMRI Gurgaon | Last reviewed: Oct 2026"
         ctaContent="Leg pain, cold feet or a wound that is not healing? These symptoms may need a vascular assessment. Get your circulation evaluated to understand the cause and discuss the next steps for care."
         cta="Book Consultation"
       >
