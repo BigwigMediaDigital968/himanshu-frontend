@@ -304,8 +304,58 @@ export default function PeripheralArteryPage() {
               /* ================= DOCTOR ================= */
               {
                 "@type": "Physician",
+                "@id": "https://www.drhimanshuverma.com/#physician",
                 name: "Dr. Himanshu Verma",
-                medicalSpecialty: "Vascular Surgery",
+                url: "https://www.drhimanshuverma.com/",
+                description:
+                  "Vascular and Endovascular Surgeon at Fortis Memorial Research Institute, Gurugram, specialising in Peripheral Artery Disease (PAD) diagnosis and minimally invasive endovascular treatment.",
+                medicalSpecialty: [
+                  "https://schema.org/Surgical",
+                  "https://schema.org/Cardiovascular",
+                ],
+                knowsAbout: [
+                  "Vascular Surgery",
+                  "Endovascular Surgery",
+                  "Peripheral Artery Disease",
+                  "Angioplasty and Stenting",
+                  "Limb Salvage",
+                  "Diabetic Foot",
+                  "Varicose Veins",
+                  "AV Fistula and Dialysis Access",
+                ],
+                hasCredential: {
+                  "@type": "EducationalOccupationalCredential",
+                  credentialCategory: "degree",
+                  name: "MCh Vascular Surgery",
+                },
+                memberOf: {
+                  "@type": "Organization",
+                  name: "Vascular Society of India",
+                },
+                hospitalAffiliation: {
+                  "@type": "Hospital",
+                  name: "Fortis Memorial Research Institute",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress: "Opposite HUDA City Centre, Sector 44",
+                    addressLocality: "Gurugram",
+                    addressRegion: "Haryana",
+                    postalCode: "122003",
+                    addressCountry: "IN",
+                  },
+                },
+                telephone: "+91-8826833598",
+                email: "varenyamvascular@gmail.com",
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress:
+                    "Fortis Memorial Research Institute, Opposite HUDA City Centre, Sector 44",
+                  addressLocality: "Gurugram",
+                  addressRegion: "Haryana",
+                  postalCode: "122003",
+                  addressCountry: "IN",
+                },
+                sameAs: ["https://www.linkedin.com/in/drhimanshuverma"],
               },
 
               /* ================= CONDITION ================= */
@@ -327,10 +377,21 @@ export default function PeripheralArteryPage() {
               /* ================= PROCEDURE ================= */
               {
                 "@type": "MedicalProcedure",
+                "@id": `${PAGE_URL}#procedure`,
                 name: "Peripheral Artery Disease Treatment",
-                procedureType: "Vascular Intervention",
+                alternateName: "PAD Treatment",
+                url: PAGE_URL,
+                description:
+                  "Diagnosis and treatment of Peripheral Artery Disease (PAD), including angioplasty, stenting, drug-eluting balloon angioplasty, intravascular lithotripsy and bypass surgery to restore blood flow to the legs.",
+                procedureType: "https://schema.org/PercutaneousProcedure",
+                bodyLocation: "Arteries of the legs and feet",
+                relevantSpecialty: "https://schema.org/Surgical",
+                preparation:
+                  "Medical history, physical examination and investigations such as Ankle-Brachial Index (ABI), Doppler ultrasound, and CT or MR angiography where needed.",
                 howPerformed:
                   "Treatment includes angioplasty, stenting, bypass surgery, and minimally invasive vascular procedures to restore blood flow.",
+                followup:
+                  "Regular follow-up to monitor vessel patency, symptoms and cardiovascular risk factors.",
               },
 
               /* ================= WEBPAGE ================= */
@@ -382,6 +443,7 @@ export default function PeripheralArteryPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Physician",
+            "@id": "https://www.drhimanshuverma.com/#physician",
             name: "Dr. Himanshu Verma",
             medicalSpecialty: "Vascular Surgery",
             description:
