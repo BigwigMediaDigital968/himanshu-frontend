@@ -5,19 +5,43 @@ const SITE_URL = "https://www.drhimanshuverma.com";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const today = new Date().toISOString().split("T")[0];
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/blog/viewblog`, {
-    next: { revalidate: 60 }, // cache + auto refresh
-  });
+let blogs = [];
+
+try {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE}/blog/viewblog`,
+    {
+      next: { revalidate: 60 },
+    }
+  );
+
+  if (!res.ok) {
+    throw new Error(`Blog API failed with status: ${res.status}`);
+  }
+
+  const contentType = res.headers.get("content-type");
+
+  if (!contentType?.includes("application/json")) {
+    throw new Error("Blog API returned a non-JSON response");
+  }
 
   const data = await res.json();
-  const blogs = data || [];
 
-  const blogUrls = blogs.map((blog: any) => ({
-    url: `${SITE_URL}/blogs/${blog.slug}`,
-    lastModified: new Date(blog.lastUpdated || blog.datePublished || Date.now())
-      .toISOString()
-      .split("T")[0],
-  }));
+  blogs = Array.isArray(data) ? data : [];
+
+} catch (error) {
+  console.error("Error fetching blogs for sitemap:", error);
+  blogs = [];
+}
+
+const blogUrls = blogs.map((blog: any) => ({
+  url: `${SITE_URL}/blogs/${blog.slug}`,
+  lastModified: new Date(
+    blog.lastUpdated || blog.datePublished || today
+  )
+    .toISOString()
+    .split("T")[0],
+}));
 
   return [
     {
