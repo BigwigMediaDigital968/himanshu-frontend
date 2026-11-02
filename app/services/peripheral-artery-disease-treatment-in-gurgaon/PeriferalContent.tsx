@@ -514,10 +514,7 @@ export default function PeripheralArteryContent() {
           <p className="text-gray-600 mt-2">
             If you have diabetes, smoke or have persistent leg symptoms, ask your healthcare professional whether a PAD assessment is appropriate.
           </p>
-          <p className="text-gray-600 mt-2">
-            Important developer note: Existing statistics and claims about screening, risk percentages and treatment outcomes should not be carried over automatically. Add statistics only when the medical team verifies the source and wording.
-
-          </p>
+         
         </div>
       </div>
 
