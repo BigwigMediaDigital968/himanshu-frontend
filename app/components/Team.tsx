@@ -46,13 +46,13 @@ const teamMembers = [
     description:
       "Ms. Saisri is a Patient Care Coordinator dedicated to ensuring a smooth and supportive healthcare experience for patients. She serves as a key point of contact, assisting with appointment scheduling, coordination of care, and communication between patients, families, and the medical team.",
   },
-  {
-    name: "Dr. Arushi",
-    role: "Resident Vascular Surgery (MBBS)",
-    image: arushi,
-    description:
-      "Dr. Arushi is a resident in the Department of Vascular and Endovascular Surgery, where she works closely with senior surgeons in the management of patients undergoing vascular procedures. Her responsibilities include assisting in preoperative evaluation, patient preparation, and coordination of investigations, as well as active involvement in postoperative care and follow-up. She contributes to patient monitoring, wound care, and management of complications under supervision.",
-  },
+  // {
+  //   name: "Dr. Arushi",
+  //   role: "Resident Vascular Surgery (MBBS)",
+  //   image: arushi,
+  //   description:
+  //     "Dr. Arushi is a resident in the Department of Vascular and Endovascular Surgery, where she works closely with senior surgeons in the management of patients undergoing vascular procedures. Her responsibilities include assisting in preoperative evaluation, patient preparation, and coordination of investigations, as well as active involvement in postoperative care and follow-up. She contributes to patient monitoring, wound care, and management of complications under supervision.",
+  // },
 ];
 
 export default function Team() {
