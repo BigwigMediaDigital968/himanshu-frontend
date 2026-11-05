@@ -60,7 +60,7 @@ const awards = [
   },
   {
     title: "Research & Publications",
-    desc: "Author of 29+ research publications and 9 book chapters.",
+    desc: "Author of 40+ research publications and 9 book chapters.",
     icon: BookOpen,
   },
   {
@@ -971,7 +971,8 @@ export default function About() {
                       Whatsapp
                     </p>
                     <p className="text-[var(--med-text)]/70 text-sm">
-                      <a href="https://wa.me/918826833598">+91 88268 33598</a>
+                      {/* <a href="https://wa.me/918826833598">+91 88268 33598</a> */}
+                      <a href="https://wa.me/918826833598?text=Hello%20Dr.%20Himanshu%2C%20I%20found%20your%20website%20and%20would%20like%20to%20book%20a%20consultation.">+91 88268 33598</a>
                     </p>
                   </div>
                 </div>

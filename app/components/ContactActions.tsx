@@ -29,7 +29,7 @@ export default function FloatingContactActions() {
           </a>
 
           <a
-            href="mailto:support@bigiwgmediadigital.com"
+            href="mailto:varenyamvascular@gmail.com"
             className="icon-shake flex flex-col items-center justify-center py-3 text-[var(--med-primary)]"
           >
             <Mail size={20} />

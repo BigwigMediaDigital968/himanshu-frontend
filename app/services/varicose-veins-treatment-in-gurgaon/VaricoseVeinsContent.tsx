@@ -258,7 +258,7 @@ export default function VaricoseVeinsContent() {
             <PhoneCall className="w-4 h-4 inline-block mr-2" />
             Book Your Consultation Today
           </a>
-          <a href="https://wa.me/918826833598"
+          <a href="https://wa.me/918826833598?text=Hello%20Dr.%20Himanshu%2C%20I%20found%20your%20website%20and%20would%20like%20to%20book%20a%20consultation."
             target="_blank"
             rel="noopener noreferrer" className="px-6 py-3 bg-emerald-500 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-600 transition-colors duration-200 text-center text-sm md:text-base flex items-center justify-center gap-2 ">
             <FaWhatsapp className="w-4 h-4" />
@@ -319,7 +319,7 @@ export default function VaricoseVeinsContent() {
           <div className="p-5 flex flex-col items-start justify-center min-h-[120px]">
             <span className="text-2xl mb-2" role="img" aria-label="document">📄</span>
             <p className="text-sm md:text-base font-semibold text-slate-800 leading-snug">
-              29+ Research Publications
+              40+ Research Publications
             </p>
           </div>
 
@@ -1184,7 +1184,7 @@ export default function VaricoseVeinsContent() {
         <p className="text-white/70 text-sm mb-8 max-w-2xl leading-relaxed">
           Fortis Memorial Research Institute <br />
           Sector 44, Opposite HUDA City Centre Metro Station <br />
-          Gurgaon, Haryana — 122002
+          Gurgaon, Haryana — 122003
         </p>
 
         {/* Main 3-Way Booking Actions Layout */}
@@ -1208,7 +1208,7 @@ export default function VaricoseVeinsContent() {
 
           {/* 3. Direct Message Whatsapp API Link */}
           <a
-            href="https://wa.me/918826833598"
+            href="https://wa.me/918826833598?text=Hello%20Dr.%20Himanshu%2C%20I%20found%20your%20website%20and%20would%20like%20to%20book%20a%20consultation."
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 bg-emerald-500 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300 text-center text-sm md:text-base flex items-center justify-center gap-2 hover:scale-105 ease-in-out"

@@ -85,8 +85,7 @@ export default function ServiceLayout1({
                   Need Expert Advice?
                 </h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  Dr. Himanshu Verma specializes in treating complex pelvic
-                  venous conditions.
+                  Dr. Himanshu Verma specializes in treating complex varicose veins conditions.
                 </p>
                 <ButtonFill
                   onClick={() => setOpenPopup(true)}

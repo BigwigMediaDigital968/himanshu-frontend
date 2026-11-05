@@ -193,7 +193,7 @@ export default function ChronicVenousPage() {
 
                   addressRegion: "Haryana",
 
-                  postalCode: "122002",
+                  postalCode: "122003",
 
                   addressCountry: "IN",
                 },
@@ -252,7 +252,7 @@ export default function ChronicVenousPage() {
 
                     addressRegion: "Haryana",
 
-                    postalCode: "122002",
+                    postalCode: "122003",
 
                     addressCountry: "IN",
                   },

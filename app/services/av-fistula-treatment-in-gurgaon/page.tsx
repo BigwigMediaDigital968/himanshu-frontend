@@ -125,7 +125,7 @@ const schemaData = {
           "streetAddress": "Sector 44",
           "addressLocality": "Gurgaon",
           "addressRegion": "Haryana",
-          "postalCode": "122002",
+          "postalCode": "122003",
           "addressCountry": "IN"
         }
       },

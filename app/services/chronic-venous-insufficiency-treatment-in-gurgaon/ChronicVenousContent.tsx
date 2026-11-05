@@ -1529,7 +1529,7 @@ export default function ChronicVenousContent() {
                 <br />
                 Sector 44, Opposite HUDA City Centre Metro Station
                 <br />
-                Gurgaon, Haryana — 122002
+                Gurgaon, Haryana — 122003
               </p>
             </div>
           </div>

@@ -311,7 +311,7 @@ export default function ServiceLayout({
                   Need Expert Advice?
                 </h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  {ctaContent || "Dr. Himanshu Verma specializes in treating complex pelvic  venous conditions."}
+                  {ctaContent || "Dr. Himanshu Verma specializes in treating complex varicose veins conditions."}
                 </p>
                 <ButtonFill
                   onClick={() => setOpenPopup(true)}

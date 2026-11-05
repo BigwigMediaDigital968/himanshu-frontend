@@ -235,7 +235,7 @@ export default function VaricoseVeinsPage() {
                     "Fortis Memorial Research Institute, Sector 44",
                   addressLocality: "Gurugram",
                   addressRegion: "Haryana",
-                  postalCode: "122002",
+                  postalCode: "122003",
                   addressCountry: "IN",
                 },
 
